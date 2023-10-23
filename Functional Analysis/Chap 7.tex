@@ -1,0 +1,1119 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+\usepackage{bbold}
+
+\begin{document}
+\section{FOURIER TRANSFORMS}
+\section{Basic Properties}
+7.1 Notations (a) The normalized Lebesgue measure on $R^{n}$ is the measure $m_{n}$ defined by
+
+$$
+d m_{n}(x)=(2 \pi)^{-n / 2} d x
+$$
+
+The factor $(2 \pi)^{-n / 2}$ simplifies the appearance of the inversion theorem $\bar{T} . \bar{T}$ and the Plancherel theorem 7.9. The usual Lebesgue spaces $L^{p}$, or $L^{p}\left(R^{n}\right)$, will be normed by means of $m_{n}$ :
+
+$$
+\|f\|_{p}=\left\{\int_{R^{n}}|f|^{p} d m_{n}\right\}^{1 / p} \quad(1 \leq p<\infty)
+$$
+
+It is also convenient to redefine the convolution of two functions on $R^{n}$ by
+
+$$
+(f * g)(x)=\int_{R^{n}} f(x-y) g(y) d m_{n}(y)
+$$
+
+whenever the integral exists.
+
+(b) For each $t \in R^{n}$, the character $e_{t}$ is the function defined by
+
+$$
+e_{t}(x)=e^{i t \cdot x}=\exp \left\{i\left(t_{1} x_{1}+\cdots+t_{n} x_{n}\right)\right\} \quad\left(x \in R^{n}\right)
+$$
+
+Each $^{\prime} e_{t}$. satisfies the functional equation
+
+$$
+e_{t}(x+y)=e_{t}(x) e_{t}(y)
+$$
+
+Thus $e_{t}$ is a homomorphism of the additive group $R^{n}$ into the multiplicative group of the complex numbers of absolute value 1 .
+
+(c) The Fourier transform of a function $f \in L^{1}\left(R^{n}\right)$ is the function $\hat{f}$ defined by
+
+$$
+\hat{f}(t)=\int_{R^{n}} f e_{-t} d m_{n} \quad\left(t \in R^{n}\right)
+$$
+
+The term "Fourier transform" is often also used for the mapping that takes $f$ to $\hat{f}$. Note that
+
+$$
+\hat{f}(t)=\left(f * e_{t}\right)(0)
+$$
+
+(d) If $\alpha$ is a multi-index, then
+
+$$
+D_{\alpha}=(i)^{-|\alpha|} D^{\alpha}=\left(\frac{1}{i} \frac{\partial}{\partial x_{1}}\right)^{\alpha_{1}} \cdots\left(\frac{1}{i} \frac{\partial}{\partial x_{n}}\right)^{\alpha_{n}}
+$$
+
+The use of $D_{\tilde{x}}$ in place of $D^{\alpha}$ simplifies some of the formaiism. Note that
+
+$$
+D_{\alpha} e_{t}=t^{\alpha} e_{t}
+$$
+
+where, as before, $t^{\alpha}=t_{1}^{\alpha_{1}} \cdots t_{n}^{\alpha_{n}}$. If $P$ is a polynomial of $n$ variables, with complex coefficients, say
+
+$$
+P(\xi)=\sum c_{\alpha} \xi^{\alpha}=\sum c_{\alpha} \xi_{1}^{\alpha_{1}} \cdots \xi_{n}^{\alpha_{n}}
+$$
+
+the differential operators $P(D)$ and $P(-D)$ are defined by
+
+$$
+P(D)=\sum c_{\alpha} D_{\alpha}, \quad P(-D)=\sum(-1)^{|\alpha|} c_{\alpha} D_{\alpha} .
+$$
+
+It follows that
+
+$$
+P(D) e_{t}=P(t) e_{t} \quad\left(t \in R^{n}\right) .
+$$
+
+(e) The translation operators $\tau_{x}$ are defined, as before, by
+
+$$
+\left(\tau_{x} f\right)(y)=f\left(y_{*}-x\right) \quad\left(x, y \in R^{n}\right) .
+$$
+
+7.2 Theorem Suppose $f, g \in L^{1}\left(R^{n}\right), x \in R^{n}$. Then
+
+(a) $\left(\tau_{x} f\right)^{\wedge}=e_{-x} \hat{f}$
+
+(b) $\left(e_{x} f\right)^{\wedge}=\tau_{x} \hat{f}$
+
+(c) $(f * g)^{\wedge}=\hat{f} \hat{g}$.
+
+(d) If $\lambda>0$ and $h(x)=f(x / \lambda)$, then $\hat{h}(t)=\lambda^{n} \hat{f}(\lambda t)$.
+
+PROOF It follows from the definitions that
+
+$$
+\left(\tau_{x} f\right)^{\wedge}(t)=\int\left(\tau_{x} f\right) \cdot e_{-t}=\int f \cdot \tau_{-x} e_{-t}=\int f \cdot e_{-t}(x) e_{-t}=e_{-x}(t) \hat{f}(t)
+$$
+
+and
+
+$$
+\left(e_{x} f\right)^{\wedge}(t)=\int e_{x} f e_{-t}=\int f e_{-(t-x)}=\left(\tau_{x} \hat{f}\right)(t)
+$$
+
+An application of Fubini's theorem gives $(c) ;(d)$ is obtained by a linear change of variables in the definition of $\hat{f}$.
+
+7.3 Rapidily decreasing functions This name is sometimes given to those $f \in C^{\infty}\left(R^{\prime \prime}\right)$ for which
+
+$$
+\sup _{|\alpha| \leq N} \sup _{x \in R^{n}}\left(1+|x|^{2}\right)^{N}\left|\left(D_{\alpha} f\right)(x)\right|<\infty
+$$
+
+for $N=0,1,2, \ldots$ (Recall that $|x|^{2}=\sum x_{i}^{2}$.) In other words, the requirement is that $P \cdot D_{\alpha} f$ is a bounded function on $R^{n}$, for every polynomial $P$ and for every multiindex $\alpha$. Since this is true with $\left(1+|x|^{2}\right)^{N} P(x)$ in place of $P(x)$, it follows that every $P \cdot D_{\alpha} f$ lies in $L^{1}\left(R^{n}\right)$.
+
+These functions form a vector space, denoted by $\mathscr{S}_{n}$, in which the countable collection of norms (1) defines a locally convex topology, as described in Theorem 1.37.
+
+It is clear that $\mathscr{P}\left(R^{n}\right) \subset \mathscr{S}_{n}$.
+
+\subsection{Theorem}
+(a) $\mathscr{S}_{n}$ is a Fréchet space.
+
+(b) If $P$ is a polynomial, $g \in \mathscr{S}_{n}$, and $\alpha$ is a multi-index, then each of the three mappings
+
+$$
+f \rightarrow P f, \quad f \rightarrow g f, \quad f \rightarrow D_{\alpha} f
+$$
+
+is a continuous linear mapping of $\mathscr{S}_{n}$ into $\mathscr{S}_{n}$.
+
+(c) If $f \in \mathscr{S}_{n}$ and $P$ is a polynomial, then
+
+$$
+(P(D) f)^{\wedge}=P \hat{f} \quad \text { and } \quad(P f)^{\wedge}=P(-D) \hat{f}
+$$
+
+(d) The Fourier transform is a continuous linear mapping of $\mathscr{S}_{n}$ into $\mathscr{S}_{n}$.
+
+[Part $(d)$ will be strengthened in Theorem 7.7.]
+
+PROOF (a) Suppose $\left\{f_{i}\right\}$ is a Cauchy sequence in $\mathscr{S}_{n}$. For every pair of multiindices $\alpha$ and $\beta$ the functions $x^{\beta} D^{\alpha} f_{i}(x)$ converge then (uniformly on $R^{n}$ ) to a bounded function $g_{\alpha \beta}$, as $i \rightarrow \infty$. It follows that
+
+$$
+g_{\alpha \beta}(x)=x^{\beta} D^{\alpha} g_{00}(x)
+$$
+
+and hence that $f_{i} \rightarrow g_{00}$ in $\mathscr{S}_{n}$. Thus $\mathscr{S}_{n}$ is complete.
+(b) If $f \in \mathscr{S}_{n}$, it is obvious that $D_{\alpha} f \in \mathscr{S}_{n}$, and the Leibniz formula implies that $P f$ and $g f$ are also in $\mathscr{S}_{n}$. The continuity of the three mappings is now an easy consequence of the closed graph theorem.
+
+(c) If $f \in \mathscr{S}_{n}$, so is $P(D) f$, by $(b)$, and
+
+$$
+(P(D) f) * e_{t}=f * P(D) e_{t}=f * P(t) e_{t}=P(t)\left[f * e_{t}\right]
+$$
+
+Evaluation of these functions at the origin of $R^{n}$ gives the first part of (c), namely,
+
+$$
+(P(D) f)^{\wedge}(t)=P(t) \hat{f}(t)
+$$
+
+If $t=\left(t_{1} \ldots, t_{n}\right)$ and $t^{\prime}=\left(t_{1}+\varepsilon, t_{2}, \ldots, t_{n}\right), \varepsilon \neq 0$, then
+
+$$
+\frac{\hat{f}\left(t^{\prime}\right)-\hat{f}(t)}{i \varepsilon}=\int_{R^{n}} x_{1} f(x) \frac{e^{-i x_{1} \varepsilon}-1}{i x_{1} \varepsilon} e^{-i x \cdot t} d m_{n}(x) .
+$$
+
+The dominated convergence theorem can be applied, since $x_{1} f \in L^{1}$, and yields
+
+$$
+-\frac{1}{i} \frac{\partial}{\partial t_{1}} \hat{f}(t)=\int_{R^{n}} x_{1} f(x) e^{-i x \cdot t} d m_{n}(x)
+$$
+
+This is the case $P(x)=x_{1}$ of the second part of $(c)$; the general case follows by iteration.
+
+(d) Suppose $f \in \mathscr{S}_{n}$ and $g(x)=(-1)^{|x|} x^{\alpha} f(x)$. Then $g \in \mathscr{S}_{n}$; now . (c) implies that $\hat{g}=D_{\alpha} \hat{f}$ and $P \cdot D_{\alpha} \hat{f}=P \cdot \hat{g}=(P(D) g)^{\wedge}$, which is a bounded function, since $P(D) g \in L^{1}\left(R^{n}\right)$. This proves that $\hat{f} \in \mathscr{S}_{n}$. If $f_{i} \rightarrow f$ in $\mathscr{S}_{n}$, then $f_{i} \rightarrow f$ in $L^{1}\left(R^{n}\right)$. Therefore $\hat{f}_{i}(t) \rightarrow \hat{f}(t)$ for all $t \in R^{n}$. That $f \rightarrow \hat{f}$ is a continuous mapping of $\mathscr{S}_{n}$ into $\mathscr{S}_{n}$ follows now from the closed graph theorem.
+
+7.5 Theorem If $f \in L^{1}\left(R^{n}\right)$, then $\hat{f} \in C_{0}\left(R^{n}\right)$, and $\|\hat{f}\|_{\infty} \leq\|f\|_{1}$.
+
+Here $C_{0}\left(R^{n}\right)$ is the supremum-normed Banach space of all complex continuous functions on $R^{n}$ that vanish at infinity.
+
+PROOF Since $\left|e_{t}(x)\right|=1$, it is clear that
+
+$$
+|\hat{f}(t)| \leq\|f\|_{1} \quad\left(f \in L^{1}, t \in R^{n}\right) .
+$$
+
+Since $\mathscr{D}\left(R^{n}\right) \subset \mathscr{S}_{n}, \mathscr{S}_{n}$ is dense in $L^{1}\left(R^{n}\right)$. To each $f \in L^{1}\left(R^{n}\right)$ correspond functions $f_{i} \in \mathscr{S}_{n}$ such that $\left\|f-f_{i}\right\|_{1} \rightarrow 0$. Since $\hat{f}_{i} \in \mathscr{S}_{n} \subset C_{0}\left(R^{n}\right)$ and since (1) implies that $\hat{f}_{i} \rightarrow \hat{f}$ uniformly on $R^{n}$, the proof is complete.
+
+The following lemma will be used in the proof of the inversion theorem. It depends on the particular normalization that was chosen for $m_{n}$.
+
+7.6 Lemma If $\phi_{n}$ is defined on $R^{n}$ by
+
+$$
+\phi_{n}(x)=\exp \left\{-\frac{1}{2}|x|^{2}\right\}
+$$
+
+then $\phi_{n} \in \mathscr{S}_{n}, \hat{\phi}_{n}=\phi_{n}$, and
+
+$$
+\phi_{n}(0)=\int_{R^{n}} \hat{\phi}_{n} d m_{n}
+$$
+
+PROOF It is clear that $\phi_{n} \in \mathscr{S}_{n}$. Since $\phi_{1}$ satisfies the differential equation
+
+$$
+y^{\prime}+x y=0
+$$
+
+a short computation, or an appeal to (c) of Theorem 7.4, shows that $\hat{\phi}_{1}$ also satisfies (3). Hence $\hat{\phi}_{1} / \phi_{1}$ is a constant. Since $\phi_{1}(0)=1$ and
+
+$$
+\hat{\phi}_{1}(0)=\int_{R} \phi_{1} d m_{1}=(2 \pi)^{-1 / 2} \int_{-\infty}^{\infty} \exp \left\{-\frac{1}{2} x^{2}\right\} d x=1,
+$$
+
+we conclude that $\hat{\phi}_{1}=\phi_{1}$. Next,
+
+$$
+\phi_{n}(x)=\phi_{1}\left(x_{1}\right) \cdots \phi_{1}\left(x_{n}\right) \quad\left(x \in R^{n}\right)
+$$
+
+so that
+
+$$
+\hat{\phi}_{n}(t)=\hat{\phi}_{1}\left(t_{1}\right) \cdots \hat{\phi}_{1}\left(t_{n}\right) \quad\left(t \in R^{n}\right)
+$$
+
+It follows that $\hat{\phi}_{n}=\phi_{n}$ for all $n$. Since $\hat{\phi}_{n}(0)=\int \phi_{n} d m_{n}$, by definition, and since $\hat{\phi}_{n}=\phi_{n}$, we obtain (2).
+
+\subsection{The inversion theorem}
+(a) If $g \in \mathscr{S}_{n}$, then
+
+$$
+g(x)=\int_{R^{n}} \hat{g} e_{x} d m_{n} \quad\left(x \in R^{n}\right)
+$$
+
+(b) The Fourier transform is a continuous, linear, one-to-one mapping of $\mathscr{S}_{n}$ onto $\mathscr{S}_{n}$, of period 4 , whose inverse is also continuous.
+
+(c) If $f \in L^{1}\left(R^{n}\right), \hat{f} \in L^{1}\left(R^{n}\right)$, and
+
+$$
+f_{0}(x)=\int_{R^{n}} \hat{f} e_{x} d m_{n} \quad\left(x \in R^{n}\right)
+$$
+
+then $f(x)=f_{0}(x)$ for almost every $x \in R^{n}$.
+
+PROOF If $f$ and $g$ are in $L^{1}\left(R^{n}\right)$, Fubini's theorem can be applied to the double integral
+
+to yield the identity
+
+$$
+\int_{R^{n}} \int_{R^{n}} f(x) g(y) e^{-i x \cdot y} d m_{n}(x) d m_{n}(y)
+$$
+
+$$
+\int_{R^{n}} \hat{f} g d m_{n}=\int_{R^{n}} f \hat{g} d m_{n}
+$$
+
+To prove part (a), take $g \in \mathscr{S}_{n}, \phi \in \mathscr{S}_{n}, f(x)=\phi(x / \lambda)$, where $\lambda>0$. By $(d)$ of Theorem 7.2, (3) becomes
+
+or
+
+$$
+\int_{R^{n}} g(t) \lambda^{n} \hat{\phi}(\lambda t) d m_{n}(t)=\int_{R^{n}} \phi\left(\frac{y}{\lambda}\right) \hat{g}(y) d m_{n}(y),
+$$
+
+$$
+\int_{R^{n}}-g\left(\frac{t}{\lambda}\right) \hat{\phi}(t) d m_{n}(t)=\int_{R^{n}} \phi\left(\frac{y}{\lambda}\right) \hat{g}(y) d m_{n}(y) .
+$$
+
+As $\lambda \rightarrow \infty, g(t / \lambda) \rightarrow g(0)$ and $\phi(y / \lambda) \rightarrow \phi(0)$, boundedly, so that the dominated convergence theorem can be applied to the two integrals in (4). The result is
+
+$$
+g(0) \int_{R^{n}} \hat{\phi} d m_{n}=\phi(0) \int_{R^{n}} \hat{g} d m_{n} \quad\left(g, \phi \in \mathscr{S}_{n}\right) .
+$$
+
+If we specialize $\phi$ to be the function $\phi_{n}$ of Lemma 7.6, (5) gives the case $x=0$ of the inversion formula (1). The general case follows from this, since $(a)$ of
+Theorem 7.2 yields
+
+This completes part $(a)$.
+
+$$
+g(x)=\left(\tau_{-x} g\right)(0)=\int_{R^{n}}\left(\tau_{-x} g\right)^{\wedge} d m_{n}=\int_{R^{n}} \hat{g} e_{x} d m_{n}
+$$
+
+To prove part $(b)$, we introduce the temporary notation $\Phi g=\hat{g}$. The inversion formula (1) shows that $\Phi$ is one-to-one on $\mathscr{S}_{n}$, since $\hat{g}=0$ obviously implies $g=0$. It also shows that
+
+$$
+\Phi^{2} g=\check{g}
+$$
+
+where, we recall, $\check{g}(x)=g(-x)$, and hence that $\Phi^{4} g=g$. It follows that $\Phi$ maps $\mathscr{S}_{n}$ onto $\mathscr{S}_{n}$. The continuity of $\Phi$ has already been proved in Theorem 7.4. To prove the continuity of $\Phi^{-1}$, one can now either refer to the open mapping theorem or to the fact that $\Phi^{-1}=\Phi^{3}$.
+
+To prove (c), we return to the identity (3), with $g \in \mathscr{S}_{n}$. Insert the inversion formula (1) into (3) and use Fubini's theorem, to obtain
+
+$$
+\int_{R^{n}} f_{0} \hat{g} d m_{n}=\int_{R^{n}} f \hat{g} d m_{n} \quad\left(g \in \mathscr{S}_{n}\right) .
+$$
+
+By $(b)$, the functions $\hat{g}$ cover all of $\mathscr{S}_{n}$. Since $\mathscr{D}\left(R^{n}\right) \subset \mathscr{S}_{n}$, (7) implies that
+
+$$
+\int_{R^{n}}\left(f_{0}-f\right) \phi d m_{n}=0
+$$
+
+for every $\phi \in \mathscr{D}\left(R^{n}\right)$, hence (by a uniform approximation described in Exercise 1 of Chapter 6 ) for every continuous $\phi$ with compact support. It follows that $f_{0}-f=0$ a.e.
+
+7.8 Theorem If $f \in \mathscr{S}_{n}$ and $g \in \mathscr{S}_{n}$, then
+
+(a) $f * g \in \mathscr{S}_{n}$, and
+
+(b) $(f g)^{\wedge}=\hat{f} * \hat{g}$.
+
+PROOF By $(c)$ of Theorem 7.2, $(f * g)^{\wedge}=\hat{f} \hat{g}$, or
+
+$$
+\Phi(f * g)=\Phi f \cdot \Phi g
+$$
+
+in the notation used in the proof of $(b)$ of Theorem 7.7. With $\hat{f}$ and $\hat{g}$ in place of $f$ and $g$, (1) becomes
+
+$$
+\Phi(\hat{f} * \hat{g})=\Phi^{2} f \cdot \Phi^{2} \tilde{g}=\check{f} \check{g}=(f g)^{2}=\Phi^{2}(f g)
+$$
+
+Now apply $\Phi^{-1}$ to both sides of (2) to obtain (b). Note that $f g \in \mathscr{S}_{n}$; hence (b) implies that $\hat{f} * \hat{g} \in \mathscr{S}_{n}$, and this gives (a), since the Fourier transform maps $\mathscr{S}_{n}$ onto $\mathscr{S}_{n}$.
+
+IIII
+
+7.9 The Plancherel theorem There is a linear isometry $\Psi$ of $L^{2}\left(R^{n}\right)$ onto $L^{2}\left(R^{n}\right)$ which is uniquely determined by the requirement that
+
+$$
+\Psi \hat{\Psi}=\hat{f} \quad \text { for every } \hat{f} \in \mathscr{S}_{n} \text {. }
+$$
+
+Observe that the equality $\Psi f=\hat{f}$ extends from $\mathscr{S}_{n}$ to $L^{1} \cap L^{2}$, since $\mathscr{S}_{n}$ is dense in $L^{2}$ as well as in $L^{1}$. This gives consistency: The domain of $\Psi$ is $L^{2}, \hat{f}$ was defined in Section 7.1 for all $f \in L^{1}$, and $\Psi f=\hat{f}$ whenever both definitions are applicable. Thus $\Psi$ extends the Fouricr transform from $L^{1} \cap L^{2}$ to $L^{2}$. This extension $\Psi$ is still called the Fourier transform (sometimes the Fourier-Plancherel transform), and the notation $\hat{f}$ will continue to be used in place of $\Psi f$, for any $f \in L^{2}\left(R^{n}\right)$.
+
+PROOF If $f$ and $g$ are in $\mathscr{S}_{n}$, the inversion theorem yields
+
+$$
+\begin{aligned}
+\int_{R^{n}} f \bar{g} d m_{n} & =\int_{R^{n}} \bar{g}(x) d m_{n}(x) \int_{R^{n}} \hat{f}(t) e^{i x \cdot t} d m_{n}(t) \\
+& =\int_{R^{n}} \hat{f}(t) d m_{n}(t) \int_{R^{n}} \bar{g}(x) e^{i x \cdot t} d m_{n}(x) .
+\end{aligned}
+$$
+
+The last inner integral is the complex conjugate of $\hat{g}(t)$. We thus get the Parseval formula
+
+$$
+\int_{R^{n}} f \bar{g} d m_{n}=\int_{R^{n}} \hat{f} \overline{\hat{g}} d m_{n} \quad\left(f, g \in \mathscr{S}_{n}\right)
+$$
+
+If $g=f$, (1) specializes to
+
+$$
+\|f\|_{2}=\|\hat{f}\|_{2} \quad\left(f \in \mathscr{S}_{n}\right)
+$$
+
+Note that $\mathscr{S}_{n}$ is dense in $L^{2}\left(R^{n}\right)$, for the same reason that $\mathscr{S}_{n}$ is dense in $L^{1}\left(R^{n}\right)$. Thus (2) shows that $f \rightarrow \hat{f}$ is an isometry (relative to the $L^{2}$-metric) of the dense subspace $\mathscr{S}_{n}$ of $L^{2}\left(R^{n}\right)$ onto $\mathscr{S}_{n}$. (The mapping is onto by the inversion theorem.) It follows, by elementary metric space arguments, that $f \rightarrow \hat{f}$ has a unique continuous extension $\Psi: L^{2}\left(R^{n}\right) \rightarrow L^{2}\left(R^{n}\right)$ and that this $\Psi$ is a linear isometry onto $L^{2}\left(R^{n}\right)$. Some details of this are given in Exercise 13
+
+It should be noted that the Parseval formula (1) remains true for arbitrary $f$ and $g$ in $L^{2}\left(R^{n}\right)$.
+
+That the Fourier transform is an $L^{2}$-isometry is one of the most important features of the whole subject.
+
+\section{Tempered Distributions}
+Before we define these, we establish the following relation between $\mathscr{S}_{n}$ and $\mathscr{D}\left(R^{n}\right)$.
+
+\subsection{Theorem}
+(a) $\mathscr{D}\left(R^{\dot{n}}\right)$ is dense in $\mathscr{S}_{n}$.
+
+(b) The identity mapping of $\mathscr{D}\left(R^{n}\right)$ into $\mathscr{S}_{n}$ is continuous.
+
+These statements refer, of course, to the usual topologies of $\mathscr{D}\left(R^{n}\right)$ and $\mathscr{S}_{n}$, as defined in Sections 6.3 and 7.3
+
+PROOF (a) Choose $f \in \mathscr{S}_{n}, \psi \in \mathscr{D}\left(R^{n}\right)$ so that $\psi=1$ on the unit ball of $R^{n}$, and put
+
+$$
+f_{r}(x)=f(x) \psi(r x) \quad\left(x \in R^{n}, r>0\right)
+$$
+
+Then $f_{r} \in \mathscr{D}\left(R^{n}\right)$. If $P$ is a polynomial and $\alpha$ is a multi-index, then
+
+$$
+P(x) D^{\alpha}\left(f-f_{r}\right)(x)=P(x) \sum_{\beta \leq \alpha} c_{\alpha \beta}\left(D^{\alpha-\beta} f\right)(x) r^{|\beta|} D^{\beta}[1-\psi(r x)]
+$$
+
+Our choice of $\psi$ shows that $D^{\beta}[1-\psi(r x)]=0$ for every multi-index $\beta$ when $|x| \leq 1 / r$. Since $f \in \mathscr{S}_{n}$, we have $P \cdot D^{\alpha-\beta} f \in C_{0}\left(R^{n}\right)$ for all $\beta \leq \alpha$. It follows that the above sum tends to 0 , uniformly on $R^{n}$, when $r \rightarrow 0$. Thus $f_{r} \rightarrow f$ in $\mathscr{S}_{n}$, and $(a)$ is proved.
+
+(b) If $K$ is a compact set in $R^{n}$, the topology induced on $\mathscr{D}_{K}$ by $\mathscr{S}_{n}$ is clearly the same as its usual one (as defined in Section 1.46), since each $\left(1+|x|^{2}\right)^{N}$ is bounded on $K$. The identity mapping of $\mathscr{D}_{K}$ into $\mathscr{S}_{n}$ is therefore continuous (actually, a homeomorphism), and now (b) follows from Theorem 6.6
+
+7.11 Definition If $i: \mathscr{D}\left(R^{n}\right) \rightarrow \mathscr{S}_{n}$ is the identity mapping, if $L$ is a continuous linear functional on $\mathscr{S}_{n}$, and if
+
+$$
+u_{L}=L \circ i
+$$
+
+then the continuity of $i$ (Theorem 7.10 ) shows that $u_{L} \in \mathscr{D}^{\prime}\left(R^{n}\right)$; the denseness of $\mathscr{D}\left(R^{n}\right)$ in $\mathscr{S}_{n}$ shows that two distinct $L$ 's cannot give rise to the same $u$. Thus (1) describes a vector space isomorphism between the dual space $\mathscr{S}_{n}^{\prime}$ of $\mathscr{S}_{n}$, on the one hand, and a certain space of distributions on the other. The distributions that arise in this way are called tempered:
+
+The tempered distributions are precisely those $u \in \mathscr{D}^{\prime}\left(R^{n}\right)$ that have continuous extensions to $\mathscr{S}_{n}$.
+
+In view of the preceding remarks, it is customary and natural to identify $u_{L}$ with $L$. The tempered distributions on $R^{n}$ are then precisely the members of $\mathscr{S}_{n}^{\prime}$.
+
+The following examples will explain the use of the word "tempered" in this connection; it indicates a growth restriction at infinity. (See also Exercise 3.)
+
+7.12 Examples (a) Every distribution with compact support is tempered. Suppose $K$ is the compact support of some $u \in \mathscr{D}^{\prime}\left(R^{n}\right)$, fix $\psi \in \mathscr{D}\left(R^{n}\right)$ so that $\psi=1$ in some open set containing $K$, and define
+
+$$
+\tilde{u}(f)=u(\psi f) \quad\left(f \in \mathscr{S}_{n}\right)
+$$
+
+If $f_{i} \rightarrow 0$ in $\mathscr{S}_{n}$, then all $D^{\alpha} f_{i} \rightarrow 0$ uniformly on $R^{n}$, hence all $D^{\alpha}\left(\psi f_{i}\right) \rightarrow 0$ uniformly on $R^{n}$, so that $\psi f_{i} \rightarrow 0$ in $\mathscr{D}\left(R^{n}\right)$. It follows that $\tilde{u}$ is continuous on $\mathscr{S}_{n}$. Since $\tilde{u}(\phi)=u(\phi)$ for $\phi \in \mathscr{D}\left(R^{n}\right), \tilde{u}$ is an extension of $u$.
+
+(b) Suppose $\mu$ is a positive Borel measure on $R^{n}$ such that
+
+$$
+\int_{R^{n}}\left(1+|x|^{2}\right)^{-k} d \mu(x)<\infty
+$$
+
+for some positive integer $k$. Then $\mu$ is a tempered distribution. The assertion is, more explicitly, that the formula
+
+$$
+\Lambda f=\int_{R^{n}} f d \mu
+$$
+
+defines a continuous linear functional on $\mathscr{S}_{n}$.
+
+Tó see this, suppose $f_{i} \rightarrow 0$ in $\mathscr{S}_{n}$. Then
+
+$$
+\varepsilon_{i}=\sup _{x \in R^{n}}\left(1+|x|^{2}\right)^{k}\left|f_{i}(x)\right| \rightarrow 0
+$$
+
+Since $\left|\Lambda f_{i}\right|$ is at most $\varepsilon_{i}$ times the integral in (2), $\Lambda f_{i} \rightarrow 0$. This proves the continuity of $\Lambda$.
+(c) Suppose $1 \leq p<\infty, N>0$, and $g$ is a measurable function on $R^{n}$ such that
+
+$$
+\int_{R^{n}}\left|\left(1+|x|^{2}\right)^{-N} g(x)\right|^{p} d m_{n}(x)=C<\infty .
+$$
+
+Then $g$ is a tempered distribution.
+
+As in $(b)$, define
+
+$$
+\Lambda f=\int_{R^{n}} f g d m_{n}
+$$
+
+Assume first that $p>1$; let $q$ be the conjugate exponent. Then Hölder's incquality gives
+
+$$
+\begin{aligned}
+|\Lambda f| & \leq C^{1 / p}\left\{\int_{R^{n}}\left|\left(1+|x|^{2}\right)^{N} f(x)\right|^{q} d m_{n}(x)\right\}^{1 / q} \\
+& \leq C^{1 / p} B^{1 / q} \sup _{x \in R^{n}}\left|\left(1+|x|^{2}\right)^{M} f(x)\right|,-
+\end{aligned}
+$$
+
+where $M$ is taken so large that
+
+$$
+\int_{R^{n}}\left(1+|x|^{2}\right)^{(N-M) a} d m_{n}(x)=B<\infty
+$$
+
+The inequality (7) proves that $\Lambda$ is continuous on $\mathscr{S}_{n}$. The case $p=1$ is even easier.
+
+(d) It follows from $(c)$ that every $g \in L^{p}\left(R^{n}\right)(1 \leq \tilde{p} \leq \infty)$ is a tempered distribution. So is every polynomial and, more generally, every measurable function whose absolute value is majorized by some polynomial.
+
+7.13 Theorem If $\alpha$ is a multi-index, $P$ is a polynomial, $g \in \mathscr{S}_{n}$, and $u$ is a tempered distribution, then the distributions $D^{x} u, P u$, and gu are also tempered.
+
+PROOF This follows directly from $(b)$ of Theorem 7.4 and the definitions
+
+$$
+\begin{aligned}
+\left(D^{x} u\right)(f) & =(-1)^{|x|} u\left(D^{x} f\right) \\
+(P u)(f) & =u(P f) \\
+(g u)(f) & =u(g f)
+\end{aligned}
+$$
+
+7.14 Definition For $u \in \mathscr{S}_{n}^{\prime}$, definè
+
+$$
+\hat{u}(\phi)=u(\hat{\phi}) \quad\left(\phi \in \mathscr{S}_{n}\right)
+$$
+
+Since $\phi \rightarrow \hat{\phi}$ is a continuous linear mapping of $\mathscr{S}_{n}$ into $\mathscr{S}_{n}[(d)$ of Theorem 7.4], and since $u$ is continuous on $\mathscr{S}_{n}$, it follows that $\hat{u} \in \mathscr{S}_{n}^{\prime}$.
+
+We have thus associated with each tempered distribution $u$ its Fourier transform $\hat{u}$, which is again a tempered distribution. Our next theorem will show that the formal
+properties of Fourier transforms of rapidly decreasing functions are preserved in the larger setting of tempered distributions.
+
+But first there arises a consistency question that ought to be settled. If $f \in L^{1}\left(R^{n}\right)$, then $f$ may also be regarded as a tempered distribution, say $u_{f}$, so that two definitions of the Fourier transform are available, namely, $(c)$ of Section 7.1 and Definition 7.14. The question is whether they agree, i.e., whether the distribution $\left(u_{f}\right)^{\wedge}$ corresponds to the function $\hat{f}$. The answer is affirmative, because
+
+$$
+\left(u_{f}\right)^{\wedge}(\phi)=u_{f}(\hat{\phi})=\int f \hat{\phi}=\int \hat{f} \phi=\left(u_{\hat{f}}\right)(\phi)
+$$
+
+for every $\phi \in \mathscr{S}_{n}$. The third of these equalities is the identity (3) of Section 7.7 ; the others are definitions.
+
+Since $L^{2}\left(R^{n}\right) \subset \mathscr{S}_{n}^{\prime}$, the same question arises for the Fourier-Plancherel transform. The answer is again affirmative, by the same proof, since the identity $\int f \hat{\phi}=\int \hat{f} \phi$ persists for $f \in L^{2}\left(R^{n}\right)$ and $\phi \in \mathscr{S}_{n}$.
+
+\subsection{Theorem}
+(a) The Fourier transform is a continuous, linear, one-to-one mapping of $\mathscr{S}_{n}^{\prime}$ onto $\mathscr{S}_{n}^{\prime}$, of period 4 , whose inverse is also continuous.
+
+(b) If $u \in \mathscr{S}_{n}^{\prime}$ and $P$ is a polynomial, then
+
+$$
+(P(D) u)^{\wedge}=P \hat{u} \quad \text { and } \quad(P u)^{\wedge}=P(-D) \hat{u} \text {. }
+$$
+
+Note that these are the analogues of $(b)$ of Theorem 7.7 and $(c)$ of Theorem 7.4. The topology to which $(a)$ refers is the weak*-topology that $\mathscr{S}_{n}$ induces on $\mathscr{S}_{n}^{\prime}$. Note also that the differential operators $P(D)$ and $P(-D)$ are defined in terms of $D_{\alpha}$, not $D^{\alpha}$; see $(d)$ of Section 7.1.
+
+PROOF Let $W$ be a neighborhood of 0 in $\mathscr{S}_{n}^{\prime}$. Then there exist functions $\phi_{1}, \ldots, \phi_{k} \in \mathscr{S}_{n}$ such that
+
+$$
+\left\{u \in \mathscr{S}_{n}^{\prime}:\left|u\left(\phi_{i}\right)\right|<1 \quad \text { for } \quad 1 \leq i \leq k\right\} \subset W .
+$$
+
+Define
+
+$$
+V=\left\{u \in \mathscr{S}_{n}^{\prime}:\left|u\left(\hat{\phi}_{i}\right)\right|<1 \quad \text { for } \quad 1 \leq i \leq k\right\}
+$$
+
+Then $V$ is a neighborhood of 0 in $\mathscr{S}_{n}^{\prime}$, and since
+
+$$
+\hat{u}(\phi)=u(\hat{\phi}) \quad\left(\phi \in \mathscr{S}_{n}, u \in \mathscr{S}_{n}^{\prime}\right)
+$$
+
+we see that $\hat{u} \in W$ whenever $u \in V$. This proves the continuity of $\Phi$, where we write $\Phi u=\hat{u}$. Since $\Phi$ has period 4 on $\mathscr{S}_{n}$, (3) shows that $\Phi$ has period 4 on $\mathscr{S}_{n}^{\prime}$, that is, that $\Phi^{4} u=u$ for every $u \in \mathscr{S}_{i n}^{\prime}$. Hence $\Phi$ is one-to-one and onto, and since $\Phi^{-1}=\Phi^{3}, \Phi^{-1}$ is continuous.
+by the computations
+
+Statement $(b)$ follows from $(c)$ of Theorem 7.4 and from Theorem 7.13,
+
+and
+
+$$
+\begin{aligned}
+(P(D) u)^{\wedge}(\phi) & =(P(D) u)(\hat{\phi})=u(P(-D) \hat{\phi}) \\
+& =u\left((P \phi)^{\wedge}\right)=\hat{u}(P \phi)=(P \hat{u})(\phi)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+(P(-D) \hat{u})(\phi) & =\hat{u}(P(D) \phi)=u\left((P(D) \phi)^{\wedge}\right) \\
+& =u(P \hat{\phi})=(P u)(\hat{\phi})=(P u)^{\wedge}(\phi)
+\end{aligned}
+$$
+
+where $\phi$ is an arbitrary function in $\mathscr{S}_{n}$.
+
+7.16 Examples We saw in $(d)$ of Section 7.12 that polynomials are tempered distributions. Their Fourier transforms are easily computed. We begin with the polynomial 1; regarded as a distribution on $R^{n}, 1$ acts on test functions $\phi$ by the formula
+
+Hence
+
+$$
+1(\phi)=\int_{R^{n}} 1 \phi d m_{n}=\int_{R^{n}} \phi d m_{n} .
+$$
+
+$$
+\hat{\mathrm{i}}(\phi)=1(\hat{\phi})=\int_{R^{n}} \hat{\phi} d m_{n}=\phi(0)=\delta(\phi),
+$$
+
+where $\delta$ is the Dirac measure on $R^{n}$. Likewise,
+
+$$
+\hat{\delta}(\phi)=\delta(\hat{\phi})=\hat{\phi}(0)=\int_{R^{n}} \phi d m_{n}=1(\phi)
+$$
+
+Thus (2) and (3) give the results
+
+$$
+\hat{1}=\delta \quad \text { and } \quad \hat{\delta}=1
+$$
+
+If $P$ is now an arbitrary polynomial on $R^{n}$, and if we apply $(b)$ of Theorem 7.15 with $u=\delta$ and with $u=1$, the results in (4) show that
+
+$$
+(P(D) \delta)^{\wedge}=P \quad \text { and } \quad \hat{P}=P(-D) \delta
+$$
+
+The two formulas in (4) [as well as those in (5)] can also be derived from each other by the inversion theorem, which may be stated for tempered distributions in the following way:
+
+$$
+\text { If } u \in \mathscr{S}_{n}^{\prime} \text {, then }(\hat{u})^{\wedge}=\check{u} \text {, where } \check{u} \text { is defined by }
+$$
+
+$$
+\check{u}(\phi)=u(\check{\phi}) \quad\left(\phi \in \mathscr{S}_{n}\right)
+$$
+
+The proof is trivial, since $(\hat{\phi})^{\wedge}=\check{\phi}$, by $(a)$ of Theorem 7.7:
+
+$$
+(\hat{u})^{\wedge}(\phi)=\hat{u}(\hat{\phi})=u\left((\hat{\phi})^{\wedge}\right)=u(\check{\phi})=\check{u}(\phi) .
+$$
+
+Note that $\check{\delta}=\delta$.
+
+If we combine (5) with Theorem 6.25 , we find that a distribution is the Fourier transform of a polynomial if and only if its support is the origin (or the empty set).
+
+The following lemma will be used in the proof of Theorem 7.19. Its analogue, with $\mathscr{D}\left(R^{n}\right)$ in place of $\mathscr{S}_{n}$, is much easier and was used without comment in the proof of Theorem 6.30.
+
+7.17 Lemma If $w=(1,0, \ldots, 0) \in R^{n}$, if $\phi \in \mathscr{S}_{n}$, and if
+
+$$
+\phi_{\varepsilon}(x)=\frac{\phi(x+\varepsilon w)-\phi(x)}{\varepsilon} \quad\left(x \in R^{n}, \varepsilon>0\right)
+$$
+
+then $\dot{\psi}_{\varepsilon} \rightarrow \partial \phi / \partial x_{1}$ in the topology of $\mathscr{S}_{n}$, as $\varepsilon \rightarrow 0$.
+
+PROOF The conclusion can be obtained by showing that the Fourier transform of $\phi_{\varepsilon}-\partial \phi / \partial x_{1}$ tends to 0 in $\mathscr{S}_{n}$, that is, by showing that
+
+$$
+\psi_{\varepsilon} \hat{\phi} \rightarrow 0 \text { in } \mathscr{S}_{n}, \quad \text { as } \varepsilon \rightarrow 0
+$$
+
+where
+
+$$
+\psi_{\varepsilon}(y)=\frac{\exp \left(i \varepsilon y_{1}\right)-1}{\varepsilon}-i y_{1} \quad\left(y \in R^{n}, \varepsilon>0\right)
+$$
+
+If $P$ is a polynomial and $\alpha$ is a multi-index, then
+
+$$
+P \cdot D^{\alpha}\left(\psi_{\varepsilon} \hat{\phi}\right)=\sum_{\beta \leq \alpha} c_{\alpha \beta} P \cdot\left(D^{\alpha-\beta} \hat{\phi}\right) \cdot\left(D^{\beta} \psi_{\varepsilon}\right)
+$$
+
+A simple computation shows that
+
+$$
+\left|D^{\beta} \psi_{\varepsilon}(y)\right| \leq \begin{cases}\varepsilon y_{1}^{2} & \text { if }|\beta|=0 \\ \varepsilon\left|y_{1}\right| & \text { if }|\beta|=1 \\ \varepsilon^{|\beta|-1} & \text { if }|\beta|>1\end{cases}
+$$
+
+The left side of (4) tends therefore to 0 , uniformly on $R^{n}$, as $\varepsilon \rightarrow 0$. The definition of the topology of $\mathscr{F}_{n}$ (Section 7.3) shows now that (2) holds.
+
+7.18 Definition If $u \in \mathscr{S}_{n}^{\prime}$ and $\phi \in \mathscr{S}_{n}$, then
+
+$$
+(u * \phi)(x)=u\left(\tau_{x} \check{\phi}\right) \quad\left(\dot{x} \in R^{n}\right)
+$$
+
+Note that this is well defined, since $\tau_{x} \check{\phi} \in \mathscr{S}_{n}$ for every $x \in R^{n}$.
+
+7.19 Theorem Suppose $\phi \in \mathscr{S}_{n}$ and $u$ is a tempered distribution. Then
+
+(a) $u * \phi \in C^{\infty}\left(R^{n}\right)$, and
+
+$$
+D^{\alpha}(u * \phi)=\left(D^{\alpha} u\right) * \phi=u *\left(D^{\alpha} \phi\right)
+$$
+
+for every multi-index $\alpha$,
+(b) $u * \phi$ has polynomial growth, hence is a tempered distribution,
+(c) $(u * \phi)^{\wedge}=\hat{\phi} \hat{u}$,
+
+(d) $(u * \phi) * \psi=u *(\phi * \psi)$, for every $\psi \in \mathscr{S}_{n}$,
+
+(e) $\hat{u} * \hat{\phi}=(\phi u)^{\wedge}$.
+
+PROOF. The second equality in $(a)$ is proved exactly as in Theorem 6.30, since convolution obviously still commutes with translations. This also shows that
+
+$$
+\left(\frac{\tau_{-\varepsilon w}-\tau_{0}}{\varepsilon}\right)(u * \phi)=u *\left(\frac{\tau_{-\varepsilon w}-\tau_{0}}{\varepsilon}\right) \phi
+$$
+
+Lemma 7.17 now gives $D^{\alpha}(u * \phi)=u *\left(D^{\alpha} \phi\right)$ if $\alpha=(1,0, \ldots, 0)$. Iteration of this special case gives $(a)$.
+
+Let $p_{N}(f)$ denote the norm (1) of Section 7.3, for $f \in \mathscr{S}_{n}$. The inequality
+
+shows that
+
+$$
+1+|x+y|^{2} \leq 2\left(1+|x|^{2}\right)\left(1+|y|^{2}\right) \quad \therefore \quad\left(x, y \in R^{n}\right)
+$$
+
+$$
+p_{N}\left(\tau_{x} f\right) \leq 2^{N}\left(1+|x|^{2}\right)^{N} p_{N}(f) \quad\left(x \in R^{n}, f \in \mathscr{S}_{n}\right)
+$$
+
+Since $u$ is a continuous linear functional on $\mathscr{S}_{n}$ and since the norms $p_{N}$ determine the topology of $\mathscr{S}_{n}$, there is an $N$ and a $C<\infty$ such that
+
+$$
+|u(f)| \leq C p_{N}(f) \quad\left(f \in \mathscr{S}_{n}\right)
+$$
+
+see Chapter 1, Exercise 8. By (3) and (4),
+
+$$
+|(u * \phi)(x)|=\left|u\left(\tau_{x} \phi\right)\right| \leq 2^{N} C p_{N}(\phi)\left(1+|x|^{2}\right)^{N},
+$$
+
+which proves $(b)$. then
+
+Thus $u * \phi$ has a Fourier transform, in $\mathscr{S}_{n}^{\prime}$. If $\psi \in \mathscr{D}\left(R^{n}\right)$, with support $K$,
+
+so that
+
+$$
+\begin{aligned}
+(u * \phi)^{\wedge}(\hat{\psi}) & =(u * \phi)(\check{\psi})=\int_{R^{n}}(u * \phi)(x) \psi(-x) d m_{n}(x) \\
+& =\int_{-K} u\left[\psi(-x) \tau_{x} \check{\phi}\right] d m_{n}(x)=u \int_{-K} \psi(-x) \tau_{x} \check{\phi} d m_{n}(x) \\
+& =u\left((\phi * \psi)^{\vee}\right)=\hat{u}\left((\phi * \psi)^{\wedge}\right)=\hat{u}(\hat{\phi} \hat{\psi})
+\end{aligned}
+$$
+
+$$
+(u * \phi)^{\wedge}(\hat{\psi})=(\hat{\phi} \hat{u})(\hat{\psi})
+$$
+
+In the preceding calculation, Theorem 3.27 was applied to an $\mathscr{S}_{n}$-valued integral, when $u$ was moved across the integral sign. So far, (6) has been proved for $\psi \in \mathscr{D}\left(R^{n}\right)$. Since $\mathscr{D}\left(R^{n}\right)$ is dense in $\mathscr{S}_{n}$, the Fourier transforms of members of $\mathscr{D}\left(R^{n}\right)$ are also dense in $\mathscr{S}_{n}$, by $(b)$ of Theorem 7.7. Hence (6) holds for every $\hat{\psi} \in \mathscr{S}_{n}$. The distributions $(u * \phi)^{\wedge}$ and $\hat{\phi} \hat{u}$ are therefore equal. This proves $(c)$.
+
+In the computation that precedes (6), the two end terms are now seen to be equal for any $\psi \in \mathscr{S}_{n}$. Hence
+
+$$
+(u * \phi)(\breve{\psi})=u\left((\phi * \psi)^{\vee}\right)
+$$
+
+which is the same as
+
+$$
+((u * \phi) * \psi)(0)=(u *(\phi * \psi))(0)
+$$
+
+If we replace $\psi$ by $\tau_{x} \psi$ in (8), we obtain (d).
+
+Finally, $(\hat{u} * \hat{\phi})^{\wedge}=\check{\phi} \check{u}=(\phi u)^{\vee}$, by $(c)$ above and (6) of Section 7.16; this gives $(e)$, since $(\phi u)^{\wedge}=\left((\phi u)^{\wedge}\right)^{\wedge}$.
+
+\section{Paley-Wiener Theorems}
+One of the classical theorems of Paley and Wiener characterizes the entire functions of exponential type (of one complex variable), whose restriction to the real axis is in $L^{2}$, as being exactly the Fourier transforms of $L^{2}$-functions with compact support; see, for instance, Theorem 19.3 of [23]. We shall give two analogues of this (in several variables), one for $C^{\infty}$-functions with compact support, and one for distributions with compact support.
+
+7.20 Definitions If $\Omega$ is an open set in $\ell^{n}$, and if $f$ is a continuous complex function in $\Omega$, then $f$ is said to be holomorphic in $\Omega$ if it is holomorphic in each variable separately. This means that if $\left(a_{1}, \ldots, a_{n}\right) \in \Omega$ and if
+
+$$
+g_{i}(\lambda)=f\left(a_{1}, \ldots, a_{i-1}, a_{i}+\lambda, a_{i+1}, \ldots, a_{n}\right)
+$$
+
+each of the functions $g_{1}, \ldots, g_{n}$ is to be holomorphic in some neighborhood of 0 in C. A function that is holomorphic in all of $\mathscr{C}^{n}$ is said to be entire.
+
+Points of $\ell^{n}$ will be denoted by $z=\left(z_{1}, \ldots, z_{n}\right)$, where $z_{k} \in \mathscr{C}$. If $z_{k}=$ $x_{k}+i y_{k}, x=\left(x_{1}, \ldots, x_{n}\right), y=\left(y_{1}, \ldots, y_{n}\right)$, then we write $z=x+i y$. The vectors
+
+$$
+x=\operatorname{Re} z \quad \text { and } \quad y=\operatorname{Im} z
+$$
+
+are the real and imaginary parts of $z$, respectively; $R^{n}$ will be thought of as the set of all $z \in \mathbb{C}^{n}$ with $\operatorname{Im} z=0$. The notations
+
+$$
+\begin{aligned}
+|z| & =\left(\left|z_{1}\right|^{2}+\cdots+\left|z_{n}\right|^{2}\right)^{1 / 2} \\
+|\operatorname{Im} z| & =\left(y_{1}^{2}+\cdots+y_{n}^{2}\right)^{1 / 2} \\
+z^{\alpha} & =z_{1}^{\alpha_{1}} \cdots z_{n}^{\alpha_{n}} \\
+z \cdot t & =z_{1} t_{1}+\cdots+z_{n} t_{n} \\
+e_{z}(t) & =\exp (i z \cdot t)
+\end{aligned}
+$$
+
+will be used, for any multi-index $\alpha$ and any $t \in R^{n}$.
+
+7.21. Lemma Iff is an entire function in $\ell^{n}$ that vanishes on $R^{n}$, then $f=0$.
+
+PROOF We consider the case $n=1$ as known. Let $P_{k}$ be the following property of $f:$ If $z \in \mathbb{C}^{n}$ has at least $k$ real coordinates, then $f(z)=0 . P_{n}$ is given; $P_{0}$ is to be proved. Assume $1 \leq i \leq n$ and $P_{i}$ is true. Take $a_{1}, \ldots, a_{i}$ real. The function $g_{i}$ considered in Section 7.20 is then 0 on the real axis, hence is 0 for all $\lambda \in \mathbb{C}$. It follows that $P_{i=1}$ is true.
+
+In the following two theorems,
+
+$$
+r B=\left\{x \in R^{n}:|x| \leq r\right\}
+$$
+
+\subsection{Theorem}
+(a) If $\phi \in \mathscr{D}\left(R^{n}\right)$ has its support in $r B$, and if
+
+$$
+f(z)=\int_{R^{n}} \phi(t) e^{-i z \cdot t} d m_{n}(t) \quad\left(z \in \mathbb{C}^{n}\right),
+$$
+
+then $f$ is entire, and there are constants $\gamma_{N}<\infty$ such that (2) $\vdots$
+
+$$
+|f(z)| \leq \gamma_{N}(1+|z|)^{-N} e^{r|\operatorname{lm} z|} \quad\left(z \in \mathbb{C}^{n}, N=0,1,2, \ldots\right)
+$$
+
+(b) Conversely, if an crtire function $f$ satisfies the conditions (2), then there exists $\phi \in \mathscr{D}\left(R^{n}\right)$, with support in $r B$, such that (1) holds.
+
+PROOF (a) If $t \in r B$ then
+
+$$
+\left|e^{-i z \cdot t}\right|=e^{y \cdot t} \leq e^{|y||t|} \leq e^{r|\operatorname{lm} z|} .
+$$
+
+The integrand in (1) is therefore in $L^{1}\left(R^{n}\right)$, for every $z \in \mathbb{C}^{n}$, and $f$ is well defined on $\ell^{n}$. The continuity of $f$ is trivial, and an application of Morera's theorem, to each variable separately, shows that $f$ is entire. Integrations by part give
+
+$$
+z^{\alpha} f(z)=\int_{R^{n}}\left(D_{\alpha} \phi\right)(t) e^{-i z \cdot t} d m_{n}(t)
+$$
+
+Hence
+
+$$
+\left|z^{\alpha}\right||f(z)| \leq\left\|D_{\alpha} \phi\right\|_{1} e^{r|\operatorname{Im} z|}
+$$
+
+and (2) follows from the inequalities (3).
+
+(b) Suppose $f$ is an entire function that satisfies (2), and define
+
+$$
+\phi(t)=\int_{R^{n}} f(x) e^{i t \cdot x} d m_{n}(x) \quad\left(t \in R^{n}\right)
+$$
+
+Note first that $(1+|x|)^{N} f(x)$ is in $L^{1}\left(R^{n}\right)$ for every $N$, by (2). Hence $\phi \in C^{\infty}\left(R^{n}\right)$, by the argument that proved $(c)$ of Theorem 7.4.
+
+Next, we claim that the integral
+
+$$
+\int_{-\infty}^{\infty} f\left(\xi+i \eta, z_{2}, \ldots, z_{n}\right) \exp \left\{i\left[t_{1}(\xi+i \eta)+t_{2} z_{2}+\cdots+t_{n} z_{n}\right]\right\} d \xi
+$$
+
+is independent of $\eta$, for arbitrary real $t_{1}, \ldots, t_{n}$ and complex $z_{2}, \ldots, z_{n}$. To see this, let $\Gamma$ be a rectangular path in the $(\xi+i \eta)$-plane, with one edge on the real axis, one on the line $\eta=\eta_{1}$, whose vertical edges move off to infinity. By Cauchy's theorem, the integral of the integrand (5) over $\Gamma$ is 0 . By (2), the contributions of the vertical edges to this integral tend to 0 . It follows that (5) is the same for $\eta=0$ as for $\eta=\eta_{1}$. This establishes our claim.
+
+The same can be done for the other coordinates. Hence we conciude from (4) that
+
+$$
+\phi(t)=\int_{R^{n}} f(x+i y) e^{i t \cdot(x+i y)} d m_{n}(x)
+$$
+
+for every $y \in R^{n}$.
+
+Given $t \in R^{n}, t \neq 0$, choose $y=\lambda t /|t|$, where $\lambda>0$. Then $t \cdot y=\lambda|t|$, $|y|=\lambda$
+
+$$
+\left|f(x+i y) e^{i t \cdot(x+i y)}\right| \leq \gamma_{N}(1+|x|)^{-N} e^{(r-|t|) \lambda}
+$$
+
+and therefore
+
+$$
+|\phi(t)| \leq \gamma_{N} e^{(r-|t|) \lambda} \int_{R^{n}}(1+|x|)^{-N} d m_{n}(x)
+$$
+
+where $N$ is chosen so large that the last integral is finite. Now let $\lambda \rightarrow \infty$. If $|t|>r$, (7) shows that $\phi(t)=0$. Thus $\phi$ has its support in $r B$.
+
+Now (1) follows, for real $z$, from (4) and the inversion theorem. Since both sides of (1) are entire functions, they coincide on $\mathscr{C}^{n}$, by Lemma 7.21. This completes the proof.
+
+The following remarks will motivate the next theorem.
+
+Let $u$ be a distribution in $R^{n}$, with compact support. Then $\hat{u}$ is defined, as a tempered distribution, by $\hat{u}(\phi)=u(\hat{\phi})$. However, the definition $\hat{f}(x)=\int f e_{-x} d m_{n}$, made for $f \in L^{1}\left(R^{n}\right)$, suggests that $\hat{u}$ ought to be a function, namely,
+
+$$
+\hat{u}(x)=u\left(e_{-x}\right) \quad\left(x \in R^{n}\right)
+$$
+
+because $e_{-x} \in C^{\infty}\left(R^{n}\right)$ and $u(\phi)$ makes sense for every $\phi \in C^{\infty}\left(R^{n}\right)$, as shown by $(d)$ of Theorem 6.24. Moreover, $e_{-z} \in C^{\infty}\left(R^{n}\right)$ for every $z \in \mathbb{C}^{n}$, and $u\left(e_{-z}\right)$ therefore looks like an entire function, whose restriction to $R^{n}$ is $\hat{u}$.
+
+That all this is correct is part of the content of the next theorem, which also characterizes the resulting entire functions by certain growth conditions.
+
+\subsection{Theorem}
+(a) If $u \in \mathscr{D}^{\prime}\left(R^{n}\right)$ has its support in $r B$, if $u$ has order $N$, and if
+
+$$
+f(z)=u\left(e_{-z}\right) \quad\left(z \in \ell^{n}\right)
+$$
+
+then $f$ is entire, the restriction of $f$ to $R^{n}$ is the Fourier transform of $u$, and there is a constant $\gamma<\infty$ such thait
+
+$$
+|f(z)| \leq \gamma(1+|z|)^{N} e^{r|\operatorname{Im} z|} \quad\left(z \in \mathbb{C}^{n}\right)
+$$
+
+(b) Conversely, if $f$ is an entire function in $\ell^{n}$ which satisfies (2) for some $N$ and some $\gamma$, then there exists $u \in \mathscr{D}^{\prime}\left(R^{n}\right)$, with support in $r B$, such that (1) holds.
+
+Note: The notation $\hat{u}$ will sometimes be used to denote the extension to $C^{n}$ given by (1). Thus
+
+$$
+\hat{u}(z)=u\left(e_{-z}\right)
+$$
+
+for $z \in \mathscr{C}^{n}$. This extension is sometimes called the Fourier-Laplace transform of $u$.
+
+PROOF (a) Suppose $u \in \mathscr{D}^{\prime}\left(R^{n}\right)$ has its support in $r B$. Pick $\psi \in \mathscr{D}\left(R^{n}\right)$ so that $\psi=1$ on $(r+1) B$. Then $u=\psi u$, and $(e)$ of Theorem 7.19 shows that
+
+$$
+\hat{u}=(\psi u)^{\wedge}=\hat{u} * \hat{\psi} .
+$$
+
+Thus $\hat{u} \in C^{\infty}\left(R^{n}\right)$. Pick $\phi \in \mathscr{S}_{n}$ so that $\hat{\phi}=\psi$. Then
+
+so that (3) gives
+
+$$
+\begin{aligned}
+(\hat{u} * \hat{\psi})(x) & =(\hat{u} * \check{\phi})(x)=\hat{u}\left(\tau_{x} \phi\right)=u\left(\left(\tau_{x} \phi\right)^{\wedge}\right) \\
+& =u\left(e_{-x} \hat{\phi}\right)=u\left(\psi e_{-x}\right)=u\left(e_{-x}\right)
+\end{aligned}
+$$
+
+$$
+\hat{u}(x)=u\left(e_{-x}\right) \quad\left(x \in R^{n}\right) .
+$$
+
+Our next aim is to show that the function $f$ defined by (1) is entire. Choose $a \in \mathscr{C}^{n}, b \in \mathbb{C}^{n}$, and put
+
+$$
+g(\lambda)=f(a+\lambda b)=u\left(e_{-a-\lambda b}\right) \quad(\lambda \in \mathscr{C}) .
+$$
+
+The continuity of $f$ poses no problem: If $w \rightarrow z$ in $\ell^{n}$, then $e_{-w} \rightarrow e_{-z}$ in $C^{\infty}\left(R^{n}\right)$, and $u$ is continuous on $C^{\infty}\left(R^{n}\right)$. To prove that $f$ is entire it is therefore enough to show that each of the functions $g$ defined by (5) is entire.
+
+Let $\Gamma$ be a rectangular path in $C$. Since $\lambda \rightarrow e_{-a-\lambda b}$ is continuous, from $\varnothing$ to $C^{\infty}\left(R^{n}\right)$, the $C^{\infty}\left(R^{n}\right)$-valued integral
+
+$$
+F=\int_{\Gamma} e_{-a-\lambda b} d \lambda
+$$
+
+is well defined. Evaluation at any $t \in R^{n}$ is a continuous linear functional on $C^{\infty}\left(R^{n}\right)$. It therefore commutes with the integral sign. Hence
+
+$$
+F(t)=\int_{\Gamma} e_{-a-\lambda b}(t) d \lambda=\int_{\Gamma} e^{-i a \cdot t} e^{-i(b \cdot t) \lambda} d \lambda=0
+$$
+
+Thus $F=0$, and (6) gives
+
+$$
+0=u(F)=\int_{\Gamma} u\left(e_{-a-\lambda b}\right) d \lambda=\int_{\Gamma} g(\lambda) d \lambda
+$$
+
+By Morera's theorem, $g$ is entire.
+
+The proof of part $(a)$ will be completed by proving (2). Choose an auxiliary function $h$ on the real line, infinitely differentiable, such that $h(s)=1$ when $s<1$ and $h(s)=0$ when $s>2$, and associate with each $z \in \ell^{n}(z \neq 0)$ the function
+
+$$
+\phi_{z}(t)=e^{-i z \cdot t} h(|t||z|-r|z|) \quad\left(t \in R^{n}\right)
+$$
+
+Then $\phi_{z} \in \mathscr{D}\left(R^{n}\right)$. Since the support of $u$ is in $r B$ and $h(|t||z|-r|z|)=1$ if $|t| \leq|z|^{-1}+r$, comparison of (1) and (7) shows that
+
+$$
+f(z)=u\left(\phi_{z}\right)
+$$
+
+Since $u$ has order $N$, there is a $\gamma_{0}<\infty$ such that $|u(\phi)| \leq \gamma_{0}\|\phi\|_{N}$ for all $\phi \in \mathscr{D}\left(R^{n}\right)$, where $\|\phi\|_{N}$ is as in (1) of Section 6.2; see (d) of Theorem 6.24. Hence (8) gives
+
+$$
+|f(z)| \leq \gamma_{0}\left\|\phi_{z}\right\|_{N}
+$$
+
+On the support of $\phi_{z},|t| \leq r+2 /|z|$, so that
+
+$$
+\left|e^{-i z \cdot t}\right|=e^{y \cdot t} \leq e^{2+r|\operatorname{Im} z|}
+$$
+
+If we now apply the Leibniz formula to the product (7) and use (10), (9) implies (2).
+
+This completes the proof of part $(a)$.
+
+(b) Since $f$ now satisfies (2), we have
+
+$$
+|f(x)| \leq \gamma(1+|x|)^{N} \quad\left(x \in R^{n}\right)
+$$
+
+The restriction of $f$ to $R^{n}$ is therefore in $\mathscr{S}_{n}^{\prime}$ and is the Fourier transform of some tempered distribution $u$.
+
+Pick a function $h \in \mathscr{D}\left(R^{n}\right)$, with support in $B$, such that $\int h=1$, define $h_{\varepsilon}(t)=\varepsilon^{-n} h(t / \varepsilon)$, for $\varepsilon>0$, and put
+
+$$
+f_{\varepsilon}(z)=f(z) \hat{h}_{\varepsilon}(z) \quad\left(z \in C^{n}\right)
+$$
+
+where $\hat{h}_{\varepsilon}$ now denotes the entire function whose restriction to $R^{n}$ is the Fourier transform of $h_{\varepsilon}$. Statement (a) of Theorem 7.22, applied to $h_{\varepsilon}$, leads to the conclusion that $f_{\varepsilon}$ satisfies (2) of Theorem 7.22 with $r+\varepsilon$ in place of $r$. Therefore
+(b) of Theorem 7.22 implies that $f_{\varepsilon}=\hat{\phi}_{\varepsilon}$ for some $\phi_{\varepsilon} \in \mathscr{D}\left(R^{n}\right)$ whose support
+lies in $(r+\varepsilon) B$.
+
+Consider some $\psi \in \mathscr{S}_{n}$ such that the support of $\hat{\psi}$ does not intersect $r B$. Then $\hat{\psi} \phi_{\varepsilon}=0$ for all sufficiently small $\varepsilon>0$. Since $f \psi \in L^{1}\left(R^{n}\right)$ and $\hat{h}_{s}(x)=$ $\hat{h}(\varepsilon x) \rightarrow 1$ boundedly on $R^{n}$, we conclude that
+
+$$
+\begin{aligned}
+\therefore u(\hat{\psi}) & =\hat{u}(\psi)=\int f \psi d m_{n}=\lim _{\varepsilon \rightarrow 0} \int f_{\varepsilon} \psi d m_{n} \\
+& =\lim _{\varepsilon \rightarrow 0} \int \hat{\phi}_{\varepsilon} \psi d m_{n}=\int \hat{\psi} \phi_{\varepsilon} d m_{n}=0 .
+\end{aligned}
+$$
+
+Hence $u$ has its support in $r B$.
+
+Now we see that $z \rightarrow u\left(e_{-z}\right)$ is an entire function, and since (1) holds for $z \in R^{n}$ (by the choice of $u$ ), Lemma 7.21 completes the proof of $(b)$.
+
+\section{Sobolev's Lemma}
+If $\Omega$ is a proper open subset of $R^{n}$, no Fourier transform has been defined for functions whose domain is $\Omega$ or for distributions in $\Omega$. Nevertheless, Fourier transform techniques cán sometimes be used to attack local problems. Theorem 7.25, known as Sobolev's lemma, is an example of this.
+
+7.24 Definitions A complex measurable function $f$, defined in an open set $\Omega \subset R^{n}$, is said to be locally $L^{2}$ in $\Omega$ if $\int_{K}|f|^{2} d m_{n}<\infty$ for every compact $K \subset \Omega$.
+
+Similarly, a distribution $u \in \mathscr{D}^{\prime}(\Omega)$ is locally $L^{2}$ if there is a function $g$, locally $L^{2}$ in $\Omega$, such that $u(\phi)=\int_{\Omega} g \phi d m_{n}$ for every $\phi \in \mathscr{D}(\Omega)$. To say that a function $f$ has a distribution derivative $D^{\alpha} f$ which is locally $L^{2}$ refers to the distribution $D^{\alpha} f$ and means, explicitly, that there is a function $g$, locally $L^{2}$, such that
+
+$$
+\int_{\Omega} g \phi d m_{n}=(-1)^{|\alpha|} \int_{\Omega} f D^{\alpha} \phi d m_{n}
+$$
+
+for every $\phi \in \mathscr{D}(\Omega)$. A priori, this says nothing about the existence of $D^{\alpha} f$ in the classical sense, in terms of limits of quotients.
+
+On the other hand, the class $C^{(p)}(\Omega)$ consists, for each nonnegative integer $p$, of those complex functions $f$ in $\Omega$ whose derivatives $D^{\alpha} f$ exist in the classical sense, for each multi-index $\alpha$ with $|\alpha| \leq p$, and are continuous functions in $\Omega$.
+
+We shall write $D_{i}^{k}$ for the differential operator $\left(\partial / \partial x_{i}\right)^{k}$.
+
+7.25 Theorem Suppose $n, p$, $r$ are integers, $n>0, p \geq 0$, and
+
+$$
+r>p+\frac{n}{2}
+$$
+
+Suppose $f$ is a function in an open set $\Omega \subset R^{n}$ whose distribution derivatives $D_{i}^{k} f$ are locally $L^{2}$ in $\Omega$, for $1 \leq i \leq n, 0 \leq k \leq r$.
+
+Then there is a function $f_{0} \in C^{(p)}(\Omega)$ such that $f_{0}(x)=f(x)$ for almost every $x \in \Omega$.
+
+Note that the hypothesis involves no mixed derivatives, i.e., no terms like $D_{1} D_{2} f$. The conclusion is that $f$ can be "corrected" so as to be in $C^{(p)}(\Omega)$, by redefining it on a set of measure 0 .
+
+Note also, as a corollary, that if all distribution derivatives of $f$ are locally $L^{2}$ in $\Omega$, then $f_{0} \in C^{\infty}(\Omega)$.
+
+PROOF By hypothesis, there are functions $g_{i k}$, locally $L^{2}$ in $\Omega$, that satisfy
+
+$$
+\int_{\Omega} g_{i k} \phi d m_{n}=(-1)^{k} \int_{\Omega} f D_{i}^{k} \phi d m_{n} \quad[\phi \in \mathscr{D}(\Omega)]
+$$
+
+for $1 \leq i \leq n, 0 \leq k \leq r$.
+
+Let $\omega$ be an open set whose closure $K$ is a compact subset of $\Omega$. Choose $\psi \in \mathscr{D}(\Omega)$ so that $\psi=1$ on $K$, and define $F$ on $R^{n}$ by
+
+$$
+F(x)= \begin{cases}\psi(x) f(x) & \text { if } x \in \Omega \\ 0 & \text { if } x \notin \Omega\end{cases}
+$$
+
+Then $F \in\left(L^{2} \cap L^{1}\right)\left(R^{n}\right)$.
+
+In $\Omega$, the Leibniz formula gives
+
+$$
+D_{i}^{r} F=\sum_{s=0}^{r}\left(\begin{array}{l}
+r \\
+s
+\end{array}\right)\left(D_{i}^{r-s} \psi\right)\left(D_{i}^{s} f\right)=\sum_{s=0}^{r}\left(\begin{array}{l}
+r \\
+s
+\end{array}\right)\left(D_{i}^{r-s} \psi\right) g_{i s} .
+$$
+
+In the complement $\Omega_{0}$ of the support of $\psi, D_{i}^{r} F=0$. These two distributions coincide in $\Omega \cap \Omega_{0}$. Hence $D_{i}^{r} F$, originally defined as a distribution in $R^{n}$, is actually in $L^{2}\left(R^{n}\right)$, for $1 \leq i \leq n$, because the functions $\left(D_{i}^{r-s} \psi\right) g_{i s}$ are in $L^{2}(\Omega)$. [Having compact support, $D_{i}^{r} F$ is therefore also in $L^{\mathbf{1}}\left(\bar{R}^{i n}\right)$.]
+
+The Plancherel theorem, applied to $F$ and to $D_{1}^{r} F, \ldots, D_{n}^{r} F$, shows now that
+
+$$
+\int_{R^{n}}|\hat{F}|^{2} d m_{n}<\infty
+$$
+
+and
+
+$$
+\int_{R^{n}} y_{i}^{2 r}|\hat{F}(y)|^{2} d m_{n}(y)<\infty \quad(1 \leq i \leq n)
+$$
+
+Since
+
+$$
+(1+|y|)^{2 r}<(2 n+2)^{r}\left(1+y_{1}^{2 r}+\cdots+y_{n}^{2 r}\right)
+$$
+
+where $|y|=\left(y_{1}^{2}+\cdots+y_{n}^{2}\right)^{1 / 2},(4)$ and (5) imply
+
+$$
+\int_{R^{n}}(1+|y|)^{2 r}|\hat{F}(y)|^{2} d m_{i n}(y)<\infty .
+$$
+
+If $J$ denotes the integral (7), and if $\sigma_{i n}$ is the $(n-1)$-dimensional volume of the unit sphere in $R^{n}$, the Schwarz inequality gives
+
+$$
+\begin{aligned}
+\left\{\int_{R^{n}}(1+|y|)^{p}|\hat{F}(y)| d m_{n}(y)\right\}^{2} & \leq J \int_{R^{n}}(1+|y|)^{2 p-2 r} d m_{n}(y) \\
+& =J \sigma_{n} \int_{0}^{\infty}(1+t)^{2 p-2 r} t^{n-1} d t<\infty
+\end{aligned}
+$$
+
+since $2 p-2 r+n-1<-1$. We have thus proved that
+
+$$
+\int_{R^{n}}(1+|y|)^{p}|\hat{F}(y)| d m_{n}(y)<\infty .
+$$
+
+Define
+
+$$
+F_{\omega}(x)=\int_{R^{n}} \hat{F}(y) e^{i x \cdot y} d m_{n}(y) \quad\left(x \in R^{n}\right) .
+$$
+
+By $(c)$ of the inversion theorem 7.7, $F_{\omega}=F$ a.e. on $R^{n}$. Moreover, (8) implies that $y^{\alpha} \widehat{F}(y)$ is in $L^{1}$ whenever $|\alpha| \leq p$. Iteration of the proof of $(c)$ of Theorem 7.4 leads therefore to the conclusion
+
+$$
+F_{\omega} \in C^{(p)}\left(\bar{R}^{n}\right)
+$$
+
+Our given function $f$ coincides with $F$ in $\omega$. Hence $f=F_{\omega}$ a.e. in $\omega$.
+
+If $\omega^{\prime}$ is another set like $\omega$, the preceding proof gives a function $F_{\omega^{\prime}} \in$ $C^{(p)}\left(R^{n}\right)$, which coincides with $f$ a.c. in $\omega^{\prime}$. Hence $F_{\omega^{\prime}}=F_{\omega}$ in $\omega^{\prime} \cap \omega$. The desired function $f_{0}$ can therefore be defined in $\Omega$ by setting $f_{0}(x)=F_{\omega}(x)$ if $x \in \omega$.
+
+
+\end{document}

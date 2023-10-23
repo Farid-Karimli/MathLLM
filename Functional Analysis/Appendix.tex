@@ -1,0 +1,177 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+
+\begin{document}
+\section{APPENDIX A}
+\section{COMPACTNESS AND CONTINUITY}
+A 1 Partially ordered sets A set $\mathscr{P}$ is said to be partially ordered by a binary relation
+$\leq$ if:
+
+(i) $a \leq b$ and $b \leq c$ implies $a \leq c$,
+
+(ii) $a \leq a$ for every $a \in \mathscr{P}$,
+
+(iii) $a \leq b$ and $b \leq a$ implies $a=b$.
+
+A subset $\mathscr{2}$ of a partiaily ordered set $\mathscr{P}$ is said to be totally ordered if every pair $a$, $b \in \mathscr{Q}$ satisfies either $a \leq b$ or $b \leq a$.
+
+Hausdorff's maximality theorem states:
+
+Every nonempty partially ordered set $\mathscr{P}$ contains a totally ordered subset $\mathscr{Q}$ which is maximal with respect to the property of being toially ordered.
+
+A proof (using the axiom of choice) may be found in [23]. Explicit applications of the theorem occur in the proofs of the Hahn-Banach theorem, of the Krein-Milman theorem, and of the theorem that every proper ideal in a commutative ring with unit lies in a maximal ideal. It will now be applied once more (A2) to prepare the way to an casy proof of the
+Tychonoff theorem.
+
+A 2 Subbases A collection $\mathscr{S}$ of open subsets of a topological space $X$ is said to be a subbase for the topology $\tau$ of $X$ if the collection of all finite intersections of members of $\mathscr{S}$ forms a base for $\tau$. (See Section 1.5.) Any subcollection of $\mathscr{S}$ whose union is $X$ will be called an $\mathscr{S}$-cover of $X$. By definition, $X$ is compact provided that every open cover of $X$ has a finite subcover. It is enough to verify this property for $\mathscr{S}$-covers:
+
+Alexander's subbase theorem If $\mathscr{S}$ is a subbase for the topology of a space $X$, and if every $\mathscr{S}$-cover of $X$ has a finite subcover, then $X$ is compact.
+
+Proof Assume $X$ is not compact. We will deduce from this that $X$ has an $\mathscr{S}$-cover $\tilde{\Gamma}$ without finite subcover.
+
+Let $\mathscr{P}$ be the collection of all open covers of $X$ that have no finite subcover. By assumption, $\mathscr{P} \neq \varnothing$. Partially order $\mathscr{P}$ by inclusion, let $\Omega$ be a maximal totally ordered subcollection of $\mathscr{P}$, and let $\Gamma$ be the union of all members of $\Omega$. Then
+
+(a) $\Gamma$ is an open cover of $X$,
+
+(b) $\Gamma$ has no finite subcover, but
+
+(c) $\Gamma \cup\{V\}$ has a finite subcover, for every open $V \notin \Gamma$.
+
+Of these, $(a)$ is obvious. Since $\Omega$ is totally ordered, any finite subfamily of $\Gamma$ lies in some member of $\Omega$, hence cannot cover $X$; this gives $(b)$, and $(c)$ follows from the maximality of $\Omega$.
+
+Put $\tilde{\Gamma}=\Gamma \cap \mathscr{S}$. Since $\tilde{\Gamma} \subset \Gamma$, (b) implies that $\tilde{\Gamma}$ has no finite subcover. To complete the proof, we show that $\tilde{\Gamma}$ covers $X$.
+
+If not, some $x \in X$ is not covered by $\tilde{\Gamma}$. By $(a), x \in W$ for some $W \in \Gamma$. Since $\mathscr{S}$ is a subbase, there are sets $V_{1}, \ldots, V_{n} \in \mathscr{S}$ such that $x \in \cap V_{l} \subset W$. Since $x$ is not covered by $\tilde{\Gamma}$, no $V_{i}$ belongs to $\Gamma$. Hence $(c)$ implies that there are sets $Y_{1}, \ldots$, $Y_{n}$, each a finite union of members of $\Gamma$, such that $X=V_{l} \cup Y_{i}$ for $1 \leq i \leq n$. Hence
+
+$$
+X=Y_{1} \cup \cdots \cup Y_{n} \cup \bigcap_{t=1}^{n} V_{l} \subset Y_{1} \cup \cdots \cup Y_{n} \cup W
+$$
+
+which contradicts $(b)$.
+
+A 3 Tychonoff's theorem If $X$ is the cartesian product of any nonempty collection of compact spaces $X_{\alpha}$, then $X$ is compact.
+
+PROOF If $\pi_{\alpha}(x)$ denotes the $X_{\alpha}$-coordinate of a point $x \in X$, then, by definition, the topology of $X$ is the weakest one that makes each $\pi_{\alpha}: X \rightarrow X_{\alpha}$ continuous; see Section 3.8. Let $\mathscr{S}_{\alpha}$ be the collection of all sets $\pi_{\alpha}^{-1}\left(V_{\alpha}\right)$, where $V_{\alpha}$ is any open subset of $X_{\alpha}$. If $\mathscr{S}$ is the union of all $\mathscr{S}_{\alpha}$, it follows that $\mathscr{S}$ is a subbase for the topology of $X$.
+
+Suppose $\Gamma$ is an $\mathscr{S}$-cover of $X$. Put $\Gamma_{\alpha}=\Gamma \cap \mathscr{S}_{\alpha}$. Assume (to get a contradiction) that no $\Gamma_{\alpha}$ covers $X$. Then there corresponds to each $\alpha$ a point $x_{\alpha} \in X_{\alpha}$ such that $\Gamma_{\alpha}$ covers no point of the set $\pi_{\alpha}^{-1}\left(x_{\alpha}\right)$, and if $x \in X$ is chosen so that $\pi_{\alpha}(x)=x_{\alpha}$, then $x$ is not covered by $\Gamma$. But $\Gamma$ is a cover of $X$.
+
+Hence at least one $\Gamma_{\alpha}$ covers $X$. Since $X_{\alpha}$ is compact, some finite subcollection of $\Gamma_{\alpha}$ covers $X$. Since $\Gamma_{\alpha} \subset \Gamma, \Gamma$ has a finite subcover, and now Alexander's theorem implies that $X$ is compact.
+
+IIII
+A4 Theorem If $K$ is a closed subset of a complete metric space $X$, then the following
+three properties are equivalent:
+
+(a) $K$ is compact.
+
+(b) Every infinite subset of $K$ has a limit point in $K$.
+
+(c) $K$ is totally hounded.
+
+Recall that $(c)$ means that $K$ can be covered by finitely many balls of radius $\varepsilon$, for every $\varepsilon>0$.
+
+PROOF Assume (a). If $E \subset K$ is infinite and no point of $K$ is a limit point of $E$, there is an open cover $\left\{V_{\alpha}\right\}$ of $K$ such that each $V_{\alpha}$ contains at most one point of $E$. Therefore $\left\{V_{\alpha}\right\}$ has no finite subcover, a contradiction. Thus $(a)$ implies $(b)$.
+
+Assume (b), fix $\varepsilon>0$, and let $d$ be the metric of $X$. Pick $x_{1} \in K$. Suppose $x_{1}, \ldots, x_{n}$ are chosen in $K$ so that $d\left(x_{i}, x_{j}\right) \geq \varepsilon$ if $i \neq j$. If possible, choose $x_{n+1} \in K$ so that $d\left(x_{i}, x_{n+1}\right) \geq \varepsilon$ for $1 \leq i \leq n$. This process must stop after a finite number of steps, because of $(b)$. The $\varepsilon$-balls centered at $x_{1}, \ldots, x_{n}$ then cover $K$. Thus $(b)$
+implies $(c)$.
+
+Assume (c), let $\Gamma$ be an open cover of $K$, and suppose (to reach a contradiction) that no finite subcollection of $\Gamma$ covers $K$. By $(c), K$ is a union of finitely many closed sets of diameter $\leq 1$. One of these, say $K_{1}$, cannot be covered by finitely many members of $\Gamma$. Do the same with $K_{1}$ in place of $K$, and continue. The result is a sequence of
+closed sets $K_{i}$ such that
+
+(i) $K \supset K_{1} \supset K_{2} \supset \cdots$,
+
+(ii) diam $K_{n} \leq 1 / n$, and
+
+(iii) no $K_{n}$ can be covered by finitely many members of $\Gamma$.
+
+Choose $x_{n} \in K_{n}$. By (i) and (ii), $\left\{x_{n}\right\}$ is a Cauchy sequence which (since $X$ is complete and each $K_{n}$ is closed) converges to a point $x \in \cap K_{n}$. Hence $x \in V$ for some $V \in \Gamma$. By (ii), $K_{n} \subset V$ when $n$ is sufficiently large. This contradicts (iii). Thus (c)
+implies (a).
+
+Note that the completeness of $X$ was used only in going from $(c)$ to $(a)$. In fact, $(a)$ and $(b)$ are equivalent in any metric space.
+
+A 5 Ascoli's theorem Suppose $X$ is a compact space, $C(X)$ is the sup-normed Banach space of all continuous complex functions on $X$, and $\Phi \subset C(X)$ is pointwise bounded and equi-
+continuous. More explicitly,
+
+(a) $\sup \{|f(x)|: f \in \Phi\}<\infty$ for every $x \in X$, and (b) if $\varepsilon>0$, every $x \in X$ has a neighborhood $V$ such that $|f(y)-f(x)|<\varepsilon$ for all $y \in V$ and
+for all $f \in \Phi$.
+
+Then $\Phi$ is totally bounded in $C(X)$.
+
+Corollary Since $C(X)$ is complete, the closure of $\Phi$ is compact, and every sequence in $\Phi$ contains a uniformly convergent subsequence.
+
+ProOF Fix $\varepsilon>0$. Since $X$ is compact, (b) shows that there are points $x_{1}, \ldots, x_{n} \in X$, with neighborhoods $V_{1}, \ldots, V_{n}$, such that $X=U V_{i}$ and such that
+
+$$
+\left|f(x)-f\left(x_{i}\right)\right|<\varepsilon \quad\left(f \in \Phi, x \in V_{i}, 1 \leq i \leq n\right)
+$$
+
+If $(a)$ is applied to $x_{1}, \ldots, x_{n}$ in place of $x$, it follows from (1) that $\Phi$ is uniformly bounded:
+
+$$
+\sup \{|f(x)|: x \in X, f \in \Phi\}=M<\infty .
+$$
+
+Put $D=\{\lambda \in \mathscr{C}:|\lambda| \leq M\}$, and associate to each $f \in \Phi$ a point $p(f) \in D^{n} \subset \mathscr{C}^{n}$, by setting
+
+$$
+p(f)=\left(f\left(x_{1}\right), \ldots, f\left(x_{n}\right)\right)
+$$
+
+Since $D^{n}$ is a finite union of sets of diameter $<\varepsilon$, there exist $f_{1}, \ldots, f_{m} \in \Phi$ such that every $p(f)$ lies within $\varepsilon$ of some $p\left(f_{k}\right)$.
+
+If $f \in \Phi$, there exists $k, 1 \leq k \leq m$, such that
+
+$$
+\left|f\left(x_{i}\right)-f_{k}\left(x_{i}\right)\right|<\varepsilon \quad(1 \leq i \leq n) .
+$$
+
+Every $x \in X$ lies in some $V_{i}$, and for this $i$
+
+$$
+\left|f(x)-f\left(x_{i}\right)\right|<\varepsilon \quad \text { and } \quad\left|f_{k}(x)-f_{k}\left(x_{i}\right)\right|<\varepsilon \text {. }
+$$
+
+Thus $\left|f(x)-f_{k}(x)\right|<3 \varepsilon$ for every $x \in X$.
+
+The $3 \varepsilon$-balls centered at $f_{1}, \ldots, f_{k}$ therefore cover $\Phi$. Since $\varepsilon$ was arbitrary, $\Phi$ is totally bounded.
+
+A6 Sequential continuity If $X$ and $Y$ are Hausdorff spaces and if $f$ maps $X$ into $Y$, then $f$ is said to be sequentially continuous provided that $\lim _{n \rightarrow \infty} f\left(x_{n}\right)=f(x)$ for every sequence $\left\{x_{n}\right\}$ in $X$ that satisfies $\lim _{n \rightarrow \infty} x_{n}=x$.
+
+\section{Theorem}
+(a) If $f: X \rightarrow Y$ is continuous, then $f$ is sequentialily continuous.
+
+(b) If $f: X \rightarrow Y$ is sequentially continuous, and if every point of $X$ has a countable local base (in particular, if $X$ is metrizable), then $f$ is continuous.
+
+PROOF (a) Suppose $x_{n} \rightarrow x$ in $X, V$ is a neighborhood of $f(x)$ in $Y$, and $U=$ $f^{-1}(V)$. Since $f$ is continuous, $U$ is a neighborhood of $x$, and therefore $x_{n} \in U$ for all but finitely many $n$. For these $n, f\left(x_{n}\right) \in V$. Thus $f\left(x_{n}\right) \rightarrow f(x)$ as $n \rightarrow \infty$.
+
+(b) Fix $x \in X$, let $\left\{U_{n}\right\}$ be a countable local base for the topology of $X$ at $x$, and assume that $f$ is not continuous at $x$. Then there is a neighborhood $V$ of $f(x)$ in $Y$ such that $f^{-1}(V)$ is not a neighborhood of $x$. Hence there is a sequence $x_{n}$, such that $x_{n} \in U_{n}, x_{n} \rightarrow x$ as $n \rightarrow \infty$, and $x_{n} \notin f^{-1}(V)$. Thus $f\left(x_{n}\right) \notin V$, so that $f$ is not sequentially continuous.
+
+A 7 Totalily disconnected compact spaces A topological space $X$ is said to be totally disconnected if none of its connected subsets contains more than one point.
+
+A set $E \subset X$ is said to be connected if there exists no pair of open sets $V_{1}, V_{2}$ such that
+
+$$
+E \subset V_{1} \cup V_{2}, \quad E \cap V_{1} \neq \varnothing, \quad E \cap V_{2} \neq \varnothing
+$$
+
+but $E \cap V_{1} \cap V_{2}=\varnothing$.
+
+Theorem Suppose $K \subset V \subset X$, where $X$ is a compact Hausdorff space, $V$ is open, and $K$ is a component of $X$. Then there is a compact open set $A$ such that $K \subset A \subset V$.
+
+Corollary If $X$ is a totally disconnected compact Hausdorff space, then the compact open subsets of $X$ form a base for its topology.
+
+PROOF Let $\Gamma$ be the collection of all compact open subsets of $X$ that contain $K$. Since $X \in \Gamma, \Gamma \neq \varnothing$. Let $H$ be the intersection of all members of $\Gamma$.
+
+Suppose $H \subset W$, where $W$ is open. The complements of the members of $\Gamma$ form an open cover of the compact complement of $W$. Since $\Gamma$ is closed under finite intersections, it follows that $A \subset W$ for some $A \in \Gamma$.
+
+We claim that $H$ is connected. To see this, assume $H=H_{0} \cup H_{1}$, where $H_{0}$ and $H_{1}$ are disjoint compact sets. Since $K \subset H$ and $K$ is connected, $K$ lies in one of these. Say $K \subset H_{0}$. By Urysohn's lemma, there are disjoint open sets $W_{0}, W_{1}$ such that $H_{0} \subset \dot{W}_{0}, H_{1} \subset W_{1}$, and the preceding paragraph shows that some $A \subseteq \Gamma$ satisfies $A \subset W_{0} \cup W_{1}$. Put $A_{0}=A \cap W_{0}$. Then $K \subset A_{0}, A_{0}$ is open, and $A_{0}$ is compact, because $A \cap W_{0}=A \cap \bar{W}_{0}$. Thus $A_{0} \in \Gamma$. Since $H \subset A_{0}$, it follows that $H_{1}=\varnothing$
+
+Thus $H$ is connected. Since $K \subset H$ and $K$ is a component, we see that $K=H$. The preceding argument, with $K$ and $V$ in place of $H$ and $W$, shows now that $A \subset V$ for some $A \in \Gamma$.
+
+
+\end{document}
