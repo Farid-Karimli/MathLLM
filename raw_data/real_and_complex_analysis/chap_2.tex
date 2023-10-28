@@ -1,0 +1,1051 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+
+\begin{document}
+\section{POSITIVE BOREL MEASURES}
+\section{Vector Spaces}
+2.1 Definition A complex vector space (or a vector space over the complex field) is a set $V$, whose elements are called vectors and in which two operations, called addition and scalar multiplication, are defined, with the following familiar algebraic properties:
+
+To every pair of vectors $x$ and $y$ there corresponds a vector $x+y$, in such a way that $x+y=y+x$ and $x+(y+z)=(x+y)+z ; V$ contains a unique vector 0 (the zero vector or origin of $V$ ) such that $x+0=x$ for every $x \in V$; and to each $x \in V$ there corresponds a unique vector $-x$ such that $x+(-x)=0$.
+
+To each pair $(\alpha, x)$, where $x \in V$ and $\alpha$ is a scalar (in this context, the word scalar means complex number), there is associated a vector $\alpha x \in V$, in such a way that $1 x=x, \alpha(\beta x)=(\alpha \beta) x$, and such that the two distributive laws
+
+$$
+\alpha(x+y)=\alpha x+\alpha y,(\alpha+\beta) x=\alpha x+\beta x
+$$
+
+hold.
+
+A linear transformation of a vector space $V$ into a vector space $V_{1}$ is a mapping $\Lambda$ of $V$ into $V_{1}$ such that
+
+$$
+\Lambda(\alpha x+\beta y)=\alpha \Lambda x+\beta \Lambda y
+$$
+
+for all $x$ and $y \in V$ and for all scalars $\alpha$ and $\beta$. In the special case in which $V_{1}$ is the field of scalars (this is the simplest example of a vector space, except for the trivial one consisting of 0 alone), $\Lambda$ is called a linear functional. A linear functional is thus a complex function on $V$ which satisfies (2).
+
+Note that one often writes $\Lambda x$, rather than $\Lambda(x)$, if $\Lambda$ is linear.
+
+The preceding definitions can of course be made equally well with any field whatsoever in place of the complex field. Unless the contrary is explicitly stated, however, all vector spaces occurring in this book will be complex, with one notable exception: the euclidean spaces $R^{k}$ are vector spaces over the real field.
+
+2.2 Integration as a Linear Functional Analysis is full of vector spaces and linear transformations, and there is an especially close relationship between integration on the one hand and linear functionals on the other.
+
+For instance, Theorem 1.32 shows that $L^{1}(\mu)$ is a vector space, for any positive measure $\mu$, and that the mapping
+
+$$
+f \rightarrow \int_{x} f d \mu
+$$
+
+is a linear functional on $L^{1}(\mu)$. Similarly, if $g$ is any bounded measurable function, the mapping
+
+$$
+f \rightarrow \int_{X} f g d \mu
+$$
+
+is a linear functional on $L^{1}(\mu)$; we shall see in Chap. 6 that the functionals (2) are, in a sense, the only interesting ones on $L^{1}(\mu)$.
+
+For another example, let $C$ be the set of all continuous complex functions on the unit interval $I=[0,1]$. The sum of the two continuous functions is continuous, and so is any scalar multiple of a continuous function. Hence $C$ is a vector space, and if
+
+$$
+\Lambda f=\int_{0}^{1} f(x) d x \quad(f \in C)
+$$
+
+the integral being the ordinary Riemann integral, then $\Lambda$ is clearly a linear functional on $C ; \Lambda$ has an additional interesting property: it is a positive linear functional. This means that $\Lambda f \geq 0$ whenever $f \geq 0$.
+
+One of the tasks which is still ahead of us is the construction of the Lebesgue measure. The construction can be based on the linear functional (3), by the following observation: Consider a segment $(a, b) \subset I$ and consider the class of all $f \in C$ such that $0 \leq f \leq 1$ on $I$ and $f(x)=0$ for all $x$ not in $(a, b)$. We have $\Lambda f<b-a$ for all such $f$, but we can choose $f$ so that $\Lambda f$ is as close to $b-a$ as desired. Thus the length (or measure) of $(a, b)$ is intimately related to the values of the functional $\Lambda$.
+
+The preceding observation, when looked at from a more general point of view, leads to a remarkable and extremely important theorem of $F$. Riesz:
+
+To every positive linear functional $\Lambda$ on $C$ corresponds a finite positive Borel measure $\mu$ on I such that
+
+$$
+\Lambda f=\int_{I} f d \mu \quad(f \in C)
+$$
+
+[The converse is obvious: if $\mu$ is a finite positive Borel measure on $I$ and if $\Lambda$ is defined by (4), then $\Lambda$ is a positive linear functional on $C$.]
+
+It is clearly of interest to replace the bounded interval $I$ by $R^{1}$. We can do this by restricting attention to those continuous functions on $R^{1}$ which vanish outside some bounded interval. (These functions are Riemann integrable, for instance.) Next, functions of several variables occur frequently in analysis. Thus we ought to move from $R^{1}$ to $R^{n}$. It turns out that the proof of the Riesz theorem still goes through, with hardly any changes. Moreover, it turns out that the euclidean properties of $R^{n}$ (coordinates, orthogonality, etc.) play no role in the proof; in fact, if one thinks of them too much they just get in the way. Essential to the proof are certain topological properties of $R^{n}$. (Naturally. We are now dealing with continuous functions.) The crucial property is that of local compactness: Each point of $R^{n}$ has a neighborhood whose closure is compact.
+
+We shall therefore establish the Riesz theorem in a very general setting (Theorem 2.14). The existence of Lebesgue measure follows then as a special case. Those who wish to concentrate on a more concrete situation may skip lightly over the following section on topological preliminaries (Urysohn's lemma is the item of greatest interest there; see Exercise 3) and may replace locally compact Hausdorff spaces by locally compact metric spaces, or even by euclidean spaces, without missing any of the principal ideas.
+
+It should also be mentioned that there are situations, especially in probability theory, where measures occur naturally on spaces without topology, or on topological spaces that are not locally compact. An example is the so-called Wiener measure which assigns numbers to certain sets of continuous functions and which is a basic tool in the study of Brownian motion. These topics will not be discussed in this book.
+
+\section{Topological Preliminaries}
+2.3 Definitions Let $X$ be a topological space, as defined in Sec. 1.2.
+
+(a) A set $E \subset X$ is closed if its complement $E^{c}$ is open. (Hence $\varnothing$ and $X$ are closed, finite unions of closed sets are closed, and arbitrary intersections of closed sets are closed.)
+
+(b) The closure $\bar{E}$ of a set $E \subset X$ is the smallest closed set in $X$ which contains $E$. (The following argument proves the existence of $\bar{E}$ : The collection $\Omega$ of all closed subsets of $X$ which contain $E$ is not empty, since $X \in \Omega$; let $\bar{E}$ be the intersection of all members of $\Omega$.)
+
+(c) A set $K \subset X$ is compact if every open cover of $K$ contains a finite subcover. More explicitly, the requirement is that if $\left\{V_{\alpha}\right\}$ is a collection of open sets whose union contains $K$, then the union of some finite subcollection of $\left\{V_{\alpha}\right\}$ also contains $K$.
+
+In particular, if $X$ is itself compact, then $X$ is called a compact space.
+
+(d) A neighborhood of a point $p \in X$ is any open subset of $X$ which contains $p$. (The use of this term is not quite standardized; some use
+"neighborhood of $p$ " for any set which contains an open set containing p.)
+
+(e) $X$ is a Hausdorff space if the following is true: If $p \in X, q \in X$, and $p \neq q$, then $p$ has a neighborhood $U$ and $q$ has a neighborhood $V$ such that $U \cap V=\varnothing$.
+
+( $f$ ) $X$ is locally compact if every point of $X$ has a neighborhood whose closure is compact.
+
+Obviously, every compact space is locally compact.
+
+We recall the Heine-Borel theorem: The compact subsets of a euclidean space $R^{n}$ are precisely those that are closed and bounded ([26], $\dagger$ Theorem 2.41). From this it follows easily that $R^{n}$ is a locally compact Hausdorff space. Also, every metric space is a Hausdorff space.
+
+2.4 Theorem Suppose $K$ is compact and $F$ is closed, in a topological space $X$. If $F \subset K$, then $F$ is compact.
+
+Proof If $\left\{V_{\alpha}\right\}$ is an open cover of $F$ and $W=F^{c}$, then $W \cup \bigcup_{\alpha} V_{\alpha}$ covers $X$; hence there is a finite collection $\left\{V_{\alpha_{i}}\right\}$ such that
+
+$$
+K \subset W \cup V_{\alpha_{1}} \cup \cdots \cup V_{\alpha_{n}}
+$$
+
+Then $F \subset V_{\alpha_{1}} \cup \cdots \cup V_{\alpha_{n}}$.
+
+Corollary If $A \subset B$ and if $B$ has compact closure, so does $A$.
+
+2.5 Theorem Suppose $X$ is a Hausdorff space, $K \subset X, K$ is compact, and $p \in K^{c}$. Then there are open sets $U$ and $W$ such that $p \in U, K \subset W$, and $U \cap W=\varnothing$.
+
+Proof If $q \in K$, the Hausdorff separation axiom implies the existence of disjoint open sets $U_{q}$ and $V_{q}$, such that $p \in U_{q}$ and $q \in V_{q}$. Since $K$ is compact, there are points $q_{1}, \ldots, q_{n} \in K$ such that
+
+$$
+K \subset V_{q_{1}} \cup \cdots \cup V_{q_{n}}
+$$
+
+Our requirements are then satisfied by the sets
+
+$$
+U=U_{q_{1}} \cap \cdots \cap U_{q_{n}} \text { and } \quad W=V_{q_{1}} \cup \cdots \cup V_{q_{n}} \text {. }
+$$
+
+\section{Corollaries}
+(a) Compact subsets of Hausdorff spaces are closed.
+
+(b) If $F$ is closed and $K$ is compact in a Hausdorff space, then $F \cap K$ is compact.
+
+Corollary $(b)$ follows from $(a)$ and Theorem 2.4.
+
+2.6 Theorem If $\left\{K_{\alpha}\right\}$ is a collection of compact subsets of a Hausdorff space and if $\bigcap_{\alpha} K_{\alpha}=\varnothing$, then some finite subcollection of $\left\{K_{\alpha}\right\}$ also has empty intersection.
+
+ProOF Put $V_{\alpha}=K_{\alpha}^{c}$. Fix a member $K_{1}$ of $\left\{K_{\alpha}\right\}$. Since no point of $K_{1}$ belongs to every $K_{\alpha},\left\{V_{\alpha}\right\}$ is an open cover of $K_{1}$. Hence $K_{1} \subset V_{\alpha_{1}} \cup \cdots \cup V_{\alpha_{n}}$ for some finite collection $\left\{V_{\alpha_{i}}\right\}$. This implies that
+
+$$
+K_{1} \cap K_{\alpha_{1}} \cap \cdots \cap K_{\alpha_{n}}=\varnothing
+$$
+
+2.7 Theorem Suppose $U$ is open in a locally compact Hausdorff space $X$, $K \subset U$, and $K$ is compact. Then there is an open set $V$ with compact closure such that
+
+$$
+K \subset V \subset \bar{V} \subset U .
+$$
+
+Proof Since every point of $K$ has a neighborhood with compact closure, and since $K$ is covered by the union of finitely many of these neighborhoods, $K$ lies in an open set $G$ with compact closure. If $U=X$, take $V=G$.
+
+Otherwise, let $C$ be the complement of $U$. Theorem 2.5 shows that to each $p \in C$ there corresponds an open set $W_{p}$ such that $K \subset W_{p}$ and $p \notin \bar{W}_{p}$. Hence $\left\{C \cap \bar{G} \cap W_{p}\right\}$, where $p$ ranges over $C$, is a collection of compact sets with empty intersection. By Theorem 2.6 there are points $p_{1}, \ldots, p_{n} \in C$ such that
+
+$$
+C \cap \bar{G} \cap \bar{W}_{p_{1}} \cap \cdots \cap \bar{W}_{p_{n}}=\varnothing
+$$
+
+The set
+
+$$
+V=G \cap W_{p_{1}} \cap \cdots \cap W_{p_{n}}
+$$
+
+then has the required properties, since
+
+$$
+\bar{V} \subset \bar{G} \cap \bar{W}_{p_{1}} \cap \cdots \cap \bar{W}_{p_{n}} .
+$$
+
+2.8 Definition Let $f$ be a real (or extended-real) function on a topological space. If
+
+$$
+\{x: f(x)>\alpha\}
+$$
+
+is open for every real $\alpha, f$ is said to be lower semicontinuous. If
+
+$$
+\{x: f(x)<\alpha\}
+$$
+
+is open for every real $\alpha, f$ is said to be upper semicontinuous.
+
+A real function is obviously continuous if and only if it is both upper and lower semicontinuous.
+
+The simplest examples of semicontinuity are furnished by characteristic functions:
+(a) Characteristic functions of open sets are lower semicontinuous.
+
+(b) Characteristic functions of closed sets are upper semicontinuous.
+
+The following property is an almost immediate consequence of the definitions:
+
+(c) The supremum of any collection of lower semicontinuous functions is lower semicontinuous. The infimum of any collection of upper semicontinuous functions is upper semicontinuous.
+
+2.9 Definition The support of a complex function $f$ on a topological space $X$ is the closure of the set
+
+$$
+\{x: f(x) \neq 0\} .
+$$
+
+The collection of all continuous complex functions on $X$ whose support is compact is denoted by $C_{c}(X)$.
+
+Observe that $C_{c}(X)$ is a vector space. This is due to two facts:
+
+(a) The support of $f+g$ lies in the union of the support of $f$ and the support of $g$, and any finite union of compact sets is compact.
+
+(b) The sum of two continuous complex functions is continuous, as are scalar multiples of continuous functions.
+
+(Statement and proof of Theorem 1.8 hold verbatim if "measurable function" is replaced by "continuous function," "measurable space" by "topological space"; take $\Phi(s, t)=s+t$, or $\Phi(s, t)=s t$, to prove that sums and products of continuous functions are continuous.)
+
+2.10 Theorem Let $X$ and $Y$ be topological spaces, and let $f: X \rightarrow Y$ be continuous. If $K$ is a compact subset of $X$, then $f(K)$ is compact.
+
+Proof If $\left\{V_{\alpha}\right\}$ is an open cover of $f(K)$, then $\left\{f^{-1}\left(V_{\alpha}\right)\right\}$ is an open cover of $K$, hence $K \subset f^{-1}\left(V_{\alpha_{1}}\right) \cup \cdots \cup f^{-1}\left(V_{\alpha_{n}}\right)$ for some $\alpha_{1}, \ldots, \alpha_{n}$, and therefore $f(K) \subset V_{\alpha_{1}} \cup \cdots \cup V_{\alpha_{n}}$.
+
+Corollary The range of any $f \in C_{c}(X)$ is a compact subset of the complex plane.
+
+In fact, if $K$ is the support of $f \in C_{c}(X)$, then $f(X) \subset f(K) \cup\{0\}$. If $X$ is not compact, then $0 \in f(X)$, but 0 need not lie in $f(K)$, as is seen by easy examples.
+
+2.11 Notation In this chapter the following conventions will be used. The notation
+
+$$
+K \prec f
+$$
+
+will mean that $K$ is a compact subset of $X$, that $f \in C_{c}(X)$, that $0 \leq f(x) \leq 1$ for all $x \in X$, and that $f(x)=1$ for all $x \in K$. The notation
+
+$$
+f \prec V
+$$
+
+will mean that $V$ is open, that $f \in C_{c}(X), 0 \leq f \leq 1$, and that the support of $f$ lies in $V$. The notation
+
+$$
+K \prec f \prec V
+$$
+
+will be used to indicate that both (1) and (2) hold.
+
+2.12 Urysohn's Lemma Suppose $X$ is a locally compact Hausdorff space, $V$ is open in $X, K \subset V$, and $K$ is compact. Then there exists an $f \in C_{c}(X)$, such that
+
+$$
+K \prec f \prec V \text {. }
+$$
+
+In terms of characteristic functions, the conclusion asserts the existence of a continuous function $f$ which satisfies the inequalities $\chi_{K} \leq f \leq \chi_{V}$. Note that it is easy to find semicontinuous functions which do this; examples are $\chi_{K}$ and $\chi_{V}$.
+
+Proof Put $r_{1}=0, r_{2}=1$, and let $r_{3}, r_{4}, r_{5}, \ldots$ be an enumeration of the rationals in $(0,1)$. By Theorem 2.7, we can find open sets $V_{0}$ and then $V_{1}$ such that $\bar{V}_{0}$ is compact and
+
+$$
+K \subset V_{1} \subset \bar{V}_{1} \subset V_{0} \subset \bar{V}_{0} \subset V
+$$
+
+Suppose $n \geq 2$ and $V_{r_{1}}, \ldots, V_{r_{n}}$ have been chosen in such a manner that $r_{i}<r_{j}$ implies $\bar{V}_{r_{j}} \subset V_{r_{i}}$. Then one of the numbers $r_{1}, \ldots, r_{n}$, say $r_{i}$, will be the largest one which is smaller than $r_{n+1}$, and another, say $r_{j}$, will be the smallest one larger than $r_{n+1}$. Using Theorem 2.7 again, we can find $V_{r_{n+1}}$ so that
+
+$$
+\bar{V}_{r_{j}} \subset V_{r_{n+1}} \subset \bar{V}_{r_{n+1}} \subset V_{r_{i}} .
+$$
+
+Continuing, we obtain a collection $\left\{V_{r}\right\}$ of open sets, one for every rational $r \in[0,1]$, with the following properties: $K \subset V_{1}, \bar{V}_{0} \subset V$, each $\bar{V}_{r}$ is compact, and
+
+$$
+s>r \text { implies } \bar{V}_{s} \subset V_{r} .
+$$
+
+Define
+
+$$
+f_{r}(x)=\left\{\begin{array}{ll}
+r & \text { if } x \in V_{r}, \\
+0 & \text { otherwise, }
+\end{array} \quad g_{s}(x)= \begin{cases}1 & \text { if } x \in \bar{V}_{s} \\
+s & \text { otherwise }\end{cases}\right.
+$$
+
+and
+
+$$
+f=\sup _{r} f_{r}, \quad g=\inf _{s} g_{s} .
+$$
+
+The remarks following Definition 2.8 show that $f$ is lower semicontinuous and that $g$ is upper semicontinuous. It is clear that $0 \leq f \leq 1$, that
+$f(x)=1$ if $x \in K$, and that $f$ has its support in $\bar{V}_{0}$. The proof will be completed by showing that $f=g$.
+
+The inequality $f_{r}(x)>g_{s}(x)$ is possible only if $r>s, x \in V_{r}$, and $x \notin \bar{V}_{s}$. But $r>s$ implies $V_{r} \subset V_{s}$. Hence $f_{r} \leq g_{s}$ for all $r$ and $s$, so $f \leq g$.
+
+Suppose $f(x)<g(x)$ for some $x$. Then there are rationals $r$ and $s$ such that $f(x)<r<s<g(x)$. Since $f(x)<r$, we have $x \notin V_{r}$; since $g(x)>s$, we have $x \in \bar{V}_{s}$. By (3), this is a contradiction. Hence $f=g$.
+
+2.13 Theorem Suppose $V_{1}, \ldots, V_{n}$ are open subsets of a locally compact Hausdorff space $X, K$ is compact, and
+
+$$
+K \subset V_{1} \cup \cdots \cup V_{n}
+$$
+
+Then there exist functions $h_{i} \prec V_{i}(i=1, \ldots, n)$ such that
+
+$$
+h_{1}(x)+\cdots+h_{n}(x)=1 \quad(x \in K) .
+$$
+
+Because of (1), the collection $\left\{h_{1}, \ldots, h_{n}\right\}$ is called a partition of unity on $K$, subordinate to the cover $\left\{V_{1}, \ldots, V_{n}\right\}$.
+
+Proof By Theorem 2.7, each $x \in K$ has a neighborhood $W_{x}$ with compact closure $\bar{W}_{x} \subset V_{i}$ for some $i$ (depending on $x$ ). There are points $x_{1}, \ldots, x_{m}$ such that $W_{x_{1}} \cup \cdots \cup W_{x_{m}} \supset K$. If $1 \leq i \leq n$, let $H_{i}$ be the union of those $W_{x_{j}}$ which lie in $V_{i}$. By Urysohn's lemma, there are functions $g_{i}$ such that $H_{i} \prec g_{i} \prec V_{i}$. Define
+
+$$
+\begin{aligned}
+& h_{1}=g_{1} \\
+& h_{2}=\left(1-g_{1}\right) g_{2} \\
+& \ldots \ldots \ldots \\
+& h_{n}=\left(1-g_{1}\right)\left(1-g_{2}\right) \cdots\left(1-g_{n-1}\right) g_{n} .
+\end{aligned}
+$$
+
+Then $h_{i} \prec V_{i}$. It is easily verified, by induction, that
+
+$$
+h_{1}+h_{2}+\cdots+h_{n}=1-\left(1-g_{1}\right)\left(1-g_{2}\right) \cdots\left(1-g_{n}\right) .
+$$
+
+Since $K \subset H_{1} \cup \cdots \cup H_{n}$, at least one $g_{i}(x)=1$ at each point $x \in K$; hence (3) shows that (1) holds.
+
+\section{The Riesz Representation Theorem}
+2.14 Theorem Let $X$ be a locally compact Hausdorff space, and let $\Lambda$ be a positive linear functional on $C_{c}(X)$. Then there exists a $\sigma$-algebra $\mathfrak{M}$ in $X$ which contains all Borel sets in $X$, and there exists a unique positive measure $\mu$ on $\mathfrak{M}$ which represents $\Lambda$ in the sense that
+
+(a) $\Lambda f=\int_{X} f d \mu$ for every $f \in C_{c}(X)$,
+
+and which has the following additional properties:
+(b) $\mu(K)<\infty$ for every compact set $K \subset X$.
+
+(c) For every $E \in \mathfrak{M}$, we have
+
+$$
+\mu(E)=\inf \{\mu(V): E \subset V, V \text { open }\} .
+$$
+
+(d) The relation
+
+$$
+\mu(E)=\sup \{\mu(K): K \subset E, K \text { compact }\}
+$$
+
+holds for every open set $E$, and for every $E \in \mathfrak{M}$ with $\mu(E)<\infty$.
+
+(e) If $E \in \mathfrak{M}, A \subset E$, and $\mu(E)=0$, then $A \in \mathfrak{M}$.
+
+For the sake of clarity, let us be more explicit about the meaning of the word "positive" in the hypothesis: $\Lambda$ is assumed to be a linear functional on the complex vector space $C_{c}(X)$, with the additional property that $\Lambda f$ is a nonnegative real number for every $f$ whose range consists of nonnegative real numbers. Briefly, if $f(X) \subset[0, \infty)$ then $\Lambda f \in[0, \infty)$.
+
+Property $(a)$ is of course the one of greatest interest. After we define $\mathfrak{M}$ and $\mu$, (b) to $(d)$ will be established in the course of proving that $\mathfrak{M}$ is a $\sigma$-algebra and that $\mu$ is countably additive. We shall see later (Theorem 2.18) that in "reasonable" spaces $X$ every Borel measure which satisfies $(b)$ also satisfies $(c)$ and $(d)$ and that $(d)$ actually holds for every $E \in \mathfrak{M}$, in those cases. Property $(e)$ merely says that $(X, \mathfrak{M}, \mu)$ is a complete measure space, in the sense of Theorem 1.36.
+
+Throughout the proof of this theorem, the letter $K$ will stand for a compact subset of $X$, and $V$ will denote an open set in $X$.
+
+Let us begin by proving the uniqueness of $\mu$. If $\mu$ satisfies $(c)$ and $(d)$, it is clear that $\mu$ is determined on $\mathfrak{M}$ by its values on compact sets. Hence it suffices to prove that $\mu_{1}(K)=\mu_{2}(K)$ for all $K$, whenever $\mu_{1}$ and $\mu_{2}$ are measures for which the theorem holds. So, fix $K$ and $\epsilon>0$. By $(b)$ and (c), there exists a $V \supset K$ with $\mu_{2}(V)<\mu_{2}(K)+\epsilon$; by Urysohn's lemma, there exists an $f$ so that $K \prec f \prec V$; hence
+
+$$
+\begin{aligned}
+\mu_{1}(K) & =\int_{X} \chi_{K} d \mu_{1} \leq \int_{X} f d \mu_{1}=\Lambda f=\int_{X} f d \mu_{2} \\
+& \leq \int_{X} \chi_{V} d \mu_{2}=\mu_{2}(V)<\mu_{2}(K)+\epsilon
+\end{aligned}
+$$
+
+Thus $\mu_{1}(K) \leq \mu_{2}(K)$. If we interchange the roles of $\mu_{1}$ and $\mu_{2}$, the opposite inequality is obtained, and the uniqueness of $\mu$ is proved.
+
+Incidentally, the above computation shows that $(a)$ forces $(b)$.
+
+Construction of $\mu$ and $\mathfrak{M}$
+
+For every open set $V$ in $X$, define
+
+$$
+\mu(V)=\sup \{\Lambda f: f \prec V\} .
+$$
+
+If $V_{1} \subset V_{2}$, it is clear that (1) implies $\mu\left(V_{1}\right) \leq \mu\left(V_{2}\right)$. Hence
+
+$$
+\mu(E)=\inf \{\mu(V): E \subset V, V \text { open }\}
+$$
+
+if $E$ is an open set, and it is consistent with (1) to define $\mu(E)$ by (2), for every $E \subset X$.
+
+Note that although we have defined $\mu(E)$ for every $E \subset X$, the countable additivity of $\mu$ will be proved only on a certain $\sigma$-algebra $\mathfrak{M}$ in $X$.
+
+Let $\mathfrak{M}_{F}$ be the class of all $E \subset X$ which satisfy two conditions: $\mu(E)<\infty$, and
+
+$$
+\mu(E)=\sup \{\mu(K): K \subset E, K \text { compact }\}
+$$
+
+Finally, let $\mathfrak{M}$ be the class of all $E \subset X$ such that $E \cap K \in \mathfrak{M}_{F}$ for every compact $K$.
+
+Proof that $\mu$ and $\mathfrak{M}$ have the required properties
+
+It is evident that $\mu$ is monotone, i.e., that $\mu(A) \leq \mu(B)$ if $A \subset B$ and that $\mu(E)=0$ implies $E \in \mathfrak{M}_{F}$ and $E \in \mathfrak{M}$. Thus $(e)$ holds, and so does $(c)$, by definition.
+
+Since the proof of the other assertions is rather long, it will be convenient to divide it into several steps.
+
+Observe that the positivity of $\Lambda$ implies that $\Lambda$ is monotone: $f \leq g$ implies $\Lambda f \leq \Lambda g$. This is clear, since $\Lambda g=\Lambda f+\Lambda(g-f)$ and $g-f \geq 0$. This monotonicity will be used in Steps II and X.
+
+STEP I If $E_{1}, E_{2}, E_{3}, \ldots$ are arbitrary subsets of $X$, then
+
+$$
+\mu\left(\bigcup_{i=1}^{\infty} E_{i}\right) \leq \sum_{i=1}^{\infty} \mu\left(E_{i}\right)
+$$
+
+Proof We first show that
+
+$$
+\mu\left(V_{1} \cup V_{2}\right) \leq \mu\left(V_{1}\right)+\mu\left(V_{2}\right)
+$$
+
+if $V_{1}$ and $V_{2}$ are open. Choose $g \prec V_{1} \cup V_{2}$. By Theorem 2.13 there are functions $h_{1}$ and $h_{2}$ such that $h_{i} \prec V_{i}$ and $h_{1}(x)+h_{2}(x)=1$ for all $x$ in the support of $g$. Hence $h_{i} g \prec V_{i}, g=h_{1} g+h_{2} g$, and so
+
+$$
+\Lambda g=\Lambda\left(h_{1} g\right)+\Lambda\left(h_{2} g\right) \leq \mu\left(V_{1}\right)+\mu\left(V_{2}\right)
+$$
+
+Since (6) holds for every $g \prec V_{1} \cup V_{2}$, (5) follows.
+
+If $\mu\left(E_{i}\right)=\infty$ for some $i$, then (4) is trivially true. Suppose therefore that $\mu\left(E_{i}\right)<\infty$ for every $i$. Choose $\epsilon>0$. By (2) there are open sets $V_{i} \supset E_{i}$ such that
+
+$$
+\mu\left(V_{i}\right)<\mu\left(E_{i}\right)+2^{-i} \epsilon \quad(i=1,2,3, \ldots)
+$$
+
+Put $V=\bigcup_{1}^{\infty} V_{i}$, and choose $f \prec V$. Since $f$ has compact support, we see that $f \prec V_{1} \cup \cdots \cup V_{n}$ for some $n$. Applying induction to (5), we therefore obtain
+
+$$
+\Lambda f \leq \mu\left(V_{1} \cup \cdots \cup V_{n}\right) \leq \mu\left(V_{1}\right)+\cdots+\mu\left(V_{n}\right) \leq \sum_{i=1}^{\infty} \mu\left(E_{i}\right)+\epsilon
+$$
+
+Since this holds for every $f \prec V$, and since $\bigcup E_{i} \subset V$, it follows that
+
+$$
+\mu\left(\bigcup_{i=1}^{\infty} E_{i}\right) \leq \mu(V) \leq \sum_{i=1}^{\infty} \mu\left(E_{i}\right)+\epsilon
+$$
+
+which proves (4), since $\epsilon$ was arbitrary.
+
+STEP II If $K$ is compact, then $K \in \mathfrak{M}_{F}$ and
+
+$$
+\mu(K)=\inf \{\Lambda f: K \prec f\}
+$$
+
+This implies assertion $(b)$ of the theorem.
+
+ProOF If $K \prec f$ and $0<\alpha<1$, let $V_{\alpha}=\{x: f(x)>\alpha\}$. Then $K \subset V_{\alpha}$, and $\alpha g \leq f$ whenever $g \prec V_{\alpha}$. Hence
+
+$$
+\mu(K) \leq \mu\left(V_{\alpha}\right)=\sup \left\{\Lambda g: g \prec V_{\alpha}\right\} \leq \alpha^{-1} \Lambda f
+$$
+
+Let $\alpha \rightarrow 1$, to conclude that
+
+$$
+\mu(K) \leq \Lambda f
+$$
+
+Thus $\mu(K)<\infty$. Since $K$ evidently satisfies (3), $K \in \mathfrak{M}_{F}$.
+
+If $\epsilon>0$, there exists $V \supset K$ with $\mu(V)<\mu(K)+\epsilon$. By Urysohn's lemma, $K \prec f \prec V$ for some $f$. Thus
+
+$$
+\Lambda f \leq \mu(V)<\mu(K)+\epsilon
+$$
+
+which, combined with (8), gives (7).
+
+STEP III Every open set satisfies (3). Hence $\mathfrak{M}_{F}$ contains every open set $V$ with $\mu(V)<\infty$.
+
+Proof Let $\alpha$ be a real number such that $\alpha<\mu(V)$. There exists an $f \prec V$ with $\alpha<\Lambda f$. If $W$ is any open set which contains the support $K$ of $f$, then $f<W$, hence $\Lambda f \leq \mu(W)$. Thus $\Lambda f \leq \mu(K)$. This exhibits a compact $K \subset V$ with $\alpha<\mu(K)$, so that (3) holds for $V$.
+
+STEP IV Suppose $E=\bigcup_{i=1}^{\infty} E_{i}$, where $E_{1}, E_{2}, E_{3}, \ldots$ are pairwise disjoint members of $\mathfrak{M}_{\boldsymbol{F}}$. Then
+
+$$
+\mu(E)=\sum_{i=1}^{\infty} \mu\left(E_{i}\right)
+$$
+
+If, in addition, $\mu(E)<\infty$, then also $E \in \mathfrak{M}_{F}$.
+
+Proof We first show that
+
+$$
+\mu\left(K_{1} \cup K_{2}\right)=\mu\left(K_{1}\right)+\mu\left(K_{2}\right)
+$$
+
+if $K_{1}$ and $K_{2}$ are disjoint compact sets. Choose $\epsilon>0$. By Urysohn's lemma, there exists $f \in C_{c}(X)$ such that $f(x)=1$ on $K_{1}, f(x)=0$ on $K_{2}$, and $0 \leq f \leq 1$. By Step II there exists $g$ such that
+
+$$
+K_{1} \cup K_{2} \prec g \text { and } \Lambda g<\mu\left(K_{1} \cup K_{2}\right)+\epsilon \text {. }
+$$
+
+Note that $K_{1} \prec f g$ and $K_{2} \prec(1-f) g$. Since $\Lambda$ is linear, it follows from (8) that
+
+$$
+\mu\left(K_{1}\right)+\mu\left(K_{2}\right) \leq \Lambda(f g)+\Lambda(g-f g)=\Lambda g<\mu\left(K_{1} \cup K_{2}\right)+\epsilon
+$$
+
+Since $\epsilon$ was arbitrary, (10) follows now from Step I.
+
+If $\mu(E)=\infty$, (9) follows from Step I. Assume therefore that $\mu(E)<\infty$, and choose $\epsilon>0$. Since $E_{i} \in \mathfrak{M}_{F}$, there are compact sets $H_{i} \subset E_{i}$ with
+
+$$
+\mu\left(H_{i}\right)>\mu\left(E_{i}\right)-2^{-i} \epsilon \quad(i=1,2,3, \ldots)
+$$
+
+Putting $K_{n}=H_{1} \cup \cdots \cup H_{n}$ and using induction on (10), we obtain
+
+$$
+\mu(E) \geq \mu\left(K_{n}\right)=\sum_{i=1}^{n} \mu\left(H_{i}\right)>\sum_{i=1}^{n} \mu\left(E_{i}\right)-\epsilon
+$$
+
+Since (12) holds for every $n$ and every $\epsilon>0$, the left side of (9) is not smaller than the right side, and so (9) follows from Step I.
+
+But if $\mu(E)<\infty$ and $\epsilon>0$, (9) shows that
+
+$$
+\mu(E) \leq \sum_{i=1}^{N} \mu\left(E_{i}\right)+\epsilon
+$$
+
+for some $N$. By (12), it follows that $\mu(E) \leq \mu\left(K_{N}\right)+2 \epsilon$, and this shows that $E$ satisfies (3); hence $E \in \mathfrak{M}_{F}$.
+
+STEP $\vee$ If $E \in \mathfrak{M}_{F}$ and $\epsilon>0$, there is a compact $K$ and an open $V$ such that $K \subset E \subset V$ and $\mu(V-K)<\epsilon$.
+
+Proof Our definitions show that there exist $K \subset E$ and $V \supset E$ so that
+
+$$
+\mu(V)-\frac{\epsilon}{2}<\mu(E)<\mu(K)+\frac{\epsilon}{2} .
+$$
+
+Since $V-K$ is open, $V-K \in \mathfrak{M}_{F}$, by Step III. Hence Step IV implies that
+
+$$
+\mu(K)+\mu(V-K)=\mu(V)<\mu(K)+\epsilon
+$$
+
+STEP VI If $A \in \mathfrak{M}_{F}$ and $B \in \mathfrak{M}_{F}$, then $A-B, A \cup B$, and $A \cap B$ belong to $\mathfrak{M}_{F}$.
+
+PROOF If $\epsilon>0$, Step $\mathrm{V}$ shows that there are sets $K_{i}$ and $V_{i}$ such that $K_{1} \subset A \subset V_{1}, K_{2} \subset B \subset V_{2}$, and $\mu\left(V_{i}-K_{i}\right)<\epsilon$, for $i=1,2$. Since
+
+$$
+A-B \subset V_{1}-K_{2} \subset\left(V_{1}-K_{1}\right) \cup\left(K_{1}-V_{2}\right) \cup\left(V_{2}-K_{2}\right)
+$$
+
+Step I shows that
+
+$$
+\mu(A-B) \leq \epsilon+\mu\left(K_{1}-V_{2}\right)+\epsilon
+$$
+
+Since $K_{1}-V_{2}$ is a compact subset of $A-B$, (14) shows that $A-B$ satisfies (3), so that $A-B \in \mathfrak{M}_{F}$.
+
+Since $A \cup B=(A-B) \cup B$, an application of Step IV shows that $A \cup B \in \mathfrak{M}_{F}$. Since $A \cap B=A-(A-B)$, we also have $A \cap B \in \mathfrak{M}_{F}$.
+
+STEP VII $\mathfrak{M}$ is a $\sigma$-algebra in $X$ which contains all Borel sets.
+
+PROOF Let $K$ be an arbitrary compact set in $X$.
+
+If $A \in \mathfrak{M}$, then $A^{c} \cap K=K-(A \cap K)$, so that $A^{c} \cap K$ is a difference of two members of $\mathscr{M}_{F}$. Hence $A^{\mathfrak{c}} \cap K \in \mathfrak{M}_{F}$, and we conclude: $A \in \mathfrak{M}$ implies $A^{c} \in \mathfrak{M}$.
+
+Next, suppose $A=\bigcup_{1}^{\infty} A_{i}$, where each $A_{i} \in \mathfrak{M}$. Put $B_{1}=A_{1} \cap K$, and
+
+$$
+B_{n}=\left(A_{n} \cap K\right)-\left(B_{1} \cup \cdots \cup B_{n-1}\right) \quad(n=2,3,4, \ldots)
+$$
+
+Then $\left\{B_{n}\right\}$ is a disjoint sequence of members of $\mathfrak{M}_{F}$, by Step VI, and $A \cap K=\bigcup_{1}^{\infty} B_{n}$. It follows from Step IV that $A \cap K \in \mathfrak{M}_{F}$. Hence $A \in \mathfrak{M}$.
+
+Finally, if $C$ is closed, then $C \cap K$ is compact, hence $C \cap K \in \mathfrak{M}_{F}$, so $C \in \mathfrak{M}$. In particular, $X \in \mathfrak{M}$.
+
+We have thus proved that $\mathfrak{M}$ is a $\sigma$-algebra in $X$ which contains all closed subsets of $X$. Hence $\mathfrak{M}$ contains all Borel sets in $X$.
+
+STEP VIII $\mathfrak{M}_{F}$ consists of precisely those sets $E \in \mathfrak{M}$ for which $\mu(E)<\infty$.
+
+This implies assertion $(d)$ of the theorem.
+
+Proof If $E \in \mathfrak{M}_{F}$, Steps II and VI imply that $E \cap K \in \mathfrak{M}_{F}$ for every compact $K$, hence $E \in \mathfrak{M}$.
+
+Conversely, suppose $E \in \mathfrak{M}$ and $\mu(E)<\infty$, and choose $\epsilon>0$. There is an open set $V \supset E$ with $\mu(V)<\infty$; by III and $\mathrm{V}$, there is a compact $K \subset V$ with $\mu(V-K)<\epsilon$. Since $E \cap K \in \mathfrak{M}_{F}$, there is a compact set $H \subset E \cap K$ with
+
+$$
+\mu(E \cap K)<\mu(H)+\epsilon
+$$
+
+Since $E \subset(E \cap K) \cup(V-K)$, it follows that
+
+$$
+\mu(E) \leq \mu(E \cap K)+\mu(V-K)<\mu(H)+2 \epsilon
+$$
+
+which implies that $E \in \mathfrak{M}_{F}$.
+
+STEP IX $\mu$ is a measure on $\mathfrak{M}$.
+
+Proof The countable additivity of $\mu$ on $\mathfrak{M}$ follows immediately from Steps IV and VIII.
+
+$\operatorname{STEP} \times$ For every $f \in C_{c}(X), \Lambda f=\int_{X} f d \mu$.
+
+This proves $(a)$, and completes the theorem.
+
+Proof Clearly, it is enough to prove this for real $f$. Also, it is enough to prove the inequality
+
+$$
+\Lambda f \leq \int_{x} f d \mu
+$$
+
+for every real $f \in C_{c}(X)$. For once (16) is established, the linearity of $\Lambda$ shows that
+
+$$
+-\Lambda f=\Lambda(-f) \leq \int_{x}(-f) d \mu=-\int_{x} f d \mu
+$$
+
+which, together with (16), shows that equality holds in (16).
+
+Let $K$ be the support of a real $f \in C_{c}(X)$, let $[a, b]$ be an interval which contains the range of $f$ (note the Corollary to Theorem 2.10), choose $\epsilon>0$, and choose $y_{i}$, for $i=0,1, \ldots, n$, so that $y_{i}-y_{i-1}<\epsilon$ and
+
+$$
+y_{0}<a<y_{1}<\cdots<y_{n}=b .
+$$
+
+Put
+
+$$
+E_{i}=\left\{x: y_{i-1}<f(x) \leq y_{i}\right\} \cap K \quad(i=1, \ldots, n)
+$$
+
+Since $f$ is continuous, $f$ is Borel measurable, and the sets $E_{i}$ are therefore disjoint Borel sets whose union is $K$. There are open sets $V_{i} \supset E_{i}$ such that
+
+$$
+\mu\left(V_{i}\right)<\mu\left(E_{i}\right)+\frac{\epsilon}{n} \quad(i=1, \ldots, n)
+$$
+
+and such that $f(x)<y_{i}+\epsilon$ for all $x \in V_{i}$. By Theorem 2.13, there are functions $h_{i} \prec V_{i}$ such that $\sum h_{i}=1$ on $K$. Hence $f=\sum h_{i} f$, and Step II shows that
+
+$$
+\mu(K) \leq \Lambda\left(\sum h_{i}\right)=\sum \Lambda h_{i}
+$$
+
+Since $h_{i} f \leq\left(y_{i}+\epsilon\right) h_{i}$, and since $y_{i}-\epsilon<f(x)$ on $E_{i}$, we have
+
+$$
+\begin{aligned}
+\Lambda f & =\sum_{i=1}^{n} \Lambda\left(h_{i} f\right) \leq \sum_{i=1}^{n}\left(y_{i}+\epsilon\right) \Lambda h_{i} \\
+& =\sum_{i=1}^{n}\left(|a|+y_{i}+\epsilon\right) \Lambda h_{i}-|a| \sum_{i=1}^{n} \Lambda h_{i} \\
+& \leq \sum_{i=1}^{n}\left(|a|+y_{i}+\epsilon\right)\left[\mu\left(E_{i}\right)+\epsilon / n\right]-|a| \mu(K) \\
+& =\sum_{i=1}^{n}\left(y_{i}-\epsilon\right) \mu\left(E_{i}\right)+2 \epsilon \mu(K)+\frac{\epsilon}{n} \sum_{i=1}^{n}\left(|a|+y_{i}+\epsilon\right) \\
+& \leq \int_{X} f d \mu+\epsilon[2 \mu(K)+|a|+b+\epsilon] .
+\end{aligned}
+$$
+
+Since $\epsilon$ was arbitrary, (16) is established, and the proof of the theorem is complete.
+
+\section{Regularity Properties of Borel Measures}
+2.15 Definition A measure $\mu$ defined on the $\sigma$-algebra of all Borel sets in a locally compact Hausdorff space $X$ is called a Borel measure on $X$. If $\mu$ is positive, a Borel set $E \subset X$ is outer regular or inner regular, respectively, if $E$ has property $(c)$ or $(d)$ of Theorem 2.14. If every Borel set in $X$ is both outer and inner regular, $\mu$ is called regular.
+
+In our proof of the Riesz theorem, outer regularity of every set $E$ was built into the construction, but inner regularity was proved only for the open sets and for those $E \in \mathfrak{M}$ for which $\mu(E)<\infty$. It turns out that this flaw is in the nature of things. One cannot prove regularity of $\mu$ under the hypothesis of Theorem 2.14; an example is described in Exercise 17.
+
+However, a slight strengthening of the hypotheses does give us a regular measure. Theorem 2.17 shows this. And if we specialize a little more, Theorem 2.18 shows that all regularity problems neatly disappear.
+
+2.16 Definition A set $E$ in a topological space is called $\sigma$-compact if $E$ is a countable union of compact sets.
+
+A set $E$ in a measure space (with measure $\mu$ ) is said to have $\sigma$-finite measure if $E$ is a countable union of sets $E_{i}$ with $\mu\left(E_{i}\right)<\infty$.
+
+For example, in the situation described in Theorem 2.14, every $\sigma$ compact set has $\sigma$-finite measure. Also, it is easy to see that if $E \in \mathfrak{M}$ and $E$ has $\sigma$-finite measure, then $E$ is inner regular.
+
+2.17 Theorem Suppose $X$ is a locally compact, $\sigma$-compact Hausdorff space. If $\mathfrak{M}$ and $\mu$ are as described in the statement of Theorem 2.14, then $\mathfrak{M}$ and $\mu$ have the following properties:
+
+(a) If $E \in \mathfrak{M}$ and $\epsilon>0$, there is a closed set $F$ and an open set $V$ such that $F \subset E \subset V$ and $\mu(V-F)<\epsilon$.
+
+(b) $\mu$ is a regular Borel measure on $X$.
+
+(c) If $E \in \mathfrak{M}$, there are sets $A$ and $B$ such that $A$ is an $F_{\sigma}, B$ is $a G_{\delta}$, $A \subset E \subset B$, and $\mu(B-A)=0$.
+
+As a corollary of (c) we see that every $E \in \mathfrak{M}$ is the union of an $F_{\sigma}$ and a set of measure 0 .
+
+ProOF Let $X=K_{1} \cup K_{2} \cup K_{3} \cup \cdots$, where each $K_{n}$ is compact. If $E \in \mathfrak{M}$ and $\epsilon>0$, then $\mu\left(K_{n} \cap E\right)<\infty$, and there are open sets $V_{n} \supset K_{n} \cap E$ such that
+
+$$
+\mu\left(V_{n}-\left(K_{n} \cap E\right)\right)<\frac{\epsilon}{2^{n+1}} \quad(n=1,2,3, \ldots)
+$$
+
+If $V=\bigcup V_{n}$, then $V-E \subset \bigcup\left(V_{n}-\left(K_{n} \cap E\right)\right)$, so that
+
+$$
+\mu(V-E)<\frac{\epsilon}{2}
+$$
+
+Apply this to $E^{c}$ in place of $E$ : There is an open set $W \supset E^{c}$ such that $\mu\left(W-E^{c}\right)<\epsilon / 2$. If $F=W^{c}$, then $F \subset E$, and $E-F=W-E^{c}$. Now (a) follows.
+
+Every closed set $F \subset X$ is $\sigma$-compact, because $F=\bigcup\left(F \cap K_{n}\right)$. Hence (a) implies that every set $E \in \mathfrak{M}$ is inner regular. This proves (b).
+
+If we apply $(a)$ with $\epsilon=1 / j(j=1,2,3, \ldots)$, we obtain closed sets $F_{j}$ and open sets $V_{j}$ such that $F_{j} \subset E \subset V_{j}$ and $\mu\left(V_{j}-F_{j}\right)<1 / j$. Put $A=\bigcup F_{j}$ and $B=\bigcap V_{j}$. Then $A \subset E \subset B, A$ is an $F_{\sigma}, B$ is a $G_{\delta}$, and $\mu(B-A)=0$ since $B-A \subset V_{j}-F_{j}$ for $j=1,2,3, \ldots$ This proves (c).
+
+2.18 Theorem Let $X$ be a locally compact Hausdorff space in which every open set is $\sigma$-compact. Let $\lambda$ be any positive Borel measure on $X$ such that $\lambda(K)<\infty$ for every compact set $K$. Then $\lambda$ is regular.
+
+Note that every euclidean space $R^{k}$ satisfies the present hypothesis, since every open set in $R^{k}$ is a countable union of closed balls.
+
+Proof Put $\Lambda f=\int_{X} f d \lambda$, for $f \in C_{c}(X)$. Since $\lambda(K)<\infty$ for every compact $K$, $\Lambda$ is a positive linear functional on $C_{c}(X)$, and there is a regular measure $\mu$, satisfying the conclusions of Theorem 2.17 , such that
+
+$$
+\int_{X} f d \lambda=\int_{X} f d \mu \quad\left(f \in C_{c}(X)\right)
+$$
+
+We will show that $\lambda=\mu$.
+
+Let $V$ be open in $X$. Then $V=\bigcup K_{i}$, where $K_{i}$ is compact, $i=1,2,3, \ldots$ By Urysohn's lemma we can choose $f_{i}$ so that $K_{i} \prec f_{i} \prec V$. Let $g_{n}=\max \left(f_{1}, \ldots, f_{n}\right)$. Then $g_{n} \in C_{c}(X)$ and $g_{n}(x)$ increases to $\chi_{V}(x)$ at every point $x \in X$. Hence (1) and the monotone convergence theorem imply
+
+$$
+\lambda(V)=\lim _{n \rightarrow \infty} \int_{X} g_{n} d \lambda=\lim _{n \rightarrow \infty} \int_{X} g_{n} d \mu=\mu(V)
+$$
+
+Now let $E$ be a Borel set in $X$, and choose $\epsilon>0$. Since $\mu$ satisfies Theorem 2.17, there is a closed set $F$ and an open set $V$ such that $F \subset E \subset V$ and $\mu(V-F)<\epsilon$. Hence $\mu(V) \leq \mu(F)+\epsilon \leq \mu(E)+\epsilon$.
+
+Since $V-F$ is open, (2) shows that $\lambda(V-F)<\epsilon$, hence $\lambda(V) \leq \lambda(E)+\epsilon$. Consequently
+
+and
+
+$$
+\lambda(E) \leq \lambda(V)=\mu(V) \leq \mu(E)+\epsilon
+$$
+
+$$
+\mu(E) \leq \mu(V)=\lambda(V) \leq \lambda(E)+\epsilon,
+$$
+
+so that $|\lambda(E)-\mu(E)|<\epsilon$ for every $\epsilon>0$. Hence $\lambda(E)=\mu(E)$.
+
+In Exercise 18 a compact Hausdorff space is described in which the complement of a certain point fails to be $\sigma$-compact and in which the conclusion of the preceding theorem is not true.
+
+\section{Lebesgue Measure}
+2.19 Euclidean Spaces Euclidean $k$-dimensional space $R^{k}$ is the set of all points $x=\left(\xi_{1}, \ldots, \xi_{k}\right)$ whose coordinates $\xi_{i}$ are real numbers, with the following algebraic and topological structure:
+
+If $x=\left(\xi_{1}, \ldots, \xi_{k}\right), y=\left(\eta_{1}, \ldots, \eta_{k}\right)$, and $\alpha$ is a real number, $x+y$ and $\alpha x$ are defined by
+
+$$
+x+y=\left(\xi_{1}+\eta_{1}, \ldots, \xi_{k}+\eta_{k}\right), \quad \alpha x=\left(\alpha \xi_{1}, \ldots, \alpha \xi_{k}\right)
+$$
+
+This makes $R^{k}$ into a real vector space. If $x \cdot y=\sum \xi_{i} \eta_{i}$ and $|x|=(x \cdot x)^{1 / 2}$, the Schwarz inequality $|x \cdot y| \leq|x||y|$ leads to the triangle inequality
+
+$$
+|x-y| \leq|x-z|+|z-y|
+$$
+
+hence we obtain a metric by setting $\rho(x, y)=|x-y|$. We assume that these facts are familiar and shall prove them in greater generality in Chap. 4.
+
+If $E \subset R^{k}$ and $x \in R^{k}$, the translate of $E$ by $x$ is the set
+
+$$
+E+x=\{y+x: y \in E\}
+$$
+
+A set of the form
+
+$$
+W=\left\{x: \alpha_{i}<\xi_{i}<\beta_{i}, 1 \leq i \leq k\right\}
+$$
+
+or any set obtained by replacing any or all of the $<$ signs in (4) by $\leq$, is called a $k$-cell; its volume is defined to be
+
+$$
+\operatorname{vol}(W)=\prod_{i=1}^{k}\left(\beta_{i}-\alpha_{i}\right)
+$$
+
+If $a \in R^{k}$ and $\delta>0$, we shall call the set
+
+$$
+Q(a ; \delta)=\left\{x: \alpha_{i} \leq \xi_{i}<\alpha_{i}+\delta, 1 \leq i \leq k\right\}
+$$
+
+the $\delta$-box with corner at $a$. Here $a=\left(\alpha_{1}, \ldots, \alpha_{k}\right)$.
+
+For $n=1,2,3, \ldots$, we let $P_{n}$ be the set of all $x \in R^{k}$ whose coordinates are integral multiples of $2^{-n}$, and we let $\Omega_{n}$ be the collection of all $2^{-n}$ boxes with corners at points of $P_{n}$. We shall need the following four properties of $\left\{\Omega_{n}\right\}$. The first three are obvious by inspection.
+
+(a) If $n$ is fixed, each $x \in R^{k}$ lies in one and only one member of $\Omega_{n}$.
+
+(b) If $Q^{\prime} \in \Omega_{n}, Q^{\prime \prime} \in \Omega_{r}$, and $r<n$, then either $Q^{\prime} \subset Q^{\prime \prime}$ or $Q^{\prime} \cap Q^{\prime \prime}=\varnothing$.
+
+(c) If $Q \in \Omega_{r}$, then $\operatorname{vol}(Q)=2^{-r k}$; and if $n>r$, the set $P_{n}$ has exactly $2^{(n-r) k}$ points in $Q$.
+
+(d) Every nonempty open set in $R^{k}$ is a countable union of disjoint boxes belonging to $\Omega_{1} \cup \Omega_{2} \cup \Omega_{3} \cup \cdots$.
+
+ProOf OF (d) If $V$ is open, every $x \in V$ lies in an open ball which lies in $V$; hence $x \in Q \subset V$ for some $Q$ belonging to some $\Omega_{n}$. In other words, $V$ is the union of all boxes which lie in $V$ and which belong to some $\Omega_{n}$. From this collection of boxes, select those which belong to $\Omega_{1}$, and remove those in $\Omega_{2}$, $\Omega_{3}, \ldots$ which lie in any of the selected boxes. From the remaining collection, select those boxes of $\Omega_{2}$ which lie in $V$, and remove those in $\Omega_{3}, \Omega_{4}, \ldots$ which lie in any of the selected boxes. If we proceed in this way, $(a)$ and $(b)$ show that $(d)$ holds.
+
+2.20 Theorem There exists a positive complete measure $m$ defined on a $\sigma$ algebra $\mathfrak{M}$ in $R^{k}$, with the following properties:
+
+(a) $m(W)=\operatorname{vol}(W)$ for every $k$-cell $W$.
+
+(b) $\mathfrak{M}$ contains all Borel sets in $R^{k}$; more precisely, $E \in \mathfrak{M}$ if and only if there are sets $A$ and $B \subset R^{k}$ such that $A \subset E \subset B, A$ is an $F_{\sigma}, B$ is $a G_{\delta}$, and $m(B-A)=0$. Also, $m$ is regular.
+(c) $m$ is translation-invariant, i.e.,
+
+$$
+m(E+x)=m(E)
+$$
+
+for every $E \in \mathfrak{M}$ and every $x \in R^{k}$.
+
+(d) If $\mu$ is any positive translation-invariant Borel measure on $R^{k}$ such that $\mu(K)<\infty$ for every compact set $K$, then there is a constant $c$ such that $\mu(E)=c m(E)$ for all Borel sets $E \subset R^{k}$.
+
+(e) To every linear transformation $T$ of $R^{k}$ into $R^{k}$ corresponds a real number $\Delta(T)$ such that
+
+$$
+m(T(E))=\Delta(T) m(E)
+$$
+
+for every $E \in \mathfrak{M}$. In particular, $m(T(E))=m(E)$ when $T$ is a rotation.
+
+The members of $\mathfrak{M}$ are the Lebesgue measurable sets in $R^{k} ; m$ is the Lebesgue measure on $R^{k}$. When clarity requires it, we shall write $m_{k}$ in place of $m$.
+
+Proof If $f$ is any complex function on $R^{k}$, with compact support, define
+
+$$
+\Lambda_{n} f=2^{-n k} \sum_{x \in P_{n}} f(x) \quad(n=1,2,3, \ldots)
+$$
+
+where $P_{n}$ is as in Sec. 2.19.
+
+Now suppose $f \in C_{c}\left(R^{k}\right), f$ is real, $W$ is an open $k$-cell which contains the support of $f$, and $\epsilon>0$. The uniform continuity of $f([26]$, Theorem 4.19) shows that there is an integer $N$ and that there are functions $g$ and $h$ with support in $W$, such that (i) $g$ and $h$ are constant on each box belonging to $\Omega_{N}$, (ii) $g \leq f \leq h$, and (iii) $h-g<\epsilon$. If $n>N$, Property $2.19(c)$ shows that
+
+$$
+\Lambda_{N} g=\Lambda_{n} g \leq \Lambda_{n} f \leq \Lambda_{n} h=\Lambda_{N} h
+$$
+
+Thus the upper and lower limits of $\left\{\Lambda_{n} f\right\}$ differ by at most $\epsilon$ vol $(W)$, and since $\epsilon$ was arbitrary, we have proved the existence of
+
+$$
+\Lambda f=\lim _{n \rightarrow \infty} \Lambda_{n} f \quad\left(f \in C_{c}\left(R^{k}\right)\right)
+$$
+
+It is immediate that $\Lambda$ is a positive linear functional on $C_{c}\left(R^{k}\right)$. (In fact, $\Lambda f$ is precisely the Riemann integral of $f$ over $R^{k}$. We went through the preceding construction in order not to have to rely on any theorems about Riemann integrals in several variables.)
+
+We define $m$ and $\mathfrak{M}$ to be the measure and $\sigma$-algebra associated with this $\Lambda$ as in Theorem 2.14.
+
+Since Theorem 2.14 gives us a complete measure and since $R^{k}$ is $\sigma$ compact, Theorem 2.17 implies assertion $(b)$ of Theorem 2.20.
+
+To prove (a), let $W$ be the open cell 2.19(4), let $E_{r}$ be the union of those boxes belonging to $\Omega_{r}$ whose closures lie in $W$, choose $f_{r}$ so that $\bar{E}_{r} \prec$ $f_{r} \prec W$, and put $g_{r}=\max \left\{f_{1}, \ldots, f_{r}\right\}$. Our construction of $\Lambda$ shows that
+
+$$
+\operatorname{vol}\left(E_{r}\right) \leq \Lambda f_{r} \leq \Lambda g_{r} \leq \text { vol } W
+$$
+
+As $r \rightarrow \infty, \operatorname{vol}\left(E_{r}\right) \rightarrow \operatorname{vol}(W)$, and
+
+$$
+\Lambda g_{r}=\int g_{r} d m \rightarrow m(W)
+$$
+
+by the monotone convergence theorem, since $g_{r}(x) \rightarrow \chi_{W}(x)$ for all $x \in R^{k}$. Thus $m(W)=\operatorname{vol}(W)$ for every open cell $W$, and since every $k$-cell is the intersection of a decreasing sequence of open $k$-cells, we obtain $(a)$.
+
+The proofs of $(c),(d)$, and $(e)$ will use the following observation: If $\lambda$ is a positive Borel measure on $R^{k}$ and $\lambda(E)=m(E)$ for all boxes $E$, then the same equality holds for all open sets $E$, by property $2.19(d)$, and therefore for all Borel sets $E$, since $\lambda$ and $m$ are regular (Theorem 2.18).
+
+To prove (c), fix $x \in R^{k}$ and define $\lambda(E)=m(E+x)$. It is clear that $\lambda$ is then a measure; by $(a), \lambda(E)=m(E)$ for all boxes, hence $m(E+x)=m(E)$ for all Borel sets $E$. The same equality holds for every $E \in \mathfrak{M}$, because of $(b)$.
+
+Suppose next that $\mu$ satisfies the hypotheses of $(d)$. Let $Q_{0}$ be a 1-box, put $c=\mu\left(Q_{0}\right)$. Since $Q_{0}$ is the union of $2^{n k}$ disjoint $2^{-n}$ boxes that are translates of each other, we have
+
+$$
+2^{n k} \mu(Q)=\mu\left(Q_{0}\right)=c m\left(Q_{0}\right)=c \cdot 2^{n k} m(Q)
+$$
+
+for every $2^{-n}$-box $Q$. Property $2.19(d)$ implies now that $\mu(E)=c m(E)$ for all open sets $E \subset R^{k}$. This proves $(d)$.
+
+To prove (e), let $T: R^{k} \rightarrow R^{k}$ be linear. If the range of $T$ is a subspace $Y$ of lower dimension, then $m(Y)=0$ and the desired conclusion holds with $\Delta(T)=0$. In the other case, elementary linear algebra tells us that $T$ is a one-to-one map of $R^{k}$ onto $R^{k}$ whose inverse is also linear. Thus $T$ is a homeomorphism of $R^{k}$ onto $R^{k}$, so that $T(E)$ is a Borel set for every Borel set $E$, and we can therefore define a positive Borel measure $\mu$ on $R^{k}$ by
+
+$$
+\mu(E)=m(T(E))
+$$
+
+The linearity of $T$, combined with the translation-invariance of $m$, gives
+
+$$
+\mu(E+x)=m(T(E+x))=m(T(E)+T x)=m(T(E))=\mu(E)
+$$
+
+Thus $\mu$ is translation-invariant, and the first assertion of $(e)$ follows from (d), first for Borel sets $E$, then for all $E \in \mathfrak{M}$ by $(b)$.
+
+To find $\Delta(T)$, we merely need to know $m(T(E)) / m(E)$ for one set $E$ with $0<m(E)<\infty$. If $T$ is a rotation, let $E$ be the unit ball of $R^{k}$; then $T(E)=E$, and $\Delta(T)=1$.
+
+2.21 Remarks If $m$ is the Lebesgue measure on $R^{k}$, it is customary to write $L^{1}\left(R^{k}\right)$ in place of $L^{1}(m)$. If $E$ is a Lebesgue measurable subset of $R^{k}$, and if $m$ is restricted to the measurable subsets of $E$, a new measure space is obtained in an obvious fashion. The phrase " $f \in L^{1}$ on $E$ " or " $f \in L^{1}(E)$ " is used to indicate that $f$ is integrable on this measure space.
+
+If $k=1$, if $I$ is any of the sets $(a, b),(a, b],[a, b),[a, b]$, and if $f \in L^{1}(I)$, it is customary to write
+
+$$
+\int_{a}^{b} f(x) d x \text { in place of } \int_{I} f d m
+$$
+
+Since the Lebesgue measure of any single point is 0 , it makes no difference over which of these four sets the integral is extended.
+
+Everything learned about integration in elementary Calculus courses is still useful in the present context, for if $f$ is a continuous complex function on $[a, b]$, then the Riemann integral of $f$ and the Lebesgue integral of $f$ over $[a, b]$ coincide. This is obvious from our construction if $f(a)=f(b)=0$ and if $f(x)$ is defined to be 0 for $x<a$ and for $x>b$. The general case follows without difficulty. Actually the same thing is true for every Riemann integrable $f$ on $[a, b]$. Since we shall have no occasion to discuss Riemann integrable functions in the sequel, we omit the proof and refer to Theorem 11.33 of [26].
+
+Two natural questions may have occurred to some readers by now: Is every Lebesgue measurable set a Borel set? Is every subset of $R^{k}$ Lebesgue measurable? The answer is negative in both cases, even when $k=1$.
+
+The first question can be settled by a cardinality argument which we sketch briefly. Let $c$ be the cardinality of the continuum (the real line or, equivalently, the collection of all sets of integers). We know that $R^{k}$ has a countable base (open balls with rational radii and with centers in some countable dense subset of $R^{k}$ ), and that $\mathscr{B}_{k}$ (the collection of all Borel sets of $R^{k}$ ) is the $\sigma$-algebra generated by this base. It follows from this (we omit the proof) that $\mathscr{B}_{k}$ has cardinality $c$. On the other hand, there exist Cantor sets $E \subset R^{1}$ with $m(E)=0$. (Exercise 5.) The completeness of $m$ implies that each of the $2^{c}$ subsets of $E$ is Lebesgue measurable. Since $2^{c}>c$, most subsets of $E$ are not Borel sets.
+
+The following theorem answers the second question.
+
+2.22 Theorem If $A \subset R^{1}$ and every subset of $A$ is Lebesgue measurable then $m(A)=0$.
+
+Corollary Every set of positive measure has nonmeasurable subsets.
+
+Proof We shall use the fact that $R^{1}$ is a group, relative to addition. Let $Q$ be the subgroup that consists of the rational numbers, and let $E$ be a set that contains exactly one point from each coset of $Q$ in $R^{1}$. (The assertion that
+there is such a set is a direct application of the axiom of choice.) Then $E$ has the following two properties.
+
+(a) $(E+r) \cap(E+s)=\varnothing$ if $r \in Q, s \in Q, r \neq s$.
+
+(b) Every $x \in R^{1}$ lies in $E+r$ for some $r \in Q$.
+
+To prove (a), suppose $x \in(E+r) \cap(E+s)$. Then $x=y+r=z+s$ for some $y \in E, z \in E, y \neq z$. But $y-z=s-r \in Q$, so that $y$ and $z$ lie in the same coset of $Q$, a contradiction.
+
+To prove (b), let $y$ be the point of $E$ that lies in the same coset as $x$, put $r=x-y$.
+
+Fix $t \in Q$, for the moment, and put $A_{t}=A \cap(E+t)$. By hypothesis, $A_{t}$ is measurable. Let $K \subset A_{t}$ be compact, let $H$ be the union of the translates $K+r$, where $r$ ranges over $Q \cap[0,1]$. Then $H$ is bounded, hence $m(H)<\infty$. Since $K \subset E+t,(a)$ shows that the sets $K+r$ are pairwise disjoint. Thus $m(H)=\sum_{r} m(K+r)$. But $m(K+r)=m(K)$. It follows that $m(K)=0$. This holds for every compact $K \subset A_{t}$. Hence $m\left(A_{t}\right)=0$.
+
+Finally, $(b)$ shows that $A=\bigcup A_{t}$, where $t$ ranges over $Q$. Since $Q$ is countable, we conclude that $m(A)=0$.
+
+2.23 Determinants The scale factors $\Delta(T)$ that occur in Theorem $2.20(e)$ can be interpreted algebraically by means of determinants.
+
+Let $\left\{e_{1}, \ldots, e_{k}\right\}$ be the standard basis for $R^{k}$ : the ith coordinate of $e_{j}$ is 1 if $i=j, 0$ if $i \neq j$. If $T: R^{k} \rightarrow R^{k}$ is linear and
+
+$$
+T e_{j}=\sum_{i=1}^{k} \alpha_{i j} e_{i} \quad(1 \leq j \leq k)
+$$
+
+then det $T$ is, by definition, the determinant of the matrix $[T]$ that has $\alpha_{i j}$ in row $i$ and column $j$.
+
+We claim that
+
+$$
+\Delta(T)=|\operatorname{det} T|
+$$
+
+If $T=T_{1} T_{2}$, it is clear that $\Delta(T)=\Delta\left(T_{1}\right) \Delta\left(T_{2}\right)$. The multiplication theorem for determinants shows therefore that if (2) holds for $T_{1}$ and $T_{2}$, then (2) also holds for $T$. Since every linear operator on $R^{k}$ is a product of finitely many linear operators of the following three types, it suffices to establish (2) for each of these:
+
+(I) $\left\{T e_{1}, \ldots, T e_{k}\right\}$ is a permutation of $\left\{e_{1}, \ldots, e_{k}\right\}$.
+
+(II) $T e_{1}=\alpha e_{1}, T e_{i}=e_{i}$ for $i=2, \ldots, k$.
+
+(III) $T e_{1}=e_{1}+e_{2}, T e_{i}=e_{i}$ for $i=2, \ldots, k$.
+
+Let $Q$ be the cube consisting of all $x=\left(\xi_{1}, \ldots, \xi_{k}\right)$ with $0 \leq \xi_{i}<1$ for $i=1, \ldots, k$.
+
+If $T$ is of type (I), then $[T]$ has exactly one 1 in each row and each column and has 0 in all other places. So $\operatorname{det} T= \pm 1$. Also, $T(Q)=Q$. So $\Delta(T)=1=|\operatorname{det} T|$.
+
+If $T$ is of type (II), then clearly $\Delta(T)=|\alpha|=|\operatorname{det} T|$.
+
+If $T$ is of type (III), then det $T=1$ and $T(Q)$ is the set of all points $\sum \xi_{i} e_{i}$ whose coordinates satisfy
+
+$$
+\xi_{1} \leq \xi_{2}<\xi_{1}+1, \quad 0 \leq \xi_{i}<1 \quad \text { if } \quad i \neq 2
+$$
+
+If $S_{1}$ is the set of points in $T(Q)$ that have $\xi_{2}<1$ and if $S_{2}$ is the rest of $T(Q)$, then
+
+$$
+S_{1} \cup\left(S_{2}-e_{2}\right)=Q
+$$
+
+and $S_{1} \cap\left(S_{2}-e_{2}\right)$ is empty. Hence $\Delta(T)=m\left(S_{1} \cup S_{2}\right)=m\left(S_{1}\right)+m\left(S_{2}-e_{2}\right)=$ $m(Q)=1$, so that we again have $\Delta(T)=|\operatorname{det} T|$.
+
+\section{Continuity Properties of Measurable Functions}
+Since the continuous functions played such a prominent role in our construction of Borel measures, and of Lebesgue measure in particular, it seems reasonable to expect that there are some interesting relations between continuous functions and measurable functions. In this section we shall give two theorems of this kind.
+
+We shall assume, in both of them, that $\mu$ is a measure on a locally compact Hausdorff space $X$ which has the properties stated in Theorem 2.14. In particular, $\mu$ could be Lebesgue measure on some $R^{k}$.
+
+2.24 Lusin's Theorem Suppose $f$ is a complex measurable function on $X$, $\mu(A)<\infty, f(x)=0$ if $x \notin A$, and $\epsilon>0$. Then there exists a $g \in C_{c}(X)$ such that
+
+$$
+\mu(\{x: f(x) \neq g(x)\})<\epsilon .
+$$
+
+Furthermore, we may arrange it so that
+
+$$
+\sup _{x \in X}|g(x)| \leq \sup _{x \in X}|f(x)| .
+$$
+
+Proof Assume first that $0 \leq f<1$ and that $A$ is compact. Attach a sequence $\left\{s_{n}\right\}$ to $f$, as in the proof of Theorem 1.17, and put $t_{1}=s_{1}$ and $t_{n}=s_{n}-s_{n-1}$ for $n=2,3,4, \ldots$ Then $2^{n} t_{n}$ is the characteristic function of a set $T_{n} \subset A$, and
+
+$$
+f(x)=\sum_{n=1}^{\infty} t_{n}(x) \quad(x \in X)
+$$
+
+Fix an open set $V$ such that $A \subset V$ and $\bar{V}$ is compact. There are compact sets $K_{n}$ and open sets $V_{n}$ such that $K_{n} \subset T_{n} \subset V_{n} \subset V$ and $\mu\left(V_{n}-K_{n}\right)<2^{-n} \epsilon$. By Urysohn's lemma, there are functions $h_{n}$ such that $K_{n} \prec h_{n} \prec V_{n}$. Define
+
+$$
+g(x)=\sum_{n=1}^{\infty} 2^{-n} h_{n}(x) \quad(x \in X)
+$$
+
+This series converges uniformly on $X$, so $g$ is continuous. Also, the support of $g$ lies in $\bar{V}$. Since $2^{-n} h_{n}(x)=t_{n}(x)$ except in $V_{n}-K_{n}$, we have $g(x)=f(x)$
+except in $\bigcup\left(V_{n}-K_{n}\right)$, and this latter set has measure less than $\epsilon$. Thus (1) holds if $A$ is compact and $0 \leq f \leq 1$.
+
+It follows that (1) holds if $A$ is compact and $f$ is a bounded measurable function. The compactness of $A$ is easily removed, for if $\mu(A)<\infty$ then $A$ contains a compact set $K$ with $\mu(A-K)$ smaller than any preassigned positive number. Next, if $f$ is a complex measurable function and if $B_{n}=$ $\{x:|f(x)|>n\}$, then $\bigcap B_{n}=\varnothing$, so $\mu\left(B_{n}\right) \rightarrow 0$, by Theorem 1.19(e). Since $f$ coincides with the bounded function $\left(1-\chi_{B_{n}}\right) \cdot f$ except on $B_{n}$, (1) follows in the general case.
+
+Finally, let $R=\sup \{|f(x)|: x \in X\}$, and define $\varphi(z)=z$ if $|z| \leq R$, $\varphi(z)=R z /|z|$ if $|z|>R$. Then $\varphi$ is a continuous mapping of the complex plane onto the disc of radius $R$. If $g$ satisfies (1) and $g_{1}=\varphi \circ g$, then $g_{1}$ satisfies (1) and (2).
+
+Corollary Assume that the hypotheses of Lusin's theorem are satisfied and that $|f| \leq 1$. Then there is a sequence $\left\{g_{n}\right\}$ such that $g_{n} \in C_{c}(X),\left|g_{n}\right| \leq 1$, and
+
+$$
+f(x)=\lim _{n \rightarrow \infty} g_{n}(x) \quad \text { a.e. }
+$$
+
+Proof The theorem implies that to each $n$ there corresponds a $g_{n} \in C_{c}(X)$, with $\left|g_{n}\right| \leq 1$, such that $\mu\left(E_{n}\right) \leq 2^{-n}$, where $E_{n}$ is the set of all $x$ at which $f(x) \neq g_{n}(x)$. For almost every $x$ it is then true that $x$ lies in at most finitely many of the sets $E_{n}$ (Theorem 1.41). For any such $x$, it follows that $f(x)=$ $g_{n}(x)$ for all large enough $n$. This gives (5).
+
+2.25 The Vitali-Carathéodory Theorem Suppose $f \in L^{1}(\mu), f$ is real-valued, and $\epsilon>0$. Then there exist functions $u$ and $v$ on $X$ such that $u \leq f \leq v, u$ is upper semicontinuous and bounded above, $v$ is lower semicontinuous and bounded below, and
+
+$$
+\int_{x}(v-u) d \mu<\epsilon
+$$
+
+Proof Assume first that $f \geq 0$ and that $f$ is not identically 0 . Since $f$ is the pointwise limit of an increasing sequence of simple functions $s_{n}, f$ is the sum of the simple functions $t_{n}=s_{n}-s_{n-1}$ (taking $s_{0}=0$ ), and since $t_{n}$ is a linear combination of characteristic functions, we see that there are measurable sets $E_{i}$ (not necessarily disjoint) and constants $c_{i}>0$ such that
+
+$$
+f(x)=\sum_{i=1}^{\infty} c_{i} \chi_{E_{i}}(x) \quad(x \in X)
+$$
+
+Since
+
+$$
+\int_{X} f d \mu=\sum_{i=1}^{\infty} c_{i} \mu\left(E_{i}\right)
+$$
+
+the series in (3) converges. There are compact sets $K_{i}$ and open sets $V_{i}$ such that $K_{i} \subset E_{i} \subset V_{i}$ and
+
+$$
+c_{i} \mu\left(V_{i}-K_{i}\right)<2^{-i-1} \epsilon \quad(i=1,2,3, \ldots)
+$$
+
+Put
+
+$$
+v=\sum_{i=1}^{\infty} c_{i} \chi_{V_{i}}, \quad u=\sum_{i=1}^{N} c_{i} \chi_{K_{i}}
+$$
+
+where $N$ is chosen so that
+
+$$
+\sum_{N+1}^{\infty} c_{i} \mu\left(E_{i}\right)<\frac{\epsilon}{2}
+$$
+
+Then $v$ is lower semicontinuous, $u$ is upper semicontinuous, $u \leq f \leq v$, and
+
+$$
+\begin{aligned}
+v-u & =\sum_{i=1}^{N} c_{i}\left(\chi_{V_{i}}-\chi_{K_{i}}\right)+\sum_{N+1}^{\infty} c_{i} \chi_{V_{i}} \\
+& \leq \sum_{i=1}^{\infty} c_{i}\left(\chi_{V_{i}}-\chi_{K_{i}}\right)+\sum_{N+1}^{\infty} c_{i} \chi_{E_{i}}
+\end{aligned}
+$$
+
+so that (4) and (6) imply (1).
+
+In the general case, write $f=f^{+}-f^{-}$, attach $u_{1}$ and $v_{1}$ to $f^{+}$, attach $u_{2}$ and $v_{2}$ to $f^{-}$, as above, and put $u=u_{1}-v_{2}, v=v_{1}-u_{2}$. Since $-v_{2}$ is upper semicontinuous and since the sum of two upper semicontinuous functions is upper semicontinuous (similarly for lower semicontinuous; we leave the proof of this as an exercise), $u$ and $v$ have the desired properties.
+
+
+\end{document}
