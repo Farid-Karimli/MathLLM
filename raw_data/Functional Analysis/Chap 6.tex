@@ -1,0 +1,1410 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+
+\begin{document}
+\section{TEST FUNCTIONS AND DISTRIBUTIONS}
+\section{Introduction}
+6.1 The theory of distributions frees differential calculus from certain difficulties that arise because nondifferentiable functions exist. This is done by extending it to a class of objects (called distributions or generalized functions) which is much larger than the class of differentiable functions to which calculus applies in its original form.
+
+Here are some features that any such extension ought to have in order to be useful; our setting is some open subset of $R^{n}$ :
+
+(a) Every continuous function should be a distribution.
+
+(b) Every distribution should have partial derivatives which are again distributions. For differentiable functions, the new notion of derivative should coincide with the old one. (Every distribution should therefore be infinitely differentiable.)
+
+(c) The usual formal rules of calculus should hold.
+
+(d) There should be a supply of convergence theorems that is adequate for handling the usual limit processes.
+
+To motivate the definitions to come, let us temporarily restrict our attention to the case $n=1$. The integrals that follow are taken with respect to Lebesgue measure, and they extend over the whole line $R$, unless the contrary is indicated.
+
+A complex function $f$ is said to be locally integrable if $f$ is measurable and $\int_{K}|f|<\infty$ for every compact $K \subset R$. The idea is to reinterpret $f$ as being something that assigns the number $\int f \phi$ to every suitably chosen " test function" $\phi$, rather than as being something that assigns the number $f(x)$ to each $x \in R$. (This point of view is particularly appropriate for functions that arise in physics, since measured quantities are almost always averages. In fact, distributions were used by physicists long before their mathematical theory was constructed.) Of course, a well-chosen class of test functions must be specified.
+
+We let $\mathscr{D}=\mathscr{D}(R)$ be the vector space of all $\phi \in C^{\infty}(R)$ whose support is compact. Then $\int f \phi$ exists for every locally integrable $f$ and for every $\phi \in \mathscr{D}$. Moreover, $\mathscr{D}$ is sufficiently large to assure that $f$ is determined (a.e.) by the integrals $\int f \phi$. (To see this, note that the uniform closure of $\mathscr{D}$ contains every continuous function with compact support.) If $f$ happens to be continuously differentiable, then
+
+$$
+\int f^{\prime} \phi=-\int f \phi^{\prime} \quad(\phi \in \mathscr{D}) .
+$$
+
+If $f \in C^{\infty}(R)$, then
+
+$$
+\int f^{(k)} \phi=(-1)^{k} \int f \phi^{(k)} \quad(\phi \in \mathscr{D}, k=1,2,3, \ldots)
+$$
+
+The compactness of the support of $\phi$ was used in these integrations by parts.
+
+Observe that the integrals on the right sides of (1) and (2) make sense whether $f$ is differentiable or not and that they define linear functionals on $\mathscr{D}$.
+
+We can therefore assign a " $k$ th derivative" to every $f$ that is locally integrable: $f^{(k)}$ is the linear functional on $\mathscr{D}$ that sends $\phi$ to $(-1)^{k} \int f \phi^{(k)}$. Note that $f$ itself corresponds to the functional $\phi \rightarrow \int f \phi$.
+
+The distributions will be those linear functionals on $\mathscr{D}$ that are continuous with respect to a certain topology. (See Definition 6.7.) The preceding discussion suggests that we associate to each distribution $\Lambda$ its "derivative " $\Lambda$ " by the formula
+
+$$
+\Lambda^{\prime}(\phi)=-\Lambda\left(\phi^{\prime}\right) \quad(\phi \in \mathscr{D})
+$$
+
+It turns out that this definition (when extended to $n$ variables) has all the desirable properties that were listed earlier. One of the most important features of the resulting theory is that it makes it possible to apply Fourier transform techniques to many problems in partial differential equations where this cannot be done by more classical methods.
+
+\section{Test Function Spaces}
+6.2 The space $\mathscr{D}(\boldsymbol{\Omega})$ Consider a nonempty open set $\Omega \subset R^{n}$. For each compact $K \subset \Omega$, the Fréchet space $\mathscr{D}_{K}$ was described in Section 1.46. The union of the spaces $\mathscr{D}_{K}$, as $K$ ranges over all compact subsets of $\Omega$, is the test function space $\mathscr{D}(\Omega)$. It is
+clear-that $\mathscr{D}(\Omega)$ is a vector space, with respect to the usual definitions of addition and scalar multiplication of complex functions. Explicitly, $\phi \in \mathscr{D}(\Omega)$ if and only if $\phi \in C^{\infty}(\Omega)$ and the support of $\phi$ is a compact subset of $\Omega$.
+
+Let us introduce the norms
+
+$$
+\|\phi\|_{N}=\max \left\{\left|D^{\alpha} \phi(x)\right|: x \in \Omega,|\alpha| \leq N\right\}
+$$
+
+for $\phi \in \mathscr{D}(\Omega)$ and $N=0,1,2, \ldots$; see Section 1.46 for the notations $D^{\alpha}$ and $|\alpha|$.
+
+The restrictions of these norms to any fixed $\mathscr{D}_{K} \subset \mathscr{D}(\Omega)$ induce the same topology on $\mathscr{D}_{K}$ as do the seminorms $\bar{p}_{N}$ of Section 1.46. To see this, note that to each $K$ corresponds an integer $N_{0}$ such that $K \subset K_{N}$ for all $N \geq N_{0}$. For these $N,\|\phi\|_{N}=p_{N}(\phi)$ if $\phi \in \mathscr{D}_{K}$. Since
+
+$$
+\|\phi\|_{N} \leq\|\phi\|_{N+1} \quad \text { and } \quad p_{N}(\phi) \leq p_{N+1}(\phi)
+$$
+
+the topologies induced by either sequence of seminorms are unchanged if we let $N$ start at $N_{0}$ rather than at 1 . These two topologies of $\mathscr{D}_{\dot{K}}$ coincide therefore; a local base is formed by the sets
+
+$$
+V_{N}=\left\{\phi \in \mathscr{D}_{K}:\|\phi\|_{N}<\frac{1}{N}\right\} \quad(N=1,2,3, \ldots)
+$$
+
+The same norms (1) can be used to define a locally convex metrizable topology on $\mathscr{D}(\Omega)$; see Theorem 1.37 and $(b)$ of Section 1.38. However, this topology has the disadvantage of not being complete. For example, take $n=1, \Omega=R$, pick $\phi \in \mathscr{D}(R)$ with support in $[0,1], \phi>0$ in $(0,1)$, and define
+
+$$
+\psi_{m}(x)=\phi(x-1)+\frac{1}{2} \phi(x-2)+\cdots+\frac{1}{m} \phi(x-m)
+$$
+
+Then $\left\{\psi_{m}\right\}$ is a Cauchy sequence in the suggested topology of $\mathscr{D}(R)$, but $\lim \psi_{m}$ does not have compact support, hence is not in $\mathscr{D}(R)$.
+
+We shall now define another locally convex topology $\tau$ on $\mathscr{D}(\Omega)$ in which Cauchy sequences do converge. The fact that this $\tau$ is not metrizable is only a minor inconvenience, as we shall see.
+
+6.3 Definitions Let $\Omega$ be a nonempty open set in $R^{n}$.
+
+(a) For every compact $K \subset \Omega, \overrightarrow{\tau_{K}}$ denotes the Fréchet space topology of $\mathscr{D}_{K}$, as described in Sections 1.46 and 6.2.
+
+(b) $\beta$ is the collection of all convex balanced sets $W \subset \mathscr{D}(\Omega)$ such that $\mathscr{D}_{K} \cap W \in \tau_{K}$ for every compact $K \subset \Omega$.
+
+(c) $\tau$ is the collection of all unions of sets of the form $\phi+W$, with $\phi \in \mathscr{D}(\Omega)$ and $W \in \beta$.
+
+Throughout this chapter, $K$ will always denote a compact subset of $\Omega$.
+
+\subsection{Theorem}
+(a) $\tau$ is a topology in $\mathscr{D}(\Omega)$, and $\beta$ is a local base for $\tau$.
+
+(b) $\tau$ makes $\mathscr{D}(\Omega)$ into a locally convex topological vector space.
+
+PRoOF Suppose $V_{1} \in \tau, V_{2} \in \tau, \phi \in V_{1} \cap V_{2}$. To prove (a), it is clearly enough to show that
+
+$$
+\phi+W \subset V_{1} \cap V_{2}
+$$
+
+for some $W \in \beta$.
+
+The definition of $\tau$ shows that there exist $\phi_{i} \in \mathscr{D}(\Omega)$ and $W_{i} \in \beta$ such that
+
+$$
+\phi \in \phi_{i}+W_{i} \subset V_{i} \quad(i=1,2)
+$$
+
+Choose $K$ so that $\mathscr{D}_{K}$ contains $\phi_{1}, \phi_{2}$, and $\phi$. Since $\mathscr{D}_{K} \cap W_{i}$ is open in $\mathscr{D}_{K}$, we have
+
+$$
+\phi-\phi_{i} \in\left(1-\delta_{i}\right) W_{i}
+$$
+
+for some $\delta_{i}>0$. The convexity of $W_{i}$ implies therefore that
+
+$$
+\phi-\phi_{i}+\delta_{i} W_{i} \subset\left(1-\delta_{i}\right) W_{i}+\delta_{i} W_{i}=W_{i}
+$$
+
+so that
+
+$$
+\phi+\delta_{i} W_{i} \subset \phi_{i}+W_{i} \subset V_{i} \quad(i=1,2)
+$$
+
+Hence (1) holds with $W=\left(\delta_{1} W_{1}\right) \cap\left(\delta_{2} W_{2}\right)$, and $(a)$ is proved.
+
+Suppose next that $\phi_{1}$ and $\phi_{2}$ are distinct elements of $\mathscr{D}(\Omega)$, and put
+
+$$
+W=\left\{\phi \in \mathscr{D}(\Omega):\|\phi\|_{0}<\left\|\phi_{1}-\phi_{2}\right\|_{0}\right\}
+$$
+
+where $\|\phi\|_{0}$ is as in (1) in Section 6.2. Then $W \in \beta$ and $\phi_{1}$ is not in $\phi_{2}+W$. It follows that the singleton $\left\{\phi_{1}\right\}$ is a closed set, relative to $\tau$.
+
+Addition is $\tau$-continuous, since the convexity of every $W \in \beta$ implies that
+
+$$
+\left(\psi_{1}+\frac{1}{2} W\right)+\left(\psi_{2}+\frac{1}{2} W\right)=\left(\psi_{1}+\psi_{2}\right)+W
+$$
+
+for any $\psi_{1} \in \mathscr{D}(\Omega), \psi_{2} \in \mathscr{D}(\Omega)$.
+
+To deal with scalar multiplication, pick a scalar $\alpha_{0}$ and a $\phi_{0} \in \mathscr{D}(\Omega)$. Then
+
+$$
+\alpha \phi-\alpha_{0} \phi_{0}=\alpha\left(\phi-\phi_{0}\right)+\left(\alpha-\alpha_{0}\right) \phi_{0} .
+$$
+
+If $W \in \beta$, there exists $\delta>0$ such that $\delta \phi_{0} \in \frac{1}{2} W$. Choose $c$ so that $2 c\left(\left|\alpha_{0}\right|+\delta\right)=1$. Since $W$ is convex and balanced, it follows that
+
+$$
+\alpha \phi-\alpha_{0} \phi_{0} \in W
+$$
+
+whenever $\left|\alpha-\alpha_{0}\right|<\delta$ and $\phi-\phi_{0} \in c W$.
+
+This completes the proof.
+
+Note: From now on, the symbol $\mathscr{D}(\Omega)$ will denote the topological vector space . $(\mathscr{D}(\Omega), \tau)$ that has just been described. All topological concepts related to $\mathscr{D}(\Omega)$ will refer to this topology $\tau$.
+
+\subsection{Theorem}
+(a) A convex balanced subset $V$ of $\mathscr{D}(\Omega)$ is open if and only if $V \in \beta$.
+
+(b) The topology $\tau_{K}$ of any $\mathscr{D}_{K} \subset \mathscr{D}(\Omega)$ coincides with the subspace topology that $\mathscr{D}_{K}$ inherits from' $\mathscr{D}(\Omega)$.
+
+(c) If $E$ is a bounded subset of $\mathscr{D}(\Omega)$, then $E \subset \mathscr{D}_{K}$ for some $K \subset \Omega$, and there are numbers $M_{N}<\infty$ such that every $\phi \in E$ satisfies the inequalities
+
+$$
+\|\phi\|_{N} \leq M_{N} \quad(N=0,1,2, \ldots)
+$$
+
+(d) $\mathscr{D}(\Omega)$ has the Heine-Borel property.
+
+(e) If $\left\{\phi_{i}\right\}$ is a Cauchy sequence in $\mathscr{D}(\Omega)$, then $\left\{\phi_{i}\right\} \subset \mathscr{D}_{K}$ for some compact $K \subset \Omega$, and
+
+$$
+\lim _{i, j \rightarrow \infty}\left\|\phi_{i}-\phi_{j}\right\|_{N}=0 \quad(N=0,1,2, \ldots)
+$$
+
+(f) If $\phi_{i} \rightarrow 0$ in the topology of $\mathscr{D}(\Omega)$, then there is a compact $K \subset \Omega$ which contains the support of every $\phi_{i}$, and $D^{\alpha} \phi_{i} \rightarrow 0$ uniformly, as $i \rightarrow \infty$, for every multiindex $\alpha$.
+
+(g) In $\mathscr{D}(\Omega)$, every Cauchy sequence converges.
+
+Remark In view of $(b)$, the necessary conditions expressed by $(c),(e)$, and $(f)$ are also sufficient. For example, if $E \subset \mathscr{D}_{K}$ and $\|\phi\|_{N} \leq M_{N}<\infty$ for every $\phi \in E$, then $E$ is a bounded subset of $\mathscr{D}_{K}$ (Section 1.46), and now $(b)$ implies that $E$ is also bounded in $\mathscr{D}(\Omega)$.
+
+PRoOF Suppose first that $V \in \tau$. Pick $\phi \in \mathscr{D}_{K} \cap V$. By Theorem 6.4, $\phi+W \subset V$ for some $W \in \beta$. Hence
+
+$$
+\phi+\left(\mathscr{D}_{K} \cap \mathscr{W}\right) \subset \mathscr{D}_{K} \cap \bar{V} .
+$$
+
+Since $\mathscr{D}_{K} \cap W$ is open in $\mathscr{D}_{K}$, we have proved that
+
+$$
+\mathscr{D}_{K} \cap V \in \tau_{K} \quad \text { if } V \in \tau \text { and } K \subset \Omega
+$$
+
+Statement (a) is an immediate consequence of (1), since it is obvious that $\beta \subset \tau$.
+
+One-half of $(b)$ is proved by (1). For the other half, suppose $E \in \tau_{K}$. We have to show that $E=\mathscr{D}_{K} \cap V$ for some $V \in \tau$. The definition of $\tau_{K}$ implies that to every $\phi \in E$ correspond $N$ and $\delta>0$ such that
+
+$$
+\left\{\psi \in \mathscr{D}_{K}:\|\psi-\phi\|_{N}<\delta\right\} \subset E .
+$$
+
+Put $W_{\phi}=\left\{\psi \in \mathscr{D}(\Omega):\|\psi\|_{N}<\delta\right\}$. Then $\bar{W}_{\phi} \in \hat{\beta}$, and
+
+$$
+\mathscr{D}_{K} \cap\left(\phi+W_{\phi}\right)=\phi+\left(\mathscr{D}_{K} \cap W_{\phi}\right) \subset E .
+$$
+
+If $V$ is the union of these sets $\phi+W_{\phi}$, one for each $\phi \in E$, then $V$ has the desired property.
+
+For $(c)$, consider a set $E \subset \mathscr{D}(\Omega)$ which lies in no $\mathscr{D}_{K}$. Then there are functions $\phi_{m} \in E$ and there are distinct points $x_{m} \in \Omega$, without limit point in $\Omega$, such that $\phi_{m}\left(x_{m}\right) \neq 0(m=1,2,3, \ldots)$. Let $W$ be the set of all $\phi \in \mathscr{D}(\Omega)$ that satisfy
+
+$$
+\left|\phi\left(x_{m}\right)\right|<m^{-1}\left|\phi_{m}\left(x_{m}\right)\right| \quad(m=1,2,3, \ldots)
+$$
+
+Since each $K$ contains only finitely many $x_{m}$, it is easy to see that $\mathscr{D}_{K} \cap W \in \tau_{K}$. Thus $W \in \beta$. Since $\phi_{m} \notin m W$, no multiple of $W$ contains $E$. This shows that $E$ is not bounded.
+
+It follows that every bounded subset $E$ of $\mathscr{D}(\Omega)$ lies in some $\mathscr{D}_{K}$. By $(b), E$ is then a bounded subset of $\mathscr{D}_{K}$. Consequently (see Section 1.46)
+
+$$
+\sup \left\{\|\phi\|_{N}: \phi \in E\right\}<\infty \quad(N=0,1,2, \ldots)
+$$
+
+This completes the proof of $(c)$.
+
+Statement $(d)$ follows from $(c)$, since $\mathscr{D}_{K}$ has the Heine-Borel property.
+
+Since Cauchy sequences are bounded (Section 1.29), (c) implies that every Cauchy sequence $\left\{\phi_{i}\right\}$ in $\mathscr{D}(\Omega)$ lies in some $\mathscr{D}_{K}$. By $(b),\left\{\phi_{i}\right\}$ is then also a Cauchy sequence relative to $\tau_{K}$. This proves $(e)$.
+
+Statement $(f)$ is just a restatement of $(e)$.
+
+Finally, $(g)$ follows from $(b),(e)$, and the completeness of $\mathscr{D}_{K}$. (Recall that $\mathscr{D}_{K}$ is a Fréchet space.)
+
+6.6 Theorem Suppose $\Lambda$ is a linear mapping of $\mathscr{D}(\Omega)$ into a locally convex space $Y$. Then each of the following four properties implies the others:
+
+(a) $\Lambda$ is continuous.
+
+(b) $\Lambda$ is bounded.
+
+(c) If $\phi_{i} \rightarrow 0$ in $\mathscr{D}(\Omega)$ then $\Lambda \phi_{i} \rightarrow 0$ in $Y$.
+
+(d) The restrictions of $\Lambda$ to every $\mathscr{D}_{K} \subset \mathscr{D}(\Omega)$ are continuous.
+
+PROOF The implication $(a) \rightarrow(b)$ is contained in Theorem 1.32.
+
+Assume $\Lambda$ is bounded and $\phi_{i} \rightarrow 0$ in $\mathscr{\mathscr { D }}(\Omega)$. By Theorẹm $6.5, \phi_{i} \rightarrow 0$ in some $\mathscr{D}_{K}$, and the restriction of $\Lambda$ to this $\mathscr{D}_{K}$ is bounded. Theorem 1.32, applied to $\Lambda: \mathscr{D}_{\mathbf{K}} \rightarrow Y$, shows that $\Lambda \phi_{i} \rightarrow 0$ in $Y$. Thus $(b)$ implies $(c)$.
+
+Assume (c) holds, $\left\{\phi_{i}\right\} \subset \mathscr{D}_{K}$, and $\phi_{i} \rightarrow 0$ in $\mathscr{D}_{K}$. By $(b)$ of Theorem 6.5, $\phi_{i} \rightarrow 0$ in $\mathscr{D}(\Omega)$. Hence $(c)$ implies that $\Lambda \phi_{i} \rightarrow 0$ in $Y$, as $i \rightarrow \infty$. Since $\mathscr{D}_{K}$ is metrizable, $(d)$ follows.
+
+To prove that $(d)$ implies $(a)$, let $U$ be a convex balanced neighborhood of 0 in $Y$, and put $V=\Lambda^{-1}(U)$. Then $V$ is convex and balanced. By $(a)$ of Theorem 6.5, $V$ is open in $\mathscr{D}(\Omega)$ if and only if $\mathscr{D}_{K} \cap V$ is open in $\mathscr{D}_{K}$, for every $\mathscr{D}_{K} \subset \mathscr{D}(\Omega)$. This proves the equivalence of $(a)$ and $(d)$.
+
+Corollary Every differential operator $D^{\alpha}$ is a continuous mapping of $\mathscr{D}(\Omega)$ into $\mathscr{D}(\Omega)$.
+
+PROOF Since $\left\|D^{\alpha} \phi\right\|_{N} \leq\|\phi\|_{N+|\alpha|}$ for $N=0,1,2, \ldots, D^{\alpha}$ is continuous on each $\mathscr{D}_{K}$.
+
+6.7 Definition A linear functional on $\mathscr{D}(\Omega)$ which is continuous (with respect to the topology $\tau$ described in Definition 6.3) is called a distribution in $\Omega$.
+
+The space of all distributions in $\Omega$ is denoted by $\mathscr{D}^{\prime}(\Omega)$.
+
+Note that Theorem 6.6 applies to linear functionals. on $\mathscr{D}(\Omega)$. It leads to the following useful characterization of distributions.
+
+6.8 Theorem If $\Lambda$ is a linear functional on $\mathscr{D}(\Omega)$, the following two conditions are equivalent:
+
+(a) $\Lambda \in \mathscr{D}^{\prime}(\Omega)$.
+
+(b) To every compact $K \subset \Omega$ corresponds a nonnegative integer $N$ and a constant $C<\infty$ such that the inequality
+
+$$
+|\Lambda \phi| \leq C\|\phi\|_{N}
+$$
+
+holds for every $\phi \in \mathscr{D}_{K}$.
+
+PROOF This is precisely the equivalence of $(a)$ and $(d)$ in Theorem 6.6, combined with the description of the topology of $\mathscr{D}_{K}$ by means of the seminorms $\|\phi\|_{N}$ given in Section 6.2.
+
+Note: If $\Lambda$ is such that one $N$ will do for all $K$ (but not necessarily with the same $C$ ), then the smallest such $N$ is called the order of $\Lambda$. If no $N$ will do for all $K$, then $\Lambda$ is said to have infinite order.
+
+6.9 Remark Each $x \in \Omega$ determinês a linear functional $\delta_{x}$ on $\mathscr{D}(\Omega)$, by the formula
+
+$$
+\delta_{x}(\phi)=\phi(x)
+$$
+
+Theorem 6.8 shows that $\delta_{x}$ is a distribution, of order 0 .
+
+If $x=0$, the origin of $R^{n}$, the functional $\delta=\delta_{0}$ is frequently called the Dirac measure on $R^{n}$.
+
+Since $\mathscr{D}_{K}$, for $K \subset \Omega$, is the intersection of the null spaces of these $\delta_{x}$, as $x$ ranges over the complement of $K$, it follows that each $\mathscr{D}_{K}$ is a closed subspace of $\mathscr{D}(\Omega)$. [This
+follows also from Theorem 1.27 and part (b) of Theorem 6.5, since each $\mathscr{D}_{K}$ is complete.] It is obvious that each $\mathscr{D}_{K}$ has empty interior, relative to $\mathscr{D}(\boldsymbol{\Omega})$. Since there is a countable collection of sets $K_{i} \subset \Omega$ such that $\mathscr{D}(\Omega)=\bigcup \mathscr{D}_{K_{i}}, \mathscr{D}(\Omega)$ is of the first category in itself. Since Cauchy sequences converge in $\mathscr{D}(\Omega)$ (Theorem 6.5), Baire's theorem implies that $\mathscr{D}(\Omega)$ is not metrizable.
+
+\section{Calculus with Distributions}
+6.10 Notations As before, $\Omega$ will denote a nonempty open set in $R^{n}$. If $\alpha=\left(\alpha_{1}\right.$, $\left.\ldots, \alpha_{n}\right)$ and $\beta=\left(\beta_{1}, \ldots, \beta_{n}\right)$ are multi-indices (see Section 1.46) then
+
+$$
+|\alpha|=\alpha_{1}+\cdots+\alpha_{n},
+$$
+
+$$
+\begin{gathered}
+D^{\alpha}=D_{1}^{\alpha_{1}} \cdots D_{n}^{\alpha_{n}}, \quad \text { where } D_{j}=\frac{\partial}{\partial x_{j}} \\
+\beta \leq \alpha \text { means } \beta_{i} \leq \alpha_{i} \text { for } 1 \leq i \leq n \\
+\alpha \pm \beta=\left(\alpha_{1} \pm \beta_{1}, \ldots, \alpha_{n} \pm \beta_{n}\right)
+\end{gathered}
+$$
+
+If $x \in R^{n}$ and $y \in R^{n}$, then
+
+$$
+\begin{gathered}
+x \cdot y=x_{1} y_{1}+\cdots+x_{n} y_{n}, \\
+|x|=(x \cdot x)^{1 / 2}=\left(x_{1}^{2}+\cdots+x_{n}^{2}\right)^{1 / 2}
+\end{gathered}
+$$
+
+The fact that the absolute value sign has different meanings in (1) and in (6) should cause no confusion.
+
+If $x \in R^{n}$ and $\alpha$ is a multi-index, the monomial $x^{\alpha}$ is defined by
+
+$$
+x^{\alpha}=x_{1}^{\alpha_{1}} \cdots x_{n}^{\alpha_{n}} .
+$$
+
+6.11 Functions and measures as distributions Suppose $f$ is a locally integrable complex function in $\Omega$. This means that $f$ is Lebesgue measurable and $\int_{K}|f(x)| d x<\infty$ for every compact $K \subset \Omega ; d x$ denotes Lebesgue measure. Define
+
+$$
+\Lambda_{f}(\phi)=\int_{\Omega} \phi(x) f(x) d x \quad[\phi \in \mathscr{D}(\Omega)]
+$$
+
+Since
+
+$$
+\left|\Lambda_{f}(\phi)\right| \leq\left(\int_{K}|f|\right) \cdot\|\phi\|_{0} \quad\left(\phi \in \mathscr{D}_{K}\right)
+$$
+
+Theorem 6.8 shows that $\Lambda_{f} \in \mathscr{D}^{\prime}(\Omega)$.
+
+It is customary to identify the distribution $\Lambda_{f}$ with the function $f$ and to say that such distributions "are" functions.
+
+Similarly, if $\mu$-is a complex Borel measure on $\Omega$, or if $\mu$ is a positive measure on $\Omega$ with $\mu(K)<\infty$ for every compact $K \subset \Omega$, the equation
+
+$$
+\Lambda_{\mu}(\phi)=\int_{\Omega} \phi d \mu \quad[\phi \in \mathscr{D}(\Omega)]
+$$
+
+defines a distribution $\Lambda_{\mu}$ in $\Omega$, which is usually identified with $\mu$.
+
+6.12 Differentiation of distributions If $\alpha$ is a multi-index and $\Lambda \in \mathscr{D}^{\prime}(\Omega)$, the formula
+
+$$
+\left(D^{\alpha} \Lambda\right)(\phi)=(-1)^{|\alpha|} \Lambda\left(D^{\alpha} \phi\right) \quad[\phi \in \mathscr{D}(\Omega)]
+$$
+
+(motivated in Section 6.1) defines a linear functional $D^{\alpha} \Lambda$ on $\mathscr{D}(\Omega)$. If
+
+$$
+|\Lambda \phi| \leq C\|\phi\|_{N}
+$$
+
+for all $\phi \in \mathscr{D}_{K}$, then
+
+$$
+\left|\left(D^{\alpha} \Lambda\right)(\phi)\right| \leq C\left\|D^{\alpha} \phi\right\|_{N} \leq C\|\phi\|_{N+|\alpha|} .
+$$
+
+Theorem 6.8 shows therefore that $D^{\alpha} \Lambda \in \mathscr{D}^{\prime}(\Omega)$.
+
+Note that the formula
+
+$$
+D^{\alpha} D^{\beta} \Lambda=D^{\alpha+\beta} \Lambda=D^{\beta} D^{\alpha} \Lambda
+$$
+
+holds for every distribution $\Lambda$ and for all multi-indices $\alpha$ and $\beta$, simply because the operators $D^{\alpha}$ and $D^{\beta}$ commute on $C^{\infty}(\Omega)$ :
+
+$$
+\begin{aligned}
+\left(D^{\alpha} D^{\beta} \Lambda\right)(\phi) & =(-1)^{|\alpha|}\left(D^{\beta} \Lambda\right)\left(D^{\alpha} \phi\right) \\
+& =(-1)^{|\alpha|+|\beta|} \Lambda\left(D^{\beta} D^{\alpha} \phi\right) \\
+& =(-1)^{|\alpha+\beta|} \Lambda\left(D^{\alpha+\beta} \phi\right) \\
+& =\left(D^{\alpha+\beta} \Lambda\right)(\phi) .
+\end{aligned}
+$$
+
+6.13 Distribution derivatives of functions The $\alpha$ th distribution derivative of a locally integrable function $f$ in $\Omega$ is, by definition, the distribution $D^{\alpha} \Lambda_{f}$.
+
+If $D^{\alpha} f$ also exists in the classical sense and is locally integrable, then $D^{\alpha} f$ is also a distribution in the sense of Section 6.11. The obvious consistency problem is whether the equation
+
+$$
+D^{\alpha} \Lambda_{f}=\Lambda_{D^{\alpha} f}
+$$
+
+always holds under these conditions.
+
+More explicitly, the question is whether
+
+$$
+(-1)^{|\alpha|} \int_{\Omega} f(x)\left(D^{\alpha} \phi\right)(x) d x=\int_{\Omega}\left(D^{\alpha} f\right)(x) \phi(x) d x
+$$
+
+for every $\phi \in \mathscr{D}(\Omega)$.
+
+If $f$ has continuous partial derivatives of all orders up to $N$, integrations by part give (2) without difficulty, if $|\alpha| \leq N$.
+
+In general, (1) may be false. The following example illustrates this, in the case $n=1$.
+
+6.14 Example Suppose $\Omega$ is a segment in $R$, and $f$ is a left-continuous function of bounded variation in $\Omega$. If $D=d / d x$, it is well known that $(D f)(x)$ exists a.e. and that $D f \in L^{1}$. We claim that
+
+$$
+D \Lambda_{f}=\Lambda_{\mu}
+$$
+
+where $\mu$ is the measure defined in $\Omega$ by
+
+$$
+\mu([a, b))=f(b)-f(a) .
+$$
+
+Thus $D \Lambda_{f}=\Lambda_{D f}$ if and only if $f$ is absolutely continuous.
+
+To prove (1), we have to show that
+
+$$
+\left(\Lambda_{\mu}\right)(\phi)=\left(D \Lambda_{f}\right)(\phi)=-\Lambda_{f}(D \phi)
+$$
+
+for every $\phi \in \mathscr{D}(\Omega)$, that is, that
+
+$$
+\int_{\Omega} \phi d \mu=-\int_{\Omega} \phi^{\prime}(x) f(x) d x .
+$$
+
+But (3) is a simple consequence of Fubini's theorem, since each side of (3) is equal to the integral of $\phi^{\prime}(x)$ over the set
+
+$$
+\{(x, y): x \in \Omega, y \in \Omega, x<y\}
+$$
+
+with respect to the product measure of $d x$ and $d \mu$. The fact that $\phi$ has compact support in $\Omega$ is used in this computation.
+
+6.15 Multiplication by functions Suppose $\Lambda \in \mathscr{D}^{\prime}(\Omega)$ and $f \in C^{\infty}(\Omega)$. The right side of the equation
+
+$$
+(f \Lambda)(\phi)=\Lambda(f \phi) \quad[\phi \in \mathscr{D}(\Omega)]
+$$
+
+makes sense because $f \phi \in \mathscr{D}(\Omega)$ when $\phi \in \mathscr{D}(\Omega)$. Thus (1) defines a linear functional $f \Lambda$ on $\mathscr{D}(\Omega)$. We shall see that $f \Lambda$ is, in fact, a distribution in $\Omega$.
+
+Observe that the notation must be handled with care: If $f \in \mathscr{D}(\Omega)$, then $\Lambda f$ is a number, whereas $f \Lambda$ is a distribution.
+
+The proof that $f \Lambda \in \mathscr{D}^{\prime}(\Omega)$ depends on the Leibniz formula
+
+$$
+D^{\alpha}(f g)=\sum_{\beta \leq \alpha} c_{\alpha \beta}\left(D^{\alpha-\beta} f\right)\left(D^{\beta} g\right)
+$$
+
+valid for all $f$ and $g$ in $C^{\infty}(\Omega)$ and all multi-indices $\alpha$, which is obtained by iteration of the familiar formula
+
+$$
+(u v)^{\prime}=u^{\prime} v+u v^{\prime}
+$$
+
+The numbers $c_{\alpha \beta}$ are positive integers whose exact value is easily computed but is irrelevant to our present needs.
+
+To each compact $K \subset \Omega$ correspond $C$ and $N$ such that $|\Lambda \phi| \leq C\|\phi\|_{N}$ for all $\phi \in \mathscr{D}_{K}$. By (2), there is a constant $C^{\prime}$, depending on $f, K$, and $N$, such that $\|f \phi\|_{N} \leq C^{\prime}\|\phi\|_{N}$ for $\phi \in \mathscr{D}_{K}$. Hence
+
+$$
+|(f \Lambda)(\phi)| \leq C C^{\prime}\|\phi\|_{N} \quad\left(\phi \in \mathscr{D}_{K}\right) .
+$$
+
+By Theorem 6.8, $f \Lambda \in \mathscr{D}^{\prime}(\Omega)$.
+
+Now we want to show that the Leibniz formula (2) holds with $\Lambda$ in place of $g$, so that
+
+$$
+D^{\alpha}(f \Lambda)=\sum_{\beta \leq \alpha} c_{\alpha \beta}\left(D^{\alpha-\beta} f\right)\left(D^{\beta} \Lambda\right)
+$$
+
+The proof is a purely formal calculation. Associate to each $u \in R^{n}$ the function $h_{u}$ defined by
+
+$$
+h_{u}(x)=\exp (u \cdot x)
+$$
+
+Then $D^{\alpha} h_{u}=u^{\alpha} h_{u}$. If (2) is applied to $h_{u}$ and $h_{v}$ in place of $f$ and $g$, the identity
+
+$$
+(u+v)^{\alpha}=\sum_{\beta \leq \alpha} c_{\alpha \beta} u^{\alpha-\beta} v^{\beta} \quad\left(u \in R^{n}, v \in R^{n}\right)
+$$
+
+is obtained. In particular,
+
+$$
+\begin{aligned}
+u^{\alpha} & =[v+(-v+u)]^{\alpha} \\
+& =\sum_{\beta \leq \alpha} c_{\alpha \beta} v^{\tilde{a}-\beta} \sum_{\gamma \leq \beta} c_{\beta \gamma}(-1)^{|\hat{\beta}-\gamma|} v^{\beta-\gamma} u^{\gamma} \\
+& =\sum_{\gamma \leq \alpha}(-1)^{|\gamma|} v^{\alpha-\gamma} u^{\gamma} \sum_{\gamma \leq \beta \leq \alpha}(-1)^{|\beta|} c_{\alpha \beta} c_{\beta \gamma} .
+\end{aligned}
+$$
+
+Hence
+
+$$
+\sum_{\gamma \leq \beta \leq \alpha}(-1)^{|\beta|} c_{\alpha \beta} c_{\beta \gamma}= \begin{cases}(-1)^{|\alpha|} & \text { if } \gamma=\alpha \\ 0 & \text { otherwise. }\end{cases}
+$$
+
+Apply (2) to $D^{\beta}\left(\phi D^{\alpha-\beta} f\right)$, and use (7), to obtain the identity
+
+$$
+\sum_{\beta \leq \alpha}(-1)^{|\beta|} \mathcal{C}_{\alpha \beta} D^{\beta}\left(\phi D^{\alpha-\beta} f\right)=(-1)^{|\alpha|} f D^{\alpha} \phi .
+$$
+
+The point of all this is that (8) gives (5). For if $\phi \in \mathscr{D}(\Omega)$, then
+
+$$
+\begin{aligned}
+D^{\alpha}(f \Lambda)(\phi) & =(-1)^{|\alpha|}(f \Lambda)\left(D^{\alpha} \phi\right)=(-1)^{|\alpha|} \Lambda\left(f D^{\alpha} \phi\right) \\
+& =\sum_{\beta \leq \alpha}(-1)^{|\beta|} c_{\alpha \beta} \Lambda\left(D^{\beta}\left(\phi D^{\alpha-\beta} f\right)\right) \\
+& =\sum_{\beta \leq \alpha} c_{\alpha \beta}\left(D^{\beta} \Lambda\right)\left(\phi D^{\alpha-\beta} f\right) \\
+& =\sum_{\beta \leq \alpha} c_{\alpha \beta}\left[\left(D^{\alpha-\beta} f\right)\left(D^{\beta} \Lambda\right)\right](\phi) .
+\end{aligned}
+$$
+
+6.16 Sequences of distributions Since $\mathscr{D}^{\prime}(\Omega)$ is the space of all continuous linear functionals on $\mathscr{D}(\Omega)$, the general considerations made in Section 3.14 provide a topology for $\mathscr{D}^{\prime}(\Omega)$-its weak*-topology induced by $\mathscr{D}(\Omega)$-which makes $\mathscr{D}^{\prime}(\Omega)$ into a locally convex space. If $\left\{\Lambda_{i}\right\}$ is a sequence of distributions in $\Omega$, the statement
+
+$$
+\Lambda_{i} \rightarrow \Lambda \text { in } \mathscr{D}^{\prime}(\Omega)
+$$
+
+refers to this weak*-topology and means, explicitly, that
+
+$$
+\lim _{i \rightarrow \infty} \Lambda_{i} \phi=\Lambda \phi \quad[\phi \in \mathscr{D}(\Omega)]
+$$
+
+In particular, if $\left\{f_{i}\right\}$ is a sequence of locally integrable functions in $\Omega$, the statements " $f_{i} \rightarrow \Lambda$ in $\mathscr{D}^{\prime}(\boldsymbol{\Omega})$ " or " $\left\{f_{i}\right\}$ converges to $\Lambda$ in the distribution sense" mean that
+
+$$
+\lim _{i \rightarrow \infty} \int_{\Omega} \phi(x) f_{i}(x) d x=\Lambda \phi
+$$
+
+for every $\phi \in \mathscr{D}(\Omega)$.
+
+The simplicity of the next theorem, concerning termwise differentiation of a sequence, is rather striking.
+
+6.17 Theorem Suppose $\Lambda_{i} \in \mathscr{D}^{\prime}(\Omega)$ for $i=1,2,3, \ldots$, and
+
+$$
+\Lambda \phi=\lim _{i \rightarrow \infty} \Lambda_{i} \phi
+$$
+
+exists (as a complex number) for every $\phi \in \mathscr{D}(\Omega)$. Then $\Lambda \in \mathscr{D}^{\prime}(\Omega)$, and
+
+$$
+D^{\alpha} \Lambda_{i} \rightarrow D^{\alpha} \Lambda \text { in } \mathscr{D}^{\prime}(\Omega)
+$$
+
+for every multi-index $\alpha$.
+
+PROOF: Let $K$ be an arbitrary compact subset of $\Omega$. Since (1) holds for every $\phi \in \mathscr{D}_{K}$, and since $\mathscr{D}_{K}$ is a Fréchet space, the Banach-Steinhaus theorem 2.8 implies that the restriction of $\Lambda$ to $\mathscr{D}_{K}$ is continuous. It follows from Theorem 6.6 that $\Lambda$ is continuous on $\mathscr{D}(\Omega)$; in other words, $\Lambda \in \mathscr{D}^{\prime}(\Omega)$. Consequently (1) implies that
+
+$$
+\begin{aligned}
+\left(D^{\alpha} \Lambda\right)(\phi) & =(-1)^{|\alpha|} \Lambda\left(D^{\alpha} \phi\right) \\
+& =(-1)^{|\alpha|} \lim _{i \rightarrow \infty} \Lambda_{i}\left(D^{\alpha} \phi\right)=\lim _{i \rightarrow \infty}\left(D^{\alpha} \Lambda_{i}\right)(\phi)
+\end{aligned}
+$$
+
+6.18 Theorem If $\Lambda_{i} \rightarrow \Lambda$ in $\mathscr{D}^{\prime}(\Omega)$ and $g_{i} \rightarrow g$ in $C^{\infty}(\Omega)$, then $g_{i} \Lambda_{i} \rightarrow g \Lambda$ in $\mathscr{D}^{\prime}(\Omega)$.
+
+Note: The statement " $g_{i} \rightarrow g$ in $C^{\infty}(\Omega)$ " refers to the Fréchet space topology of $C^{\infty}(\Omega)$ described in Section 1.46.
+
+proof Fix $\phi \in \mathscr{D}(\underline{\Omega})$. Define a bilinear functional $B$ on $C^{\infty}(\Omega) \times \mathscr{D}^{\prime}(\Omega)$ by
+
+$$
+B(g, \Lambda)=(g \Lambda)(\phi)=\Lambda(g \phi)
+$$
+
+.Then $B$ is separately continuous, and Theorem 2.17 implies that
+
+$$
+B\left(g_{i}, \Lambda_{i}\right) \rightarrow B(g, \Lambda) \quad \text { as } i \rightarrow \infty \text {. }
+$$
+
+Hence
+
+$$
+\left(g_{i} \Lambda_{i}\right)(\phi) \rightarrow(g \Lambda)(\phi)
+$$
+
+Localization
+
+6.19 Local equality Suppose $\Lambda_{i} \in \mathscr{D}(\Omega)(i=1,2)$ and $\omega$ is an open subset of $\Omega$. The statement
+
+$$
+\Lambda_{1}=\Lambda_{2} \text { in } \omega
+$$
+
+means, by definition, that $\Lambda_{1} \phi=\Lambda_{2} \phi$ for every $\phi \in \mathscr{D}(\omega)$.
+
+For example, if $f$ is a locally integrable function and $\mu$ is a measure, then $\Lambda_{f}=0$ in $\omega$ if and only if $f(x)=0$ for almost every $x \in \omega$, and $\Lambda_{\mu}=0$ in $\omega$ if and only if $\mu(E)=0$ for every Borel set $E \subset \omega$.
+
+This definition makes it possible to discuss distributions locally. On the other hand, it is also possible to describe a distribution globally if its local behavior is known. This is stated precisely in Theorem 6.21. The proof uses partitions of unity, which we now construct.
+
+6.20 Theorem If $\Gamma$ is a collection of open sets in $\bar{R}^{n}$ whose union is $\Omega$, then there exists a sequence $\left\{\psi_{i}\right\} \subset \mathscr{D}(\Omega)$, with $\psi_{i} \geq 0$, such that
+
+(a) each $\psi_{i}$ has its support in some member of $\Gamma$,
+
+(b) $\sum_{i=1}^{\infty} \psi_{i}(x)=1$ for every $x \in \Omega$,
+
+(c) to every compact $K \subset \Omega$ correspond an integer $m$ and an open set $W \supset K$ such that
+
+$$
+\psi_{1}(x)+\cdots+\psi_{m}(x)=1
+$$
+
+for all $x \in W$.
+
+Such a collection $\left\{\psi_{i}\right\}$ is called a locally finite partition of unity in $\Omega$, subordinate to the open cover $\Gamma$ of $\Omega$. Note that it follows from $(b)$ and $(c)$ that every point of $\Omega$ has a neighborhood which intersects the supports of only finitely many $\psi_{i}$. This is the reason for calling $\left\{\psi_{i}\right\}$ locally finite.
+
+PROOF Let $S$ be a countable dense subset of $\Omega$. Let $\left\{B_{1}, B_{2}, B_{3}, \ldots\right\}$ be a sequence that contains every closed ball $B_{i}$ whose center $p_{i}$ lies in $S$, whose radius $r_{i}$ is rational, and which lies in some member of $\Gamma$. Let $V_{i}$ be the open ball with center $p_{i}$ and radius $r_{i} / 2$. It is easy to see that $\Omega=U V_{i}$.
+
+The construction described in Section 1.46 shows that there are functions $\phi_{i} \in \mathscr{D}(\Omega)$ such that $\phi_{i} \geq 0, \phi_{i}=1$ in $V_{i}, \phi_{i}=0$ off $B_{i}$. Define $\psi_{1}=\phi_{1}$, and, inductively,
+
+$$
+\psi_{i+1}=\left(1-\phi_{1}\right) \cdots\left(1-\phi_{i}\right) \phi_{i+1} \quad(i \geq 1)
+$$
+
+Obviously, $\psi_{i}=0$ outside $B_{i}$. This gives $(a)$. The relation
+
+$$
+\psi_{1}+\cdots+\psi_{i}=1-\left(1-\phi_{1}\right) \cdots\left(1-\phi_{i}\right)
+$$
+
+is trivial when $i=1$. If (3) holds for some $i$, addition of (2) and (3) yields (3) with $i+1$ in place of $i$. Hence (3) holds for every $i$. Since $\phi_{i}=1$ in $V_{i}$, it follows that
+
+$$
+\psi_{1}(x)+\cdots+\psi_{m}(x)=1 \quad \text { if } x \in V_{1} \cup \cdots \cup V_{m}
+$$
+
+This gives (b). Moreover, if $K$ is compact, then $K \subset V_{1} \cup \cdots \cup V_{m}$ for some $m$, and $(c)$ follows.
+
+6.21 Theorem Suppose $\Gamma$ is an open cover of an open set $\Omega \subset R^{n}$, and suppose that to each $\omega \in \Gamma$ corresponds a distribution $\Lambda_{\omega} \in \mathscr{D}^{\prime}(\omega)$ such that
+
+$$
+\Lambda_{\omega^{\prime}}=\Lambda_{\omega^{\prime \prime}} \text { in } \omega^{\prime} \cap \omega^{\prime \prime}
+$$
+
+whenever $\omega^{\prime} \cap \omega^{\prime \prime} \neq \varnothing$.
+
+Then there exists a unique $\Lambda \in \mathscr{D}^{\prime}(\Omega)$ such that
+
+$$
+\Lambda=\Lambda_{\omega} \text { in } \omega
+$$
+
+for every $\omega \in \Gamma$.
+
+PROOF Let $\left\{\psi_{i}\right\}$ be a locally finite partition of unity, subordinate to $\Gamma$, as in Theorem 6.20 , and associate to each $i$ a set $\omega_{i} \in \Gamma$ such that $\omega_{i}$ contains the support of $\psi_{i}$.
+
+If $\phi \in \mathscr{D}(\Omega)$, then $\phi=\sum \psi_{i} \phi$. Only finitely many terms in this sum are different from 0 , since $\phi$ has compact support. Define
+
+$$
+\Lambda \phi=\sum_{i=1}^{\infty} \Lambda_{\omega_{i}}\left(\psi_{i} \phi\right)
+$$
+
+It is clear that $\Lambda$ is a linear functional on $\mathscr{D}(\Omega)$.
+
+To show that $\Lambda$ is continuous, suppose $\phi_{j} \rightarrow 0$ in $\mathscr{D}(\Omega)$. There is a compact $K \subset \Omega$ which contains the support of every $\phi_{j}$. If $m$ is chosen as in part $(c)$ of Theorem 6.20, then
+
+$$
+\Lambda \phi_{j}=\sum_{i=1}^{m} \Lambda_{\omega_{i}}\left(\psi_{i} \phi_{j}\right) \quad(j=1,2,3, \ldots)
+$$
+
+Since $\psi_{i} \phi_{j} \rightarrow 0$ in $\mathscr{D}\left(\omega_{i}\right)$, as $j \rightarrow \infty$, it follows from (4) that $\Lambda \phi_{j} \rightarrow 0$. By Theorem 6.6, $\Lambda \in \mathscr{D}^{\prime}(\Omega)$.
+
+To prove (2), pick $\phi \in \mathscr{D}(\omega)$. Then
+
+$$
+\psi_{i} \phi \in \mathscr{D}\left(\omega_{i} \cap \omega\right) \quad(i=1,2,3, \ldots)
+$$
+
+so that (1) implies $\Lambda_{\omega_{i}}\left(\psi_{i} \phi\right)=\Lambda_{\omega}\left(\psi_{i} \phi\right)$. Hence
+
+$$
+\Lambda \phi=\sum \Lambda_{\omega}\left(\psi_{i} \phi\right)=\Lambda_{\omega}\left(\sum \psi_{i} \phi\right)=\Lambda_{\omega} \phi
+$$
+
+which proves (2).
+
+This gives the existence of $\Lambda$. The uniqueness is trivial since (2) (with $\omega_{i}$ in place of $\omega$ ) implies that $\Lambda$ must satisfy (3).
+
+\section{Supports of Distributions}
+6.22 Definition Suppose $\Lambda \in \mathscr{D}^{\prime}(\Omega)$. If $\omega$ is an open subset of $\Omega$ and if $\Lambda \phi=0$ for every $\phi \in \mathscr{D}(\omega)$, we say that $\Lambda$ vanishes in $\omega$. Let $W$ be the union of all open $\omega \subset \Omega$ in which $\Lambda$ vanishes. The complement of $W$ (relative to $\Omega$ ) is the support of $\Lambda$.
+
+\subsection{Theorem If $W$ is as above, then $\Lambda$ vanishes in $W$.}
+PROOF $W$ is the union of open sets $\omega$ in which $\Lambda$ vanishes. Let $\Gamma$ be the collection of these $\omega$ 's, and let $\left\{\psi_{i}\right\}$ be a locally finite partition of unity in $W$, subordinate to $\Gamma$, as in Theorem 6.20. If $\phi \in \mathscr{D}(W)$, then $\phi=\sum \psi_{i} \phi$. Only finitely many terms of this sum are different from 0 . Hence
+
+$$
+\Lambda \phi=\sum \Lambda\left(\psi_{i} \phi\right)=0
+$$
+
+since each $\psi_{i}$ has its support in some $\omega \in \Gamma$.
+
+The most significant part of the next theorem is $(d)$. Exercise 20 complements it.
+
+6.24 Theorem Suppose $\Lambda \in \mathscr{D}^{\prime}(\Omega)$ and $S_{\Lambda}$ is the support of $\Lambda$.
+
+(a) If the support of some $\phi \in \mathscr{D}(\Omega)$ does not intersect $S_{\Lambda}$, ihen $\Lambda \phi=0$.
+
+(b) If $S_{\Lambda}$ is empty, then $\Lambda=0$.
+
+(c) If $\psi \in C^{\infty}(\Omega)$ and $\psi=1$ in some open set $V$ containing $S_{\Lambda}$, then $\psi \Lambda=\Lambda$.
+
+(d) If $S_{\Lambda}$ is a compact subset of $\Omega$, then $\Lambda$ has finite order; in fact, there is a constant $C<\infty$ and a nonnegative integer $N$ such that
+
+$$
+|\Lambda \phi| \leq C\|\phi\|_{N}
+$$
+
+for every $\phi \in \mathscr{D}(\Omega)$. Furthermore, $\Lambda$ extends in a unique way to a continuous linear functional on $C^{\infty}(\Omega)$.
+
+PROOF Parts $(a)$ and (b) are obvious. If $\psi$ is as in $(c)$ and if $\phi \in \mathscr{D}(\Omega)$, then the support of $\phi-\psi \phi$ does not intersect $S_{\Lambda}$. Thus $\Lambda \phi=\Lambda(\psi \phi)=(\psi \Lambda)(\phi)$, by $(a)$.
+
+If $S_{\Lambda}$ is compact, it follows from Theorem 6.20 that there exists $\psi \in \mathscr{D}(\Omega)$ that satisfies $(c)$. Fix such a $\psi$; call its support $K$. By Theorem 6.8, there exist $c_{1}$ and $N$ such that $|\Lambda \phi| \leq c_{1}\|\phi\|_{N}$ for all $\phi \in \mathscr{D}_{K}$. The Leibniz formula shows that there is a constant $c_{2}$ such that $\|\psi \phi\|_{N} \leq c_{2}\|\phi\|_{N}$ for every $\phi \in \mathscr{D}(\Omega)$. Hence
+
+$$
+|\Lambda \phi|=|\Lambda(\psi \phi)| \leq c_{1}\|\psi \phi\|_{N} \leq c_{1} c_{2}\|\phi\|_{N}
+$$
+
+for every $\phi \in \mathscr{D}(\Omega)$.
+
+Since $\Lambda \phi=\Lambda(\psi \phi)$ for all $\phi \in \mathscr{D}(\Omega)$, the formula
+
+$$
+\Lambda f=\Lambda(\psi f) \quad\left[f \in C^{\infty}(\Omega)\right]
+$$
+
+defines an extension of $\Lambda$. This extension is continuous, for if $f_{i} \rightarrow 0$ in $C^{\infty}(\Omega)$, then each derivative of $f_{i}$ tends to 0 , uniformly on compact subsets of $\Omega$; the Leibniz formula shows therefore that $\psi f_{i} \rightarrow 0$ in $\mathscr{D}(\Omega)$; since $\Lambda \in \mathscr{D}^{\prime}(\Omega)$, it follows that $\Lambda f_{i} \rightarrow 0$.
+
+If $f \in C^{\infty}(\Omega)$ and if $K_{0}$ is any compact subset of $\Omega$, there exists $\phi \in \mathscr{D}(\Omega)$ such that $\phi=f$ on $K_{0}$. It follows that $\mathscr{D}(\Omega)$ is dense in $C^{\infty}(\Omega)$. Each $\Lambda \in \mathscr{D}^{\prime}(\Omega)$ has therefore at most one continuous extension to $C^{\infty}(\Omega)$.
+
+Note: In $(a)$ it is assumed that $\phi$ vanishes in some open set containing $S_{\Lambda}$, not merely that $\phi$ vanishes on $S_{\Lambda}$.
+
+In view of $(b)$, the next simplest case is the one in which $S_{\Lambda}$ consists of a single point. These distributions will now be completely described.
+
+6.25 Theorem Suppose $\Lambda \in \mathscr{D}^{\prime}(\Omega), p \in \Omega,\{p\}$ is the support of $\Lambda$, and $\Lambda$ has order $N$. Then there are constants $c_{\alpha}$ such that
+
+$$
+\Lambda=\sum_{|\alpha| \leq N} c_{\alpha} D^{\alpha} \delta_{p}
+$$
+
+where $\delta_{p}$ is the evaluation functional defined by
+
+$$
+\delta_{p}(\phi)=\phi(p)
+$$
+
+Conversely, every distribution of the form (1) has $p$ for its support (unless $c_{\alpha}=0$ for all $\alpha)$.
+
+PROOF It is clear that the support of $D^{\alpha} \delta_{p}$ is $\{p\}$, for cvery multi-index $\alpha$. This proves the converse.
+
+To prove the nontrivial half of the theorem, assume that $p=0$ (the origin of $R^{n}$ ), and consider a $\phi \in \mathscr{D}(\Omega)$ that satisfies
+
+$$
+\left(D^{\alpha} \phi\right)(0)=0 \quad \text { for all } \alpha \text { with }|\alpha| \leq N
+$$
+
+Our first objectivè is to prove that (3) implies $\Lambda \phi=0$.
+
+If $\eta>0$, there is a compact ball $K \subset \Omega$, with center at 0 , such that
+
+$$
+\left|D^{\alpha} \phi\right| \leq \eta \text { in } K, \quad \text { if }|\alpha|=N \text {. }
+$$
+
+We claim that
+
+$$
+\left|D^{\alpha} \phi(x)\right| \leq \eta i^{N-|\alpha|}|x|^{N-|\alpha|} \quad(x \in K,|\alpha| \leq N) .
+$$
+
+When $|\alpha|=N$, this is (4). Suppose $1 \leq i \leq N$, assume (5) is proved for all $\alpha$ with $|\alpha|=i$, and suppose $|\beta|=i-1$. The gradient of $D^{\beta} \phi$ is the vector
+
+$$
+\operatorname{grad} D^{\beta} \phi=\left(D_{1} D^{\beta} \phi, \ldots, D_{n} D^{\beta} \phi\right)
+$$
+
+Our induction hypothesis implies that
+
+$$
+\left|\left(\operatorname{grad} D^{\beta} \phi\right)(x)\right| \leq n \cdot \eta n^{N-i}|x|^{N-i} \quad(x \in K)
+$$
+
+and since $\left(D^{\beta} \phi\right)(0)=0$ the mean value theorem now shows that $(5)$ holds with $\beta$ in place of $\alpha$. Thus (5) is proved.
+
+Choose an auxiliary function $\psi \in \mathscr{D}\left(R^{n}\right)$, which is 1 in some neighborhood of 0 and whose support is in the unit ball $B$ of $R^{n}$. Define
+
+$$
+\psi_{r}(x)=\psi\left(\frac{x}{r}\right) \quad\left(r>0, x \in R^{n}\right)
+$$
+
+If $r$ is small enough, the support of $\psi_{r}$ lies in $r B \subset K$. By Leibniz' formula
+
+$$
+D^{\alpha}\left(\psi_{r} \phi\right)(x)=\sum_{\beta \leq \alpha} c_{\alpha \beta}\left(D^{\alpha-\beta} \psi\right)\left(\frac{x}{r}\right)\left(D^{\beta} \phi\right)(x) r^{|\beta !-| \alpha \mid} .
+$$
+
+It now follows from (5) that
+
+$$
+\left\|\psi_{r} \phi\right\|_{N} \leq \eta C\|\psi\|_{N}
+$$
+
+as soon as $r$ is small cnough; here $C$ depends on $n$ and $N$.
+
+Since $\Lambda$ has order $N$, there is a constant $C_{1}$ such that $|\Lambda \psi| \leq C_{1}\|\psi\|_{N}$ for all $\psi \in \mathscr{D}_{K}$. Since $\psi_{r}=1$ in a neighborhood of the support of $\Lambda$, it now follows from (10) and $(c)$ of Theorem 6.24 that
+
+$$
+|\Lambda \phi|=\left|\Lambda\left(\dot{\psi}_{r} \phi\right)\right| \leq C_{1}\left\|\psi_{r} \phi\right\|_{N} \leq \eta C C_{1}\|\dot{\psi}\|_{N} .
+$$
+
+Since $\eta$ was arbitrary, we have proved that $\Lambda \dot{\phi}=0$ whenever (3) holds.
+
+In other words, $\Lambda$ vanishes on the intersection of the null spaces of the functionals $D^{\alpha} \delta_{0}(|\alpha| \leq N)$, since
+
+$$
+\left(D^{\alpha} \delta_{0}\right) \phi=(-1)^{|\alpha|} \delta_{0}\left(D^{\alpha} \phi\right)=(-1)^{|\alpha|}\left(D^{\alpha} \phi\right)(0)
+$$
+
+The representation (1) follows now from Lemma 3.9.
+
+\section{Distributions as Derivatives}
+It was pointed out in the introduction to this chapter that one of the aims of the theory of distributions is to enlarge the concept of function in such a way that partial differentiations can be carried out unrestrictedly. The distributions do satisfy this requirement. Conversely-as we shall now see-every distribution is (at least locally) $\mathrm{D}^{\alpha} f$ for some continuous function $f$ and some multi-index $\alpha$. If every continuous function is to have partial derivatives of all orders, no proper subclass of the distributions can therefore be adequate. In this sense, the distribution extension of the function concept is as economical as it possibly can be.
+
+6.26 Theorem Suppose $\Lambda \in \mathscr{D}^{\prime}(\Omega)$, and $K$ is a compact subset of $\Omega$. Then there is a continuous function $f$ in $\Omega$ and there is a multi-index $\alpha$ such that
+
+$$
+\Lambda \phi=(-1)^{|\alpha|} \int_{\Omega} f(x)\left(D^{\alpha} \phi\right)(x) d x
+$$
+
+for every $\phi \in \mathscr{D}_{K}$.
+
+PROOF Assume, without loss of generality, that $K \subset Q$, where $Q$ is the unit cube in $R^{n}$, consisting of all $x=\left(x_{1}, \ldots, x_{n}\right)$ with $0 \leq x_{i} \leq 1$ for $i=1, \ldots, n$. The mean value theorem shows that
+
+$$
+|\psi| \leq \max _{x \varepsilon Q}\left|\left(D_{i} \psi\right)(x)\right| \quad\left(\psi \in \mathscr{D}_{Q}\right)
+$$
+
+for $i=1, \ldots, n$. Put $T=D_{1} D_{2} \cdots D_{n}$. For $y \in Q$, let $Q(y)$ denote the subset of $Q$ in which $x_{i} \leq y_{i}(1 \leq i \leq n)$. Then
+
+$$
+\psi(y)=\int_{Q(y)}(T \psi)(x) d x \quad\left(\psi \in \mathscr{D}_{Q}\right) .
+$$
+
+If $N$ is a nonnegative integer and if (2) is applied to successive derivatives of $\psi$, (3) leads to the inequality
+
+$$
+\|\psi\|_{N} \leq \max _{x \in Q}\left|\left(T^{N} \psi\right)(x)\right| \leq \int_{Q}\left|\left(T^{N+1} \psi\right)(x)\right| d x
+$$
+
+for every $\psi \in \mathscr{D}_{Q}$.
+
+Since $\Lambda \in \mathscr{D}^{\prime}(\Omega)$, there exist $N$ and $C$ such that
+
+$$
+|\Lambda \phi| \leq C\|\phi\|_{N} \quad\left(\phi \in \mathscr{D}_{K}\right)
+$$
+
+Hence (4) shows that
+
+$$
+|\Lambda \phi| \leq C \int_{K}\left|\left(T^{N+1} \phi\right)(x)\right| d x \quad\left(\phi \in \mathscr{D}_{K}\right)
+$$
+
+By (3); $T$ is one-to-one on $\mathscr{D}_{Q}$, hence on $\mathscr{D}_{K}$. Consequently, $T^{N+1}$ : $\mathscr{D}_{K} \rightarrow \mathscr{D}_{K}$ is one-to-one. A functional $\Lambda_{1}$ can therefore be defined on the range $Y$ of $T^{N+1}$ by setting
+
+$$
+\Lambda_{1} T^{N+1} \phi=\Lambda \phi \quad\left(\phi \in \mathscr{D}_{K}\right)
+$$
+
+and (6) shows that
+
+$$
+\left|\Lambda_{1} \psi\right| \leq C \int_{K}|\psi(x)| d x \quad(\psi \in Y)
+$$
+
+The Hahn-Banach theorem therefore extends $\Lambda_{1}$ to a bounded linear functional on $L^{1}(K)$. In other words, there is a bounded Borel function $g$ on $K$ such that
+
+$$
+\Lambda \phi=\Lambda_{1} T^{N+1} \phi=\int_{K} g(x)\left(T^{N+1} \phi\right)(x) d x \quad\left(\phi \in \mathscr{D}_{K}\right)
+$$
+
+Define $g(x)=0$ outside $K$ and put
+
+$$
+f(y)=\int_{-\infty}^{y_{1}} \cdots \int_{-\infty}^{y_{n}} g(x) d x_{n} \cdots d x_{1} \quad\left(y \in R^{n}\right) .
+$$
+
+Then $f$ is continuous, and $n$ integrations by parts show that (9) gives
+
+$$
+\Lambda \phi=(-1)^{n} \int_{\Omega} f(x)\left(T^{N+2} \phi\right)(x) d x \quad\left(\phi \in \mathscr{D}_{K}\right)
+$$
+
+This is (1), with $\alpha=(N+2, \ldots, N+2)$, except for a possible change in sign.
+
+When $\Lambda$ has compact support, the local result just proved can be turned into a global one:
+
+6.27 Theorem Suppose $K$ is compact, $V$ and $\Omega$ are open in $R^{n}$, and $K \subset V \subset \Omega$. Suppose also that $\Lambda \in \mathscr{D}^{\prime}(\Omega)$, that $K$ is the support of $\Lambda$, and that $\Lambda$ has order $N$. Then there exist finitely many continuous functions $f_{\beta}$ in $\Omega$ (one for each multi-index $\beta$ with $\beta_{i} \leq N+2$ for $\left.i=1, \ldots, n\right)$ with supports in $V$, such that
+
+$$
+\Lambda=\sum_{\beta} D^{\beta} f_{\beta}
+$$
+
+These derivatives are, of course, to be understood in the distribution sense: (1) means that
+
+$$
+\Lambda \phi=\sum_{\beta}(-1)^{|\beta|} \int_{\Omega} f_{\beta}(x)\left(D^{\beta} \phi\right)(x) d x \quad[\phi \in \mathscr{D}(\Omega)]
+$$
+
+PROOF Choose an open set $W$ with compact closure $\bar{W}$, such that $K \subset W$ and $\bar{W} \subset V$. Apply Theorem 6.26 with $\bar{W}$ in place of $K$. Put $\alpha=(N+2, \ldots, N+2)$.
+
+The proof of Theorem 6.26 shows that there is a continuous function $f$ in $\Omega$ such that
+
+$$
+\Lambda \phi=(-1)^{|\alpha|} \int_{\Omega} f(x)\left(D^{\alpha} \phi\right)(x) d x \quad[\phi \in \mathscr{D}(W)]
+$$
+
+We may multiply $f$ by a continuous function which is 1 on $\bar{W}$ and whose support lies in $V$, without disturbing (3).
+
+Fix $\psi \in \mathscr{D}(\Omega)$, with support in $W$, such that $\psi=1$ on some open set containing $K$. Then (3) implies, for every $\phi \in \mathscr{D}(\Omega)$, that
+
+$$
+\begin{aligned}
+\Lambda \phi & =\Lambda(\psi \phi)=(-1)^{|\alpha|} \int_{\Omega} f \cdot D^{\alpha}(\psi \phi) \\
+& =(-1)^{|\alpha|} \int_{\Omega} f \sum_{\beta \leq \alpha} c_{\alpha \beta} D^{\alpha-\beta} \psi D^{\beta} \phi
+\end{aligned}
+$$
+
+This is (2), with
+
+$$
+f_{\beta}=(-1)^{|\alpha-\beta|} c_{\alpha \beta} f \cdot D^{\alpha-\beta} \psi \quad(\beta \leq \alpha)
+$$
+
+Our next theorem describes the global structure of distributions.
+
+6.28 Theorem Suppose $\Lambda \in \mathscr{D}^{\prime}(\Omega)$. There exist continuous functions $g_{\alpha}$ in $\Omega$, one for each multi-index $\alpha$, such that
+
+(a) each compact $K \subset \Omega$ intersects the supports of only finitely many $g_{\alpha}$, and
+
+(b) $\Lambda=\sum_{\alpha} D^{\alpha} g_{\alpha}$.
+
+If $\Lambda$ has finite order, then the functions $g_{\alpha}$ can be chosen so that only finitely many are different from 0 .
+
+PRoOF There are compact cubes $Q_{i}$ and open sets $V_{i}(i=1,2,3, \ldots)$ such that $Q_{i} \subset V_{i} \subset \Omega, \Omega$ is the union of the $Q_{i}$, and no compact subset of $\Omega$ intersects infinitely many $V_{i}$. There exist $\phi_{i} \in \mathscr{D}\left(V_{i}\right)$ such that $\phi_{i}=1$ on $Q_{i}$. Use this sequence $\left\{\phi_{i}\right\}$ to construct a partition of unity $\left\{\psi_{i}\right\}$, as in Theorem 6.20 ; each $\psi_{i}$ has its support in $V_{i}$.
+
+Theorem 6.27 applies to each $\psi_{i} \Lambda$. It shows that there are finitely many continuous functions $f_{i, \alpha}$ with supports in $\breve{V}_{i}$, such that
+
+$$
+\psi_{i} \Lambda=\sum_{\alpha} D^{\alpha} f_{i, \alpha}
+$$
+
+Define
+
+$$
+g_{\alpha}=\sum_{i=1}^{\infty} f_{i, \alpha} .
+$$
+
+These sums are locally finite, in the sense that each compact $K \subset \Omega$ intersects the supports of only finitely many $f_{i, \alpha}$. It follows that each $g_{\alpha}$ is continuous in $\Omega$ and that $(a)$ holds.
+
+Since $\phi=\sum \psi_{i} \phi$, for every $\phi \in \mathscr{D}(\Omega)$, we have $\Lambda=\sum \psi_{i} \Lambda$, and therefore (1) and (2) give (b).
+
+The final assertion follows from Theorem 6.27.
+
+\section{Convolutions}
+Starting from convolutions of two functions, we shall now define the convolution of a distribution and a test function and then (under certain conditions) the convolution of two distributions. These are important in the applications of Fourier transforms to differential equations. A characteristic property of convolutions is that they commute with translations and with differentiations (Theorems 6.30, 6.33, 6.37). Also, differentiatons may be regarded as convolutions with derivatives of the Dirac measure (Theorem 6.37).
+
+It will be convenient to make a small change in notation and to use the letters $u, v, \ldots$ for distributions as well as for functions.
+
+6.29 Definitions In the rest of this chapter, we shall write $\mathscr{D}$ and $\mathscr{D}^{\prime}$ in place of $\mathscr{D}\left(R^{n}\right)$ and $\mathscr{D}^{\prime}\left(R^{n}\right)$. If $u$ is a function in $R^{n}$, and $x \in R^{n}, \tau_{x} u$ and $\check{u}$ are the functions defined by
+
+$$
+\left(\tau_{x} u\right)(y)=u(y-x), \quad \check{u}(y)=u(-y) \quad\left(y \in R^{n}\right)
+$$
+
+Note that
+
+$$
+\left(\tau_{x} \check{u}\right)(y)=\check{u}(y-x)=u(x-y)
+$$
+
+If $u$ and $v$ are complex functions in $R^{n}$, their convolution $u * v$ is defined by
+
+$$
+(u * v)(x)=\int_{R^{n}} u(y) v(x-y) d y
+$$
+
+provided that the integral exists for all (or at least for almost all) $x \in R^{n}$, in the Lebesgue sense. Because of (2),
+
+$$
+(u * v)(x)=\int_{R^{n}} u(y)\left(\tau_{x} \check{v}\right)(y) d y .
+$$
+
+This makes it natural to define
+
+$$
+(u * \phi)(x)=u\left(\tau_{x} \Phi\right) \quad\left(u \in \mathscr{D}^{\prime}, \phi \in \mathscr{D}, x \in R^{n}\right)
+$$
+
+for if $u$ is a locally integrable function, (5) agrees with (4). Note that $u * \phi$ is a function.
+
+The relation $\int\left(\tau_{x} u\right) \cdot v=\int u \cdot\left(\tau_{-x} v\right)$, valid for functions $u$ and $v$, makes it natural to define the translate $\tau_{x} u$ of $u \in \mathscr{D}^{\prime}$ by
+
+$$
+\left(\tau_{x} u\right)(\phi)=u\left(\tau_{-x} \phi\right) \quad\left(\phi \in \mathscr{D}, x \in R^{n}\right)
+$$
+
+Then, for each $x \in R^{n}, \tau_{x} u \in \mathscr{D}^{\prime}$; we leave the verification of the appropriate continuity requirement as an exercise.
+
+6.30 Theorem Suppose $u \in \mathscr{D}^{\prime}, \phi \in \mathscr{D}, \psi \in \mathscr{D}$. Then
+
+(a) $\tau_{x}(u * \phi)=\left(\tau_{x} u\right) * \phi=u *\left(\tau_{x} \phi\right)$ for all $x \in R^{n}$;
+
+(b) $u * \phi \in C^{\infty}$ and
+
+$$
+D^{\alpha}(u * \phi)=\left(D^{\alpha} \hat{u}\right) * \phi=\hat{u} *\left(D^{\alpha} \phi\right)
+$$
+
+for every multi-index $\alpha$ :
+
+(c) $u *(\phi * \psi)=(u * \phi) * \psi$.
+
+PROof For any $y \in R^{n}$,
+
+$$
+\begin{aligned}
+& \left(\tau_{x}(u * \phi)\right)(y)=(u * \phi)(y-x)=u\left(\tau_{y-x} \check{\phi}\right) \\
+& \left(\left(\tau_{x} u\right) * \phi\right)(y)=\left(\tau_{x} u\right)\left(\tau_{y} \check{\phi}\right)=u\left(\tau_{y-x} \check{\phi}\right) \\
+& \left(u *\left(\tau_{x} \phi\right)\right)(y)=u\left(\tau_{y}\left(\tau_{x} \phi\right)^{\vee}\right)=u\left(\tau_{y-x} \check{\phi}\right)
+\end{aligned}
+$$
+
+which gives $(a)$; the relations
+
+$$
+\tau_{y} \tau_{-x}=\tau_{y-x} \quad \text { and } \quad\left(\tau_{x} \phi\right)^{\vee}=\tau_{-x} \check{\phi}
+$$
+
+were used. In the sequel, purely formal calculations such as the preceding ones will sometimes be omitted.
+
+If $u$ is applied to both sides of the identity
+
+$$
+\tau_{x}\left(\left(D^{\alpha} \phi\right)^{\vee}\right)=(-1)^{|\alpha|} D^{\alpha}\left(\tau_{x} \check{\phi}\right)
+$$
+
+one obtains part of $(b)$, namely,
+
+$$
+\left(u *\left(D^{\alpha} \phi\right)\right)(x)=\left(\left(D^{\alpha} u\right) * \phi\right)(x) .
+$$
+
+To prove the rest of $(b)$, let $e$ be a unit vector in $R^{n}$, and put
+
+$$
+\eta_{r}=r^{-1}\left(\tau_{0}-\tau_{r e}\right) \quad(r>0) .
+$$
+
+Then $(a)$ gives
+
+$$
+\eta_{r}(u * \phi)=u *\left(\eta_{r} \phi\right) .
+$$
+
+As $r \rightarrow 0, \eta_{r} \phi \rightarrow D_{e} \phi$ in $\mathscr{D}$, where $D_{e}$ denotes the directional derivative in the direction $e$. Hence
+
+$$
+\tau_{x}\left(\left(\eta_{r} \phi\right)^{\vee}\right) \rightarrow \tau_{x}\left(D_{e} \phi\right)^{\vee} \text { in } \mathscr{D} \text {, }
+$$
+
+$\therefore$ for each $x \dot{\in} R^{n}$, so that
+
+$$
+\lim _{r \rightarrow 0}\left(u *\left(\eta_{r} \phi\right)\right)(x)=\left(u *\left(D_{e} \phi\right)\right)(x)
+$$
+
+By (3) and (4) we have
+
+$$
+D_{e}(u * \phi)=u *\left(D_{e} \phi\right),
+$$
+
+and iteration of (5) gives $(b)$.
+
+To prove, $(c)$, we begin with the identity
+
+$$
+(\phi * \psi)^{\vee}(t)=\int_{R^{n}} \check{\psi}(s)\left(\tau_{s} \check{\phi}\right)(t) d s
+$$
+
+Let $K_{1}$ and $K_{2}$ be the supports of $\check{\phi}$ and $\check{\psi}$. Put $K=K_{1}+K_{2}$. Then
+
+$$
+s \rightarrow \check{\psi}(s) \tau_{s} \check{\phi}
+$$
+
+is a continuous mapping of $R^{n}$ into $\mathscr{D}_{K}$, which is 0 outside $K_{2}$. Therefore (6) may be written as a $\mathscr{D}_{K}$-valued integral, namely,
+
+$$
+(\phi * \psi)^{\vee}=\int_{K_{2}} \check{\psi}(s) \tau_{s} \check{\phi} d s
+$$
+
+and now Theorem 3.27 shows that
+
+$$
+\begin{aligned}
+(u *(\phi * \psi))(0) & =u\left((\phi * \psi)^{\vee}\right) \\
+& =\int_{K_{2}} \check{\psi}(s) u\left(\tau_{s} \check{\psi}\right) d s=\int_{R^{n}} \psi(-s)(u * \phi)(s) d s,
+\end{aligned}
+$$
+
+or
+
+$$
+(u *(\phi * \psi))(0)=((u * \phi) * \psi)(0)
+$$
+
+To obtain (8) with $x$ in place of 0 , apply (8) to $\tau_{-x} \psi$ in place of $\psi$, and appeal to $(a)$. This proves $(c)$.
+
+6.31 Definition The term approximate identity on $R^{n}$ will denote a sequence of functions $h_{j}$ of the form
+
+$$
+h_{j}(x)=j^{n} h(j x) \quad(j=1,2,3, \ldots)
+$$
+
+where $h \in \mathscr{D}\left(R^{n}\right), h \geq 0$, and $\int_{R^{n}} h(x) d x=1$.
+
+6.32 Theorem Suppose $\left\{h_{j}\right\}$ is an approximate identity on $R^{n}, \phi \in \mathscr{D}$, and $u \in \mathscr{D}^{\prime}$. Then
+
+(a) $\lim _{j \rightarrow \infty} \phi * h_{j}=\phi$ in $\mathscr{D}$,
+
+(b) $\lim _{j \rightarrow \infty} u * h_{j}=u$ in $\mathscr{D}^{\prime}$.
+
+Note that $(b)$ implies that every distribution is a limit, in the topology of $\mathscr{D}^{\prime}$, of a sequence of infinitely differentiable functions.
+
+PROOF It is a trivial exercise to check that $f * h_{j} \rightarrow f$ uniformly on compact sets, if $f$ is any continuous function on $R^{n}$. Applying this to $D^{\alpha} \phi$ in place of $f$, we see that $D^{\alpha}\left(\phi * h_{j}\right) \rightarrow D^{\alpha} \phi$ uniformly. Also, the supports of all $\phi * h_{j}$ lie in some compact set, since the supports of the $h_{j}$ shrink to $\{0\}$. This gives $(a)$.
+
+Next, $(a)$ and statement $(c)$ of Theorem 6.30 give $(b)$, because
+
+$$
+\begin{aligned}
+u(\check{\phi}) & =(u * \phi)(0)=\lim \left(u *\left(h_{j} * \phi\right)\right)(0) \\
+& =\lim \left(\left(u * h_{j}\right) * \phi\right)(0)=\lim \left(u * h_{j}\right)(\check{\phi})
+\end{aligned}
+$$
+
+\subsection{Theorem}
+(a) If $u \in \mathscr{D}^{\prime}$ and
+
+$$
+L \phi=u * \phi \quad(\phi \in \mathscr{D})
+$$
+
+then $L$ is a continuous linear mapping of $\mathscr{D}$ into $C^{\infty}$ which satisfies
+
+$$
+\tau_{x} L=L \tau_{x} \quad\left(x \in R^{n}\right)
+$$
+
+(b) Conversely, if $L$ is a continuous linear mapping of $\mathscr{D}$ into $C\left(R^{n}\right)$, and if $L$ satisfies (2), then there is a unique $u \in \mathscr{D}^{\prime}$ such that (1) holds.
+
+Note that $(b)$ implies that the range of $L$ actually lies in $C^{\infty}$.
+
+PROOF (a) Since $\tau_{x}(u * \phi)=u *\left(\tau_{x} \phi\right)$, (1) implies (2). To prove that $L$ is continuous, we have to show that the restriction of $L$ to each $\mathscr{D}_{K}$ is a continuous mapping into $C^{\infty}$. Since these are Fréchet spaces, the closed graph theorem can be applied. Supposé that $\phi_{i} \rightarrow \phi$ in $\mathscr{D}_{K}$ and that $u * \phi_{i} \rightarrow f$ in $C^{\infty}$; we have to prove that $f=u * \phi$.
+
+Fix $x \in R^{n}$. Then $\tau_{x} \check{\phi}_{i} \rightarrow \tau_{x} \check{\phi}$ in $\mathscr{D}$, so that
+
+$$
+f(x)=\lim \left(u * \phi_{i}\right)(x)=\lim u\left(\tau_{x} \check{\phi}_{i}\right)=u\left(\tau_{x} \check{\phi}\right)=(u * \phi)(x)
+$$
+
+(b) Define $u(\phi)=(L \check{\phi})(0)$. Since $\phi \rightarrow \check{\phi}$ is a continuous operator on $\mathscr{D}$, and since evaluation at 0 is a continuous linear functional on $C, u$ is continuous on $\mathscr{D}$. Thus $u \in \mathscr{D}^{\prime}$. Since $L$ satisfies (2),
+
+$$
+\begin{aligned}
+(L \phi)(x) & =\left(\tau_{-x} L \phi\right)(0)=\left(L \tau_{-x} \phi\right)(0) \\
+& =u\left(\left(\tau_{-x} \phi\right)^{\vee}\right)=u\left(\tau_{x} \check{\phi}\right)=(u * \phi)(x)
+\end{aligned}
+$$
+
+The uniqueness of $u$ is obvious, for if $u \in \mathscr{D}^{\prime}$ and $u * \phi=0$ for every $\phi \in \mathscr{D}$, then
+
+$$
+u(\check{\phi})=(u * \phi)(0)=0
+$$
+
+for every $\phi \in \mathscr{D}$; hence $u=0$.
+
+6.34 Definition. Suppose now that $u \in \mathscr{D}^{\prime}$ and that $u$ has compact support. By Theorem 6.24, $u$ extends then in a unique fashion to a continuous linear functional on $C^{\infty}$. One can therefore define the convolution of $u$ and any $\phi \in C^{\infty}$ by the same formula as before, namely,
+
+$$
+(u * \phi)(x)=u\left(\tau_{x} \check{\phi}\right) \quad\left(x \in R^{n}\right)
+$$
+
+6.35 Theorem Suppose $u \in \mathscr{D}^{\prime}$ has compact support, and $\phi \in C^{\infty}$. Then
+
+(a) $\tau_{x}(u * \phi)=\left(\tau_{x} u\right) * \phi=\dot{u} *\left(\tau_{x} \phi\right)$ if $x \in R^{n}$,
+
+(b) $u * \phi \in C^{\infty}$ and
+
+$$
+D^{\alpha}(u * \phi)=\left(D^{\alpha} u\right) * \phi=u *\left(D^{\alpha} \phi\right)
+$$
+
+If, in addition, $\psi \in \mathscr{D}$, then
+
+(c) $u * \psi \in \mathscr{D}$, and
+
+(d) $u *(\phi * \psi)=(u * \phi) * \psi=(\dot{u} * \psi) * \phi$.
+
+PROOF The proofs of $(a)$ and $(b)$ are so similar to those given in Theorem 6.30 that they need not be repeated. To prove $(c)$, let $K$ and $H$ be the supports of $u$ and $\psi$, respectively. The support of $\tau_{x} \check{\psi}$ is $x-H$. Therefore
+
+$$
+(u * \psi)(x)=u\left(\tau_{x} \check{\psi}\right)=0
+$$
+
+unless $K$ intersects $x-H$, that is, unless $x \in K+H$. The support of $u * \psi$ thus lies in the compact set $K+H$.
+
+To prove $(d)$, let $W$ be a bounded open set that contains $\bar{K}$, and choose $\phi_{0} \in \mathscr{D}$ so that $\check{\phi}_{0}=\check{\phi}$ in $W+H$. Then $(\phi * \psi)^{\vee}=\left(\phi_{0} * \psi\right)^{\vee}$ in $W$, so that
+
+$$
+(u *(\phi * \psi))(0)=\left(u *\left(\phi_{0} * \psi\right)\right)(0)
+$$
+
+If $-s \in H$, then $\tau_{s} \check{\phi}=\tau_{s} \check{\phi}_{0}$ in $W$; hence $u * \phi=u * \phi_{0}$ in $-H$. This gives
+
+$$
+((u * \phi) * \psi)(0)=\left(\left(u * \phi_{0}\right) * \psi\right)(0)
+$$
+
+Since the support of $u * \psi$ lies in $K+H$,
+
+$$
+((u * \psi) * \phi)(0)=\left((u * \psi) * \phi_{0}\right)(0)
+$$
+
+The right sides of (1) to (3) are equal, by Theorem 6.30 ; hence so are their left sides. This proves that the three convolutions in $(d)$ are equal at the origin. The general case follows by translation, as at the end of the proof of Theorem 6.30.
+
+6.36 Definition If $u \in \mathscr{D}^{\prime}, v \in \mathscr{D}^{\prime}$, and at least one of these two distributions has compact support, define
+
+$$
+L \phi=u *(v * \phi) \quad(\phi \in \mathscr{D})
+$$
+
+Note that this is well defined. For if $v$ has compact support, then $v * \phi \in \mathscr{D}$, and $L \phi \in C^{\infty}$; if $u$ has compact support, then again $L \phi \in C^{\infty}$, since $v * \phi \in C^{\infty}$. Also, $\tau_{x} L=L \tau_{x}$, for all $x \in R^{n}$. These assertions follow from Theorems 6.30 and 6.35.
+
+The functional $\phi \rightarrow(L \check{\phi})(0)$ is in fact a distribution. To see this, suppose $\phi_{i} \rightarrow 0$ in $\mathscr{D}$. By $(a)$ of Theorem $6.33, v * \check{\phi}_{i} \rightarrow 0$ in $C^{\infty}$; if, in addition, $v$ hascompact support then $v * \check{\phi}_{i} \rightarrow 0$ in $\mathscr{D}$. It follows, in either case, that $\left(L \check{\phi}_{i}\right)(0) \rightarrow 0$.
+
+The proof of $(b)$ of Theorem 6.33 now shows that this distribution, which we shall denote by $u * v$, is related to $L$ by the formula
+
+$$
+L \phi=(u * v) * \phi \quad(\phi \in \mathscr{D})
+$$
+
+In other words, $u * v \in \mathscr{D}^{\prime}$ is characterized by
+
+$$
+(u * v) * \phi=u *(v * \phi) \quad(\phi \in \mathscr{D})
+$$
+
+6.37 Theorem Suppose $u \in \mathscr{D}^{\prime}, v \in \mathscr{D}^{\prime}, w \in \mathscr{D}^{\prime}$.
+
+(a) If at least one of $u, v$ has compact support, then $u * v=v * u$.
+
+(b) If $S_{u}$ and $S_{v}$ are the supports of $u$ and $v$, and if at least one of these is compact, then
+
+$$
+S_{u * v} \subset S_{u}+S_{v}
+$$
+
+(c) If at least two of the supports $S_{u}, S_{v}, S_{w}$ are compact, then $(u * v) * w=u *(v * w)$.
+
+(d) If $\delta$ is the Dirac measure and $\alpha$ is a multi-index, then
+
+$$
+D^{\alpha} u=\left(D^{\alpha} \delta\right) * u
+$$
+
+In particular, $u=\delta * u$.
+
+(e) If at least one of the sets $S_{u}, S_{v}$ is compact, then
+
+$$
+D^{\alpha}(u * v)=\left(D^{\alpha} u\right) * v=u *\left(D^{\alpha} v\right)
+$$
+
+for every multi-index $\alpha$.
+
+Note: The associative law $(c)$ depends strongly on the stated hypotheses; see Exercise 24.
+
+PROOF (a) Pick $\phi \in \mathscr{D}, \psi \in \mathscr{D}$. Since convolution of functions is commutative, (c) of Theorem 6.30 implies that
+
+$$
+\begin{aligned}
+(u * v) *(\phi * \psi) & =u *(v *(\phi * \psi)) \\
+& =u *((v * \phi) * \psi)=u *(\psi *(v * \phi))
+\end{aligned}
+$$
+
+If $S_{v}$ is compact, apply (c) of Theorem 6.30 once more; if $S_{u}$ is compact, apply $(d)$ of Theorem 6.35; in either case
+
+$$
+(u * v) *(\phi * \psi)=(u * \psi) *(v * \phi)
+$$
+
+Since $\phi * \psi=\psi * \phi$, the same computation gives
+
+$$
+(v * u) *(\phi * \psi)=(v * \phi) *(u * \psi) .
+$$
+
+The two right members of (1) and (2) are convolutions of functions (one in $\mathscr{D}$, one in $\left.C^{\infty}\right)$; hence they are equal. Thus
+
+$$
+((u * v) * \phi) * \psi=((v * u) * \phi) * \psi .
+$$
+
+Two applications of the uniqueness argument used at the end of the proof of Theorem 6.33 now give $u * v=v * u$.
+
+(b) If $\phi \in \mathscr{D}$, a simple computation gives
+
+$$
+(u * v)(\phi)=u\left((v * \check{\phi})^{\vee}\right)
+$$
+
+By $(a)$ we may assume, without loss of generality, that $S_{v}$ is compact. The proof of $(c)$ of Theorem 6.35. shows that the support of $v * \check{\phi}$ lies in $S_{v}-S_{\phi}$. By (4), $(u * c)(\phi)=0$ unless $S_{u}$ intersects $S_{\phi}-S_{v}$, that is, unless $S_{\phi}$ intersects $S_{u}+S_{v}$.
+
+(c) We conclude from (b) that both
+
+$$
+(u * v) * w \quad \text { and } \quad u *(v * w)
+$$
+
+are defined if at most one of the sets $S_{u}, S_{v}, S_{w}$ fails to be compact. If $\phi \in \mathscr{D}$, it follows directly from Definition 6.36 that
+
+$$
+(u *(v * w)) * \phi=u *((v * w) * \phi)=u *(v *(w * \phi)) .
+$$
+
+If $S_{w}$ is compact, then
+
+$$
+((u * v) * w) * \phi=(u * v) *(w * \phi)=u *(v *(w * \phi))
+$$
+
+because $w * \phi \in \mathscr{D}$, by (c) of Theorem 6.35. Comparison of (5) and (6) gives (c) whenever $S_{w}$ is compact.
+
+If $S_{w}$ is not compact, then $S_{u}$ is compact, and the preceding case, combined with the commutative law $(a)$, gives
+
+$$
+\begin{aligned}
+u *(v * w) & =u *(w * v)=(w * v) * u \\
+& =w *(v * u)=w *(u * v)=(u * v) * w
+\end{aligned}
+$$
+
+(d) If $\phi \in \mathscr{Z}$, then $\delta * \phi=\phi$, because
+
+$$
+(\delta * \phi)(x)=\delta\left(\tau_{\dot{x}} \check{\phi}\right)=\left(\tau_{x} \check{\phi}\right)(0)=\check{\phi}(-x)=\phi(x)
+$$
+
+Hence $(c)$ above and $(b)$ of Theorem 6.30 give
+
+$$
+\left(D^{\alpha} u\right) * \phi=u * D^{\alpha} \phi=u * D^{\alpha}(\delta * \phi)=u *\left(D^{\alpha} \delta\right) * \phi .
+$$
+
+Finally, $(e)$ follows from $(d),(c)$, and $(a)$ :
+
+and
+
+$$
+D^{\alpha}(u * v)=\left(D^{\alpha} \delta\right) *(u * v)=\left(\left(D^{\alpha} \delta\right) * u\right) * v=\left(D^{\alpha} u\right) * v
+$$
+
+$$
+\left(\left(D^{\alpha} \delta\right) * u\right) * v=\left(u * D^{\alpha} \delta\right) * v=u *\left(\left(D^{\alpha} \delta\right) * v\right)=u * D^{\alpha} v
+$$
+
+
+\end{document}

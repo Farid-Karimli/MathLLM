@@ -1,0 +1,1503 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+\usepackage{bbold}
+
+%New command to display footnote whose markers will always be hidden
+\let\svthefootnote\thefootnote
+\newcommand\blfootnotetext[1]{%
+  \let\thefootnote\relax\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \let\thefootnote\svthefootnote%
+}
+
+%Overriding the \footnotetext command to hide the marker if its value is `0`
+\let\svfootnotetext\footnotetext
+\renewcommand\footnotetext[2][?]{%
+  \if\relax#1\relax%
+    \ifnum\value{footnote}=0\blfootnotetext{#2}\else\svfootnotetext{#2}\fi%
+  \else%
+    \if?#1\ifnum\value{footnote}=0\blfootnotetext{#2}\else\svfootnotetext{#2}\fi%
+    \else\svfootnotetext[#1]{#2}\fi%
+  \fi
+}
+
+\begin{document}
+\section{TOPOLOGICAL VECTOR SPACES}
+\section{Introduction}
+1.1 Many problems that analysts study are not primarily concerned with a single object such as a function, a measure, or an operator, but they deal instead with large classes of such objects. Most of the interesting classes that occur in this way turn out to be vector spaces, either with real scalars or with complex ones. Since limit processes play a role in every analytic problem (explicitly or implicitly), it should be no surprise that these vector spaces are supplied with metrics, or at least with topologies, that bear some natural relation to the objects of which the spaces are made up. The simplest and most important way of doing this is to introduce a norm. The resulting structure (defined below) is called a normed vector space, or a normed linear space, or simply a normed space.
+
+Throughout this book, the term vector space will refer to a vector space over the complex field $\mathscr{C}$ or over the real field $R$. For the sake of completeness, detailed definitions are given in Section 1.4.
+
+1.2 Normed spaces A vector space $X$ is said to be a normed space if to every $x \in X$ there is associated a nonnegative real number $\|x\|$, called the norm of $x$, in such a way that
+
+(a) $\|x+y\| \leq\|x\|+\|y\|$ for all $x$ and $y$ in $X$,
+
+(b) $\|\alpha x\|=|\alpha|\|x\|$ if $x \in X$ and $\alpha$ is a scalar,
+
+(c) $\|x\|>0$ if $x \neq 0$.
+
+The word "norm" is also used to denote the function that maps $x$ to $\|x\|$.
+
+Every normed space may be regarded as a metric space, in which the distance $d(x, y)$ between $x$ and $y$ is $\|x-y\|$. The relevant properties of $d$ are:
+
+(i) $0 \leq d(x, y)<\infty$ for all $x$ and $y$,
+
+(ii) $d(x, y)=0$ if and only if $x=y$,
+
+(iii) $d(x, y)=d(y, x)$ for all $x$ and $y$,
+
+(iv) $d(x, z) \leq d(x, y)+d(y, z)$ for all $x, y, z$.
+
+In any metric space, the open ball with center at $x$ and radius $r$ is the set
+
+$$
+B_{r}(x)=\{y: d(x, y)<r\} .
+$$
+
+In particular, if $X$ is a normed space, the sets
+
+$$
+B_{1}(0)=\{x:\|x\|<1\} \quad \text { and } \quad \bar{B}_{1}(0)=\{x:\|x\| \leq 1\}
+$$
+
+are the open unit ball and the closed unit ball of $X$, respectively.
+
+By declaring a subset of a metric space to be open if and only if it is a (possibly empty) union of open balls, a topology is obtained. (See Section 1.5.) It is quite easy to verify that the vector space operations (addition and scalar multiplication) are continuous in this topology, if the metric is derived from a norm, as above.
+
+A Banach space is a normed space which is complete in the metric defined by its norm; this means that every Cauchy sequence is required to converge.
+
+1.3 Many of the best-known function spaces are Banach spaces. Let us mention just a few types: spaces of continuous functions on compact spaces; the familiar $L^{p}$-spaces that occur in integration theory; Hilbert spaces - the closest relatives of euclidean spaces; certain spaces of differentiable functions; spaces of continuous linear mappings from one Banach space into another; Banach algebras. All of these will occur later on in the text.
+
+But there are also many important spaces that do not fit into this framework. Here are some examples:
+
+(a) $C(\Omega)$, the space of all continuous complex functions on some open set $\Omega$ in a euclidean space $R^{n}$.
+
+(b) $H(\Omega)$, the space of all holomorphic functions in some open set $\Omega$ in the complex plane.
+(c) $C_{K}^{\infty}$, the-space of all infinitely differentiable complex functions on $R^{n}$ that vanish outside some fixed compact set $K$ with nonempty interior.
+
+(d) The test function spaces used in the theory of distributions, and the distributions themselves.
+
+These spaces carry natural topologies that cannot be induced by norms, as we shall see later. They, as well as the normed spaces, are examples of topological vector spaces, a concept that pervades all of functional analysis.
+
+After this brief attempt at motivation, here are the detailed definitions, followed (in Section 1.9) by a preview of some of the results of Chapter 1.
+
+1.4 Vector spaces The letters $R$ and $\mathscr{C}$ will always denote the field of real numbers and the field of complex numbers, respectively. For the moment, let $\Phi$ stand for either $R$ or $\mathbb{C}$. A scalar is a member of the scalar field $\Phi$. A vector space over $\Phi$ is a set $X$, whose elements are called vectors, and in which two operations, addition and scalar multiplication, are defined, with the following familiar algebraic properties:
+
+(a) To every pair of vectors $x$ and $y$ corresponds a vector $x+y$, in such a way that
+
+$$
+x+y=y+x \quad \text { and } \quad x+(y+z)=(x+y)+z
+$$
+
+$X$ contains a unique vector 0 (the zero vector or origin of $X$ ) such that $x+0=x$ for every $x \in X$; and to each $x \in X$ corresponds a unique vector $-x$ such that $x+(-x)=0$.
+
+(b) To every pair $(\alpha, x)$ with $\alpha \in \Phi$ and $x \in X$ corresponds a vector $\alpha x$, in such a way that
+
+$$
+1 x=x, \quad \alpha(\beta x)=(\alpha \beta) x
+$$
+
+and such that the two distributive laws
+
+hold.
+
+$$
+\alpha(x+y)=\alpha x+\alpha y, \quad(\alpha+\beta) x=\alpha x+\beta x
+$$
+
+The symbol 0 will of course also be used for the zero element of the scalar field. A real vector space is one for which $\Phi=R$; a complex vector space is one for which $\Phi=\ell$. Any statement about vector spaces in which the scalar field is not explicitly mentioned is to be understood to apply to both of these cases.
+
+If $X$ is a vector space, $A \subset X, B \subset X, x \in X$, and $\lambda \in \Phi$, the following notations will be used:
+
+$$
+\begin{aligned}
+x+A & =\{x+a: a \in A\}, \\
+x-A & =\{x-a: a \in A\}, \\
+A+B & =\{a+b: a \in A, b \in B\} \\
+\lambda A & =\{\lambda a: a \in A\} .
+\end{aligned}
+$$
+
+In particular (taking $\lambda=-1$ ), $-A$ denotes the set of all additive inverses of members of $A$.
+
+$A$ word of warning: With these conventions, it may happen that $2 A \neq A+A$ (Exercise 1).
+
+A set $Y \subset X$ is called a subspace of $X$ if $Y$ is itself a vector space (with respect to the same operations, of course). One checks easily that this happens if and only if $0 \in Y$ and
+
+$$
+\alpha Y+\beta Y \subset Y
+$$
+
+for all scalars $\alpha$ and $\beta$.
+
+A set $C \subset X$ is said to be convex if
+
+$$
+t C+(1-t) C \subset C \quad(0 \leq t \leq 1)
+$$
+
+In other words, it is required that $C$ should contain $t x+(1-t) y$ if $x \in C, y \in C$, and $0 \leq t \leq 1$.
+
+A set $B \subset X$ is said to be balanced if $\alpha B \subset B$ for every $\alpha \in \Phi$ with $|\alpha| \leq 1$.
+
+A vector space $X$ has dimension $n(\operatorname{dim} X=n)$ if $X$ has a basis $\left\{u_{1}, \ldots, u_{n}\right\}$. This means that every $x \in X$ has a unique representation of the form
+
+$$
+x=\alpha_{1} u_{1}+\cdots+\alpha_{n} u_{n} \quad\left(\alpha_{i} \in \Phi\right)
+$$
+
+If $\operatorname{dim} X=n$ for some $n, X$ is said to have finite dimension. If $X=\{0\}$, then $\operatorname{dim} X=0$.
+
+Example If $X=\mathscr{C}$ (a one-dimensional vector space over the scalar field $\mathscr{C}$ ), the balanced sets are: $\mathscr{C}$, the empty set $\varnothing$, and every circular disc (open or closed) centered at 0 . If $X=R^{2}$ (a two-dimensional vector space over the scalar field $R$ ), there are many more balanced sets; any line segment with midpoint at $(0,0)$ will do. The point is that in spite of the well-known and obvious identification of $\mathscr{C}$ with $R^{2}$, these two are entirely different as far as their vector space structure is concerned.
+
+1.5 Topological spaces A topological space is a set $S$ in which a collection $\tau$ of subsets (called open sets) has been specified, with the following properties: $S$ is open, $\varnothing$ is open, the intersection of any two open sets is open, and the union of every collection of open sets is open. Such a collection $\tau$ is called a topology on $S$. When clarity seems to demand it, the topological space corresponding to the topology $\tau$ will be written $(S, \tau)$ rather than $S$.
+
+Here is some of the standard vocabulary that will be used, if $S$ and $\tau$ are as above. A set $E \subset S$ is closed if and only if its complement is open. The closure $\bar{E}$ of $E$ is the intersection of all closed sets that contain $E$. The interior $E^{\circ}$ of $E$ is the union
+of all open sets that are subsets of $E$. A neighborhood of a point $p \in S$ is any open set that contains $p .(S, \tau)$ is a Hausdorff space, and $\tau$ is a Hausdorff topology, if distinct points of $S$ have disjoint neighborhoods. A set $K \subset S$ is compact if every open cover of $K$ has a finite subcover. A collection $\tau^{\prime} \subset \tau$ is a base for $\tau$ if every member of $\tau$ (that is, every open set) is a union of members of $\tau^{\prime}$. A collection $\gamma$ of neighborhoods of a point $p \in S$ is a local base at $p$ if every neighborhood of $p$ contains a member of $\gamma$.
+
+If $E \subset S$ and if $\sigma$ is the collection of all intersections $E \cap V$, with $V \in \tau$, then $\sigma$ is a topology on $E$, as is easily verified; we call this the topology that $E$ inherits from $S$.
+
+If a topology $\tau$ is induced by a metric $d$ (see Section 1.2) we say that $d$ and $\tau$ are compatible with each other.
+
+A sequence $\left\{x_{n}\right\}$ in a Hausdorff space $X$ converges to a point $x \in X$ (or: $\lim _{n \rightarrow \infty}$ $x_{n}=x$ ) if every neighborhood of $x$ contains all but finitely many of the points $x_{n}$.
+
+\subsection{Topological vector spaces Suppose $\tau$ is a topology on a vector space $X$ such that}
+(a) every point of $X$ is a closed set, and
+
+(b) the vector space operations are continuous with respect to $\tau$.
+
+Under these conditions, $\tau$ is said to be a vector topology on $X$, and $X$ is a topological vector space.
+
+Here is a more precise way of stating $(a)$ : For every $x \in X$, the set $\{x\}$ which has $x$ as its only member is a closed set.
+
+In many texts, $(a)$ is omitted from the definition of a topological vector space. Since $(a)$ is satisfied in almost every application, and since most theorems of interest require $(a)$ in their hypotheses, it seems best to include it in the axioms. [Theorem 1.12 will show that $(a)$ and $(b)$ together imply that $\tau$ is a Hausdorff topology.]
+
+To say that addition is continuous means, by definition, that the mapping
+
+$$
+(x, y) \rightarrow x+y
+$$
+
+of the cartesian product $X \times X$ into $X$ is continuous: If $x_{i} \in X$ for $i=1,2$, and if $V$ is a neighborhood of $x_{1}+x_{2}$, there should exist neighborhoods $V_{i}$ of $x_{i}$ such that
+
+$$
+\therefore \quad V_{1}+\bar{V}_{2} \subset V .
+$$
+
+Similarly, the assumption that scalar multiplication is continuous means that the mapping
+
+$$
+(\alpha, x) \rightarrow \alpha x
+$$
+
+of $\Phi \times X$ into $X$ is continuous: If $x \in X, \alpha$ is a scalar, and $V$ is a neighborhood of $\alpha x$, then for some $r>0$ and some neighborhood $\bar{W}$ of $x$ we have $\beta W \subset V$ whenever
+$|\beta-\alpha|<r$.
+
+A subset $E$ of a topological vector space is said to be bounded if to every neighborhood $V$ of 0 in $X$ corresponds a number $s>0$ such that $E \subset t V$ for every $t>s$.
+
+1.7 Invariance Let $X$ be a topological vector space. Associate to each $a \in X$ and to each scalar $\lambda \neq 0$ the translation operator $T_{a}$ and the multiplication operator $M_{\lambda}$, by the formulas
+
+$$
+T_{a}(x)=a+x, \quad M_{\lambda}(x)=\lambda x \quad(x \in X)
+$$
+
+The following simple proposition is very important:
+
+Proposition $T_{a}$ and $M_{\lambda}$ are homeomorphisms of $X$ onto $X$.
+
+PROOF The vector space axioms alone imply that $T_{a}$ and $M_{\lambda}$ are one-to-one, that they map $X$ onto $X$, and that their inverses are $T_{-a}$ and $M_{1 / \lambda}$, respectively. The assumed continuity of the vector space operations implies that these four mappings are continuous. Hence each of them is a homeomorphism (a continuous mapping whose inverse is also continuous).
+
+One consequence of this proposition is that every vector topology $\tau$ is translationinvariant (or simply invariant, for brevity): A set $E \subset X$ is open if and only if each of its translates $a+E$ is open. Thus $\tau$ is completely determined by any local base.
+
+In the vector space context, the term local base will always mean a local base at 0 . A local base of a topological vector space $X$ is thus a collection $\mathscr{B}$ of neighborhoods of 0 such that every neighborhood of 0 contains a member of $\mathscr{B}$. The open sets of $\bar{X}$ are then precisely those that are unions of translates of members of $\mathscr{B}$.
+
+A metric $d$ on a vector space $X$ will be called invariant if
+
+$$
+d(x+z, y+z)=d(x, y)
+$$
+
+for all $x, y, z$ in $X$.
+
+1.8. Types of topological vector spaces In the following definitions, $X$ always denotes a topological vector space, with topology $\tau$.
+
+(a) $X$ is locally convex if there is a local base $\mathscr{B}$ whose members are convex.
+
+(b) $X$ is locally bounded if 0 has a bounded neighborhood.
+
+(c) $X$ is locally compact if 0 has a neighborhood whose closure is compact.
+
+(d) $X$ is metrizable if $\tau$ is compatible with some metric $d$.
+
+(e) $X$ is an $F$-space if its topology $\tau$ is induced by a complete invariant metric $d$. (Compare Section 1.25.)
+
+(f) $X$ is a Fréchet space if $X$ is a locally convex $F$-space.
+
+(g) $X$ is normable if a norm exists on $X$ such that the metric induced by the norm is compatibie with $\tau$.
+(h) Normed spaces and Banach spaces have already been defined (Section 1.2).
+
+(i) $X$ has the Heine-Borel property if every closed and bounded subset of $X$ is compact.
+
+The terminology of $(e)$ and $(f)$ is not universally agreed upon: In some texts, local convexity is omitted from the definition of a Fréchet space, whereas others use $F$-space to describe what we have called Fréchet space.
+
+1.9 Here is a list of some relations between these properties of a topological vector space $X$.
+
+(a) If $X$ is locally bounded, then $X$ has a countable local base [part (c) of Theorem 1.15 ].
+
+(b) $X$ is metrizable if and only if $X$ has a countable local base (Theorem 1.24).
+
+(c) $X$ is normable if and only if $X$ is locally convex and locally bounded (Theorem 1.39).
+
+(d) $X$ has finite dimension if and only if $X$ is locally compact (Theorems $1.21,1.22$ ).
+
+(e) If a locally bounded space $X$ has the Heine-Borel property, then $X$ has finite dimension (Theorem 1.23).
+
+The spaces $H(\Omega)$ and $C_{K}^{\infty}$ mentioned in Section 1.3 are infinite-dimensional Fréchet spaces with the Heine-Borel property (Sections 1.45, 1.46). They are therefore not locally bounded, hence not normable; they also show that the converse of $(a)$ is false.
+
+On the other hand, there exist locally bounded $F$-spaces that are not locally convex (Section 1.47).
+
+\section{Separation Properties}
+1.10 Theorem Suppose $K$ and $C$ are subsets of a topological vector space $X, K$ is compact, $C$ is closed, and $K \cap C=\varnothing$. Then 0 has a neighborhood $V$ such that
+
+$$
+(K+V) \cap(C+V)=\varnothing
+$$
+
+Note that $K+V$ is a union of translates $x+V$ of $V(x \in K)$. Thus $K+V$ is an open set that contains $K$. The theorem thus implies the existence of disjoint open sets that contain $K$ and $C$, respectively.
+
+PROOF We begin with the following proposition, which will be useful in other contexts as well:
+
+If $W$ is a neighborhood of 0 in $X$, then there is a neighborhood $U$ of 0 which is symmetric (in the sense that $U=-U$ ) and which satisfies $U+U \subset W$.
+
+To see this, note that $0+0=0$, that addition is continuous, and that 0 therefore has neighborhoods $V_{1}, V_{2}$ such that $V_{1}+V_{2} \subset W$. If
+
+$$
+U=V_{1} \cap V_{2} \cap\left(-V_{1}\right) \cap\left(-V_{2}\right)
+$$
+
+then $U$ has the required properties.
+
+The proposition can now be applied to $U$ in place of $W$ and yields a new symmetric neighborhood $U$ of 0 such that
+
+$$
+U+U+U+U \subset W .
+$$
+
+It is clear how this can be continued.
+
+If $K=\varnothing$, then $K+V=\varnothing$, and the conclusion of the theorem is obvious. We therefore assume that $K \neq \varnothing$, and consider a point $x \in K$. Since $C$ is closed, since $x$ is not in $C$, and since the topology of $X$ is invariant under translations, the preceding proposition shows that 0 has a symmetric neighborhood $V_{x}$ such that $x+V_{x}+V_{x}+V_{x}$ does not intersect $C$; the symmetry of $V_{x}$ then shows that
+
+$$
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+$$
+
+Since $K$ is compact, there are finitely many points $x_{1}, \ldots, x_{n}$ in $K$ such that
+
+$$
+K \subset\left(x_{1}+V_{x_{1}}\right) \cup \cdots \cup\left(x_{n}+V_{x_{n}}\right)
+$$
+
+Put $V=V_{x_{1}} \cap \cdots \cap V_{x_{n}}$. Then
+
+$$
+K+V \subset \bigcup_{i=1}^{n}\left(x_{i}+V_{x_{i}}+V\right) \subset \bigcup_{i=1}^{n}\left(x_{i}+V_{x_{i}}+V_{x_{i}}\right)
+$$
+
+and no term in this last union intersects $C+V$, by (1). This completes the proof. IIII
+
+Since $C+V$ is open, it is even true that the closure of $K+V$ does not intersect $C+V$; in particular, the closure of $K+V$ does not intersect $C$. The following special case of this, obtained by taking $K=\{0\}$, is of considerable interest.
+
+1.11 Theorem If $\mathscr{B}$ is a local base for a topological vector space $X$ then everymember of $\mathscr{B}$ contains the closure of some member of $\mathscr{B}$.
+
+So far we have not used the assumption that every point of $X$ is a closed set. We now use it and apply Theorem 1.10 to a pair of distinct points in place of $K$ and $C$. The conclusion is that these points have disjoint neighborhoods. In other words, the Hausdorff separation axiom holds:
+
+\subsection{Theorem Every topological vector space is a Hausdorff space.}
+We now derive some simple properties of closures and interiors in a topological vector space. See Section 1.5 for the notations $\bar{E}$ and $E^{\circ}$. Observe that a point $p$ belongs to $\bar{E}$ if and only if every neighborhood of $p$ intersects $E$.
+
+\subsection{Theorem Let $X$ be a topological vector space.}
+(a) If $A \subset X$ then $\bar{A}=\bigcap(A+V)$, where $V$ runs through all neighborhoods of 0 .
+
+(b) If $A \subset X$ and $B \subset X$, then $\bar{A}+\bar{B} \subset \overline{A+B}$.
+
+(c) If $Y$ is a subspace of $X$, so is $\bar{Y}$.
+
+(d) If $C$ is a convex subset of $X$, so are $\bar{C}$ and $C^{\circ}$.
+
+(e) If $B$ is a balanced subset of $X$, so is $\bar{B}$; if also $0 \in B^{\circ}$ then $B^{\circ}$ is balanced.
+
+(f) If $E$ is a bounded subset of $X$, so is $\bar{E}$.
+
+PROOF (a) $x \in \bar{A}$ if and only if $(x+V) \cap A \neq \varnothing$ for every neighborhood $V$ of 0 , and this happens if and only if $x \in A-V$ for every such $V$. Since $-V$ is a neighborhood of 0 if and only if $V$ is one, the proof is complete.
+
+(b) Take $a \in \bar{A}, b \in \bar{B}$; let $W$ be a neighborhood of $a+b$. There are neighborhoods $W_{1}$ and $W_{2}$ of $a$ and $b$ such that $W_{1}+W_{2} \subset W$. There exist $x \in A \cap W_{1}$ and $y \in B \cap W_{2}$, since $a \in \bar{A}$ and $b \in \bar{B}$. Then $x+y$ lies in $(A+B) \cap W$, so that this intersection is not empty. Consequently, $a+b \in \overline{A+B}$. (c) Suppose $\alpha$ and $\beta$ are scalars. By the proposition in Section 1.7, $\alpha \bar{Y}=\overline{\alpha Y}$ if $\alpha \neq 0$; if $\alpha=0$, these two sets are obviously equal. Hence it follows from $(b)$ that
+
+$$
+\alpha \bar{Y}+\beta \bar{Y}=\overline{\alpha Y}+\overline{\beta Y} \subset \overline{\alpha Y+\beta Y} \subset \bar{Y}
+$$
+
+the assumption that $\bar{Y}$ is a subspace was used in the last inclusion.
+
+The proofs that convex sets have convex closures and that balanced sets have balanced closures are so similar to this proof of $(c)$ that we shall omit them from $(d)$ and $(e)$.
+
+(d) Since $C^{\circ} \subset C$ and $C$ is convex, we have
+
+$$
+t C^{\circ}+(1-t) C^{\circ} \subset C
+$$
+
+if $0<t<1$. The two sets on the left are open; hence so is their sum. Since every open subset of $C$ is a subset of $C^{\circ}$, it follows that $C^{\circ}$ is convex.
+
+(e) If $0<|\alpha| \leq 1$, then $\alpha B^{\circ}=(\alpha B)^{\circ}$, since $x \rightarrow \alpha x$ is a homeomorphism. Hence $\alpha B^{\circ} \subset \alpha B \subset B$, since $B$ is balanced. But $\alpha B^{\circ}$ is open. So $\alpha B^{\circ} \subset B^{\circ}$. If $B^{\circ}$ contains the origin, then $\alpha \vec{B}^{\hat{\circ}} \subset B^{\circ}$ even for $\alpha=0$.
+
+$(f)$ Let $V$ be a neighborhood of 0 . By Theorem $1.11, \bar{W} \subset V$ for some neighborhood $W$ of 0 . Since $E$ is bounded, $E \subset t W$ for all sufficiently large $t$. For these $t$, we have $\bar{E} \subset t \bar{W} \subset t V$.
+
+1.14 Theorem In a topological vector space $X$,
+
+(a) every neighborhood of 0 contains a balanced neighborhood of 0 , and
+
+(b) every convex neighborhood of 0 contains a balanced convex neighborhood of 0 .
+
+PROOF (a) Suppose $U$ is a neighborhood of 0 in $X$. Since scalat multiplication is continuous, there is a $\delta>0$ and there is a neighborhood $V$ of 0 in $X$ such that $\alpha V \subset U$ whenever $|\alpha|<\delta$. Let $W$ be the union of all these sets $\alpha V$. Then $W$ is a neighborhood of $0, W$ is balanced, and $W \subset U$.
+
+(b) Suppose $U$ is a convex neighborhood of 0 in $X$. Let $A=\bigcap \alpha U$, where $\alpha$ ranges over the scalars of absolute value 1 . Choose $W$ as in part $(a)$. Since $W$ is balanced, $\alpha^{-1} W=W$ when $|\alpha|=1$; hence $W \subset \alpha U$. Thus $W \subset A$, which implies that the interior $A^{\circ}$ of $A$ is a neighborhood of 0 . Clearly $A^{\circ} \subset U$. Being an intersection of convex sets, $A$ is convex; hence so is $A^{\circ}$. To prove that $A^{\circ}$ is a neighborhood with the desired properties, we have to show that $A^{\circ}$ is balanced; for this it suffices to prove that $A$ is balanced. Choose $r$ and $\beta$ so that $0 \leq r \leq 1,|\beta|=1$. Then
+
+$$
+r \beta A=\bigcap_{|\alpha|=1} r \beta \alpha U=\bigcap_{|\alpha|=1} r \alpha U
+$$
+
+Since $\alpha U$ is a convex set that contains 0 , we have $r \alpha U \subset \alpha U$. Thus $r \beta A \subset A$, which completes the proof.
+
+Theorem 1.14 can be restated in terms of local bases. Let us say that a local base $\mathscr{B}$ is balanced if its members are balanced sets, and let us call $\mathscr{B}$ convex if its members are convex sets.
+
+\section{Corollary}
+(a) Every topological vector space has a balanced local base.
+
+(b) Every locally convex space has a balanced convex local base.
+
+Recall also that Theorem 1.11 holds for each of these local bases.
+
+1.15 Theorem Suppose $V$ is a neighborhood of 0 in a topological vector space $X$.
+
+(a) If $0<r_{1}<r_{2}<\cdots$ and $r_{n} \rightarrow \infty$ as $n \rightarrow \infty$, then
+
+$$
+X=\bigcup_{n=1}^{\infty} r_{n} V
+$$
+
+(b) Every compact subset $K$ of $X$ is bounded.
+
+(c) If $\delta_{1}>\delta_{2}>\cdots$ and $\delta_{n} \rightarrow 0$ as $n \rightarrow \infty$, and if $V$ is bounded, then the collection
+
+$$
+\left\{\delta_{n} V: n=1,2,3, \ldots\right\}
+$$
+
+is a local base for $X$.
+
+PROOF (a) Fix $x \in X$. Since $\alpha \rightarrow \alpha x$ is a continuous mapping of the scalar field into $\bar{X}$, the set of ail $\alpha$ with $\alpha x \in V$ is open, contains 0 , hence contains $1 / r_{n}$ for all large $n$. Thus $\left(1 / r_{n}\right) x \in V$, or $x \in r_{n} V$, for large $n$.
+(b) Let $W$ be a balanced neighborhood of 0 such that $W \subset V$. By $(a)$,
+
+$$
+K \subset \bigcup_{n=1}^{\infty} n W
+$$
+
+Since $K$ is compact, there are integers $n_{1}<\cdots<n_{s}$ such that
+
+$$
+K \subset n_{1} W \cup \cdots \cup n_{s} W=n_{s} W
+$$
+
+The equality holds because $W$ is balanced. If $t>n_{s}$, it follows that $K \subset$ $t W \subset t V$.
+
+(c) Let $U$ be a neighborhood of 0 in $X$. If $V$ is bounded, there exists $s>0$ such that $V \subset t U$ for all $t>s$. If $n$ is so large that $s \delta_{n}<1$, it follows that $V \subset\left(1 / \delta_{n}\right) U$. Hence $U$ actually contains all but finitely many of the sets $\delta_{n} V$.
+
+\section{Linear Mappings}
+1.16 Definitions When $X$ and $Y$ are sets, the symbol
+
+$$
+f: X \rightarrow Y
+$$
+
+will mean that $f$ is a mapping of $X$ into $Y$. If $A \subset X$ and $B \subset Y$, the image $f(A)$ of $A$ and the inverse image or preimage $f^{-1}(B)$ of $B$ are defined by
+
+$$
+f(A)=\{f(x): x \in A\}, \quad f^{-1}(B)=\{x: f(x) \in B\}
+$$
+
+Suppose now that $X$ and $Y$ are vector spaces over the same scalar field. A mapping $\Lambda: X \rightarrow Y$ is said to be linear if
+
+$$
+\Lambda(\alpha x+\beta y)=\alpha \Lambda x+\beta \Lambda y
+$$
+
+for all $x$ and $y$ in $X$ and all scalars $\alpha$ and $\beta$. Note that one often writes $\Lambda x$, rather than $\Lambda(x)$, when $\Lambda$ is linear.
+
+Linear mappings of $\boldsymbol{X}$ into its scalar field are called linear functionals.
+
+For example, the multiplication operators $M_{\alpha}$ of Section 1.7 are linear, but the translation operators $T_{a}$ are not, except when $a=0$.
+
+Here are some properties of linear mappings $\Lambda: X \rightarrow Y$ whose proofs are so easy that we omit them; it is assumed that $A \subset X$ and $B \subset Y$ :
+
+(a) $\Lambda 0=0$
+
+(b) If $A$ is a subspace (or a convex set, or a balanced set) the same is true of $\Lambda(A)$.
+
+(c) If $B$ is a subspace (or a convex set, or a balanced set) the same is true of $\Lambda^{-1}(B)$.
+
+(d) In particular, the set
+
+$$
+\Lambda^{-1}(\{0\})=\{x \in X: \Lambda x=0\}=\mathscr{N}(\Lambda)
+$$
+
+is a subspace of $X$, called the null space of $\Lambda$.
+
+We now turn to continuity properties of linear mappings.
+
+1.17 Theorem Let $X$ and $Y$ be topological vector spaces. If $\Lambda: X \rightarrow Y$ is linear and continuous at 0 , then $\Lambda$ is continuous. In fact, $\Lambda$ is uniformly continuous, in the following sense: To each neighborhood $W$ of 0 in $Y$ corresponds a neighborhood $V$ of 0 in $X$ such that
+
+$$
+y-x \in V \text { implies } \Lambda y-\Lambda x \in W .
+$$
+
+PRoOF Once $W$ is chosen, the continuity of $\Lambda$ at 0 shows that $\Lambda V \subset W$ for some neighborhood $V$ of 0 . If now $y-x \in V$, the linearity of $\Lambda$ shows that $\Lambda y-\Lambda x=\Lambda(y-x) \in W$. Thus $\Lambda$ maps the neighborhood $x+V$ of $x$ into the preassigned neighborhood $\Lambda x+W$ of $\Lambda x$, which says that $\Lambda$ is continuous at $x$.
+
+1.18 Theorem Let $\Lambda$ be a linear functional on a topological vector space $X$. Assume $\Lambda x \neq 0$ for some $x \in X$. Then each of the following four properties implies the other three:
+
+(a) $\Lambda$ is continuous.
+
+(b) The null space $\mathcal{N}(\Lambda)$ is closed.
+
+(c) $\mathcal{N}(\Lambda)$ is not dense in $X$.
+
+(d) $\Lambda$ is bounded in some neighborhood $V$ of 0 .
+
+PROOF Since $\mathscr{N}(\Lambda)=\Lambda^{-1}(\{0\})$ and $\{0\}$ is a closed subset of the scalar field $\Phi$, (a) implies $(b)$. By hypothesis, $\mathscr{N}(\Lambda) \neq X$. Hence $(b)$ implies $(c)$.
+
+Assume $(c)$ holds; i.e., assume that the complement of $\mathscr{N}(\Lambda)$ has nonempty interior. By Theorem 1.14,
+
+$$
+(x+V) \cap \mathscr{N}(\Lambda)=\varnothing
+$$
+
+for some $x \in X$ and some balanced neighborhood $V$ of 0 . Then $\Lambda V$ is a balanced subset of the field $\Phi$. Thus either $\Lambda V$ is bounded, in which case $(d)$ holds, or $\Lambda V=\Phi$. In the latter case, there exists $y \in V$ such that $\Lambda y=-\Lambda x$, and so $x+y \in \mathcal{N}(\Lambda)$, in contradiction to (1). Thus $(c)$ implies $(d)$.
+
+Finally, if $(d)$ holds then $|\Lambda x|<M$ for all $x$ in $V$ and for some $M<\infty$. If $r>0$ and if $W=(r / M) V$, then $|\Lambda x|<r$ for every $x$ in $W$. Hence $\Lambda$ is continuous at the origin. By Theorem 1.17, this implies $(a)$.
+
+\section{Finite-dimensional Spaces}
+1.19 Among the simplest Banach spaces are $R^{n}$ and $\mathscr{C}^{n}$, the standard $n$-dimensional vector spaces over $R$ and $\mathscr{C}$, respectively, normed by means of the usual euclidean metric: If, for example,
+
+$$
+z=\left(z_{1}, \ldots, z_{n}\right) \quad\left(z_{i} \in \mathbb{C}\right)
+$$
+
+is a vector in $\mathbb{E}^{n}$, then
+
+$$
+\|z\|=\left(\left|z_{1}\right|^{2}+\cdots+\left|z_{n}\right|^{2}\right)^{1 / 2}
+$$
+
+Other norms can be defined on $\mathbb{C}^{n}$. For example,
+
+$$
+\|z\|=\left|z_{1}\right|+\cdots+\left|z_{n}\right| \quad \text { or } \quad\|z\|=\max \left(\left|z_{i}\right|: 1 \leq i \leq n\right) \text {. }
+$$
+
+These norms correspond, of course, to different metrics on $\mathbb{C}^{n}$ (when $n>1$ ) but one can see very easily that they all induce the same topology on $\mathbb{C}^{n}$. Actually, more is true:
+
+If $X$ is a topological vector space over $\overparen{\mathbb{C}}$, and $\operatorname{dim} X=n$, then every basis of $X$ induces an isomorphism of $X$ onto $\mathbb{C}^{n}$. Theorem 1.21 will prove that this isomorphism must be a homeomorphism. In other words, this says that the topology of $\mathbb{C}^{n}$ is the only vector topology that an $n$-dimensional complex topological vector space can have.
+
+We shall also see that finite-dimensional subspaces are always closed. complex ones.
+
+Everything in the preceding discussion remains true with real scalars in place of
+
+We start with a lemma, which will be superseded by Theorems 1.21 and 1.22.
+
+$1.20^{\circ}$ Lemma Suppose $Y$ is a subspace of a topological vector space $X$, and $Y$ is locally compact, in the topology inherited from $X$. Then $Y$ is a closed subspace of $X$.
+
+PROOF There is a compact set $K \subset Y$ whose interior (relative to $Y$ ) contains 0 . Hence there is a neighborhood $U$ of 0 in $X$ such that $U \cap Y \subset K$. Choose a symmetric neighborhood $V$ of 0 in $X$ such that $\bar{V}+\bar{V} \subset U$. We claim that the set
+
+$$
+Y \cap(x+\bar{V})
+$$
+
+is compact, for every $x \in X$.
+
+To see this, fix $y_{0}$ in (1). For any $y$ in (1),
+
+$$
+y-y_{0}=(y-x)+\left(x-y_{0}\right) \in \bar{V}+\bar{V} \subset U .
+$$
+
+Also, $y-y_{0} \in Y$, since $Y$ is a subspace. Thus
+
+$$
+y-y_{0} \in U \cap Y \subset K
+$$
+
+which implies that (1) lies in the compact set $y_{0}+K$. But (1) is also a closed subset of $Y$, since $x+\bar{V}$ is closed in $X$ and since $Y$ inherits its topology from $X$. Thus (1) is a closed subset of a compact set and is therefore compact.
+
+Now fix $x \in \bar{Y}$. Let $\mathscr{B}$ be the collection of all open sets $W$ in $X$ such that $0 \in W$ and $W \subset V$, and associate with each $W \in \mathscr{B}$ the set
+
+$$
+E_{W}=Y \cap(x+\bar{W})
+$$
+
+Since $W \subset V$, each $E_{W}$ is compact. Since $x \in \bar{Y}$, no $E_{W}$ is empty. Since intersections of finitely many members of $\mathscr{B}$ belong to $\mathscr{B}$, it follows that $\left\{E_{W}: W \in \mathscr{B}\right\}$ is a collection of compact sets with the finite intersection property. Therefore there exists $z \in \cap E_{W}$. This $z$ lies in $Y$. On the other hand, $z \in x+\bar{W}$ for every $W \in \mathscr{B}$. Thus $z=x$ (Theorem 1.12). Hence $x \in Y$. This proves that $\bar{Y}=Y$, and so $Y$ is closed.
+
+1.21 Theorem Suppose $X$ is a complex topological vector space, $Y$ is a subspace of $X, n$ is a positive integer, and $\operatorname{dim} Y=n$. Then
+
+(a) every isomorphism of $\mathbb{C}^{n}$ onto $Y$ is a homeomorphism, and
+
+(b) Y is closed.
+
+The term "homeomorphism" refers, of course, to the euclidean topology of $\mathbb{C}^{n}$ on the one hand, and to the topology that $Y$ inherits from $X$ on the other. Since $\mathbb{C}^{n}$ is locally compact, Lemma 1.20 shows that $(b)$ follows from $(a)$. The proof that follows also yields the analogous theorem with real scalars in place of complex ones.
+
+PROOF Let $P_{n}$ be the theorem as stated. We first prove $P_{1}$. Let $\Lambda: \mathbb{C} \rightarrow Y$ be an isomorphism (i.e., a one-to-one linear mapping of $\mathscr{C}$ onto $Y$ ). Put $u=\Lambda 1$. Then $\Lambda \alpha=\alpha u$. The continuity of the vector space operations in $Y$ implies that $\Lambda$ is continuous. Note that $\Lambda^{-1}$ is a linear functional on $Y$ with null space $\{0\}$, a closed set. By Theorem 1.18, $\Lambda^{-1}$ is continuous. This proves $P_{1}$.
+
+Assume next that $n>1$ and $P_{n-1}$ is true. Let $\Lambda: \mathbb{C}^{n} \rightarrow Y$ be an isomorphism. Let $\left\{e_{1}, \ldots, e_{n}\right\}$ be a basis of $\mathbb{C}^{n}$; the $k$ th coordinate of $e_{k}$ is 1 ; the others are 0 . Put $u_{k}=\Lambda e_{k}$, for $k=1, \ldots, n$. Then
+
+$$
+\Lambda\left(\alpha_{1}, \ldots, \alpha_{n}\right)=\alpha_{1} u_{1}+\cdots+\alpha_{n} u_{n}
+$$
+
+and the continuity of the vector space operations in $Y$ implies again that $\Lambda$ is continuous. Since $\Lambda$ is an isomorphism, $\left\{u_{1}, \ldots, u_{n}\right\}$ is a basis of $Y$. Hence there are linear functionals $\gamma_{1}, \ldots, \gamma_{n}$ on $Y$ such that every $x \in Y$ has a unique representation of the form
+
+$$
+x=\gamma_{1}(x) u_{1}+\cdots+\gamma_{n}(x) u_{n}
+$$
+
+Each $\gamma_{i}$ has a null space in $Y$, of dimension $n-1$, which is closed in $Y$, by the assumed truth of $P_{n-1}$. Hence $\gamma_{i}$ is continuous, by Theorem 1.18. Since
+
+$$
+\Lambda^{-1} x=\left(\gamma_{1}(x), \ldots, \gamma_{n}(x)\right) \quad(x \in Y)
+$$
+
+it follows that $\Lambda^{-1}$ is continuous. Hence $P_{n}$ is true, and the proof is complete.
+
+1.22 Theorem Every locally compact topological vector space $X$ has finite dimension.
+
+PRoOF The origin of $X$ has a neighborhood $V$ whose closure is compact. By Theorem 1.15, $V$ is bounded, and the sets $2^{-n} V(n=1,2,3, \ldots)$ form a local base for $X$.
+
+The compactness of $\bar{V}$ shows that there exist $x_{1}, \ldots, x_{m}$ in $X$ such that
+
+$$
+\bar{V} \subset\left(x_{1}+\frac{1}{2} V\right) \cup \cdots \cup\left(x_{m}+\frac{1}{2} V\right) .
+$$
+
+Let $Y$ be the vector" space spanned by $x_{1}, \ldots, x_{m}$. Then $\operatorname{dim} Y \leq m$. By Theorem 1.21, $Y$ is a closed subspace of $X$.
+
+Since $V \subset Y+\frac{1}{2} V$ and since $\lambda Y=Y$ for every scalar $\lambda \neq 0$, it follows that
+
+$$
+\frac{1}{2} V \subset Y+\frac{1}{4} V
+$$
+
+so that
+
+$$
+V \subset Y+\frac{1}{2} V \subset Y+Y+\frac{1}{4} V=\bar{Y}+\frac{1}{4} V .
+$$
+
+If we continue in this way, we see that
+
+$$
+V \subset \bigcap_{n=1}^{\infty}\left(Y+2^{-n} V\right)
+$$
+
+Since $\left\{2^{-n} V\right\}$ is a local base, it now follows from $(a)$ of Theorem 1.13 that $V \subset \bar{Y}$. But $\bar{Y}=Y$. Thus $V \subset Y$, which implies that $k V \subset Y$ for $k=1,2,3, \ldots$ Hence $Y=X$, by $(a)$ of Theorem 1.15, and consequently $\operatorname{dim} X \leq m$. I/II
+
+1.23 Theorem If $X$ is a locally bounded topological vector space with the HeineBorel property, then $X$ has finite dimension.
+
+PROOF By assumption, the origin of $X$ has a bounded neighborhood $V$; Statement $(f)$ of Theorem 1.13 shows that $\bar{V}$ is also bounded. Thus $\bar{V}$ is compact, by the Heine-Borel property. This says that $X$ is locally compact, hence finite-dimensional, by Theorem 1.22.
+
+\section{Metrization}
+We recall that a topology $\tau$ on a set $X$ is said to be metrizable if there is a metric $d$ on $X$ which is compatible with $\tau$. In that case, the balls with radius $1 / n$ centered at $x$ form a local base at $x$. This gives a necessary condition for metrizability which, for topological vector spaces, turns out to be also sufficient.
+
+1.24 Theorem If $X$ is a topological vector space with a countable local base, then there is a metric $d$ on $X$ such that
+
+(a) $d$ is compatible with the topology of $X$,
+
+(b) the open balls centered at 0 are balanced, and
+
+(c) $d$ is invariant: $d(x+z, y+z)=d(x, y)$ for $x, y, z \in X$.
+
+If, in addition, $X$ is locally convex, then $d$ can be chosen so as to satisfy $(a),(b),(c)$, and also
+
+(d) all open balls are convex.
+
+PROOF By Theorem 1.14, $X$ has a balanced local base $\left\{V_{n}\right\}$ such that
+
+$$
+V_{n+1}+V_{n+1} \subset V_{n} \quad(n=1,2,3, \ldots)
+$$
+
+when $X$ is locally convex, this local base can be chosen so that each $V_{n}$ is also convex.
+
+Let $D$ be the set of all rational numbers $r$ of the form
+
+$$
+r=\sum_{n=1}^{\infty} c_{n}(r) 2^{-n},
+$$
+
+where each of the "digits" $c_{i}(r)$ is 0 or 1 and only finitely many are 1 . Thus each $r \in D$ satisfies the inequalities $0 \leq r<1$.
+
+Put $A(r)=X$ if $r \geq 1$; for any $r \in D$, define
+
+$$
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots \text {. }
+$$
+
+Note that each of these sums is actually finite. Define
+
+$$
+f(x)=\inf \{r: x \in A(r)\} \quad(x \in X)
+$$
+
+and
+
+$$
+d(x, y)=f(x-y) \quad(x \in X, y \in X)
+$$
+
+The proof that this $d$ has the desired properties depends on the inclusions
+
+$$
+A(r)+A(s) \subset A(r+s) \quad(r \in D, s \in D) .
+$$
+
+Before proving (6), let us see how the theorem follows from it. Since every $A(s)$ contains $0,(6)$ implies
+
+$$
+A(r) \subset A(r)+A(t-r) \subset A(t) \quad \text { if } \quad r<t .
+$$
+
+Thus $\{A(r)\}$ is totally ordered by set inclusion. We claim that
+
+$$
+f(x+y) \leq f(x)+f(y) \quad(x \in X, y \in X) .
+$$
+
+In the proof of (8) we may, of course, assume that the right side is $<1$. Fix $\varepsilon>0$. There exist $r$ and $s$ in $D$ such that
+
+$$
+f(x)<r, \quad f(y)<s, \quad r+s<f(x)+f(y)+\varepsilon .
+$$
+
+Thus $x \in A(r), y \in A(s)$, and (6) implies $x+y \in A(r+s)$. Now (8) follows, because
+
+$$
+f(x+y) \leq r+s<f(x)+f(y)+\varepsilon,
+$$
+
+and $\varepsilon$ was arbitrary.
+
+Since each $A(r)$ is balanced, $f(x)=f(-x)$. It is obvious that $f(0)=0$. If $x \neq 0$, then $x \notin V_{n}=A\left(2^{-n}\right)$ for some $n$, and so $f(x) \geq 2^{-n}>0$.
+
+These properties of $f$ show that (5) defines a translation-invariant metric $d$ on $X$. The open balls centered at 0 are the open sets
+
+$$
+B_{\delta}(0)=\{x: f(x)<\delta\}=\bigcup_{r<\delta} A(r) .
+$$
+
+If $\delta<2^{-n}$, then $B_{\delta}(0) \subset V_{n}$. Hence $\left\{B_{\delta}(0)\right\}$ is a local base for the topology of $X$. This proves $(a)$. Since each $A(r)$ is balanced, so is each $B_{\delta}(0)$. If each $V_{n}$ is convex, so is each $A(r)$, and (7) implies that the same is true of each $B_{\delta}(0)$, hence also of each translate of $B_{\delta}(0)$.
+
+The proof of (6) will be by induction. Let $P_{N}$ be the statement:
+
+If $r+s<1$ and $c_{n}(r)=c_{n}(s)=0$ for all $n>N$, then
+
+$$
+A(r)+A(s) \subset A(r+s)
+$$
+
+$P_{1}$ is true, by inspection. Assume $P_{N-1}$ is true, for some $N>1$. Choose $r \in D, s \in D$, so that $r+s<1$ and $c_{n}(r)=c_{n}(s)=0$ if $n>N$, and define $r^{\prime}$ and $s^{\prime}$ by
+
+$$
+r=r^{\prime}+c_{N}(r) 2^{-N}, \quad s=s^{\prime}+c_{N}(s) 2^{-N} .
+$$
+
+Then
+
+$$
+A(r)=A\left(r^{\prime}\right)+c_{N}(r) V_{N}, \quad A(s)=A\left(s^{\prime}\right)+c_{N}(s) V_{N}
+$$
+
+By $P_{N-1}, A\left(r^{\prime}\right)+A\left(s^{\prime}\right) \subset A\left(r^{\prime}+s^{\prime}\right)$. Hence
+
+$$
+A(r)+A(s) \subset A\left(r^{\prime}+s^{\prime}\right)+c_{N}(r) V_{N}+c_{N}(s) V_{N}
+$$
+
+If $c_{N}(r)=c_{N}(s)=0$, then $r=r^{\prime}, s=s^{\prime}$, and (13) gives (10). If $c_{N}(r)=0$ and $c_{N}(s)=1$, the right side of (13) is
+
+$$
+A\left(r^{\prime}+s^{\prime}\right)+V_{N}=A\left(r^{\prime}+s^{\prime}+2^{-N}\right)=A(r+s),
+$$
+
+so that (10) holds again. The, case $c_{N}(r)=1, c_{N}(s)=0$ is handled the same way. If $c_{N}(r)=c_{N}(s)=1$, the right side of (13) is
+
+$$
+\begin{aligned}
+A\left(r^{\prime}+s^{\prime}\right)+V_{N}+V_{N} & \subset A\left(r^{\prime}+s^{\prime}\right)+V_{N-1} \\
+& =A\left(r^{\prime}+s^{\prime}\right)+A\left(2^{-N+1}\right) \subset A\left(r^{\prime}+s^{\prime}+2^{-N+1}\right)=A(r+s) .
+\end{aligned}
+$$
+
+The last inclusion depended on $P_{N-1}$.
+
+Thus $P_{N-1}$ implies $P_{N}$. Hence (6) is correct, and the proof is complete.
+
+1.25 Cauchy sequences (a) Suppose $d$ is a metric on a set $X$. A sequence $\left\{x_{n}\right\}$ in $X$ is a Cauchy sequence if to every $\varepsilon>0$ there corresponds an integer $N$ such that $d\left(x_{m}, x_{n}\right)<\varepsilon$ whenever $m>N$ and $n>N$. If every Cauchy sequence in $X$ converges to a point of $X$, then $d$ is said to be a complete metric on $X$.
+
+(b) Let $\tau$ be the topology of a topological vector space $X$. The notion of Cauchy sequence can be defined in this setting without reference to any metric: Fix a local base $\mathscr{B}$ for $\tau$. A sequence $\left\{x_{n}\right\}$ in $X$ is then said to be a Cauchy sequence if to every $V \in \mathscr{B}$ corresponds an $N$ such that $x_{n}-x_{m} \in V$ if $n>N$ and $m>N$.
+
+It is clear that different local bases for the same $\tau$ give rise to the same class of Cauchy sequences.
+
+(c) Suppose now that $X$ is a topological vector space whose topology $\tau$ is compatible with an invariant metric $d$. Let us temporarily use the terms $d$-Cauchy sequence and $\tau$-Cauchy sequence for the concepts defined in $(a)$ and $(b)$, respectively. Since
+
+$$
+d\left(x_{n}, x_{m}\right)=d\left(x_{n}-x_{m}, 0\right)
+$$
+
+and since the $d$-balls centered at the origin form a local base for $\tau$, we conclude:
+
+A sequence $\left\{x_{n}\right\}$ in $X$ is a $d$-Cauchy sequence if and only if it is a $\tau$-Cauchy sequence.
+
+Consequently, any two invariant metrics on $X$ that are compatible with $\tau$ have the same Cauchy sequences. They clearly also have the same convergent sequences (namely, the $\tau$-convergent ones). These remarks prove the following theorem:
+
+1.26 Theorem If $d_{1}$ and $d_{2}$ are invariant metrics on a vector space $X$ which induce the same topology on $X$, then
+
+(a) $d_{1}$ and $d_{2}$ have the same Cauchy sequences, and
+
+(b) $d_{1}$ is complete if and only if $d_{2}$ is complete.
+
+Invariance is needed in the hypothesis (Exercise 12).
+
+The next theorem is an analogue of Lemma 1.20, with completeness in place of local compactness. Note that the two proofs are quite similar.
+
+1.27 Theorem Suppose $Y$ is a subspace of a topological vector space $X$, and $Y$ is an F-space (in the topology inherited from $X$ ). Then $Y$ is a closed subspace of $X$.
+
+PROOF Choose an invariant metric $d$ on $Y$, compatible with its topology. Let .
+
+$$
+B_{1 / n}=\left\{y \in Y: d(y, 0)<\frac{1}{n}\right\}
+$$
+
+let $U_{n}$ be a neighborhood of 0 in $X$ such that $Y \cap U_{n}=B_{1 / n}$, and choose symmetric neighborhoods $V_{n}$ of 0 in $X$ such that $V_{n}+V_{n} \subset U_{n}$.
+
+Suppose $x \in \bar{Y}$, and define
+
+$$
+E_{n}=Y \cap\left(x+V_{n}\right) \quad(n=1,2,3, \ldots)
+$$
+
+If $y_{1} \in E_{n}$ and $y_{2} \in E_{n}$, then $y_{1}-y_{2}$ lies in $Y$ and also in $V_{n}+V_{n} \subset U_{n}$, hence in $B_{1 / n}$. The diameters of the sets $E_{n}$ therefore tend to 0 . Since each $E_{n}$ is nonempty and since $Y$ is complete, it follows that the $Y$-closures of the sets $E_{n}$ have exactly one point $y_{0}$ in common.
+
+Let $W$ be a neighborhood of 0 in $X$, and define
+
+$$
+F_{n}=Y \cap\left(x+W \cap V_{n}\right) .
+$$
+
+The preceding argument shows that the $Y$-closures of the sets $F_{n}$ have one common point $y_{W}$. But $F_{n} \subset E_{n}$. Hence $y_{W}=y_{0}$. Since $F_{n} \subset x+W$, it follows that $y_{0}$ lies in the $X$-closure of $x+W$, for every $W$. This implies $y_{0}=x$. Thus $x \in Y$. This proves that $\bar{Y}=Y$.
+
+The following simple facts are sometimes useful.
+
+\subsection{Theorem}
+(a) If $d$ is a translation-invariant metric on a vector space $X$ then
+
+$$
+d(n x, 0) \leq n d(x, 0)
+$$
+
+for every $x \in X$ and for $n=1,2,3, \ldots$
+
+(b) If $\left\{x_{n}\right\}$ is a sequence in a metrizable topological vector space $X$ and if $x_{n} \rightarrow 0$ as $n \rightarrow \infty$, then there are positive scalars $\gamma_{n}$ such that $\gamma_{n} \rightarrow \infty$ and $\gamma_{n} x_{n} \rightarrow 0$.
+
+PROOF Statement (a) follows from
+
+$$
+d(n x, 0) \leq \sum_{k=1}^{n} d(k x,(k-1) x)=n d(x, 0)
+$$
+
+To prove $(b)$, let $d$ be a metric as in (a), compatible with the topology of $X$. Since $d\left(x_{n}, 0\right) \rightarrow 0$, there is an increasing sequence of positive integers $n_{k}$ such For such $n$,
+
+Hence $\gamma_{n} x_{n} \rightarrow 0$ as $n \rightarrow \infty$.
+
+$$
+d\left(\gamma_{n} x_{n}, 0\right)=d\left(k x_{n}, 0\right) \leq k d\left(x_{n}, 0\right)<k^{-1}
+$$
+
+If $d$ is a metric on a set $X$, a set $E \subset X$ is said to be $d$-bounded if there is a number $M<\infty$ such that $d(x, y) \leq M$ for all $x$ and $y$ in $E$.
+
+If $X$ is a topological vector space with a compatible metric $d$, the bounded sets and the $d$-bounded ones need not be the same, even if $d$ is invariant. For instance, if $d$ is a metric such as the one constructed in Theorem 1.24, then $X$ itself is $d$-bounded (with $M=1$ ) but, as we shall see presently, $X$ cannot be bounded, unless $X=\{0\}$. If $X$ is a normed space and $d$ is the metric induced by the norm, then the two notions of boundedness coincide; but if $d$ is replaced by $d_{1}=d /(1+d)$ (an invariant metric which induces the same topology) they do not.
+
+Whenever bounded subsets of a topological vector space are discussed, it will be understood that the definition is as in Section 1.6: A set $E$ is bounded if, for every neighborhood $V$ of 0 , we have $E \subset t V$ for all sufficiently large $t$.
+
+We already saw (Theorem 1.15) that compact sets are bounded. To see another type of example, let us prove that Cauchy sequences are bounded (hence convergent sequences are bounded): If $\left\{x_{n}\right\}$ is a Cauchy sequence in $X$, and $V$ and $W$ are balanced neighborhoods of 0 with $V+V \subset W$, then [part $(b)$ of Section 1.25] there exists $N$ such that $x_{n} \in x_{N}+V$ for all $n \geq \tilde{N}$. Take $s>1$ so that $x_{N} \in s V$. Then
+
+$$
+x_{n} \in s V+V \subset s V+s V \subset s W \quad(n \geq N)
+$$
+
+Hence $x_{n} \in t W$ for all $n \geq 1$, if $t$ is sufficiently large.
+
+Also, closures of bounded sets are bounded (Theorem 1.13).
+
+On the other hand, if $x \neq 0$ and $E=\{n x: n=1,2,3, \ldots\}$, then $E$ is not bounded, because there is a neighborhood $V$ of 0 that does not contain $x$; hence $n x$ is not in $n V$; it follows that no $n V$ contains $E$.
+
+Consequently, no subspace of $X$ (other than $\{0\}$ ) can be bounded.
+
+The next theorem characterizes boundedness in terms of sequences.
+
+1.30 Theorem The following two properties of a set $E$ in a topological vector space are equivalent:
+
+(a) $E$ is bounded.
+
+(b) If $\left\{x_{n}\right\}$ is a sequence in $E$ and $\left\{\alpha_{n}\right\}$ is a sequence of scalars such that $\alpha_{n} \rightarrow 0$ as $n \rightarrow \infty$, then $\alpha_{n} x_{n} \rightarrow 0$ as $n \rightarrow \infty$.
+
+PROOF Suppose $E$ is bounded. Let $V$ be a balanced neighborhood of 0 in $X$. Then $E \subset t V$ for some $t$. If $x_{n} \in E$ and $\alpha_{n} \rightarrow 0$, there exists $N$ such that $\left|\alpha_{n}\right| t<1$ if $n>N$. Since $t^{-1} E \subset V$ and $V$ is balanced, $\alpha_{n} x_{n} \in V$ for all $n>N$. Thus $\alpha_{n} x_{n} \rightarrow 0$.
+
+Conversely, if $E$ is not bounded, there is a neighborhood $V$ of 0 and a sequence $r_{n} \rightarrow \infty$ such that no $r_{n} V$ contains $E$. Choose $x_{n} \in E$ such that $x_{n} \notin r_{n} V$. Then no $r_{n}^{-1} x_{n}$ is in $V$, so that $\left\{r_{n}^{-1} x_{n}\right\}$ does not converge to 0 .
+
+1.31 Bounded linear transformations Suppose $X$ and $Y$ are topological vector spaces and $\Lambda: X \rightarrow Y$ is linear. $\Lambda$ is said to be bounded if $\Lambda$ maps bounded sets into bounded sets, i.e., if $\Lambda(E)$ is a bounded subset of $Y$ for every bounded set $E \subset X$.
+
+This definition conflicts with the usual notion of a bounded function as being one whose range is a bounded set. In that sense, no linear function (other than 0 ) could ever be bounded. Thus when bounded linear mappings (or transformations) are discussed, it is to be understood that the definition is in terms of bounded sets, as above.
+
+1.32 Theorem Suppose $X$ and $Y$ are topological vector spaces and $\Lambda: X \rightarrow Y$ is linear. Among the following four properties of $\Lambda$, the implications
+
+$$
+(a) \rightarrow(b) \rightarrow(c)
+$$
+
+hold. If $X$ is metrizable, then also
+
+$$
+(c) \rightarrow(d) \rightarrow(a) \text {, }
+$$
+
+so that all four properties are equivalent.
+
+(a). $\Lambda$ is continuous.
+
+(b) $\Lambda$ is bounded.
+
+(c) If $x_{n} \rightarrow 0$ then $\left\{\Lambda x_{n}: n=1,2,3, \ldots\right\}$ is bounded.
+
+(d) If $x_{n} \rightarrow 0$ then $\Lambda x_{n} \rightarrow 0$.
+
+Exercise 13 contains an example in which $(b)$ holds but $(a)$ does not.
+
+PROOF Assume (a), let $E$ be a bounded set in $X$, and let $W$ be a neighborhood of 0 in $Y$. Since $\Lambda$ is continuous (and $\Lambda 0=0$ ) there is a neighborhood $V$ of 0 in $X$ such that $\Lambda(V) \subset W$. Since $E$ is bounded, $E \subset t V$ for all large $t$, so that
+
+$$
+\Lambda(E) \subset \Lambda(t V)=t \Lambda(V) \subset t W
+$$
+
+This shows that $\Lambda(E)$ is a bounded set in $Y$.
+
+Thus $(a) \rightarrow(b)$. Since convergent sequences are bounded, $(b) \rightarrow(c)$.
+
+Assume now that $X$ is metrizable, that $\Lambda$ satisfies $(c)$, and that $x_{n} \rightarrow 0$. By Theorem 1.28, there are positive scalars $\gamma_{n} \rightarrow \infty$ such that $\gamma_{n} x_{n} \rightarrow 0$. Hence $\left\{\Lambda\left(\gamma_{n} x_{n}\right)\right\}$ is a bounded set in $Y$, and now Theorem 1.30 implies that
+
+$$
+\Lambda x_{n}=\gamma_{n}^{-1} \Lambda\left(\gamma_{n} x_{n}\right) \rightarrow 0 \quad \text { as } \quad n \rightarrow \infty
+$$
+
+Finally, assume that $(a)$ fails. Then there is a neighborhood $W$ of 0 in $Y$ such that $\Lambda^{-1}(W)$ contains no neighborhood of 0 in $X$. If $X$ has a countable local base, there is therefore a sequence $\left\{x_{n}\right\}$ in $X$ so that $x_{n} \rightarrow 0$ but $\Lambda x_{n} \notin W$. Thus $(d)$ fails.
+
+\section{Seminorms and Local Convexity}
+1.33 Definitions A seminorm on a vector space $X$ is a real-valued function $p$ on $X$ such that
+
+(a) $p(x+y) \leq p(x)+p(y)$
+
+(b) $p(\alpha x)=|\alpha| p(x)$
+
+for all $x$ and $y$ in $X$ and all scalars $\alpha$.
+
+Property $(a)$ is called subadditivity. Theorem 1.34 will show that a seminorm $p$ is a norm if it satisfies
+
+(c) $p(x) \neq 0$ if $x \neq 0$.
+
+A family $\mathscr{P}$ of seminorms on $X$ is said to be separating if to each $x \neq 0$ corresponds at least one $p \in \mathscr{P}$ with $p(x) \neq 0$.
+
+Next, consider a convex set $A \subset X$ which is absorbing, in the sense that every $x \in X$ lies in $t A$ for some $t=t(x)>0$. [For example, $(a)$ of Theorem 1.15 implies that every neighborhood of 0 in a topological vector space is absorbing. Every absorbing set obviously contains 0.] The Minkowski functional $\mu_{A}$ of $A$ is defined by
+
+$$
+\mu_{A}(x)=\operatorname{in}\left\{t>0: i^{-1} x \in A\right\} \quad(x \in X)
+$$
+
+Note that $\mu_{A}(x)<\infty$ for all $x \in X$, since $A$ is absorbing. The seminorms on $X$ will turn out to be precisely the Minkowski functionals of balanced convex absorbing sets.
+
+Seminorms are closely related to local convexity, in two ways: In every locally convex space there exists a separating family of continuous seminorms. Conversely, if $\mathscr{P}$ is a separating family of seminorms on a vector space $X$, then $\mathscr{P}$ can be used to define a locally convex topology on $X$ with the property that every $p \in \mathscr{P}$ is continuous. This is a frequently used method of introducing a topology. The details are contained in Theorems 1.36 and 1.37 .
+
+1.34 Theorem Suppose $p$ is a seminorm on a vector space $X$. Then
+
+(a) $p(0)=0$
+
+(b) $|p(x)-p(y)| \leq p(x-y)$.
+
+(c) $p(x) \geq 0$.
+
+(d) $\{x: p(x)=0\}$ is a subspace of $X$.
+
+(e) The set $B=\{x: p(x)<1\}$ is convex, balanced, absorbing, and $p=\mu_{\bar{B}}$.
+
+PROOF Statement $(a)$ follows from $p(\alpha x)=|\alpha| p(x)$, with $\alpha=0$. The subadditivity of $p$ shows that
+
+$$
+p(x)=p(x-y+y) \leq p(x-y)+p(y)
+$$
+
+so that $p(x)-p(y) \leq p(x-y)$. This also holds with $x$ and $y$ interchanged.
+
+Since $\hat{p}(x-y)=p(y-x),(b)$ follows. With $y=0,(b)$ implies $(c)$. If $p(x)=$ $p(y)=0$ and $\alpha, \beta$ are scalars, $(c)$ implies
+
+This proves $(d)$.
+
+$$
+0 \leq p(\alpha x+\beta y) \leq|\alpha| p(x)+|\hat{\beta}| p(y)=0 .
+$$
+
+As to (e), it is clear that $B$ is balanced. If $x \in B, y \in B$, and $0<t<1$, then
+
+$$
+p(t x+(1-t) y) \leq t p(x)+(1-t) p(y)<1 .
+$$
+
+Thus $B$ is convex. If $x \in X$ and $s>p(x)$ then $p\left(s^{-1} x\right)=s^{-1} p(x)<1$. This shows that $B$ is absorbing and also that $\mu_{B}(x) \leq s$. Hence $\mu_{B} \leq p$. But if $0<t \leq p(x)$ then $p\left(t^{-1} x\right) \geq 1$, and so $t^{-1} x$ is not in $B$. This implies $p(x) \leq \mu_{B}(x)$ and com-
+pletes the proof.
+
+1.35 Theorem Suppose $A$ is a convex absorbing set in a vector space $X$. Then
+
+(a) $\mu_{A}(x+y) \leq \mu_{A}(x)+\mu_{A}(y)$.
+
+(b) $\mu_{A}(t x)=t \mu_{A}(x)$ if $t \geq 0$.
+
+(c) $\mu_{A}$ is a seminorm if $A$ is balanced.
+
+(d) If $B=\left\{x: \mu_{A}(x)<1\right\}$ and $C=\left\{x: \mu_{A}(x) \leq 1\right\}$, then $B \subset A \subset C$ and $\mu_{B}=\mu_{A}=\mu_{C}$. PRoOF Associate with each $x \in X$ the set
+
+$$
+H_{A}(x)=\left\{t>0: t^{-1} x \in A\right\}
+$$
+
+Suppose $t \in H_{A}(x)$ and $s>t$. Since $0 \in A$ and $A$ is convex, it follows that $s \in H_{A}(x)$. Each $H_{A}(x)$ is a half line whose left end point is $\mu_{A}(x)$. is convex,
+
+Suppose $\mu_{A}(x)<s, \mu_{A}(y)<t, u=s+t$. Then $s^{-1} x \in A, t^{-1} y \in A$. Since $A$
+
+$$
+u^{-1}(x+y)=\left(\frac{s}{u}\right)\left(s^{-1} x\right)+\left(\frac{t}{u}\right)\left(t^{-1} y\right)
+$$
+
+lies in $A$. Hence $\mu_{A}(x+y) \leq u$. This gives $(a)$. Properties $(b)$ and $(c)$ are now obvious.
+
+If $\mu_{A}(x)<1$, then $1 \in H_{A}(x)$, and so $x \in A$. Likewise, if $x \in A$, then $\mu_{A}(x) \leq 1$. Thus $B \subset A \subset C$. This implies $H_{B}(x) \subset H_{A}(x) \subset H_{C}(x)$, for every $x \in X$, so that
+
+$$
+\mu_{C}(x) \leq \mu_{A}(x) \leq \mu_{B}(x) .
+$$
+
+To prove that equality holds, suppose $\mu_{C}(x)<s<t$. Then $s^{-1} x \in C$, hence $\mu_{A}\left(s^{-1} x\right) \leq 1$, so that
+
+$$
+\mu_{A}\left(t^{-1} x\right) \leq \frac{s}{t}<1
+$$
+
+Thus $t^{-1} x \in B, \mu_{B}\left(t^{-1} x\right) \leq 1, \mu_{B}(x) \leq t$. This completes the proof.
+
+1.36 Theorem Suppose $\mathscr{B}$ is a convex balanced local base in a topological vector space $X$. Associate to every $V \in \mathscr{B}$ its Minkowski functional $\mu_{V}$. Then $\left\{\mu_{V}: V \in \mathscr{B}\right\}$ is a separating family of continuous seminorms on $X$.
+
+PROOF Since $V$ is convex, balanced, and absorbing, $\mu_{V}$ is a seminorm. If $x \in X$ and $x \neq 0$, then $x \notin V$ for some $V \in \mathscr{B}$. For this $V$ we have $\mu_{V}(x) \geq 1$. Thus $\left\{\mu_{V}\right\}$ is a separating family. If $x \in V$, then $t x \in V$ for some $t>1$, since $V$ is open. Hence $\mu_{V}<1$ in $V$. If $r>0$, it follows from Theorem 1.34 that
+
+$$
+\left|\mu_{V}(x)-\mu_{V}(y)\right| \leq \mu_{V}(x-y)<r
+$$
+
+if $x-y \in r V$. This proves that each $\mu_{V}$ is continuous.
+
+1.37 Theorem Suppose $\mathscr{P}$ is a separating family of seminorms on a vector space $X$. Associate to each $p \in \mathscr{P}$ and to each positive integer $n$ the set
+
+$$
+V(p, n)=\left\{x: p(x)<\frac{1}{n}\right\}
+$$
+
+Let $\mathscr{B}$ be the collection of all finite intersections of the sets $V(p, n)$. Then $\mathscr{B}$ is a convex balanced local base for a topology $\tau$ on $X$, which turns $X$ into a locally convex space such that
+
+(a) every $p \in \mathscr{P}$ is conitinuous, and
+
+(b) a set $E \subset X$ is bounded if and only if every $p \in \mathscr{P}$ is bounded on $E$.
+
+PROOF Declare a set $A \subset X$ to be open if and only if $A$ is a (possibly empty) union of translates of members of $\mathscr{B}$. This clearly defines a translation-invariant topology $\tau$ on $X$; each member of $\mathscr{B}$ is convex and balanced, and $\mathscr{B}$ is a local base for $\tau$.
+
+Suppose $x \in X, x \neq 0$. Then $p(x)>0$ for some $p \in \mathscr{P}$. Since $x$ is not in $V(p, n)$ if $n p(x)>1$, we see that 0 is not in the neighborhood $x-V(p, n)$ of $x$, so that $x$ is not in the closure of $\{0\}$. Thus $\{0\}$ is a closed set, and since $\tau$ is translation-invariant, every point of $X$ is a closed set.
+
+Next we show that addition and scalar multiplication are continuous. Let $U$ be a neighborhood of 0 in $X$. Then
+
+$$
+U \supset V\left(p_{1}, n_{1}\right) \cap \cdots \cap V\left(p_{m}, n_{m}\right)
+$$
+
+for some $p_{1}, \ldots, p_{m} \in P$ and some positive integers $n_{1}, \ldots, n_{m}$. Put
+
+$$
+V=V\left(p_{1}, 2 n_{1}\right) \cap \cdots \cap V\left(p_{m}, 2 n_{m}\right) .
+$$
+
+Since every $p \in \mathscr{P}$ is subadditive, $V+V \subset U$. This proves that addition is continuous.
+
+Suppose now that $x \in X, \alpha$ is a scalar, and $U$ and $V$ are as above. Then $x \in s V$ for some $s>0$. Put $t=s /(1+|\alpha| s)$. If $y \in x+t V$ and $|\beta-\alpha|<1 / s$, then
+
+which lies in
+
+$$
+\beta y-\alpha x=\beta(y-x)+(\beta-\alpha) x
+$$
+
+$$
+|\beta| t V+|\beta-\alpha| s V \subset V+V \subset U
+$$
+
+since $|\beta| t \leq 1$ and $V$ is balanced. This proves that scalar multiplication is continuous.
+
+Thus $X$ is a locally convex space. The definition of $V(p, n)$ shows that every $p \in \mathscr{P}$ is continuous at 0 . Hence $p$ is continuous on $X$, by $(b)$ of Theorem 1.34.
+
+Finally, suppose $E \subset X$ is bounded. Fix $p \in \mathscr{P}$. Since $V(p, 1)$ is a neighborhood of $0, E \subset k V(p, 1)$ for some $k<\infty$. Hence $p(x)<k$ for every $x \in E$. It follows that every $p \in \mathscr{P}$ is bounded on $E$.
+
+Conversely, suppose $E$ satisfies this condition, $U$ is a neighborhood of 0 , and (1) holds. There are numbers $M_{i}<\infty$ such that $p_{i}<M_{i}$ on $E(1 \leq i \leq m)$. - If $n>M_{i} n_{i}$ for $1 \leq i \leq m$, it follows that $E \subset n U$, so that $E$ is bounded. I//
+
+1.38 Remarks (a) It was necessary to take finite intersections of the sets $V(p, n)$ in Theorem 1.37; the sets $V(p, n)$ themselves need not form a local base. (They do form what is usually called a subbase for the constructed topology.) To see an example of this, take $X=R^{2}$, and let $\mathscr{P}$ consist of the seminorms $p_{1}$ and $p_{2}$ defined by $p_{i}(x)=$ $\left|x_{i}\right|$; here $x=\left(x_{1}, x_{2}\right)$. Exercise 8 develops this comment further.
+
+(b) Theorems 1.36 and 1.37 raise a natural problem: If $\mathscr{B}$ is a convex balanced local base for the topology $\tau$ of a locally convex space $X$, then $\mathscr{B}$ generates a separating family $\mathscr{P}$ of continuous seminorms on $X$, as in Theorem 1.36. This $\mathscr{P}$ in turn induces a topology $\tau_{1}$ on $X$, by the process described in Theorem 1.37. Is $\tau=\tau_{1}$ ?
+
+The answer is affirmative. To see this, note that every $p \in \mathscr{P}$ is $\tau$-continuous, so that the sets $V(p, n)$ of Theorem 1.37 are in $\tau$. Hence $\tau_{1} \subset \tau$. Conversely, if $W \in \mathscr{B}$ and $p=\mu_{W}$, then
+
+$$
+W=\left\{x: \mu_{W}(x)<1\right\}=V(\bar{p}, 1) .
+$$
+
+Thus $W \in \tau_{1}$ for every $W \in \mathscr{B}$; this implies that $\tau \subset \tau_{1}$.
+
+(c) If $\mathscr{P}=\left\{p_{i}: i=1,2,3, \ldots\right\}$ is a countable separating family of seminorms on $X$, Theorem 1.37 shows that $\mathscr{P}$ induces a topology $\tau$ with a countable local base. By Theorem 1.24, $\tau$ is metrizable. In the present situation, a compatible translationinvariant metric can be defined directly in terms of $\left\{p_{i}\right\}$. Define
+
+$$
+d(x, y)=\sum_{i=1}^{\infty} \frac{2^{-i} p_{i}(x-y)}{1+p_{i}(x-y)} \text {. }
+$$
+
+It is easy to verify that $d$ is a metric on $X$. To prove that $d$ is compatible with $\tau$, we show that the balls
+
+$$
+B_{r}=\{x: d(x, 0)<r\} \quad(r>0)
+$$
+
+form a local base for $\tau$.
+
+Since each $p_{i}$ is continuous (Theorem 1.37) and since the series (1) converges uniformly on $X \times X, d$ is continuous; hence each $B_{r}$ is open. If $W$ is a neighborhood of 0 , then $W$ contains the intersection of appropriately chosen sets
+
+$$
+V\left(p_{i}, n_{i}\right)=\left\{x: p_{i}(x)<\frac{1}{n_{i}}\right\} \quad(1 \leq i \leq k)
+$$
+
+If $x \in B_{r}$, then
+
+$$
+\frac{2^{-i} p_{i}(x)}{1+p_{i}(x)}<r \quad(i=1,2,3, \ldots)
+$$
+
+If $r$ is small enough, (4) forces $p_{1}(x), \ldots, p_{k}(x)$ to be so small that $B_{r}$ lies in each of the sets (3); hence $B_{r} \subset W$.
+
+This proves that $d$ is compatible with $\tau$.
+
+Formula (1) has considerable advantages over the more complicated construction of Theorem 1.24. Of course, (1) is applicable only in locally convex spaces, and it has a flaw even there: The balls which it defines need not be convex. An example of this is given in Exercise 18.
+
+1.39 Theorem A topological vector space $X$ is normable if and only if its origin has a convex bounded neighborhood.
+
+PROOF If $X$ is normable, and if $\|\cdot\|$ is a norm that is compatible with the topology of $X$, then the open unit ball $\{x:\|x\|<1\}$ is convex and bounded.
+
+For the converse, assume $V$ is a convex bounded neighborhood of 0 . By Theorem 1.14, $V$ contains a convex balanced neighborhood $U$ of 0 ; of course, $U$ is also bounded. Define
+
+$$
+\|x\|=\mu(x) \quad(x \in X)
+$$
+
+where $\mu$ is the Minkowski functional of $U$.
+
+By $(c)$ of Theorem 1.15, the sets $r U(r>0)$ form a local base for the topology of $X$. If $x \neq 0$, then $x \notin r U$ for some $r>0$; hence $\|x\| \geq r$. It now follows from Theorem 1.35 that (1) defines a norm. The definition of the Minkowski functional, together with the fact that $U$ is open, implies that
+
+$$
+\{x:\|x\|<r\}=r U
+$$
+
+for every $r>0$. The norm topology coincides therefore with the given one.
+
+\section{Quotient Spaces}
+1.40 Definitions Let $N$ be a subspace of a vector space $X$. For every $x \in X$, let $\pi(x)$ be the coset of $N$ that contains $x$; thus
+
+$$
+\pi(x)=x+N .
+$$
+
+These cosets are the elements of a vector space $X / N$, called the quotient space of $X$ modulo $N$, in which addition and scalar multiplication are defined by
+
+$$
+\pi(x)+\pi(y)=\pi(x+y), \quad \alpha \pi(x)=\pi(\alpha x) .
+$$
+
+[Note that now $\alpha \pi(x)=N$ when $\alpha=0$. This differs from the usual notation, as introduced in Section 1.4.] Since $N$ is a vector space, the operations (1) are well defined. This means that if $\pi(x)=\pi\left(x^{\prime}\right)$ (that is, $\left.x^{\prime}-x \in N\right)$ and $\pi(y)=\pi\left(y^{\prime}\right)$ then
+
+$$
+\pi(x)+\pi(y)=\pi\left(x^{\prime}\right)+\pi\left(y^{\prime}\right), \quad \alpha \pi\left(x^{\prime}\right)=\alpha \pi(x)
+$$
+
+The origin of $X / N$ is $\pi(0)=N$. By (1), $\pi$ is a linear mapping of $X$ onto $X / N$ with $N$ as its null space; $\pi$ is often called the quotient map of $X$ onto $X / N$.
+
+Suppose now that $\tau$ is a vector topology on $X$ and that $N$ is a closed subspace of $X$. : Let $\tau_{N}$ be the collection of all sets $E \subset X / N$ for which $\pi^{-1}(E) \in \tau$. Then $\tau_{N}$ turns out to be a topology on $X / N$, called the quotient topology. Some of its properties are listed in the next theorem. Recall that an open mapping is one that maps open sets to open sets.
+
+1.41 Theorem Let $N$ be a closed subspace of a topological vector space $X$. Let $\tau$ be the topology of $X$ and define $\tau_{N}$ as above.
+
+(a) $\tau_{N}$ is a vector topology on $X / N$; the quotient map $\pi: X \rightarrow X / N$ is linear, continuous, and open.
+
+(b) If $\mathscr{B}$ is a local base for $\tau$, then the collection of all sets $\pi(V)$ with $V \in \mathscr{B}$ is a local base for $\tau_{N}$.
+
+(c) Each of the following properties of $X$ is inherited by $X / N$ : local convexity, local boundedness, metrizability, normability.
+
+(d) If $X$ is an F-space, or a Fréchet space, or a Banach space, so is $X / N$.
+
+PROOF Since $\pi^{-1}(A \cap B)^{*}=\pi^{-1}(A) \cap \pi^{-1}(B)$ and
+
+$$
+\pi^{-1}\left(\bigcup E_{\lambda}\right)=\bigcup \pi^{-1}\left(E_{\lambda}\right)
+$$
+
+$\tau_{N}$ is a topology. A set $F \subset X / N$ is $\tau_{N}$-closed if and only if $\pi^{-1}(F)$ is $\tau$-closed. In particular, every point of $X / N$ is closed, since
+
+$$
+\pi^{-1}(\pi(x))=N+x
+$$
+
+and $N$ was assumed to be closed.
+
+The continuity of $\pi$ follows directly from the definition of $\tau_{N}$. Next, suppose $V \in \tau$. Since
+
+$$
+\pi^{-1}(\pi(V))=N+V
+$$
+
+and $N+V \in \tau$, it follows that $\pi(V) \in \tau_{N}$. Thus $\pi$ is an open mapping.
+
+If now $W$ is a neighborhood of 0 in $X / N$, there is a neighborhood $V$ of 0 in $X$ such that
+
+$$
+V+V \subset \pi^{-1}(W)
+$$
+
+Hence $\pi(V)+\pi(V) \subset W$. Since $\pi$ is open, $\pi(V)$ is a neighborhood of 0 in $X / N$. Addition is therefore continuous in $X / N$.
+
+The continuity of scalar multiplication in $X / N$ is proved in the same manner. This establishes $(a)$.
+
+It is clear that $(a)$ implies $(b)$. With the aid of Theorems 1.32, 1.24, and 1.39 , it is just as easy to see that $(b)$ implies $(c)$.
+
+Suppose next that $d$ is an invariant metric on $X$, compatible with $\tau$. Define $\rho$ by
+
+$$
+\rho(\pi(x), \pi(y))=\inf \{d(x-y, z): z \in N\}
+$$
+
+This may be interpreted as the distance from $x-y$ to $N$. We omit the verifications that are now needed to show that $\rho$ is well defined and that it is an invariant metric on $\bar{X} / N$. Since
+
+$$
+\pi(\{x: d(x, 0)<r\})=\{u: \rho(u, 0)<r\}
+$$
+
+it follows from $(b)$ that $\rho$ is compatible with $\tau_{N}$.
+
+If $X$ is normed, this definition of $\rho$ specializes to yield what is usually called the quotient norm of $X / N$ :
+
+$$
+\|\pi(x)\|=\inf \{\|x-z\|: z \in N\} .
+$$
+
+To prove $(d)$ we have to show that $\rho$ is a complete metric whenever $d$ is complete.
+
+Suppose $\left\{u_{n}\right\}$ is a Cauchy sequence in $X / N$, relative to $\rho$. There is a subsequence $\left\{u_{n_{i}}\right\}$ with $\rho\left(u_{n_{i}}, u_{n_{i+1}}\right)<2^{-i}$. One can then inductively choose $x_{i} \in X$ such that $\pi\left(x_{i}\right)=u_{n_{i}}$ and $d\left(x_{i}, x_{i+1}\right)<2^{-i}$. If $d$ is complete, the Cauchy sequence $\left\{x_{i}\right\}$ converges to some $x \in X$. The continuity of $\pi$ implies that $u_{n_{i}} \rightarrow \pi(x)$ as $i \rightarrow \infty$. But if a Cauchy sequence has a convergent subsequence then the full sequence must converge. Hence $\rho$ is complete, and so is the proof of Theorem 1.41 .
+
+IIII
+
+Here is-an easy application of these concepts:
+
+1.42 Theorem Suppose $N$ and $F$ are subspaces of a topological vector space $X$, $N$ is closed and $F$ has finite dimension. Then $N+F$ is closed.
+
+PROOF Let $\pi$ be the quotient map of $X$ onto $X / N$, and give $X / N$ its quotient topology. Then $\pi(F)$ is a finite-dimensional subspace of $X / N$; since $X / N$ is a topological vector space, Theorem 1.21 implies that $\pi(F)$ is closed in $X / N$. Since $N+F=\pi^{-1}(\pi(F))$ and $\pi$ is continuous, we conclude that $N+F$ is closed. (Compare Exercise 20).
+
+1.43 Seminorms and quotient spaces Suppose $p$ is a seminorm on a vector space $X$ and
+
+$$
+N=\{x: p(x)=0\} .
+$$
+
+Then $N$ is a subspace of $X$ (Theorem 1.34). Let $\pi$ be the quotient map of $X$ onto $X / N$, and define
+
+$$
+\tilde{p}(\pi(x))=p(x) .
+$$
+
+If $\pi(x)=\pi(y)$, then $p(x-y)=0$, and since
+
+$$
+|p(x)-p(y)| \leq p(x-y)
+$$
+
+it follows that $\tilde{p}(\pi(x))=\tilde{p}(\pi(y))$. Thus $\tilde{p}$ is well defined on $X / N$, and it is now easy to verify that $\tilde{p}$ is a norm on $X / N$.
+
+Here is a familiar example of this. Fix $r, 1 \leq r<\infty$; let $L^{r}$ be the space of all Lebesgue measurable functions on $[0,1]$ for which
+
+$$
+p(f)=\|f\|_{r}=\left\{\int_{0}^{1}|f(t)|^{r} d t\right\}^{1 / r}<\infty
+$$
+
+This defines a seminorm on $L$, not a norm, since $\|f\|_{r}=0$ whenever $f=0$ almost everywhere. Let $N$ be the set of these "null functions." Then $L / N$ is the Banach space that is usually called $L$. The norm of $L^{r}$ is obtained by the above passage from $p$ to $\tilde{p}$.
+
+\section{Examples}
+1.44 The spaces $C(\Omega)$ If $\Omega$ is a nonempty open set in some euclidean space, then $\Omega$ is the union of countably many compact sets $K_{n} \neq \varnothing$ which can be chosen so that $K_{n}$ lies in the interior of $K_{n+1}(n=1,2,3, \ldots) . C(\Omega)$ is the vector space of all complexvalued continuous functions on $\Omega$, topologized by the separating family of seminorms
+
+$$
+p_{n}(f)=\sup \left\{|f(x)|: x \in K_{n}\right\}
+$$
+
+in accordance with Theorem 1.37. Since $p_{1} \leq p_{2} \leq \cdots$, the sets
+
+$$
+V_{n}=\left\{f \in C(\Omega): p_{n}(f)<\frac{1}{n}\right\} \quad(n=1,2,3, \ldots)
+$$
+
+form a convex local base for $C(\Omega)$. According to remark $(c)$ of Section 1.38, the topology of $C(\Omega)$ is compatible with the metric
+
+$$
+d(f, g)=\sum_{n=1}^{\infty} \frac{2^{-n} p_{n}(f-g)}{1+p_{n}(f-g)}
+$$
+
+If $\left\{f_{i}\right\}$ is a Cauchy sequence relative to this metric, then $p_{n}\left(f_{i}-f_{j}\right) \rightarrow 0$ for every $n$, as $i, j \rightarrow \infty$, so that $\left\{f_{i}\right\}$ converges uniformly on $K_{n}$, to a function $f \in C(\Omega)$. An easy computation then shows $d\left(f, f_{i}\right) \rightarrow 0$. Thus $d$ is a complete metric. We have now proved that $C(\Omega)$ is a Fréchet space.
+
+By (b) of Theorem 1.37, a set $E \subset C(\Omega)$ is bounded if and only if there are numbers $M_{n}<\infty$ such that $p_{n}(f) \leq M_{n}$ for all $f \in E$; explicitly,
+
+$$
+|f(x)| \leq M_{n} \quad \text { if } f \in E \text { and } x \in K_{n} \text {. }
+$$
+
+Since every $V_{n}$ contains an $f$ for which $p_{n+1}(f)$ is as large as we please, it follows that no $V_{n}$ is bounded. Thus $C(\Omega)$ is not locally bounded, hence is not normable.
+
+1.45 The spaces $H(\Omega)$ Let $\Omega$ now be a nonempty open subset of the complex plane, define $C(\Omega)$ as in Section 1.44, and let $H(\Omega)$ be the subspace of $C(\Omega)$ that consists of the holomorphic functions in $\Omega$. Since sequences of holomorphic functions that converge uniformly on compact sets have holomorphic limits, $H(\Omega)$ is a closed subspace of $C(\Omega)$. Hence $H(\Omega)$ is a Fréchet space.
+
+We shall now prove that $H(\Omega)$ has the Heine-Borel property. It will then follow from Theorem 1.23 that $H(\Omega)$ is not locally bounded, hence is not normable.
+
+Let $E$ be a closed and bounded subset of $H(\Omega)$. Then $E$ satisfics inequalities such as (4) of Section 1.44. Montel's classical theorem about normal families (Th. 14.6 of $[23]^{1}$ ) implies therefore that every sequence $\left\{f_{i}\right\} \subset E$ has a subsequence that converges uniformly on compact subsets of $\Omega$ [hence in the topology of $H(\Omega)$ ] to some $f \in H(\Omega)$. Since $E$ is closed, $f \in E$. This proves that $E$ is compact.
+
+1.46 The spaces $C^{\infty}(\Omega)$ and $\mathscr{D}_{K}$ We begin this section by introducing some terminology that will be used in our later work with distributions.
+
+In any discussion of functions of $n$ variables, the term multi-index denotes an ordered $n$-tuple
+
+$$
+\alpha=\left(\alpha_{1}, \ldots, \alpha_{n}\right)
+$$
+
+\footnotetext{${ }^{1}$ Numbers in brackets refer to sources listed in the Bibliography.
+}
+of nonnegative integers $\alpha_{i}$. With each multi-index $\alpha$ is associated the differential
+operator
+
+$$
+D^{\alpha}=\left(\frac{\partial}{\partial x_{1}}\right)^{\alpha_{1}} \cdots\left(\frac{\partial}{\partial x_{n}}\right)^{\alpha_{n}}
+$$
+
+whose order is
+
+$$
+|\alpha|=\alpha_{1}+\cdots+\alpha_{n} \text {. }
+$$
+
+If $|\alpha|=0, D^{\alpha} f=f$.
+
+A complex function $f$ defined in some nonempty open set $\Omega \subset R^{n}$ is said to belong to $C^{\infty}(\Omega)$ if $D^{\alpha} f \in C(\Omega)$ for every multi-index $\alpha$.
+
+The support of a complex function $f$ (on any topological space) is the closure of $\{x: f(x) \neq 0\}$.
+
+If $K$ is a compact set in $R^{n}$, then $\mathscr{D}_{K}$ denotes the space of all $f \in C^{\infty}\left(R^{n}\right)$ whose support lies in $K$. (The letter $\mathscr{D}$ has been used for these spaces ever since Schwartz published his work on distributions.) If $K \subset \Omega$, then $\mathscr{D}_{K}$ may be identified with a subspace of $C^{\infty}(\mathbf{\Omega})$.
+
+We now define a topology on $C^{\infty}(\Omega)$ which makes $C^{\infty}(\Omega)$ into a Fréchet space with the Heine-Borel property, such that $\mathscr{D}_{K}$ is a closed subspace of $C^{\infty}(\Omega)$ whenever $K \subset \Omega$. To do this, choose compact sets $K_{i}(i=1,2,3, \ldots)$ such that $K_{i}$ lies in the
+
+$$
+p_{N}(f)=\max \left\{\left|D^{\alpha} f(x)\right|: x \in K_{N},|\alpha| \leq N\right\} .
+$$
+
+They define a metrizable locally convex topology on $C^{\infty}(\Omega)$; see Theorem 1.37 and remark (c) of Section 1.38. For each $x \in \Omega$, the functional $f \rightarrow f(x)$ is continuous in this topology. Since $\mathscr{D}_{K}$ is the intersection of the null spaces of these functionals, as $x$ ranges over the complement of $K$, it follows that $\mathscr{D}_{K}$ is closed in $C^{\infty}(\Omega)$.
+
+A local base is given by the sets
+
+$$
+V_{N}=\left\{f \in C^{\infty}(\Omega): p_{N}(f)<\frac{1}{N}\right\} \quad(N=1,2,3, \ldots)
+$$
+
+If $\left\{f_{i}\right\}$ is a Cauchy sequence in $C^{\infty}(\Omega)$ (see Section 1.25) and if $N$ is fixed, then $f_{i}-f_{j} \in V_{N}$ if $i$ and $j$ are sufficiently large. Thus $\left|D^{\alpha} f_{i}-D^{\alpha} f_{j}\right|<1 / N$ on $K_{N}$, if $|\alpha| \leq N$. It follows that each $D^{\alpha} f_{i}$ converges (uniformly on compact subsets of $\Omega$ ) to a function $g_{\alpha}$. In particular, $f_{i}(x) \rightarrow g_{0}(x)$. It is now evident that $g_{0} \in C^{\infty}(\Omega)$, that $g_{\alpha}=D^{\alpha} g_{0}$, and that $f_{i} \rightarrow g$ in the topology of $C^{\infty}(\Omega)$. spaces $\mathscr{D}_{\boldsymbol{K}}$.
+
+Thus $C^{\infty}(\Omega)$ is a Fréchet space. The same- is true of each of its closed sub-
+
+Suppose next that $E \subset C^{\infty}(\Omega)$ is closed and bounded. By Theorem 1.37, the boundedness of $E$ is equivalent to the existence of numbers $M_{N}<\infty$ such that $p_{N}(f) \leq M_{N}$ for $N=1,2,3, \ldots$ and for all $f \in E$. The inequalities $\left|D^{\alpha} f\right| \leq M_{N}$, valid on $K_{N}$ when $|\alpha| \leq N$, imply the equicontinuity of $\left\{D^{\beta} f: f \in E\right\}$ on $K_{N-1}$, if $|\beta| \leq N-1$. It now follows from Ascoli's theorem (proved in Appendix A) and Cantor's diagonal process that every sequence in $E$ contains a subsequence $\left\{f_{i}\right\}$ for which $\left\{D^{\beta} f_{i}\right\}$ converges, uniformly on compact subsets of $\Omega$, for each multi-index $\beta$. Hence $\left\{f_{i}\right\}$ converges in the topology of $C^{\infty}(\Omega)$. This proves that $E$ is compact.
+
+Hence $C^{\infty}(\Omega)$ has the Heine-Borel property. It follows from Theorem 1.23 that $C^{\infty}(\Omega)$ is not locally bounded, hence not normable. The same conclusion holds for $\mathscr{D}_{K}$ whenever $K$ has nonempty interior (otherwise $\mathscr{D}_{K}=\{0\}$ ), because $\operatorname{dim} \mathscr{D}_{K}=\infty$ in that case. This last statement is a consequence of the following proposition:
+
+If $B_{1}$ and $B_{2}$ are concentric closed balls in $R^{n}$, with $B_{1}$ in the interior of $B_{2}$, then there exists $\phi \in C^{\infty}\left(R^{n}\right)$ such that $\phi(x)=1$ for every $x \in B_{1}$ and $\phi(x)=0$ for every $x$ outside $B_{2}$.
+
+To find such a $\phi$, we construct $g \in C^{\infty}\left(R^{1}\right)$ such that $g(x)=0$ for $x<a, g(x)=1$ for $x>b$ (where $0<a<b<\infty$ are preassigned) and put
+
+$$
+\phi\left(x_{1}, \ldots, x_{n}\right)=1-g\left(x_{1}^{2}+\cdots+x_{n}^{2}\right) .
+$$
+
+The following construction of $g$ has the advantage that suitable choices of $\left\{\delta_{i}\right\}$ can lead to functions with other desired properties.
+
+Suppose $0<a<b<\infty$. Choose positive numbers $\delta_{0}, \delta_{1}, \delta_{2}, \ldots$, with $\Sigma \delta_{i}=$ $b-a ;$ put
+
+$$
+m_{n}=\frac{2^{n}}{\delta_{1} \cdots \delta_{n}} \quad(n=1,2,3, \ldots)
+$$
+
+let $f_{0}$ be a continuous monotonic function such that $f_{0}(x)=0$ when $x<a, f_{0}(x)=1$ when $x>a+\delta_{0}$; and define
+
+$$
+f_{n}(x)=\frac{1}{\delta_{n}} \int_{x-\delta_{n}}^{x} f_{n-1}(t) d t \quad(n=1,2,3, \ldots)
+$$
+
+Differentiation of this integral shows, by induction, that $f_{n}$ has $n$ continuous derivatives , and that $\left|D^{n} f_{n}\right| \leq m_{n}$. If $n>r$, then
+
+$$
+D^{r} f_{n}(x)=\frac{1}{\delta_{n}} \int_{0}^{\delta_{n}}\left(D^{r} f_{n-1}\right)(x-t) d t
+$$
+
+so that
+
+$$
+\left|D^{r} f_{n}\right| \leq m_{r} \quad(n \geq r)
+$$
+
+again by induction on $n$. The mean value theorem, applied to (9), shows that
+
+$$
+\left|D^{r} f_{n}-D^{r} f_{n-1}\right| \leq m_{r+1} \delta_{n} \quad(n \geq r+2)
+$$
+
+Since $\Sigma \delta_{n}<\infty$, each $\left\{D^{r} f_{n}\right\}$ converges, uniformly on $(-\infty, \infty)$, as $n \rightarrow \infty$. Hence $\left\{f_{n}\right\}$ converges to a function $g$, with $\left|D^{r} g\right| \leq m_{r}$ for $r=1,2,3, \ldots$, such that $g(x)=0$ for $x<a$ and $g(x)=1$ for $x>b$.
+
+1.47 The spaces $L^{p}$ with $0<p<1$ Consider a fixed $p$ in this range. The elements of $L^{p}$ are those Lebesgue measurable functions $f$ on $[0,1]$ for which
+
+$$
+\Delta(f)=\int_{0}^{1}|f(t)|^{p} d t<\infty
+$$
+
+with the usual identification of functions that coincide almost everywhere. Since $0<p<1$, the inequality
+
+$$
+(a+b)^{p} \leq a^{p}+b^{p}
+$$
+
+holds when $a \geq 0$ and $b \geq 0$. This gives
+
+$$
+\Delta(f+g) \leq \Delta(f)+\Delta(g)
+$$
+
+so that
+
+$$
+d(f, g)=\Delta(f-g)
+$$
+
+defines an invariant metric on $L^{p}$. That this $d$ is complete is proved in the same way as in the familiar case $p \geq 1$. The balls
+
+$$
+B_{r}=\left\{f \in L^{p}: \Delta(f)<r\right\}
+$$
+
+form a local base for the topology of $L^{p}$. Since $B_{1}=r^{-1 / p} B_{r}$, for all $r>0, B_{1}$ is bounded.
+
+Thus $I^{p}$ is a locally bounded F-space.
+
+We claim that $L^{p}$ contains no convex open sets, other than $\varnothing$ and $L^{p}$.
+
+To prove this, suppose $V \neq \varnothing$ is open and convex in $L^{p}$. Assume $0 \in V$, without loss of generality. Then $V \supset B_{r}$, for some $r>0$. Pick $f \in L^{p}$. Since $p<1$, there is a positive integer $n$ such that $n^{p-1} \cdot \Delta(f)<r$. By the continuity of the indefinite integral of $|f|^{p}$, there are points
+
+$$
+0=x_{0}<x_{1}<\cdots<x_{n}=1
+$$
+
+such that
+
+$$
+\int_{x_{i-1}}^{x_{i}}|f(t)|^{p} d t=n^{-1} \Delta(f) \quad(1 \leq i \leq n) .
+$$
+
+Define $g_{i}(t)=n f(t)$ if $x_{i-1}<t \leq x_{i}, g_{i}(t)=0$ otherwise. Then $g_{i} \in V$, since (6) shows
+
+$$
+\Delta\left(g_{i}\right)=n^{p-1} \Delta(f)<r \quad(1 \leq i \leq n)
+$$
+
+and $V \supset B_{r}$. Since $V$ is convex and
+
+$$
+f=\frac{1}{n}\left(g_{1}+\cdots+g_{n}\right)
+$$
+
+it follows that $f \in V$. Hence $V=L^{p}$.
+
+This lack of convex open sets has a curious consequence.
+
+Suppose $\Lambda: L^{p} \rightarrow Y$ is a continuous linear mapping of $L^{p}$ into some locally convex space $Y$. Let $\mathscr{B}$ be a convex local base for $Y$. If $W \in \mathscr{B}$, then $\Lambda^{-1}(W)$ is convex, open, not empty. Hence $\Lambda^{-1}(W)=L^{p}$. Consequentiy, $\Lambda\left(L^{p}\right) \subset W$ for every $W \in \mathscr{B}$. We conclude that $\Lambda f=0$ for every $f \in L^{p}$.
+
+Thus 0 is the only continuous linear mapping of $L^{p}$ into any locally convex space $Y$, if $0<p<1$. In particular, 0 is the only continuous linear functional on these $L^{p}$-spaces.
+
+This is, of course, in violent contrast to the familiar case $p \geq 1$.
+
+\section{Exercises}
+1 Suppose $X$ is a vector space. All sets mentioned below are understood to be subsets of $X$. Prove the following statements from the axioms as given in Section 1.4. (Some of these are tacitly used in the text.)
+
+(a) If $x \in X$ and $y \in X$ there is a unique $z \in X$ such that $x+z=y$.
+
+(b) $0 x=0=\alpha 0$ if $x \in X$ and $\alpha$ is a scalar.
+
+(c) $2 A \subset A+A$; it may happen that $2 A \neq A+A$.
+
+(d) $A$ is convex if and only if $(s+t) A=s A+t A$ for all positive scalars $s$ and $t$.
+
+(e) Every union (and intersection) of balanced sets is balanced.
+
+$(f)$ Every intersection of convex sets is convex.
+
+(g) If $\bar{\Gamma}$ is a collection of convex sets that is totally ordered by set inclusion, then the union of all members of $\Gamma$ is convex.
+
+(h) If $A$ and $B$ are convex, so is $A+B$.
+
+(i) If $A$ and $B$ are balanced, so is $A+B$.
+
+(j) Show that parts $(f),(g)$, and $(h)$ hold with subspaces in place of convex sets.
+
+2 . The convex hull of a set $A$ in a vector space $X$ is the set of all convex combinations of members of $A$, that is, the set of all sums
+
+$$
+t_{1} x_{1}+\cdots+t_{n} x_{n}
+$$
+
+in which $x_{l} \in A, t_{l} \geq 0, \sum t_{l}=1 ; n$ is arbitrary. Prove that the convex hull of $A$ is convex and that it is the intersection of all convex sets that contain $A$.
+
+3 Let $X$ be a topological vector space. All sets mentioned below are understood to be subsets of $X$. Prove the following statements.
+
+(a) The convex hull of every open set is open.
+
+
+\end{document}
