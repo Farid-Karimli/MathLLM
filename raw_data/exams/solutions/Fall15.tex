@@ -1,0 +1,395 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+
+\title{QUALIFYING EXAMINATION }
+
+
+\author{HARVARD UNIVERSITY\\
+Department of Mathematics}
+\date{}
+
+
+\begin{document}
+\maketitle
+Tuesday September 1, 2015 (Day 1)
+
+\begin{enumerate}
+  \item (A) The integer 8871870642308873326043363 is the $13^{\text {th }}$ power of an integer $n$. Find $n$.
+\end{enumerate}
+
+Solution. Counting digits, we see that $n<100$, so is determined by its residue class $(\bmod 99)$. Both $(\bmod 11)$ and $(\bmod 9)$ raising to the $13^{\text {th }}$ power is a bijection. After a little computation we find that $n \equiv 2(\bmod 9)$ and $n \equiv 6(\bmod 11)$. This implies, by the Chinese remainder theorem that $n \equiv$ $83(\bmod 99)$. Hence $n=83$.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (AG) Let $C \subset \mathbb{P}^{2}$ be a smooth plane curve of degree 4 .
+\end{enumerate}
+
+(a) Describe the canonical bundle of $C$ in terms of line bundles on $\mathbb{P}^{2}$. What are the effective canonical divisors on $C$ ?
+
+(b) What is the genus of $C$ ? Explain how you obtain this formula.
+
+(c) Prove that $C$ is not hyperelliptic.
+
+Solution: By the adjunction formula, the canonical divisor class of a curve of degree $d$ is $K_{C}=\mathcal{O}_{C}(d-3)$, that is, plane curves of degree $d-3$ cut out canonical divisors on $C$. It follows that effective canonical divisors on $C$ are the intersection with lines in the plane, so have degree 4 . Since the degree of the canonical class is $2 g-2$, the genus $g=3$. Furthermore, any two points $p, q \in C$ impose independent conditions on the canonical series $\left|K_{C}\right|$; that is, $h^{0}\left(K_{C}(-p-q)\right)=g-2$, so by the Riemann-Roch formula $h^{0}\left(\mathcal{O}_{C}(p+q)\right)=1$, i.e., $C$ is not hyperelliptic.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (DG) Let $M$ be a $C^{\infty}$ manifold, $T M$ its tangent bundle, and $T^{\mathbb{C}} M=\mathbb{C} \otimes_{\mathbb{R}} T M$ the complexified tangent bundle. An almost complex structure on $M$ is a $C^{\infty}$ bundle map $J: T M \rightarrow T M$ such that $J^{2}=-1$.
+\end{enumerate}
+
+(a) Show that an almost complex structure naturally determines, and is determined by, each of the following two structures:
+
+i) the structure of a complex $C^{\infty}$ vector bundle - i.e., with fibres that are complex vector spaces - on $T M$ compatible with its real structure.
+
+ii) a $C^{\infty}$ direct sum decomposition $T^{\mathbb{C}} M=T^{1,0} M \oplus T^{0,1} M$ with $T^{0,1} M$ = complex conjugate of $T^{1,0} \mathrm{M}$.
+
+(b) Show that every almost complex manifold is orientable.
+(c) If $S$ is a $C^{\infty}$, orientable, 2-dimensional, Riemannian manifold, construct a natural almost complex structure on $S$ in terms of its Riemannian structure, but one that depends only on the underlying conformal structure of $S$.
+
+(d) Does the almost complex structure constructed in (c) determine the conformal structure of $S$ ? You need NOT give a detailed answer to this question; a heuristic one- or two-sentence answer suffices.
+
+Solution: The correspondence between $J$ and the structure of complex vector bundle on $T M$ is given by $J \leftrightarrow$ multiplication by $i$; this is well defined and bijective because both are $C^{\infty}$ bundle maps, defined over $\mathbb{R}$, of square -1 . For the same reason, $J \leftrightarrow$ bijectively corresponds to decompositions $T^{\mathbb{C}} M=$ $T^{1,0} M \oplus T^{0,1}$ with $T^{0,1} M=$ complex conjugate of $T^{1,0} M$, via
+
+$$
+T^{1,0}=i \text { - eigenspace of } J \text {, and } T^{0,1}=(-i) \text { - eigenspace of } J,
+$$
+
+on each fiber. That is the assertion (a). To establish (b), let $\left\{s_{1}, s_{2}, \ldots, s_{n}\right\}$ denote a local $C^{\infty}$ frame of $T^{1,0} M$. The complex conjugate frame is then a frame of $T^{0,1} M$. it follows that
+
+is a local $C^{\infty}$ generator of $\wedge^{\text {top }} T^{\mathbb{C}} M$. It is defined over $\mathbb{R}$, as can be checked by an easy calculation, and hence can be regarded as a local $C^{\infty}$ generator of $\wedge^{\text {top }} T M$. Now let $\left\{t_{1}, t_{2}, \ldots, t_{n}\right\}$ be another local $C^{\infty}$ frame of $T^{1,0} M$. On the overlap of the domains, the two frames are related by a $C^{\infty}$ matrix valued function $\left(a_{i, j}\right)$. But then
+
+$$
+i^{-n} t_{1} \wedge \cdots \wedge t_{n} \wedge \overline{t_{1}} \wedge \ldots \overline{t_{n}}=\left|\operatorname{det}\left(a_{i, j}\right)\right|^{2} i^{-n} s_{1} \wedge \cdots \wedge s_{n} \wedge \overline{s_{1}} \wedge \ldots \overline{s_{n}}
+$$
+
+so any two local frames induce the same orientation on $M$. This proves (b). On a 2-dimensional Riemannian manifold $S$ one has the notion of an angle between any two tangent vectors at a point, which depends only on the underlying conformal structure, and if $S$ is oriented, one even has the notion of a directed angle. In this situation it makes sense to define $J=$ rotation through an angle $\pi / 2$. This is a $C^{\infty}$ bundle map because the metric is smooth, and $J^{2}=-1$ by definition. That implies (c). Finally, for (d), note that on the tangent spaces of a Riemannian surface one can make sense of a rotation though any angle if one knows the effect of a rotation about the angle $\pi / 2$.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (RA) In this problem $V$ denotes a Banach space over $\mathbb{R}$ or $\mathbb{C}$.
+\end{enumerate}
+
+(a) Show that any finite dimensional subspace $U_{0} \subset V$ is closed in $V$.
+
+(b) Now let $U_{1} \subset V$ a closed subspace, and $U_{2} \subset V$ a finite dimensional subspace. Show that $U_{1}+U_{2}$ is closed in $V$.
+
+Solution: For definiteness suppose $V$ is a Banach space over $\mathbb{R}$. Let $\left\{u_{k} \mid 1 \leq\right.$ $k \leq n\}$ be a basis of $U_{0}$, and use this basis to identify $U_{0} \cong \mathbb{R}^{n}$. Then, for $u=\sum_{k} a_{k} u_{k} \in U_{0} \subset V$,
+
+$$
+\|u\| \leq \sum_{0 \leq k \leq n}\left|a_{k}\right|\left\|u_{k}\right\| \leq C \max _{0 \leq k \leq n}\left|a_{k}\right|, \text { with } C=\max _{0 \leq k \leq n}\left\|u_{k}\right\|
+$$
+
+It follows that $\mathbb{R}^{n} \cong U_{0} \hookrightarrow V$ is bounded with respect to the sup norm on $\mathbb{R}^{n}$ (and hence with respect to any other Banach norm on $\mathbb{R}^{n}$ ). Now let $\left\{v_{m}\right\}$ be a convergent sequence in $V$, all of whose terms lie in the subspace $U_{0}$. But then the inverse image of this sequence in $\mathbb{R}^{n}$ must be bounded, and has a convergent subsequence. Its limit, viewed as a vector in $V$, must coincide with the original limit, of course. This implies (a). In establishing (b) we can replace $U_{2}$ by a linear complement, in $U_{2}$, of $U_{1} \cap U_{2}$. In other words, we may assume $U_{1} \cap U_{2}=0$. Any convergent sequence $\left\{v_{m}\right\}$ whose terms lie in $U_{1}+U_{2}$ can now be written uniquely as $\left\{v_{m}=v_{m}^{\prime}+v_{m}^{\prime \prime}\right\}$, with $v_{m}^{\prime} \in U_{1}$ and $v_{m}^{\prime \prime} \in U_{2}$. Let's distinguish two cases:
+
+i) The sequence $\left\{v_{m}^{\prime \prime}\right\}$ has a bounded subsequence, which by (a) in turn has a subsequence that converges in $U_{2}$. But then the corresponding subsequence of $\left\{v_{m}^{\prime}\right\}$ must converge, necessarily to a point in the closed subspace $U_{1}$. It follows that the limit of the original series must lie in $U_{1}+U_{2}$.
+
+ii) $\left\|v_{m}^{\prime \prime}\right\| \rightarrow \infty$ as $m \rightarrow \infty$. Going to an appropriate subsequence of the original series, we may then assume that $v_{m}^{\prime \prime} \neq 0$ for all $m$ and $\left\|v_{m}^{\prime \prime}\right\|^{-1} v_{m}^{\prime \prime} \rightarrow \tilde{v}^{\prime \prime} \in U_{2}$, $\left\|\tilde{v}^{\prime \prime}\right\|=1$. Because of the hypotheses, $\left\|v_{m}^{\prime \prime}\right\|^{-1} v_{m} \rightarrow 0 \in V$, which now implies the convergence of $\left\|v_{m}^{\prime \prime}\right\|^{-1} v_{m}^{\prime}$ to some point $\tilde{v}^{\prime}$ in the closed subspace $U_{1}$. At this point, we know that
+
+$$
+\begin{aligned}
+& 0=\lim _{m} \rightarrow \infty\left\|v_{m}^{\prime \prime}\right\|^{-1} v_{m} \\
+& \quad=\lim _{m \rightarrow \infty}\left\|v_{m}^{\prime \prime}\right\|^{-1} v_{m}^{\prime}+\lim _{m \rightarrow \infty}\left\|v_{m}^{\prime \prime}\right\|^{-1} v_{m}^{\prime \prime}=\tilde{v}^{\prime}+\tilde{v}^{\prime \prime}
+\end{aligned}
+$$
+
+That is a contradiction because $0 \neq \tilde{v}^{\prime \prime}=-\tilde{v}^{\prime} \in U_{1} \cap U_{2}=0$.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (AT) Consider the following three topological spaces:
+\end{enumerate}
+
+$$
+A=\mathbb{H} \mathrm{P}^{3}, \quad B=S^{4} \times S^{8}, \quad C=S^{4} \vee S^{8} \vee S^{12}
+$$
+
+( $\mathbb{H} \mathrm{P}^{3}$ denotes quaternionic projective 3 -space.)
+
+(a) Calculate the cohomology groups (with integer coefficients) of all three.
+
+(b) Show that $A$ and $B$ are not homotopy equivalent.
+
+(c) Show that $C$ is not homotopy equivalent to any compact manifold.
+
+Solution:
+
+\begin{enumerate}
+  \item The cohomology rings of the three spaces are as follows:
+\end{enumerate}
+
+$$
+\begin{aligned}
+& H^{*} A=\mathbb{Z}[x] / x^{4}, \quad|x|=4, \\
+& H^{*} B=\mathbb{Z}[a, b] /\left(a^{2}, b^{2}\right), \quad|a|=4,|b|=8, \\
+& H^{*} C=\mathbb{Z}\{r, s, t\}, \quad|r|=4,|s|=8,|t|=12,
+\end{aligned}
+$$
+
+with all products zero.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item The ring structures differ: $x \cdot x=x^{2} \neq 0$, but $a \cdot a=0$.
+
+  \item If $C$ were homotopy equivalent to a compact manifold, then it would enjoy Poincaré duality. In particular, $r$ could be taken to be Poincaré dual to $s$ and $t$ to be the volume form, so that $r \cdot s=t$. However, $r \cdot s=0$ in $H^{*} C$.
+
+  \item (CA) Let $f(z)$ be a function which is analytic in the unit disc $D=\{|z|<1\}$, and assume that $|f(z)| \leq 1$ in $D$. Also assume that $f(z)$ has at least two fixed points $z_{1}$ and $z_{2}$. Prove that $f(z)=z$ for all $z \in D$.
+
+\end{enumerate}
+
+Solution: First observe that we can find a fractional linear transformation $S$ mapping $D$ to itself and 0 to $z_{1}$. Now consider $g=S^{-1} \circ f \circ S$. The function $g$ is also analytic on $D$, and satisfies $|g(z)| \leq 1$ on $D$. One of the fixed points of $g$ is 0 , hence the function $h(z)=g(z) / z$ is analytic; call $p$ the other fixed point of $g$. We claim that $|h(z)| \leq 1$. Before proving the claim, note that this implies the desired result, since $|h(p)|=1$, hence $h$ is identically 1 on $D$ by the maximum principle.
+
+To prove the claim, we also use the maximum principle. Fix some small $\epsilon>0$. On $\{|z|=1-\epsilon\}$, we have $|h(z)|=|g(z)| /|z| \leq 1 /(1-\epsilon)$, hence $|h(z)| \leq 1 /(1-\epsilon)$ on $\{|z| \leq 1-\epsilon\}$ by the maximum principle. Letting $\epsilon$ tend to 0 gives $|h(z)| \leq 1$ on $D$, as desired.
+
+\section*{QUALIFYING EXAMINATION }
+Department of Mathematics
+
+Wednesday September 2, 2015 (Day 2)
+
+\begin{enumerate}
+  \item (AT) Let $\mathbb{C P}^{n}=\left(\mathbb{C}^{n+1} \backslash\{0\}\right) / \mathbb{C}^{*}$ be $n$ dimensional complex projective space.
+\end{enumerate}
+
+(a) Show that every map $f: \mathbb{C P}^{2 n} \rightarrow \mathbb{C P}^{2 n}$ has a fixed point. (Hint: Use the ring structure on cohomology.)
+
+(b) For every $n \geq 0$, give an example of a map $f: \mathbb{C P}^{2 n+1} \rightarrow \mathbb{C P}^{2 n+1}$ without any fixed points and describe its induced map on cohomology.
+
+Solution: We have $H^{*}\left(\mathbb{C P}^{2 n} ; \mathbb{Z}\right)=\mathbb{Z}[x] / x^{2 n+1}$ with $x$ in degree 2 . The map $f$ induces a ring endomorphism $f^{*}$ given by $f^{*}(x)=k x$ for some $k \in \mathbb{Z}$. Thus, the trace of $f^{*}$ is
+
+$$
+\operatorname{Tr}\left(f^{*}\right)=1+\sum_{i=1}^{2 n} k^{i} \equiv 1 \quad(\bmod 2)
+$$
+
+In particular, the trace is non-zero and hence $f$ has a fixed point by the Lefschetz fixed-point theorem.
+
+For the second part we can take the map $f: \mathbb{C P}^{2 n+1} \rightarrow \mathbb{C P}^{2 n+1}$ with
+
+$$
+f\left(\left[z_{0}, \ldots, z_{2 n+1}\right]\right)=\left[-\bar{z}_{1}, \bar{z}_{0}, \ldots,-\bar{z}_{2 n+1}, \bar{z}_{2 n}\right]
+$$
+
+since $f(z)=z$ implies $z_{j}=-|\lambda|^{2} z_{j}$ for some $\lambda \in \mathbb{C}^{*}$ and all $0 \leq j \leq 2 n+1$, a contradiction. Note that $f$ sends the line $\mathbb{C P}^{1}=\left[z_{0}, z_{1}, 0, \ldots, 0\right] \subset \mathbb{C P}^{2 n+1}$ to itself, but with reverse orientation, so $f^{*}(x)=-x$.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (A) Let $A$ be a commutative ring with unit. Define what it means for $A$ to be Noetherian. Prove that the ring of continuous functions $f:[0,1] \rightarrow \mathbb{R}$ (with pointwise addition and multiplication) is not Noetherian.
+\end{enumerate}
+
+Solution: $A$ is Noetherian if it has no sequence of ideals $I_{1}, I_{2}, I_{3}, \ldots$ such that $I_{n} \subset I_{n+1}$ and $I_{n} \neq I_{n+1}$ for each $n$. If $A$ is the ring of continuous functions $[0,1] \rightarrow \mathbb{R}$ then we get a counterexample by taking for $I_{n}$ the ideal of functions $f \in A$ such that there exists $B \in \mathbb{R}$ with $|f(x)| \leq B x^{1 / n}$ for all $x \in[0,1]$. The inclusions are strict because $x^{1 / n}$ is in $I_{n}$ but not in $I_{n+1}$. [Alternatively, let $I_{n}$ consist of the functions supported on $[1 / n, 1]$, or of the functions vanishing at $1 / m$ for all integers $m \geq n$.]
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (CA) Let $S \subset \mathbb{C}$ be the open half-disc $\left\{x+i y: y>0, x^{2}+y^{2}<1\right\}$.
+\end{enumerate}
+
+(a) Construct a surjective conformal mapping $f: S \rightarrow D$, where $D$ is the open unit disc $\{z \in \mathbb{C}:|z|<1\}$.
+(b) Construct a harmonic function $h: S \rightarrow \mathbb{R}$ such that:
+
+\begin{itemize}
+  \item $h(x+i y) \rightarrow 0$ as $y \rightarrow 0$ from above, for all real $x$ with $|x|<1$, and
+
+  \item $h\left(r e^{i \theta}\right) \rightarrow 1$ as $r \rightarrow 1$ from below, for all real $\theta$ with $0<|x|<\pi$.
+
+\end{itemize}
+
+Solution: We construct $f$ as a composition $f_{3} \circ f_{2} \circ f_{1}$ of conformal maps where $f_{1}$ and $f_{3}$ are Möbius transformations and $f_{2}(z)=z^{2}$. Set $f_{1}(z)=$ $(1+z) /(1-z)$, which transforms $D$ conformally into the first quadrant $\{(x, y)$ : $x>0, y>0\}$, taking $(-1,1)$ to the positive real axis and the semicircular boundary of $S$ to the imaginary real axis. Thus $f_{2} \circ f_{1}$ conformally transforms $D$ to the upper half-plane $\{(x, y): y>0\}$, and finally $f_{3}(z):=(z-i) /(z+i)$ takes the upper half-plane to $D$, whence $f_{3} \circ f_{2} \circ f_{1}$ is a conformal map $S \rightarrow D$ as demanded.
+
+[Of course there are other variations such as $f_{1}(z)=(z-1) /(z+1)$ etc., any of which earns full credit as long as $f_{1}$ fits into $f_{2}$ fits into $f_{3}$ correctly.]
+
+The function $h(z)=(2 / \pi) \Im \log f_{1}(z)$ [a.k.a. $h(z)=(1 / \pi) \Im \log f_{2}\left(f_{1}(z)\right)$ ] is harmonic because it is the imaginary part of an analytic function, and has the requisite limiting behavior by our description of $f_{1}$ in part (i) (the principal value of $\log (z)$ has imaginary part 0 for $z=x>0$, and imaginary part $\pi / 2$ when $z=i y$ with $y>0$ ).
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (AG) Let $Q$ be the complex quadric surface in $\mathbb{P}^{3}$ defined by the homogeneous equation $x_{0} x_{3}-x_{1} x_{2}=0$.
+\end{enumerate}
+
+(a) Show that $Q$ is non-singular.
+
+(b) Show that through each point of $Q$ there are exactly two lines which lie on $Q$.
+
+(c) Show that $Q$ is rational, but not isomorphic to $\mathbb{P}^{2}$.
+
+Solution: The partial derivatives of $F(X, Y, Z, W)=X Y-Z W$ have no common zeroes in $\mathbb{P}^{3}$. A line which lies on $Q$ corresponds to an isotropic plane $V$ in the quadratic space $\mathbb{C}^{4}$, whereas a point on $Q$ corresponds to an isotropic line $L$. The quadratic space $L^{\perp} / L$ is split of dimension 2 , so contains exactly two isotropic lines. These give the two isotropic planes $V$ which contain $L$.
+
+$Q$ which is the image of the Segre embedding $\mathbb{P}^{1} \times \mathbb{P}^{1} \rightarrow \mathbb{P}^{3}$. Since $\mathbb{A}^{2} \subset \mathbb{P}^{1} \times \mathbb{P}^{1}$ as Zariski-dense subset, $X$ is rational. To see that $X ¥ \mathbb{P}^{2}$ one can use $\operatorname{Pic}\left(\mathbb{P}^{1} \times \mathbb{P}^{1}\right)=\mathbb{Z}^{2} ¥ \mathbb{Z}=\operatorname{Pic}\left(\mathbb{P}^{2}\right)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (DG) Let $\Omega$ be the 2 -form on $\mathbb{R}^{3}-\{0\}$ defined by
+\end{enumerate}
+
+$$
+\Omega=\frac{1}{x^{2}+y^{2}+z^{2}}(x d y \wedge d z+y d z \wedge d x+z d x \wedge d y)
+$$
+
+(a) Prove that $\Omega$ is closed.
+(b) Let $f: \mathbb{R}^{3}-\{0\} \rightarrow S^{2}$ be the map which sends $(x, y, z)$ to $\left(\frac{1}{x^{2}+y^{2}+z^{2}}\right)^{1 / 2}(x, y, z)$. Show that $\Omega$ is the pull-back via $f$ of a 2 -form on $S^{2}$.
+
+(c) Prove that $\Omega$ is not exact.
+
+Solution: Introduce spherical coordinates $(r, \theta, \phi)$ by writing $x=r \sin (\theta) \cos (\phi)$, $y=r \sin (\theta) \sin (\phi)$ and $z=r \cos (\theta)$. Written with these coordinates,
+
+$$
+\begin{gathered}
+\Omega=\sin ^{2}(\theta) d \theta d \phi \\
+d \Omega=2 \sin (\theta) \cos (\theta) d \theta d \theta d \phi+\sin ^{2}(\theta)(d d \theta d \phi-d \theta d d \phi)
+\end{gathered}
+$$
+
+This is zero because $d^{2}=0$ and because the wedge of a one-form with itself is zero. The map in these coordinates sends $(r, \theta, \phi)$ to the point on $(1, \theta, \phi)$. A differential form $\Theta$ is the pull-back of a form on $S^{2}$ via $f$ if and only if both $\Theta$ and $d \Theta$ annihilate the vector fields in the kernel of the differential of $f$. Since these vector fields are proportional $\partial / \partial r$ in this case, both of the conditions are obeyed by $\Omega$. If $\Omega$ were exact, then its integral over $S^{2}$ would be 0 , but this integral is equal to $4 \pi$.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (RA) Consider the linear ODE $f^{\prime \prime}+P f^{\prime}+Q f=0$ on the interval $(a, b) \subset \mathbb{R}$, with $P, Q$ denoting $C^{\infty}$ real valued functions on $(a, b)$. Recall the definition of the Wronskian $W\left(f_{1}, f_{2}\right)=f_{1} f_{2}^{\prime}-f_{1}^{\prime} f_{2}$ associated to any two solutions $f_{1}, f_{2}$ of this differential equation.
+\end{enumerate}
+
+(a) Show that $W\left(f_{1}, f_{2}\right)$ either vanishes identically or is everywhere nonzero, depending on whether the two solutions $f_{1}, f_{2}$ are linearly dependent or not.
+
+(b) Now suppose that $f_{1}, f_{2}$ are linearly independent, real valued solutions. Show that they have at most first order zeroes, and that the zeroes occur in an alternating fashion: between any two zeroes of one of the solutions there must be a zero of the other solution.
+
+Solution:
+
+$$
+\begin{aligned}
+W^{\prime}\left(f_{1}, f_{2}\right) & =f_{1}^{\prime} f_{2}^{\prime}+f_{1} f_{2}^{\prime \prime}-f_{1}^{\prime \prime} f_{2}-f_{1}^{\prime} f_{2}^{\prime}= \\
+= & f_{2}\left(P f_{1}^{\prime}+Q f_{1}\right)-f_{1}\left(P f_{2}^{\prime}+Q f_{2}\right)=-P W\left(f_{1}, f_{2}\right)
+\end{aligned}
+$$
+
+which implies $W\left(f_{1}, f_{2}\right)=c e^{-P}$. In particular, $W\left(f_{1}, f_{2}\right)$ either vanishes identically or not at all. The Wronskian vanishes at some $x_{0} \in(a, b)$ if and only if the initial conditions for $\left(f_{1}^{\prime}, f_{1}\right)$ and $\left(f_{2}^{\prime}, f_{2}\right)$ are proportional at $x_{0}$, which is the case if and only if the global solutions are proportional. This implies (a). Next suppose that $f_{1}, f_{2}$ are real valued, linearly independent solutions. Since $W\left(f_{1}, f_{2}\right)$ never vanishes, neither solution can have a double zero; moreover, if $f_{1}\left(x_{0}\right)=0$ at some $x_{0}$ then $f_{2}\left(x_{0}\right) \neq 0$, and vice versa. Finally suppose that $f_{1}\left(x_{0}\right)=0, f_{1}\left(x_{1}\right)=0$, with $x_{0}<x_{1}$ and $f_{1}(x) \neq 0$ for $x \in\left(x_{0}, x_{1}\right)$. Since the zeroes are first order, the derivatives of $f_{1}$ at the
+two points must have opposite signs. Since the Wronskian has the same sign globally, $f_{2}$ cannot have the same sign at the two points. It follows that $f_{2}$ vanishes somewhere between $x_{0}$ and $x_{1}$. Similarly, between any two zeros of $f_{2}$ there must be a zero of $f_{1}$. That is the assertion (b).
+
+\section*{QUALIFYING EXAMINATION }
+Thursday September 3, 2015 (Day 3)
+
+\begin{enumerate}
+  \item (DG) Consider the graph $S$ of the function $F(x, y)=\cosh (x) \cos (y)$ in $\mathbb{R}^{3}$ and let
+\end{enumerate}
+
+$$
+\Phi: \mathbb{R}^{2} \rightarrow S \subset R^{3}
+$$
+
+be its parametrization: $\Phi(x, y)=(x, y, \cosh (x) \cos (y))$.
+
+(a) Write down the metric on $\mathbb{R}^{2}$ that is defined by the rule that the inner product of two vectors $v$ and $w$ at the point $(x, y)$ is equal to the inner product of $\Phi_{*}(v)$ and $\Phi_{*}(w)$ at the point $\Phi(x, y)$ in $\mathbb{R}^{3}$.
+
+(b) Define the Gaussian curvature of a general surface embedded in $\mathbb{R}^{3}$.
+
+(c) Compute the Gaussian curvature of the surface $S$ at the point $(0,0,1)$.
+
+Solution: The push-forward via $\Phi_{*}$ of the vectors $\partial / \partial x$ and $\partial / \partial y$ at a given point $(x, y)$ are the vectors in $\mathbb{R}^{3}$ at $(x, y, F(x, y))$ given by $\Phi_{*}(\partial / \partial x)=$ $\left(1,0, F_{x}\right)$ and $\Phi_{*}(\partial / d \partial y)=\left(0,1, F_{y}\right)$. The metric is
+
+$$
+g=\left(1+F_{x}^{2}\right) d x \otimes d x+F_{x} F_{y}(d x \otimes d y+d y \otimes d x)+\left(1+F_{y}^{2}\right) d y \otimes d y
+$$
+
+In this problem, $F_{x}=\sinh (x) \cos (y)$ and $F_{y}=-\cosh (x) \sin (y)$.
+
+The Gauss curvature is the determinant of the second fundamental form as computed using an orthonormal frame for the metric whereby the inner product of any two tangent vectors is their $\mathbb{R}^{3}$ inner product. The second fundamental form is defined as follows: Let $n$ denote a unit length normal to the surface and let $\left(e^{1}, e^{2}\right)$ denote an orthonormal frame at a given point. The second fundamental form has components $\left(m_{a b}\right)$ defined by $m_{a b}=\left\langle e^{a}, \nabla_{e^{b}}(n)\right\rangle$ It is also defined by writing the Riemann curvature tensor $R$ for this metric using an orthornormal frame $\left(e^{1}, e^{2}\right)$ for $T^{*} S$ as $R=\kappa\left(e^{1} \wedge e^{2}\right) \otimes\left(e^{1} \wedge e^{2}\right)$. In the case of the surface $S$, the normal vector is $n=\left(-F_{x},-F_{y}, 1\right) /\left(1+F_{x}^{2}+F_{y}^{2}\right)^{1 / 2}$. At the point $(0,0,1)$ in $S$, the vectors $d / d x$ and $d / d y$ are orthonormal. A computation then finds that the Gauss curvature is -1 .
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (RA) Let $f(x) \in C(\mathbb{R} / \mathbb{Z})$ be a continuous $\mathbb{C}$-valued function on $\mathbb{R} / \mathbb{Z}$ and let $\sum_{n=-\infty}^{\infty} a_{n} e^{2 \pi i n x}$ be its Fourier series.
+\end{enumerate}
+
+(a) Show that $f$ is $C^{\infty}$ if and only if $\left|a_{n}\right|=O\left(|n|^{-k}\right)$ for all $k \in \mathbb{N}$.
+
+(b) Prove that a sequence of functions $\left\{f_{n}\right\}_{n \geq 1}$ in $C^{\infty}(\mathbb{R} / \mathbb{Z})$ converges in the $C^{\infty}$ topology (uniform convergence of functions and their derivatives of all orders) if and only if the sequences of $k$-th derivatives $\left\{f_{n}^{(k)}\right\}_{n \geq 1}$, for all $k \geq 0$, converge in the $L^{2}$-norm on $\mathbb{R} / \mathbb{Z}$.
+
+Solution A simple integration by parts argument shows that $f \in C^{1}(\mathbb{R} / \mathbb{Z})$ implies
+
+$$
+f^{\prime}(x)=2 \pi i \sum_{n=-\infty}^{\infty} n a_{n} e^{2 \pi i n x} .
+$$
+
+Hence for all $k \in \mathbb{N}$ and $f \in C^{\infty}(\mathbb{R} / \mathbb{Z})$,
+
+$$
+f^{(k)}(x)=(2 \pi i)^{k} \sum_{n=-\infty}^{\infty} n^{k} a_{n} e^{2 \pi i n x}
+$$
+
+is the Fourier series of a continuous, hence $L^{2}$ function, with squared $L^{2}$ norm
+
+$$
+\left\|f^{(k)}\right\|_{L^{2}}^{2}=(2 \pi)^{2 k} \sum_{n=-\infty}^{\infty} n^{2 k}\left|a_{n}\right|^{2}<\infty
+$$
+
+It follows that for fixed $k,|n|^{k}\left|a_{n}\right|$ is bounded.
+
+The topology of $C^{\infty}(\mathbb{R} / \mathbb{Z})$ is defined by the family of norms $f \mapsto\left\|f^{(k)}\right\|_{\text {sup }}$, and according to (a), also by the family of seminorms $f \mapsto\left\|f^{(k)}\right\|_{L^{2}}$, because
+
+$$
+\begin{aligned}
+& \left\|f^{(k)}\right\|_{L^{2}} \leq\left\|f^{(k)}\right\|_{\text {sup }} \leq(2 \pi)^{k} \sum_{n=-\infty}^{\infty}|n|^{k}\left|a_{n}\right| \\
+& \quad=(2 \pi)^{k} \sum_{n \neq 0}|n|^{k+1}\left|a_{n}\right||n|^{-1} \leq \frac{1}{2 \pi}\left(\sum_{n \neq 0}|n|^{-2}\right)^{1 / 2}\left\|f^{(k+1)}\right\|_{L^{2}}
+\end{aligned}
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (AG) Let $C$ be a smooth projective curve over $\mathbb{C}$ and $\omega_{C}^{\otimes 2}$ the square of its canonical sheaf.
+\end{enumerate}
+
+(a) What is the dimension of the space of sections $\Gamma\left(C, \omega_{C}^{\otimes 2}\right)$ ?
+
+(b) Suppose $g(C) \geq 2$ and $s \in \Gamma\left(C, \omega_{C}^{\otimes 2}\right)$ is a section with simple zeros. Compute the genus of $\Sigma=\left\{x^{2}=s\right\}$ in the total space of the line bundle $\omega_{C}$, i.e. the curve defined by the 2 -valued 1 -form $\sqrt{s}$.
+
+Solution: Write $L=\omega_{C}^{\otimes 2}$ and $g=g(C)$, then $\operatorname{deg}(L)=4 g-4$. For $g=0$ : $h^{0}(L)=0$ since $L$ is negative, for $g=1: h^{0}(L)=1$ since $L$ is trivial, and for $g \geq 2: h^{0}(L)=3 g-3$ by Riemann-Roch.
+
+For the second part note that the projection $T^{*} C \rightarrow C$ gives a natural 2:1 covering $\Sigma \rightarrow C$ which is ramified at the $4 g-4$ zeros of $s$. The RiemannHurwitz formula gives $\chi(\Sigma)=2 \chi(C)-(4 g-4)$, thus $g(\Sigma)=4 g-3$.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (AT) Show (using the theory of covering spaces) that every subgroup of a free group is free.
+\end{enumerate}
+
+Solution: For a set $I$ of generators we let $X=\bigvee_{I} S^{1}$, then $F=\pi_{1}(X)$ is the free group on $I$. Let $G \subset F$ be a subgroup, then there is a covering $p: Y \rightarrow X$ with $p_{*}\left(\pi_{1}(Y)\right)=G$ and $p_{*}$ is injective. Note that $Y$ has the stucture of a connected 1-dimensional $\mathrm{CW}$ complex and is thus homotopy equivalent to a wedge of $S^{1}$ 's by contracting a maximal subtree. It follows that $G \cong \pi_{1}(Y)$ is free.
+
+\section{5. $(\mathrm{CA})$}
+(a) Define Euler's Gamma function $\Gamma(z)$ in the half plane $\operatorname{Re}(z)>0$ and show that it is holomorphic in this half plane.
+
+(b) Show that $\Gamma(z)$ has a meromorphic continuation to the entire complex plane.
+
+(c) Where are the poles of $\Gamma(z)$ ?
+
+(d) Show that these poles are all simple and determine the residue at each pole.
+
+Solution:
+
+$$
+\Gamma(z)=\int_{0}^{\infty} t^{z} e^{-t} d t / t
+$$
+
+The identity $\Gamma(z+1)=z \Gamma(z)$ then follows from integration by parts. Rewriting this identity as
+
+$$
+\Gamma(z)=\Gamma(z+1) / z
+$$
+
+at $z=0$ with residue 1 . Using this identity again, we can extend to the half plane $\operatorname{Re}(z)>-2$ with a simple pole at $z=-1$. Continuing in this manner, we get a meromorphic continuation to the entire plane with simple poles at the negative integers. The residue at $z=-n$ is $(-1)^{n} / n$ !.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (A) Let $G$ be a finite group, and $\rho: G \rightarrow G L_{n}(\mathbb{C})$ a linear representation. Then for each integer $i \geq 0$ there is a representation $\wedge^{i} \rho$ of $G$ on the exterior power $\wedge^{i}\left(\mathbb{C}^{n}\right)$. Let $W_{i}$ be the subspace $\left(\wedge^{i}\left(\mathbb{C}^{n}\right)\right)^{G}$ of $\wedge^{i}\left(\mathbb{C}^{n}\right)$ fixed under this action of $G$.
+\end{enumerate}
+
+Prove that $\operatorname{dim} W_{i}$ is the $T^{i}$ coefficient of the polynomial
+
+$$
+\frac{1}{|G|} \sum_{g \in G} \operatorname{det}\left(\mathbf{1}_{n}+T \rho(g)\right)
+$$
+
+where $\mathbf{1}_{n}$ is the $n \times n$ identity matrix.
+
+Solution: It is a standard consequence of Schur's lemma that if $(V, \varrho)$ is any finite-dimensional representation of $G$ then
+
+
+\end{document}

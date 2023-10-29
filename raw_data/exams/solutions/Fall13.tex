@@ -1,0 +1,849 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+
+\title{Solutions of Qualifying Exams I, 2013 Fall }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+  \item (Algebra) Consider the algebra $M_{2}(k)$ of $2 \times 2$ matrices over a field $k$. Recall that an idempotent in an algebra is an element $e$ such that $e^{2}=e$.
+\end{enumerate}
+
+(a) Show that an idempotent $e \in M_{2}(k)$ different from 0 and 1 is conjugate to
+
+$$
+e_{1}:=\left(\begin{array}{cc}
+1 & 0 \\
+0 & 0
+\end{array}\right)
+$$
+
+by an element of $G L_{2}(k)$.
+
+(b) Find the stabilizer in $G L_{2}(k)$ of $e_{1} \in M_{2}(k)$ under the conjugation action.
+
+(c) In case $k=\mathbb{F}_{p}$ is the prime field with $p$ elements, compute the number of idempotents in $M_{2}(k)$. (Count 0 and 1 in.)
+
+Solution. (a) Since $e \neq 0,1$, the image and the kernel of $e$ are both onedimensional. Let $v_{1}$ be a nonzero element in the image, so $v_{1}=e\left(v_{0}\right)$ for some $v_{0} \in k^{\oplus 2}$. Then
+
+$$
+e\left(v_{1}\right)=e\left(e\left(v_{0}\right)\right)=e^{2}\left(v_{0}\right)=e\left(v_{0}\right)=v_{1}
+$$
+
+Pick a nonzero element $v_{2}$ in the kernel of $e$, and we get a basis of $k^{\oplus 2}$ in which $e$ takes the form $e_{1}$.
+
+(b) For a general element
+
+$$
+g=\left(\begin{array}{ll}
+a & b \\
+c & d
+\end{array}\right)
+$$
+
+to be in the stabilizer, it must satisfy $g e_{1}=e_{1} g$. Writing the equation in four entries out, one sees that it means $b=c=0$ (and $a, d$ arbitrary). So the centralizer is the subgroup of diagonal matrices.
+
+(c) By (a) and (b), the set of rank 1 idempotents is in bijection with $G L_{2}\left(\mathbb{F}_{p}\right) / T\left(\mathbb{F}_{p}\right)$, whose cardinality is
+
+$$
+\frac{\left(p^{2}-1\right)\left(p^{2}-p\right)}{(p-1)(p-1)}=(p+1) p
+$$
+
+So the total number of idempotents is equal to $p^{2}+p+2$.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (Algebraic Geometry) (a) Find an everywhere regular differential $n$-form on the affine $n$-space $\mathbb{A}^{n}$.
+\end{enumerate}
+
+(b) Prove that the canonical bundle of the projective $n$-dimensional space $\mathbb{P}^{n}$ is $\mathcal{O}(-n-1)$.
+
+Solution (Sketch). Part (a) is really a hint for Part (b). Letting $x_{1}, x_{2}, \ldots, x_{n}$ be affine $\left(\mathbb{A}^{n}\right)$ coordinates, put $\omega:=d x_{1} \wedge d x_{2} \cdots \wedge d x_{n}$ giving (a). Denoting the corresponding homogenous $\mathbb{P}^{n}$ coordinates $t_{0}, t_{1}, \ldots, t_{n}$, with $x_{i}:=t_{i} / t_{0}$ for $i=1,2, \ldots, n$ extend $\omega$ to $\mathbb{P}^{n}$ writing $d x_{i}=d t_{i} / t_{0}-t_{i} / t_{0}^{2} d t_{0}$ and wedging to discover that the divisor of poles of $\omega$ is $(n+1) H$ where $H$ is the hyperplane at infinity $\left(t_{0}=0\right)$ and then conclude (appropriately).
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (Complex Analysis) (Bol's Theorem of 1949). Let $\tilde{W}$ be a domain in $\mathbb{C}$ and $W$ be a relatively compact nonempty subdomain of $\tilde{W}$. Let $\varepsilon>0$ and $G_{\varepsilon}$ be the set of all $(a, b, c, d) \in \mathbb{C}$ such that $\max (|a-1|,|b|,|c|,|d-1|)<\varepsilon$. Assume that $c z+d \neq 0$ and $\frac{a z+b}{c z+d} \in \tilde{W}$ for $z \in W$ and $(a, b, c, d) \in G_{\varepsilon}$. Let $m \geq 2$ be an integer. Prove that there exists a positive integer $\ell$ (depending on $m$ ) with the property that for any holomorphic function $\varphi$ on $\tilde{W}$ such that
+\end{enumerate}
+
+$$
+\varphi(z)=\varphi\left(\frac{a z+b}{c z+d}\right) \frac{(c z+d)^{2 m}}{(a d-b c)^{m}}
+$$
+
+for $z \in W$ and $(a, b, c, d) \in G_{\varepsilon}$, the $\ell$-th derivative $\psi(z)=\varphi^{(\ell)}(z)$ of $\varphi(z)$ on $\tilde{W}$ satisfies the equation
+
+$$
+\psi(z)=\psi\left(\frac{a z+b}{c z+d}\right) \frac{(a d-b c)^{\ell-m}}{(c z+d)^{2(\ell-m)}}
+$$
+
+for $z \in W$ and $(a, b, c, d) \in G_{\varepsilon}$. Express $\ell$ in terms of $m$.
+
+Hint: Use Cauchy's integral formula for derivatives.
+
+Solution. Let
+
+$$
+A z=\frac{a z+b}{c z+d}
+$$
+
+for $A \in G_{\varepsilon}$. We take a positive integer $\ell$ which we will determine later as a function of $n$. We use Cauchy's integral formula for derivatives to take the $\ell$-th derivative $\psi(z)$ of $\varphi(z)$. For $z \in \tilde{W}$ we use $U(z)$ to denote an open
+neighborhood of $z$ in $\tilde{W}$ and use $\partial U(z)$ to denote its boundary. The $\ell$-th derivative $\psi$ of $\varphi$ at $z \in \tilde{W}$ is given by the formula
+
+$$
+\psi(z)=\frac{\ell !}{2 \pi \sqrt{-1}} \int_{\zeta \in \partial U(z)} \frac{\varphi(\zeta) d \zeta}{(\zeta-z)^{\ell+1}}
+$$
+
+and
+
+$$
+\psi(A z)=\frac{\ell !}{2 \pi \sqrt{-1}} \int_{\zeta \in \partial U(A z)} \frac{\varphi(\zeta) d \zeta}{(\zeta-A z)^{\ell+1}} \quad \text { when } A z \in \tilde{W}
+$$
+
+It follows from
+
+$$
+\begin{aligned}
+\zeta \in U(z) & \Longleftrightarrow A \zeta \in U(A z), \\
+\zeta \in \partial U(z) & \Longleftrightarrow A \zeta \in \partial U(A z)
+\end{aligned}
+$$
+
+with the change of variable $\zeta \mapsto A \zeta$, that
+
+$$
+\int_{\zeta \in \partial U(A z)} \frac{\varphi(\zeta) d \zeta}{(\zeta-A z)^{\ell+1}}=\int_{A \zeta \in \partial U(A z)} \frac{\varphi(A \zeta) d(A \zeta)}{(A \zeta-A z)^{\ell+1}}
+$$
+
+From the following straightforward direct computation of the discrete version of the formula for the derivative of fractional linear transformation
+
+$$
+\begin{aligned}
+A \zeta-A z & =\frac{a \zeta+b}{c \zeta+d}-\frac{a z+b}{c z+d} \\
+& =\frac{(a \zeta+b)(c z+d)-(a z+b)(c \zeta+d)}{(c \zeta+d)(c z+d)} \\
+& =\frac{(a c \zeta z+b c z+a d \zeta+b d)-(a c \zeta z+a d z+b c \zeta+b d)}{(c \zeta+d)(c z+d)} \\
+& =\frac{(a d-b c)(\zeta-z)}{(c \zeta+d)(c z+d)}
+\end{aligned}
+$$
+
+we obtain
+
+$$
+\begin{aligned}
+\int_{A \zeta \in \partial U(A z)} \frac{\varphi(A \zeta) d(A \zeta)}{(A \zeta-A z)^{\ell+1}} & =\int_{\zeta \in \partial U(z)} \frac{\varphi\left(\frac{a \zeta+b}{c \zeta+d}\right) \frac{a d-b c}{(c \zeta+d)^{2}} d \zeta}{\frac{(a d-b c)^{\ell+1}(\zeta-z)^{\ell+1}}{(c \zeta+d)^{\ell+1}(c z+d)^{\ell+1}}} \\
+& =\int_{\zeta \in \partial U(z)} \frac{\varphi(\zeta) \frac{(a d-b c)^{m}}{(c \zeta+d)^{2 m}} \frac{a d-b c}{(c \zeta+d)^{2}} d \zeta}{\frac{(a d-b c)^{\ell+1}\left(\zeta-z \ell^{\ell+1}\right.}{(c \zeta+d)^{\ell+1}(c z+d)^{\ell+1}}} \\
+& =\frac{(c z+d)^{\ell+1}}{(a d-b c)^{\ell-m}} \int_{\zeta \in \partial U(z)} \frac{\varphi(\zeta) d \zeta}{(\zeta-z)^{\ell+1}}(c \zeta+d)^{\ell-1-2 m}
+\end{aligned}
+$$
+
+The extra factor $(c \zeta+d)^{\ell-1-2 m}$ inside the integrand on the extreme righthand side becomes 1 and can be dropped if $\ell-1-2 m=0$, that is, if $\ell=2 m+1$. Thus, if $\ell=2 m+1$, then
+
+$$
+\psi(A z)=\frac{(c z+d)^{\ell+1}}{(a d-b c)^{\ell-m}} \psi(z)
+$$
+
+That is,
+
+$$
+\psi(z)=\psi\left(\frac{a z+b}{c z+d}\right) \frac{(a d-b c)^{\ell-m}}{(c z+d)^{2(\ell-m)}}
+$$
+
+because $\ell=2 m+1$ implies $\ell+1=2(\ell-m)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (Algebraic Topology) (a) Show that the Euler characteristic of any contractible space is 1.
+\end{enumerate}
+
+(b) Let $B$ be a connected $\mathrm{CW}$ complex made of finitely many cells so that its Euler characteristic is defined. Let $E \rightarrow B$ be a covering map whose fibers are discrete, finite sets of cardinality $N$. Show the Euler characteristic of $E$ is $N$ times the Euler characteristic of $B$.
+
+(c) Let $G$ be a finite group with cardinality $>2$. Show that $B G$ (the classifying space of $G$ ) cannot have homology groups whose direct sum has finite rank.
+
+Solution. (a) The homology of a point with coefficients in a field $k$ is $H_{0}=k$, $H_{i}=0$ for $i>0$. Hence its Euler characteristic is $\sum(-1)^{i} \operatorname{dim} H_{i}=1$. All contractible spaces are homotopy equivalent so their Euler characteristic is that of the point.
+
+(b) For any open cover $\left\{U_{i}\right\}$, we know that the chain complex of singular chains living in $U_{i}$ for some $i$ has equivalent homology to the chain complex of all chains. Taking the cover of $B$ by trivializing neighborhoods $U_{i}$, the chain complex of chains living in $U_{i}$ receives a map from chains in $E$ living in $\pi^{-1}\left(U_{i}\right)$. The latter is simply $|G|$ direct sums of the former, and the chain map between them is the "add every component" map. This shows the ranks of homology of $E$ is $N$ times the rank of homology of $B$.
+
+(c) Strictly speaking, this problem cannot be solved based on easy machinery (as far as I know). A much more reasonable problem would be: Prove $B G$ is not homotopy equivalent to anything made up of only finitely many cells. I did not take off points for people not distinguishing between this condition,
+and the condition stated in the problem itself. We know $B G=E G / G$, but $E G$ is contractible. So $\chi(E G)=1$. If $B G$ has finite homology, $\chi(B G)=$ $1 /|G|$, which cannot be an integer unless $|G|=1$.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (Differential Geometry) Let $H=\left\{(x, y) \in \mathbb{R}^{2}: y>0\right\}$ be the upper half plane. Let $g$ be the Riemannian metric on $H$ given by
+\end{enumerate}
+
+$$
+g=\frac{(\mathrm{d} x)^{2}+(\mathrm{d} y)^{2}}{y^{2}}
+$$
+
+$(H, g)$ is known as the half-plane model of the hyperbolic plane.
+
+(a) Let $\gamma(\theta)=(\cos \theta, \sin \theta)$ and $\eta(\theta)=(\cos \theta+1, \sin \theta)$ for $\theta \in(0, \pi)$ be two paths in $H$. Compute the angle $A$ at their intersection point shown in Figure 1 , measured by the metric $g$.
+
+\begin{center}
+\includegraphics[max width=\textwidth]{2023_10_29_d1ae8b5466f5f6dcce3cg-05}
+\end{center}
+
+Figure 1: Angle $A$ between the two curves $\gamma$ and $\eta$ in the upper half plane $H$.
+
+(b) By computing the Levi-Civita connection
+
+$$
+\nabla_{\frac{\partial}{\partial x_{i}}} \frac{\partial}{\partial x_{j}}=\sum_{k=1}^{2} \Gamma_{i j}^{k} \frac{\partial}{\partial x_{k}}
+$$
+
+of $g$ or otherwise (where $\left(x_{1}, x_{2}\right)=(x, y)$ ), show that the path $\gamma$, after arclength reparametrization, is a geodesic with respect to the metric $g$.
+
+Solution. (a) The intersection point is $(1 / 2, \sqrt{3} / 2)$ : solving for
+
+$$
+\gamma(\theta)=(\cos \theta, \sin \theta)=(\cos \phi+1, \sin \phi)=\eta(\phi)
+$$
+
+we obtain $\theta=\pi / 3, \phi=2 \pi / 3$.
+
+The angle $A$ satisfies
+
+$$
+\begin{aligned}
+\cos A & =\frac{\left\langle\gamma^{\prime}(\pi / 3),-\eta^{\prime}(2 \pi / 3)\right\rangle_{g}}{\left\|\gamma^{\prime}(\pi / 3)\right\|_{g}\left\|-\eta^{\prime}(2 \pi / 3)\right\|_{g}} \\
+& =\frac{\langle(-\sqrt{3} / 2,1 / 2),(\sqrt{3} / 2,1 / 2)\rangle_{g}}{\|(-\sqrt{3} / 2,1 / 2)\|_{g}\|(\sqrt{3} / 2,1 / 2)\|_{g}} \\
+& =\frac{-\frac{1}{2} \frac{1}{y^{2}}}{\frac{1}{y^{2}}} \\
+& =-\frac{1}{2}
+\end{aligned}
+$$
+
+and so $A=2 \pi / 3$.
+
+(b) Using the formula
+
+$$
+\Gamma_{j k}^{i}=\frac{1}{2} g^{i l}\left(g_{j l, k}+g_{j l, j}-g_{j k, l}\right)
+$$
+
+one obtains
+
+$$
+\Gamma_{j k}^{i}=\frac{-1}{y}\left(\delta_{i j} \delta_{k, 2}+\delta_{k i} \delta_{j, 2}-\delta_{j k} \delta_{i, 2}\right)
+$$
+
+After arc-length reparametrization, the tangent vectors of the path are
+
+$$
+v(\theta)=\frac{\gamma^{\prime}(\theta)}{\left\|\gamma^{\prime}(\theta)\right\|_{g}}=\left(-\sin ^{2} \theta, \sin \theta \cos \theta\right)
+$$
+
+Then
+
+$$
+\nabla_{v(\theta)} v(\theta)=v^{\prime}(\theta)+\left(\begin{array}{cc}
+\Gamma_{1}^{1} & \Gamma_{2}^{1} \\
+\Gamma_{1}^{2} & \Gamma_{2}^{2}
+\end{array}\right) \cdot v(\theta)
+$$
+
+where
+
+$$
+\begin{aligned}
+& \Gamma_{1}^{1}=(-\sin \theta) \Gamma_{11}^{1}+(\cos \theta) \Gamma_{21}^{1}=-\cot \theta \\
+& \Gamma_{2}^{1}=(-\sin \theta) \Gamma_{12}^{1}+(\cos \theta) \Gamma_{22}^{1}=1 ; \\
+& \Gamma_{1}^{2}=(-\sin \theta) \Gamma_{11}^{2}+(\cos \theta) \Gamma_{21}^{2}=-1 ; \\
+& \Gamma_{2}^{2}=(-\sin \theta) \Gamma_{12}^{2}+(\cos \theta) \Gamma_{22}^{2}=-\cot \theta
+\end{aligned}
+$$
+
+Thus one has $\nabla_{v(\theta)} v(\theta)=0$.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (Real Analysis) For any positive integer $n$ let $M_{n}$ be a positive number such that the series $\sum_{n=1}^{\infty} M_{n}$ of positive numbers is convergent and its limit is $M$. Let $a<b$ be real numbers and $f_{n}(x)$ be a real-valued continuous function on $[a, b]$ for any positive integer $n$ such that its derivative $f_{n}^{\prime}(x)$ exists for every $a<x<b$ with $\left|f_{n}^{\prime}(x)\right| \leq M_{n}$ for $a<x<b$. Assume that the series $\sum_{n=1}^{\infty} f_{n}(a)$ of real numbers converges. Prove that
+\end{enumerate}
+
+(a) the series $\sum_{n=1}^{\infty} f_{n}(x)$ converges to some real-valued function $f(x)$ for every $a \leq x \leq b$,
+
+(b) $f^{\prime}(x)$ exists for every $a<x<b$, and
+
+(c) $\left|f^{\prime}(x)\right| \leq M$ for $a<x<b$.
+
+Hint for (b): For fixed $x \in(a, b)$ consider the series of functions
+
+$$
+\sum_{n=1}^{\infty} \frac{f_{n}(y)-f_{n}(x)}{y-x}
+$$
+
+of the variable $y$ and its uniform convergence.
+
+Solution. (a) Fix $x \in(a, b]$. For $q>p \geq 1$, by the Mean Value Theorem applied to the function $\sum_{n=p}^{q} f_{n}$ on $[a, x]$ we can find $a<\xi_{p, q}<x$ such that
+
+$$
+\sum_{n=p}^{q} f_{n}(x)-\sum_{n=p}^{q} f_{n}(a)=(x-a) \sum_{n=p}^{q} f_{n}^{\prime}\left(\xi_{p, q}\right)
+$$
+
+which implies that
+
+$$
+\begin{gathered}
+\left|\sum_{n=p}^{q} f_{n}(x)\right| \leq\left|\sum_{n=p}^{q} f_{n}(a)\right|+(x-a)\left|\sum_{n=p}^{q} f_{n}^{\prime}\left(\xi_{p, q}\right)\right| \\
+\leq\left|\sum_{n=p}^{q} f_{n}(a)\right|+(x-a) \sum_{n=p}^{q} M_{n} .
+\end{gathered}
+$$
+
+Since both series $\sum_{n=1}^{\infty} f_{n}(a)$ and $\sum_{n=1}^{\infty} M_{n}$ are convergent and therefore Cauchy, for any $\varepsilon>0$ we can find a positive integer $N_{1}$ such that
+
+$$
+\left|\sum_{n=p}^{q} f_{n}(a)\right|<\frac{\varepsilon}{2}
+$$
+
+for $q>p \geq N_{1}$ and we can find a positive integer $N_{2}$ such that
+
+$$
+\left|\sum_{n=p}^{q} M_{n}\right|<\frac{\varepsilon}{2(x-a)}
+$$
+
+for $q>p \geq N_{2}$. Thus for $n \geq \max \left(N_{1}, N_{2}\right)$ we have
+
+$$
+\left|\sum_{n=p}^{q} f_{n}(x)\right|<\varepsilon
+$$
+
+and the series $\sum_{n=1}^{\infty} f_{n}(x)$ is Cauchy. Hence the series $\sum_{n=1}^{\infty} f_{n}(x)$ converges to some real-valued function $f(x)$ for every $a \leq x \leq b$.
+
+(b) Before the proof of the statement in (b), we would like to state that the uniform limit of continuous functions is continuous. That is, if $h_{n}(x)$ is a sequence of functions on a metric space $E$ which converges to a function $h(x)$ on $E$ uniformly on $E$ and if for some $x_{0} \in E$ and for every $n$ the function $h_{n}(x)$ is continuous at $x=x_{0}$, then $h(x)$ is continuous at $x_{0}$. This results from the so-called $3 \varepsilon$ argument as follows. Given any $\varepsilon>0$. The uniform convergence of $h_{n} \rightarrow h$ on $E$ implies that there exists some positive integer $N$ such that $\left|h_{N}(x)-h(x)\right|<\varepsilon$ for all $x \in E$. Since $h_{N}$ is continuous at $x=x_{0}$, there exists some $\delta>0$ such that $\left|h_{N}(x)-h_{N}\left(x_{0}\right)\right|<\varepsilon$ for $d_{E}\left(x, x_{0}\right)<\delta$ (where $d_{E}(\cdot, \cdot)$ is the metric of the metric space $E$ ). Thus for $d_{E}\left(x, x_{0}\right)<\delta$ we have
+
+$\left|h(x)-h\left(x_{0}\right)\right| \leq\left|h(x)-h_{N}(x)\right|+\left|h_{N}(x)-h_{N}\left(x_{0}\right)\right|+\left|h_{N}\left(x_{0}\right)-h\left(x_{0}\right)\right|<3 \varepsilon$,
+
+which implies the continuity of $h$ at $x=x_{0}$.
+
+We now prove the statement in (b). Take $x_{0} \in(a, b)$. We introduce the function $g_{n, x_{0}}(x)$ on $[a, b]$ which is defined by
+
+$$
+\left\{\begin{array}{l}
+g_{n, x_{0}}(x)=\frac{f_{n}(x)-f_{n}\left(x_{0}\right)}{x-x_{0}} \text { for } x \neq x_{0} \\
+g_{n, x_{0}}\left(x_{0}\right)=f_{n}^{\prime}\left(x_{0}\right) .
+\end{array}\right.
+$$
+
+It follows from the continuity of $f_{n}$ on $[a, b]$ and the existence of $f_{n}^{\prime}\left(x_{0}\right)$ that $g_{n, x_{0}}$ is a continuous function on $[a, b]$.
+
+When $x \in[a, b]$ with $x \neq x_{0}$, by the Mean Value Theorem
+
+$$
+\frac{f_{n}(x)-f_{n}\left(x_{0}\right)}{x-x_{0}}=f_{n}^{\prime}\left(\xi_{x}\right)
+$$
+
+for some $\xi_{x}$ strictly between $x_{0}$ and $x$ and as a consequence
+
+$$
+\left|g_{n, x_{0}}(x)\right|=\left|f_{n}^{\prime}\left(x_{0}\right)\right| \leq M_{n}
+$$
+
+When $x=x_{0}$,
+
+$$
+\left|g_{n, x_{0}}(x)\right|=\left|f_{n}^{\prime}\left(x_{0}\right)\right| \leq M_{n}
+$$
+
+Thus $\left|g_{n, x_{0}}(x)\right| \leq M_{n}$ for $x \in[a, b]$. From $\sum_{n=1}^{\infty} M_{n} \leq M<\infty$ it follows that the series $\sum_{n=1}^{\infty} g_{n, x_{0}}$ is uniformly convergent on $[a, b]$. It follows that the uniform limit $\sum_{n=1}^{\infty} g_{n, x_{0}}$ is a continuous function on $[a, b]$ by the $3 \varepsilon$ argument given above. For $x \neq x_{0}$
+
+$$
+\sum_{n=1}^{\infty} g_{n, x_{0}}(x)=\sum_{n=1}^{\infty} \frac{f_{n}(x)-f_{n}\left(x_{0}\right)}{x-x_{0}}=\frac{f(x)-f\left(x_{0}\right)}{x-x_{0}}
+$$
+
+The continuity of $\sum_{n=1}^{\infty} g_{n, x_{0}}(x)$ at $x=x_{0}$ means that the limit of
+
+$$
+\frac{f(x)-f\left(x_{0}\right)}{x-x_{0}}
+$$
+
+exists as $x \rightarrow x_{0}$, which implies that $f^{\prime}\left(x_{0}\right)$ exists and is equal to
+
+$$
+\sum_{n=1}^{\infty} g_{n, x_{0}}\left(x_{0}\right)=\sum_{n=1}^{\infty} f_{n}^{\prime}\left(x_{0}\right)
+$$
+
+(c) From
+
+$$
+f^{\prime}\left(x_{0}\right)=\sum_{n=1}^{\infty} g_{n, x_{0}}\left(x_{0}\right)=\sum_{n=1}^{\infty} f_{n}^{\prime}\left(x_{0}\right)
+$$
+
+and $\left|f_{n}^{\prime}\left(x_{0}\right)\right| \leq M_{n}$, it follows that
+
+$$
+\left|f^{\prime}\left(x_{0}\right)\right| \leq \sum_{n=1}^{\infty} M_{n}=M
+$$
+
+\section{Solutions of Qualifying Exams II, 2013 Fall}
+\begin{enumerate}
+  \item (Algebra) Find all the field automorphisms of the real numbers $\mathbb{R}$.
+\end{enumerate}
+
+Hint: Show that any automorphism maps a positive number to a positive number, and deduce from this that it is continuous.
+
+Solution. If $t>0$, there exists an element $s \neq 0$ such that $t=s^{2}$. If $\varphi$ is any field automorphism of $\mathbb{R}$, then
+
+$$
+\varphi(t)=\varphi\left(s^{2}\right)=(\varphi(s))^{2}>0
+$$
+
+It follows that $\varphi$ preserves the order on $\mathbb{R}$ : If $t<t^{\prime}$, then
+
+$$
+\varphi\left(t^{\prime}\right)=\varphi\left(t+\left(t^{\prime}-t\right)\right)=\varphi(t)+\varphi\left(t^{\prime}-t\right)>\varphi(t)
+$$
+
+Any real number $\alpha$ is determined by the set (Dedekind's cut) of rational numbers that are less than $\alpha$, and any field automorphism fixes each rational number. Therefore $\varphi$ is the identity automorphism.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (Algebraic Geometry) What is the maximum number of ramification points that a mapping of finite degree from one smooth projective curve over $\mathbb{C}$ of genus 1 to another (smooth projective curve of genus 1 ) can have? Give an explanation for your answer.
+\end{enumerate}
+
+Solution (Sketch). By the Riemann-Hurwitz formula, if we have a mapping $f$ of finite degree $d$ from one smooth projective (irreducible, say) curve onto another the Euler characteristic of the source curve is $d$ times the Euler characteristic of the target minus a certain nonnegative number $e$, and moreover $e$ is zero if and only if the mapping is unramified. Now compute: the Euler characterstic of our source and target curves is, by hypothesis, 0 and so this $e$ is zero, and therefore the mapping is unramified.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (COmplex Analysis) Let $\omega$ and $\eta$ be two complex numbers such that $\operatorname{Im}\left(\frac{\omega}{\eta}\right)>0$. Let $G$ be the closed parallelogram consisting of all $z \in \mathbb{C}$ such that $z=\lambda \omega+\rho \eta$ for some $0 \leq \lambda, \rho \leq 1$. Let $\partial G$ be the boundary of $G$ and Let $G^{0}=G-\partial G$ be the interior of $G$. Let $P_{1}, \cdots, P_{k}, Q_{1}, \cdots, Q_{\ell}$ be points in $G^{0}$ and let $m_{1}, \cdots, m_{k}, n_{1}, \cdots, n_{\ell}$ be positive integers. Let $f$ be a function on $G$ such that
+\end{enumerate}
+
+$$
+\frac{f(z) \prod_{j=1}^{\ell}\left(z-Q_{j}\right)^{n_{j}}}{\prod_{p=1}^{k}\left(z-P_{p}\right)^{m_{p}}}
+$$
+
+is continuous and nowhere zero on $G$ and is holomorphic on $G^{0}$. Let $\varphi(z)$ and $\psi(z)$ be two polynomials on $\mathbb{C}$. Assume that $f(z+\omega)=e^{\varphi(z)} f(z)$ if both $z$ and $z+\omega$ are in $G$. Assume also that $f(z+\eta)=e^{\psi(z)} f(z)$ if both $z$ and $z+\eta$ are in $G$. Express $\sum_{p=1}^{k} m_{p}-\sum_{j=1}^{\ell} n_{j}$ in terms of $\omega$ and $\eta$ and the coefficients of $\varphi(z)$ and $\psi(z)$.
+
+Solution. Let $A=0, B=\eta, C=\eta+\omega$, and $D=\omega$. Since $\operatorname{Im}\left(\frac{\omega}{\eta}\right)>0$, it follows that going from $A$ to $B$, to $C$, to $D$ and then back to $A$ is in the counterclockwise direction. By the argument principle
+
+$$
+\begin{aligned}
+\sum_{p=1}^{k} m_{p}-\sum_{j=1}^{\ell} n_{j} & =\frac{1}{2 \pi \sqrt{-1}} \oint_{\partial G} d \log f \\
+& =\frac{1}{2 \pi \sqrt{-1}}\left(\int_{\overrightarrow{A B}} d \log f+\int_{\overrightarrow{B C}} d \log f+\int_{\overrightarrow{C D}} d \log f+\int_{\overrightarrow{D A}} d \log f\right) \\
+& =\frac{1}{2 \pi \sqrt{-1}}\left(\int_{\overrightarrow{A B}} d \log f-\int_{\overrightarrow{C D}} d \log f+\int_{\overrightarrow{B C}} d \log f-\int_{\overrightarrow{A D}} d \log f\right) \\
+& =\frac{1}{2 \pi \sqrt{-1}}\left(-\int_{\overrightarrow{A B}} d \varphi(z)+\int_{\overrightarrow{A D}} d \psi(z)\right) \\
+& =\frac{1}{2 \pi \sqrt{-1}}(-\varphi(\eta)+\varphi(0)+\psi(\omega)-\psi(0)) .
+\end{aligned}
+$$
+
+Thus, the answer is
+
+$$
+\sum_{p=1}^{k} m_{p}-\sum_{j=1}^{\ell} n_{j}=\frac{1}{2 \pi \sqrt{-1}}(-\varphi(\eta)+\varphi(0)+\psi(\omega)-\psi(0)) .
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (Algebraic Topology) (a) Fix a basis for $H_{1}$ of the two-torus (with integer coefficients). Show that for every element $x \in S L(2, \mathbb{Z})$, there is an automorphism of the two-torus such that the induced map on $H_{1}$ acts by $x$.
+\end{enumerate}
+
+Hint: $S L(2, \mathbb{Z})$ also acts on the universal cover of the torus.
+
+(b) Fix an embedding $j: D^{2} \times S^{1} \rightarrow S^{3}$. Remove its interior from $S^{3}$ to obtain a manifold $X$ with boundary $T^{2}$. Let $f$ be an automorphism of the two-torus and consider the glued space
+
+$$
+X_{f}:=\left(D^{2} \times S^{1}\right) \cup_{f} X
+$$
+
+If $X$ is homotopy equivalent to $D^{2} \times S^{1}$, compute the homology groups of $X_{f}$.
+
+Solution. (a) Given $g \in S L(2, \mathbb{Z}) \subset S L(2, \mathbb{R})$ let $x: \mathbb{R}^{2} \rightarrow \mathbb{R}^{2}$ be the induced action. Since $g$ is in $S L(2, \mathbb{Z})$ it respects the relationship of whether two vectors in $\mathbb{R}^{2}$ differ by integer coordinates. So the map on the torus $\left[\left(x_{1}, x_{2}\right)\right] \mapsto\left[g\left(x_{1}, x_{2}\right)\right]$ is well-defined. This clearly sends a homology generating pair given by the curves $\left(x_{1}, 0\right)$ and $\left(0, x_{2}\right)$ to the expected images via $g$.
+
+(b) There is an ambiguity in the problem about how $f$ glues $X$ and $D^{2} \times$ $S^{1}$ together; so I gave full credit regardless of whether you identified this ambiguity or not. Note $X_{f}=\left(D^{2} \times S^{1}\right) \cup_{S^{1} \times S^{1}} X$. Write $U=D^{2} \times S^{1}$ and $V=X$. The Mayer-Vietoris sequence gives
+
+$$
+\begin{array}{r}
+\longrightarrow H_{0}(U \cap V) \longrightarrow H_{0}(U) \oplus H_{0}(V) \longrightarrow H_{0}(U \cup V) \\
+\longrightarrow H_{1}(U \cap V) \longrightarrow H_{1}(U) \oplus H_{1}(V) \longrightarrow H_{1}(U \cup V) \\
+\longrightarrow H_{2}(U \cap V) \longrightarrow H_{2}(U) \oplus H_{2}(V) \longrightarrow H_{2}(U \cup V) \\
+\longrightarrow H_{3}(U \cap V) \longrightarrow H_{3}(U) \oplus H_{3}(V) \longrightarrow H_{3}(U \cup V)
+\end{array}
+$$
+
+but because we know the homology of $D^{2} \times S^{1} \simeq S^{1}$ and $S^{1} \times S^{1}$, we can fill in various groups in the long exact sequence:
+
+\begin{center}
+\includegraphics[max width=\textwidth]{2023_10_29_d1ae8b5466f5f6dcce3cg-12}
+\end{center}
+
+Since $g$ is an isomorphism, we know $H_{1}$ must inject into $\mathbb{Z}$, but the inclusion map $H_{0}(U \cap V) \rightarrow H_{0}(U) \oplus H_{0}(V)$ is an injection, so $H_{1}(U \cup V)=0$.
+
+We know $H_{0}$ is either equal to $\mathbb{Z}$ from the long exact sequence above, or by observing that $X_{f}$ is path-connected.
+
+If $f$ induces an isomorphism, we see $H_{2}$ must be zero; this was the intent of the problem, but you can get a different answer based on how you interpreted the "gluing" by $f$.
+
+Finally, $H_{3}$ is also isomorphic to $\mathbb{Z}$ by the exactness of the above sequence.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (Differential Geometry) Let $M=U(n) / O(n)$ for $n \geq 1$, where $U(n)$ is the group of $n \times n$ unitary matrices and $O(n)$ is the group of $n \times n$ orthogonal matrices. $M$ is a real manifold called the Lagrangian Grassmannian.
+\end{enumerate}
+
+(a) Compute and state the dimension of $M$.
+
+(b) Construct a Riemannian metric which is invariant under the left action of $U(n)$ on $M$.
+
+(c) Let $\nabla$ be the corresponding Levi-Civita connection on the tangent bundle $T M$, and $X, Y, Z$ be any $U(n)$-invariant vector fields on $M$. Using the given identity (which you are not required to prove)
+
+$$
+\nabla_{X} Y=\frac{1}{2}[X, Y]
+$$
+
+show that the Riemannian curvature tensor $R$ of $\nabla$ satisfies the formula
+
+$$
+R(X, Y) Z=\frac{1}{4}[Z,[X, Y]]
+$$
+
+Solution. (a)
+
+$$
+T_{[I]} M \cong \mathfrak{u}(n) / \mathfrak{o}(n) \cong \operatorname{Sym}^{2}\left(\mathbb{R}^{n}\right)
+$$
+
+where $\operatorname{Sym}^{2}\left(\mathbb{R}^{n}\right)$ denotes the space of real $n \times n$ symmetric matrices. Thus
+
+$$
+\operatorname{dim} M=\frac{n(n+1)}{2}
+$$
+
+(b) Define a metric on $\operatorname{Sym}^{2}\left(\mathbb{R}^{n}\right)$ by
+
+$$
+\langle A, B\rangle=\operatorname{tr}\left(A B^{t}\right)=\operatorname{tr}(A B)
+$$
+
+$g \in O(n)$ acts on $T_{[I]} M \cong \operatorname{Sym}^{2}\left(\mathbb{R}^{n}\right)$ by $g \cdot A=g A g^{-1}$. Then
+
+$$
+\langle g \cdot A, g \cdot B\rangle=\operatorname{tr}\left(g \cdot A B g^{-1}\right)=\langle A, B\rangle
+$$
+
+Hence this metric is invariant under the action of $O(n)$. By translating the metric to tangent spaces at other points by the action of $U(n)$, this gives a well-defined invariant metric on $U(n) / O(n)$.
+(c)
+
+$$
+\nabla_{X} Y=\frac{1}{2}[X, Y]
+$$
+
+Then
+
+$$
+\begin{aligned}
+R(X, Y) Z & =\nabla_{X} \nabla_{Y} Z-\nabla_{Y} \nabla_{X} Z-\nabla_{[X, Y]} Z \\
+& =\frac{1}{4}([X,[Y, Z]]-[Y,[X, Z]])-\frac{1}{2}[[X, Y], Z] \\
+& =\frac{1}{4}[Z,[X, Y]]
+\end{aligned}
+$$
+
+where the last equality follows from Jacobi identity.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (Real Analysis) Show that there is no function $f: \mathbb{R} \rightarrow \mathbb{R}$ whose set of continuous points is precisely the set $\mathbb{Q}$ of all rational numbers.
+\end{enumerate}
+
+Solution. For fixed $\delta>0$ let $C(\delta)$ be the set of points $x \in \mathbb{R}$ such that for some $\varepsilon>0$ we have $\left|f\left(x^{\prime}\right)-f\left(x^{\prime \prime}\right)\right|<\delta$ for all $x^{\prime}, x^{\prime \prime} \in(x-\varepsilon, x+\varepsilon)$. Clearly $C(\delta)$ is open since for every $x \in C(\delta)$, we have $(x-\varepsilon, x+\varepsilon) \subset C(\delta)$. Now let $C$ denote the set of continuous points of $f$. From the definitions, we have that
+
+$$
+C=\bigcap_{n=1}^{\infty} C(1 / n)
+$$
+
+Now suppose that $C=\mathbb{Q}$. Then
+
+$$
+\mathbb{R}-\mathbb{Q}=\bigcup_{n=1}^{\infty} X_{n}
+$$
+
+where $X_{n}=\mathbb{R}-C(1 / n)$. Since $C(1 / n)$ is open, $X_{n}$ is closed. Also $\mathbb{Q}$ is countable, say $\mathbb{Q}=\left\{q_{1}, q_{2}, \ldots\right\}$. Let $Y_{n}=\left\{q_{n}\right\}$. Then
+
+$$
+\mathbb{R}=\left(\bigcup_{n=1}^{\infty} X_{n}\right) \cup\left(\bigcup_{n=1}^{\infty} Y_{n}\right)
+$$
+
+i.e. we have written $\mathbb{R}$ as a countable union of closed sets. Then by Baire's theorem, some $X_{n}$ or $Y_{n}$ has nonempty interior. Clearly it cannot be one of the $Y_{n}$. So there exists $X_{n}$ containing an interval $(a, b)$. But this is impossible because $X_{n} \subset \mathbb{R}-\mathbb{Q}$ and every interval contains a rational number. Thus, we obtain a contradiction, which shows that $C \neq \mathbb{Q}$.
+
+\section{Solutions of Qualifying Exams III, 2013 Fall}
+\begin{enumerate}
+  \item (Algebra) Consider the function fields $K=\mathbb{C}(x)$ and $L=\mathbb{C}(y)$ of one variable, and regard $L$ as a finite extension of $K$ via the $\mathbb{C}$-algebra inclusion
+\end{enumerate}
+
+$$
+x \mapsto \frac{-\left(y^{5}-1\right)^{2}}{4 y^{5}}
+$$
+
+Show that the extension $L / K$ is Galois and determine its Galois group.
+
+Solution. Consider the intermediate extension $K^{\prime}=\mathbb{C}\left(y^{5}\right)$. Then clearly $\left[L: K^{\prime}\right]=5$ and $\left[K^{\prime}: K\right]=2$, therefore $[L: K]=10$.
+
+Thus, to prove that $L / K$ is Galois it is enough to find 10 field automor-
+
+phisms of $L$ over $K$. Choose a primitive 5 th root of 1 , say $\zeta=e^{2 \pi i / 5}$. For $i \in \mathbb{Z} / 5$ and $s \in\{ \pm 1\}$, the $\mathbb{C}$-algebra automorphism $\sigma_{i, s}$ of $L$ defined by
+
+$$
+y \mapsto \zeta^{i} y^{s}
+$$
+
+leaves $x$, hence $K$, fixed.
+
+There can be many ways to determine the group, here's one.
+
+Looking at the law of composition of these automorphisms, one sees that the subgroup $\operatorname{Gal}\left(L / K^{\prime}\right) \simeq \mathbb{Z} / 5$, (which is necessarily normal, being of index 2 ) is not central, for conjugation by $\sigma_{0,-1}$ acts as -1 on it.
+
+So the group is the dihedral group of 10 elements.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (Algebraic GeOmetry) Is every smooth projective curve of genus 0 defined over the field of complex numbers isomorphic to a conic in the projective plane? Give an explanation for your answer.
+\end{enumerate}
+
+Solution (Sketch). Yes. Apply the Riemann-Roch theorem which guarantees the existence of a nonconstant meromorphic function with a simple pole at exactly one point. Argue that this meromorphic function identifies the curve with $\mathbb{P}^{1}$, and using that fact, embed the curve as a conic in the plane in any convenient way, e.g., If $t_{0}, t_{1}$ are projective $\left(\mathbb{P}^{1}\right)$ coordinates, let $z_{0}=t_{0}^{2}, z_{1}=t_{0} t_{1} z_{2}=t_{1}^{2}$ be the map to $\mathbb{P}^{2}$. The conic, then, would be $z_{0} z_{2}=z_{1}^{2}$. (Alternatively: one can consider the complete linear system attached to the anticanonical divisor.)
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (Complex Analysis) Let $f(z)=z+e^{-z}$ for $z \in \mathbb{C}$ and let $\lambda \in \mathbb{R}, \lambda>1$. Prove or disprove the statement that $f(z)$ takes the value $\lambda$ exactly once in the open right half-plane $H_{r}=\{z \in \mathbb{C}: \operatorname{Re} z>0\}$.
+\end{enumerate}
+
+Solution. First, let us consider the real function $f(x)=x+e^{-x}$. Since $f$ is continuous, $f(0)=1$ and $\lim _{x \rightarrow \infty} f(x)=\infty$, by the intermediate value theorem, there exists $u \in \mathbb{R}$ such that $f(u)=\lambda$. Now let us show that such $u$ is unique. Let $R>2 \lambda$ and let $\Gamma$ be the closed right half disk of radius $R$ centered at the origin
+
+$\{z=x+i y \in \mathbb{C}: x=0,|y| \leq R\} \cup\left\{z \in \mathbb{C}:|z|=R,-\frac{\pi}{2} \leq \arg (z) \leq \frac{\pi}{2}\right\}$.
+
+Let $F(z)=\lambda-z$ and $G(z)=-e^{-z}$. Then for $z \in \Gamma$, we have $|G(z)|=$ $\left|e^{-\operatorname{Re} z}\right| \leq 1$ since $\operatorname{Re} z \geq 0$, while $|F(z)|>1$ by construction. Hence by Rouché's theorem, $\lambda-f(z)=F(z)+G(z)$ has the same number of zeros inside $\Gamma$ as $F(z)$, namely 1 . Since this is true for all $R$ large enough, we conclude that the point $u$ is unique.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (Algebraic Topology) (a) Let $X$ and $Y$ be locally contractible, connected spaces with fixed basepoints. Let $X \vee Y$ be the wedge sum at the basepoints. Show that $\pi_{1}(X \vee Y)$ is the free product of $\pi_{1} X$ with $\pi_{1} Y$.
+\end{enumerate}
+
+(b) Show that $\pi_{1}(X \times Y)$ is the direct product of $\pi_{1} X$ with $\pi_{1} Y$.
+
+(c) Note the canonical inclusion $f: X \vee Y \rightarrow X \times Y$. Assume that $X$ and $Y$ have abelian fundamental groups. Show that the map $f_{*}$ on fundamental groups exhibits $\pi_{1}(X \times Y)$ as the abelianization of $\pi_{1}(X \vee Y)$.
+
+Hint: The Hurewicz map is natural.
+
+Solution. (a) This follows form the Van Kampen theorem: Writing $X \vee Y$ as the union
+
+$$
+X \cup_{*} Y
+$$
+
+we have that $\pi_{1}(X \vee Y) \cong \pi_{1}(X) *_{\pi_{1}(*)} \pi_{1}(Y)=\pi_{1}(X) * \pi_{1} Y$.
+
+(b) There is the obvious continuous map
+
+$$
+\operatorname{Maps}_{*}\left(S^{1}, X\right) \times \operatorname{Maps}_{*}\left(S^{1}, Y\right) \rightarrow \operatorname{Maps}_{*}\left(S^{1}, X \times Y\right)
+$$
+
+given by sending $\left(t \mapsto \gamma_{X}(t), t \mapsto \gamma_{Y}(t)\right) \mapsto\left(t \mapsto\left(\gamma_{X}(t), \gamma_{Y}(t)\right)\right)$. This map is a continuous so it induces a map
+
+$$
+\pi_{0}\left(\operatorname{Maps}_{*}\left(S^{1}, X\right) \times \operatorname{Maps}_{*}\left(S^{1}, Y\right)\right) \rightarrow \pi_{0} \operatorname{Maps}_{*}\left(S^{1}, X \times Y\right)
+$$
+
+where the lefthand side is isomorphic to $\left.\pi_{0} \operatorname{Maps}_{*}\left(S^{1}, X\right) \times \pi_{0} \operatorname{Maps}_{*}\left(S^{1}, Y\right)\right)$. Further, the above map is clearly a bijection, so it induces an injection and a surjection on $\pi_{0}$.
+
+(c) The Hurewicz map is natural so we have a commutative diagram
+
+\begin{center}
+\includegraphics[max width=\textwidth]{2023_10_29_d1ae8b5466f5f6dcce3cg-17}
+\end{center}
+
+where the vertical maps are abelianizations by the Hurewicz theorem. But the lower-right corner is equal to $H_{1}(X) \times H_{1}(Y)$ by the Kunneth theorem (since $X$ and $Y$ are connected), and the bottom copy of $f_{*}$ is the obvious isomorphism on $H_{1}$. Since $q$ is an abelianization by definition, but the bottom arrow and rightmost arrow are both isomorphisms, the top arrow must also be an abelianization.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (Differential Geometry) (a) Let $\mathbb{S}^{1}=\mathbb{R} / \mathbb{Z}$ be a circle and consider the connection
+\end{enumerate}
+
+$$
+\nabla:=\mathrm{d}+\pi \sqrt{-1} \mathrm{~d} \theta
+$$
+
+defined on the trivial complex line bundle over $\mathbb{S}^{1}$, where $\theta$ is the standard coordinate on $\mathbb{S}^{1}=\mathbb{R} / \mathbb{Z}$ descended from $\mathbb{R}$. By solving the differential equation for flat sections $f(\theta)$
+
+$$
+\nabla f=\mathrm{d} f+\pi \sqrt{-1} f \mathrm{~d} \theta=0
+$$
+
+or otherwise, show that there does not exist global flat sections with respect to $\nabla$ over $\mathbb{S}^{1}$.
+
+(b) Let $T=V / \Lambda$ be a torus, where $\Lambda$ is a lattice and $V=\Lambda \otimes \mathbb{R}$ is the real vector space containing $\Lambda$. Let $L$ be the trivial complex line bundle equipped with the standard Hermitian metric. By identifying flat $U(1)$ connections with $U(1)$ representations of the fundamental group $\pi_{1}(T)$ or otherwise, show that the space of flat unitary connections on $L$ is the dual torus $T^{*}=V^{*} / \Lambda^{*}$, where $\Lambda^{*}:=\operatorname{Hom}(\Lambda, \mathbb{Z})$ is the dual lattice and $V^{*}:=\operatorname{Hom}(V, \mathbb{R})$ is the dual vector space.
+
+Solution. (a) The differential equation
+
+$$
+f^{\prime}(\theta)+\pi \sqrt{-1} f(\theta)=0
+$$
+
+has a unique solution
+
+$$
+f(\theta)=A \mathrm{e}^{-\pi \sqrt{-1} \theta}
+$$
+
+up to a constant $A \in \mathbb{C}$. This is not a well-defined function over $\mathbb{S}^{1}$ because $f(0) \neq f(1)$.
+
+(b) The space of flat $G$-connections over $T$ can be identified as
+
+$$
+\operatorname{Hom}\left(\pi_{1}(T), G\right) / \operatorname{Ad} G
+$$
+
+Since $\pi_{1}(T)=\Lambda$ and for the abelian group $G=U(1)$ the adjoint action is trivial, we have
+
+$$
+\operatorname{Hom}\left(\pi_{1}(T), G\right) / \operatorname{Ad} G=\operatorname{Hom}(\Lambda, U(1))=T^{*}
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (Real Analysis) (Fundamental Solutions of Linear Partial Differential Equations with Constant Coefficients). Let $\Omega$ be an open interval $(-M, M)$ in $\mathbb{R}$ with $M>0$. Let $n$ be a positive integer and $L=\sum_{\nu=0}^{n} a_{\nu} \frac{d^{\nu}}{d x^{\nu}}$ be a linear differential operator of order $n$ on $\mathbb{R}$ with constant coefficients, where the coefficients $a_{0}, \cdots, a_{n-1}, a_{n} \neq 0$ are complex numbers and $x$ is the coordinate of $\mathbb{R}$. Let $L^{*}=\sum_{\nu=0}^{n}(-1)^{\nu} \overline{a_{\nu}} \frac{d^{\nu}}{d x^{\nu}}$. Prove, by using Plancherel's identity, that there exists a constant $c>0$ which depends only on $M$ and $a_{n}$ and is independent of $a_{0}, a_{1}, \cdots, a_{n-1}$ such that for any $f \in L^{2}(\Omega)$ a weak solution $u$ of $L u=f$ exists with $\|u\|_{L^{2}(\Omega)} \leq c\|f\|_{L^{2}(\Omega)}$. Give one explicit expression for $c$ as a function of $M$ and $a_{n}$.
+\end{enumerate}
+
+Hint: A weak solution $u$ of $L u=f$ means that $(f, \psi)_{L^{2}(\Omega)}=\left(u, L^{*} \psi\right)_{L^{2}(\Omega)}$ for every infinitely differentiable function $\psi$ on $\Omega$ with compact support. For the solution of this problem you can consider as known and given the following three statements.
+
+(I) If there exists a positive number $c>0$ such that $\|\psi\|_{L^{2}(\Omega)} \leq c\left\|L^{*} \psi\right\|_{L^{2}(\Omega)}$ for all infinitely differentiable complex-valued functions $\psi$ on $\Omega$ with compact support, then for any $f \in L^{2}(\Omega)$ a weak solution $u$ of $L u=f$ exists with $\|u\|_{L^{2}(\Omega)} \leq c\|f\|_{L^{2}(\Omega)}$.
+
+(II) Let $P(z)=z^{m}+\sum_{k=0}^{m-1} b_{k} z^{k}$ be a polynomial with leading coefficient 1. If $F$ is a holomorphic function on $\mathbb{C}$, then
+
+$$
+|F(0)|^{2} \leq \frac{1}{2 \pi} \int_{\theta=0}^{2 \pi}\left|P\left(e^{i \theta}\right) F\left(e^{i \theta}\right)\right|^{2} d \theta
+$$
+
+(III) For an $L^{2}$ function $f$ on $\mathbb{R}$ which is zero outside $\Omega=(-M, M)$ its Fourier transform
+
+$$
+\hat{f}(\xi)=\int_{-M}^{M} f(x) e^{-2 \pi i x \xi} d x
+$$
+
+as a function of $\xi \in \mathbb{R}$ can be extended to a holomorphic function
+
+$$
+\hat{f}(\xi+i \eta)=\int_{-M}^{M} f(x) e^{-2 \pi i x(\xi+i \eta)} d x
+$$
+
+on $\mathbb{C}$ as a function of $\xi+i \eta$.
+
+Solution. This problem is to compute the constant $c$ in Lemma 3.3 on p.225 of the book of Stein and Shakarchi on Real Analysis by going over its arguments and keeping track of the constants involved in each step.
+
+Introduce the polynomial
+
+$$
+Q(\zeta)=\sum_{k=0}^{n}(-1)^{k} \overline{a_{k}}(2 \pi \zeta)^{k}
+$$
+
+so that
+
+$$
+\left(\widehat{L^{*} \psi}\right)(\zeta)=Q(\zeta) \hat{\psi}(\zeta)
+$$
+
+any $\psi \in \mathcal{C}_{0}^{\infty}(\mathbb{R})$, where ${ }^{-}$denotes taking the Fourier transform. Consider first the special case where $a_{n}=\frac{1}{(2 \pi i)^{n}}$ so that the coefficient of $\xi^{n}$ in the polynomial $Q(\zeta)$ of degree $n$ in $\zeta$ is 1 . Writing $\zeta=\xi+\sqrt{-1} \eta$ (with both $\xi$ and $\eta$ real) and taking the $L^{2}$ of both sides of (\#) over $\mathbb{R}$ as functions of $\eta$. Then
+
+$$
+\int_{-\infty}^{\infty}|Q(\xi+i \eta) \hat{\psi}(\xi+i \eta)|^{2} d \xi=\int_{-\infty}^{\infty}\left|\left(\widehat{L^{*} \psi}\right)(\xi+i \eta)\right|^{2} d \xi
+$$
+
+Since from the definition of Fourier transform
+
+$$
+\left(\widehat{L^{*} \psi}\right)(\xi+i \eta)=\int_{x=-\infty}^{\infty}\left(L^{*} \psi\right)(x) e^{-2 \pi i(\xi+i \eta) x} d x=\int_{x=-\infty}^{\infty}\left(\left(L^{*} \psi\right)(x) e^{2 \pi \eta x}\right) e^{-2 \pi i \xi x} d x
+$$
+
+it follows that $\left(\widehat{L^{*} \psi}\right)(\xi+i \eta)$ is equal to the value at $\xi$ of the Fourier transform of the function $\left(L^{*} \psi\right)(x) e^{2 \pi \eta x}$. Thus, by applying Plancherel's identity to the function $\left(L^{*} \psi\right)(x) e^{2 \pi \eta x}$, we get
+
+$$
+\begin{gathered}
+\int_{\xi=-\infty}^{\infty}\left|\left(\widehat{L^{*} \psi}\right)(\xi+i \eta)\right|^{2} d \xi \\
+=\int_{x=-\infty}^{\infty}\left|\left(L^{*} \psi\right)(x) e^{2 \pi \eta x}\right|^{2} d x \leq e^{4 \pi|\eta| M} \int_{-\infty}^{\infty}\left|\left(L^{*} \psi\right)(x)\right|^{2} d x
+\end{gathered}
+$$
+
+because the support of $\psi(x)$ (as well as the support of $\left(L^{*} \psi\right)(x)$ ) is in the interval $\Omega=(-M, M)$. Thus from (b) it follows that
+
+$$
+\int_{-\infty}^{\infty}|Q(\xi+i \eta) \hat{\psi}(\xi+i \eta)|^{2} d \xi \leq e^{4 \pi|\eta| M} \int_{-\infty}^{\infty}\left|\left(L^{*} \psi\right)(x)\right|^{2} d x
+$$
+
+Setting $\eta=\sin \theta$ in $(\sharp)$, we get from $|\eta| \leq 1$ that
+
+$$
+\int_{-\infty}^{\infty}|Q(\xi+i \sin \theta) \hat{\psi}(\xi+i \sin \theta)|^{2} d \xi \leq e^{4 \pi M} \int_{-\infty}^{\infty}\left|\left(L^{*} \psi\right)(x)\right|^{2} d x
+$$
+
+Replacing $\xi$ by $\xi+\cos \theta$ in the integrand on the left-hand side of $(\dagger)$, we get
+
+$$
+\begin{gathered}
+\int_{-\infty}^{\infty}|Q(\xi+\cos \theta+i \sin \theta) \hat{\psi}(\xi+\cos \theta+i \sin \theta)|^{2} d \xi \\
+\leq e^{4 \pi M} \int_{-\infty}^{\infty}\left|\left(L^{*} \psi\right)(x)\right|^{2} d x
+\end{gathered}
+$$
+
+By Statement (III) given above the function $\hat{\psi}(\xi+i \eta)$ as a function of $\xi+i \eta \in$ $\mathbb{C}$ is holomorphic on $\mathbb{C}$. Since $Q(\xi+i \eta)$ as a function of $\xi+i \eta \in \mathbb{C}$ is a polynomial of degree $n$ with leading coefficient 1, it follows from Statement (II) applied to $F(z)=\hat{\psi}(\xi+z)$ and $P(z)=Q(\xi+z)$ that
+
+$$
+|\hat{\psi}(\xi)|^{2} \leq \frac{1}{2 \pi} \int_{\theta=0}^{2 \pi}|Q(\xi+\cos \theta+i \sin \theta) \hat{\psi}(\xi+\cos \theta+i \sin \theta)|^{2} d \theta
+$$
+
+Integrating both sides over $\xi \in(-\infty, \infty)$ and using $(\ddagger)$, we get
+
+$$
+\begin{aligned}
+& \int_{\xi=-\infty}^{\infty}|\hat{\psi}(\xi)|^{2} \leq \int_{\xi=-\infty}^{\infty}\left(\frac{1}{2 \pi} \int_{\theta=0}^{2 \pi}|Q(\xi+\cos \theta+i \sin \theta) \hat{\psi}(\xi+\cos \theta+i \sin \theta)|^{2} d \theta\right) d \xi \\
+& \quad=\frac{1}{2 \pi} \int_{\theta=0}^{2 \pi}\left(\int_{\xi=-\infty}^{\infty}|Q(\xi+\cos \theta+i \sin \theta) \hat{\psi}(\xi+\cos \theta+i \sin \theta)|^{2} d \xi\right) d \theta \\
+& \quad \leq \frac{1}{2 \pi} \int_{\theta=0}^{2 \pi}\left(e^{4 \pi M} \int_{-\infty}^{\infty}\left|\left(L^{*} \psi\right)(x)\right|^{2} d x\right) d \theta=e^{4 \pi M} \int_{-\infty}^{\infty}\left|\left(L^{*} \psi\right)(x)\right|^{2} d x
+\end{aligned}
+$$
+
+By applying Plancherel's formula to $\psi$, we conclude that
+
+$$
+\|\psi(\xi)\|_{L^{2}(\Omega)}^{2} \leq e^{4 \pi M}\left\|\left(L^{*} \psi\right)(x)\right\|_{L^{2}(\Omega)}^{2}
+$$
+
+under the additional assumption that $a_{n}=\frac{1}{(2 \pi i)^{n}}$. When this additional assumption is not satisfied, we can apply the argument for the special case to
+
+$$
+\frac{1}{a_{n}(2 \pi i)^{n}} L
+$$
+
+instead of to $L$ to conclude that
+
+$$
+\|\psi(\xi)\|_{L^{2}(\Omega)}^{2} \leq \frac{e^{4 \pi M}}{\left|a_{n}(2 \pi)^{n}\right|^{2}}\left\|\left(L^{*} \psi\right)(x)\right\|_{L^{2}(\Omega)}^{2}
+$$
+
+or
+
+$$
+\|\psi(\xi)\|_{L^{2}(\Omega)} \leq c\left\|\left(L^{*} \psi\right)(x)\right\|_{L^{2}(\Omega)}
+$$
+
+with
+
+$$
+c=\frac{e^{2 \pi M}}{\left|a_{n}\right|(2 \pi)^{n}}
+$$
+
+By Statement (I) given above, when we set
+
+$$
+c=\frac{e^{2 \pi M}}{\left|a_{n}\right|(2 \pi)^{n}}
+$$
+
+we can conclude that for any $f \in L^{2}(\Omega)$ a weak solution $u$ of $L u=f$ exists with $\|u\|_{L^{2}(\Omega)} \leq c\|f\|_{L^{2}(\Omega)}$.
+
+
+\end{document}

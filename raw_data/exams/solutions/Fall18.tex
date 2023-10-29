@@ -1,0 +1,613 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+
+\title{QUALIFYING EXAMINATION }
+
+
+\author{HARVARD UNIVERSITY}
+\date{}
+
+
+\begin{document}
+\maketitle
+Department of Mathematics
+
+Tuesday September 4, 2018 (Day 1)
+
+\begin{enumerate}
+  \item (AT)
+\end{enumerate}
+
+(a) Let $X$ and $Y$ be compact, oriented manifolds of the same dimension $n$. Define the degree of a continuous map $f: X \rightarrow Y$.
+
+(b) Let $f: \mathbb{C P}^{3} \rightarrow \mathbb{C P}^{3}$ be any continuous map. Show that the degree of $f$ is of the form $m^{3}$ for some integer $m$.
+
+(c) Show that conversely for any $m \in \mathbb{Z}$ there is a continuous map $f: \mathbb{C P}^{3} \rightarrow$ $\mathbb{C P}^{3}$ of degree $m^{3}$.
+
+Solution: For the first part, the induced map $f^{*}: H^{n}(Y, \mathbb{Z}) \cong \mathbb{Z} \rightarrow H^{n}(X, \mathbb{Z}) \cong$ $\mathbb{Z}$ (where the isomorphisms with $\mathbb{Z}$ are given by the orientation) is multiplication by some integer $d$; this is the degree of $f$.
+
+For the second part, note that $H^{*}\left(\mathbb{C P}^{3}, \mathbb{Z}\right) \cong \mathbb{Z}[\zeta] /\left(\zeta^{4}\right)$ and that $f^{*}$ is a ring homomorphism. If $f^{*}(\zeta)=m \zeta$, then $f^{*}\left(\zeta^{3}\right)=m^{3} \zeta^{3}$ and so the degree must be a cube. To see that all cubes occur, just consider the map $[X, Y, Z, W] \mapsto$ $\left[X^{m}, Y^{m}, Z^{m}, W^{m}\right]$ for positive $d=m^{3}$; take complex conjugates to exhibit maps with negative degrees.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (A) Let $G$ be a group.
+\end{enumerate}
+
+(a) Prove that, if $V$ and $W$ are irreducible $G$-representations defined over a field $\mathbb{F}$, then a $G$-homomorphism $f: V \rightarrow W$ is either zero or an isomorphism.
+
+(b) Let $G=D_{8}$ be the dihedral group with 8 elements. What are the dimensions of its irreducible representations over $\mathbb{C}$ ?
+
+Solution: (a) If $f$ is nonzero, then its image in $W$ is a nontrivial subrepresentation of $W$ and hence $W$ itself by irreducibility; therefore, $f$ is surjective. Similarly, the kernel of $f$ is a subrepresentation of $V$, which, if nontrivial, must be $V$ itself, contradicting the assumption that $f$ is nonzero; therefore $f$ is injective. (b) There are five irreducible representations of $D_{8}$, four onedimensional ones coming from characters of the quotient $\mathbb{Z} / 2 \times \mathbb{Z} / 2$ of $D_{8}$ by its center, and one two-dimensional representation corresponding to the
+realization of $D_{8}$ as the group of automorphisms of the plane preserving a square of $D_{8}$. The fact that the irreducible representations have dimensions $1,1,1,1$ and 2 can also be seen by arguing that the number of irreducible representations is the same as the number of conjugacy classes in $D_{8}$, which is 5 , and that the sum of the squares of their dimensions must be 8 .
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (CA) Let $f_{n}$ be a sequence of analytic functions on the unit disk $\Delta \subset \mathbb{C}$ such that $f_{n} \rightarrow f$ uniformly on compact sets and such that $f$ is not identically zero. Prove that $f(0)=0$ if and only if there is a sequence $z_{n} \rightarrow 0$ such that $f_{n}\left(z_{n}\right)=0$ for $n$ large enough.
+\end{enumerate}
+
+Solution: $\Longleftarrow$ We begin by observing that there must be some $\epsilon$ such that for $n$ large enough, $f_{n}$ is not zero in a neighborhood of the circle. By uniform convergence, since $f_{n} \rightarrow f$, it must also be that $f_{n}^{\prime} \rightarrow f^{\prime}$. thus
+
+$$
+\lim \int_{C_{\epsilon}} \frac{f_{n}^{\prime}}{f_{n}^{\prime}} d z=\int \frac{f^{\prime}}{f} d z
+$$
+
+The right handside must, eventually, be larger than 1 , so the left hand side must be as well. As this holds for every $\epsilon$, we see that $f$ has a zero in $B_{\epsilon}(0)$ for every $\epsilon$. Since $f$ is not identically zero it must be the only zero.
+
+$\Longrightarrow$ By the argument principle,
+
+$$
+\frac{1}{2 \pi} \int_{C_{\epsilon}} \frac{f^{\prime}}{f} d z=1
+$$
+
+where $C_{\epsilon}$ is the circle of radius $\epsilon$ around zero for some $\epsilon$ suffiently small. On the otherhand,
+
+$$
+\lim \int_{C_{\epsilon}} \frac{f_{n}^{\prime}}{f_{n}^{\prime}} d z=\int \frac{f^{\prime}}{f} d z \geq 1
+$$
+
+so by the argument principle again, then for every $\epsilon$, there is an $N$ large enoug that $n \geq N$ yields $f_{n}$ has a at least one zero. applying this for each $\epsilon \rightarrow 0$ yields the result.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (AG) Let $K$ be an algebraically closed field of characteristic 0 , and let $\mathbb{P}^{n}$ be the projective space of homogeneous polynomials of degree $n$ in two variables over $K$. Let $X \subset \mathbb{P}^{n}$ be the locus of $n^{\text {th }}$ powers of linear forms, and let $Y \subset \mathbb{P}^{n}$ be the locus of polynomials with a multiple root (that is, a repeated factor).
+\end{enumerate}
+
+(a) Show that $X$ and $Y \subset \mathbb{P}^{n}$ are closed subvarieties.
+
+(b) What is the degree of $X$ ?
+
+(c) What is the degree of $Y$ ?
+
+Solution: First, $X$ is the image of the map $\mathbb{P}^{1} \rightarrow \mathbb{P}^{n}$ sending $[a, b] \in \mathbb{P}^{1}$ to $(a x+b y)^{n} \in \mathbb{P}^{n}$. This is projectively equivalent (in characteristic 0 !) to the degree $n$ Veronese map, whose image is a closed curve of degree $n$. Second, $Y$ is the zero locus of the discriminant, which is a polynomial of degree $2 n-2$ in the coefficients of a polynomial of degree $n$ (this number can be deduced from the Riemann-Hurwitz formula, which says that a degree $n$ map from $\mathbb{P}^{1}$ to $\mathbb{P}^{1}$ has $2 n-2$ branch points; that is, a general line in $\mathbb{P}^{n}$ meets $Y$ in $2 n-2$ points). Thus $Y \subset \mathbb{P}^{n}$ is a hypersurface of degree $2 n-2$.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (DG) Given a smooth function $f: \mathbb{R}^{n-1} \rightarrow \mathbb{R}$, define $F: \mathbb{R}^{n} \rightarrow \mathbb{R}$ by
+\end{enumerate}
+
+$$
+F\left(x_{1}, \ldots, x_{n}\right):=f\left(x_{1}, \ldots, x_{n-1}\right)-x_{n}
+$$
+
+and consider the preimage $X_{f}=F^{-1}(0) \subset \mathbb{R}^{n}$.
+
+(a) Prove that $X_{f}$ is a smooth manifold which is diffeomorphic to $\mathbb{R}^{n-1}$.
+
+(b) Consider the two examples $X_{f}$ and $X_{g} \subset \mathbb{R}^{3}$ with $f\left(x_{1}, x_{2}\right)=x_{1}^{2}+x_{2}^{2}$ and $g\left(x_{1}, x_{2}\right)=x_{1}^{2}-x_{2}^{2}$. Compute their normal vectors at every point $\left(x_{1}, x_{2}, x_{3}\right) \in X_{f}$ and $\left(x_{1}, x_{2}, x_{3}\right) \in X_{g}$.
+
+\section{Solution.}
+Part (a). The last row of the Jacobian of $F: \mathbb{R}^{n} \rightarrow \mathbb{R}$ is $(0, \ldots, 0,1)$ and so the Jacobian has rank 1 everywhere. This implies that $F^{-1}(0)$ is a smooth manifold. It has the global chart $\psi: F^{-1}(0) \rightarrow \mathbb{R}^{n-1}$ defined by
+
+$$
+\psi\left(x_{1}, \ldots, x_{n}\right):=\left(x^{1}, \ldots, x_{n-1}\right)
+$$
+
+and is therefore diffeomorphic to $\mathbb{R}^{n-1}$.
+
+Part (b). The first example is a paraboloid. Its normal vector is
+
+$$
+\frac{(-2 x,-2 y, 1)}{\sqrt{1+4 x^{2}+4 y^{2}}}
+$$
+
+The second example is a hyperbolic paraboloid or "saddle surface". Its normal vector is
+
+$$
+\frac{(-2 x, 2 y, 1)}{\sqrt{1+4 x^{2}+4 y^{2}}}
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (RA) Let $K \subset \mathbb{R}^{n}$ be a compact set. Show that for any measurable function $f: K \rightarrow \mathbb{C}$, it holds that
+\end{enumerate}
+
+$$
+\lim _{p \rightarrow \infty}\|f\|_{L^{p}(K)}=\|f\|_{L^{\infty}(K)}
+$$
+
+(Recall that $\|f\|_{L^{p}(K)}=\left(\int_{K}|f|^{p} \mathrm{~d} x\right)^{1 / p}$ and that $\|f\|_{L^{\infty}(K)}$ is the essential supremum of $f$, i.e., the smallest upper bound if the behavior of $f$ on null sets is ignored.)
+
+\section{Solution.}
+Let $p>1$. Since $|f| \leq\|f\|_{L^{\infty}(K)}$ holds almost everywhere, we have
+
+$$
+\|f\|_{L^{p}(K)}=\left(\int_{K}|f|^{p} \mathrm{~d} x\right)^{1 / p} \leq|K|^{1 / p}\|f\|_{L^{\infty}(K)} \stackrel{p \rightarrow \infty}{\rightarrow}\|f\|_{L^{\infty}(K)}
+$$
+
+It remains to prove the lower bound. Let $\epsilon>0$. By definition of the essential supremum, there exists a set $A \subset K$ of Lebesgue measure $|A|>0$, such that $|f| \geq(1-\epsilon)\|f\|_{L^{\infty}(K)}$ holds on $A$. Hence,
+
+$$
+\|f\|_{L^{p}(K)} \geq\left(\int_{A}|f|^{p} \mathrm{~d} x\right)^{1 / p} \geq(1-\epsilon)\|f\|_{L^{\infty}(K)}|A|^{1 / p} \stackrel{p \rightarrow \infty}{\rightarrow}(1-\epsilon)\|f\|_{L^{\infty}(K)} .
+$$
+
+Sending $\epsilon \rightarrow 0$ proves the claim.
+
+\section*{QUALIFYING EXAMINATION }
+Department of Mathematics
+
+Wednesday September 5, 2018 (Day 2)
+
+\begin{enumerate}
+  \item (AG) Let $C \subset \mathbb{P}^{2}$ be a smooth plane curve of degree $d$.
+\end{enumerate}
+
+(a) Let $K_{C}$ be the canonical bundle of $C$. For what integer $n$ is it the case that $K_{C} \cong \mathcal{O}_{C}(n)$ ?
+
+(b) Prove that if $d \geq 4$ then $C$ is not hyperelliptic.
+
+(c) Prove that if $d \geq 5$ then $C$ is not trigonal (that is, expressible as a 3 -sheeted cover of $\mathbb{P}^{1}$ ).
+
+Solution: By the adjunction formula, the canonical divisor class is $K_{C}=$ $\mathcal{O}_{C}(d-3)$, that is, plane curves of degree $d-3$ cut out canonical divisors on C.
+
+Now, if $C$ were hyperelliptic-meaning that there exists a degree 2 map $\pi$ : $C \rightarrow \mathbb{P}^{1}$ - a general fiber of $\pi$ would consist of two points $p, q \in C$ moving in a pencil, that is, such that $h^{0}\left(\mathcal{O}_{C}(p+q)\right)=2$. But if $d \geq 4$ then any two points $p, q \in C$ impose independent conditions on the canonical series $\left|K_{C}\right|$; that is, $h^{0}\left(K_{C}(-p-q)\right)=g-2$, so by Riemann-Roch $h^{0}\left(\mathcal{O}_{C}(p+q)\right)=1$, and hence $C$ is not hyperelliptic. Similarly, if $d \geq 5$ then any three points $p, q, r \in C$ impose independent conditions on the canonical series $\left|K_{C}\right|$; by Riemann-Roch it follows that $h^{0}\left(\mathcal{O}_{C}(p+q+r)\right)=1$ so $C$ is not trigonal.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (CA) (The $1 / 4$ theorem). Let $\mathcal{S}$ denote the class of functions that are analytic on the disk and one-to-one with $f(0)=0$ and $f^{\prime}(0)=1$.
+\end{enumerate}
+
+(a) Prove that if $f \in \mathcal{S}$ and $w$ is not in the range of $f$ then
+
+$$
+g(z)=\frac{w f(z)}{(w-f(z))}
+$$
+
+is also in $\mathcal{S}$.
+
+(b) Show that for any $f \in \mathcal{S}$, the image of $f$ contains the ball of radius $1 / 4$ around the origin. You may use the elementary result (Bieberbach) that if $f(z)=z+\sum_{k \geq 2} a_{k} z^{k}$ in $\mathcal{S}$ then $\left|a_{2}\right| \leq 2$.
+
+Solution: The proof of the first part is by checking. Since $w \notin R(f)$ it is analytic on the disk. now observe that map $h(z)$ which is
+
+$$
+h(z)=\frac{w z}{(w-z)}
+$$
+
+is one-to-one. thus $g(z)=h \circ f$ so it is one-to-one. Finally since
+
+$$
+g^{\prime}(z)=\frac{w^{2} f^{\prime}(z)}{(w-f(z))^{2}}
+$$
+
+it follows that $g(0)=0$ and $g^{\prime}(0)=1$ as desired.
+
+For the second part, Suppose that $w$ is not in the image of $f$. Then we may look at
+
+$$
+g(z)=\frac{w f(z)}{(w-f(z))^{2}}
+$$
+
+Observe that
+
+$$
+\left|g^{\prime \prime}(0)\right|=\left|a_{2}+\frac{1}{w}\right| \leq 2
+$$
+
+and $a_{2} \leq 2$. From this it follows that
+
+$$
+|1 / w| \leq\left|a_{2}\right|+\left|a_{2}+1 / w\right| \leq 4
+$$
+
+from which it follows that $|w| \geq 1 / 4$. Thus the set $|w| \leq 1 / 4$ is in the image of $f$ as desired.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (A) Find a polynomial $f \in \mathbb{Q}[x]$ whose Galois group (over $\mathbb{Q}$ ) is $D_{8}$, the dihedral group of order 8 .
+\end{enumerate}
+
+Solution: There are lots of ways to find examples. Here is one: consider a quartic polynomial whose cubic resolvent has exactly one rational root and discriminant is nonsquare. Indeed, ordering the roots as $\alpha_{1}$ through $\alpha_{4}$, suppose $\alpha_{1} \alpha_{2}+\alpha_{3} \alpha_{4}$ is rational so that the Galois group is contained in the dihedral group generated by $(1324),(13)(24)$. We want to ensure that the Galois group is no smaller: that the other roots of the resolvent are not rational ensures that the Galois group is not contained in the Klein subgroup generated by (12)(34),(13)(24); equivalently, this is the restriction that the discriminant be nonsquare and so the Galois group not be contained in the alternating group. But now, if $K$ represents the splitting field, we have the exact sequence $1 \rightarrow \operatorname{Gal}(K / \mathbb{Q}(\sqrt{D})) \rightarrow \operatorname{Gal}(K / \mathbb{Q}) \rightarrow \mathbb{Z} / 2 \rightarrow 1$ and if $\operatorname{Gal}(K / \mathbb{Q})$ were any smaller than the $D_{8}$ in which it is already contained, $\operatorname{Gal}(K / \mathbb{Q}(\sqrt{D}))$ would have order at most 2 and hence the polynomial would have (multiple) roots over $\mathbb{Q}(\sqrt{D})$. Hence it suffices to find a quartic polynomial with a cubic resolvent with exactly one rational root that stays irreducible over
+$\mathbb{Q}(\sqrt{D})$. After some experimentation, $f(x)=x^{4}+3 x+3$ with cubic resolvent $(x+3)\left(x^{2}-3 x+3\right)$, discriminant $3^{3} \cdot 5^{2} \cdot 7$, and which over $\mathbb{Q}(\sqrt{21})$ has no roots, as one can check manually: suppose $\alpha+\beta \sqrt{21}$ were a root. We know the ring of integers of $\mathbb{Q}(\sqrt{21})$ and will use that $\tilde{\alpha}=2 \alpha, \tilde{\beta}=2 \beta$ are (usual) integers. Expanding the equation, we find that $4 \alpha\left(\alpha^{2}+21 \beta^{2}\right)=-3$, or $\tilde{\alpha}\left(\tilde{\alpha}^{2}+21 \tilde{\beta}^{2}\right)=-6$. This cannot happen without $\tilde{\beta}=0$, which is impossible as $f$ is irreducible over $\mathbb{Q}$.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (RA)
+\end{enumerate}
+
+(a) Let $a_{k} \geq 0$ be a monotone increasing sequence with $a_{k} \rightarrow \infty$, and consider the ellipse,
+
+$$
+E\left(a_{k}\right)=\left\{v \in \ell^{2}(\mathbb{Z}): \sum a_{k} v_{k}^{2} \leq 1\right\}
+$$
+
+Show that $E\left(a_{n}\right)$ is a compact subset of $\ell^{2}(\mathbb{Z})$.
+
+(b) Let $\mathbb{T}$ denote the one-dimensional torus; that is, $\mathbb{R} / 2 \pi \mathbb{Z}$, or $[0,2 \pi]$ with the ends identified. Recall that the space $H^{1}(\mathbb{T})$ is the closure of $C^{\infty}(\mathbb{T})$ in the norm
+
+$$
+\|f\|_{H^{1}(\mathbb{T})}=\sqrt{\|f\|_{L^{2}(\mathbb{T})}+\left\|\frac{d}{d x} f\right\|_{L^{2}(\mathbb{T})}} .
+$$
+
+Use part (a) to conclude that the inclusion $i: H^{1}(\mathbb{T}) \hookrightarrow L^{2}(\mathbb{T})$ is a compact operator.
+
+Solution: Part a. Firstly, since $a_{k}$ is monotone,
+
+$$
+\sum a_{k} v_{k}^{2} \leq 1
+$$
+
+implies that for any $L$,
+
+$$
+\sum_{k \geq L} v_{k}^{2} \leq \frac{1}{a_{L}}
+$$
+
+Thus $E$ is is norm bounded.
+
+Suppose that we have sequence $v^{n} \in E\left(a_{k}\right)$. Observe that
+
+$$
+v_{k}^{n} \leq \frac{1}{\sqrt{a_{k}}}
+$$
+
+Thus we may diagonalize this sequence pointwise to obtain a sequence $v_{k}$ with $v_{k} \in \ell^{\infty}$. Passing to this subsequence, we see that by fatou's lemma,
+
+$$
+\sum v_{k}^{2} \leq \frac{1}{a_{1}}
+$$
+
+i.e., $v$ is in $\ell^{2}$. It remains to show that $v^{n} \rightarrow v$ in $\ell^{2}$. To see this, observe that
+
+$$
+\begin{aligned}
+\sum\left|v_{k}^{n}-v_{k}\right|^{2} & \leq \sum_{k \geq L}\left|v_{k}^{n}-v_{k}\right|^{2}+\sum_{k \leq L} \ldots \\
+& \leq \frac{2}{a_{L}}+\sum_{k \leq L}\left|v_{k}^{n}-v_{k}\right|^{2}
+\end{aligned}
+$$
+
+Sending $n \rightarrow \infty$ and then $L \rightarrow \infty$ yields the result.
+
+Part b. It suffices to show that the unit ball of $H^{1}(\mathbb{T})$ is a compact subset of $L^{2}(\mathbb{T})$. By Parseval's identity/the fourier transform, it follows that
+
+$$
+\sum k^{2}\left|\hat{f}_{n}(k)\right|^{2} \leq C
+$$
+
+for some positive constant. This is a compact subset of $\ell_{2}$ by part a. Thus by fourier inversion, the ball of $H^{1}$ is as well.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (AT) Consider the following topological spaces:
+\end{enumerate}
+
+$$
+A=S^{1} \times S^{1} \quad B=S^{1} \vee S^{1} \vee S^{2}
+$$
+
+(a) Compute the fundamental group of each space.
+
+(b) Compute the integral cohomology ring of each space.
+
+(c) Show that $B$ is not homotopy equivalent to any compact orientable manifold.
+
+Solution: (a) The fundamental group construction preserves products, so
+
+$$
+\pi_{1}(A) \cong \pi_{1}\left(S^{1}\right) \times \pi_{1}\left(S^{1}\right) \cong \mathbb{Z} \times \mathbb{Z}
+$$
+
+By the Van Kampen theorem,
+
+$$
+\pi_{1}(B) \cong \pi_{1}\left(S^{1} \vee S^{1}\right) \cong \mathbb{Z} * \mathbb{Z}
+$$
+
+where the first step uses that $S^{2}$ is simply connected. (b) By the Künneth theorem,
+
+$$
+H^{*}\left(S^{1} \times S^{1}\right) \cong H^{*}\left(S^{1}\right) \otimes H^{*}\left(S^{1}\right) \cong \Lambda[x, y], \quad|x|=|y|=1
+$$
+
+Since the reduced cohomology ring construction takes wedges of spaces to products of (nonunital) rings,
+
+$$
+H^{*}\left(S^{1} \vee S^{1} \vee S^{2}\right) \cong \frac{\Lambda[x, y, z]}{x y=y z=z x=0}, \quad|x|=|y|=1,|z|=2
+$$
+
+(c) Suppose that $B$ is homotopy equivalent to the compact orientable manifold $M$. Choosing a fundamental class $[M]$, Poincaré duality guarantees that the assignment
+
+$$
+(a, b) \mapsto\langle a \smile b,[M]\rangle
+$$
+
+defines a symplectic form on $H^{1}(M)$. Since $x y=0$, this pairing is degenerate, a contradiction.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (DG) Consider the set
+\end{enumerate}
+
+$$
+G:=\left\{\left(\begin{array}{ccc}
+x & 0 & 0 \\
+0 & x & y \\
+0 & 0 & 1
+\end{array}\right): x \in \mathbb{R}_{+}, y \in \mathbb{R}\right\}
+$$
+
+and equip it with a smooth structure via the global chart that sends $(x, y) \in$ $\mathbb{R}_{+} \times \mathbb{R}$ to the corresponding element of $G$.
+
+(a) Show that $G$ is a Lie subgroup of the Lie group $G L(\mathbb{R}, 3)$.
+
+(b) Prove that the set
+
+$$
+\left\{x \frac{\partial}{\partial x}, x \frac{\partial}{\partial y}\right\}
+$$
+
+forms a basis of left-invariant vector fields on $G$.
+
+(c) Find the structure constants of the Lie algebra $\mathfrak{g}$ of $G$ with respect to the basis in (b).
+
+\section{Solution.}
+Part (a). We consider the multiplication and inverse operations on $G$ :
+
+$$
+\left(\begin{array}{ccc}
+a & 0 & 0 \\
+0 & a & b \\
+0 & 0 & 1
+\end{array}\right)\left(\begin{array}{ccc}
+x & 0 & 0 \\
+0 & x & y \\
+0 & 0 & 1
+\end{array}\right)=\left(\begin{array}{ccc}
+a x & 0 & 0 \\
+0 & a x & a y+b \\
+0 & 0 & 1
+\end{array}\right) \in G
+$$
+
+and
+
+$$
+\left(\begin{array}{lll}
+x & 0 & 0 \\
+0 & x & y \\
+0 & 0 & 1
+\end{array}\right)^{-1}=\left(\begin{array}{ccc}
+1 / x & 0 & 0 \\
+0 & 1 / x & -y / x \\
+0 & 0 & 1
+\end{array}\right) \in G
+$$
+
+We see that $G$ is closed under these operations, and that they are smooth. This proves that $G$ is a Lie group itself.
+
+Moreover: (a) Since the inverse of any element in $G$ exists, $G$ is a subset of $G L(\mathbb{R}, 3)$. (b) The inclusion map $G \rightarrow G L(\mathbb{R}, 3)$ is trivially a group homomorphism. (c) The inclusion map $G \rightarrow G L(\mathbb{R}, 3)$ is an immersion. To see this,
+recall that the smooth structure on $G L(\mathbb{R}, 3)$ is that of $\mathbb{R}^{9}$ and note that the map $(x, y) \mapsto(x, 0,0,0, x, y, 0,0,1)$ has rank 2 .
+
+Together, (a)-(c) imply that $G$ is a Lie subgroup of $G L(\mathbb{R}, 3)$.
+
+Part (b). Linear independence follows from the linear independence of $\frac{\partial}{\partial x}, \frac{\partial}{\partial y}$. To prove left-invariance, let us identify a vector $(x, y)$ with the corresponding matrix in $G$. The formula for the product $G \times G \rightarrow G$ shows that left translation in $G$ is given by
+
+$$
+L_{(a, b)}(x, y)=(a x, a y+b)
+$$
+
+and so $L_{(a, b) *}=a \operatorname{Id}_{\mathbb{R}^{2}}$. This shows that
+
+$$
+L_{(a, b) *} X_{(x, y)}=X_{(a, b)(x, y)}
+$$
+
+holds for both vector fields $X$ in (b), hence they are left-invariant.
+
+Part (c). Let us call the two vector fields in (b) $X_{1}, X_{2}$, respectively. Explicit computation shows that
+
+$$
+\left[X_{1}, X_{2}\right]=X_{2}
+$$
+
+and so the non-zero structure constants are $f_{12}^{2}=-f_{21}^{2}=1$.
+
+\section*{QUALIFYING EXAMINATION }
+Department of Mathematics
+
+Thursday September 6, 2018 (Day 3)
+
+\begin{enumerate}
+  \item (AT) Let $p: E \rightarrow B$ be a $k$-fold covering space, and suppose that the Euler characteristic $\chi(E)$ is defined, nonzero, and relatively prime to $k$. Show that any $\mathrm{CW}$ decomposition of $B$ has infinitely many cells.
+\end{enumerate}
+
+Solution: Suppose that $B$ has a finite CW decomposition; in particular, $\chi(B)$ is defined. Restricted to each of the cells of $B$, the covering $p$ is trivial, and the connected components of the total spaces of these restricted covers form a CW decomposition of $E$. Counting cells, we find that $\chi(E)=k \cdot \chi(B)$. Since $\chi(E) \neq 0$, it follows that $k$ divides $\chi(E)$, a contradiction.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (RA) Let $W$ be Gumbel distributed, that is $P(W \leq x)=e^{-e^{-x}}$. Let $X_{i}$ be independent and identically distributed Exponential random variables with mean 1; that is, $X_{i}$ are independent, with $P\left(X_{i} \leq x\right)=\exp (-\max x, 0)$.
+\end{enumerate}
+
+Let
+
+$$
+M_{n}=\max _{i \leq n} X_{i}
+$$
+
+Show that there are deterministic sequences $a_{n}, b_{n}$ such that
+
+$$
+\frac{M_{n}-b_{n}}{a_{n}} \rightarrow W
+$$
+
+in law; that is, such that for any continuous bounded function $F$,
+
+$$
+\mathbb{E} F\left(\frac{M_{n}-b_{n}}{a_{n}}\right) \rightarrow \mathbb{E} F(W)
+$$
+
+Solution: let $b_{n}=\log n$ and $a_{n}=1$. Then
+
+$$
+P\left(M_{n}-b_{n} \leq x\right)=P\left(X_{i} \leq x+\log n\right)^{n}
+$$
+
+since $X_{i}$ are i.i.d. Now
+
+$$
+\begin{aligned}
+P(X \leq x+\log n)^{n} & =(1-P(X>x+\log n))^{n} \\
+& =\left(1-\int_{x+\log n}^{\infty} e^{-w} d w\right)^{n} \\
+& =\left(1-\frac{1}{n} \int_{x}^{\infty} e^{-w} d w\right)^{n} \rightarrow e^{-e^{-x}}
+\end{aligned}
+$$
+
+As $e^{-e^{-x}}$ is continuous every where and
+
+$$
+P\left(M_{n}-b_{n} \leq x\right) \rightarrow P(W \leq x),
+$$
+
+we see that $M_{n}-b_{n} \rightarrow W$ in law by the Portmanteau lemma.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (DG) Consider $\mathbb{R}^{2}$ as a Riemannian manifold equipped with the metric
+\end{enumerate}
+
+$$
+g=e^{x} \mathrm{~d} x^{2}+\mathrm{d} y^{2} .
+$$
+
+(i) Compute the Christoffel symbols of the Levi-Civita connection for $g$.
+
+(ii) Show that the geodesics are described by the curves $x(t)=2 \log (A t+B)$ and $y(t)=C t+D$, for appropriate constants $A, B, C, D$.
+
+(iii) Let $\gamma: \mathbb{R}_{+} \rightarrow \mathbb{R}^{2}, \gamma(t)=(t, t)$. Compute the parallel transport of the vector $(1,2)$ along the curve $\gamma$.
+
+(iv) Are there two vector fields $X, Y$ parallel to the curve $\gamma$, such that $g(X(t), Y(t))$ is non-constant?
+
+Solution:
+
+Part (i). We can identify
+
+$$
+g^{-1}=\left(\begin{array}{cc}
+e^{-x} & 0 \\
+0 & 1
+\end{array}\right)
+$$
+
+Denoting $x^{1}=x, x^{2}=y$, the only non-vanishing Christoffel symbol is
+
+$$
+\Gamma_{11}^{1}=\frac{1}{2} g_{11}^{-1} \partial_{1} g_{11}=\frac{1}{2}
+$$
+
+Part (ii). Using part (i), the two ODE describing the geodesic $(x(t), y(t))$ are given by
+
+$$
+\frac{\mathrm{d}^{2} x}{\mathrm{~d} t^{2}}+\frac{1}{2}\left(\frac{\mathrm{d} x}{\mathrm{~d} t}\right)^{2}=0, \quad \frac{\mathrm{d}^{2} y}{\mathrm{~d} t^{2}}=0
+$$
+
+The second ODE is solved by $y(t)=C t+D$. For the first ODE, we introduce $u(t):=\frac{\mathrm{d} x}{\mathrm{~d} t}$ and obtain
+
+$$
+\frac{\mathrm{d} u}{\mathrm{~d} t}+\frac{1}{2} u^{2}=0
+$$
+
+By separation of variables, this is solved by $u(t)=\frac{2}{t+C_{1}}$. We integrate this to get $x$ and find
+
+$$
+x(t)=2 \log \left(t+C_{1}\right)+C_{2}=2 \log (A t+B)
+$$
+
+where we redefined the constants in the second step.
+
+Part (iii). The equation for parallel transport $\nabla_{\gamma^{\prime}}\left(a^{1}, a^{2}\right)=0$, with $\gamma(t)=$ $(t, t)$, becomes
+
+$$
+\frac{\mathrm{d} a^{1}}{\mathrm{~d} t}+\frac{1}{2} a^{1}=0, \quad \frac{\mathrm{d} a^{2}}{\mathrm{~d} t}=0
+$$
+
+These are solved by $a^{1}(t)=A e^{-t / 2}$ and $a^{2}(t)=B$, respectively. To satisfy the initial condition $\left(a^{1}(0), a^{2}(0)\right)=(1,2)$, we take $A=1$ and $B=2$. The solution is thus
+
+$$
+\left(a^{1}(t), a^{2}(t)\right)=\left(e^{-t / 2}, 2\right) .
+$$
+
+Part (iv). No. Since $\nabla$ is the Levi-Civita connection, the scalar product of two vectors is preserved by parallel transport.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (A) Let $G$ be a group of order 78 .
+\end{enumerate}
+
+(a) Show that $G$ contains a normal subgroup of index 6 .
+
+(b) Show by example that $G$ may contain a subgroup of index 13 that is not normal.
+
+Solution: (a) Sylow theory guarantees the existence of a 13-Sylow subgroup $H \leq G$, which has index 6 . This Sylow subgroup is unique and hence normal; indeed, the number of such divides 6 and is congruent to $1 \bmod 13$ by Sylow's theorems. (b) Take $G$ to be the semidirect product $C_{13} \rtimes S_{3}$ of the cyclic group of order 13 and the symmetric group on 3 letters, where $S_{3}$ acts via the composite
+
+$$
+S_{3} \stackrel{\text { sgn }}{\longrightarrow} C_{2} \stackrel{\text { inv }}{\longrightarrow} \operatorname{Aut}\left(C_{13}\right)
+$$
+
+of the sign homomorphism and the inversion homomorphism (we use that $C_{13}$ is Abelian). We claim that the subgroup $S_{3} \leq G$ is not normal. To see why this is so, let $\sigma \in S_{3}$ be an odd permutation and $\rho \in C_{13}$ a generator, and compute that
+
+$$
+(\rho, e)(e, \sigma)\left(\rho^{-1}, e\right)=\left(\rho^{2}, \sigma\right) \notin S_{3}
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (AG) Let $K$ be an algebraically closed field of characteristic 0 , and consider the curve $C \subset \mathbb{A}^{3}$ over $K$ given as the image of the map
+\end{enumerate}
+
+$$
+\begin{aligned}
+\phi: \mathbb{A}^{1} & \rightarrow \mathbb{A}^{3} \\
+& t \mapsto\left(t^{3}, t^{4}, t^{5}\right)
+\end{aligned}
+$$
+
+Show that no neighborhood of the point $\phi(0)=(0,0,0) \in C$ can be embedded in $\mathbb{A}^{2}$.
+
+Solution: Suppose $f(x, y, z)$ is any polynomial on $\mathbb{A}^{3}$ vanishing on $C$. The constant term of $f$ must be zero, since $f$ vanishes at $(0,0,0) \in C$, and the linear terms of $f$ must also be zero, since the pullback to $\mathbb{A}^{1}$ of any monomial in $x, y$ and $z$ of degree 2 or more must vanish to order at least 6 . In other words, the ideal $I(C)$ is contained in the square $(x, y, z)^{2}$ of the maximal ideal of the origin. In particular, the Zariski tangent space to $C$ at $(0,0,0)$ is three dimensional, and hence no neighborhood of this point is embeddable in $\mathbb{A}^{2}$.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (CA) Let $f(z)$ be an entire function such that
+\end{enumerate}
+
+a) $f(z)$ vanishes at all points $z=n, n \in \mathbb{Z}$;
+
+b) $|f(z)| \leq e^{\pi|\operatorname{Im} z|}$ for all $z \in \mathbb{C}$.
+
+Prove that $f(z)=c \sin \pi z$, with $c \in \mathbb{C},|c| \leq 1$.
+
+Solution: Define $h(z)=(\sin \pi z)^{-1} f(z)$. The hypotheses imply that $h(z)$ is entire. Then, for $\operatorname{Im} z>0$,
+
+$$
+|h(z)|=|\sin \pi z|^{-1}|f(z)| \leq|\sin \pi z|^{-1} e^{\pi|\operatorname{Im} z|} \leq 2\left(1-e^{-2 \pi \operatorname{Im} z}\right)^{-1}
+$$
+
+Since the hypotheses are invariant under the substitution $z \mapsto-z$, we get the analogous bound for $\operatorname{Im} z<0$. Thus $h(z)$ is uniformly bounded on $|\operatorname{Im} z| \geq \delta$, $\delta>0$. On the vertical lines $\operatorname{Re} z=(n+1 / 2) \pi, n \in \mathbb{Z},|\sin \pi z|^{-1} e^{\pi|\operatorname{Im} z|}=$ $2\left(1+e^{-2 \pi|\operatorname{Im} z|}\right)^{-1}$, which is bounded by 2 . Applying the maximum principle to $h(z)$ on the rectangles with sides $\operatorname{Im} z= \pm 1, \operatorname{Re} z=(n \pm 1 / 2) \pi$, we find that $h(z)$ is a bounded entire function, hence $f(z)=c \sin \pi z$ with $c \in \mathbb{C}$. Evaluating the inequality $|f(z)|=c|\sin \pi z| \leq e^{\pi|\operatorname{Im} z|}$ at $z=1 / 2$ leads to $|c| \leq 1$.
+
+
+\end{document}

@@ -1,0 +1,400 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+
+\title{FALL 2012 - Solutions for the Algebraic Geometry Questions }
+
+
+\author{HARVARD UNIVERSITY\\
+Department of Mathematics\\
+Differential geometry, Paul}
+\date{}
+
+
+\begin{document}
+\maketitle
+\section{PROPOSED ANSWERS IN AG}
+Day 1 (1) (a) If $X$ is a linear subspace of $\mathbb{P}^{n}$, it intersects transversely with a generic linear subspace at a single point. Thus $\operatorname{deg} X=1$.
+
+Now consider the converse. Let $k=\operatorname{dim} X$. Consider the projection $\pi: X \rightarrow \mathbb{P}^{k+1}$ from a general $(n-k-2)$-plane in $\mathbb{P}^{n}$ such that $X$ is birational onto its image $\bar{X} \subset \mathbb{P}^{k+1}$. Since $X$ is of degree one, $\bar{X}$ is simply a hyperplane in $\mathbb{P}^{k+1}$. Then the inverse image of $\bar{X}$ under the projection is a hyperplane in $\mathbb{P}^{n}$. That means $X$ is contained in a hyperplane $P^{n-1}$ in $\mathbb{P}^{n}$. Doing the same thing for $X \subset P^{n-1}$ and continue the inductive process, we obtain $X \subset P^{k+1} \subset P^{k+2} \ldots \subset$ $P^{n-1} \subset \mathbb{P}^{n}$ where one sits in the next one as a hyperplane. Thus $X$ is a linear subspace of $\mathbb{P}^{n}$.
+
+(b) Bézout's theorem states that if $X$ and $Y$ are two subvarieties of $\mathbb{P}^{n}$ which intersect generically transversely, then
+
+$$
+\operatorname{deg}(X \cap Y)=(\operatorname{deg} X)(\operatorname{deg} Y)
+$$
+
+(c) Recall that the Veronese map $v_{d}: \mathbb{P}^{n} \rightarrow \mathbb{P}^{N}$ of degree $d$ is defined by sending $\left[Z_{0}, \ldots, Z_{n}\right]$ to $\left[P_{0}\left(Z_{0}, \ldots, Z_{n}\right), \ldots, P_{N}\left(Z_{0}, \ldots, Z_{n}\right)\right]$, where $P_{i}, i=0, \ldots, N$ are all the monomials of degree $d$ in $n+1$ variables, where $N=\left(\begin{array}{c}n+d \\ d\end{array}\right)-1$.
+
+The degree of $Z$ equals to the number of intersection points of $Z$ with a generic linear subspace $L$ of $\mathbb{P}^{N}$ of dimension $N-k$, which is the zero set of $k$ linear functions $l_{1}, \ldots, l_{k}$ on $\mathbb{P}^{N}$. Since $v_{d}$ is an embedding, it suffices to compute the number of intersection points in the inverse image. The inverse image of the intersection between $Z$ and $L$ equals to the intersection of $Y$ and the zero set of $v_{d}^{*} l_{1}, \ldots, v_{d}^{*} l_{k}$, which are degree $d$ polynomials. By Bézout's theorem, the number of intersection points equals to $(\operatorname{deg} Y)\left(\operatorname{deg} v_{d}^{*} l_{1}\right) \ldots\left(\operatorname{deg} v_{d}^{*} l_{k}\right)=d^{k} a$.
+
+Day 2 (2) (a) Recall that the Hilbert function $h_{X}: \mathbb{N} \rightarrow \mathbb{N}$ is defined by
+
+$$
+h_{X}(m)=\operatorname{dim}\left(\left(K\left[z_{0}, \ldots, z_{N}\right] / I_{X}\right)_{m}\right)
+$$
+
+where $z_{0}, \ldots, z_{N}$ are the homogeneous coordinates of $\mathbb{P}^{N}, I_{X}$ is the defining ideal of $X$, and $\left(K\left[z_{0}, \ldots, z_{N}\right] / I_{X}\right)_{m}$ denotes its $m$-th graded piece.
+
+Consider the linear map
+
+$$
+\mathrm{ev}:\left(K\left[z_{0}, \ldots, z_{N}\right] / I_{X}\right)_{m} \rightarrow K^{d}
+$$
+
+defined by sending $f \in\left(K\left[z_{0}, \ldots, z_{N}\right] / I_{X}\right)_{m}$ to $\left(f\left(v_{1}\right), \ldots, f\left(v_{d}\right)\right)$, where $v_{i} \in K^{N+1}$ are chosen representatives of $x_{i} \in \mathbb{P}^{N}$ for all $i=$ $1, \ldots, d$. It is well-defined and one-one since $f \in I_{X}$ if and only if $f\left(v_{i}\right)=0$ for all $i=1, \ldots, d$. When $m \geq d-1$, It is also surjective: Let $\left\{e_{j}\right\}_{j=1}^{d}$ be the standard basis of $K^{\bar{N}+1}$. For every $j=1, \ldots, d$, there exists $P \in K\left[z_{0}, \ldots, z_{N}\right]_{m}$ such that $\operatorname{ev}([P])=e_{j} \in K^{d}$ defined
+as follows. For each $i \in\{1, \ldots, d\}-\{j\}$, choose a linear function $l_{i}$ on $K^{N+1}$ such that $l_{i}\left(v_{i}\right)=0$ and $l_{i}\left(v_{j}\right)=1$. (This is possible since $v_{i}$ and $v_{j}$ cannot be linearly dependent, or otherwise $p_{i}=p_{j}$.) For $i=d+1, \ldots, m+1$, choose a linear function $l_{i}$ with $l_{i}\left(v_{j}\right)=1$. Then $P=\prod_{i \neq j} l_{i}$ has degree $m$ and satisfies $P\left(v_{k}\right)=0$ for $k \in$ $\{1, \ldots, d\}-\{j\}$ and $P\left(v_{j}\right)=1$. Thus $\left(K\left[z_{0}, \ldots, z_{N}\right] / I_{X}\right)_{m} \cong K^{d}$ as vector spaces, and hence $h_{X}(m)=\operatorname{dim}\left(K\left[z_{0}, \ldots, z_{N}\right] / I_{X}\right)_{m}=d$.
+
+(b) Consider the pull-back $K\left[z_{0}, \ldots, z_{N}\right]_{m} \rightarrow K\left[Z_{0}, Z_{1}\right]_{N m}$ by the embed$\operatorname{ding} \mathbb{P}^{1} \hookrightarrow \mathbb{P}^{N}$. It is surjective: Every monomial in $Z_{0}$ and $Z_{1}$ of degree $N m$ can be written as $Z_{0}^{j N} Z_{1}^{k N} Z_{0}^{p} Z_{1}^{q}$ for some $j, k, p, q \in \mathbb{Z}_{\geq 0}$ with $p, q<N$. Then it is the image of $z_{0}^{j} z_{N}^{k} z_{q}$ when $q \neq 0$, or $z_{0}^{j} z_{N}^{k}$ when $q=0$. Moreover, the kernel is exactly those polynomials in $K\left[z_{0}, \ldots, z_{N}\right]_{m}$ which vanish on the rational normal curve. Thus $\left(K\left[z_{0}, \ldots, z_{N}\right] / I_{X}\right)_{m} \cong K\left[Z_{0}, Z_{1}\right]_{N m}$ as vector spaces, which has dimension $N m+1$.
+
+(c) Let $n=\operatorname{dim} X$. Let $P$ be a linear subspace of dimension $N-n$ which intersects $X$ transversely. $P$ is the zero set of $n$ linear functions $l_{1}, \ldots, l_{n}$. The number of intersection points between $X$ and $P$ is $d=\operatorname{deg} X$. Let $X^{(i)}=X \cap\left\{l_{1}=\ldots=l_{i}=0\right\}$ for $i=0, \ldots, n$. Then for all $i=0, \ldots, n-1$, we have a homomorphism
+
+$$
+A\left(X^{(i)}\right)_{m} \rightarrow A\left(X^{(i)}\right)_{m+1}
+$$
+
+given by multiplication by $l_{i+1}$. Here $A\left(X^{(i)}\right):=K\left[z_{0}, \ldots, z_{N}\right] / I_{X^{(i)}}$ denotes the coordinate ring of $X^{(i)}$. Since the intersection is transverse, this homomorphism is injective. Moreover
+
+$$
+A\left(X^{(i)}\right)_{m+1} / \operatorname{Im}\left(A\left(X^{(i)}\right)_{m}\right) \cong A\left(X^{(i+1)}\right)_{m+1}
+$$
+
+given by restriction. Thus
+
+$$
+h_{X^{(i)}}(m+1)-h_{X^{(i)}}(m)=h_{X^{(i+1)}}(m+1)
+$$
+
+for all $m \in \mathbb{N}$.
+
+By (b), $h_{X^{(n)}}(m)=d$ for all sufficiently large $m$. We conclude that $h_{X}=h_{X^{(0)}}$ is a polynomial.
+
+Day 3 (3) (a) By Riemann-Roch, $h^{0}\left(K_{X}\right)-h^{0}\left(O_{X}\right)=\operatorname{deg}\left(K_{X}\right)-g+1$. Since $h^{0}\left(O_{X}\right)=1$ and $h^{0}\left(K_{X}\right)=g, \operatorname{deg}\left(K_{X}\right)=2 g-2$.
+
+(b) $\operatorname{deg} K_{X}=0$ while $h^{0}\left(K_{X}\right)=1$. Thus there exists a meromorphic function $f$ such that $K_{X}+(f)$ is an effective divisor. $K_{X}+(f)$ is of degree 0 because $(f)$ and $K_{X}$ are. This forces $K_{X}+(f)=0$. It follows that $K_{X} \sim 0$
+
+(c) Since $D$ is effective,
+
+$$
+\begin{aligned}
+\operatorname{dim}|D| & =h^{0}(D)-1 \\
+& =h^{0}(K-D)+\operatorname{deg} D-g \\
+& \leq h^{0}(K)+\operatorname{deg} D-g \\
+& =\operatorname{deg} D
+\end{aligned}
+$$
+
+Equality holds if and only if $h^{0}(K-D)=h^{0}(K)$. Obviously $D=0$ implies this equality. When $g=h^{0}(K)=0,0 \leq h^{0}(K-D) \leq h^{0}(K)=$ 0 . Thus $h^{0}(K-D)=h^{0}(K)=0$ and equality holds.
+
+Conversely, suppose equality holds, yet $g \neq 0$. Then $D \sim 0$, and since $D$ is effective, $D=0$.
+
+\section{FALL 2012 - Qualifying Exams Solutions for Algebra}
+Day 1 A1. The characteristic polynomial is $T^{n}-1$. The Galois group of $K=\mathbb{F}_{p^{n}}$ over $\mathbb{F}_{p}$ is the cyclic group of order $n$ generated by $F$. By the normal basis theorem there is an element $v \in K$ such that
+
+$$
+v, F v, \cdots, F^{n-1} v
+$$
+
+forms an $\mathbb{F}_{p}$-basis of $K$. So $\operatorname{det}\left(T \cdot I_{n}-F\right)=T^{n}-1$.
+
+Day 2
+
+A2.
+
+(a) It fixes the generator of $I$, hence preserves the ideal $I$.
+
+(b) If $P$ is a prime ideal, and if $s, t \in S$ satisfy $s \cdot t \in \tau(P)$, then $\tau^{-1}(s)$. $\tau^{-1}(t) \in P$ and either $\tau^{-1}(s) \in P$ or $\tau^{-1}(t) \in P$, hence $s \in \tau(P)$ or $t \in \tau(P)$. In addition, by definition $1 \notin P$, which implies $1 \notin \tau(P)$.
+
+The image under $\tau$ of the principal ideal generated by $\alpha$ is that generated by $\tau(\alpha)$.
+
+(c) We have $R / \mathfrak{p}=\mathbb{Q}[x, y] /(x, y)=\mathbb{Q}$, which is an integral domain.
+
+(d) First, we have $\mathfrak{p}^{2}=(\bar{x})$. For $\subseteq$, note $\bar{y}^{2}=\bar{x}\left(\bar{x}^{2}-1\right)$. For $\supseteq$, note that $\mathfrak{p}^{2}$ contains both $\bar{x}^{2}$ and $-\bar{y}^{2}=\bar{x}-\bar{x}^{3}$.
+
+Suppose $\mathfrak{p}=(\alpha)$, and write $\alpha=P_{1}(x)+P_{2}(x) \bar{y}$. Since $\mathfrak{p}$ is fixed by $\sigma$, we have
+
+$\mathfrak{p}^{2}=\mathfrak{p} \sigma(\mathfrak{p})=\left(P_{1}(x)+P_{2}(x) \bar{y}\right)\left(P_{1}(x)-P_{2}(x) \bar{y}\right)=\left(P_{1}(x)^{2}-P_{2}(x)^{2}\left(x^{3}-x\right)\right)$.
+
+Because this ideal contains $x$, there are $Q_{1}(x)$ and $Q_{2}(x)$ such that
+
+$$
+x=\left(P_{1}^{2}-P_{2}^{2} \cdot\left(x^{3}-x\right)\right)\left(Q_{1}+\bar{y} Q_{2}\right)
+$$
+
+in $R$. First, by taking half the trace $((1+\sigma) / 2)$, we may assume $Q_{2}=0$. Then the degree consideration in $\mathbb{Q}[x]$ leads to $P_{2}=0$ and $P_{1}(x) \in \mathbb{Q}^{\times}$, which is absurd.
+
+Day 3 A3.
+
+(a) $|G|=\left(p^{2}-1\right)\left(p^{2}-p\right)=p(p-1)^{2}(p+1),\left|G^{\prime}\right|=p(p-1)(p+1)$.
+
+(b) The upper unitriangular matrices.
+
+(c) The units act trivially on $X$. Conversely, any $g \in G$ fixing every line fixes both $[1: 0]$ and $[0: 1]$, hence $g$ is diagonal. If the entries were distinct, it would fail to fix $[1: 1]$.
+
+(d) From (c) we get an injection $\mathrm{PGL}_{2}\left(\mathbb{F}_{3}\right) \hookrightarrow S_{4}$, since when $p=3, X$ has 4 elements. The two groups have the same order, by (a).
+
+\section{FALL 2012}
+\section{Solutions of Qualifying Exam Problems in Algebraic Topology in September 2012}
+Day 1 Problem 1 (Third Homotopy Group of 2-Sphere). Let $\Phi: \mathbb{C}^{2}-\{0\} \rightarrow \mathbb{C P}^{1}$ be defined by mapping the inhomogneous coordinates $\left(z_{1}, z_{2}\right)$ of $\mathbb{C}^{2}$ to the homogeneous coordinates $\left[z_{1}, z_{2}\right]$ of the complex projective line $\mathbb{C P}^{1}$. Let $f: S^{3} \rightarrow S^{2}$ be defined by restricting $\Phi$ to the unit 3-sphere in $\mathbb{C}^{2}$. Define the group homomorphism $\gamma: \mathbb{Z} \rightarrow \pi_{3}\left(S^{2}\right)$ by setting $\gamma(1)$ to be the element of $\pi_{3}\left(S^{2}\right)$ defined by $f$. Compute the kernel and the cokernel of the group homomorphism $\gamma: \mathbb{Z} \rightarrow \pi_{3}\left(S^{2}\right)$. Justify each step of your computation.
+
+Solution. The action of $\mathbb{C}-\{0\}$ on $\mathbb{C}^{2}-\{0\}$ defined by scalar multiplication of vectors in $\mathbb{C}^{2}$ makes $\Phi: \mathbb{C}^{2}-\{0\} \rightarrow \mathbb{C P}^{1}$ a principal bundle with structure group $\mathbb{C}-\{0\}$. The map $f: S^{3} \rightarrow S^{2}$ defined by restricting $\Phi$ to the unit 3 -sphere in $\mathbb{C}^{2}$ is the principal bundle with circle group $S^{1}$ as the structure group and is, in particular, a fiber bundle over $S^{2}$ with fiber $S^{1}$. The exact sequence of homotopy groups for the fiber bundle $f: S^{3} \rightarrow S^{2}$ is
+
+$$
+\cdots \rightarrow \pi_{i}\left(S^{1}\right) \rightarrow \pi_{i}\left(S^{3}\right) \rightarrow \pi_{i}\left(S^{2}\right) \rightarrow \pi_{i-1}\left(S^{1}\right) \rightarrow \cdots
+$$
+
+and, in particular, the sequence
+
+$$
+\pi_{3}\left(S^{1}\right) \rightarrow \pi_{3}\left(S^{3}\right) \rightarrow \pi_{3}\left(S^{2}\right) \rightarrow \pi_{2}\left(S^{1}\right)
+$$
+
+is exact. Since the universal cover of $S^{1}$ is $\mathbb{R}$ which is contractible and since any continuous map from the simply-connected 3 -sphere $S^{3}$ or 2-sphere $S^{2}$ to $S^{1}$ can be lifted to the contractible universal cover $\mathbb{R}$ of $S^{1}$, it follows that both $\pi_{3}\left(S^{1}\right)$ and $\pi_{2}\left(S^{1}\right)$ vanish and from the above exact sequence of four terms the map $\pi_{3}\left(S^{3}\right) \rightarrow \pi_{3}\left(S^{2}\right)$ induced by $f: S^{3} \rightarrow S^{2}$ is an isomorphism.
+
+Since $\pi_{j}\left(S^{3}\right)$ is trivial for $j=1,2$ (as every element of $\pi_{j}\left(S^{3}\right)$ for $j=1,2$ can be represented by a continuous map $S^{j} \rightarrow S^{3}$ whose image misses some point of $S^{3}$ ), it follows from Hurewicz's theorem (relating homotopy groups to homology groups) that the map $\pi_{3}\left(S^{3}\right) \rightarrow H_{3}\left(S^{3}\right)$ is an isomorphism and, in particular, the homotopy group $\pi_{3}\left(S^{3}\right)$ is the cyclic group $\mathbb{Z}$ whose generator is represented by the identity map of $S^{3}$. Hence the group homomorphism $\gamma: \mathbb{Z} \rightarrow \pi_{3}\left(S^{2}\right)$ is an isomorphism and both its kernel and cokernel are trivial.
+
+Day 2 Problem 2 (Fundamental Groups of Spaces Obtained by Glueing). Denote by $\mathbb{R}^{2}$ the real projective plane (which is the quotient of the 2 -sphere with antipodal points identified). Denote by $T^{2}$ the real 2-dimensional torus (which is the quotient of a closed rectangle with opposite sides identified). Let $D$ be the interior of a closed disk in $T^{2}$ whose boundary is $C$. Let $G$ be the interior of a closed disk in $\mathbb{R}^{2}$ whose boundary is $E$. Let $X$ be the space obtained by glueing $T^{2}-D$ to $\mathbb{R}^{2}-G$ along a homeomorphism between the two circles $C$ and $E$. Compute the fundamental group of $X$ by describing a presentation of it. Then compute $H_{1}(X, \mathbb{Z})$.
+
+Solution. Let $f: C \rightarrow E$ be the homeomorphism used to glue together $T^{2}-D$ and $\mathbb{R P}^{2}-G$ to construct $X$. The fundamental group $\pi_{1}(X)$ of $X$ will be computed by applying the theorem of van Kampen to $X=\left(T^{2}-D\right) \cup_{f}$ $\left(\mathbb{R P}^{2}-G\right)$. The fundamental group $\pi_{1}\left(T^{2}-D\right)$ of $T^{2}-D$ is the free group generated by two elements $a$ and $b$ which are represented by two standard basis loops of $T^{2}$ avoiding the topological closure of $D$. The removal of $D$ from $T^{2}$ makes the relation $a b a^{-1} b^{-1}=1$ in $\pi_{1}\left(T^{2}-D\right)$ disappear, because when $T^{2}$ is represented by identifying the opposite sides of a rectangle, the removal of a disk in the center of the rectangle makes the relation obtained by going around the boundary of the rectangle impossible. From this picture of removing a disk in the center of rectangle, we know that going around the boundary of the rectangle shows that $a b a^{-1} b^{-1}$ is homotopic in $T^{2}-D$ to a loop going once around the circle $C$ (or $E$ under identification by $f$ ). The space $\mathbb{R P}^{2}-G$ is the same as the Möbius band, as one can easily see by considering the map from $S^{2}$ minus two antipodal disks to $\mathbb{R}^{2}-G$ defined by identifying antipodal points. The generator $c$ of the fundamental group $\pi_{1}\left(\mathbb{R}^{2}-G\right)$ of the Möbius band $\mathbb{R} \mathbb{P}^{2}-G$ is the loop represented by going around the center line of the Möbius band once. The loop $c^{2}$ is homotopic in $\mathbb{R}^{2}-G$ to going once around the circle $E$ (or $C$ identified by $f$ ), because going around the edge of the Möbius band once is the same as going around the the centerline of the Möbius band twice. By van Kampen's theorem, $c^{2}$ needs to be identified with $a b a^{-1} b^{-1}$, because both represent going around $C$ or $E$ once (which are identified by the glueing homeomorphism $f$ ). Hence the fundamental group $\pi_{1}(X)$ of $X$ is equal to the free group generated by three elements $a, b, c$ subject to one single relation $c^{-2} a b a^{-1} b^{-1}=1$. We can compute $H_{1}(X, \mathbb{Z})$ by abelianizing $\pi_{1}(X)$. In the abelianization of $\pi_{1}(X)$ the element $a b a^{-1} b^{-1}$ of $\pi_{1}(X)$ becomes 1 and the single relation $c^{-2} a b a^{-1} b^{-1}=1$
+in $\pi_{1}(X)$ becomes the single relation $c^{-2}=1$. Hence
+
+$$
+H_{1}(X, \mathbb{Z}) \approx \mathbb{Z} \oplus \mathbb{Z} \oplus(\mathbb{Z} / 2 \mathbb{Z})
+$$
+
+Day 3 Problem 3 (Universal Cover of One-Point Union of Two Real Projective Planes). Let $\mathbb{R P}^{2}$ denote the real projective plane (which is the quotient of the 2 -sphere with antipodal points identified). Let $X$ be the one point union $\mathbb{R} \mathbb{P}^{2} \vee \mathbb{R P}^{2}$ (or wedge sum) of two real projective planes (i.e., the result obtained by identifying, in the disjoint union of two real projective planes, one point on one identified with one point on the other). Find the universal cover of $X$.
+
+Solution. Let $\tilde{X}=\bigcup_{n \in \mathbb{Z}}\left(S^{2}+(2 n+1,0,0)\right)$, where $S^{2}$ is the unit 2-sphere (centered at the origin of radius 1$)$ in $\mathbb{R}^{3}$ and $S^{2}+(2 n+1,0,0)$ means the translate of $S^{2}$ by the vector $(2 n+1,0,0)$ so that $S^{2}+(2 n+1,0,0)$ is the 2 -sphere in $\mathbb{R}^{3}$ centered at the origin of radius 1 . The space $\tilde{X}$ is an infinite string of touching 2 -spheres of radius 1 centered at $(2 n+1,0,0)$ touching the two adjacent 2 -spheres. Let $\varphi: \mathbb{R}^{3} \rightarrow \mathbb{R}^{3}$ be the map defined by $\varphi(x, y, z)=(-x+2,-y,-z)$ and $\psi: \mathbb{R}^{3} \rightarrow \mathbb{R}^{3}$ be the map with $\psi(x, y, z)=$ $(-x-2,-y,-z)$. The map $\varphi$, when restricted to the 2 -sphere of radius 1 centered at $(1,0,0)$, is simply the antipodal map on that 2 -sphere. The map $\psi$, when restricted to the 2 -sphere of radius 1 centered at $(-1,0,0)$, is simply the antipodal map on that 2 -sphere. The group $G$ of transformations in $\mathbb{R}^{3}$ generated by $\varphi$ and $\psi$ acts free on $\tilde{X}$ to give the quotient $X$. Since $\tilde{X}$ is simply connected, $\tilde{X}$ is the universal cover of $X$. The argument given up to this point is already the complete rigorous solution of the problem of finding the universal cover $\tilde{X}$ of $X$.
+
+If one wants to know how one arrives at the candidate $\tilde{X}$ as the universal cover of $X$, one can do it either geometrically or algebraically.
+
+The geometric way to arrive at the candidate $\tilde{X}$ is to find all liftings to $\tilde{X}$ of the universal cover $S^{2} \rightarrow \mathbb{R} \mathbb{P}^{2}$ of the first summand $\mathbb{P}^{2}$ of $\mathbb{R} \mathbb{P}^{2} \vee \mathbb{R} \mathbb{P}^{2}$ (with the image for each individual lifting a 2 -sphere in $\tilde{X}$ ) and also all the liftings of the universal cover $S^{2} \rightarrow \mathbb{R P}^{2}$ of the second summand $\mathbb{P}^{2}$ of $\mathbb{R P}^{2} \vee \mathbb{R P}^{2}$ (again with the image for each individual lifting a 2 -sphere in $\tilde{X}$ ). The first sequence of 2-spheres alternates between the second sequence of 2 -spheres with points of touching being the inverse images of the common point of the two copies of $\mathbb{P}^{2}$ in $\mathbb{R P}^{2} \vee \mathbb{R P}^{2}$. The universal cover is the union of the two sequences of 2-spheres alternatingly touching each other to form an infinite
+sting of touching 2-spheres. For the rigorous proof that such a construction of $\tilde{X}$ is indeed the universal cover of $X$, one goes back to the argument in the preceding paragraph.
+
+The algebraic way to arrive at the candidate $\tilde{X}$ is to use the theorem of van Kampen to conclude that the fundamental group of $\mathbb{R P}^{2} \vee \mathbb{R P}^{2}$ is equal to the group $(\mathbb{Z} / 2 \mathbb{Z}) *(\mathbb{Z} / 2 \mathbb{Z})$ amalgamated from the fundamental group $\mathbb{Z} / 2 \mathbb{Z}$ of the first summand of $\mathbb{R P}^{2} \vee \mathbb{R} \mathbb{P}^{2}$ and the fundamental group $\mathbb{Z} / 2 \mathbb{Z}$ of the second summand of $\mathbb{R} \mathbb{P}^{2} \vee \mathbb{R P}^{2}$. The map $\varphi: \mathbb{R}^{3} \rightarrow \mathbb{R}^{3}$ defined by $\varphi(x, y, z)=(-x+2,-y,-z)$ can be used to represent the generator of the fundamental group $\mathbb{Z} / 2 \mathbb{Z}$ of the right summand of $\mathbb{R P}^{2} \vee \mathbb{R P}^{2}$, because it represents the antipodal map of the 2 -sphere in $\mathbb{R}^{3}$ of radius 1 centered at $(1,0,0)$. The map $\psi: \mathbb{R}^{3} \rightarrow \mathbb{R}^{3}$ defined by $\psi(x, y, z)=(-x-2,-y,-z)$ can be used to represent the generator of the fundamental group $\mathbb{Z} / 2 \mathbb{Z}$ of the left summand of $\mathbb{R P}^{2} \vee \mathbb{R P}^{2}$, because it represents the antipodal map of the 2 -sphere in $\mathbb{R}^{3}$ of radius 1 centered at $(-1,0,0)$. The group $G$ generated by $\varphi$ and $\psi$ is the fundamental group $(\mathbb{Z} / 2 \mathbb{Z}) *(\mathbb{Z} / 2 \mathbb{Z})$ of $\mathbb{R P}^{2} \vee \mathbb{R P}^{2}$. The orbit of the union of the two unit 2 -spheres centered respectively at $(1,0,0)$ and $(0,0,1)$ under the group $G$ is the universal cover $\tilde{X}$ of $X$. Again, for the rigorous proof that such an orbit $\tilde{X}$ is indeed the universal cover of $X$, one goes back to the argument in the first paragraph of this solution of the problem.
+
+\section{FALL 2012 - Qualifying Exam Solutions for Complex Analysis}
+\section{Differential Geometry}
+Day 1 Exam I, Complex analysis. The integrand $z^{5} \sin \left(\frac{1}{z^{2}}\right)$ is an analytic function on the punctured complex plane $(0<|z|<\infty)$. The Taylor series for $\sin (u)$ is
+
+$$
+\sin (u)=\sum_{n=0}^{\infty} \frac{(-)^{n}}{(2 n+1) !} u^{2 n+1}
+$$
+
+As we are in the domain $0<|z|<\infty$, we can substitute with $u=z^{-2}$ :
+
+$$
+z^{5} \sin \left(\frac{1}{z^{2}}\right)=\sum_{k=0}^{\infty} \frac{(-)^{n}}{(2 n+1) !} z^{-4 n+3}
+$$
+
+The pole for $z=0$ is at $n=1$. It follows that the residue is $-\frac{1}{3 !}$. For the integral, we see that the function is analytic everywhere within the first circle $|z|<1$, with the exception of the $z=0$. There are no singularities on the boundary. The second contour is a deformation of the first one without meeting a singularity. So it has the same value. It follows that the residue at $z=0$ will contribute twice and the final answer is $-2 \frac{2 \pi i}{3 !}=-\frac{2 \pi i}{3}$.
+
+Day 2 Exam II, Q2, Complex analysis. The residue of the $\Gamma$ function at $z=-n$ is $\frac{(-1)^{n}}{n !}$.
+
+Defining the $\Gamma$ function by the integral
+
+$$
+\Gamma(z)=\int_{0}^{\infty} t^{z-1} e^{-t} d t
+$$
+
+we have
+
+$$
+\begin{aligned}
+\Gamma(z) & =\int_{1}^{\infty} t^{z-1} e^{-t} d t+\int_{0}^{1} d t e^{-t} t^{z-1}=\int_{1}^{\infty} t^{z-1} e^{-t} d t+\int_{0}^{1} d t t^{z-1} \sum_{n=0}^{\infty} \frac{(-1)^{n}}{n !} t^{n} \\
+& =\int_{1}^{\infty} t^{z-1} e^{-t} d t+\sum_{n=0}^{\infty} \frac{(-1)^{n}}{n !} \frac{1}{z+n} .
+\end{aligned}
+$$
+
+The first integral is an analytic function of $z$ and the second terms shows that the residue at $z=-n$ is $\frac{(-1)^{n}}{n !}$.
+
+Alternatively, you can the functional relation $\Gamma(z+1)=z \Gamma(z)$ ti show that the residue at $z=0$ is $\Gamma(1)=1$. You then reduce the residue of $\Gamma(z)$ at $z=-n$ to the residue at $z=0$ using recursively the functional relation $\Gamma(z)=\frac{\Gamma(z+1)}{z}$.
+
+Day 3 Exam III, Q2, Complex analysis. We consider analytic functions such that
+
+$$
+\|f\|_{2}^{2}:=\int_{U} f(z) \overline{f(z)} d z \leq \infty
+$$
+
+Using Cauchy integral formula, an analytic function $f$ of $L^{2}(U)$ admits the following estimate for every compact $K$ strictly included in $U$ :
+
+$$
+\sup _{z \in K}|f(z)| \leq C_{K}|| f \|_{2},
+$$
+
+where $C_{K}$ is a constant depending on the compact space $K$. You can use this estimate together with Cauchy-Schwarz inequality to prove the uniform convergence of the sequence $\left(f_{n}\right)$. To show that the limit is analytic, you can use Moreva theorem.
+
+\section*{FALL 2012 - Solutions for Differential Geometry }
+\section{QUALIFYING EXAMINATION}
+Day
+
+\begin{enumerate}
+  \item (a) Prove that $S U_{N}$ (the set of $N \times N$ unitary matrices with determinant 1) is a submanifold of $M_{N}(\mathbb{C})$ (the set of $N \times N$ matrices with entries in $\mathbb{C})$.
+\end{enumerate}
+
+(b) Precise the dimension of $S U_{N}$ and its tangent space at identity.
+
+(c) Prove that the submanifolds $S L_{N}$ (the set of $N \times N$ matrices with determinant 1) and $U_{N}$ (the set of $N \times N$ unitary matrices) of $M_{N}(\mathbb{C})$ do not intersect transversally.
+
+Solution. (a) Assume first that $S U_{N}$ is a submanifold in a neighborhood of Id: it is locally the zero set of a submersion $F$. Let $M \in S U_{N}$. Let $L_{M}$ : $M_{N}(\mathbb{C}) \rightarrow M_{N}(\mathbb{C})$ be the left multiplication by $M$. It is a diffeomorphism with inverse $L_{M^{-1}}$. Then $S U_{N}$ is locally, in a neighborhood of $M$, the zero set for the submersion $F \circ L_{M^{-1}}$.
+
+Hence we just need to consider the case of a neighborhood of Id. Let $E=$ $\left\{M \in M_{N}(\mathbb{C}): M^{t}=\bar{M}\right\}$, and consider the map
+
+$$
+\Phi:\left\{\begin{array}{ccc}
+M_{N}(\mathbb{C}) & \rightarrow & E \times \mathbb{R} \\
+M & \mapsto & \left(M^{t} \bar{M}, \Im(\operatorname{det}(M))\right)
+\end{array} .\right.
+$$
+
+We have $\Phi^{(-1)}(I d, 0)=\left\{M \in M_{N}(\mathbb{C}): \operatorname{det} M= \pm 1\right\}$, so in a neighborhood of identity $\Phi(M)=(I d, 0)$ is an equation for $S U_{N}$ : we need to check that $\Phi$ is a submersion at Id.
+
+A calculation yields $d \Phi_{I d}(H)=\left(H^{t}+\bar{H}, \Im(\operatorname{Tr}(H))\right)$. For any $(M, \lambda) \in E \times \mathbb{R}$, one therefore can find $H$ such that $d \Phi_{I d}(H)=(M, \lambda)$ (choose for example $H_{0}$ with a real trace such that $M=H_{0}+\overline{H_{0}}$, and $H$ to be $H_{0}$ with i $\lambda$ added in the upper left entry). This proves that $d \Phi_{I d}$ is surjective, concluding the proof.
+
+(b) The tangent space at identity for $S U_{N}$ is the kernel of $d \Phi_{I d}(H)=\left(H^{t}+\right.$ $\bar{H}, \Im(\operatorname{Tr}(H)))$, that is to say matrices with trace 0 and equal to the opposite of transpose of their conjugate. The dimension of $S U(N)$ is therefore $2 N(N-$ 1) $/ 2+N-1=N^{2}-1$.
+
+(c) $S L_{N}$ and $U_{N}$ do not intersect transversally at $I d$. Indeed the tangent spaces of these two varieties at $I d$ are both included in the sub-vector space of $M_{N}(\mathbb{C})$ consisting in matrices with purely imaginary trace.
+
+Day 2. Let $M$ be a dimension 2 Riemannian manifold. We write its metric in polar coordinates as $d r^{2}+f(r, \theta)^{2} d \theta^{2}$. Prove that its Gaussian curvature is
+$K=-f^{-1} \frac{\partial^{2} f}{\partial r^{2}}$.
+
+Solution. Let $f^{\prime}=\partial f / \partial r$ and $f^{\prime \prime}=\partial^{2} f / \partial r^{2}$. Then
+
+$$
+\begin{aligned}
+\left(R_{e_{r}, e_{\theta}} e_{r}\right) \cdot e_{\theta} & =\nabla_{e_{r}} \nabla_{e_{\theta}} e_{r} \cdot e_{\theta}-\nabla_{e_{\theta}} \nabla_{e_{r}} e_{r} \cdot e_{\theta}-\nabla_{\left[e_{r}, e_{\theta}\right]} e_{r} \cdot e_{\theta} \\
+& =\nabla_{e_{r}}\left(\frac{f^{\prime}}{f} e_{\theta}\right) \cdot e_{\theta}-0-\nabla_{-\frac{f^{\prime}}{f} e_{\theta}} e_{r} \cdot e_{\theta} \\
+& =\frac{f f^{\prime \prime}-f^{\prime 2}}{f^{2}}+\frac{f^{\prime}}{f} \nabla_{e_{r}} e_{\theta} \cdot e_{\theta}+\frac{f^{\prime}}{f} \nabla_{e_{\theta}} e_{\theta} \\
+& =\frac{f f^{\prime \prime}-f^{\prime 2}}{f^{2}}+\frac{f^{\prime 2}}{f^{2}} e_{\theta} \cdot e_{\theta} \\
+& =\frac{f^{\prime \prime}}{f}
+\end{aligned}
+$$
+
+so $K=-\frac{f^{\prime \prime}}{f}$.
+
+Day 3. Exercise about calculating the Levi-Civita connection for the $n$-dimensional hyperbolic space.
+
+Solution. Remember that $\nabla_{\partial_{i}} \partial_{j}=\sum_{k} \Gamma_{i j}^{k} \partial_{k}$, where
+
+$$
+\Gamma_{i j}^{k}=\frac{1}{2} \sum_{n} g^{k n}\left(\partial_{i} g_{n j}+\partial_{j} g_{n i}-\partial_{n} g_{i j}\right)=\frac{1}{2} g^{k k}\left(\partial_{i} g_{k j}+\partial_{j} g_{k i}-\partial_{k} g_{i j}\right),
+$$
+
+the last equality because $g$ is diagonal. A calculation then yields, on $\{i=$ $k, j=n\} \cup\{j=k, i=n\}, \Gamma_{i j}^{k}=-x_{n}^{-1}$, and on $\{i=j, k=n, i \neq n\}$, $\Gamma_{i j}^{k}=x_{n}^{-1}$. For all other indices, $\Gamma_{i j}^{k}=0$.
+
+\section{FALL 2012 - Qualifying Exam Solutions for Real Analysis}
+Solution:
+
+Day
+
+\begin{enumerate}
+  \item (a) Let $f=0$ and
+\end{enumerate}
+
+$$
+f_{n}(x)=\sqrt{n}, \quad 0 \leq x \leq 1 / n
+$$
+
+and $f_{n}(x)=0$ otherwise. Then $f_{n}(x) \rightarrow 0$ a.e. but $\left\|f_{n}\right\|_{2}=1$ for all $n$. This is a counterexample. (b) Let $g_{n}=f_{n}-f$ and for $M>0$ rewrite $g_{n}=h_{n}+k_{n}$ where
+
+$$
+h_{n}(x)=g_{n}(x) \mathbf{1}\left(\left|g_{n}(x)\right|>M\right)
+$$
+
+Then by the dominated convergence theorem, we have
+
+$$
+\lim _{n \rightarrow \infty} \int\left|k_{n}(x)\right| d x=0
+$$
+
+Also,
+
+$$
+\int\left|h_{n}(x)\right| d x \leq M^{-1} \int\left|h_{n}(x)\right|^{2} d x \leq M^{-1} \int\left|g_{n}(x)\right|^{2} d x \leq M^{-1}\left(\left\|f_{n}\right\|_{2}+\|f\|_{2}\right)^{2} \leq 4 / M
+$$
+
+Since $M$ can be arbitrary large, this proves that
+
+$$
+\lim _{n \rightarrow \infty} \int\left|g_{n}(x)\right| d x=0
+$$
+
+Day 2. Define the Fourier transform by
+
+$$
+f(p)=\int e^{-i x p} f(x) \mathrm{d} x
+$$
+
+Take the Fourier transform in $x$ to get
+
+$$
+\partial_{t} \hat{u}(t, p)=-\frac{p^{2}}{2} \hat{u}(t, p)
+$$
+
+Here the assumptions on $u(t, x)$ make sure that the Fourier transforms can be taken on both sides of the equation. Hence
+
+$$
+\hat{u}(t, p)=e^{-t p^{2} / 2} \hat{u}(0, p)=e^{-t p^{2} / 2} \hat{f}(p)
+$$
+
+Take the inverse Fourier transform to get
+
+$$
+u(t, x)=[g(t, \cdot) * f](x)
+$$
+
+where $g(t, \cdot)$ is the inverse transform of $e^{-t p^{2} / 2}$. Using the well-known formula of the Fourier transform of Gaussian, i.e.,
+
+$$
+g(t, x)=\frac{C_{1}}{\sqrt{t}} e^{-C_{2} x^{2} / t}
+$$
+
+we prove (a).
+
+To prove (b), we have
+
+$$
+\|u(t, \cdot)\|_{L^{2}(\mathbb{R})}^{2} \leq C \int \mathrm{d} x t^{-1}\left[\int_{\mathbb{R}} \exp \left(-C \frac{(x-y)^{2}}{t}\right) f(y) \mathrm{d} y\right]^{2}
+$$
+
+Since $f \in L_{1}$, we can use Holder (or Jensen) inequality to have
+
+$$
+\left[\int_{\mathbb{R}} \exp \left(-C \frac{(x-y)^{2}}{t}\right) f(y) \mathrm{d} y\right]^{2} \leq \int_{\mathbb{R}} \exp \left(-2 C \frac{(x-y)^{2}}{t}\right) f(y) \mathrm{d} y \int_{\mathbb{R}} f(y) \mathrm{d} y
+$$
+
+Combining these two inequalities, we have
+
+$$
+\|u(t, \cdot)\|_{L^{2}(\mathbb{R})}^{2} \leq C \int \mathrm{d} x t^{-1} \int_{\mathbb{R}} \exp \left(-2 C \frac{(x-y)^{2}}{t}\right) f(y) \mathrm{d} y\|f\|_{L^{1}(\mathbb{R})} \leq C t^{-1 / 2}\|f\|_{L^{1}(\mathbb{R})}^{2}
+$$
+
+This proves (b).
+
+Day
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item Let $Y_{j}=X_{j}-1$. We have
+\end{enumerate}
+
+$$
+\mathbb{E}\left(n^{-1} \sum_{j=1}^{n} Y_{j}\right)^{2}=n^{-2} \mathbb{E} \sum_{i, j=1}^{n} Y_{i} Y_{j} \leq n^{-2} \mathbb{E} \sum_{i, j=1}^{n} f(|i-j|) \leq n^{-1} A
+$$
+
+By the Chebyshev's inequality, we have
+
+$$
+\mathbb{P}\left(n^{-1} \sum_{j=1}^{n} Y_{j} \geq 1\right) \leq A / n
+$$
+
+Hence $A=B$.
+
+
+\end{document}

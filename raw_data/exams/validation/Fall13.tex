@@ -1,0 +1,257 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+
+\title{Qualifying Exams I, 2013 Fall }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+  \item (Algebra) Consider the algebra $M_{2}(k)$ of $2 \times 2$ matrices over a field $k$. Recall that an idempotent in an algebra is an element $e$ such that $e^{2}=e$.
+\end{enumerate}
+
+(a) Show that an idempotent $e \in M_{2}(k)$ different from 0 and 1 is conjugate to
+
+$$
+e_{1}:=\left(\begin{array}{ll}
+1 & 0 \\
+0 & 0
+\end{array}\right)
+$$
+
+by an element of $G L_{2}(k)$.
+
+(b) Find the stabilizer in $G L_{2}(k)$ of $e_{1} \in M_{2}(k)$ under the conjugation action.
+
+(c) In case $k=\mathbb{F}_{p}$ is the prime field with $p$ elements, compute the number of idempotents in $M_{2}(k)$. (Count 0 and 1 in.)
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (Algebraic Geometry) (a) Find an everywhere regular differential $n$-form on the affine $n$-space $\mathbb{A}^{n}$.
+\end{enumerate}
+
+(b) Prove that the canonical bundle of the projective $n$-dimensional space $\mathbb{P}^{n}$ is $\mathcal{O}(-n-1)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (Complex Analysis) (Bol's Theorem of 1949). Let $\tilde{W}$ be a domain in $\mathbb{C}$ and $W$ be a relatively compact nonempty subdomain of $\tilde{W}$. Let $\varepsilon>0$ and $G_{\varepsilon}$ be the set of all $(a, b, c, d) \in \mathbb{C}$ such that $\max (|a-1|,|b|,|c|,|d-1|)<\varepsilon$. Assume that $c z+d \neq 0$ and $\frac{a z+b}{c z+d} \in \tilde{W}$ for $z \in W$ and $(a, b, c, d) \in G_{\varepsilon}$. Let $m \geq 2$ be an integer. Prove that there exists a positive integer $\ell$ (depending on $m$ ) with the property that for any holomorphic function $\varphi$ on $\tilde{W}$ such that
+\end{enumerate}
+
+$$
+\varphi(z)=\varphi\left(\frac{a z+b}{c z+d}\right) \frac{(c z+d)^{2 m}}{(a d-b c)^{m}}
+$$
+
+for $z \in W$ and $(a, b, c, d) \in G_{\varepsilon}$, the $\ell$-th derivative $\psi(z)=\varphi^{(\ell)}(z)$ of $\varphi(z)$ on $\tilde{W}$ satisfies the equation
+
+$$
+\psi(z)=\psi\left(\frac{a z+b}{c z+d}\right) \frac{(a d-b c)^{\ell-m}}{(c z+d)^{2(\ell-m)}}
+$$
+
+for $z \in W$ and $(a, b, c, d) \in G_{\varepsilon}$. Express $\ell$ in terms of $m$.
+
+Hint: Use Cauchy's integral formula for derivatives.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (Algebraic Topology) (a) Show that the Euler characteristic of any contractible space is 1 .
+\end{enumerate}
+
+(b) Let $B$ be a connected CW complex made of finitely many cells so that its Euler characteristic is defined. Let $E \rightarrow B$ be a covering map whose fibers are discrete, finite sets of cardinality $N$. Show the Euler characteristic of $E$ is $N$ times the Euler characteristic of $B$.
+
+(c) Let $G$ be a finite group with cardinality $>2$. Show that $B G$ (the classifying space of $G$ ) cannot have homology groups whose direct sum has finite rank.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (Differential Geometry) Let $H=\left\{(x, y) \in \mathbb{R}^{2}: y>0\right\}$ be the upper half plane. Let $g$ be the Riemannian metric on $H$ given by
+\end{enumerate}
+
+$$
+g=\frac{(\mathrm{d} x)^{2}+(\mathrm{d} y)^{2}}{y^{2}}
+$$
+
+$(H, g)$ is known as the half-plane model of the hyperbolic plane.
+
+(a) Let $\gamma(\theta)=(\cos \theta, \sin \theta)$ and $\eta(\theta)=(\cos \theta+1, \sin \theta)$ for $\theta \in(0, \pi)$ be two paths in $H$. Compute the angle $A$ at their intersection point shown in Figure 1 , measured by the metric $g$.
+
+\begin{center}
+\includegraphics[max width=\textwidth]{2023_10_29_935f68561a50ac55f3f8g-2}
+\end{center}
+
+Figure 1: Angle $A$ between the two curves $\gamma$ and $\eta$ in the upper half plane $H$.
+
+(b) By computing the Levi-Civita connection
+
+$$
+\nabla_{\frac{\partial}{\partial x_{i}}} \frac{\partial}{\partial x_{j}}=\sum_{k=1}^{2} \Gamma_{i j}^{k} \frac{\partial}{\partial x_{k}}
+$$
+
+of $g$ or otherwise (where $\left(x_{1}, x_{2}\right)=(x, y)$ ), show that the path $\gamma$, after arclength reparametrization, is a geodesic with respect to the metric $g$.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (REAL AnAlysis) For any positive integer $n$ let $M_{n}$ be a positive number such that the series $\sum_{n=1}^{\infty} M_{n}$ of positive numbers is convergent and its limit is $M$. Let $a<b$ be real numbers and $f_{n}(x)$ be a real-valued continuous function on $[a, b]$ for any positive integer $n$ such that its derivative $f_{n}^{\prime}(x)$ exists for every $a<x<b$ with $\left|f_{n}^{\prime}(x)\right| \leq M_{n}$ for $a<x<b$. Assume that the series $\sum_{n=1}^{\infty} f_{n}(a)$ of real numbers converges. Prove that
+\end{enumerate}
+
+(a) the series $\sum_{n=1}^{\infty} f_{n}(x)$ converges to some real-valued function $f(x)$ for every $a \leq x \leq b$,
+
+(b) $f^{\prime}(x)$ exists for every $a<x<b$, and
+
+(c) $\left|f^{\prime}(x)\right| \leq M$ for $a<x<b$.
+
+Hint for (b): For fixed $x \in(a, b)$ consider the series of functions
+
+$$
+\sum_{n=1}^{\infty} \frac{f_{n}(y)-f_{n}(x)}{y-x}
+$$
+
+of the variable $y$ and its uniform convergence.
+
+\section{Qualifying Exams II, 2013 Fall}
+\begin{enumerate}
+  \item (Algebra) Find all the field automorphisms of the real numbers $\mathbb{R}$.
+\end{enumerate}
+
+Hint: Show that any automorphism maps a positive number to a positive number, and deduce from this that it is continuous.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (Algebraic Geometry) What is the maximum number of ramification points that a mapping of finite degree from one smooth projective curve over $\mathbb{C}$ of genus 1 to another (smooth projective curve of genus 1) can have? Give an explanation for your answer.
+
+  \item (Complex Analysis) Let $\omega$ and $\eta$ be two complex numbers such that $\operatorname{Im}\left(\frac{\omega}{\eta}\right)>0$. Let $G$ be the closed parallelogram consisting of all $z \in \mathbb{C}$ such that $z=\lambda \omega+\rho \eta$ for some $0 \leq \lambda, \rho \leq 1$. Let $\partial G$ be the boundary of $G$ and Let $G^{0}=G-\partial G$ be the interior of $G$. Let $P_{1}, \cdots, P_{k}, Q_{1}, \cdots, Q_{\ell}$ be points in $G^{0}$ and let $m_{1}, \cdots, m_{k}, n_{1}, \cdots, n_{\ell}$ be positive integers. Let $f$ be a function on $G$ such that
+
+\end{enumerate}
+
+$$
+\frac{f(z) \prod_{j=1}^{\ell}\left(z-Q_{j}\right)^{n_{j}}}{\prod_{p=1}^{k}\left(z-P_{p}\right)^{m_{p}}}
+$$
+
+is continuous and nowhere zero on $G$ and is holomorphic on $G^{0}$. Let $\varphi(z)$ and $\psi(z)$ be two polynomials on $\mathbb{C}$. Assume that $f(z+\omega)=e^{\varphi(z)} f(z)$ if both $z$ and $z+\omega$ are in $G$. Assume also that $f(z+\eta)=e^{\psi(z)} f(z)$ if both $z$ and $z+\eta$ are in $G$. Express $\sum_{p=1}^{k} m_{p}-\sum_{j=1}^{\ell} n_{j}$ in terms of $\omega$ and $\eta$ and the coefficients of $\varphi(z)$ and $\psi(z)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (Algebraic Topology) (a) Fix a basis for $H_{1}$ of the two-torus (with integer coefficients). Show that for every element $x \in S L(2, \mathbb{Z})$, there is an automorphism of the two-torus such that the induced map on $H_{1}$ acts by $x$. Hint: $S L(2, \mathbb{Z})$ also acts on the universal cover of the torus.
+\end{enumerate}
+
+(b) Fix an embedding $j: D^{2} \times S^{1} \rightarrow S^{3}$. Remove its interior from $S^{3}$ to obtain a manifold $X$ with boundary $T^{2}$. Let $f$ be an automorphism of the two-torus and consider the glued space
+
+$$
+X_{f}:=\left(D^{2} \times S^{1}\right) \cup_{f} X
+$$
+
+If $X$ is homotopy equivalent to $D^{2} \times S^{1}$, compute the homology groups of $X_{f}$.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (Differential Geometry) Let $M=U(n) / O(n)$ for $n \geq 1$, where $U(n)$ is the group of $n \times n$ unitary matrices and $O(n)$ is the group of $n \times n$ orthogonal matrices. $M$ is a real manifold called the Lagrangian Grassmannian.
+\end{enumerate}
+
+(a) Compute and state the dimension of $M$.
+
+(b) Construct a Riemannian metric which is invariant under the left action of $U(n)$ on $M$.
+
+(c) Let $\nabla$ be the corresponding Levi-Civita connection on the tangent bundle $T M$, and $X, Y, Z$ be any $U(n)$-invariant vector fields on $M$. Using the given identity (which you are not required to prove)
+
+$$
+\nabla_{X} Y=\frac{1}{2}[X, Y]
+$$
+
+show that the Riemannian curvature tensor $R$ of $\nabla$ satisfies the formula
+
+$$
+R(X, Y) Z=\frac{1}{4}[Z,[X, Y]]
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (Real Analysis) Show that there is no function $f: \mathbb{R} \rightarrow \mathbb{R}$ whose set of continuous points is precisely the set $\mathbb{Q}$ of all rational numbers.
+\end{enumerate}
+
+\section{Qualifying Exams III, 2013 Fall}
+\begin{enumerate}
+  \item (Algebra) Consider the function fields $K=\mathbb{C}(x)$ and $L=\mathbb{C}(y)$ of one variable, and regard $L$ as a finite extension of $K$ via the $\mathbb{C}$-algebra inclusion
+\end{enumerate}
+
+$$
+x \mapsto \frac{-\left(y^{5}-1\right)^{2}}{4 y^{5}}
+$$
+
+Show that the extension $L / K$ is Galois and determine its Galois group.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (Algebraic Geometry) Is every smooth projective curve of genus 0 defined over the field of complex numbers isomorphic to a conic in the projective plane? Give an explanation for your answer.
+
+  \item (Complex Analysis) Let $f(z)=z+e^{-z}$ for $z \in \mathbb{C}$ and let $\lambda \in \mathbb{R}, \lambda>1$. Prove or disprove the statement that $f(z)$ takes the value $\lambda$ exactly once in the open right half-plane $H_{r}=\{z \in \mathbb{C}: \operatorname{Re} z>0\}$.
+
+  \item (Algebraic Topology) (a) Let $X$ and $Y$ be locally contractible, connected spaces with fixed basepoints. Let $X \vee Y$ be the wedge sum at the basepoints. Show that $\pi_{1}(X \vee Y)$ is the free product of $\pi_{1} X$ with $\pi_{1} Y$.
+
+\end{enumerate}
+
+(b) Show that $\pi_{1}(X \times Y)$ is the direct product of $\pi_{1} X$ with $\pi_{1} Y$.
+
+(c) Note the canonical inclusion $f: X \vee Y \rightarrow X \times Y$. Assume that $X$ and $Y$ have abelian fundamental groups. Show that the map $f_{*}$ on fundamental groups exhibits $\pi_{1}(X \times Y)$ as the abelianization of $\pi_{1}(X \vee Y)$.
+
+Hint: The Hurewicz map is natural.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (Differential Geometry) (a) Let $\mathbb{S}^{1}=\mathbb{R} / \mathbb{Z}$ be a circle and consider the connection
+\end{enumerate}
+
+$$
+\nabla:=\mathrm{d}+\pi \sqrt{-1} \mathrm{~d} \theta
+$$
+
+defined on the trivial complex line bundle over $\mathbb{S}^{1}$, where $\theta$ is the standard coordinate on $\mathbb{S}^{1}=\mathbb{R} / \mathbb{Z}$ descended from $\mathbb{R}$. By solving the differential equation for flat sections $f(\theta)$
+
+$$
+\nabla f=\mathrm{d} f+\pi \sqrt{-1} f \mathrm{~d} \theta=0
+$$
+
+or otherwise, show that there does not exist global flat sections with respect to $\nabla$ over $\mathbb{S}^{1}$.
+(b) Let $T=V / \Lambda$ be a torus, where $\Lambda$ is a lattice and $V=\Lambda \otimes \mathbb{R}$ is the real vector space containing $\Lambda$. Let $L$ be the trivial complex line bundle equipped with the standard Hermitian metric. By identifying flat $U(1)$ connections with $U(1)$ representations of the fundamental group $\pi_{1}(T)$ or otherwise, show that the space of flat unitary connections on $L$ is the dual torus $T^{*}=V^{*} / \Lambda^{*}$, where $\Lambda^{*}:=\operatorname{Hom}(\Lambda, \mathbb{Z})$ is the dual lattice and $V^{*}:=\operatorname{Hom}(V, \mathbb{R})$ is the dual vector space.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (Real Analysis) (Fundamental Solutions of Linear Partial Differential Equations with Constant Coefficients). Let $\Omega$ be an open interval $(-M, M)$ in $\mathbb{R}$ with $M>0$. Let $n$ be a positive integer and $L=\sum_{\nu=0}^{n} a_{\nu} \frac{d^{\nu}}{d x^{\nu}}$ be a linear differential operator of order $n$ on $\mathbb{R}$ with constant coefficients, where the coefficients $a_{0}, \cdots, a_{n-1}, a_{n} \neq 0$ are complex numbers and $x$ is the coordinate of $\mathbb{R}$. Let $L^{*}=\sum_{\nu=0}^{n}(-1)^{\nu} \overline{a_{\nu}} \frac{d^{\nu}}{d x^{\nu}}$. Prove, by using Plancherel's identity, that there exists a constant $c>0$ which depends only on $M$ and $a_{n}$ and is independent of $a_{0}, a_{1}, \cdots, a_{n-1}$ such that for any $f \in L^{2}(\Omega)$ a weak solution $u$ of $L u=f$ exists with $\|u\|_{L^{2}(\Omega)} \leq c\|f\|_{L^{2}(\Omega)}$. Give one explicit expression for $c$ as a function of $M$ and $a_{n}$.
+\end{enumerate}
+
+Hint: A weak solution $u$ of $L u=f$ means that $(f, \psi)_{L^{2}(\Omega)}=\left(u, L^{*} \psi\right)_{L^{2}(\Omega)}$ for every infinitely differentiable function $\psi$ on $\Omega$ with compact support. For the solution of this problem you can consider as known and given the following three statements.
+
+(I) If there exists a positive number $c>0$ such that $\|\psi\|_{L^{2}(\Omega)} \leq c\left\|L^{*} \psi\right\|_{L^{2}(\Omega)}$ for all infinitely differentiable complex-valued functions $\psi$ on $\Omega$ with compact support, then for any $f \in L^{2}(\Omega)$ a weak solution $u$ of $L u=f$ exists with $\|u\|_{L^{2}(\Omega)} \leq c\|f\|_{L^{2}(\Omega)}$.
+
+(II) Let $P(z)=z^{m}+\sum_{k=0}^{m-1} b_{k} z^{k}$ be a polynomial with leading coefficient 1. If $F$ is a holomorphic function on $\mathbb{C}$, then
+
+$$
+|F(0)|^{2} \leq \frac{1}{2 \pi} \int_{\theta=0}^{2 \pi}\left|P\left(e^{i \theta}\right) F\left(e^{i \theta}\right)\right|^{2} d \theta
+$$
+
+(III) For an $L^{2}$ function $f$ on $\mathbb{R}$ which is zero outside $\Omega=(-M, M)$ its Fourier transform
+
+$$
+\hat{f}(\xi)=\int_{-M}^{M} f(x) e^{-2 \pi i x \xi} d x
+$$
+
+as a function of $\xi \in \mathbb{R}$ can be extended to a holomorphic function
+
+$$
+\hat{f}(\xi+i \eta)=\int_{-M}^{M} f(x) e^{-2 \pi i x(\xi+i \eta)} d x
+$$
+
+on $\mathbb{C}$ as a function of $\xi+i \eta$.
+
+
+\end{document}

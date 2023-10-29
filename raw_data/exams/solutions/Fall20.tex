@@ -1,0 +1,537 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+
+\title{QUALIFYING EXAMINATION }
+
+
+\author{HARVARD UNIVERSITY\\
+Department of Mathematics}
+\date{}
+
+
+\begin{document}
+\maketitle
+Department of Mathematics
+
+Tuesday September 1, 2020 (Day 1)
+
+\begin{enumerate}
+  \item (AG) Let $X$ be a smooth projective curve of genus $g$, and let $p \in X$ be a point. Show that there exists a nonconstant rational function $f$ which is regular everywhere except for a pole of order $\leq g+1$ at $p$.
+\end{enumerate}
+
+Solution: Let $\mathcal{O}_{C}(n p)$ be the invertible sheaf associated to the divisor $n p$; by definition, $\mathcal{O}_{C}(n p)$ has a global section $\sigma$ vanishing to order $n$ at $p$ and nowhere else. For any integer $n$, we have by Riemann-Roch
+
+$$
+h^{0}\left(\mathcal{O}_{C}(n p)\right) \geq n-g+1
+$$
+
+Thus for $n=g+1$, we have $h^{0}\left(\mathcal{O}_{C}(n p)\right) \geq 2$, so that $\mathcal{O}_{C}(n p)$ has a global section $\tau$ that is not a scalar multiple of $\sigma$; the ratio $\tau / \sigma$ is then our desired function.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (CA) Let $U \subset \mathbb{C}$ be an open set containing the closed unit disc $\bar{\Delta}=\{z \in$ $\mathbb{C}:|z| \leq 1\}$, and suppose that $f$ is a function on $U$ holomorphic except for a simple pole at $z_{0}$ with $\left|z_{0}\right|=1$. Show that if
+\end{enumerate}
+
+$$
+\sum_{n=0}^{\infty} a_{n} z^{n}
+$$
+
+denotes the power series expansion of $f$ in the open unit disk, then
+
+$$
+\lim _{n \rightarrow \infty} \frac{a_{n}}{a_{n+1}}=z_{0}
+$$
+
+Solution. We can write
+
+$$
+f(z)=\frac{b}{z-z_{0}}+\sum_{n=0}^{\infty} c_{n} z^{n}
+$$
+
+(where $b \neq 0$ and $c_{n}$ are complex numbers) with the radius of convergence of the power series $\sum_{k=0}^{\infty} c_{k} z^{k}$ being $>1$. From
+
+$$
+\frac{b}{z-z_{0}}=\frac{-b}{z_{0}} \frac{1}{1-\frac{z}{z_{0}}}=\sum_{n=0}^{\infty} \frac{-b z^{n}}{z_{0}^{n+1}}
+$$
+
+it follows that
+
+$$
+a_{n}=c_{n}-\frac{b}{z_{0}^{n+1}}
+$$
+
+Since the radius of convergence of the power series $\sum_{k=0}^{\infty} c_{k} z^{k}$ is $>1$, for some positive numbers $C$ and $R>1=\left|z_{0}\right|$ we have
+
+$$
+\left|c_{n}\right| \leq \frac{C}{R^{n}} \quad \text { for } n \geq 0
+$$
+
+Thus,
+
+$$
+\begin{aligned}
+\lim _{n \rightarrow \infty} \frac{a_{n+1}}{a_{n}} & =\lim _{n \rightarrow \infty} \frac{c_{n+1}-\frac{b}{z_{0}^{n+2}}}{c_{n}-\frac{b}{z_{0}^{n+1}}} \\
+& =\lim _{n \rightarrow \infty} \frac{z_{0}^{n+2}\left(c_{n+1}-\frac{b}{z_{0}^{n+2}}\right)}{z_{0}^{n+2}\left(c_{n}-\frac{b}{z_{0}^{n+1}}\right)} \\
+& =\lim _{n \rightarrow \infty} \frac{1}{z_{0}} \frac{b-c_{n+1} z_{0}^{n+2}}{b-c_{n} z_{0}^{n+1}} \\
+& =\frac{1}{z_{0}},
+\end{aligned}
+$$
+
+because
+
+$$
+\lim _{n \rightarrow \infty}\left|c_{n} z_{0}^{n+1}\right| \leq \lim _{n \rightarrow \infty} \frac{C}{R^{n}}=0
+$$
+
+and $b \neq 0$.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (RA) Let $\left\{a_{n}\right\}_{n=0}^{\infty}$ be a sequence of real numbers that converges to some $A \in \mathbb{R}$. Prove that $(1-x) \sum_{n=0}^{\infty} a_{n} x^{n} \rightarrow A$ as $x$ approaches 1 from below.
+\end{enumerate}
+
+Solution Since $(1-x) \sum_{n=0}^{\infty} A x^{n}=A$ for all $x \in(-1,+1)$, it is enough to prove that $(1-x) \sum_{n=0}^{\infty}\left(a_{n}-A\right) x^{n} \rightarrow 0$. Fix $\epsilon>0$. By assumption there exists $N$ such that $\left|a_{n}-A\right|<\epsilon / 2$ for all $n \geq N$. Write
+
+$$
+(1-x) \sum_{n=0}^{\infty}\left(a_{n}-A\right) x^{n}=(1-x) \sum_{n=0}^{N-1}\left(a_{n}-A\right) x^{n}+(1-x) \sum_{n=N}^{\infty}\left(a_{n}-A\right) x^{n} .
+$$
+
+The first term is a polynomial in $x$ that vanishes at $x=1$, so there exists $\delta>0$ such that
+
+$$
+\left|(1-x) \sum_{n=0}^{N-1}\left(a_{n}-A\right) x^{n}\right|<\epsilon / 2
+$$
+
+for all $x \in(1-\delta, 1)$. We may assume $\delta \leq 1$ (if not, replace $\delta$ by 1 ). The second term satisfies
+
+$$
+\left|(1-x) \sum_{n=N}^{\infty}\left(a_{n}-A\right) x^{n}\right| \leq\left|(1-x) \sum_{n=N}^{\infty} \frac{\epsilon}{2} x^{n}\right|<\left|(1-x) \sum_{n=0}^{\infty} \frac{\epsilon}{2} x^{n}\right|=\epsilon / 2
+$$
+
+for all $x \in(0,1)$. Hence $\left|(1-x) \sum_{n=0}^{\infty}\left(a_{n}-A\right) x^{n}\right|<\epsilon$ for all $x \in(1-\delta, 1)$. Since $\epsilon$ was arbitrary we are done.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (A) Prove that every finite group of order $72=2^{3} \cdot 3^{2}$ is not a simple group.
+\end{enumerate}
+
+Solution: Let $G$ be a group of order 72. Let $n_{3}$ be the number of Sylow 3subgroups in $G$. By Sylow's theorem, we know that $n_{3}$ satisfies $n_{3} \equiv 1 \bmod 3$ and $n_{3}$ divides 8 . This means $n_{3}=1$ or 4 . Now if $n_{3}=1$, then there is a unique Sylow 3 -subgroup and it is a normal subgroup of order 9. Hence, in this case, the group $G$ is not simple.
+
+It remains to consider the case when $n_{3}=4$. So there are four Sylow 3subgroups of $G$. Note that these subgroups are not normal by Sylow's theorem. The group $G$ acts on the set of these four Sylow 3-subgroups by conjugation. Hence it affords a permutation representation homomorphism $f: G \rightarrow S_{4}$, where $S_{4}$ is the symmetric group of degree 4 .
+
+By the first isomorphism theorem, we have $G / \operatorname{ker} f<S_{4}$. Thus, the order of $G / \operatorname{ker} f$ divides the order of $S_{4}$. Since $\left|S_{4}\right|=4 !=2^{3} \cdot 3$, the order $|\operatorname{ker} f|$ must be divisible by 3 (otherwise $|G / \operatorname{ker} f|$ does not divide $\left|S_{4}\right|$ ), hence $\operatorname{ker} f$ is not the trivial group.
+
+We claim that $\operatorname{ker} f \neq G$. If $\operatorname{ker} f=G$, then it means that the action given by the conjugation by any element $g \in G$ is trivial. That is, $g P g^{-1}=P$ for any $g \in G$ and for any Sylow 3 -subgroup $P$. Since those Sylow 3 -subgroups are not normal, this is a contradiction. Thus, ker $f \neq G$. Since a kernel of a homomorphism is a normal subgroup, this yields that ker $f$ is a nontrivial proper normal subgroup of $\mathrm{G}$, hence $\mathrm{G}$ is not a simple group.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (AT) Let $X$ be a topological space and $A \subset X$ a subset with the induced topology. Recall that a retraction of $X$ onto $A$ is a continuous map $f: X \rightarrow A$ such that $f(a)=a$ for all $a \in A$.
+\end{enumerate}
+
+Let $I=[0,1] \subset \mathbb{R}$ be the closed unit interval, and
+
+$$
+M=I \times I /(0, y) \sim(1,1-y) \forall y \in I
+$$
+
+the closed Möbius strip; by the boundary of the Möbius strip we will mean the image of $I \times\{0,1\}$ in $M$. Show that there does not exist a retraction of the Möbius strip onto its boundary.
+
+Solution: Suppose there were a retraction $f: M \rightarrow A$. Letting $i: A \hookrightarrow M$ be the inclusion of $A$ in $M$, we would then have induced maps on fundamental groups
+
+$$
+\pi_{1}(A) \stackrel{i_{*}}{\longrightarrow} \pi_{1}(M) \stackrel{f_{*}}{\longrightarrow} \pi_{1}(A) .
+$$
+
+Both groups $\pi_{1}(A)$ and $\pi_{1}(M)$ are isomorphic to $\mathbb{Z}$, and by the functoriality of the fundamental group we have $f_{*} \circ i_{*}=(f \circ i)_{*}$ is the identity. But the map $i_{*}$ is multiplication by 2 , a contradiction.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (DG) Let $S$ be a surface of revolution
+\end{enumerate}
+
+$$
+\mathbf{r}(u, v)=(x(u, v), y(u, v), z(u, v))=(v \cos u, v \sin u, f(v))
+$$
+
+where $0<v<\infty$ and $0 \leq u \leq 2 \pi$ and $f(v)$ is a $C^{\infty}$ function on $(0, \infty)$. Determine the set of all $0 \leq \alpha \leq 2 \pi$ such that the curve $u=\alpha$ (called a meridian) is a geodesic of $S$, and determine the set of all $\beta>0$ such that the curve $v=\beta$ (called a parallel) is a geodesic of $S$.
+
+Hint: To determine whether a meridian or a parallel is a geodesic, parametrize it by its arc-length and use the arc-length equation besides the two secondorder ordinary differential equations for a geodesic. For your convenience the formulas for the Christoffel symbols in terms of the first fundamental form $E d u^{2}+2 F d u d v+G d v^{2}$ are listed below.
+
+$$
+\begin{aligned}
+\Gamma_{11}^{1} & =\frac{G E_{u}-2 F_{u}+F E_{v}}{2\left(E G-F^{2}\right)} . & \Gamma_{11}^{2} & =\frac{2 E F_{u}-E E_{v}-F E_{u}}{2\left(E G-F^{2}\right)} \\
+\Gamma_{12}^{1} & =\frac{G E_{v}-F G_{u}}{2\left(E G-F^{2}\right)}, & \Gamma_{12}^{2} & =\frac{E G_{u}-F E_{v}}{2\left(E G-F^{2}\right)} \\
+\Gamma_{22}^{1} & =\frac{2 G F_{v}-G G_{u}-F G_{v}}{2\left(E G-F^{2}\right)}, & \Gamma_{22}^{2} & =\frac{E G_{v}-2 F F_{v}+F G_{u}}{2\left(E G-F^{2}\right)}
+\end{aligned}
+$$
+
+where the subscript $u$ or $v$ for the function $E, F$, or $G$ means partial differentiation of the function with respect to $u$ or $v$.
+
+Solution From
+
+$$
+\mathbf{r}_{u}=(-v \sin u, v \cos u, 0) \quad \text { and } \quad \mathbf{r}_{v}=\left(\cos u, \sin u, f^{\prime}(v)\right)
+$$
+
+it follow that the coefficients of the first fundamental form of $S$ are
+
+$$
+E(u, v)=v^{2}, \quad F(u, v)=0, \quad G=1+f^{\prime}(v)^{2} .
+$$
+
+The Christoffel symbols are
+
+$$
+\begin{aligned}
+\Gamma_{11}^{1} & =\frac{G E_{u}-2 F_{u}+F E_{v}}{2\left(E G-F^{2}\right)}=0, \\
+\Gamma_{11}^{2} & =\frac{2 E F_{u}-E E_{v}-F E_{u}}{2\left(E G-F^{2}\right)}=-\frac{v}{1+f^{\prime 2}}, \\
+\Gamma_{12}^{1} & =\frac{G E_{v}-F G_{u}}{2\left(E G-F^{2}\right)}=\frac{1}{v}, \\
+\Gamma_{12}^{2} & =\frac{E G_{u}-F E_{v}}{2\left(E G-F^{2}\right)}=0, \\
+\Gamma_{22}^{1} & =\frac{2 G F_{v}-G G_{u}-F G_{v}}{2\left(E G-F^{2}\right)}=0, \\
+\Gamma_{22}^{2} & =\frac{E G_{v}-2 F F_{v}+F G_{u}}{2\left(E G-F^{2}\right)}=\frac{f^{\prime} f^{\prime \prime}}{1+f^{\prime 2}} .
+\end{aligned}
+$$
+
+The two second-order ordinary differential equations for a curve $s \mapsto(u(s), v(s))$ to be a geodesic are
+
+$$
+\begin{aligned}
+& \ddot{u}+\Gamma_{11}^{1} \dot{u}^{2}+2 \Gamma_{12}^{1} \dot{u} \dot{v}+\Gamma_{22}^{1} \dot{v}^{2}=0, \\
+& \ddot{v}+\Gamma_{11}^{2} \dot{u}^{2}+2 \Gamma_{12}^{2} \dot{u} \dot{v}+\Gamma_{22}^{2} \dot{v}^{2}=0
+\end{aligned}
+$$
+
+which in the case at hand become
+
+$$
+\begin{aligned}
+& \ddot{u}+\frac{2 \dot{u} \dot{v}}{v}=0 \\
+& \ddot{v}-\frac{v \dot{u}^{2}}{1+f^{\prime 2}}+\frac{f^{\prime} f^{\prime \prime} \dot{v}^{2}}{1+f^{\prime 2}}=0
+\end{aligned}
+$$
+
+where the overhead dot denotes differentiation with respect to the arc-length $s$ of the curve. In addition we have the arc-length equation
+
+$$
+1=E(u, v) \dot{u}^{2}+2 F(u, v) \dot{u} \dot{v}+G(u, v) \dot{v}^{2}=v^{2} \dot{u}^{2}+\left(1+f^{\prime 2}\right) \dot{v}^{2}
+$$
+
+When $u=\alpha$, with $\dot{u}=0$ the first second-order ordinary differential equation above is clearly satisfied and the arc-length equation becomes
+
+$$
+1=\left(1+f^{\prime 2}\right) \dot{v}^{2}
+$$
+
+which upon differentiation with respect to $v$ yields
+
+$$
+0=2 f^{\prime} f^{\prime \prime} \dot{v}^{3}+2\left(1+f^{\prime 2}\right) \dot{v} \ddot{v}
+$$
+
+implying the second second-order ordinary differential equation above. Hence any meridian $u=\alpha$ is a geodesic for $0 \leq \alpha \leq 2 \pi$.
+
+On the other hand, for any parallel $v=\beta$ with $\beta>0$ to be a geodesic, the second second-order ordinary differential equation above yields $\dot{u}=0$, which means that $u$ must be constant and cannot assume all values in $[0,2 \pi]$. Hence no parallel $v=\beta$ is a geodesic for any $\beta>0$.
+
+\section*{QUALIFYING EXAMINATION }
+Department of Mathematics
+
+Wednesday September 2, 2020 (Day 2)
+
+\begin{enumerate}
+  \item (CA) Evaluate the integral
+\end{enumerate}
+
+$$
+\int_{-\infty}^{\infty} \frac{x \sin x}{x^{2}+1} \mathrm{~d} x
+$$
+
+You need to prove that the error terms vanish in the residue calculation.
+
+Solution: Recall that $e^{i z}=\cos z+i \sin z$. Consider the integral along the rectangular contour with corners $-R, R, R+i R,-R+i R$. By the residue theorem,
+
+$$
+\int \frac{z e^{i z}}{z^{2}+1} \mathrm{~d} z=2 \pi i \lim _{z \rightarrow i}(z-i) \frac{z e^{i z}}{z^{2}+1}=2 \pi i \frac{i e^{-1}}{2 i}=\pi i e^{-1}
+$$
+
+By definition, $\left|e^{i(x+i y)}\right|=e^{-y}$. Thus top part of the contour integral is bounded by
+
+$$
+C R e^{-R} \rightarrow 0
+$$
+
+as $R \rightarrow \infty$. The contribution of the contour from $R$ to $R+i R$ is bounded by
+
+$$
+\int_{0}^{R} \frac{|R+i y| e^{-y}}{R^{2}+1} \mathrm{~d} y \leq \frac{C}{R} \rightarrow 0
+$$
+
+as $R \rightarrow \infty$. Similarly for contribution from $-R+i R$ to $-R$. Finally, the contribution from $-R$ to $R$ converges to
+
+$$
+\int_{-\infty}^{\infty} \frac{x(\cos x+i \sin x)}{x^{2}+1} \mathrm{~d} x
+$$
+
+This proves that the answer is given by $\pi e^{-1}$.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (AG) Let $X \subset \mathbb{P}^{n}$ be an irreducible projective variety of dimension $k$. Let $\mathbb{G}(\ell, n)$ be the Grassmannian of $\ell$-planes in $\mathbb{P}^{n}$ for some $\ell<n-k$, and let $C(X) \subset \mathbb{G}(\ell, n)$ the algebraic variety of $\ell$-planes meeting $X$. Prove that $C(X)$ is irreducible, and find its dimension.
+\end{enumerate}
+
+Solution: We have the diagram
+
+\begin{center}
+\includegraphics[max width=\textwidth]{2023_10_29_055f02be88fc5a2ec763g-07}
+\end{center}
+
+where $H$ is the universal $\ell$-plane $\left\{(h, x): x \in \mathbb{P}^{n}, h \in \mathbb{G}(\ell, n), x \in h\right\}$, and $V=H \cap(\mathbb{G}(\ell, n) \times X)$.
+
+For $x \in X$, the fiber over $x$ is $V_{x}=\{h \in \mathbb{G}(\ell, n), x \in h\}$. This can be identified with the subspace of the Grassmannian of $(\ell+1)$-dimensional subspaces in an $(n+1)$-dimension vector space containing a fixed line, hence is isomorphic to the Grassmannian of $\ell$-dimensional subspaces of an $n$-dimensional vector space. It is therefore irreducible of dimension $\ell(n-\ell)>0$. But $p r_{2}: V \rightarrow X$ is a surjective morphism with irreducible base and irreducible fibers of constant dimension $\ell(n-\ell)$, so $V$ is also irreducible and has $\operatorname{dimension} \operatorname{dim} V=\operatorname{dim} X+$ $\ell(n-\ell)=k+\ell(n-\ell)$.
+
+By definition, $C(X)=p r_{1}(V) \hookrightarrow \mathbb{G}(\ell, n)$, and hence is irreducible. If $h \in$ $C(X)$, the fiber of $V$ over $h$ is $V_{h}=\{(h, x) \mid x \in h \cap X\} \cong h \cap X$. Since $k+\ell<n$, we can find an $(n-k)$-plane that meets $X$ at finitely many points. Then any $\ell$-plane $h$ in this $(n-k)$-plane going through one of the intersection point will meet $X$ at finitely many points. Hence for such $h, V_{h}$ will be a finite set of points, so has dimension 0. By upper-semicontinuity of fiber dimension for the proper morphism $p r_{1}$, there is a dense open set where the fiber has dimension 0 , and hence $\operatorname{dim} C(X)=\operatorname{dim} V=k+\ell(n-\ell)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (RA) Let $\left\{f_{n}\right\}$ be a sequence of functions on $X=(0,1) \subset \mathbb{R}$, converging almost everywhere to $f$. Suppose moreover that $\sup _{n}\left\|f_{n}\right\|_{L^{2}(X)} \leq M$ for some $M$ fixed. Under these conditions, answer the following questions by giving a counterexample or proving your answer.
+\end{enumerate}
+
+(a) Do we know $\|f\|_{L^{2}(X)}<\infty$ ?
+
+(b) Do we know $\lim _{n \rightarrow \infty}\left\|f_{n}-f\right\|_{L^{2}(X)}=0$ ? Do we know that
+
+$$
+\lim _{n \rightarrow \infty}\left\|f_{n}-f\right\|_{L^{p}(X)}=0 \quad \text { for } \quad 1<p<2 ?
+$$
+
+(c) If we assume, in addition, that $\lim _{n \rightarrow \infty}\left\|f_{n}\right\|_{L^{2}(X)}=\|f\|_{L^{2}(X)}<\infty$, do we know that
+
+$$
+\lim _{n \rightarrow \infty}\left\|f_{n}-f\right\|_{L^{2}(X)}=0 ?
+$$
+
+Solution For the first part, the answer is yes by Fatou's lemma.
+
+For the second part, the statement $\lim _{n \rightarrow \infty}\left\|f_{n}-f\right\|_{L^{2}(X)}=0$ is false. Let $f_{n}(x)=n$ for $0<x<1 / n^{2}$ and $f_{n}(x)=0$ otherwise. Then $f_{n} \rightarrow 0$ a.e. and $\left\|f_{n}\right\|_{2}=1$ for all $n$. Clearly, $f_{n} \rightarrow 0$ in $L_{2}$ is false.
+
+On the other hand, for $1<p<2$, the answer is yes: for any $M>0$,
+
+$$
+\begin{aligned}
+\lim _{n \rightarrow \infty} \int\left|f_{n}-f\right|^{p} & =\lim _{n \rightarrow \infty} \int_{\left|f-f_{n}\right| \leq M}\left|f_{n}-f\right|^{p}+\lim _{n \rightarrow \infty} \int_{\left|f-f_{n}\right|>M}\left|f_{n}-f\right|^{p} \\
+& \leq 0+\lim _{n \rightarrow \infty} M^{-2+p} \int_{\left|f-f_{n}\right|>M}\left|f_{n}-f\right|^{2} \\
+& \leq 2 M^{-2+p} \lim _{n \rightarrow \infty} \int\left(f_{n}^{2}+f^{2}\right) \leq C M^{-2+p}
+\end{aligned}
+$$
+
+Now let $M \rightarrow \infty$.
+
+Finally, the answer to the third part is also yes:
+
+$$
+\begin{aligned}
+\lim _{n \rightarrow \infty} \int\left|f_{n}-f\right|^{2} & =\lim _{n \rightarrow \infty} \int\left[f_{n}^{2}+f^{2}-2 f_{n} f\right] \\
+& \leq 2 \int f^{2}-2 \lim _{n \rightarrow \infty} \int_{|f| \leq M} f_{n} f-2 \lim _{n \rightarrow \infty} \int_{|f|>M} f_{n} f \\
+& \leq 2 \int f^{2}-2 \int_{|f| \leq M} f^{2}+2\|f\|_{L^{2}(\{|f|>M\})} \lim _{n \rightarrow \infty}\left\|f_{n}\right\|_{L^{2}(X)}
+\end{aligned}
+$$
+
+Again, let $M \rightarrow \infty$.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (A) Let $R$ be a commutative ring with 1 . Show that if every proper ideal of $R$ is a prime ideal, then $R$ is a field.
+\end{enumerate}
+
+Solution: As the zero ideal (0) of $R$ is a proper ideal, it is a prime ideal by assumption. Hence $R=R /\{0\}$ is an integral domain.
+
+Let $a$ be an arbitrary nonzero element in R. We will prove that $a$ is invertible. Consider the ideal $\left(a^{2}\right)$ generated by the element $a^{2}$. If $\left(a^{2}\right)=R$, then there exists $b \in R$ such that $1=a^{2} b$ as $1 \in R=\left(a^{2}\right)$. Hence we have $1=a(a b)$ and $a$ is invertible.
+
+Next, if $\left(a^{2}\right)$ is a proper ideal, then $\left(a^{2}\right)$ is a prime ideal by assumption. Since the product $a \cdot a=a^{2}$ is in the prime ideal $\left(a^{2}\right)$, it follows that $a \in\left(a^{2}\right)$. Thus, there exists $b \in R$ such that $a=a^{2} b$. Equivalently, we have $a(a b-1)=0$. We have already noted above that $R$ is an integral domain. As $a \neq 0$, we must have $a b-1=0$, and hence $a b=1$. This implies that $a$ is invertible.
+
+Therefore, every nonzero element of $R$ is invertible. Hence $R$ is a field.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (AT) Let $D=\{z \in \mathbb{C}:|z| \leq 1\}$ be the closed unit disc in the complex plane, and let $X$ be the space obtained from $D$ by identifying points on the boundary differing by multiplication by powers of $e^{2 \pi i / 5}$; that is, we let $\sim$ be the equivalence relation on $D$ given by
+\end{enumerate}
+
+$$
+z \sim w \text { if }|z|=|w|=1 \text { and }(z / w)^{5}=1
+$$
+
+(a) Find the homology groups of $X$ with coefficients in $\mathbb{Z}$.
+
+(b) Find the homology groups of $X$ with coefficients in $\mathbb{Z} / 5$.
+
+Solution: The space $X$ can be realized as a CW complex with one 0-cell, one 1-cell and one 2-cell, with the 1-skeleton the unit circle $S^{1}$ in $\mathbb{C}$ and the 2-cell attached via the map $S^{1} \rightarrow S^{1}$ given by $z \mapsto z^{5}$. The cellular complex is thus
+
+$$
+\mathbb{Z} \rightarrow \mathbb{Z} \rightarrow \mathbb{Z}
+$$
+
+with the first map multiplication by 5 and the second map 0 ; the homology groups with coefficients in $\mathbb{Z}$ are thus
+
+$$
+H^{0}(X, \mathbb{Z})=\mathbb{Z} ; \quad H^{1}(X, \mathbb{Z})=\mathbb{Z} / 5, \quad \text { and } \quad H^{2}(X, \mathbb{Z})=0
+$$
+
+If we use coefficients in $\mathbb{Z} / 5$, then both maps are 0 and we have
+
+$$
+H^{0}(X, \mathbb{Z})=\mathbb{Z} / 5 ; \quad H^{1}(X, \mathbb{Z})=\mathbb{Z} / 5, \quad \text { and } \quad H^{2}(X, \mathbb{Z})=\mathbb{Z} / 5
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (DG) Suppose $G$ is a compact Lie group with Lie algebra $\mathfrak{g}$. Consider an element $g \in G$, and let $\mathfrak{c} \subset \mathfrak{g}$ be the subalgebra $\mathfrak{c}=\left\{X \mid \operatorname{Ad}_{g}(X)=X\right\}$. Show there exists some $\epsilon>0$ such that for all $X \in \mathfrak{g}$ with $|X|<\epsilon$, there exists $Y \in \mathfrak{c} \operatorname{such}$ that $g \exp (X)$ is conjugate to $g \exp (Y)$.
+\end{enumerate}
+
+Solution: Let $C(g) \subset G$ denote the centralizer of $g$, i.e. the subgroup of elements that commute with $G$; note its Lie algebra is $\mathfrak{c}$. Consider the quotient $(G \times \mathfrak{c}) / C(g)$, where $C(g)$ acts on $G$ by right-multiplication and on $\mathfrak{c}$ by the adjoint action. Then we have a map $(G \times \mathfrak{c}) / C(g) \rightarrow G$ given by $(h, X) \mapsto$ $h g \exp (X) h^{-1}$. The desired statement will follow from the inverse function theorem applied to this map once we verify that the differential at $(h, X)=$ $(1,0)$ is an isomorphism. In other words, we want to verify $\mathfrak{g} \oplus \mathfrak{c} \rightarrow \mathfrak{g}$ given by $(Y, X) \mapsto g^{-1} Y g+X-Y$ is surjective (with specified kernel given by the action of $C(g)$, but for dimension reasons, it suffices to simply show surjectivity). In other words, we wish to show $\operatorname{Im}\left(\operatorname{Ad}_{g}-1\right) \cap \mathfrak{c}=\{0\}$, but by definition $\mathfrak{c}=$ $\operatorname{ker}\left(\operatorname{Ad}_{g}-1\right)$, so we need to show that if $\left(\operatorname{Ad}_{g}-1\right)^{2} Z=0$, then $\left(\operatorname{Ad}_{g}-1\right) Z=0$. But $\operatorname{Ad}_{g}$ preserves the Killing form and hence $\operatorname{Ad}_{g}-1$ is semisimple (by virtue of being an orthogonal matrix); it has no generalized eigenvectors.
+
+\section*{QUALIFYING EXAMINATION }
+Thursday September 3, 2020 (Day 3)
+
+\begin{enumerate}
+  \item (AG) Let $C \subset \mathbb{P}^{3}$ be an algebraic curve (that is, an irreducible, one-dimensional subvariety of $\left.\mathbb{P}^{3}\right)$, and suppose that $p_{C}(m)$ and $h_{C}(m)$ are its Hilbert polynomial and Hilbert function respectively. Which of the following are possible?
+
+  \item $p_{C}(m)=3 m+1$ and $h_{C}(1)=3$;
+
+  \item $p_{C}(m)=3 m+1$ and $h_{C}(1)=4$.
+
+\end{enumerate}
+
+Solution. For the first, the statement $h_{C}(1)=3$ means that $C$ is a plane curve, and the statement $p_{C}(m)=3 m+1$ implies it has degree 3 . But the genus of a plane cubic is 1 , and so its Hilbert polynomial must be $p_{C}(m)=3 m$. For the second, these statements are true for the twisted cubic curve, so it is possible.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (RA) The weak law of large numbers states that the following is correct: Let $X_{1}, X_{2}, \ldots X_{n}$ be independent random variables such that $\left|\mu_{j}\right|=\left|\mathbb{E} X_{j}\right| \leq 1$ and $\mathbb{E}\left(X_{j}-\mu_{j}\right)^{2}=V_{j} \leq 1$. Let $S_{n}=X_{1}+\ldots+X_{n}$. Then for any $\varepsilon>0$
+\end{enumerate}
+
+$$
+\lim _{n \rightarrow \infty} \mathbb{P}\left(\left|\frac{S_{n}-\sum_{j} \mu_{j}}{n}\right|>\varepsilon\right)=0
+$$
+
+Now suppose that we don't know the independence of the sequence $X_{1}, X_{2}, \ldots X_{n}$, but we know that there is a function $g:\{0\} \cup \mathbb{N} \rightarrow \mathbb{R}$ with $\lim _{k \rightarrow \infty} g(k)=0$ such that for all $j \geq i$
+
+$$
+\mathbb{E} X_{i} X_{j}=g(j-i)
+$$
+
+In other words, the correlation functions vanishing asymptotically. Do we know whether the conclusion $(+)$ still holds? Give a counterexample or prove your answer.
+
+Solution We can shift the means of all variables to zero. Then
+
+$$
+\begin{aligned}
+\mathbb{E}\left[\frac{\sum_{i} X_{i}}{n}\right]^{2}=\frac{1}{n^{2}} \sum_{j \geq i} \mathbb{E} X_{j} X_{i} & \leq \frac{1}{n^{2}} \sum_{j \geq i} g(j-i) \\
+& \leq \frac{1}{n} \sum_{k=0}^{n-1}|g(k)| \rightarrow 0
+\end{aligned}
+$$
+
+as $n \rightarrow \infty$. The conclusion follows from the Chebyshev's inequality.
+
+\section{3. $(\mathrm{CA})$}
+(a) Suppose that both $f$ and $g$ are analytic in a neighborhood of a disk $D$ with boundary circle $C$. If $|f(z)|>|g(z)|$ for all $z \in C$, prove that $f$ and $f+g$ have the same number of zeros inside $C$, counting multiplicity.
+
+(b) How many roots of
+
+$$
+p(z)=z^{7}-2 z^{5}+6 z^{3}-z+1=0
+$$
+
+are there in the unit disc in $|z|<1$, again counting multiplicity?
+
+Solution. For the first part, define $f_{t}=f+t g$ for $0 \leq t \leq 1$ and let $n(t)=$ number of zeros of $f_{t}$ inside $C$. By the argument principle,
+
+$$
+n(t)=\frac{1}{2 \pi i} \int_{C} \frac{f_{t}^{\prime}(z)}{f_{t}(z)} d z
+$$
+
+Since $|f(z)|>|g(z)|$ for all $z \in C, f_{t}(z) \neq 0$ or all $z \in C$. This shows that $n(t)$ is a continuous function for $0 \leq t \leq 1$. Since $n(t)$ is an integer valued function, it has to be a constant. This proves the claim.
+
+For the second part, let $f=6 z^{3}$ and $g=z^{7}-2 z^{5}-z+1$. Then $|f(z)|=$ $6>5 \geq|g(z)|$ for all $|z|=1$. Since $f=0$ has three roots in $|z|<1$, so does $p=f+g$.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (AT) Let $S^{1}=\mathbb{R} / \mathbb{Z}$ be a circle, and let $S^{2}$ be a two-dimensional sphere. Consider involutions on both, with an involution on $S^{1}$ defined by $x \mapsto-x$ for $x \in \mathbb{R}$, and with $j: S^{2} \rightarrow S^{2}$ defined by reflection about an equator. Let $M$ be the space of maps that respects these involutions, i.e.
+\end{enumerate}
+
+$$
+M=\left\{f: S^{1} \rightarrow S^{2} \mid f(-x)=j(f(x))\right\}
+$$
+
+Show $M$ is connected but not simply-connected.
+
+Solution: We instead think of $S^{1}=[0,1] / \sim$, with the endpoints identified and the involution acting by $x \mapsto 1-x$. Consider $I=\left[0, \frac{1}{2}\right]$ inside $S^{1}$. For clarity, write $X=S^{2}$ and $Y \subset X$ the circle of fixed points of the involution. Then we note that $M$ may be identified with
+
+$$
+M^{\prime}=\left\{f: I \rightarrow X \mid f(0), f\left(\frac{1}{2}\right) \in Y\right\}
+$$
+
+We will now use some variants of the path space fibration $\Omega X \rightarrow P X \rightarrow X$; namely, consider the map $M^{\prime} \rightarrow Y \times Y$ given by evaluation of $f$ at 0 and $\frac{1}{2}$. This morphism is a fibration. Choosing some base-point $p \in Y \subset X$, we see
+that the fiber over $(p, p)$ is precisely the based loop space $\Omega X$, i.e. we have a fibration sequence $\Omega X \rightarrow M^{\prime} \rightarrow Y \times Y$. We hence have a long exact sequence of homotopy groups
+
+$\cdots \rightarrow \pi_{2}(Y \times Y) \rightarrow \pi_{1}(\Omega X) \rightarrow \pi_{1}(M) \rightarrow \pi_{1}(Y \times Y) \rightarrow \pi_{0}(\Omega X) \rightarrow \pi_{0}(M) \rightarrow \pi_{0}(Y \times Y)$,
+
+where we continue to use $p$ to base-point all our spaces above. As $\pi_{0}(\Omega X) \simeq$ $\pi_{1}(X)$ is trivial, and $Y \times Y$ is certainly connected, the last three terms above show that $M$ is connected. Using the first snippet of the exact sequence above, we have
+
+$$
+\pi_{2}\left(S^{1} \times S^{1}\right) \rightarrow \pi_{2}\left(S^{2}\right) \rightarrow \pi_{1}(M) \rightarrow \pi_{1}\left(S^{1} \times S^{1}\right) \rightarrow 1
+$$
+
+so $\pi_{1}(M)$ is an extension of $\mathbb{Z} \oplus \mathbb{Z}$ by $\mathbb{Z}$, and so is certainly nontrivial.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (DG) Let $\mathbb{H}$ denote the upper half-plane; that is, $\mathbb{H}=\{z \in \mathbb{C}: \operatorname{Im} z>0\}$, with the metric $\frac{1}{y^{2}} d x d y$ for $z=x+i y$. Suppose $\Gamma$ is a group of isometries acting on $\mathbb{H}$ such that $\mathbb{H} / \Gamma$ is a smooth surface $S$, and you are given that a fundamental domain $D$ for the action of $\Gamma$ on $\mathbb{H}$ is given as follows:
+\end{enumerate}
+
+$$
+D=\left\{x+i y \in \mathbb{H} \mid-\frac{3}{2} \leq x \leq \frac{3}{2},(x-c)^{2}+y^{2} \geq \frac{1}{9} \text { for } c \in\left\{ \pm \frac{1}{3}, \pm \frac{2}{3}, \pm \frac{4}{3}\right\}\right\}
+$$
+
+Compute $\chi(S)$ using Gauss-Bonnet. You may use that the (Gaussian) curvature of $\mathbb{H}$ is identically equal to -1 .
+
+Solution: Drawing a diagram shows that $D$ is six translates and/or reflections of
+
+$$
+D^{\prime}=\left\{x+i y \in \mathbb{H} \mid 0 \leq x \leq \frac{1}{2},\left(x-\frac{1}{3}\right)^{2}+y^{2} \geq \frac{1}{9}\right\}
+$$
+
+Per the problem statement, $K$ is identically -1 while the boundary term $\int_{\partial D} k_{g} d s$ vanishes, by approximating the boundary by successively higher horizontal lines. So, making the substitution $x=\frac{1}{3}-\frac{1}{3} \cos \theta$, we compute
+
+$$
+\begin{aligned}
+-\frac{1}{6} 2 \pi \chi(S) & =\int_{0}^{\frac{1}{2}} \int_{\sqrt{1 / 9-(x-1 / 3)^{2}}}^{\infty} \frac{d y d x}{y^{2}} \\
+& =\int_{0}^{\frac{1}{2}} \frac{d x}{\sqrt{1 / 9-(x-1 / 3)^{2}}} \\
+& =\int_{0}^{2 \pi / 3} d \theta
+\end{aligned}
+$$
+
+so that $\chi(S)=-2$.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (A) Fix a prime $p$.
+\end{enumerate}
+
+i) Suppose $F$ is a field of characteristic $p$, and $c \in F$ is not of the form $a^{p}-a$ for any $a \in F$. Prove that the polynomial $P(X)=X^{p}-X-c$ is irreducible and that if $x$ is any root of $P$ then $F(x)$ is a normal extension of $F$ with Galois group isomorphic with $\mathbf{Z} / p \mathbf{Z}$.
+
+ii) Suppose $Q \in \mathbf{Z}[X]$ is a monic polynomial of degree $p$ such that $Q \equiv$ $X^{p}-X-c \bmod p$ for some integer $c \neq 0 \bmod p$, and that $Q$ has exactly $p-2$ real roots. Prove that the Galois group of $Q$ is the full symmetric group $S_{p}$.
+
+Solution. i) Since $F$ is not a polynomial in $X^{p}$, it is separable. Let $x$ be a root of $P$ in some normal algebraic extension $K / F$. By hypothesis $x \notin F$. Then $x+1 \in F(x)$ is also a root of $P$. Hence there exists an automorphism $\sigma$ of $F(x)$ such that $\sigma(a)=a$ for all $a \in F$ but $\sigma(x)=x+1$. By induction it follows that $\sigma^{n}(x)=x+n$ for each $n=1,2,3, \ldots$ Hence the Galois orbit of $x$ contains the $p$ elements $x, x+1, x+2, \ldots, x+p-1$ of $K$. Since $\operatorname{deg}(P)=p$, this must be the full set of roots, and $P$ is irreducible because its roots form a single Galois orbit. Moreover all the roots are in $F(x)$, so $F(x) / F$ is Galois. The Galois group has order $[F(x): F]=p$, so is the cyclic group of order $p$ generated by $\sigma$.
+
+ii) If $F=\mathbf{Z} / p \mathbf{Z}$ in (i) then $a^{p}-a=0$ for all $a \in F$, so the hypothesis is satisfied for all nonzero $c$. In particular $Q$ is irreducible modulo $p$, hence a fortiori irreducible over $\mathbf{Z}$, and thus also over $\mathbf{Q}$ by Gauss's lemma ( $Q$ is primitive because its leading coefficient is 1). Now the Galois group contains a $p$-cycle (either by Cauchy's theorem or using the Frobenius substitution $\bmod p$ ); and it contains complex conjugation, which is a simple transposition because of the hypothesis on the number of real roots. Since $S_{p}$ is generated by any $p$-cycle and simple transposition we are done.
+
+
+\end{document}

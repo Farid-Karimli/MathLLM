@@ -1,0 +1,236 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+
+\title{Qualifying Exams I, 2012 Fall }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+  \item (Real Analysis) Suppose $f_{j},(j=1,2, \ldots)$ and $f$ are real functions on $[0,1]$. Suppose that $f_{j}(x) \rightarrow f(x)$ almost everywhere for $x \in[0,1]$. Furthermore, we assume that
+\end{enumerate}
+
+$$
+\sup _{j \geq 1}\left\|f_{j}\right\|_{L^{2}[0,1]} \leq 1, \quad\|f\|_{L^{2}[0,1]} \leq 1
+$$
+
+(a) Is it always true that
+
+$$
+\lim _{j \rightarrow \infty}\left\|f_{j}-f\right\|_{L^{2}[0,1]}=0 ?
+$$
+
+Prove it or give a counterexample.
+
+(b) Is it always true that
+
+$$
+\lim _{j \rightarrow \infty}\left\|f_{j}-f\right\|_{L^{1}[0,1]}=0 ?
+$$
+
+Prove it or give a counterexample.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (Complex analysis) Evaluate the following path integral
+\end{enumerate}
+
+$$
+\int_{C} z^{5} \sin \left(\frac{1}{z^{2}}\right) d z
+$$
+
+where $C$ is the union of two positively oriented unit circles $|z|=1$ and $|z-1 / 2|=1$. Find also the Laurent series in the domain $0<|z|<\infty$. You need to prove your answers or state precisely the theorems you use.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (Differential Geometry)
+\end{enumerate}
+
+(a) Prove that $S U_{N}$ (the set of $N \times N$ unitary matrices with determinant 1) is a submanifold of $M_{N}(\mathbb{C})$ (the set of $N \times N$ matrices with entries in $\mathbb{C}$ ).
+
+(b) Find the dimension of $S U_{N}$ and prove that its tangent space at the identity is the space of $N \times N$ anti-hermitian and trace zero matrices.
+
+(c) Prove that the submanifolds $S L_{N}$ (the set of $N \times N$ matrices with determinant 1) and $U_{N}$ (the set of $N \times N$ unitary matrices) of $M_{N}(\mathbb{C})$ do not intersect transversally.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (Algebraic Topology) (Third Homotopy Group of 2-Sphere). Let $\Phi: \mathbb{C}^{2}-\{0\} \rightarrow \mathbb{C P}^{1}$ be defined by mapping the inhomogeneous coordinates $\left(z_{1}, z_{2}\right)$ of $\mathbb{C}^{2}$ to the homogeneous coordinates $\left[z_{1}, z_{2}\right]$ of the complex projective line $\mathbb{C P}^{1}$. Let $f: S^{3} \rightarrow S^{2}$ be the map from the 3 -sphere $S^{3}$ to the 2-sphere $S^{2}$ defined by restricting $\Phi$ to the unit 3 -sphere in $\mathbb{C}^{2}$. Let $g$ be the element in the third homotopy group $\pi_{3}\left(S^{2}\right)$ of the 2 -sphere $S^{2}$ which is represented by $f$. Let $\gamma: \mathbb{Z} \rightarrow \pi_{3}\left(S^{2}\right)$ be the group homomorphism which maps the element 1 of the additive group $\mathbb{Z}$ to the element $g$ of $\pi_{3}\left(S^{2}\right)$. Compute the kernel and the cokernel of the group homomorphism $\gamma$. Justify each step of your computation.
+
+  \item (Algebra) Let $p$ be a prime number, $n>1$ an integer, and $K=\mathbb{F}_{p^{n}}$ the field with $p^{n}$ elements. Considering the field automorphism of $K$ defined by
+
+\end{enumerate}
+
+$$
+F(x)=x^{p}
+$$
+
+as an $\mathbb{F}_{p}$-linear endomorphism of $K$, compute its characteristic polynomial.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (Algebraic Geometry)
+\end{enumerate}
+
+(a) Let $X$ be a closed subvariety of $\mathbb{P}^{n}$. Show that degree of $X$ is one if and only if $X$ is a linear subspace of $\mathbb{P}^{n}$.
+
+(b) Write down the statement of Bézout's theorem for $\mathbb{P}^{n}$.
+
+(c) Let $Y \subset \mathbb{P}^{n}$ be a closed subvariety of dimension $k$ and degree $a$, and
+
+$$
+Z:=v_{d}(Y) \subset \mathbb{P}^{N}
+$$
+
+where $v_{d}: \mathbb{P}^{n} \rightarrow \mathbb{P}^{N}$ is the Veronese map of degree $d$. Compute the degree of $Z$.
+
+\section{Qualifying Exams II, 2012 Fall}
+\begin{enumerate}
+  \item (Real Analysis) Let $u(t, x)$ be the solution to the equation
+\end{enumerate}
+
+$$
+\partial_{t} u(t, x)=\frac{1}{2} u_{x x}(t, x), \quad u(0, x)=f(x)
+$$
+
+Suppose $u(t, x)$ is smooth in both $t$ and $x$ and
+
+$$
+|u(t, x)|+\left|u_{x x}(t, x)\right| \leq e^{-|x|} .
+$$
+
+(a) Prove that there are constants $C_{1}$ and $C_{2}$ such that
+
+$$
+u(t, x)=\frac{C_{1}}{\sqrt{t}} \int_{\mathbb{R}} \exp \left[-C_{2} \frac{(x-y)^{2}}{t}\right] f(y) \mathrm{d} y
+$$
+
+You can use the formula that the inverse Fourier transform (in $p$ ) of $e^{-t p^{2} / 2}$ is $\frac{C_{1}}{\sqrt{t}} e^{-C_{2} x^{2} / t}$.
+
+(b) From this formula and Holder (or Jensen) inequality, prove the following inequality
+
+$$
+\|u(t, \cdot)\|_{L^{2}(\mathbb{R})}^{2} \leq C t^{-1 / 2}\|f\|_{L^{1}(\mathbb{R})}^{2}
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (Complex analysis) Let $n$ be a positive integer, what is the residue of the Gamma function at the pole $z=-n$ ?
+
+  \item (Differential Geometry) A metric on $\mathbb{R}^{2}$ written in polar coordinates has the form $d r^{2}+f(r, \theta)^{2} d \theta^{2}$. Prove that its Gaussian curvature is $K=-f^{-1} \frac{\partial^{2} f}{\partial^{2} r}$.
+
+  \item (Algebraic Topology) (Fundamental Group of Space Obtained by Glueing). Denote by $\mathbb{R}^{2}$ the real projective plane (which is the quotient of the 2 -sphere with antipodal points identified). Denote by $T^{2}$ the real 2-dimensional torus (which is the quotient of a closed rectangle with opposite sides identified). Let $D$ be the interior of a closed disk in $T^{2}$ whose boundary is $C$. Let $G$ be the interior of a closed disk in $\mathbb{R P}^{2}$ whose boundary is $E$. Let $X$ be the space obtained by glueing $T^{2}-D$ to $\mathbb{R P}^{2}-G$ along a homeomorphism between the two circles $C$ and $E$. Compute the fundamental group of $X$ by describing a presentation of it. Then compute the first homology group $H_{1}(X, \mathbb{Z})$ of $X$ with coefficients in $\mathbb{Z}$.
+
+  \item (Algebra) Consider the principal ideal
+
+\end{enumerate}
+
+$$
+I=\left(y^{2}-x^{3}+x\right)
+$$
+
+in the polynomial algebra $A=\mathbb{Q}[x, y]$, and let $R:=A / I$.
+
+(a) Show that the ring automorphism $\widetilde{\sigma}$ of $A$ that sends $x$ to $x$ and $y$ to $-y$ descends to an automorphism $\sigma$ of $R$.
+
+(b) For any associative and commutative ring $S$ with unit and any unital ring automorphism $\tau$ of $S$, show that the image of a principal ideal (resp. a prime ideal) of $S$ under $\tau$ is still a principal ideal (resp. a prime ideal).
+
+(c) Show that the ideal $\mathfrak{p}=(\bar{x}, \bar{y}) R$ generated by the image of $x$ and that of $y$ is a prime ideal.
+
+(d) Show that while $\mathfrak{p}^{2}$ is a principal ideal, $\mathfrak{p}$ is not. (Hint. Use (b) and the fact that $\mathfrak{p}$ is left invariant by $\sigma$.)
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (Algebraic Geometry) Let $X$ be a closed subvariety in $\mathbb{P}^{N}$ over an algebraically closed field. Let $h_{X}: \mathbb{N} \rightarrow \mathbb{N}$ be the Hilbert function of $X$.
+\end{enumerate}
+
+(a) Prove that when $X=\left\{x_{1}, \ldots, x_{d}\right\} \subset \mathbb{P}^{N}\left(x_{i} \neq x_{j}\right.$ whenever $\left.i \neq j\right), h_{X}(m)=d$ for $m$ sufficiently large.
+
+(b) Compute $h_{X}$ for the rational normal curve $X$, which is the image of
+
+$$
+\mathbb{P}^{1} \hookrightarrow \mathbb{P}^{N}
+$$
+
+defined by sending $\left[Z_{0}, Z_{1}\right] \in \mathbb{P}^{1}$ to $\left[Z_{0}^{N}, Z_{0}^{N-1} Z_{1}, \ldots, Z_{1}^{N}\right] \in \mathbb{P}^{N}$.
+
+(c) Prove that there exists a polynomial $p_{X}$ such that
+
+$$
+h_{X}(m)=p_{X}(m)
+$$
+
+for all sufficiently large natural numbers $m$.
+
+\begin{enumerate}
+  \item (Real Analysis) Suppose that $\left(X_{j}\right)_{j \geq 1}$ is a sequence of random variables on the same probability space with mean $\mathbb{E} X_{j}=1$ for all $j$. Suppose we know that
+\end{enumerate}
+
+$$
+\left|\mathbb{E} X_{j} X_{k}-\mathbb{E} X_{j} \mathbb{E} X_{k}\right| \leq f(|k-j|)
+$$
+
+for some sequence $f(m)$ with $\sum_{m=1}^{\infty} f(m)<A$. Prove that
+
+$$
+\mathbb{P}\left(n^{-1} \sum_{j=1}^{n} X_{j} \geq 2\right) \leq \frac{B}{n}
+$$
+
+and find a relation between $B$ and $A$.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (Complex Analysis) Denote by $U$ the open unit ball in $\mathbb{C}$. Suppose that $f_{n}$ is a Cauchy sequence of analytic functions in $L^{2}(U)$. Prove that $f_{n}$ converges uniformly on every compact subsets of $U$ to an analytic function.
+
+  \item (Differential Geometry) Consider $\mathbb{R}^{n}$ with a coordinate system $\left(x_{1}, \cdots, x_{n}\right)$. Compute the Levi-Cevita connection of the Riemann manifold $(M, g)$ where $M \subset \mathbb{R}^{n}$ is defined by $x_{n}>0$ and the metric $g$ is given by:
+
+\end{enumerate}
+
+$$
+g=\frac{d x_{1} \otimes d x_{1}+\cdots+d x_{n} \otimes d x_{n}}{x_{n}^{2}}
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (Algebraic Topology) (Universal Cover of One-Point Union of Two Real Projective Planes). Let $\mathbb{R P}^{2}$ denote the real projective plane (which is the quotient of the 2-sphere with antipodal points identified). Let $X$ be the one-point union $\mathbb{R P}^{2} \vee \mathbb{R}^{2}$ (or wedge sum) of two real projective planes (i.e., the result obtained by identifying, in the disjoint union of two real projective planes, one single given point on one with one single given point on the other). Find the universal cover of $X$.
+
+  \item (Algebra) Let $p$ be a prime number and denote by $\mathbb{F}_{p}$ the field with $p$ elements. Consider the groups $G=\mathrm{GL}_{2}\left(\mathbb{F}_{p}\right)$ and $G^{\prime}=\mathrm{PGL}_{2}\left(\mathbb{F}_{p}\right)=G / \mathbb{F}_{p}^{\times}$, where the group of units in $\mathbb{F}_{p}$ embeds diagonally into $G$.
+
+\end{enumerate}
+
+(a) Compute $|G|$ and $\left|G^{\prime}\right|$.
+
+(b) Find a $p$-Sylow subgroup of $G$.
+
+(c) Let $X$ be the set of one-dimensional subspaces of the two-dimensional $\mathbb{F}_{p}$-vectorspace $\mathbb{F}_{p}^{2}$. Show that the natural action of $G$ on $X$ descends to a faithful action of $G^{\prime}$ on $X$.
+
+(d) Show that $\mathrm{PGL}_{2}\left(\mathbb{F}_{3}\right)$ is isomorphic to $S_{4}$, the symmetric group on four letters.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (Algebraic Geometry) Let $X$ be a smooth projective curve of genus $g$.
+\end{enumerate}
+
+(a) Show that the canonical divisor $K_{X}$ of $X$ has degree $2 g-2$.
+
+(b) When $g=1$, show that $K_{X}$ is linearly equivalent to the zero divisor.
+
+(c) Let $D$ be an effective divisor on $X$, and denote by $|D|$ the complete linear system associated to $D$. Show that
+
+$$
+\operatorname{dim}|D| \leq \operatorname{deg} D
+$$
+
+and equality holds if and only if $D=0$ or $g=0$.
+
+
+\end{document}

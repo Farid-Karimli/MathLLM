@@ -1,0 +1,615 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+
+\title{QUALIFYING EXAMINATION }
+
+
+\author{HARVARD UNIVERSITY\\
+Department of Mathematics}
+\date{}
+
+
+\begin{document}
+\maketitle
+Department of Mathematics
+
+Tuesday August 30, 2016 (Day 1)
+
+\begin{enumerate}
+  \item (DG)
+\end{enumerate}
+
+(a) Show that if $V$ is a $\mathcal{C}^{\infty}$-vector bundle over a compact manifold $X$, then there exists a vector bundle $W$ over $X$ such that $V \oplus W$ is trivializable, i.e. isomorphic to a trivial bundle.
+
+(b) Find a vector bundle $W$ on $S^{2}$, the 2 -sphere, such that $T^{*} S^{2} \oplus W$ is trivializable.
+
+Solution: Since $V$ is locally trivializable and $M$ is compact, one can find a finite open cover $U_{i}, i=1, \ldots, n$, of $M$ and trivializations $T_{i}:\left.V\right|_{U_{i}} \rightarrow \mathbb{R}^{k}$. Thus, each $T_{i}$ is a smooth map which restricts to a linear isomorphism on each fiber of $\left.V\right|_{U_{i}}$. Next, choose a smooth partition of unity $\left\{f_{i}\right\}_{i=1, \ldots, n}$ subordinate to the cover $\left\{U_{i}\right\}_{i=1, \ldots, n}$. If $p: V \rightarrow M$ is the projection to the base, then there are maps
+
+$$
+\left.V\right|_{U_{i}} \rightarrow \mathbb{R}^{k}, \quad v \mapsto f_{i}(p(v)) T_{i}(v)
+$$
+
+which extend (by zero) to all of $V$ and which we denote by $f_{i} T_{i}$. Together, the $f_{i} T_{i}$ give a map $T: V \rightarrow \mathbb{R}^{n k}$ which has maximal rank $k$ everywhere, because at each point of $X$ at least one of the $f_{i}$ is non-zero. Thus $V$ is isomorphic to a subbundle, $T(V)$, of the trivial bundle, $\mathbb{R}^{n k}$. Using the standard inner product on $\mathbb{R}^{n k}$ we get an orthogonal bundle $W=T(V)^{\perp}$ which has the desired property.
+
+For the second part, embed $S^{2}$ into $\mathbb{R}^{3}$ in the usual way, then
+
+$$
+T S^{2} \oplus N_{S^{2}}=\left.T \mathbb{R}^{3}\right|_{S^{2}}
+$$
+
+where $N_{S^{2}}$ is the normal bundle to $S^{2}$ in $\mathbb{R}^{3}$. Dualizing we get
+
+$$
+T^{*} S^{2} \oplus\left(N_{S^{2}}\right)^{*}=\left.T^{*} \mathbb{R}^{3}\right|_{S^{2}}
+$$
+
+which solves the problem with $W=\left(N_{S^{2}}\right)^{*}$.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (RA) Let $(X, d)$ be a metric space. For any subset $A \subset X$, and any $\epsilon>0$ we set
+\end{enumerate}
+
+$$
+B_{\epsilon}(A)=\bigcup_{p \in A} B_{\epsilon}(p) .
+$$
+
+(This is the " $\epsilon$-fattening" of $A$.) For $Y, Z$ bounded subsets of $X$ define the Hausdorff distance between $Y$ and $Z$ by
+
+$$
+d_{H}(Y, Z):=\inf \left\{\epsilon>0 \mid Y \subset B_{\epsilon}(Z), \quad Z \subset B_{\epsilon}(Y)\right\}
+$$
+
+Show that $d_{H}$ defines a metric on the set $\tilde{X}:=\{A \subset X \mid A$ is closed and bounded $\}$.
+
+Solution: We need to show that $\left(\tilde{X}, d_{H}\right)$ is a metric space. First, since
+
+the sets are bounded, $d_{H}(Y, Z)$ is well defined for any closed sets $Y, Z$. Secondly, $d_{H}(Y, Z)=d_{H}(Z, Y) \geq 0$ is obvious from the definition. We need to prove that the distance is positive when $Y \neq Z$, and that $d_{H}$ satisfies the triangle inequality. First, let us show that $d_{H}(Y, Z)>0$ if $Y \neq Z$. Without loss of generality, we can assume there is a point $p \in Y \cap Z^{c}$. Since $Z$ is closed, so there exists $r>0$ such that $B_{r}(p) \subset Z^{c}$. In particular, $r$ is not in $B_{r}(Z)$. Thus $Y$ is not contained in $B_{r}(Z)$ and so $d_{H}(Y, Z) \geq r>0$.
+
+It remains to prove the triangle inequality. To this end, suppose that $Y, Z, W$ are relevant subsets of $X$. Fix $\epsilon_{1}>d_{H}(Y, Z), \epsilon_{2}>d_{H}(Z, W)$, then
+
+$$
+Y \subset B_{\epsilon_{1}}(Z), \quad Z \subset B_{\epsilon_{1}}(Y), \quad Z \subset B_{\epsilon_{2}}(W), \quad W \subset B_{\epsilon_{2}}(Z)
+$$
+
+Then $d_{H}(Y, Z)<\epsilon_{1}, d_{H}(Z, W)<\epsilon_{2}$. Let us prove that $Y \subset B_{\epsilon_{1}+\epsilon_{2}}(W)$, the other containment being identical. Fix a point $y \in Y$. By our choice of $\epsilon_{1}$ there exists a point $z \in Z$ such that $y \in N_{\epsilon_{1}}(z)$. By our choice of $\epsilon_{2}$ there exists a point $w \in W$ such that $z \in B_{\epsilon_{2}}(w)$. Then
+
+$$
+d(y, w) \leq d(y, z)+d(z, w) \leq \epsilon_{1}+\epsilon_{2}
+$$
+
+so $y \in B_{\epsilon_{1}+\epsilon_{2}}(w)$. This proves the containment. The other containment is identical, by just swapping $Y, W$. Thus
+
+$$
+d_{H}(Y, W) \leq \epsilon_{1}+\epsilon_{2}
+$$
+
+But this holds for all $\epsilon_{1}, \epsilon_{2}$ as above. Taking the infimum we obtain the result.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (AT) Let $T^{n}=\mathbb{R}^{n} / \mathbb{Z}^{n}$, the $n$-torus. Prove that any path-connected covering space $Y \rightarrow T^{n}$ is homeomorphic to $T^{m} \times \mathbb{R}^{n-m}$, for some $m$.
+\end{enumerate}
+
+Solution: The universal covering space of $T^{n}$ is $\mathbb{R}^{n}$, so that any path connected covering space of $X$ is of the form $\mathbb{R}^{n} / G$, for some subgroup $G \subseteq \pi_{1}\left(T^{n}\right)$. We have $\pi_{1}\left(T^{n}\right)=\pi_{1}\left(S^{1}\right) \times \cdots \times \pi_{1}\left(S^{1}\right)=\mathbb{Z}^{n}$, and $\mathbb{Z}^{n}$ is acting on $\mathbb{R}^{n}$ by translation. Thus, $G \subseteq \mathbb{Z}^{n}$ is free. Choose a $\mathbb{Z}$-basis $\left(v_{1}, \ldots, v_{m}\right)$ of $G$, and consider the (real!) change of basis taking $\left(v_{1}, \ldots, v_{m}\right)$ to the first $m$ standard basis vectors $\left(e_{1}, \ldots, e_{m}\right)$. Hence, $G$ is acting on $\mathbb{R}^{n}$ by translation in the first $m$ coordinates. Thus,
+
+$$
+\mathbb{R}^{n} / G \simeq \mathbb{R}^{m} / \mathbb{Z}^{m} \times \mathbb{R}^{n-m} \simeq T^{m} \times \mathbb{R}^{n-m}
+$$
+
+\section{4. (CA)}
+Let $f: \mathbb{C} \rightarrow \mathbb{C}$ be a nonconstant holomorphic function. Show that the image of $f$ is dense in $\mathbb{C}$.
+
+Solution: Suppose that for some $w_{0} \in \mathbb{C}$ and some $\epsilon>0$, the image of $f$ lies outside the ball $B_{\epsilon}\left(w_{0}\right)=\left\{w \in \mathbb{C}|| w-w_{0} \mid<\epsilon\right\}$. Then the function
+
+$$
+g(z)=\frac{1}{f(z)-w_{0}}
+$$
+
+is bounded and homomorphic in the entire plane, hence constant.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (A) Let $F \supset \mathbb{Q}$ be a splitting field for the polynomial $f=x^{n}-1$.
+\end{enumerate}
+
+(a) Let $A \subset F^{\times}=\{z \in F \mid z \neq 0\}$ be a finite (multiplicative) subgroup. Prove that $A$ is cyclic.
+
+(b) Prove that $G=\operatorname{Gal}(F / \mathbb{Q})$ is abelian.
+
+Solution: For the first part, let $m=|A|$. Suppose that $A$ is not cyclic, so that the order of any element in $A$ is less than $m . A$ is a finite abelian group so it is isomorphic to a product of cyclic groups $A \simeq \mathbb{Z}_{n_{1}} \times \cdots \times \mathbb{Z}_{n_{k}}$, where $n_{i} \mid n_{i+1}$. In particular, the order of any element in $A$ divides $n_{k}$. Hence, for any $z \in A, z^{n_{k}}=1$. However, the polynomial $x^{n_{k}}-1 \in F[x]$ admits at most $n_{k}<m$ roots in $F$, which is a contradiction. So, there must be some element in $A$ with order $m$.
+
+For the second part, since $f^{\prime}=n x^{n-1}$ and $f$ are relatively prime, $f$ admits $n$ distinct roots $1=z_{0}, \ldots, z_{n-1}$. As $F$ is a splitting field of $f$ we can assume that $F=\mathbb{Q}\left(z_{0}, \ldots, z_{n-1}\right) \subseteq \mathbb{C}$. $U=\left\{z_{0}, \ldots, z_{n-1}\right\} \subset F^{\times}$is a subgroup of the multiplicative group of units in $F$ and is cyclic; moreover, $A u t(U)$ is isomorphic to the (multiplicative) group of units $(\mathbb{Z} / n \mathbb{Z})^{*}$. Restriction defines a homomorphism $G \rightarrow \operatorname{Aut}(U), \alpha \mapsto \alpha_{\mid U}$; this homomorphism is injective because $F=\mathbb{Q}\left(z_{0}, \ldots, z_{n-1}\right)$. In particular, $G$ is isomorphic to a subgroup of the abelian group $(\mathbb{Z} / n \mathbb{Z})^{*}$.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (AG) Let $C$ and $D \subset \mathbb{P}^{2}$ be two plane cubics (that is, curves of degree 3), intersecting transversely in 9 points $\left\{p_{1}, p_{2}, \ldots, p_{9}\right\}$. Show that $p_{1}, \ldots, p_{6}$ lie on a conic (that is, a curve of degree 2 ) if and only if $p_{7}, p_{8}$ and $p_{9}$ are colinear.
+\end{enumerate}
+
+Solution: First, observe that we can replace $C=V(F)$ and $D=V(G)$ by any two independent linear combinations $C^{\prime}=V\left(a_{0} F+a_{1} G\right)$ and $D^{\prime}=$ $V\left(b_{0} F+b_{1} G\right)$. Now suppose that $p_{1}, \ldots, p_{6}$ lie on a conic $Q \subset \mathbb{P}^{2}$. Picking a seventh point $q \in Q$, we see that some linear combination $C_{0}$ of $C$ and $D$ contains $q$ and hence contains $Q$; thus $C_{0}=Q \cup L$ for some line $L \subset \mathbb{P}^{2}$. Replacing $C$ or $D$ with $C_{0}$, we see that $p_{7}, p_{8}$ and $p_{9} \in L$.
+
+\section*{QUALIFYING EXAMINATION }
+Department of Mathematics
+
+Wednesday August 31, 2016 (Day 2)
+
+\begin{enumerate}
+  \item (A) Let $R$ be a commutative ring with unit. If $I \subseteq R$ is a proper ideal, we define the radical of $I$ to be
+\end{enumerate}
+
+$$
+\sqrt{I}=\left\{a \in R \mid a^{m} \in I \quad \text { for some } m>0\right\} \text {. }
+$$
+
+Prove that
+
+$$
+\sqrt{I}=\bigcap_{\substack{\mathfrak{p} \supseteq I \\ \mathfrak{p} \text { prime }}} \mathfrak{p}
+$$
+
+Solution: First, we prove for the case $I=0$. Let $f \in \sqrt{0}$ so that $f^{n}=0$, and $f^{n} \in \mathfrak{p}$, for any prime ideal $\mathfrak{p} \subseteq R$. Let $\mathfrak{p}$ be a prime ideal in $R$. The quotient ring $R / \mathfrak{p}$ is an integral domain and, in particular, contains no nonzero nilpotent elements. Hence, $f^{n}+\mathfrak{p}=0 \in R / \mathfrak{p}$ so that $f \in \mathfrak{p}$.
+
+Now, suppose that $f \notin \sqrt{0}$. The set $S=\left\{1, f, f^{2}, \ldots\right\}$ does not contain 0 so that the localisation $R_{f}$ is not the zero ring. Let $\mathfrak{m} \subset R_{f}$ be a maximal ideal. Denote the canonical homomorphism $j: R \rightarrow R_{f}$. As $j(f) \in R_{f}$ is a unit, $j(f) \notin \mathfrak{m}$. Then $j^{-1}(\mathfrak{m}) \subset R$ is a prime ideal that does not contain $f$. Hence, $f \notin \bigcap_{\mathfrak{p} \subseteq R \text { prime }} \mathfrak{p}$.
+
+If $I \subseteq R$ is a proper ideal, we consider the quotient ring $\pi: R \rightarrow S=R / I$. Recall the bijective correspondence
+
+$$
+\{\text { prime ideals in } S\} \leftrightarrow\{\text { prime ideals in } R \text { containing } I\}, \mathfrak{p} \leftrightarrow \pi^{-1}(\mathfrak{p})
+$$
+
+Then,
+
+$$
+\sqrt{I}=\pi^{-1}\left(\sqrt{0_{S}}\right)=\pi^{-1}\left(\bigcap_{\mathfrak{p} \subseteq S \text { prime }} \mathfrak{p}\right)=\bigcap_{\mathfrak{p} \subseteq S \text { prime }} \pi^{-1}(\mathfrak{p})=\bigcap_{\substack{\mathfrak{q} \supseteq I \\ \mathfrak{q} \text { prime }}} \mathfrak{q}
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (DG) Let $c(s)=(r(s), z(s))$ be a curve in the $(x, z)$-plane which is parameterized by arc length $s$. We construct the corresponding rotational surface, $S$, with parametrization
+\end{enumerate}
+
+$$
+\varphi:(s, \theta) \mapsto(r(s) \cos \theta, r(s) \sin \theta, z(s))
+$$
+
+Find an example of a curve $c$ such that $S$ has constant negative curvature -1 .
+
+Solution:
+
+$$
+\begin{aligned}
+& \frac{\partial \varphi}{\partial s}(s, \theta)=\left(r^{\prime}(s) \cos \theta, r^{\prime}(s) \sin \theta, z^{\prime}(s)\right) \\
+& \frac{\partial \varphi}{\partial \theta}(s, \theta)=(-r(s) \sin \theta, r(s) \cos \theta, 0)
+\end{aligned}
+$$
+
+The coefficients of the first fundamental form are:
+
+$$
+E=r^{\prime}(s)^{2}+z^{\prime}(s)^{2}=1, \quad F=0, \quad G=r(s)^{2}
+$$
+
+Curvature:
+
+$$
+K=-\frac{1}{\sqrt{G}} \frac{\partial^{2}}{\partial s^{2}} \sqrt{G}=-\frac{r^{\prime \prime}(s)}{r(s)}
+$$
+
+To get $K=-1$ we need to find $r(s), z(s)$ such that
+
+$$
+\begin{gathered}
+r^{\prime \prime}(s)=r(s) \\
+r^{\prime}(s)^{2}+z^{\prime}(s)^{2}=1
+\end{gathered}
+$$
+
+A possible solution is $r(s)=e^{-s}$ with
+
+$$
+z(s)=\int \sqrt{1-e^{-2 t}} d t=\operatorname{Arcosh}\left(r^{-1}\right)-\sqrt{1-r^{2}} .
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (RA) Let $f \in L^{2}(0, \infty)$ and consider
+\end{enumerate}
+
+$$
+F(z)=\int_{0}^{\infty} f(t) e^{2 \pi i z t} d t
+$$
+
+for $z$ in the upper half-plane.
+
+(a) Check that the above integral converges absolutely and uniformly in any region $\operatorname{Im}(z) \geq C>0$.
+
+(b) Show that
+
+$$
+\sup _{y>0} \int_{0}^{\infty}|F(x+i y)|^{2} d x=\|f\|_{L^{2}(0, \infty)}^{2}
+$$
+
+Solution: For $\operatorname{Im}(z) \geq C>0$ we have
+
+$$
+\left|f(t) e^{2 \pi i z t}\right| \leq|f(t)| e^{-2 C \pi t}
+$$
+
+thus with the Cauchy-Schwarz inequality
+
+$$
+\int_{0}^{\infty}\left|f(t) e^{2 \pi i z t}\right| d t \leq\left(\int_{0}^{\infty}|f(t)|^{2} d t\right)^{1 / 2}\left(\int_{0}^{\infty} e^{-4 C \pi t} d t\right)^{1 / 2}
+$$
+
+which proves the claim.
+
+For the second part, Plancherel's theorem gives
+
+$$
+\int_{0}^{\infty}|F(x+i y)|^{2} d x=\int_{0}^{\infty}|f(t)|^{2} e^{-4 \pi y t} d t \leq\|f\|_{L^{2}(0, \infty)}^{2}
+$$
+
+and
+
+$$
+\sup _{y>0} \int_{0}^{\infty}|f(t)|^{2} e^{-4 \pi y t} d t=\int_{0}^{\infty}|f(t)|^{2} d t
+$$
+
+by the monotone convergence theorem.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (CA) Given that $\int_{0}^{\infty} e^{-x^{2}} d x=\frac{1}{2} \sqrt{\pi}$, use contour integration to prove that each of the improper integrals $\int_{0}^{\infty} \sin \left(x^{2}\right) d x$ and $\int_{0}^{\infty} \cos \left(x^{2}\right) d x$ converges to $\sqrt{\pi / 8}$.
+\end{enumerate}
+
+Solution: We integrate $e^{-z^{2}} d z$ along a triangular contour with vertices at $0, M$, and $(1+i) M$, and let $M \rightarrow \infty$. Since $e^{-z^{2}}$ is holomorphic on $\mathbb{C}$, the integral vanishes. The integral from 0 to $M$ is $\int_{0}^{M} e^{-x^{2}} d x$, which approaches $\int_{0}^{\infty} e^{-x^{2}} d x=\frac{1}{2} \sqrt{\pi}$. The vertical integral approaches zero, because it is bounded in absolute value by
+
+$$
+\begin{gathered}
+\int_{0}^{M}\left|e^{-(M+y i)^{2}}\right| d y=\int_{0}^{M} e^{y^{2}-M^{2}} d y<\int_{0}^{M} e^{M(y-M)} d y \\
+=\int_{0}^{M} e^{-M t} d t<\int_{0}^{\infty} e^{-M t} d t=\frac{1}{M} \rightarrow 0
+\end{gathered}
+$$
+
+(substituting $t=M-y$ in the middle step). Thus the diagonal integral (with direction reversed, from 0 to $(1+i) \infty)$ equals $\frac{1}{2} \sqrt{\pi}$. The change of variable $z=e^{\pi i / 4} x$ converts this integral to $e^{\pi i / 4} \int_{0}^{\infty} e^{-i x^{2}} d x$. Hence
+
+$$
+\int_{0}^{\infty}\left(\cos x^{2}-i \sin x^{2}\right) d x=\int_{0}^{\infty} e^{-i x^{2}} d x=\frac{1}{2} e^{-\pi i / 4} \sqrt{\pi}=\frac{1-i}{2 \sqrt{2}} \sqrt{\pi} .
+$$
+
+equating real and imaginary parts yields the required result.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (AT)
+\end{enumerate}
+
+(a) Let $X=\mathbb{R} P^{3} \times S^{2}$ and $Y=\mathbb{R} P^{2} \times S^{3}$. Show that $X$ and $Y$ have the same homotopy groups but are not homotopy equivalent.
+
+(b) Let $A=S^{2} \times S^{4}$ and $B=\mathbb{C} P^{3}$. Show that $A$ and $B$ have the same singular homology groups with $\mathbb{Z}$-coefficients but are not homotopy equivalent.
+
+Solution: The universal covers of $\mathbb{R} P^{2}$ and $\mathbb{R} P^{3}$ are $S^{2}$ and $S^{3}$, respectively. Moreover, these covers are both 2 -sheeted. Hence, we have
+
+$$
+\begin{aligned}
+& \pi_{1}(X)=\pi_{1}\left(\mathbb{R} P^{3}\right) \times \pi_{1}\left(S^{2}\right)=\pi_{1}\left(\mathbb{R} P^{3}\right)=\mathbb{Z} / 2 \mathbb{Z} \\
+& \pi_{1}(Y)=\pi_{1}\left(\mathbb{R} P^{2}\right) \times \pi_{1}\left(S^{3}\right)=\pi_{1}\left(\mathbb{R} P^{2}\right)=\mathbb{Z} / 2 \mathbb{Z}
+\end{aligned}
+$$
+
+Also, $\pi_{k}\left(\mathbb{R} P^{j}\right)=\pi_{k}\left(S^{j}\right)$, for $k>1, j=2,3$ so that
+
+$$
+\pi_{k}(X)=\pi_{k}\left(S^{2}\right) \times \pi_{k}\left(S^{3}\right)=\pi_{k}(Y), \quad k>1
+$$
+
+To show that $X$ and $Y$ are not homotopy equivalent, we show that they have nonisomorphic homology groups. We make use of the following well-known singular homology groups (with integral coefficients)
+
+$$
+\begin{gathered}
+H_{0}\left(S^{n}\right)=H_{n}\left(S^{n}\right)=\mathbb{Z}, \quad H_{i}\left(S^{k}\right)=0, i \neq 0, n \\
+H_{0}\left(\mathbb{R} P^{2}\right)=H_{2}\left(\mathbb{R} P^{2}\right)=\mathbb{Z}, H_{1}\left(\mathbb{R} P^{2}\right)=\mathbb{Z} / 2 \mathbb{Z}, H_{i}\left(\mathbb{R} P^{2}\right)=0, i \neq 0,1,2 \\
+H_{0}\left(\mathbb{R} P^{3}\right)=\mathbb{Z}, H_{1}\left(\mathbb{R} P^{3}\right)=\mathbb{Z} / 2 \mathbb{Z}, H_{i}\left(\mathbb{R} P^{3}\right)=0, i \neq 0,1
+\end{gathered}
+$$
+
+Now, the Kunneth theorem in singular homology (with $\mathbb{Z}$-coefficients) gives an exact sequence
+
+$0 \rightarrow \bigoplus_{i+j=2} H_{i}\left(\mathbb{R} P^{3}\right) \otimes_{\mathbb{Z}} H_{j}\left(S^{2}\right) \rightarrow H_{2}(X) \rightarrow \bigoplus_{i+j=1} \operatorname{Tor}_{1}\left(H_{i}\left(\mathbb{R} P^{3}\right), H_{j}\left(S^{2}\right)\right) \rightarrow 0$
+
+Since $H_{k}\left(S^{2}\right)$ is free, for every $k$, we have
+
+$$
+H_{2}(X) \simeq \bigoplus_{i+j=2} H_{i}\left(\mathbb{R} P^{3}\right) \otimes_{\mathbb{Z}} H_{j}\left(S^{2}\right)=\mathbb{Z}
+$$
+
+Similarly, we compute
+
+$$
+H_{2}(Y) \simeq \bigoplus_{i+j=2} H_{i}\left(\mathbb{R} P^{2}\right) \otimes_{\mathbb{Z}} H_{j}\left(S^{3}\right)=\mathbb{Z} / 2 \mathbb{Z}
+$$
+
+In particular, $X$ and $Y$ are not homotopy equivalent.
+
+For the second part, $B$ can be constructed as a cell complex with a single cell in dimensions $0,2,4,6$. Therefore, the homology of $B$ is $H_{2 i}(B)=\mathbb{Z}$, for $i=0, \ldots, 3$, and $H_{k}(B)=0$ otherwise.
+
+The Kunneth theorem for singular cohomology (with $\mathbb{Z}$-coefficients), combined with the fact that $H_{k}\left(S^{n}\right)$ is free, for any $k$, gives
+
+$$
+H_{k}(A) \simeq \bigoplus_{i+j=k} H_{i}\left(S^{2}\right) \otimes H_{j}\left(S^{4}\right)
+$$
+
+Hence, $H_{2 i}(A)=\mathbb{Z}$, for $i=0, \ldots, 3$, and $H_{k}(A)=0$ otherwise.
+
+In order to show that $A$ and $B$ are not homotopy equivalent we will show that they have nonisomorphic homotopy groups.
+
+Consider the canonical quotient map $\mathbb{C}^{4}-\{0\} \rightarrow \mathbb{C} P^{3}$. This restricts to give a fiber bundle $S^{1} \rightarrow S^{7} \rightarrow \mathbb{C} P^{3}$. The associated long exact sequence in homotopy
+
+$$
+\cdots \rightarrow \pi_{k+1}\left(\mathbb{C} P^{3}\right) \rightarrow \pi_{k}\left(S^{1}\right) \rightarrow \pi_{k}\left(S^{7}\right) \rightarrow \pi_{k}\left(\mathbb{C} P^{3}\right) \rightarrow \cdots
+$$
+
+together with the fact that $\pi_{3}\left(S_{1}\right)=\pi_{4}\left(S^{7}\right)$, shows that $\pi_{4}\left(\mathbb{C} P^{3}\right)=0$. However, $\pi_{4}(A)=\pi_{4}\left(S^{4}\right)=\mathbb{Z}$.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (AG)
+\end{enumerate}
+
+Let $C$ be the smooth projective curve over $\mathbb{C}$ with affine equation $y^{2}=f(x)$, where $f \in \mathbb{C}[x]$ is a square-free monic polynomial of degree $d=2 n$.
+
+(a) Prove that the genus of $C$ is $n-1$.
+
+(b) Write down an explicit basis for the space of global differentials on $C$.
+
+Solution: For the first part, use Riemann-Hurwitz: the $2: 1$ map from $C$ to the $x$-line is ramified above the roots of $f$ and nowhere else (not even at infinity because $\operatorname{deg} f$ is even), so
+
+$$
+2-2 g(C)=\chi(C)=2 \chi\left(\mathbb{P}^{1}\right)-\operatorname{deg} P=4-2 n
+$$
+
+whence $g(C)=n-1$.
+
+For the second, let $\omega_{0}=d x / y$. This differential is holomorphic, with zeros of order $g-1$ at the two points at infinity. (Proof by local computation around those points and the roots of $P$, which are the only places where holomorphy is not immediate; $d x$ has a pole of order -2 at infinity but $1 / y$ has zeros of order $n$ at the points above $x=\infty$, while $2 y d y=P^{\prime}(x) d x$ takes care of the Weierstrass points.) Hence the space of holomorphic differentials contains
+
+$$
+\Omega:=\left\{P(x) \omega_{0} \mid \operatorname{deg} P<g\right\}
+$$
+
+which has dimension $g$. Thus $\Omega$ is the full space of differentials, with basis $\left\{\omega_{k}=x^{k} \omega_{0}, k=0, \ldots, g-1\right\}$.
+
+\section*{QUALIFYING EXAMINATION }
+Thursday September 1, 2016 (Day 3)
+
+\begin{enumerate}
+  \item (AT) Model $S^{2 n-1}$ as the unit sphere in $\mathbb{C}^{n}$, and consider the inclusions
+\end{enumerate}
+
+$$
+\begin{aligned}
+& \cdots \rightarrow S^{2 n-1} \rightarrow S^{2 n+1} \rightarrow \cdots \\
+& \cdots \rightarrow \underset{\mathbb{C}^{n}}{\stackrel{\downarrow}{ } \rightarrow \mathbb{C}^{\downarrow+1}} \rightarrow \cdots
+\end{aligned}
+$$
+
+Let $S^{\infty}$ and $\mathbb{C}^{\infty}$ denote the union of these spaces, using these inclusions.
+
+(a) Show that $S^{\infty}$ is a contractible space.
+
+(b) The group $S^{1}$ appears as the unit norm elements of $\mathbb{C}^{\times}$, which acts compatibly on the spaces $\mathbb{C}^{n}$ and $S^{2 n-1}$ in the systems above. Calculate all the homotopy groups of the homogeneous space $S^{\infty} / S^{1}$.
+
+Solution: The shift operator gives a norm-preserving injective map $T: \mathbb{C}^{\infty} \rightarrow$ $\mathbb{C}^{\infty}$ that sends $S^{\infty}$ into the hemisphere where the first coordinate is zero. The line joining $x \in S^{\infty}$ to $T(x)$ cannot pass through zero, since $x$ and $T(x)$ cannot be scalar multiples, and hence the linear homotopy joining $x$ to $T(x)$ shows that $T$ is homotopic to the identity. However, since $T\left(S^{\infty}\right)$ forms an equatorial hemisphere, there is a also a linear homotopy from $T$ to the constant map at either of the poles.
+
+For the second part, because $S^{1}$ acts properly discontinuously on $S^{\infty}$, the quotient sequence
+
+$$
+S^{1} \rightarrow S^{\infty} \rightarrow S^{\infty} / S^{1}
+$$
+
+forms a fiber bundle. The homotopy groups of $S^{1}$ are known: $\pi_{1} S^{1} \cong \mathbb{Z}$ and $\pi_{\neq 1} S^{1}=0$ otherwise. Since $S^{\infty}$ is contractible, the long exact sequence of higher homotopy groups shows that $\pi_{2}\left(S^{\infty} / S^{1}\right)=\mathbb{Z}$ and $\pi_{\neq 2}\left(S^{\infty} / S^{1}\right)=0$ otherwise.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (AG) Let $X \subset \mathbb{P}^{n}$ be a general hypersurface of degree $d$. Show that if
+\end{enumerate}
+
+$$
+\left(\begin{array}{c}
+k+d \\
+k
+\end{array}\right)>(k+1)(n-k)
+$$
+
+then $X$ does not contain any $k$-plane $\Lambda \subset \mathbb{P}^{n}$.
+
+Solution: For the first, let $\mathbb{P}^{N}$ be the space of all hypersurfaces of degree $d$ in $\mathbb{P}^{n}$, and let
+
+$$
+\Gamma=\left\{(X, \Lambda) \in \mathbb{P}^{N} \times \mathbb{G}(k, n) \mid \Lambda \subset X\right\}
+$$
+
+The fiber of $\Gamma$ over the point $[\Lambda] \in \mathbb{G}(k, n)$ is just the subspace of $\mathbb{P}^{N}$ corresponding to the vector space of polynomials vanishing on $\Lambda$; since the space of polynomials on $\mathbb{P}^{n}$ surjects onto the space of polynomials on $\Lambda \cong \mathbb{P}^{k}$, this is a subspace of codimension $\left(\begin{array}{c}k+d \\ k\end{array}\right)$ in $\mathbb{P}^{N}$. We deduce that
+
+$$
+\operatorname{dim} \Gamma=(k+1)(n-k)+N-\left(\begin{array}{c}
+k+d \\
+k
+\end{array}\right)
+$$
+
+in particular, if the inequality of the problem holds, then $\operatorname{dim} \Gamma<N$, so that $\Gamma$ cannot dominate $\mathbb{P}^{N}$.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (DG) Let $\mathcal{H}^{2}:=\left\{(x, y) \in \mathbb{R}^{2}: y>0\right\}$. Equip $\mathcal{H}^{2}$ with a metric
+\end{enumerate}
+
+$$
+g_{\alpha}:=\frac{d x^{2}+d y^{2}}{y^{\alpha}}
+$$
+
+where $\alpha \in \mathbb{R}$.
+
+(a) Show that $\left(\mathcal{H}^{2}, g_{\alpha}\right)$ is incomplete if $\alpha \neq 2$.
+
+(b) Identify $z=x+i y$. For $\left(\begin{array}{ll}a & b \\ c & d\end{array}\right) \in \mathrm{SL}(2, \mathbb{R})$, consider the map $z \mapsto \frac{a z+b}{c z+d}$. Show that this defines an isometry of $\left(\mathcal{H}^{2}, g_{2}\right)$.
+
+(c) Show that $\left(\mathcal{H}^{2}, g_{2}\right)$ is complete. (Hint: Show that the isometry group acts transitively on the tangent space at each point.)
+
+Solution: For the first part, consider the geodesic $\gamma(t)$ with $\gamma(0)=(0,1)$, and $\gamma^{\prime}(0)=\frac{\partial}{\partial y}$. In order for $\left(\mathcal{H}^{2}, g_{\alpha}\right)$ to be complete, this geodesics must exist for all $t \in(-\infty, \infty)$. By symmetry, this geodesic must be given by
+
+$$
+\mathbf{x}(t)=(0, y(t))
+$$
+
+Furthermore, $\mathbf{x}(t)$ must have constant speed, which we may as well take to be 1. Thus $\frac{(\dot{y})^{2}}{y^{\alpha}}=1$, or in other words,
+
+$$
+\dot{y}=y^{\alpha / 2} \text {. }
+$$
+
+If $\alpha \neq 2$, then the solution to this ODE is
+
+$$
+y(t)=\left(\left(1-\frac{\alpha}{2}\right) t+1\right)^{1 /\left(1-\frac{\alpha}{2}\right)}
+$$
+
+thus, this geodesics persists only as long as $\left(1-\frac{\alpha}{2}\right) t+1 \geq 0$. This set is always bounded from one side. Note that when $\alpha=2$, we get $\mathbf{x}(t)=\left(0, e^{t}\right)$, which
+exists for all time.
+
+(b) To begin, note that $d z \otimes d \bar{z}=d x \otimes d x+d y \otimes d y$, so we can write the metric as
+
+$$
+g_{2}=\frac{4 d z \otimes d \bar{z}}{|z-\bar{z}|^{2}}
+$$
+
+Let $A \in S L(2, \mathbb{R})$, we compute
+
+$$
+A^{*} d z=\frac{a d z}{c z+d}-c \frac{(a z+b) d z}{(c z+d)^{2}}=(a d-b c) \frac{d z}{(c z+d)^{2}}=\frac{d z}{(c z+d)^{2}}
+$$
+
+and so $A^{*} d \bar{z}=\frac{d \bar{z}}{(c \bar{z}+d)^{2}}$. It remains to compute
+
+$$
+A^{*} z-A^{*} \bar{z}=\frac{a z+b}{c z+d}-\frac{a \bar{z}+b}{c \bar{z}+d}=\frac{z-\bar{z}}{|c z+d|^{2}}
+$$
+
+where we have used that $A \in S L(2, \mathbb{R})$. Putting everything together we get
+
+$$
+A^{*} g_{2}=\frac{4 d z \otimes d \bar{z}}{|c z+d|^{4}} \cdot \frac{|c z+d|^{4}}{|z-\bar{z}|^{2}}=g_{2}
+$$
+
+and so $S L(2, \mathbb{R})$ acts by isometry.
+
+(c) By the computation from part (a), we know that the geodesic- let's call it $\gamma_{0}(t)$ - through the point $(0,1)$ in the direction $(0,1)$ exists for all time. Let $z=x+i y$ be any point in $\mathcal{H}^{2}$. By an isometry, we can map this point to $z=i y$. Without loss of generality, let us assume $y=1$. It suffices to show that we can find $A \in S L(2, \mathbb{R})$ so that $A(i)=i$, and $A_{*} V=(0,1)$, where $V$ is any unit vector in the tangent space $T_{i} \mathcal{H}^{2}$, for then the geodesic through $i$ with tangent vector $V$ will be nothing but $A^{-1}\left(\gamma_{0}(t)\right)$, and hence will exist for all time. First, observe that $A(i)=i$, if and only if $A=\left(\begin{array}{ll}a & b \\ -b & a\end{array}\right)$. Consider the rotation matrix
+
+$$
+A=\left(\begin{array}{ll}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta
+\end{array}\right)
+$$
+
+A straightforward computation shows that, in complex coordinates,
+
+$$
+A_{*} V=\frac{1}{(\cos \theta+i \sin \theta)^{2}} V=e^{-2 \sqrt{-1} \theta} V
+$$
+
+that is, $A_{*}: T_{i} \mathcal{H}^{2} \rightarrow T_{i} \mathcal{H}^{2}$ acts as a rotation. Since $\theta$ is arbitrary, and the rotations act transitively on $S^{2}$, we're done.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (RA)
+(a) Let $H$ be a Hilbert space, $K \subset H$ a closed subspace, and $x$ a point in $H$. Show that there exists a unique $y$ in $K$ that minimizes the distance $\|x-y\|$ to $x$.
+\end{enumerate}
+
+(b) Give an example to show that the conclusion can fail if $H$ is an inner product space which is not complete.
+
+Solution: (a): If $y, y^{\prime} \in K$ both minimize distance to $x$, then by the parallelogram law:
+
+$$
+\left\|x-\frac{y+y^{\prime}}{2}\right\|^{2}+\left\|\frac{y-y^{\prime}}{2}\right\|^{2}=\frac{1}{2}\left(\|x-y\|^{2}+\left\|x-y^{\prime}\right\|^{2}\right)=\|x-y\|^{2}
+$$
+
+But $\frac{y+y^{\prime}}{2}$ cannot be closer to $x$ than $y$, by assumption, so $y=y^{\prime}$.
+
+Let $C=\inf _{y \in K}\|x-y\|$, then $0 \leq C<\infty$ because $K$ is non-empty. We can find a sequence $y_{n} \in K$ such that $\left\|x-y_{n}\right\| \rightarrow C$, which we want to show is Cauchy. The midpoints $\frac{y_{n}+y_{m}}{2}$ are in $K$ by convexity, so $\left\|x-\frac{y_{n}+y_{m}}{2}\right\| \geq C$ and using the parallelogram law as above one sees that $\left\|y_{n}-y_{m}\right\| \rightarrow 0$ as $n, m \rightarrow \infty$. By completeness of $H$ the sequence $y_{n}$ converges to a limit $y$, which is in $K$, since $K$ is closed. Finally, continuity of the norm implies that $\|x-y\|=C$.
+
+(b): For example choose $H=C([0,1]) \subset L^{2}([0,1]), K$ the subspace of functions with support contained in $\left[0, \frac{1}{2}\right]$, and and $x=1$ the constant function. If $f_{n}$ is a sequence in $K$ converging to $f \in H$ in $L^{2}$-norm, then
+
+$$
+\int_{1 / 2}^{1}|f|^{2}=0
+$$
+
+thus $f$ vanishes on $[1 / 2,1]$, showing that $K$ is closed. The distance $\|x-y\|$ can be made arbitrarily close to $1 / \sqrt{2}$ for $y \in K$ by approximating $\chi_{[0,1 / 2]}$ by continuous functions, but the infimum is not attained.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (A)
+\end{enumerate}
+
+(a) Prove that there exists a unique (up to isomorphism) nonabelian group of order 21.
+
+(b) Let $G$ be this group. How many conjugacy classes does $G$ have?
+
+(c) What are the dimensions of the irreducible representations of $G$ ?
+
+Solution: Let $G$ be a group of order 21, and select elements $g_{3}$ and $g_{7}$ of orders 3 and 7 respectively. The subgroup generated by $g_{7}$ is normal - if it weren't, then $g_{7}$ and $x g_{7} x^{-1}$ witnessing nonnormality would generate a group of order
+
+\begin{enumerate}
+  \setcounter{enumi}{48}
+  \item In particular, we have $g_{3} g_{7} g_{3}^{-1}=g_{7}^{j}$ for some nonzero $j \in \mathbb{Z} / 7$. Now we use the order of $g_{3}$ :
+\end{enumerate}
+
+$$
+\begin{aligned}
+g_{7} & =g_{3} g_{3} g_{3} \cdot g_{7} \cdot g_{3}^{-1} g_{3}^{-1} g_{3}^{-1} \\
+& =g_{3} g_{3}\left(g_{7}^{j}\right) g_{3}^{-1} g_{3}^{-1} \\
+& =g_{3}\left(g_{7}^{j^{2}}\right) g_{3}^{-1} \\
+& =g_{7}^{j^{3}}
+\end{aligned}
+$$
+
+and hence $j^{3} \equiv 1(\bmod 7)$. This is nontrivially solved by $j=2$ and $j=4$, and these two cases coincide: if for instance $g_{3} g_{7} g_{3}^{-1}=g_{7}^{2}$, then by replacing the generator $g_{3}$ with $g_{3}^{2}$ we instead see
+
+$$
+g_{3}^{2} g_{7}\left(g_{3}^{2}\right)^{-1}=g_{3} g_{7}^{2} g_{3}^{-1}=g_{7}^{4}
+$$
+
+We have the following conjugacy classes of elements:
+
+\begin{itemize}
+  \item $\{e\}$ forms a class of its own.
+
+  \item $\left\{g_{7}, g_{7}^{4}, g_{7}^{2}\right\}$ and $\left\{g_{7}^{3}, g_{7}^{5}, g_{7}^{6}\right\}$ form classes by our choice of $j$.
+
+  \item Any element of order 3 generates a Sylow 3-subgroup, all of which are conjugate as subgroups. However, there cannot be an $x$ with $x g_{3} x^{-1}=$ $g_{3}^{2}$, since $G$ has only elements of odd order. Hence, there are two final conjugacy classes, each of size 7 : those elements conjugate to $g_{3}$ and those conjugate to $g_{3}^{2}$.
+
+\end{itemize}
+
+These five conjugacy sets give rise to five irreducible representations, which must be of dimensions $1,1,1,3$, and 3 (since these square-sum to $|G|=21$ ).
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (CA) Find (with proof) all entire holomorphic functions $f: \mathbb{C} \rightarrow \mathbb{C}$ satisfying the conditions:
+
+  \item $f(z+1)=f(z)$ for all $z \in \mathbb{C}$; and
+
+  \item There exists $M$ such that $|f(z)| \leq M \exp (10|z|)$ for all $z \in \mathbb{C}$.
+
+\end{enumerate}
+
+Solution: The functions satisfying these conditions are precisely the $\mathbb{C}$-linear combinations of $e^{-2 \pi i z}, 1$, and $e^{2 \pi i z}$. Indeed such $f$ is readily seen to satisfy the two conditions. Conversely (1) means that $f$ descends to a function of $q:=e^{2 \pi i z} \in \mathbb{C}^{*}$, say $f(z)=F(q)$, and then by $(2)$ there is some $M^{\prime}$ such that $|F(q)| \leq M^{\prime} \max \left(|q|^{-5 / \pi},|q|^{5 / \pi}\right)$ for all $q$, whence $q F$ and $q^{-1} F$ have removable singularities at $q=0$ and $q=\infty$ respectively, etc.
+
+
+\end{document}

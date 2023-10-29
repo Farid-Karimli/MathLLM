@@ -1,0 +1,491 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+
+\title{QUALIFYING EXAMINATION }
+
+
+\author{HARVARD UNIVERSITY}
+\date{}
+
+
+\begin{document}
+\maketitle
+Department of Mathematics
+
+Tuesday September 2, 2014 (Day 1)
+
+\begin{enumerate}
+  \item (AG) For any $0<k<m \leq n \in \mathbb{Z}$, let $M \cong \mathbb{P}^{m n-1}$ be the space of nonzero $m \times n$ matrices mod scalars, and let $M_{k} \subset M$ be the subset of matrices of rank $k$ or less.
+\end{enumerate}
+
+(a) Show that $M_{k}$ is closed in $M$ (in the Zariski topology).
+
+(b) Show that $M_{k}$ is irreducible.
+
+(c) What is the dimension of $M_{k}$ ?
+
+(d) What is the degree of $M_{1}$ ?
+
+Solution: For the first, $M_{k}$ is the zero locus of the $(k+1) \times(k+1)$ minors, which are homogeneous polynomials of degree $k+1$ on $M \cong \mathbb{P}^{m n-1}$. For the second and third, we introduce the incidence correspondence
+
+$$
+\Phi=\{(\Lambda, A) \in G(n-k, n) \mid \Lambda \subset \operatorname{ker}(A)\}
+$$
+
+Since $\Phi$ is fibered over $G(n-k, n)$ with fibers $\mathbb{P}^{k m-1}$, it is irreducible of dimension $k(n-k)+k m-1=m n-1-(m-k)(n-k)$; since it is generically oneto-one over $M_{k}$, we conclude that $M_{k}$ is likewise irreducible of that dimension. Finally, $M_{1}$ is the Segre variety $\mathbb{P}^{m-1} \times \mathbb{P}^{n-1} \subset \mathbb{P}^{m m-1}$, which has degree $\left(\begin{array}{c}m+n-2 \\ m-1\end{array}\right)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (A) Let $S_{3}$ be the group of automorphisms of a 3-element set.
+\end{enumerate}
+
+(a) Classify the conjugacy classes of $S_{3}$.
+
+(b) Classify the irreducible representations of $S_{3}$.
+
+(c) Write the character table for $S_{3}$.
+
+Solution: (a) Conjugacy classes of symmetric groups are given by the types of cycles one can write on the set of $n$ elements. For $n=3$, we have shapes given by (1), (12), (123) so we have three conjugacy classes. (b) By the orthogonality relations, the number of irreps are equal to the number of conjugacy classes. On the other hand, we can produce three irreps: The trivial, the sign, and the geometric representation corresponding to $S_{3} \cong D_{6}$; i.e., the symmetries of an equilateral triangle embedded in $\mathbb{R}^{2}$. (c) Compute the traces of each conjugacy class. End up with the table
+
+\begin{center}
+\begin{tabular}{c|c|c|c}
+ & $(1)$ & $(12)$ & $(123)$ \\
+triv & 1 & 1 & 1 \\
+sign & 1 & -1 & 1 \\
+geom & 2 & 0 & -1 \\
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (DG) Let $x, y, z$ be the standard coordinates on $\mathbb{R}^{3}$. Consider the unit sphere $\mathbb{S}^{2} \subset \mathbb{R}^{3}$.
+
+  \item Compute the critical points of the function $\left.x\right|_{\mathbb{S}^{2}}$. Show that they are isolated and non-degenerate.
+
+  \item Equip $\mathbb{S}^{2}$ with the standard metric induced from $\mathbb{R}^{3}$. Compute the gradient vector field of $\left.x\right|_{\mathbb{S}^{2}}$. Compute the integral curves of this vector field.
+
+\end{enumerate}
+
+Solution:
+
+\begin{enumerate}
+  \item The unit sphere is defined by $x^{2}+y^{2}+z^{2}=1$. Regarding $y, z$ as independent variables and $x$ as dependent variable, we have the equations $2 x \partial_{y} x+2 y=0$ and $2 x \partial_{z} x+2 z=0$. For a critical point, $\partial_{y} x=\partial_{z} x=0$, and hence $y=z=0$. Then $x= \pm 1$. Hence the critical points are $(1,0,0)$ and $(-1,0,0)$.
+\end{enumerate}
+
+They are isolated in $\mathbb{S}^{2}$. Differentiating once more and put $x= \pm 1$ and $y=z=0$ for computing the Hessians, we get $\partial_{y} \partial_{z} x=0$ and $\partial_{y}^{2} x=\partial_{z}^{2} x=\mp 1$. Hence the Hessians at the critical points are nondegenerate.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item The gradient vector field is
+\end{enumerate}
+
+$$
+V(x, y, z)=(1,0,0)-\langle(1,0,0),(x, y, z)\rangle(x, y, z)=\left(1-x^{2},-x y,-x z\right)
+$$
+
+The integral curves are great arcs connecting $(-1,0,0)$ to $(1,0,0)$. To get their parametrized forms, we need to solve the equation
+
+$$
+x^{\prime}=1-x^{2}, y^{\prime}=-x y, z^{\prime}=-x z
+$$
+
+with the boundary condition that $x(t \rightarrow-\infty)=-1, x(t \rightarrow \infty)=1$, $y(t \rightarrow-\infty)=y(t \rightarrow \infty)=z(t \rightarrow-\infty)=z(t \rightarrow \infty)=0$. The first equation gives
+
+$$
+x=\frac{e^{2 \lambda t}-1}{e^{2 \lambda t}+1}
+$$
+
+where $\lambda$ can be taken to be any positive real constant (which just corresponds to scale of time). We fix $\lambda=1$. Subsituting to the second and third equations, we get
+
+$$
+y=\frac{C_{1} e^{t}}{1+e^{2 t}}, z=\frac{C_{2} e^{t}}{1+e^{2 t}}
+$$
+
+Since $x^{2}+y^{2}+z^{2}=1$, we get $C_{1}^{2}+C_{2}^{2}=2$. Hence the solutions are
+
+$$
+(x, y, z)=\left(\frac{e^{2 t}-1}{e^{2 t}+1}, \frac{2 e^{t} \cos \theta}{1+e^{2 t}}, \frac{2 e^{t} \sin \theta}{1+e^{2 t}}\right)
+$$
+
+where $\theta$ is a real constant.
+
+\section{4. (RA)}
+Find a solution for the heat equation
+
+$$
+\frac{\partial}{\partial t} u(x, t)-\frac{\partial^{2}}{\partial x^{2}} u(x, t)=0, \quad(t>0, \quad 0<x<1)
+$$
+
+with the initial condition $u(x, 0)=A$ where $A$ is a constant and the boundary conditions $u(0, t)=u(1, t)=0, \quad t>0$.
+
+Solution: In view of the boundary conditions (Dirichlet), using linearity and separation of variables, we can write a solution of the form
+
+$$
+u(x, t)=\sum_{n=1}^{\infty} B_{n} \sin (n \pi x) e^{-n^{2} \pi^{2} t}
+$$
+
+The coefficients $B_{n}$ can be computed using a Fourier decomposition of the function $f(x)=u(x, 0)$ given by the initial condition. A quick calculation $\left(B_{n}=2 \int_{0}^{1} \sin (n \pi x) f(x) d x\right)$ gives:
+
+$$
+B_{2 n}=0 \quad B_{2 n-1}=\frac{4 A}{(2 n-1) \pi}, \quad n=1,2,3, \cdots
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item $(\mathrm{AT})$
+\end{enumerate}
+
+(a) Show that a continuous map $f: X \rightarrow \mathbb{R P}^{n}$ factors through $S^{n} \rightarrow \mathbb{R}^{n}$ if and only if the induced map $f^{*}: H^{1}\left(\mathbb{R P}^{n} ; \mathbb{Z} / 2\right) \rightarrow H^{1}(X, \mathbb{Z} / 2)$ is zero.
+
+(b) Show that a continuous map $f: X \rightarrow \mathbb{C P}^{n}$ factors through $S^{2 n+1} \rightarrow \mathbb{C P}^{n}$ if and only if the induced map $f^{*}: H^{2}\left(\mathbb{C P}^{n} ; \mathbb{Z}\right) \rightarrow H^{2}(X, \mathbb{Z})$ is zero.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (CA) Let $f$ be a meromorphic function on a contractible region $U \subset \mathbb{C}$, and let $\gamma$ be a simple closed curve inside that region. Recall that the argument principle for a meromorphic function says that the integral
+\end{enumerate}
+
+$$
+\frac{1}{2 \pi i} \int_{\gamma} \frac{f^{\prime}}{f}
+$$
+
+is equal to the number of zeroes minus the number of poles of $f$ inside $\gamma$.
+
+(a) Prove Rouché's Theorem. That is, assume (1) $f$ and $g$ are holomorphic in $U,(2) \gamma$ is a simple, smooth, closed curve in $U$, and (3) $|f|>|g|$ on $\gamma$. Then the number of zeroes of $f+g$ inside $\gamma$ is equal to the number of zeroes of $f$ inside $\gamma$. You may assume the Argument Principle.
+
+(b) Show that for any $n$, the roots of the polynomial
+
+$$
+\sum_{i=0}^{n} z^{i}
+$$
+
+all have absolute value less than 2 .
+
+Solution: (a) Apply the argument principle to $f+g$. Take note that the derivative of $\log \left(1+\frac{g}{f}\right)$ shows up. (b) Let $f=z^{n}$ and $g$ be the summation of $z^{i}$ from $i=0$ to $n-1$. Apply Rouché's theorem, noting that $z^{n}$ has the same number of roots as $f+g$ (since they are polynomials of equal degree).
+
+\section*{QUALIFYING EXAMINATION }
+Department of Mathematics
+
+Wednesday September 3, 2014 (Day 2)
+
+\begin{enumerate}
+  \item (AT)
+\end{enumerate}
+
+(a) Let $X$ and $Y$ be compact, oriented manifolds of the same dimension $n$. Define the degree of a continuous map $f: X \rightarrow Y$.
+
+(b) What are all possible degrees of continuous maps $f: \mathbb{C P}^{3} \rightarrow \mathbb{C P}^{3}$ ?
+
+Solution: For the first part, the induced map $f^{*}: H^{n}(Y, \mathbb{Z}) \cong \mathbb{Z} \rightarrow H^{n}(X, \mathbb{Z}) \cong$ $\mathbb{Z}$ is multiplication by some integer $d$; this is the degree of $f$.
+
+For the second part, note that $H^{*}\left(\mathbb{C P}^{3}, \mathbb{Z}\right) \cong \mathbb{Z}[\zeta] /\left(\zeta^{4}\right)$ and that $f^{*}$ is a ring homomorphism. If $f^{*}(\zeta)=m \zeta$, then $f^{*}\left(\zeta^{3}\right)=m^{3} \zeta^{3}$ and so the degree must be a cube. To see that all cubes occur, just consider the map $[X, Y, Z, W] \mapsto$ $\left[X^{m}, Y^{m}, Z^{m}, W^{m}\right]$ for positive $d=m^{3}$; take complex conjugates to exhibit maps with negative degrees.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (A)
+\end{enumerate}
+
+(a) Show that every finite extension of a finite field is simple (i.e., generated by attaching a single element).
+
+(b) Fix a prime $p \geq 2$ and let $\mathbb{F}_{p}$ be the field of cardinality $p$. For any $n \geq 1$, show that any two fields of degree $n$ over $\mathbb{F}_{p}$ are isomorphic as fields.
+
+Solution: (a) If $E / F$ is the field extension, then $E^{\times}$is cyclic. Taking a generator $x$, we see that $E=F(x)$. (b) Any field extension of degree $n$ is a splitting field for the polynomial $X^{p^{n}}-X$, hence is unique.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (CA) Fix two positive real numbers $a, b>0$. Calculate the value of the integral
+\end{enumerate}
+
+$$
+\int_{-\infty}^{\infty} \frac{\cos (a x)-\cos (b x)}{x^{2}} d x
+$$
+
+Solution: We compute the keyhole integral over a simple closed curve
+
+$$
+C=C_{r} \cup C_{R} \cup[-R,-r] \cup[r, R]
+$$
+
+where the closed intervals are on the $y$-axis of the complex plane. The curve $C_{r}$ is a semicircle in the upper half-plane of radius $0<r<R$, oriented so as to agree with the positive orientation on the real axis. Likewise $C_{R}$ is on the upper half-plane. We integrate the function
+
+$$
+F(z)=\frac{\exp (i a z)-\exp (i b z)}{z^{2}}
+$$
+
+In the interior of $C, F$ has no singularities, so $\int_{C} F=0$. Along $C_{r}$, we can use the power series expansion of exp to see that
+
+$\frac{\exp (i a z)-\exp (i b z)}{z^{2}}=\frac{1-1+i a z-i b z+(i a z)^{2} / 2-(i b z)^{2} / 2+\ldots}{z^{2}}=\frac{i(a-b)}{z}+h(z)$
+
+for some holomorphic function $h(z)$. So
+
+$$
+\begin{aligned}
+\lim _{r \rightarrow 0} \int_{C_{r}} F(z) d z & =\lim _{r \rightarrow 0} \int_{C_{r}} \frac{i(a-b)}{z} d z+\lim _{r \rightarrow 0} \int_{C_{r}} h(z) d z \\
+& =\lim _{r \rightarrow 0} \int_{C_{r}} \frac{i(a-b)}{z} d z+\lim _{r \rightarrow 0} h(r)-h(-r) \\
+& =\lim _{r \rightarrow 0}(a-b) \int_{\pi}^{0} \frac{i}{r e^{i t}} i r e^{i t} d t+0 \\
+& =(a-b)\left(-i^{2}\right) \pi \\
+& =(a-b) \pi
+\end{aligned}
+$$
+
+On the other hand, we utilize the following estimate as $R \rightarrow \infty$ : Since $y>0$ and $a>0, e^{i a z}=e^{-a y} e^{i x}$ has a modulus less than 1. Likewise for $e^{i b z}$. This means that on $C_{R}$,
+
+$$
+\left|\frac{\exp (i a z)-\exp (i b z)}{z^{2}}\right| \leq \frac{2}{R^{2}}
+$$
+
+Hence the integral $\int_{C_{R}} F(z) d z$ is bounded by $2 \pi / R$, which tends to zero as $R \rightarrow \infty$. So we obtain that
+
+$$
+\begin{aligned}
+0 & =\lim _{r \rightarrow 0, R \rightarrow \infty} \int_{C} F(z) d z \\
+& =\lim _{r \rightarrow 0} \int_{C_{r}} F d z+\lim _{R \rightarrow 0} \int_{C_{R}} F d z+\int_{-\infty}^{+\infty} F d z \\
+& =\pi(a-b)+\int_{-\infty}^{+\infty} F(z) d z
+\end{aligned}
+$$
+
+Looking at the real part of this equality we arrive at the conclusion that
+
+$$
+\pi(b-a)=\operatorname{Real} \int_{-\infty}^{+\infty} F(z) d z
+$$
+
+which is what we seek.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (AG) Let $C \subset \mathbb{P}^{2}$ be the smooth plane curve of degree $d>1$ defined by the homogeneous polynomial $F(X, Y, Z)=0$
+\end{enumerate}
+
+(a) If $p \in C$, find the homogeneous linear equation of the tangent line $\mathbb{T}_{p} C \subset$ $\mathbb{P}^{2}$ to $C$ at $p$.
+
+(b) Let $\mathbb{P}^{2 *}$ be the dual projective plane, whose points correspond to lines in $\mathbb{P}^{2}$. Show that the Gauss map $g: C \rightarrow \mathbb{P}^{2 *}$ sending each point $p \in C$ to its tangent line $\mathbb{T}_{p} C \in \mathbb{P}^{2 *}$ is a regular map.
+(c) Let $C^{*} \subset \mathbb{P}^{2 *}$ be the dual curve of $C$; that is, the image of the Gauss map. Assuming that the Gauss map is birational onto its image, what is the degree of $C^{*} \subset \mathbb{P}^{2 *}$ ?
+
+Solution: For the first part, the tangent line $\mathbb{T}_{p} C$ is given by the equation
+
+$$
+\frac{\partial F}{\partial X}(p) \cdot X+\frac{\partial F}{\partial Y}(p) \cdot Y+\frac{\partial F}{\partial Z}(p) \cdot Z=0
+$$
+
+For the second, the Gauss map is given by
+
+$$
+g: p \mapsto\left[\frac{\partial F}{\partial X}(p), \frac{\partial F}{\partial Y}(p), \frac{\partial F}{\partial Z}(p)\right]
+$$
+
+Since these have no common zeroes, the map is regular. For the third, since the partial derivatives of $F$ are homogeneous of degree $d-1$, the preimage of a general line in $\mathbb{P}^{2 *}$ - that is, the zero locus of a general linear combinationwill consist of $d(d-1)$ points (since the partials have no common zeroes, by Bertini a general linear combination will have only simple zeroes); thus $\operatorname{deg}\left(C^{*}\right)=d(d-1)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (DG) Let $U$ the be upper half plane $U=\left\{(x, y) \in \mathbb{R}^{2} \mid y>0\right\}$ and introduce the Poincaré metric
+\end{enumerate}
+
+$$
+g=y^{-2}(d x \otimes d x+d y \otimes d y)
+$$
+
+Write the geodesic equations.
+
+Solution: A direct calculation gives $x^{\prime \prime}-\frac{2}{y} x^{\prime} y^{\prime}=y^{\prime \prime}-\frac{1}{y}\left[\left(x^{\prime}\right)^{2}+3\left(y^{\prime}\right)^{2}\right]=0$.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (RA)
+\end{enumerate}
+
+(a) Define what is meant by an equicontinuous sequence of functions on the closed interval $[-1,1] \subset \mathbb{R}$.
+
+(b) Prove the Arzela-Ascoli theorem: that if $\left\{f_{n}\right\}_{n=1,2, \ldots}$ is a bounded, equicontinuous sequence of functions on $[-1,1]$, then there exists a continuous function $f$ on $[-1,1]$ and an infinite subsequence $\Lambda \subset\{1,2, \ldots\}$ such that
+
+$$
+\lim _{n \in \Lambda \text { and } n \rightarrow \infty}\left(\sup _{t \in[-1,1]}\left|f_{n}(t)-f(t)\right|\right)=0
+$$
+
+Solution: First, a sequence $\left\{f_{n}\right\}$ of functions is equicontinuous if $\forall \epsilon>0$ there exists a $\delta>0$ such that if $\left|t-t^{\prime}\right|<\delta$ then $\left|f_{n}(t)-f_{n}\left(t^{\prime}\right)\right|<\epsilon$ for all $n$.
+
+For the second part, here is a four-step proof:
+
+\begin{enumerate}
+  \item We first show there exists a subsequence $\Lambda \subset \mathbb{N}$ such that $\forall r \in \mathbb{Q} \cap[-1,1]$, the sequence $\left\{f_{n}(r)\right\}_{n \in \Lambda}$ converges. We do this by first ordering $\mathbb{Q} \cap$ $[-1,1]$, choosing a subsequence $\Lambda_{1} \subset \mathbb{N}$ such that $\left\{f_{n}\left(r_{1}\right)\right\}_{n \in \Lambda_{1}}$ converges
+(we can do this because $\left\{f_{n}\right\}$ is bounded); then choosing a subsequence $\Lambda_{2} \subset \Lambda_{1}$ of that such that $\left\{f_{n}\left(r_{2}\right)\right\}_{n \in \Lambda_{2}}$ converges, and so on; we can do this such that if $n_{k}$ is the smallest integer in $\Lambda_{k}$ then $n_{k} \notin \Lambda_{k+1}$. We take $\Lambda=\left\{n_{1}, n_{2}, n_{3}, \ldots\right\}$; since all but finitely many elements of $\Lambda$ are in $\Lambda_{k}$, it follows that $\left\{f_{n}\left(r_{k}\right)\right\}_{n \in \Lambda}$ converges. Denote the $\operatorname{limit} \lim _{n \in \Lambda} f_{n}\left(r_{k}\right)$ by $f\left(r_{k}\right)$.
+
+  \item Second, we claim that the function $f$ on $\mathbb{Q} \cap[-1,1]$ defined in the first part satisfies the condition that $\forall \epsilon>0$ there exists a $\delta>0$ such that for $r, r^{\prime} \in \mathbb{Q} \cap[-1,1],\left|r-r^{\prime}\right|<\delta \Longrightarrow\left|f(r)-f\left(r^{\prime}\right)\right|<\epsilon$. This follows from the "up, over and down" argument: we have
+
+\end{enumerate}
+
+$$
+\left|f(r)-f\left(r^{\prime}\right)\right| \leq\left|f(r)-f_{n}(r)\right|+\left|f_{n}(r)-f_{n}\left(r^{\prime}\right)\right|+\left|f_{n}\left(r^{\prime}\right)-f\left(r^{\prime}\right)\right|
+$$
+
+and we can bound each term on the right by $\epsilon / 3$ (the middle term by equicontinuity). It follows that for any $t \in[-1,1]$ and any sequence $\left\{q_{1}, q_{2}, \ldots\right\} \subset \mathbb{Q} \cap[-1,1]$ converging to $t$, the sequence $f\left(q_{n}\right)$ is Cauchy; denote the limit by $f(t)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item We claim that the function defined in the second part is continuous. This is again an up, over and down argument: if $t, t^{\prime} \in[-1,1]$ and $r, r^{\prime} \in \mathbb{Q} \cap[-1,1]$, we have
+\end{enumerate}
+
+$$
+\left|f(t)-f\left(t^{\prime}\right)\right| \leq|f(t)-f(r)|+\left|f(r)-f\left(r^{\prime}\right)\right|+\left|f\left(r^{\prime}\right)-f\left(t^{\prime}\right)\right|
+$$
+
+and again if we require $t, t^{\prime}, r, r^{\prime}$ to all lie in a sufficiently small interval we can bound each term by $\epsilon / 3$.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item We repeat the argument one more time. Choose $N$ large, and consider the rational numbers $r \in \mathbb{Q} \cap[-1,1]$ with denominator $N$; that is, $\{k / N\}_{k=-N,-N+1, \ldots, N}$. For any $t \in[-1,1]$, we choose $r=k / N$ close to $t$ and write
+\end{enumerate}
+
+$$
+\left|f_{n}(t)-f(t)\right| \leq\left|f_{n}(t)-f_{n}(r)\right|+\left|f_{n}(r)-f(r)\right|+|f(r)-f(t)|
+$$
+
+and once more we can bound each term by $\epsilon / 3$ by choosing $n$ sufficiently large and $r$ sufficiently close to $t$.
+
+\section*{QUALIFYING EXAMINATION }
+Department of Mathematics
+
+Thursday September 4, 2014 (Day 3)
+
+\begin{enumerate}
+  \item (DG) The symplectic group $S p(2 n, \mathbb{R})$ is defined as the subgroup of $G l(2 n, \mathbb{R})$ that preserves the matrix
+\end{enumerate}
+
+$$
+\Omega=\left(\begin{array}{cc}
+0 & I_{n} \\
+-I_{n} & 0
+\end{array}\right)
+$$
+
+where $I_{n}$ is the $n \times n$ identify matrix. That is, it is composed of elements of $G l(2 n, \mathbb{R})$ that satisfy the relation
+
+$$
+M^{T} \Omega M=\Omega
+$$
+
+(a) Show that every symplectic matrix is invertible with inverse $M^{-1}=$ $\Omega^{-1} M^{T} \Omega$.
+
+(b) Show that the square of the determinant of a symplectic metric is 1 . (In fact, the determinant of a symplectic matrix is always 1, but you don't need to show this.)
+
+(c) Compute the dimension of the symplectic group.
+
+Solution: (a) Direct consequence from the definition since we can write $\left(\Omega^{-1} M^{T} \Omega\right) M=I_{2 n}$ (b) Take the determinant on both side of the defining equation $M^{T} \Omega M=\Omega$ and use the fact that $\operatorname{det} M^{T}=\operatorname{det} M$. (c) Using the exponential map, describe the tangent space at the identity to be defined my the matrices $m$ such that $m^{T} \Omega+\Omega m=0$ which can also be written as $\Omega m^{T} \Omega=m$. Writing $m=\left(\begin{array}{ll}a & b \\ c & d\end{array}\right)$ in terms of $n \times n$ blocks $(a, b, c$ and $d)$ and deduce the condition that these blocks have to satisfy $\left(d=-a^{T}, b^{T}=b, c^{T}=\right.$ c) to have $\Omega m^{T} \Omega=m$. It follows that the dimension is $n(2 n+1)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (RA) Suppose that $\sigma$ is a positive number and $f$ is a non-negative function on $\mathbb{R}$ such that
+\end{enumerate}
+
+$$
+\int_{\mathbb{R}} f(x) d x=1 ; \quad \int_{\mathbb{R}} x f(x) d x=0 \quad \text { and } \quad \int_{\mathbb{R}} x^{2} f(x) d x=\sigma^{2} .
+$$
+
+Let $\mathcal{P}$ denote the probability measure on $\mathbb{R}$ with density function $f$.
+
+(a) Supposing that $\rho$ is a positive number, give a non-trivial upper bound in terms of $\sigma$ for the probability as measured by $\mathcal{P}$ of the subset $[\rho, \infty)$.
+(b) Given a positive integer $N$, let $\left\{X_{1}, \ldots, X_{N}\right\}$ denote $N$ independent random variables on $\mathbb{R}$, each with the same probability measure $\mathcal{P}$. Let $S_{N}$ be the random variable on $\mathbb{R}^{N}$ given by
+
+$$
+S_{N}=\frac{1}{N} \sum_{i=1}^{N} X_{i}
+$$
+
+What are the mean and standard deviation of $S_{N}$ ?
+
+(c) Let $\left\{X_{1}, X_{2}, \ldots, X_{N}\right\}$ be independent random variables on $\mathbb{R}$, each with the same probability measure $\mathcal{P}$, and let $P_{N}(x)$ denote the function on $\mathbb{R}$ given by the probability that
+
+$$
+\frac{1}{\sqrt{N}} \sum_{k=1}^{N} X_{k}<x
+$$
+
+Given $x \in \mathbb{R}$, what is the limit as $N \rightarrow \infty$ of the sequence $\left\{P_{N}(x)\right\}$ ?
+
+Solution: For the first part, the probability assigned to the interval is $\int_{\rho}^{\infty} f(x) d x$. An upper bound is derived by noting that the probability is no greater than $\int_{\rho}^{\infty} \frac{x^{2}}{\rho^{2}} f(x) d x$ and this in turn is at most $\frac{\sigma^{2}}{\rho^{2}}$ This is Chebyshevs inequality. For the second part, the mean is 0 and the standard deviation is $\frac{1}{\sqrt{N}} \sigma$.
+
+Finally, the central limit theorem says that
+
+$$
+\lim _{N \rightarrow \infty} P_{N}(x)=\int_{-\infty}^{x} \frac{1}{\sigma \sqrt{2 \pi}} e^{-x^{2} / 2 \sigma^{2}}
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (AG) Let $X$ be the blow-up of $\mathbb{P}^{2}$ at a point.
+\end{enumerate}
+
+(a) Show that the surfaces $\mathbb{P}^{2}, \mathbb{P}^{1} \times \mathbb{P}^{1}$ and $X$ are all birational.
+
+(b) Prove that no two of the surfaces $\mathbb{P}^{2}, \mathbb{P}^{1} \times \mathbb{P}^{1}$ and $X$ are isomorphic.
+
+Solution: For the first part, we can simply observe that all three surfaces contain the affine plane $\mathbb{A}^{2}$ as a Zariski open subset.
+
+For the second, there are many invariants that we can use to distinguish $\mathbb{P}^{2}$ from $\mathbb{P}^{1} \times \mathbb{P}^{1}$ : the topological Euler characteristic; the self-intersection of the canonical bundle, or the rank of the Picard group all work. To see that $X$ is not isomorphic to either, note that $X$ contains a curve of negative self-intersection (the exceptional divisor), while $\mathbb{P}^{2}$ and $\mathbb{P}^{1} \times \mathbb{P}^{1}$ do not.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (AT) Suppose that $G$ is a finite group whose abelianization is trivial. Suppose also that $G$ acts freely on $S^{3}$. Compute the homology groups (with integer coefficients) of the orbit space $M=S^{3} / G$.
+\end{enumerate}
+
+Solution: Note that $M$ is a smooth manifold, and that $\pi_{1} M=G$. By Poincare's theorem $H_{1} S^{3} / G=0$, as is $H^{1}\left(S^{3} / G ; A\right)=\operatorname{hom}\left(\pi_{1} M, A\right)$ for
+any abelian group $A$. This implies that $M$ is orientable. It then follows from Poincare duality that $H_{2}(M ; A)=0$ for any abelian group $A$ and that $H_{3}(M ; A)=A$.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (CA) Recall that a function $u: \mathbb{R}^{2} \rightarrow \mathbb{R}$ is called harmonic if $\Delta u:=\partial_{x}^{2} u+$ $\partial_{y}^{2} u=0$. Prove the following statements using harmonic conjugates and standard complex analysis.
+\end{enumerate}
+
+(a) Show that the average value of a harmonic function along a circle is equal to the value of the harmonic function at the center of the circle.
+
+(b) Show that the maximum value of a harmonic function on a closed disk occurs only on the boundary, unless $u$ is constant.
+
+Solution: Cauchy Integral Formula, and maximum principle. In detail:
+
+(a) Let $v$ be the harmonic conjugate for $u$ so $u+i v=f$ is an analytic function on $\mathbb{R}^{2}$. By Cauchy's integral formula,
+
+$$
+f(a)=\frac{1}{2 \pi i} \int_{\gamma} \frac{f(z)}{z-a} d z
+$$
+
+for any point $a$ and any closed, simple curve surrounding $a$. Taking $\gamma$ to be a circle of radius $R$ centered at $a$, and parametrizing $z(t)=R e^{i t}+a$, we thus have
+
+$$
+u(a)+i v(a)=\frac{1}{2 \pi i} \int_{\gamma} \frac{u+i v}{R e^{i t}} i R e^{i t} d t
+$$
+
+Equating real and imaginary parts, we obtain
+
+$$
+u(a)=\frac{1}{2 \pi R} \int_{\gamma} u d t
+$$
+
+(b) If $u$ is harmonic, let $v$ be a harmonic conjugate so $f=u+i v$ is holomorphic. By the maximum modulus principle, $\left|e^{f}\right|$ must obtain a maximum only along the boundary (unless $f$ is constant). But $\left|e^{f}\right|=\left|e^{u}\right|=e^{u}$, and since exp is strictly monotone and continuous, $e^{u}$ obtains a maximum if and only if $u$ does.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (A) Let $G$ be a finite group.
+\end{enumerate}
+
+(a) Let $V$ be any $\mathbb{C}$-representation of $G$. Show that $V$ admits a Hermitian, $G$-invariant inner product.
+
+(b) Let $N$ be a $\mathbb{C}[G]$-module which is finite-dimensional over $\mathbb{C}$, and let $M \subset N$ a submodule. Show that the inclusion splits.
+
+(c) Consider the action of $S_{3}$ on $\mathbb{C}^{3}$ given by permuting the axes. Decompose $\mathbb{C}^{3}$ into irreducible $S_{3}$-representations.
+
+Solution: (a) Put an arbitrary inner product $\langle$,$\rangle on V$, then define
+
+$$
+(v, w):=\frac{1}{|G|} \sum_{g \in G}\langle g v, g w\rangle
+$$
+
+(b) Take the orthogonal complement to $M$ under a $G$-invariant inner product.
+
+(c) Clearly the diagonal $z_{1}=z_{2}=z_{3}$ is an invariant subspace. By using the methods above (or by writing an invariant linear equation) we deduce that an orthogonal complement is given by the plane $z_{1}+z_{2}+z_{3}=0$. This twodimensional representation has no subrepresentations, so must be the unique 2-dimensional irreducible representation.
+
+
+\end{document}

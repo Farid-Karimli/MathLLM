@@ -1,0 +1,481 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+
+\title{QUALIFYING EXAMINATION }
+
+
+\author{HARVARD UNIVERSITY}
+\date{}
+
+
+\begin{document}
+\maketitle
+Department of Mathematics
+
+Tuesday August 30, 2022 (Day 1)
+
+\begin{enumerate}
+  \item (AG) Let $V, W$ be complex vector spaces of dimensions $m \geq n \geq 2$, respectively. Let $\mathbb{P H o m}(V, W) \cong \mathbb{P}^{m n-1}$ be the projective space of nonzero linear maps $\phi: V \rightarrow W$ modulo scalars. Further, let $\Phi \subset \mathbb{P H o m}(V, W)$ be the subset of those linear maps $\phi$ which do not have full rank $n$. Prove that $\Phi$ is an irreducible subvariety of $\mathbb{P}^{m n-1}$ and find its dimension.
+\end{enumerate}
+
+Solution: It's convenient to realize $\mathbb{P H o m}(V, W)$ as the space of $n \times m$ matrices. If $A \in \Phi$ is a matrix of rank $k$, it can be written as $A=C_{1} R_{1}$, where $C_{1}, R_{1}$ are matrices of sizes $n \times k$ and $k \times m$, respectively. Since $k \leq n-1$, we can also express $A=C R$, where $C, R$ are matrices of sizes $n \times(n-1)$ and $(n-1) \times m$, respectively (add zeroes). Let $X \cong \mathbb{P}^{n(n-1)-1}$ and $Y \cong \mathbb{P}^{(n-1) m-1}$ be the projective spaces of $n \times(n-1)$ and $(n-1) \times m$ matrices. Our observation implies that the product morphism $X \times Y \rightarrow \Phi$ is surjective. The product $X \times Y$ of projective spaces is irreducible and complete, so the image $\Phi$ is an irreducible closed subset of $\mathbb{P}^{m n-1}$. It remains to find its dimension.
+
+If $A$ has rank $n-1$ and $A=C R=C^{\prime} R^{\prime}$ are two decompositions as above, then $C^{\prime}=C G$ and $R^{\prime}=G^{-1} R$, for some $G \in \mathrm{GL}(n-1, \mathbb{C})$. Moreover, let $\Phi^{\prime} \subset$ $\mathbb{P}^{m n-1}$ be the subset of matrices of rank $\leq n-2$; by a similar reasoning, this is closed, and clearly is a proper subset of $\Phi$, therefore $\operatorname{dim}(\Phi)=\operatorname{dim}\left(\Phi \backslash \Phi^{\prime}\right)$. Take any $A \in \Phi \backslash \Phi^{\prime}$, i.e. a matrix of rank $=n-1$. Its fiber under the surjective morphism $X \times Y \rightarrow \Phi$ is $\operatorname{dim} \operatorname{GL}(n-1, \mathbb{C})=(n-1)^{2}-1$. Hence, $\operatorname{dim}(\Phi)=\operatorname{dim}(X \times Y)-\left((n-1)^{2}-1\right)=[n(n-1)-1]+[(n-1) m-1]-$ $\left[(n-1)^{2}-1\right]=m n-m+n-2$.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (AT) Let $S^{n}$ be the standard $n$-sphere
+\end{enumerate}
+
+$$
+S^{n}=\left\{\left(x_{0}, \ldots, x_{n}\right) \in \mathbb{R}^{n+1} \mid \sum x_{i}^{2}=1\right\}
+$$
+
+and let $S^{k} \subset S^{n}$ be the locus defined by the vanishing of the last $n-k$ coordinates $x_{k+1}, \ldots, x_{n}$. Assume $n-1>k>0$.
+
+\begin{enumerate}
+  \item Find the homology groups of the complement $S^{n} \backslash S^{k}$.
+
+  \item Suppose now that $T \subset S^{n}$ is the sphere defined by the vanishing of the first $k$ coordinates; that is,
+
+\end{enumerate}
+
+$$
+T=\left\{\left(0, \ldots 0, x_{k+1}, \ldots, x_{n}\right) \in \mathbb{R}^{n+1} \mid \sum x_{i}^{2}=1\right\}
+$$
+
+What is the fundamental class of $T$ in the homology group $H_{n-k-1}\left(S^{n} \backslash\right.$ $\left.S^{k}\right) ?$
+
+Solution. The complement $S^{n} \backslash S^{k}$ is the same as the complement $\mathbb{R}^{n} \backslash \mathbb{R}^{k} \cong$ $\mathbb{R}^{k} \times\left(\mathbb{R}^{n-k} \backslash\{0\}\right)$, so this has the homotopy type of $S^{n-k-1}$; accordingly we have
+
+$$
+H_{m}\left(S^{n} \backslash S^{k}\right) \cong\left\{\begin{array}{l}
+\mathbb{Z}, \text { if } m=0 \text { or } m=n-k-1 ; \text { and } \\
+0 \text { otherwise. }
+\end{array}\right.
+$$
+
+Moreover, under the contraction of $S^{n} \backslash S^{k}$ to $S^{n-k-1}$ the sphere $T$ is carried isomorphically to $S^{n-k-1}$; so its fundamental class is the generator of $H_{n-k-1}\left(S^{n} \backslash S^{k}\right)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (CA) Compute
+\end{enumerate}
+
+$$
+\int_{0}^{2 \pi} \frac{1}{(3+\cos \theta)^{2}} d \theta
+$$
+
+using contour integration.
+
+Solution: Making the substitution $z=e^{i \theta}$, so that $\cos \theta=\frac{z+z^{-1}}{2}$, we obtain
+
+$$
+\begin{aligned}
+\int_{0}^{2 \pi} \frac{1}{(3+\cos \theta)^{2}} d \theta & =\int_{|z|=1} \frac{1}{\left(3+\frac{z+z^{-1}}{2}\right)^{2}} \frac{d z}{i z} \\
+& =\frac{4}{i} \int_{|z|=1} \frac{z}{\left(z^{2}+6 z+1\right)^{2}} d z
+\end{aligned}
+$$
+
+The polynomial $z^{2}+6 z+1$ has simple roots $-3 \pm 2 \sqrt{2}$. Only the root $-3+2 \sqrt{2}$ lies in the unit disk, so the residue theorem implies that
+
+$$
+\begin{aligned}
+\int_{0}^{2 \pi} \frac{1}{(3+\cos \theta)^{2}} d \theta & =8 \pi \cdot \operatorname{res}_{z=-3+2 \sqrt{2}}\left(\frac{z}{\left(z^{2}+6 z+1\right)^{2}}\right) \\
+& =8 \pi \lim _{z \rightarrow-3+2 \sqrt{2}} \frac{\partial}{\partial z} \frac{z}{(z+3+2 \sqrt{2})^{2}} \\
+& =8 \pi \lim _{z \rightarrow-3+2 \sqrt{2}}\left(\frac{1}{(z+3+2 \sqrt{2})^{2}}-\frac{2 z}{(z+3+2 \sqrt{2})^{3}}\right) \\
+& =8 \pi \frac{2 \cdot 3}{(4 \sqrt{2})^{3}}=\frac{3 \sqrt{2} \pi}{16} .
+\end{aligned}
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (A) Show that the symmetric group $S_{n}$ has at least one Sylow $p$-subgroup which is a cyclic group of order $p$. (You may use the fact that for any prime $p$, there exists a prime in the interval $(p, 2 p)$.)
+\end{enumerate}
+
+Solution: By the fact in parentheses, if we let $p$ be the largest prime $\leq n$, then $2 p$ is greater than $n$. In other words, we have $\frac{n}{2}<p \leq n$. This ensures that $p \mid n$ ! but $p^{2} \nmid n$ !, so we conclude that any $p$-Sylow subgroup must have order $p$ and is therefore a cyclic group.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (DG) Let $X=T^{*} \mathbb{C}^{\times}=\mathbb{C}^{\times} \times \mathbb{C}$, where we write $z, w$ for holomorphic coordinates on the base and fiber, respectively. Find all time-1 periodic orbits of the vector field $V=\operatorname{Re}\left(z w \frac{\partial}{\partial z}\right)$ - i.e., all points $x \in X$ such that the time-1 flow of $x$ under $V$ is equal to $x$.
+\end{enumerate}
+
+Solution: Let $q$ be the locally-defined coordinate on the base given by $q=$ $\log (z)$, so that we can rewrite the vector field as $\operatorname{Re}\left(w \frac{\partial}{\partial q}\right)$. This vector field preserves the fibers of the map $T^{*} \mathbb{C}^{\times} \rightarrow \mathbb{C}_{w}$, so we may study each fiber individually. Write $q=\xi+i \theta$. If $w$ has nonzero real component, then the vector field will have nontrivial $\frac{\partial}{\partial \xi}$ component, which acts as a translation and cannot have periodic orbits. On the other hand, if $w=i c \in i \mathbb{R}$, then the vector field is $-c \frac{\partial}{\partial \theta}$. In each such cylinder fiber $\{w=i c\}$, the vector field is a rotation of the cylinder, and the points in the fiber will return to themselves precisely if they complete an integral number of rotations.
+
+Therefore, up to a normalization, the time- 1 orbits of the vector field are precisely all the points in the fibers $\left\{z \in \mathbb{C}^{\times}, w \in 2 \pi i \mathbb{Z}\right\}$.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (RA) Let $X_{1}, X_{2}, X_{3}, \ldots$ be independent and identically distributed random variables with finite expected value $\mu$ and finite nonzero variance. Let
+\end{enumerate}
+
+$$
+\overline{X_{n}}=\frac{1}{n}\left(X_{1}+\cdots+X_{n}\right)
+$$
+
+Use Chebyshev's inequality to prove that $\overline{X_{n}}$ converges to $\mu$ in probability as $n \rightarrow \infty$.
+
+Solution. Let the variance of $X_{i}$ be $\sigma^{2}$. Then the expected value of $\overline{X_{n}}$ is is $\mu$ and the variance of $\overline{X_{n}}$ is $\frac{\sigma^{2}}{n}$. By Chebyshev's inequality
+
+$$
+P\left(\left|\overline{X_{n}}-\mu\right| \geq \varepsilon\right) \leq \frac{\sigma^{2}}{n \varepsilon^{2}}
+$$
+
+for any $\epsilon>0$, which implies that $\overline{X_{n}}$ converges to $\mu$ in probability as $n \rightarrow \infty$.
+
+\section*{QUALIFYING EXAMINATION }
+Department of Mathematics
+
+Wednesday August 31, 2022 (Day 2)
+
+\begin{enumerate}
+  \item (CA) Let $\Omega \subset \mathbb{C}$ denote the open set
+\end{enumerate}
+
+$$
+\Omega=\{z:|z-1|>1 \text { and }|z-3|<3\}
+$$
+
+Give a conformal isomorphism between $\Omega$ and the unit disk $D=\{z:|z|<1\}$.
+
+Solution: The conformal transformation $z \mapsto \frac{1}{z}$ sends $\Omega$ to the open strip $S=\left\{z: \frac{1}{6}<\operatorname{Re}(z)<\frac{1}{2}\right\}$. The conformal map $z \mapsto e^{3 \pi i\left(z-\frac{1}{6}\right)}$ transforms the strip $S$ to the upper half-plane, and $z \mapsto \frac{z-i}{z+i}$ sends the upper half plane to the open unit disk.
+
+Composing these, we obtain the desired conformal isomorphism
+
+$$
+z \mapsto \frac{e^{3 \pi i\left(\frac{1}{z}-\frac{1}{6}\right)}-i}{e^{3 \pi i\left(\frac{1}{z}-\frac{1}{6}\right)}+i}
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (A) Let $F=\mathbb{Q}(z)$ where
+\end{enumerate}
+
+$$
+z=\cos \frac{2 \pi}{13}+\cos \frac{10 \pi}{13}
+$$
+
+i) Prove that $[F: \mathbb{Q}]=3$ and $F / \mathbb{Q}$ is a Galois extension.
+
+ii) Prove that if $p$ is a prime and $p \neq 13$ then $p$ is unramified in $F$, and that $p$ is split in $F$ if and only if $p \equiv \pm 1$ or $\pm 5 \bmod 13$.
+
+Solution. i) Let $w$ be the 13 th root of unity $\exp (2 \pi i / 13)$, so
+
+$$
+2 z=w+w^{-1}+w^{5}+w^{-5}
+$$
+
+and let $K=\mathbb{Q}(w)$. Then $[K: \mathbb{Q}]$ is the 13 th cyclotomic extension, so it is Galois and we can identify $\operatorname{Gal}(K / \mathbb{Q})$ with the group $G=(\mathbb{Z} / 13 \mathbb{Z})^{*}$ so that each $c \in(\mathbb{Z} / 13 \mathbb{Z})^{*}$ acts by $w \mapsto w^{c}$. Now $H:=\{ \pm 1, \pm 5\} \subset G$ is a subgroup (note that $5^{2}=-1$ in $\mathbb{Z} / 13 \mathbb{Z}$ ), so $c \in G$ fixes $z$ if and only if $c \in H$ [this uses the fact that the minimal polynomial of $z$ is $\left.\left(z^{13}-1\right) /(z-1)\right]$, whence $F$ is the subfield of $K$ fixed by $H$. Thus by a fundamental theorem of Galois theory $F / \mathbb{Q}$ is Galois with group $G / H$, which proves the claim because $[G: H]=3$.
+
+ii) If $p \neq 13$ then $p$ is unramified in $K$ (the discriminant of the minimal
+polynomial of $w$ is \textbackslash pm 1 times a power of 13 - in fact it is $\left.13^{11}\right)$. Then $p$ splits in $F$ if and only if the $p$-Frobenius element of $\operatorname{Gal}(K / \mathbb{Q})$ is in $H$. But this Frobenius element is identified with the residue of $p \bmod 13$ under our identification of $\operatorname{Gal}(K / \mathbb{Q})$ with $G=(\mathbb{Z} / 13 \mathbb{Z})^{*}$, because $w$ goes to $w^{p}$. Thus $p$ splits if and only if $p \bmod 13 \in H=\{ \pm 1, \pm 5\}$, QED.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (DG) Let $u \mapsto \tau(u)$, for $a<u<b$, be a smooth space curve in $\mathbb{R}^{3}$ with both its curvature and torsion nowhere zero. Assume that the parameter $u$ is the arc-length of $u \mapsto \tau(u)$. Suppose $\sigma(v)$, for $c<v<d$, is a smooth function with $\sigma^{\prime}(v)$ nowhere zero. Consider the surface $S$ defined by
+\end{enumerate}
+
+$$
+(u, v) \mapsto \vec{r}(u, v)=\tau(u)+\sigma(v) \tau^{\prime}(u)
+$$
+
+for $a<u<b$ and $c<v<d$. Compute the first and second fundamental forms of $S$ in terms of $\tau(u)$ and $\sigma(v)$ and their derivatives. Determine the condition on the function $\sigma(v)$ so that the Gaussian curvature of the surface $S$ is identically zero.
+
+Solution. Since the parameter $u$ is the arc-length of $u \mapsto \tau(u)$, the length of $\tau^{\prime}(u)$ is identically 1 so that $\tau^{\prime \prime}(u)$ is perpendicular to $\tau^{\prime}(u)$. The first fundamental form $I=E d u^{2}+2 F d u d v+G d v^{2}$ is given by
+
+$$
+\begin{aligned}
+& E=\vec{r}_{u} \cdot \vec{r}_{u}=\left(\tau^{\prime}(u)+\sigma(v) \tau^{\prime \prime}(u)\right) \cdot\left(\tau^{\prime}(u)+\sigma(v) \tau^{\prime \prime}(u)\right)=1+\sigma(v)^{2}\left(\tau^{\prime \prime}(u) \cdot \tau^{\prime \prime}(u)\right) \\
+& F=\vec{r}_{u} \cdot \vec{r}_{v}=\left(\tau^{\prime}(u)+\sigma(v) \tau^{\prime \prime}(u)\right) \cdot \sigma^{\prime}(v) \tau^{\prime}(u)=\sigma^{\prime}(v) \\
+& G=\vec{r}_{v} \cdot \vec{r}_{v}=\sigma^{\prime}(v) \tau^{\prime}(u) \cdot \sigma^{\prime}(v) \tau^{\prime}(u)=\sigma^{\prime}(v)^{2}
+\end{aligned}
+$$
+
+so that
+
+$$
+D G-F^{2}=\sigma(v)^{2} \sigma^{\prime}(v)^{2}\left(\tau^{\prime \prime}(u) \cdot \tau^{\prime \prime}(u)\right)
+$$
+
+To compute the unit normal vector $\vec{n}$, we compute
+
+$$
+\vec{r}_{u} \times \vec{r}_{v}=\left(\tau^{\prime}(u)+\sigma(v) \tau^{\prime \prime}(u)\right) \times \sigma^{\prime}(v) \tau^{\prime}(u)=-\sigma(v) \sigma^{\prime}(v) \tau^{\prime}(u) \times \tau^{\prime \prime}(u)
+$$
+
+to form
+
+$$
+\vec{n}=-\tau^{\prime}(u) \times \frac{\tau^{\prime \prime}(u)}{\left\|\tau^{\prime \prime}(u)\right\|}
+$$
+
+because $\left\|\vec{r}_{u} \times \vec{r}_{v}\right\|=\sqrt{E G-F^{2}}$. It means that
+
+$$
+\vec{n}, \tau^{\prime}(u), \frac{\tau^{\prime \prime}(u)}{\left\|\tau^{\prime \prime}(u)\right\|}
+$$
+
+form an orthonormal frame. To obtain the coefficients $L, M, N$ of the second fundamental form $I I=L d u^{2}+2 M d u d v+N d v^{2}$, we compute the partial derivatives of the radius vector $\vec{r}$ of order 2 ,
+
+$$
+\begin{aligned}
+\vec{r}_{u u} & =\tau^{\prime \prime}(u)+\sigma(v) \tau^{\prime \prime \prime}(u) \\
+\vec{r}_{u v} & =\sigma^{\prime}(v) \tau^{\prime \prime}(u) \\
+\vec{r}_{v v} & =\sigma^{\prime \prime}(v) \tau^{\prime}(u)
+\end{aligned}
+$$
+
+so that
+
+$$
+\begin{aligned}
+L & =\vec{r}_{u u} \cdot \vec{n}=\left(\tau^{\prime \prime}(u)+\sigma(v) \tau^{\prime \prime \prime}(u)\right) \cdot \vec{n} \\
+& =-\frac{\sigma(v)\left(\tau^{\prime \prime}(u) \times \tau^{\prime \prime \prime}(u)\right.}{\left\|\tau^{\prime \prime}\right\|} \\
+M & =\vec{r}_{u u} \cdot \vec{n}=\left(\sigma^{\prime}(v) \tau^{\prime \prime}(u)\right) \cdot \vec{n}=0, \\
+N & =\vec{r}_{u u} \cdot \vec{n}=\left(\sigma^{\prime \prime}(v) \tau^{\prime}(u)\right) \cdot \vec{n}=0 .
+\end{aligned}
+$$
+
+The Gaussian curvature
+
+$$
+\frac{L N-M^{2}}{E G-F^{2}}
+$$
+
+is always zero for any function $\sigma(v)$.
+
+Remark. With use of the more general function $\sigma(v)$ instead of $\sigma(v)=v$, this problem is simply the statement, in disguise, that the tangent developable surface has zero Gaussian curvature.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (RA) Let $V$ be the vector space of continuous functions $[0,1] \rightarrow \mathbb{R}$, and let $g: V \rightarrow \mathbb{R}$ be the linear functional $f \mapsto \int_{0}^{1} x^{-1 / 3} f(x) d x$. For which $p \in(1, \infty)$ does $g$ extend to a continuous functional $\bar{g}: L^{p}([0,1]) \rightarrow \mathbb{R}$ ? For those $p$, what is the norm of this functional?
+\end{enumerate}
+
+Solution. Let $q=p /(p-1)$, so $1 / p+1 / q=1$. Using the isometric identification of $L^{q}([0,1])$ with the dual of $L^{p}([0,1])$, we see that there is such a continuous functional $\bar{g}$ if and only if $x^{-1 / 3}$ is an $L^{q}$ function, in which case $\|\bar{g}\|$ is the $L^{q}$ norm of that function. Now $x^{-1 / 3}$ is in $L^{q}([0,1]) \Leftrightarrow \int_{0}^{1} x^{-q / 3} d x<\infty \Leftrightarrow$ $-q / 3>-1 \Leftrightarrow q<3 \Leftrightarrow p>3 / 2$. For such $p$, the the $L^{q}$ norm of $x^{-1 / 3}$ is
+
+$$
+\left(\int_{0}^{1} x^{-q / 3} d x\right)^{1 / q}=\left(\frac{3}{3-q}\right)^{1 / q}
+$$
+
+[We do not require the rewriting of $3 /(3-q)$ as $(3 p-3) /(2 p-3)$, or of $1 / q$ as $(p-1) / p$.]
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (AG) Let $X \subset \mathbb{P}^{n}$ be any hypersurface of degree $d \geq 2$, and $\Lambda \subset X \subset \mathbb{P}^{n}$ a $k$-plane in $\mathbb{P}^{n}$ contained in $X$.
+
+  \item Show that if $k \geq n / 2$, then $X$ is necessarily singular.
+
+  \item If $k=n / 2$ and $X \subset \mathbb{P}^{n}$ is a general hypersurface containing a $k$-plane, describe the singular locus of $X$.
+
+\end{enumerate}
+
+Solution. For the first, suppose that $\Lambda=\left\{\left[X_{0}, \ldots, X_{k}, 0, \ldots, 0\right]\right\}$ is defined by the vanishing of the last $n-k$ coordinates; suppose that $X$ is the zero locus of the homogeneous polynomial $F\left(X_{0}, \ldots, X_{n}\right)$. At any point of $\Lambda$, we have
+
+$$
+\frac{\partial F}{\partial X_{i}}=0 \quad \text { for } \quad i=1, \ldots, k
+$$
+
+and since $k \geq n-k$, by Bezout the remaining partial derivatives $\frac{\partial F}{\partial X_{i}}$ with $i=k+1, \ldots, n$ must have a common zero in $\Lambda$; thus $X$ is singular. This also answers the second question: if $X$ is general, then since the partial derivatives $\frac{\partial F}{\partial X_{i}}$ are general polynomials of degree $d-1$ on $\mathbb{P}^{k}, X$ will have $(d-1)^{k}$ singular points.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item $(\mathrm{AT})$
+\end{enumerate}
+
+(a) Given compact oriented manifolds $M$ and $N$, both of dimension $n$, define the degree of a continuous map $f: M \rightarrow N$.
+
+(b) What are the possible degrees of continuous maps $\mathbb{C P}^{4} \rightarrow \mathbb{C P}^{4}$ ? Justify your answer.
+
+\section{Solution:}
+(a) The orientations determine isomorphisms $H^{n}(M ; \mathbb{Z}) \cong \mathbb{Z}$ and $H^{n}(N ; \mathbb{Z}) \cong$ $\mathbb{Z}$, and the degree is given by the image of $1 \in \mathbb{Z}$ under the map $\mathbb{Z} \cong H^{n}(N ; \mathbb{Z}) \stackrel{f^{*}}{\longrightarrow} H^{n}(M ; \mathbb{Z}) \cong \mathbb{Z}$
+
+(b) The degree may be any integer of the form $\lambda^{4}$ for $\lambda \in \mathbb{Z}$. The cohomology ring of $\mathbb{C P}^{4}$ is given by $H^{*}\left(\mathbb{C P} \mathbb{P}^{4} ; \mathbb{Z}\right) \cong \mathbb{Z}[x] /\left(x^{5}\right)$ with $x$ in degree 2 . Given a continuous map $f: \mathbb{C P}^{4} \rightarrow \mathbb{C P}^{4}$, let $\lambda \in \mathbb{Z}$ be such that $f^{*}(x)=\lambda x$. Then we must have $f^{*}\left(x^{4}\right)=f^{*}(x)^{4}=\lambda^{4} x^{4}$. This implies that the degree of such a map must be of the form $\lambda^{4}$.
+
+To show that every integer of the form $\lambda^{4}$ is the degree of a continuous map $f: \mathbb{C P}^{4} \rightarrow \mathbb{C P}^{4}$, we begin by noting that $\lambda$ may be assumed nonnegative without loss of generality. Then the map
+
+$$
+\left[Z_{1}: Z_{2}: Z_{3}: Z_{4}: Z_{5}\right] \mapsto\left[Z_{1}^{\lambda}: Z_{2}^{\lambda}: Z_{3}^{\lambda}: Z_{4}^{\lambda}: Z_{5}^{\lambda}\right]
+$$
+
+does the job.
+
+\section*{QUALIFYING EXAMINATION }
+Department of Mathematics
+
+Thursday September 1, 2022 (Day 3)
+
+\begin{enumerate}
+  \item (DG) Let $X$ be a compact Riemannian manifold.
+\end{enumerate}
+
+(a) Let $\xi_{i}$ be a smooth 1-form on $X$ which is both $d$-closed and $d^{*}$-closed. Let $\Delta$ denote the Laplacian. Denote by $|\xi|$ the pointwise norm of $\xi$. Denote by $|\nabla \xi|$ the pointwise norm of the covariant differential $\nabla \xi$ of $\xi$. Use the notation Ricci for the Ricci tensor of $X$. Prove the following identity of Bochner on $X$
+
+$$
+\frac{1}{2} \Delta\left(|\xi|^{2}\right)=|\nabla \xi|^{2}+\operatorname{Ricci}(\xi, \xi)
+$$
+
+by directly computing $\Delta\left(|\xi|^{2}\right)$ and appropriately contracting the commutation formula for $\nabla_{\alpha} \nabla_{\beta} \xi-\nabla_{\alpha} \nabla_{\beta} \xi$ with $\xi$ to yield the Ricci term.
+
+(b) Assume that the Ricci curvature is positive semidefinite everywhere on $X$ and is strictly positive at at least one point of $X$. By integrating Bochner's identity in (a) over $X$ to prove that every harmonic 1-form on $X$ must be identically zero. Here harmonic means $d$-closed and $d^{*}$-closed.
+
+Solution. (a) We use the convention of summing over an index which occurs both as a subscript and a superscript. Let $g_{i j}$ be the Riemannian metric of $X$ with Riemannian curvature tensor $R_{i j k}^{\ell}$ and Ricci curvature
+
+$$
+R_{i j}=R_{i j k}^{i} \text {. }
+$$
+
+Direct computation of the Laplacian of $|\xi|^{2}$ yields
+
+$$
+\frac{1}{2} \Delta\left(|\xi|^{2}\right)=\frac{1}{2} g^{r s} \nabla_{s} \nabla_{r}\left(g^{a b} \xi_{a} \xi_{b}\right)=g^{r s} g^{a b} \nabla_{r} \xi_{a} \nabla_{s} \xi_{b}+g^{r s} g^{a b}\left(\nabla_{s} \nabla_{r} \xi_{a}\right) \xi_{b}
+$$
+
+(The factor $\frac{1}{2}$ occurs from differentiating a quadratic expression.) Contracting the formula of commutation of covariant differentiation
+
+$$
+\nabla_{k} \nabla_{j} \xi_{i}-\nabla_{j} \nabla_{k} \xi_{i}=\xi_{\ell} R_{i j k}^{\ell}
+$$
+
+with $g^{i j} g^{k m} \xi_{m}$ yields
+
+$$
+g^{i j} g^{k m} \xi_{m} \nabla_{k} \nabla_{j} \xi_{i}-g^{i j} g^{k m} \xi_{m} \nabla_{j} \nabla_{k} \xi_{i}=g^{i j} g^{k m} \xi_{m} \xi_{\ell} R_{i j k}^{\ell}=R^{\ell m} \xi_{\ell} \xi_{m}
+$$
+
+Use $\nabla_{j} \xi_{i}=\nabla_{i} \xi_{j}$ (from $d \xi=0$ ) to change the first term of $(*)$ to
+
+$$
+g^{i j} g^{k m} \xi_{m} \nabla_{k} \nabla_{i} \xi_{j}=g^{k m} \xi_{m} \nabla_{k}\left(g^{i j} \nabla_{i} \xi_{j}\right)=0
+$$
+
+where $g^{i j} \nabla_{i} \xi_{j}=0$ comes from $d^{*} \xi=0$. Again, use $\nabla_{j} \xi_{i}=\nabla_{i} \xi_{j}($ from $d \xi=0)$ to change the second term of $(*)$ to
+
+$$
+g^{i j} g^{k m} \xi_{m} \nabla_{j} \nabla_{k} \xi_{i}=g^{i j} g^{k m} \xi_{m} \nabla_{j} \nabla_{i} \xi_{k}
+$$
+
+which with a change of indices becomes $g^{r s} g^{a b}\left(\nabla_{s} \nabla_{r} \xi_{a}\right) \xi_{b}$ so that we can conclude that
+
+$$
+\frac{1}{2} \Delta\left(|\xi|^{2}\right)=g^{r s} g^{a b} \nabla_{r} \xi_{a} \nabla_{s} \xi_{b}-R^{\ell m} \xi_{\ell} \xi_{m}
+$$
+
+Thus,
+
+$$
+\frac{1}{2} \Delta\left(|\xi|^{2}\right)=|\nabla \xi|^{2}+\operatorname{Ricci}(\xi, \xi)
+$$
+
+if $d \xi=0$ and $d^{*} \xi=0$. (The sign and notation convention for the components of the curvature tensor follows Bochner's original choice.)
+
+(b) Integrating over $X$ yields
+
+$$
+\int_{X}|\nabla \xi|^{2}+\int_{X} \operatorname{Ricci}(\xi, \xi)=0
+$$
+
+If the Ricci curvature is positive semidefinite everywhere, then $\nabla \xi=0$ and $\xi$ is parallel. If the Ricci curvature is strictly positive at some point, $\xi$ has to vanish at that point and the parallel property of $\xi$ implies that $\xi$ is identically zero.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (RA) Suppose $w:[0,1] \rightarrow(0, \infty)$ is a continuous function.
+\end{enumerate}
+
+i) Prove that there exist unique monic polynomials $p_{0}, p_{1}, p_{2}, \ldots \in \mathbb{R}[x]$ such that each $p_{n}$ has degree $n$ and $\int_{0}^{1} w(x) p_{m}(x) p_{n}(x) d x=0$ for all $m, n \geq 0$ such that $m \neq n$.
+
+ii) Prove that for each $n>0$ the four polynomials $p_{n-1}, p_{n}, x p_{n}, p_{n+1}$ are linearly dependent.
+
+Solution. i) Since $w$ is a continuous real-valued function on a compact set, $w$ attains its infimum; since $w$ takes values in $(0, \infty)$, this infimum is positive. In particular it follows that $(p, q):=\int_{0}^{1} w(x) p(x) q(x) d x$ defines an inner product on $\mathbb{R}[x]$. We can now argue by induction. Base case: $p_{0}$ must be 1 . For $n>0$, assume we have proven existence and uniqueness of $p_{m}$ for $0 \leq m<$ $n$. These are linearly independent (the coefficient matrix is triangular with 1 's on the diagonal), and thus span the $n$-dimensional vector space $\mathcal{P}_{n-1}$ of
+polynomials of degree at most $n-1$. Therefore the condition that $\left(p_{m}, p_{n}\right)=0$ for each $m<n$ means $p_{n}$ is the orthogonal complement of $\mathcal{P}_{n-1}$ in $\mathcal{P}_{n}$. This complement has dimension $(n+1)-n=1$, and intersects $\mathcal{P}_{n-1}$ trivially (if $p$ is in the intersection then $(p, p)=0$ so $p=0)$, so its nonzero elements have nonzero $x^{n}$ coefficients. There is thus a unique choice of $p_{n}$ for which that coefficient is 1 .
+
+ii) Since $\left\{p_{m}: m \leq n+1\right\}$ is a basis for $\mathcal{P}_{n+1}$, we can write $x p_{n}=\sum_{m=0}^{n+1} a_{m} p_{m}$. We claim $a_{m}=0$ for $m<n-1$. Indeed each $a_{m}$ is determined by $a_{m}\left(p_{m}, p_{m}\right)=$ $\left(x p_{n}, p_{m}\right)$, but $\left(x p_{n}, p_{m}\right)=\left(p_{n}, x p_{m}\right)$ which is a positive multiple of the coefficient of $p_{n}$ in the expansion of $x p_{m}$ with respect to the orthogonal basis $p_{0}, p_{1}, p_{2}, \ldots$ for $\mathbb{R}[x]$. If $m<n-1$ then $\operatorname{deg} x p_{m}<n$ so $p_{n}$ does not occur in this expansion, QED.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (AG) Let $\Gamma \subset \mathbb{P}^{n}$ be any closed algebraic variety.
+
+  \item Define the Hilbert function $h_{\Gamma}(m)$.
+
+  \item If $\Gamma=D \cap E \subset \mathbb{P}^{2}$ is the transverse intersection of plane curves $D, E$ of degrees $d$ and $e$, what is the Hilbert function of $\Gamma$ ?
+
+\end{enumerate}
+
+Solution. For the first part, the Hilbert function $h_{\Gamma}(m)$ is defined to be the codimension, in the space $S_{m}$ of homogeneous polynomials of degree $m$ on $\mathbb{P}^{n}$, of the $m$ th graded piece $I(\Gamma)_{m}$ of the homogeneous ideal $I(\Gamma)$.
+
+For the second, if $D$ and $E$ are the curves given by homogeneous polynomials $F$ and $G$, then the homogeneous ideal $I(\Gamma)$ is generated by $F$ and $G$; that is, we have a surjective map
+
+$$
+S_{m-d} \oplus S_{m-e} \stackrel{(F, G)}{\longrightarrow} I(\Gamma)_{m}
+$$
+
+The kernel of this map, moreover, is simply the image of the inclusion $S_{m-d-e} \hookrightarrow$ $S_{m-d} \oplus S_{m-e}$ given by sending $A \in S_{m-d-e}$ to $(G A,-F A)$. Counting dimensions, we have
+
+$$
+h_{\Gamma}(m)=\left(\begin{array}{c}
+m+2 \\
+2
+\end{array}\right)-\left(\begin{array}{c}
+m-d+2 \\
+2
+\end{array}\right)-\left(\begin{array}{c}
+m-e+2 \\
+2
+\end{array}\right)+\left(\begin{array}{c}
+m-d-e+2 \\
+2
+\end{array}\right)
+$$
+
+(note that this is valid for all $m$, if we adopt the convention that the binomial coefficient $\left(\begin{array}{l}a \\ b\end{array}\right)$ is 0 when $a<b$ ).
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (AT) Let $G=\mathbb{Z} / m$ denote a finite cyclic group of odd order $m$. Suppose that we are given a free action of $G$ on $S^{3}$. Compute the homology groups with integer coefficients of of the orbit space $M=S^{3} / G$.
+\end{enumerate}
+
+Solution: By definition, $M$ is a compact connected smooth manifold of dimension 3 , and since $S^{3}$ is simply connected $\pi_{1} M \cong G=\mathbb{Z} / m$. It follows that $H_{0}(M ; \mathbb{Z}) \cong \mathbb{Z}$ and $H_{1}(M ; \mathbb{Z}) \cong\left(\pi_{1} M\right)_{\mathrm{ab}} \cong \mathbb{Z} / m$.
+
+Since $m$ is odd, all maps $\pi_{1} M \cong \mathbb{Z} / m \rightarrow \mathbb{Z} / 2$ are zero, so that $M$ must be orientable. It follows from Poincaré duality that $H_{2}(M ; \mathbb{Z}) \cong H^{1}(M ; \mathbb{Z}) \cong$ $\operatorname{Hom}\left(\pi_{1} M, \mathbb{Z}\right)=0$ and that $H_{3}(M ; \mathbb{Z}) \cong H^{0}(M ; \mathbb{Z}) \cong \mathbb{Z}$. Finally, the homology groups in degrees $\geq 4$ vanish for dimension reasons.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (CA) Let $f(z)$ be an entire function. Assume that for any $z_{0} \in \mathbb{R}$, at least one coefficient in the analytic expansion $f(z)=\sum_{n=0}^{\infty} c_{n}\left(z-z_{0}\right)^{n}$ around $z_{0}$ is equal to zero, i.e. $c_{n}=0$, for some $n \in \mathbb{Z}_{\geq 0}$. Prove that $f$ is a polynomial.
+\end{enumerate}
+
+Solution: By contradiction, assume $f$ is not a polynomial. Observe that the set of roots of any nonzero entire function is countable. Indeed, this follows because the number of roots inside any compact subset of $\mathbb{C}$ is finite (otherwise the roots would accumulate at some point, implying that the entire function is identically zero). Therefore the set $Z_{0}$ of zeroes of $f$ is countable. Moreover, since $f(z)$ is not a polynomial, then all higher derivatives $f^{(n)}(z)$ are nonzero and entire. Then the set $Z_{n}$ of zeroes of $f^{(n)}$ is also countable, for any $n \in \mathbb{Z}_{\geq 1}$. It follows that $\bigcup_{n \geq 0} Z_{n}$ is countable.
+
+But by assumption, for any $z_{0} \in \mathbb{R}$, there exists some $n \in \mathbb{Z}_{\geq 0}$ such that $f^{(n)}\left(z_{0}\right)=n ! \cdot c_{n}=0$. This implies that $\mathbb{R} \subset \bigcup_{n \geq 0} Z_{n}$, and so $\bigcup_{n \geq 0} Z_{n}$ is uncountable. We have reached a contradiction, as needed.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (A) Let $k$ be the finite field $\mathbb{Z} / 13 \mathbb{Z}$; let $C$ be the subgroup $\{1,5,8,12\}$ of $k^{*}$; and let $G$ be the group of 52 permutations of $k$ of the form $g_{a, b}: x \mapsto a x+b$ where $a \in C$ and $b \in k$. Let $(V, \rho)$ be the permutation representation of $G$ acting on complex-valued functions on $k$, and $\chi$ its associated character.
+\end{enumerate}
+
+i) Determine $\chi\left(g_{a, b}\right)$ for all $a \in C$ and $b \in g$, and prove that $\langle\mathbf{1}, \chi\rangle=1$ and $\langle\chi, \chi\rangle=4$. Here $\mathbf{1}$ is the character of the trivial 1-dimensional representation $V_{1}$ of $G$.
+
+ii) Deduce that $V$ is the direct sum of four pairwise non-isomorphic irreducible representations of $G$.
+
+Solution. i) The character of a permutation representation takes any permutation to its number of fixed points. If $a=1$ then $g_{a, b}$ fixes all elements of $k$ if $b=0$, and none otherwise; so $\chi\left(g_{1, b}\right)=13$ or 0 according as $b=0$ or $b \neq 0$.
+
+If $a \neq 1$ then there is a unique fixed point, so $\chi\left(g_{1, b}\right)=1$ for all $b$. Thus
+
+$$
+\begin{gathered}
+\langle\mathbf{1}, \chi\rangle=\frac{1}{|G|} \sum_{g \in G} \chi(g)=\frac{1}{52}(1 \cdot 13+12 \cdot 0+39 \cdot 1)=1 \\
+\langle\chi, \chi\rangle=\frac{1}{|G|} \sum_{g \in G}|\chi(g)|^{2}=\frac{1}{52}\left(1 \cdot 13^{2}+12 \cdot 0^{2}+39 \cdot 1^{2}\right)=4
+\end{gathered}
+$$
+
+as claimed.
+
+ii) Let $V=\oplus_{i} V_{i}^{\oplus n_{i}}$ be a decomposition of $V$ as a direct sum of irreducible representations, with the $V_{i}$ pairwise distinct and $V_{1}$ the trivial representation. Then $n_{0}=\langle\mathbf{1}, \chi\rangle=1$ and $\sum_{i} n_{i}^{2}=\langle\chi, \chi\rangle=4$. Therefore $\sum_{i \neq 0} n_{i}^{2}=4-1=3$. Since $2^{2}=4>3$, this means that each multiplicity $n_{i}$ is either 0 or 1 , so there are three $i \neq 0$ such that $n_{i}=1$ and all other multiplicities are zero.
+
+
+\end{document}
