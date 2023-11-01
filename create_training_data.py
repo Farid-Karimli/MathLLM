@@ -1,6 +1,7 @@
-
 import os
 import openai
+import ast
+import pandas as pd
 
 # Set your OpenAI API key here
 openai.api_key = 'your-api-key'
@@ -58,14 +59,17 @@ definitions_e = {"1.30": "If $a, b$ are real and $z=a+b i$, then the complex num
                 (The existence (and uniqueness) of $|z|$ follows from Theorem 1.21 and part $(d)$ of Theorem 1.31. Note that when $x$ is real, then $\bar{x}=x$,\
                       hence $|x|=\sqrt{x^{2}}$. Thus $|x|=x$ if $x \geq 0,|x|=-x$ if $x<0$.)"}
 
-
 corollaries_e = {}
 
 example_output = {"theorems": theorems_e, "definitions": definitions_e, "corollaries": corollaries_e}
 
+content_example_2 = """"""
+
+example_output_2 = """"""
+
 
 def extract_theorems(chapter_text):
-    global content_example, example_output
+    global content_example, example_output, content_example_2, example_output_2
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-0613",
           messages=[
@@ -82,47 +86,81 @@ def extract_theorems(chapter_text):
          simply fill the proof value as a None type in python. They way you will return all of these\
          is one large dictionary that will have as values {'theorems', 'definitions', 'corollaries'}, and each value of those keys\
          will be the corresponding dictionary."},
-            {"role": "user", "content": f"{content_example}"},
+        {"role": "user", "content": content_example},
         {"role": "assistant", "content": f"{example_output}"},
-        {"role": "user", "content": f"{chapter_text}"}],
+        {"role": "user", "content": content_example_2},
+        {"role": "assistant", "content": f"{example_output_2}"},
+        {"role": "user", "content": chapter_text}],
         temperature=0.01,
     )
     return response.choices[0].message['content'].strip()
 
+example_text_1 = """1.37 (a): Theorem Suppose $\mathrm{x}, \mathrm{y}, \mathrm{z} \in R^{k}$, and $\alpha$ is real. Then $|\mathbf{x}| \geq 0$. Pf: None"""
+
+example_text_2 = """1.37 (d): Theorem Suppose $\mathrm{x}, \mathrm{y}, \mathrm{z} \in R^{k}$, and $\alpha$ is real. Then $|\mathbf{x} \cdot \mathbf{y}| \leq|\mathbf{x}||\mathbf{y}|$. Pf: is an immediate consequence of the Schwarz inequality."""
+
+example_text_3 = """1.37 (e): Theorem Suppose $\mathrm{x}, \mathrm{y}, \mathrm{z} \in R^{k}$, and $\alpha$ is real. Then $|\mathbf{x}+\mathbf{y}| \leq|\mathbf{x}|+|\mathbf{y}|$;. Pf: By $(d)$ we have
+
+$$
+\begin{aligned}
+|x+y|^{2} & =(x+y) \cdot(x+y) \\
+& =x \cdot x+2 x \cdot y+y \cdot y \\
+& \leq|x|^{2}+2|x||y|+|y|^{2} \\
+& =(|\mathbf{x}|+|\mathbf{y}|)^{2}
+\end{aligned}
+$$
+
+so that $(e)$ is proved."""
+
+example_text_4 = """ Theorem 2.24 (b): For any collection $\left\{G_{\alpha}\right\}$ of open sets, $\bigcup_{\alpha} G_{\alpha}$ is open. Proof: By Theorem 2.22,
+
+$$
+(21) \left(\bigcap_{a} F_{a}\right)^{c}=\bigcup_{a}\left(F_{\alpha}^{c}\right),
+$$
+
+and $F_{\alpha}^{c}$ is open, by Theorem 2.23. Hence $(a)$ implies that (21) is open so that $\bigcap_{a} F_{\alpha}$ is closed.
+
+"""
 
 def extract_references(text):
+    global example_text_1, example_text_2, example_text_3, example_text_4
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-0613",
           messages=[
         {"role": "system", "content": "You are a machine that takes as input Math Theorems and returns\
-        any lemmas, previous theorems, or definitions referenced in the theorem's proof. In the provided \
-        math theorem, it will some previous theorems, definitions, and lemmas that are used in constructing \
-        the proof.Your job is to filter the text and just return the names of the definitions, lemmas, \
-        and previous theorems it uses to prove the result. You should only output the names and numbers\
-        of the corresponding  theorems, lemmas, definitions and nothing else. "},
-            {"role": "user", "content": f"Here is the theorem and proof: Theorem: 1.21: Prove that every\
-            euclidean space is a metric space. \
-        Pf: By Lemma 1.18, we have that every euclidean spaces satisfy the triangle inequality."},
-        {"role": "assistant", "content": "Lemma 1.18"},
+        any previous theorems, corollaries, or definitions referenced in the theorem's proof.\
+        Your job is to filter the text and just return the identifying numbers and letters of the definitions, corollaries, \
+        and previous theorems it uses to prove the result. If there is no reference to any previous corollaries, theorems, or definitions \
+        in the proof, then you should return the string None.\
+        If a theorem/definition/corollary is mentioned by name only and no identifying letter or number, just output the name provided.\
+        If a theorem proof only mentions a letter that refers to previous theorem, then the theorem number is the same as the one being proved. \
+        The final format of your returned output should be as follows {'theorems_ref': theorems_ref, 'corollaries_ref': corollaries_ref, 'def_ref':def_ref}, \
+        where theorems_ref is a list containing all the theorem identifying number(s) and (possibly letter)s, and the same for corollaries_ref, and  def_ref."},
+        {"role": "user", "content": example_text_1},
+        {"role": "assistant", "content": "{'theorems_ref': None,'corollaries_ref': None, 'def_ref' None}"},
+        {"role": "user", "content": example_text_2},
+        {"role": "assistant", "content": "{'theorems_ref': None, 'corollaries_ref': None, 'def_ref': ['Schwarz inequality']}"},
+        {"role": "user", "content": example_text_3},
+        {"role": "assistant", "content": "{'theorems_ref': ['1.37 (d)'], 'corollaries_ref': None, 'def_ref': None}"},
+        {"role": "user", "content": example_text_4},
+        {"role": "assistant", "content": "{'theorems_ref': ['2.22', '2.23', '2.24 (a)'], 'corollaries_ref': None, 'def_ref': None}"},
         {"role": "user", "content": f"Here is the theorem and proof: \n{text} \n"}],
         temperature=0.01,
     )
     return response.choices[0].message['content'].strip()
 
 def merge_dictionaries(dict1, dict2):
-    return dict2.update(dict1)
+    return dict1.update(dict2)
 
 def string_to_dicts(theorem_def_corrolaires_text):
-    #code that splits string based on theorem, def, corollaries strings
-    # return theorems, def, corollaries
-    return
+    dictionary = ast.literal_eval(theorem_def_corrolaires_text)
+    return dictionary['theorems'], dictionary['definitions'], dictionary['corollaries']
 
-def process_latex_files(folder_path, output_file, memoized_theorems):
+def process_latex_files(folder_path, output_dir):
     theorems = {}
     definitions = {}
     corollaries = {}
 
-    training_data = []
     for filename in os.listdir(folder_path):
         if filename.endswith('.tex'):
             file_path = os.path.join(folder_path, filename)
@@ -134,21 +172,39 @@ def process_latex_files(folder_path, output_file, memoized_theorems):
                 definitions = merge_dictionaries(definitions, defitions_temp)
                 corollaries = merge_dictionaries(corollaries, corollaries_temp)
     # build up dataframe consisting of these elements
+    theorems_pd = pd.DataFrame.from_dict(theorems)
+    definitions_pd = pd.DataFrame.from_dict(definitions)
+    corollaries_pd =  pd.DataFrame.from_dict(corollaries)
+
+    theorems_pd.to_csv(f"{output_dir}/theorems.csv", encoding='utf-8', index=False)
+    definitions_pd.to_csv(f"{output_dir}/definitions.csv", encoding='utf-8', index=False)
+    corollaries_pd.to_csv(f"{output_dir}/corollaries.csv", encoding='utf-8', index=False)
     return 
 
-    
 
 def main():
-    mathllm_folder = 'path_to_your_MathLLM_folder'
-    real_analysis_folder = os.path.join(mathllm_folder, 'raw_data', 'real_analysis')
-    functional_analysis_folder = os.path.join(mathllm_folder, 'raw_data', 'functional_analysis')
-    training_data_folder = os.path.join(mathllm_folder, 'training_data')
+    # we are working in MathLLM/code/preprocessing directory
+
+    mathllm_folder = os.path.dirname(os.path.dirname(os.getcwd()))
+
+    books = [item for item in os.listdir(mathllm_folder) if os.path.isdir(os.path.join(mathllm_folder, item))]
+    # get list of books
     
-    # Initialize a dictionary to memoize theorems and lemmas
-    memoized_theorems = {}
+    # create training_data folder if not there already
+    training_data_dir = os.path.join(mathllm_folder, "training_data", "")
+    if not os.path.exists(training_data_dir):
+        os.makedirs(training_data_dir)
+
+    # for every book in raw_data, create corresponding folder in training_data folder
+
+    for book in books:
+        temp = os.path.join(training_data_dir, book, "")
+        if not os.path.exists(temp):
+            os.makedirs(temp)
+
+    for book in books: 
+        process_latex_files(os.path.join(mathllm_folder, f'raw_data/{book}'), os.path.join(mathllm_folder, f'training_data/{book}'))
     
-    process_latex_files(real_analysis_folder, os.path.join(training_data_folder, 'real_analysis_training_data.txt'), memoized_theorems)
-    process_latex_files(functional_analysis_folder, os.path.join(training_data_folder, 'functional_analysis_training_data.txt'), memoized_theorems)
 
 if __name__ == "__main__":
     main()
