@@ -1,0 +1,1864 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+\usepackage{bbold}
+
+\begin{document}
+\section{UNBOUNDED OPERATORS}
+\section{Introduction}
+13.1 Definitions Let $H$ be a Hilbert space. By an operator in $H$ we shall now mean a linear mapping $T$ whose domain $\mathscr{D}(T)$ is a subspace of $H$ and whose range $\mathscr{R}(T)$ lies in $H$.
+
+It is not assumed that $T$ is bounded or continuous. Of course, if $T$ is continuous [relative to the norm topology that $\mathscr{D}(T)$ inherits from $H$ ] then $T$ has a continuous extension to the closure of $\mathscr{D}(T)$, hence to $H$, since $\overline{\mathscr{D}(T)}$ is complemented in $H$. In that case, $T$ is the restriction to $\mathscr{D}(T)$ of some member of $\mathscr{B}(H)$.
+
+The graph $\mathscr{G}(T)$ of an operator $T$ in $H$ is the subspace of $H \times H$ that consists of the ordered pairs $\{x, T x\}$, where $x$ ranges over $\mathscr{D}(T)$. Obviously, $S$ is an extension of $T$ [that is, $\mathscr{D}(T) \subset \mathscr{D}(S)$ and $S x=T x$ for $x \in \mathscr{D}(T)$ ] if and only if $\mathscr{G}(T) \subset \mathscr{G}(S)$. This inclusion will often be written in the simpler form
+
+$$
+T \subset S .
+$$
+
+A closed operator in $H$ is one whose graph is a closed subspace of $H \times H$. By the closed graph theorem, $T \in \mathscr{B}(H)$ if and only if $\mathscr{D}(T)=\underline{H}$ and $T$ is closed.
+
+We wish to associate a Hilbert space adjoint $T^{*}$ to $T$. Its domain $\mathscr{D}\left(T^{*}\right)$ is to consist of all $y \in H$ for which the linear functional
+
+$$
+x \rightarrow(T x, y)
+$$
+
+is continuous on $\mathscr{D}(T)$. If $y \in \mathscr{D}\left(T^{*}\right)$, then the Hahn-Banach theorem extends the functional (2) to a continuous linear functional on $H$, and therefore there exists an element $T^{*} y \in H$ that satisfies
+
+$$
+(T x, y)=\left(x, T^{*} y\right) \quad[x \in \mathscr{D}(T)]
+$$
+
+Obviously, $T^{*} y$ will be uniquely determined by (3) if and only if $\mathscr{D}(T)$ is dense in $H$, that is, if and only if $T$ is densely defined. The only operators $T$ that will be given an adjoint $T^{*}$ are therefore the densely defined ones. Routine verifications show then that $T^{*}$ is also an operator in $H$, that is, that $\mathscr{D}\left(T^{*}\right)$ is a subspace of $H$ and that $T^{*}$ is linear.
+
+Ordinary algebraic operations with unbounded operators must be handled with care, because the domains have to be watched. Here are the natural definitions for the domains of sums and products:
+
+$$
+\begin{gathered}
+\mathscr{D}(S+T)=\mathscr{D}(S) \cap \mathscr{D}(T), \\
+\mathscr{D}(S T)=\{x \in \mathscr{D}(T): T x \in \mathscr{D}(S)\} .
+\end{gathered}
+$$
+
+13.2 Theorem Suppose $S, T$, and ST are densely defined operators in H. Then
+
+$$
+T^{*} S^{*} \subset(S T)^{*}
+$$
+
+If, in addition, $S \in \mathscr{B}(H)$, then
+
+$$
+T^{*} S^{*}=(S T)^{*}
+$$
+
+Note that (1) asserts that $(S T)^{*}$ is an extension of $T^{*} S^{*}$. The equality (2) implies that $T^{*} S^{*}$ and $(S T)^{*}$ actually have the same domains.
+
+PROOF Suppose $x \in \mathscr{D}(S T)$ and $y \in \mathscr{D}\left(T^{*} S^{*}\right)$. Then
+
+$$
+\left(T x, S^{*} y\right)=\left(x, T^{*} S^{*} y\right)
+$$
+
+because $x \in \mathscr{D}(T)$ and $S^{*} y \in \mathscr{D}\left(T^{*}\right)$, and
+
+$$
+(S T x, y)=\left(T x, S^{*} y\right)
+$$
+
+because $T x \in \mathscr{D}(S)$ and $y \in \mathscr{D}\left(S^{*}\right)$. Hence
+
+$$
+(S T x, y)=\left(x, T^{*} S^{*} y\right)
+$$
+
+This proves (1).
+
+Assume now that $S \in \mathscr{B}(H)$ and $y \in \mathscr{D}\left((S T)^{*}\right)$. Then $S^{*} \in \mathscr{B}(H)$, so that $\mathscr{D}\left(S^{*}\right)=H$, and
+
+$$
+\left(T x, S^{*} y\right)=(S T x, y)=\left(x,(S T)^{*} y\right)
+$$
+
+for every $x \in \mathscr{D}(S T)$. Hence $S^{*} y \in \mathscr{D}\left(T^{*}\right)$, and therefore $y \in \mathscr{D}\left(T^{*} S^{*}\right)$. Now (2) follows from (1).
+
+13.3 Definition An operator $T$ in $H$ is said to be symmetric if
+
+$$
+(T x, y)=(x, T y)
+$$
+
+whenever $x \in \mathscr{D}(T)$ and $y \in \mathscr{D}(T)$. The densely defined symmetric operators are thus exactly those that satisfy
+
+$$
+T \subset T^{*}
+$$
+
+If $T=T^{*}$, then $T$ is said to be self-adjoint. do not.
+
+These two properties evidently coincide when $T \in \mathscr{B}(H)$. In gencral, they
+
+13.4 : Example Let $H=L^{2}=L^{2}([0,1])$, relative to Lebesgue measure. We define operators $T_{1}, T_{2}$, and $T_{3}$ in $L^{2}$. Their domains are as follows:
+
+$\mathscr{D}\left(T_{1}\right)$ consists of all absolutely continuous functions $f$ on $[0,1]$ with derivative $f^{\prime} \in L^{2}$.
+
+$$
+\begin{aligned}
+& \mathscr{D}\left(T_{2}\right)=\mathscr{D}\left(T_{1}\right) \cap\{f: f(0)=f(1)\} \\
+& \mathscr{D}\left(T_{3}\right)=\mathscr{D}\left(T_{1}\right) \cap\{f: f(0)=f(1)=0\}
+\end{aligned}
+$$
+
+These are dense in $L^{2}$. Define
+
+$$
+T_{k} f=i f^{\prime} \quad \text { for } f \in \mathscr{D}\left(T_{k}\right), k=1,2,3
+$$
+
+We claim that
+
+$$
+T_{1}^{*}=T_{3}, \quad T_{2}^{*}=T_{2}, \quad T_{3}^{*}=T_{1}
+$$
+
+Since $T_{3} \subset T_{2} \subset T_{1}$, it follows that $T_{2}$ is a self-adjoint extension of the symmetric (but not self-adjoint) operator $T_{3}$ and that the extension $T_{1}$ of $T_{2}$ is not symmetric.
+
+Let us prove (2). Note first that
+
+$$
+\left(T_{k} f, g\right)=\int_{0}^{1}\left(i f^{\prime}\right) \bar{g}=\int_{0}^{1} \overline{f\left(i g^{\prime}\right)}=\left(f, T_{m} g\right)
+$$
+
+when $f \in \mathscr{D}\left(T_{k}\right), g \in \mathscr{D}\left(T_{m}\right)$, and $m+k=4$, since then $f(1) \bar{g}(1)=f(0) \bar{g}(0)$. It follows that $T_{m} \subset T_{k}^{*}$, or
+
+$$
+T_{1} \subset T_{3}^{*}, \quad T_{2} \subset T_{2}^{*}, \quad T_{3} \subset T_{1}^{*}
+$$
+
+Suppose now that $g \in \mathscr{D}\left(T_{k}^{*}\right)$ and $\phi=T_{k}^{*} g$. Put $\Phi(x)=\int_{0}^{x} \phi$. Then, for $f \in \mathscr{D}\left(T_{k}\right)$,
+
+$$
+\int_{0}^{1} i f^{\prime} \bar{g}=\left(T_{k} f, g\right)=(f, \phi)=f(1) \overline{\Phi(1)}-\int_{0}^{1} f^{\prime} \bar{\Phi}
+$$
+
+When $k=1$ or 2 , then $\mathscr{D}\left(T_{k}\right)$ contains nonzero constants, so that (5) implies $\Phi(1)=0$. When $k=3$, then $f(1)=0$. It follows, in all cases, that
+
+$$
+i g-\Phi \in \mathscr{R}\left(T_{k}\right)^{\perp}
+$$
+
+Since $\mathscr{R}\left(T_{1}\right)=L^{2}, i g=\Phi$ if $k=1$, and since $\Phi(1)=0$ in that case, $g \in \mathscr{D}\left(T_{3}\right)$. Thus $T_{1}^{*} \subset T_{3}$.
+
+If $k=2$ or 3 , then $\mathscr{R}\left(T_{k}\right)$ consists of all $u \in \underline{I}^{2}$ such that $\int_{0}^{1} u=0$. Thus
+
+$$
+\mathscr{R}\left(T_{2}\right)=\mathscr{R}\left(T_{3}\right)=Y^{\perp}
+$$
+
+where $Y$ is the one-dimensional subspace of $L^{2}$ that contains the constants. Hence (6) implies that $i g-\Phi$ is constant. Thus $g$ is absolutely continuous and $g^{\prime} \in L^{2}$, that is, $g \in \mathscr{D}\left(T_{1}\right)$. Thus $T_{3}^{*} \subset T_{2}$. $T_{1}$
+
+If $k=2$, then $\Phi(1)=0$, hence $g(0)=g(1)$, and $g \in \mathscr{D}\left(T_{2}\right)$. Thus $T_{2}^{*} \subset T_{2}$.
+
+This completes the proof.
+
+Before we turn to a more detailed study of the relations between symmetric operators and self-adjoint ones, we insert another example.
+
+13.5 Example Let $H=L^{2}$, as in Example 13.4, define $D f=f^{\prime}$ for $f \in \mathscr{D}\left(T_{2}\right)$, say (the exact domain is now not very important), and define $(M f)(t)=t f(t)$. Then $(D M-M D) f=f$, or
+
+$$
+D M-M D=I
+$$
+
+where $I$ denotes the identity operator on the domain of $D$.
+
+The identity operator appears thus as a commutator of two operators, of which only one is bounded. The question whether the identity is the commutator of two bounded operators on $H$ arose in quantum mechanics. The answer is negative, not just in $\mathscr{B}(H)$, but in every Banach algebra:
+
+13.6 Theorem If $A$ is a Banach algebra with unit element $e$, if $x \in A$ and $y \in A$, then
+
+$$
+x y-y x \neq e .
+$$
+
+The following proof, due to Wielandt, does not even use the completeness of $A$. PROOF Assume $x y-y x=e$. Make the induction hypothesis
+
+$$
+x^{n} y-y x^{n}=n x^{n-1} \neq 0
+$$
+
+which is assumed to hold for $n=1$. If (1) holds for some positive integer $n$, then $x^{n} \neq 0$ and
+
+$$
+\begin{aligned}
+x^{n+1} y-y x^{n+1} & =x^{n}(x y-y x)+\left(x^{n} y-y x^{n}\right) x \\
+& =x^{n} e+n x^{n-1} x=(n+1) x^{n}
+\end{aligned}
+$$
+
+so that (1) holds with $n+1$ in place of $n$. It follows that
+
+$$
+n\left\|x^{n-1}\right\|=\left\|x^{n} y-y x^{n}\right\| \leq 2\left\|x^{n}\right\|\|y\| \leq 2\left\|x^{n-1}\right\|\|x\|\|y\|
+$$
+
+or $n \leq 2\|x\|\|y\|$, for every positive integer $n$. This is obviously impossible. I/!
+
+\section{Graphs and Symmetric Operators}
+13.7 Graphs If $H$ is a Hilbert space, then $H \times H$ can be made into a Hilbert space by defining the inner product of two elements $\{a, b\}$ and $\{c, d\}$ of $H \times H$ to be
+
+$$
+(\{a, b\},\{c, d\})=(a, c)+(b, d)
+$$
+
+where $(a, c)$ denotes the inner product in $H$. We leave it as an exercise to verify that this satisfies all the properties listed in Section 12.1. In particular, the norm in $H \times H$ is given by
+
+Define
+
+$$
+\|\{a, b\}\|^{2}=\|a\|^{2}+\|b\|^{2} .
+$$
+
+$$
+V\{a, b\}=\{-b, a\} \quad(a \in H, b \in H)
+$$
+
+Then $V$ is a unitary operator on $H \times H$, which satisfies $V^{2}=-I$. Thus $V^{2} M=M$ if $M$ is any subspace of $H \times H$.
+
+This operator yields a remarkable description of $T^{*}$ in terms of $T$ :
+
+\subsection{Theorem If $T$ is a densely defined operator in $H$, then}
+$$
+\mathscr{S}\left(T^{*}\right)=[V \mathscr{G}(T)]^{\perp}
+$$
+
+the orthogonal complement of $V \mathscr{G}(T)$ in $H \times H$.
+
+Note that once $\mathscr{G}\left(T^{*}\right)$ is known, so arc $\mathscr{D}\left(T^{*}\right)$ and $T^{*}$.
+
+PROOF Each of the following four statements is clearly equivalent to the one that follows and/or precedes it.
+
+$$
+\begin{gathered}
+\{y, z\} \in \mathscr{G}\left(T^{*}\right) \\
+(T x, y)=(x, z) \quad \text { for every } x \in \mathscr{D}(T) \\
+(\{-T x, x\},\{y, z\})=0 \quad \text { for every } x \in \mathscr{D}(T) \\
+\{y, z\} \in[V \mathscr{G}(T)]^{\perp}
+\end{gathered}
+$$
+
+13.9 Theorem If $T$ is a densely defined operator in $H$, then $T^{*}$ is a closed operator. In particular, self-adjoint operators are closed.
+
+PROOF $M^{\perp}$ is closed, for every $M \subset H \times H$. Hence $\mathscr{G}\left(T^{*}\right)$ is closed in $H \times H$, by Theorem 13.8.
+
+13.10 Theorem If $T$ is a densely defined closed operator in $H$, then
+
+$$
+H \times H=V \mathscr{G}(T) \oplus \mathscr{G}\left(T^{*}\right)
+$$
+
+a direct sum of two orthogonal subspaces.
+
+PROOF If $\mathscr{G}(T)$ is closed, so is $V \mathscr{G}(T)$, since $V$ is unitary, and therefore Theorem 13.8 implies that $V \mathscr{G}(T)=\left[\mathscr{G}\left(T^{*}\right)\right]^{\perp}$; see Theorem 12.4.
+
+Corollary If $a \in H$ and $b \in H$, the system of equations
+
+$$
+\begin{array}{r}
+-T x+y=a \\
+x+T^{*} y=b
+\end{array}
+$$
+
+has a unique solution with $x \in \mathscr{D}(T)$ and $y \in \mathscr{D}\left(T^{*}\right)$.
+
+Our next theorem states some conditions under which a symmetric operator is self-adjoint.
+
+13.11 Theorem Suppose $T$ is a densely defined operator in $H$, and $T$ is symmetric.
+
+(a) If $\mathscr{D}(T)=H$, then $T$ is self-adjoint and $T \in \mathscr{B}(H)$.
+
+(b) If $T$ is self-adjoint and one-to-one, then $\mathscr{R}(T)$ is dense in $H$, and $T^{-1}$ is selfadjoint.
+
+(c) If $\mathscr{R}(T)$ is dense in $H$, then $T$ is one-to-one.
+
+(d) If $\mathscr{R}(T)=H$, then $T$ is self-adjoint, and $T^{-1} \in \mathscr{B}(H)$.
+
+PROOF (a) By assumption, $T \subset T^{*}$. If $\mathscr{D}(T)=H$, it is thus obvious that $T=T^{*}$. Hence $T$ is closed (Theorem 13.9) and therefore continuous, by the closed graph theorem. (We could also refer to Theorem 5.1.)
+
+(b) Suppose $y \perp \mathscr{R}(T)$. Then $x \rightarrow(T x, y)=0$ is continuous in $\mathscr{D}(T)$, hence $y \in \mathscr{D}\left(T^{*}\right)=\mathscr{D}(T)$, and $(x, T y)=(T x, y)=0$ for all $x \in \mathscr{D}(T)$. Thus $T y=0$. Since $T$ is assumed to be one-to-one, it follows that $y=0$. This proves that $\mathscr{R}(T)$ is dense in $H$.
+
+$T^{-1}$ is therefore densely defined, with $\mathscr{D}\left(T^{-1}\right)=\mathscr{R}(T)$, and $\left(T^{-1}\right)^{*}$ exists. The relations
+
+$$
+\mathscr{G}\left(T^{-1}\right)=V \mathscr{G}(-T) \quad \text { and } \quad V \mathscr{G}\left(T^{-1}\right)=\mathscr{G}(-T)
+$$
+
+are easily verified. Since $T$ is self-adjoint, so is $-T$. Hence Theorem 13.10, applied to $T^{-1}$ and to $-T$, yields the orthogonal decompositions
+
+$$
+H \times H=V \mathscr{G}\left(T^{-1}\right) \oplus \mathscr{G}\left(\left(T^{-1}\right)^{*}\right)
+$$
+
+and
+
+$$
+H \times H=V \mathscr{G}(-T) \oplus \mathscr{G}(-T)=\mathscr{G}\left(T^{-1}\right) \oplus V \mathscr{G}\left(T^{-1}\right)
+$$
+
+Consequently,
+
+$$
+\mathscr{G}\left(\left(T^{-1}\right)^{*}\right)=\left[V \mathscr{G}\left(T^{-1}\right)\right]^{\perp}=\mathscr{G}\left(T^{-1}\right)
+$$
+
+which shows that $\left(T^{-1}\right)^{*}=T^{-1}$.
+
+(c) Suppose $T x=0$. Then $(x, T y)=(T x, y)=0$ for every $y \in \mathscr{\mathscr { D }}(T)$. Thưs $x \perp \mathscr{R}(T)$, and therefore $x=0$.
+
+(d) Since $\mathscr{R}(T)=H,(c)$ implies that $T$ is one-to-one, and $\mathscr{D}\left(T^{-1}\right)=H$. If $x \in H$ and $y \in H$, then $x=T z$ and $y=T w$, for some $z \in \mathscr{D}(T)$ and $w \in \mathscr{D}(T)$, so that
+
+$$
+\left(T^{-1} x, y\right)=(z, T w)=(T z, w)=\left(x, T^{-1} y\right)
+$$
+
+Hence $T^{-1}$ is symmetric, (a) implies that $T^{-1}$ is self-adjoint (and bounded), and now it follows from $(b)$ that $T=\left(T^{-1}\right)^{-1}$ is also self-adjoint.
+
+13.12 Theorem If $T$ is a densely defined closed operator in $H$, then $\mathscr{D}\left(T^{*}\right)$ is dense and $T^{* *}=T$.
+
+PROOF Since $V$ is unitary, and $V^{2}=-I$, Theorem 13.10 gives the orthogonal decomposition
+
+$$
+H \times H=\mathscr{G}(T) \oplus V \mathscr{G}\left(T^{*}\right)
+$$
+
+Suppose $z \perp \mathscr{D}\left(T^{*}\right)$. Then $(z, y)=0$ and therefore
+
+$$
+\left(\{0, z\},\left\{-T^{*} y, y\right\}\right)=0
+$$
+
+for all $y \in \mathscr{D}\left(T^{*}\right)$. Thus $\{0, z\} \in\left[V \mathscr{G}\left(T^{*}\right)\right]^{\perp}=\mathscr{G}(T)$, which implies that $z=T(0)=0$. Consequently, $\mathscr{D}\left(T^{*}\right)$ is dense in $H$, and $T^{* *}$ is defined.
+
+Another application of Theorem 13.10 gives therefore
+
+$$
+H \times H=V \mathscr{G}\left(T^{*}\right) \oplus \mathscr{G}\left(T^{* *}\right)
+$$
+
+By (1) and (3),
+
+$$
+\mathscr{G}\left(T^{* *}\right)=\left[V \mathscr{G}\left(T^{*}\right)\right]^{\perp}=\mathscr{G}(T)
+$$
+
+so that $T^{* *}=T$.
+
+We shall now see that operators of the form $T^{*} T$ have interesting properties. In particular, $\mathscr{D}\left(T^{*} T\right)$ cannot be very small.
+
+13.13 Theorem Suppose $T$ is a densely defined closed operator in $H$, and $Q=I+T^{*} T$.
+
+(a) Under these assumptions, $Q$ is a one-to-one mapping of
+
+$$
+\mathscr{D}(Q)=\mathscr{D}\left(T^{*} T\right)=\left\{x \in \mathscr{D}(T): T x \in \mathscr{D}\left(T^{*}\right)\right\}
+$$
+
+onto $H$, and there are operators $B \in \mathscr{B}(H), C \in \mathscr{B}(H)$ that satisfy $\|B\| \leq 1$, $\|C\| \leq 1, C=T B$, and
+
+$$
+B\left(I+T^{*} T\right) \subset\left(I+T^{*} T\right) B=I .
+$$
+
+Also, $B \geq 0$, and $T^{*} T$ is self-adjoint.
+
+(b) If $T^{\prime}$ is the restriction of $T$ to $\mathscr{D}\left(T^{*} T\right)$, then $\mathscr{G}\left(T^{\prime}\right)$ is denise in $\mathscr{G}(T)$.
+
+Here, and in the sequel, the letter $I$ denotes the identity operator with domain $H$.
+
+PROOF If $x \in \mathscr{D}(Q)$ then $T x \in \mathscr{D}\left(T^{*}\right)$, so that
+
+$$
+(x, x)+(T x, T x)=(x, x)+\left(x, T^{*} T x\right)=(x, Q x)
+$$
+
+Therefore $\|x\|^{2} \leq\|x\|\|Q x\|$, which shows that $Q$ is one-to-one.
+
+By Theorem 13.10 there corresponds to every $h \in H$ a unique vector $B h \in \mathscr{D}(T)$ and a unique $C h \in \mathscr{D}\left(T^{*}\right)$ such that
+
+$$
+\{0, \bar{h}\}=\{-T \bar{B} h, B \bar{h}\}+\left\{C h, T^{*} C h\right\} .
+$$
+
+It is clear that $B$ and $C$ are lincar operators in $H$, with domain $H$. The two vectors on the right of (3) are orthogonal to each other (Theorem 13.10). The definition of the norm in $H \times H$ implies therefore that
+
+$$
+\|h\|^{2} \geq\|B h\|^{2}+\|C h\|^{2} \quad(h \in H)
+$$
+
+so that $\|B\| \leq 1$ and $\|C\| \leq 1$.
+
+Consideration of the components in (3) shows that $C=T B$ and that
+
+$$
+h=B h+T^{*} C h=B h+T^{*} T B h=Q B h
+$$
+
+for every $h \in H$. Hence $Q B=I$. In particular, $B$ is a one-to-one mapping of $H$ onto $\mathscr{D}(Q)$. If $y \in \mathscr{D}(Q)$, then $y=B h$ for some $h \in H$, hence $Q y=Q B h=h$, and $B Q y=B h=y$. Thus $B Q \subset I$, and (1) is proved.
+
+If $h \in H$, then $h \in Q x$ for some $x \in \mathscr{D}(Q)$, so that
+
+$$
+(B h, h)=(B Q x, Q x)=(x, Q x) \geq 0,
+$$
+
+by (2). Thus $B \geq 0, B$ is self-adjoint (Theorem 12.32), and now ( $b$ ) of Theorem 13.11 shows that $Q$ is self-adjoint, hence so is $T^{*} T=Q-I$.
+
+This completes the proof of part $(a)$.
+
+Since $T$ is a closed operator, $\mathscr{G}(T)$ is a closed subspace of $H \times H$; hence $\mathscr{G}(T)$ is a Hilbert space. Assume $\{z, T z\} \in \mathscr{G}(T)$ is orthogonal to $\mathscr{G}\left(T^{\prime}\right)$. Then, for every $x \in \mathscr{D}\left(T^{*} T\right)=\mathscr{D}(Q)$,
+
+$$
+0=(\{z, T z\},\{x, T x\})=(z, x)+(T z, T x)=(z, x)+\left(z, T^{*} T x\right)=(z, Q x)
+$$
+
+But $\mathscr{R}(Q)=H$. Hence $z=0$. This proves $(b)$.
+
+13.14 Definition A symmetric operator $T$ in $H$ is said to be maximally symmetric if $T$ has no proper symmetric extension, i.e., if the assumptions
+
+$$
+T \subset S, S \text { symmetric }
+$$
+
+imply that $S=T$.
+
+\subsection{Theorem Self-adjoint operators are maximally symmetric.}
+PROOF Suppose $T$ is self-adjoint, $S$ is symmetric (that is, $S \subset S^{*}$ ), and $T \subset S$. This inclusion implies obviously (by the very definition of the adjoint) that $S^{*} \subset T^{*}$. Hence
+
+which proves that $S=T$.
+
+$$
+S \subset S^{*} \subset T^{*}=T \subset S,
+$$
+
+13.16 Theorem If $T$ is a symmetric operator in $H$ (not necessarily densely defined), the following statements are true.
+
+(a) $\|T x+i x\|^{2}=\|x\|^{2}+\|T x\|^{2} \quad[x \in \mathscr{D}(T)]$.
+
+(b) T is a closed operator if and only if $\mathscr{R}(T+i I)$ is closed.
+
+(c) $T+i$ is one-to-one.
+
+(d) If $\mathscr{R}(T+i I)=H$, then $T$ is maximally symmetric.
+
+(e) The preceding statements are also true if $i$ is replaced by $-i$. PROOF Statement $(a)$ follows from the identity
+
+$$
+\|T x+i x\|^{2}=\|x\|^{2}+\|T x\|^{2}+(i x, T x)+(T x, i x),
+$$
+
+combined with the symmetry of $T$. By $(a)$,
+
+$$
+(T+i I) x \leftrightarrow\{x, T x\}
+$$
+
+is an isometric one-to-one correspondence between the range of $T+i I$ and the graph of $T$. This proves $(b)$. Next, $(c)$ is also an immediate consequence of $(a)$. If $\mathscr{R}(T+i I)=H$ and $T_{1}$ is a proper extension of $T$ [that is, $\mathscr{D}(T)$ is a proper subset of $\mathscr{D}\left(T_{1}\right)$ ], then $T_{1}+i I$ is a proper extension of $T+i I$ which cannot be one-to-one. By $(c), T_{1}$ is not symmetric. This proves $(d)$.
+
+It is clear that this proof is equally valid with $-i$ in place of $i$. //I/
+
+\section{The Cayley Transform}
+\subsection{Definition The mapping}
+$$
+t \rightarrow \frac{t-i}{t+i}
+$$
+
+sets up a one-to-one correspondence between the real line and the unit circle (minus the point 1). The symbolic calculus studied in Chapter 12 shows therefore that every self-adjoint $T \in \mathscr{B}(H)$ gives rise to a unitary operator
+
+$$
+U=(T-i I)(T+i I)^{-1}
+$$
+
+and that every unitary $U$ whose spectrum does not contain the point 1 is obtained in this way.
+
+This relation $T \leftrightarrow U$ will now be extended to a one-to-one correspondence between symmetric operators, on the one hand, and isometries, on the other.
+
+Let $T$ be a symmetric operator in $H$. Theorem 13.16 shows that
+
+$$
+\|T x+i x\|^{2}=\|x\|^{2}+\|T x\|^{2}=\|T x-i x\|^{2} \quad(x \in \mathscr{D}(T))
+$$
+
+Hence there is an isometry $U$, with
+
+$$
+\mathscr{D}(U)=\mathscr{R}(T+i I), \quad \mathscr{R}(U)=\mathscr{R}(T-i I)
+$$
+
+defined by
+
+$$
+U(T x+i x)=T x-i x \quad(x \in \mathscr{D}(T))
+$$
+
+Since $(T+i I)^{-1}$ maps $\mathscr{D}(U)$ onto $\mathscr{D}(T), U$ can also be written in the form
+
+$$
+U=(T-i I)(T+i I)^{-1} .
+$$
+
+This operator $U$ is called the Cayley transform of $T$. Its main features are summarized in Theorem 13.19. It will lead to an easy proof of the spectral theorem for self-adjoint (not necessarily bounded) operators.
+
+13.18 Lemma Suppose $U$ is an operator in $H$ which is an isometry: $\|U x\|=\|x\|$ for every $x \in \mathscr{D}(U)$.
+
+(a) If $x \in \mathscr{D}(U)$ and $y \in \mathscr{D}(U)$, then $(U x, U y)=(x, y)$.
+
+(b) If $\mathscr{R}(I-U)$ is dense in $H$, then $I-U$ is one-to-one.
+
+(c) If any one of the three spaces $\mathscr{D}(U), \mathscr{R}(U)$, and $\mathscr{G}(U)$ is closed, so are the other two.
+
+PROOF Any of the identities listed in Exercise 2 of Chapter 12 proves $(a)$. To prove $(b)$, suppose $x \in \mathscr{D}(U)$ and $(I-U) x=0$, that is, $x=U x$. Then
+
+$$
+(x,(I-U) y)=(x, y)-(x, U y)=(U x, U y)-(x, U y)=0
+$$
+
+for every $y \in \mathscr{D}(U)$. Thus $x \perp \mathscr{R}(I-U)$, so that $x=0$ if $\mathscr{R}(I-U)$ is dense in $H$. The proof of $(c)$ is left as an exercise.
+
+13.19 Theorem Suppose $U$ is the Cayley transform of a symmetric operator $T$ in H. Then the following statements are true.
+
+(a) $U$ is closed if and only if $T$ is closed.
+
+(b) $\mathscr{R}(I-U)=\mathscr{D}(T), I-U$ is one-to-one, and $T$ can be reconstructed from $U$ by the formula
+
+$$
+T=i(I+U)(I-U)^{-1}
+$$
+
+(The Cayley transforms of distinct symmetric operators are therefore distinct.)
+
+(c) $U$ is unitary if and only if $T$ is self-adjoint.
+
+Conversely, if $V$ is an operator in $H$ which is an isometry, and if $I-V$ is one-toone, then $V$ is the Cayley transform of a symmetric operator in $H$.
+
+PRoof By Theorem 13.16, $T$ is closed if and only if $\mathscr{R}(T+i I)$ is closed. By Lemma 13.18, $U$ is closed if and only if $\mathscr{D}(U)$ is closed. Since $\mathscr{D}(U)=\mathscr{R}(T+i I)$, by the definition of the Cayley transform, $(a)$ is proved.
+
+\begin{itemize}
+  \item The one-to-one correspondence $x \leftrightarrow z$ between $\mathscr{D}(T)$ and $\mathscr{D}(U)=$ $\mathscr{R}(T+i)$, given by
+\end{itemize}
+
+$$
+z=T x+i x, \quad U z=T x-i x
+$$
+
+can be rewritten in the form
+
+$$
+(I-U) z=2 i x, \quad(I+U) z=2 T x
+$$
+
+This shows that $I-U$ is one-to-one, that $\mathscr{R}(I-U)=\mathscr{D}(T)$, so that $(I-U)^{-1}$ maps $\mathscr{D}(T)$ onto $\mathscr{D}(U)$, and that
+
+$$
+2 T x=(I+U) z=(I+U)(I-U)^{-1}(2 i x) \quad[x \in \mathscr{D}(T)]
+$$
+
+This proves $(b)$.
+
+Assume now that $T$ is self-adjoint. Then
+
+$$
+\mathscr{R}\left(I+T^{2}\right)=H
+$$
+
+by Theorem 13.13. Since
+
+$$
+(T+i I)(T-i I)=I+T^{2}=(T-i I)(T+i I)
+$$
+
+[the three operators (5) have domain $\mathscr{D}\left(T^{2}\right)$ ], it follows from (4) that
+
+$$
+\mathscr{D}(U)=\mathscr{R}(T+i I)=H
+$$
+
+and
+
+$$
+\mathscr{R}(U)=\mathscr{R}(T-i I)=H \text {. }
+$$
+
+Since $U$ is an isometry, (6) and (7) imply that $U$ is unitary (Theorem 12.13). To complete the proof of $(c)$, assume that $U$ is unitary. Then
+
+$$
+[\mathscr{R}(I-U)]^{\perp}=\mathscr{N}(I-U)=\{0\}
+$$
+
+by (b) and the normality of $I-U$ (Theorem 12.12), so that $\mathscr{D}(T)=\mathscr{R}(I-U)$ is dense in $H$. Thus $T^{*}$ is defined, and $T \subset T^{*}$.
+
+Fix $y \in \mathscr{D}\left(T^{*}\right)$. Since $\mathscr{R}(T+i I)=\mathscr{D}(U)=H$, there exists $y_{0} \in \mathscr{D}(T)$ such that
+
+$$
+\left(T^{*}+i I\right) y=(T+i I) y_{0}=\left(T^{*}+i I\right) y_{0} \text {. }
+$$
+
+The last equality holds because $T \subset T^{*}$. If $y_{1}=y-y_{0}$, then $y_{1} \in \mathscr{D}\left(T^{*}\right)$ and, for every $x \in \mathscr{D}(T)$,
+
+$$
+\left((T-i I) x, y_{1}\right)=\left(x,\left(T^{*}+i I\right) y_{1}\right)=(x, 0)=0 .
+$$
+
+Thus $y_{1} \perp \mathscr{R}(T-i I)=\mathscr{R}(U)=H$, and so $y_{1}=0$, and $y=y_{0} \in \mathscr{D}(T)$.
+
+Hence $T^{*} \subset T$, and $(c)$ is proved.
+
+Finally, let $V$ be as in the statement of the converse. Then there is a oneto-one correspondence $z \leftrightarrow x$ between $\mathscr{D}(V)$ and $\mathscr{R}(I-V)$, given by
+
+$$
+x=z-V z
+$$
+
+Define $S$ on $\mathscr{D}(S)=\mathscr{R}(I-V)$ by
+
+$$
+S x=i(z+V z) \quad \text { if } x=z-V z .
+$$
+
+If $x \in \mathscr{D}(S)$ and $y \in \mathscr{D}(S)$, then $x=z-V z$ and $y=u-V u$ for some $z \in \mathscr{D}(V)$ and $u \in \mathscr{D}(V)$. Since $V$ is an isometry, it now follows from $(a)$ of Lemma 13.18 that
+
+$$
+\begin{aligned}
+(S x, y) & =i(z+V z, u-V u)=i(V z, u)-i(z, V u) \\
+& =(z-V z, i u+i V u)=(x, S y) .
+\end{aligned}
+$$
+
+Hence $S$ is symmetric. Since (12) can be written in the form
+
+$$
+2 i V z=S x-i x, \quad 2 i z=S x+i x \quad[z \in \mathscr{D}(V)]
+$$
+
+we see that
+
+$$
+V(S x+i x)=S x-i x \quad[x \in \mathscr{D}(S)]
+$$
+
+and that $\mathscr{D}(V)=\mathscr{R}(S+i I)$. Therefore $V$ is the Cayley transform of $S$.
+
+13.20 The deficiency indices If $U_{1}$ and $U_{2}$ are Cayley transforms of symmetric operators $T_{1}$ and $T_{2}$, it is clear that $T_{1} \subset T_{2}$ if and only if $U_{1} \subset U_{2}$. Problems about symmetric extensions of symmetric operators reduce therefore to (usually easier) problems about extensions of isometries.
+
+For example, every isometry $U$ extends (uniquely) to an isometry whose domain is the closure of $\mathscr{D}(U)$. Therefore it follows from $(a)$ of Theorem 13.19 that every symmetric operator in $H$ has a closed symmetric extension.
+
+Let us now consider a closed and densely defined symmetric operator $T$ in $H$, with Cayley transform $U$. Then $\mathscr{R}(T+i I)$ and $\mathscr{R}(T-i I)$ are closed, and $U$ is an isometry carrying the first onto the second. The dimensions of the orthogonal complements of these two spaces are called the deficiency indices of $T$. (The dimension of a Hilbert space is, by definition, the cardinality of any one of its orthonormal bases.)
+
+Since $\mathscr{R}(I-U)=\mathscr{D}(T)$ is now assumed to be dense in $H$, every isometric extension $U_{1}$ of $U$ has $\mathscr{R}\left(I-U_{1}\right)$ dense in $H$, so that $I-U_{1}$ is one-to-one (Lemma 13.18) and $U_{1}$ is the Cayley transform of a symmetric extension $T_{1}$ of $T$.
+
+The following three statements are easy consequences of Theorem 13.19 and the preceding discussion; we still assume that $T$ is closed, symmetric, and densely defined.
+
+(a) T is self-adjoint if and only if both its deficiency indices are 0.
+
+(b) $T$ is maximally symmetric if and only if at least one of its deficiency indices is. 0 .
+
+(c) $T$ has a self-adjoint extension if and only if its two deficiency indices are equal.
+
+The proofs of $(a)$ and $(b)$ are obvious. To see $(c)$, use $(c)$ of Theorem 13.19 and note that every unitary extension of $U$ must be an isometry of $[\mathscr{R}(T+i I)]^{\perp}$ onto $[\mathscr{R}(T-i I)]^{\perp}$.
+
+13.21 Example Let $V$ be the right shift on $\ell^{2}$. Then $V$ is an isometry and $I-V$ is one-to-one (Chapter 12, Exercise 18), and so $V$ is the Cayley transform of a symmetric operator $T$. Since $\mathscr{D}(V)=\ell^{2}$ and $\mathscr{R}(V)$ has codimension 1 , the deficiency indices of $T$ are 0 and 1.
+
+This provides us with an example of a densely defined, maximally symmetric, closed operator $T$ which is not self-adjoint.
+
+\section{Resolutions of the Identity}
+13.22 Notation $\mathfrak{M}$ will now be a $\sigma$-algebra in a set $\Omega, H$ will be a Hilbert space, and $E: \mathfrak{M} \rightarrow B(H)$ will be a resolution of the identity, with all the properties listed in Definition 12.17. Theorem 12.21 describes a symbolic calculus which associates to every $f \in L^{\infty}(E)$ an operator $\Psi(f) \in \mathscr{B}(H)$, by the formula
+
+$$
+(\Psi(f) x, y)=\int_{\Omega} f d E_{x, y} \quad(x \in H, y \in H)
+$$
+
+This will now be extended to unbounded measurable functions $f$ (Theorem 13.24). We shall use the same notations as in Definition 12.17.
+
+13.23 Lemma Let $f: \Omega \rightarrow \mathbb{C}$ be measurable. Put
+
+$$
+\mathscr{D}_{f}=\left\{x \in H: \int_{\Omega}|f|^{2} d E_{x, x}<\infty\right\} .
+$$
+
+Then $\mathscr{D}_{f}$ is a dense subspace of $H$. If $x \in H$ and $y \in H$, then
+
+$$
+\int_{\Omega}|f| d\left|E_{x, y}\right| \leq\|y\|\left\{\int_{\Omega}|f|^{2} d E_{x, x}\right\}^{1 / 2}
+$$
+
+If $f$ is bounded and $v=\Psi(f) z$, then
+
+$$
+d E_{x, v}=\bar{f} d \dot{E}_{x, z} \quad(x \in H, z \in H) .
+$$
+
+PROOF If $z=x+y$, and $\omega \in \mathfrak{M}$, then
+
+$$
+\|E(\omega) z\|^{2} \leq(\|E(\omega) x\|+\|E(\omega) y\|)^{2} \leq 2\|E(\omega) x\|^{2}+2\|E(\omega) y\|^{2}
+$$
+
+or
+
+$$
+E_{z, z}(\omega) \leq 2 E_{x, x}(\omega)+2 E_{y, y}(\omega)
+$$
+
+It follows that $\mathscr{D}_{\boldsymbol{f}}$ is closed under addition. Scalar multiplication is even easier. Thus $\mathscr{D}_{f}$ is a subspace of $H$.
+
+For $n=1,2,3, \ldots$, let $\omega_{n}$ be the subset of $\Omega$ in which $|f|<n$. If $x \in \mathscr{R}\left(E\left(\omega_{n}\right)\right)$ then
+
+$$
+E(\omega) x=E(\omega) E\left(\omega_{n}\right) x=E\left(\omega \cap \omega_{n}\right) x
+$$
+
+so that
+
+$$
+E_{x, x}(\omega)=E_{x, x}\left(\omega \cap \omega_{n}\right) \quad(\omega \in \mathfrak{M})
+$$
+
+and therefore
+
+$$
+\int_{\Omega}|f|^{2} d E_{x, x}=\int_{\omega_{n}}|f|^{2} d E_{x, x} \leq n^{2}\|x\|^{2}<\infty
+$$
+
+Thus $\mathscr{R}\left(E\left(\omega_{n}\right)\right) \subset \mathscr{D}_{f}$. Since $\Omega=\bigcup_{n=1}^{\infty} \omega_{n}$, the countable additivity of $\omega \rightarrow E(\omega) y$ implies that $y=\lim E\left(\omega_{n}\right) y$ for every $y \in H$, so that $y$ lies in the closure of $\mathscr{D}_{\boldsymbol{f}}$. Hence $\mathscr{D}_{f}$ is dense.
+
+If $x \in H, y \in H$, and $f$ is a bounded measurable function on $\Omega$, the RadonNikodym theorem [23] shows that there is a measurable function $u$ on $\Omega$, with $|u|=1$, such that
+
+$$
+u f d E_{x, y}=|f| d\left|E_{x, y}\right|
+$$
+
+Hence
+
+$$
+\int_{\Omega}|f| d\left|E_{x, y}\right|=(\Psi(u f) x, y) \leq\|\Psi(u f) x\|\|y\| .
+$$
+
+By Theorem 12.21,
+
+$$
+\|\Psi(u f) x\|^{2}=\int_{\Omega}|u f|^{2} d E_{x, x}=\int_{\Omega}|f|^{2} d E_{x, x} .
+$$
+
+Now (9) and (10) give (2) for bounded $f$. The general case follows from this.
+
+Finally (3) holds because
+
+$$
+\begin{aligned}
+\int_{\Omega} g d E_{x, v} & =(\Psi(g) x, v)=(\Psi(g) x, \Psi(f) z) \\
+& =(\Psi(\bar{f}) \Psi(g) x, z)=(\Psi(\bar{f} g) x, z)=\int_{\Omega} g \bar{f} d E_{x, z}
+\end{aligned}
+$$
+
+for every bounded measurable $g$, by Theorem 12.21 .
+
+13.24 Theorem Let $E$ be a resolution of the identity, on a set $\Omega$.
+
+(a) To every measurable $f: \Omega \rightarrow \mathbb{C}$ corresponds a densely defined closed operator $\Psi(f)$ in $H$, with domain $\mathscr{D}(\Psi(f))=\mathscr{D}_{f}$, which is characterized by
+
+$$
+(\Psi(f) x, y)=\int_{\Omega} f d E_{x, y} \quad\left(x \in \mathscr{D}_{f}, y \in H\right)
+$$
+
+and which satisfies
+
+$$
+\|\Psi(f) x\|^{2}=\int_{\Omega}|f|^{2} d E_{x, x} \quad\left(x \in \mathscr{D}_{f}\right) .
+$$
+
+(b) The multiplication theorem holds in the following form: If $f$ and $g$ are measurable, then
+
+$$
+\Psi(f) \Psi(g) \subset \Psi(f g) \quad \text { and } \quad \mathscr{D}(\Psi(f) \Psi(g))=\mathscr{D}_{g} \cap \mathscr{D}_{f g}
+$$
+
+Hence $\Psi(f) \Psi(g)=\Psi(f g)$ if and only if $\mathscr{D}_{f g} \subset \mathscr{D}_{g}$.
+
+(c) For every measurable $f: \Omega \rightarrow \mathbb{C}$,
+
+$$
+\Psi(f)^{*}=\Psi(\bar{f})
+$$
+
+and
+
+$$
+\Psi(f) \Psi(f)^{*}=\Psi\left(|f|^{2}\right)=\Psi(f)^{*} \Psi(f)
+$$
+
+PROOF If $x \in \mathscr{D}_{f}$ then $y \rightarrow \int_{\Omega} f d E_{x, y}$ is a bounded conjugate-linear functional on $H$, whose norm is at most $\left(\int|f|^{2} d E_{x, x}\right)^{1 / 2}$, by (2) of Lemma 13.23. It follows that there is a unique element $\Psi(f) x \in H$ that satisfies (1) for every $y \in H$ and that
+
+$$
+\|\Psi(f) x\|^{2} \leq \int_{\underline{\Omega}}|f|^{2} d E_{x, x} \quad\left(x \in \mathscr{D}_{f}\right) .
+$$
+
+The linearity of $\Psi(f)$ on $\mathscr{D}_{f}$ follows from (1), since $E_{x, y}$ is linear in $x$.
+
+Associate with each $f$ its truncations $f_{n}=f \phi_{n}$, where $\phi_{n}(p)=1$ if $|f(p)| \leq n$, $\phi_{n}(p)=0$ if $|f(p)|>n$.
+
+Then $\mathscr{D}_{f-f_{n}}=\mathscr{D}_{f}$, since each $f_{n}$ is bounded, and therefore (6) shows, by the dominated convergence theorem, that
+
+$$
+\left\|\Psi(f) x-\Psi\left(f_{n}\right) x\right\|^{2} \leq \int_{\Omega}\left|f-f_{n}\right|^{2} d E_{x, \dot{x}} \rightarrow 0 \quad \text { as } n \rightarrow \infty
+$$
+
+for every $x \in \mathscr{D}_{f}$. Since $f_{n}$ is bounded, (2) holds with $f_{n}$ in place of $f$ (Theorem 12.21). Hence (7) implies that (2) holds as stated.
+
+This proves $(a)$, except for the assertion that $\Psi(f)$ is closed. The latter follows from Theorem 13.9 if (4) (to be proved presently) is applied to $\bar{f}$ in place of $f$.
+
+We turn to the proof of $(b)$.
+
+Assume first that $f$ is bounded. Then $\mathscr{D}_{\boldsymbol{f} g} \stackrel{?}{\ddagger} \not \mathscr{D}_{g}$. If $z \in H$ and $v=\Psi(\bar{f}) z$, Equation (3) of Lemma 13.23 and Theorem 12.21 show that
+
+$$
+\begin{aligned}
+(\Psi(f) \Psi(g) x, z) & =(\Psi(g) x, \Psi(\bar{f}) z)=(\Psi(g) x, v) \\
+& =\int_{\Omega} g d E_{x, v}=\int_{\Omega} f g E_{x, z}=(\Psi(f g) x, z) .
+\end{aligned}
+$$
+
+Hence
+
+$$
+\Psi(f) \Psi(g) x=\Psi(f g) x \quad\left(x \in \mathscr{D}_{g}, f \in L^{\infty}\right)
+$$
+
+If $y=\Psi(g) x$, it follows from (8) and (2) that
+
+$$
+\int_{\Omega}|f|^{2} d E_{y, y}=\int_{\Omega}|f g|^{2} d E_{x, x} \quad\left(x \in D_{g}, f \in L^{\infty}\right) .
+$$
+
+Now let $f$ be arbitrary (possibly unbounded). Since (9) holds for all $f \in L^{\infty}$, it holds for all measurable $f$. Since $\mathscr{D}(\Psi(f) \Psi(g))$ consists of all $x \in \mathscr{D}_{g}$ such that $y \subset \mathscr{D}_{f}$, and since (9) shows that $y \in \mathscr{D}_{f}$ if and only if $x \in \mathscr{D}_{f g}$, we see that
+
+$$
+\mathscr{D}(\Psi(f) \Psi(g))=\mathscr{D}_{g} \cap \mathscr{D}_{f g} .
+$$
+
+If $x \in \mathscr{D}_{g} \cap \mathscr{D}_{f g}$, if $y=\Psi(g) x$, and if the truncations $f_{n}$ are defined as above, then $f_{n} \rightarrow f$ in $L^{2}\left(E_{y, y}\right), f_{n} g \rightarrow f g$ in $L^{2}\left(E_{x, x}\right)$, and now (8) (with $f_{n}$ in place of $f$ ) and (2) imply
+
+$$
+\Psi(f) \Psi(g) x=\Psi(f) y=\lim _{n \rightarrow \infty} \Psi\left(f_{n}\right) y=\lim _{n \rightarrow \infty} \Psi\left(f_{n} g\right) x=\Psi(f g) x
+$$
+
+This proves (3) and hence $(b)$.
+
+Suppose now that $x \in \mathscr{D}_{f}$ and $y \in \mathscr{D}_{\vec{f}}=\mathscr{D}_{f}$. It follows from (7) and Theorem 12.21 that
+
+$$
+(\Psi(f) x, y)=\lim _{n \rightarrow \infty}\left(\Psi\left(f_{n}\right) x, y\right)=\lim _{n \rightarrow \infty}\left(x, \Psi\left(\bar{f}_{n}\right) y\right)=(x, \Psi(\bar{f}) y)
+$$
+
+Thus $y \in \mathscr{D}\left(\Psi(f)^{*}\right)$, and
+
+$$
+\Psi(\bar{f}) \subset \Psi(f)^{*}
+$$
+
+To pass from (11) to (4) we have to show that every $z \in \mathscr{D}\left(\Psi(f)^{*}\right)$ lies in $\mathscr{D}_{f}$. Fix $z$; put $v=\Psi(f)^{*} z$. Since $f_{n}=f \phi_{n}$, the multiplication theorem gives
+
+$$
+\Psi\left(f_{n}\right)=\Psi(f) \Psi\left(\phi_{n}\right)
+$$
+
+Since $\Psi\left(\phi_{n}\right)$ is self-adjoint, we conclude from Theorems 13.2 and 12.21 that
+
+Hence
+
+$$
+\Psi\left(\phi_{n}\right) \Psi(f)^{*} \subset\left[\Psi(f) \Psi\left(\phi_{n}\right)\right]^{*}=\Psi\left(f_{n}\right)^{*}=\Psi\left(\overline{f_{n}}\right)
+$$
+
+$$
+\Psi\left(\phi_{n}\right) v=\Psi\left(\bar{f}_{n}\right) z \quad(n=1,23, \ldots)
+$$
+
+Since $\left|\phi_{n}\right| \leq 1,(13)$ and (2) imply
+
+$$
+\int_{\Omega}\left|f_{n}\right|^{2} d E_{z, z}=\int_{\Omega}\left|\phi_{n}\right|^{2} d E_{v, v} \leq E_{v, v}(\Omega)
+$$
+
+for $n=1,2,3, \ldots$ Hence $z \in \mathscr{D}_{f}$, and (4) is proved.
+
+Finally, (5) follows from (4) by another application of the multiplication theorem, because $\mathscr{D}_{f \tilde{j}} \subset \mathscr{D}_{\boldsymbol{f}}$.
+
+Remark If $g$ is bounded, then $\mathscr{D}_{f g} \subset \mathscr{D}_{g}$ (simply because $\mathscr{D}_{g}=H$ ) so that $\Psi(f) \Psi(g)=\Psi(f g)$. This was used in (12). It also shows that
+
+$$
+\Psi(g) \Psi(f) \subset \Psi(f) \Psi(g)
+$$
+
+because $\Psi(g) \Psi(f) \subset \Psi(g f)=\Psi(f g)$. If $g$ is the characteristic function of a measurable set $\omega \subset \Omega,(15)$ becomes
+
+$$
+E(\omega) \Psi(f) \subset \Psi(f) E(\omega)
+$$
+
+If $x \in \mathscr{D}_{f} \cap \mathscr{R}(E(\omega))$, it follows that
+
+$$
+E(\omega) \Psi(f) x=\Psi(f) E(\omega) x=\Psi(f) x
+$$
+
+Thus $\Psi(f)$ maps $\mathscr{D}_{f} \cap \mathscr{R}(E(\omega))$ into $\mathscr{R}(E(\omega))$.
+
+Section 12.27.
+
+This should be compared with the discussion of invariant subspaces in
+
+13.25 Theorem In the situation of Theorem $13.24, \mathscr{D}_{f}=H$ if and only if $f \in L^{\infty}(E)$. PROOF Assume $\mathscr{D}_{f}=H$. Since $\Psi(f)$ is a closed operator, the closed graph theorem implies that $\Psi(f) \in \mathscr{B}(H)$. If $f_{n}=f \phi_{n}$ is a truncation of $f$, it follows from the multiplication theorem, combined with Theorem 12.21, that
+
+$$
+\left\|f_{n}\right\|_{\infty}=\left\|\Psi\left(f_{n}\right)\right\|=\left\|\Psi(f) \Psi\left(\phi_{n}\right)\right\| \leq\|\Psi(f)\|
+$$
+
+since $\left\|\Psi\left(\phi_{n}\right)\right\|=\left\|\phi_{n}\right\|_{\infty} \leq 1$. Thus $\|f\|_{\infty} \leq\|\Psi(f)\|$, and $f \in L^{\infty}(E)$. The converse is contained in Theorem 12.21.
+
+13.26 Definition The resolvent set of a linear operator $T$ in $H$ is the set of all $\lambda \in \mathscr{C}$ such that $T-\lambda I$ is a one-to-one mapping of $\mathscr{D}(T)$ onto $H$ whose inverse belongs to $\mathscr{B}(H)$.
+
+In other words, $T-\lambda I$ should have an inverse $S \in \mathscr{B}(H)$, which satisfies
+
+$$
+\quad S(T-\lambda I) \subset(T-\lambda I) S=I
+$$
+
+For instance, Theorem 13.13 states that -1 lies in the resolvent set of $T^{*} T$ if $T$ is densely defined and closed.
+
+The spectrum $\sigma(T)$ of $T$ is the complement of the resolvent set of $T$, just as for bounded operators.
+
+Some properties of $\sigma(T)$, for unbounded $T$, are described in Exercises 17 to 20 .
+
+For the next theorem, we refer to Section 12.20 for the definition of the essential range of a function, with respect to a given resolution of the identity.
+
+13.27 Theorem Suppose $E$ is a resolution of the identity on a set $\Omega, f: \Omega \rightarrow \mathscr{C}$ is measurable, and
+
+$$
+\omega_{\alpha}=\{p \in \Omega: f(p)=\alpha\} \quad(\alpha \in \mathscr{C})
+$$
+
+(a) If $\alpha$ is in the essential range of $f$ and $E\left(\omega_{\alpha}\right) \neq 0$, then $\Psi(f)-\alpha I$ is not one-toone.
+
+(b) If $\alpha$ is in the essential range of $f$ but $E\left(\omega_{\alpha}\right)=0$, then $\Psi(f)-\alpha I$ is a one-to-one mapping of $\mathscr{D}_{f}$ onto a dense proper subspace of $H$, and there exist vectors $x_{n} \in H$, with $\left\|x_{n}\right\|=1$, such that
+
+$$
+\lim _{n \rightarrow \infty}\left[\Psi(f) x_{n}-\alpha x_{n}\right]=0
+$$
+
+(c) $\sigma(\Psi(f))$ is the essential range of $f$.
+
+In the terminology used earlier for bounded operators, we may say that $\alpha$ lies in the point spectrum of $\Psi(f)$ in case $(a)$ and in the continuous spectrum of $\Psi(f)$ in case $(b)$. The conclusion of $(b)$ is sometimes stated by saying that $\alpha$ is an approximate eigenvalue of $\Psi(f)$.
+
+PROOF We shall assume, without loss of generality, that $\alpha=0$.
+
+(a) If $E\left(\omega_{0}\right) \neq 0$, there exists $x_{0} \in \mathscr{R}\left(E\left(\omega_{0}\right)\right)$ with $\left\|x_{0}\right\|=1$. Let $\phi_{0}$ be the characteristic function of $\omega_{0}$. Then $f \phi_{0}=0$, hence $\Psi(f) \Psi\left(\phi_{0}\right)=0$, by the muitipication theorem. Since $\Psi\left(\phi_{0}\right)=E\left(\omega_{0}\right)$, it follows that
+
+$$
+\Psi(f) x_{0}=\Psi(f) E\left(\omega_{0}\right) x_{0}=\Psi(f) \Psi\left(\phi_{0}\right) x_{0}=0
+$$
+
+(b) The hypothesis is now that $E\left(\omega_{0}\right)=0$ but $E\left(\omega_{n}\right) \neq 0$ for $n=1,2,3$, ..., where
+
+$$
+\omega_{n}=\left\{d \in \Omega:|f(p)|<\frac{1}{n}\right\}
+$$
+
+Choose $x_{n} \in \mathscr{R}\left(E\left(\omega_{n}\right)\right),\left\|x_{n}\right\|=1$; let $\phi_{n}$ be the characteristic functions of $\omega_{n}$. The argument used in $(a)$ leads to
+
+$$
+\left\|\Psi(f) x_{n}\right\|=\left\|\Psi\left(f \phi_{n}\right) x_{n}\right\| \leq\left\|\Psi\left(f \phi_{n}\right)\right\|=\left\|f \phi_{n}\right\|_{\infty} \leq \frac{1}{n}
+$$
+
+Thus $\Psi(f) x_{n} \rightarrow 0$ although $\left\|x_{n}\right\|=1$.
+
+If $\Psi(f) x=0$ for some $x \in \mathscr{D}_{f}$, then
+
+$$
+\int_{\Omega}|f|^{2} d E_{x, x}=0
+$$
+
+Since $|f|>0$ a.e. $\left[E_{x, x}\right]$, we must have $E_{x, x}(\Omega)=0$. But $E_{x, x}(\Omega)=\|x\|^{2}$. Hence $\Psi(f)$ is one-to-one.
+
+Likewise $\Psi(f)^{*}=\Psi(\bar{f})$ is one-to-one. If $y \perp \mathscr{R}(\Psi(f))$, then $x \rightarrow(\Psi(f) x, y)$ $=0$ is continous in $\mathscr{D}_{f}$, hence $y \in \mathscr{D}\left(\Psi(f)^{*}\right)$, and
+
+$$
+(x, \Psi(\bar{f}) y)=(\Psi(f) x, y)=0 \quad\left(x \in \mathscr{D}_{f}\right)
+$$
+
+Therefore, $\Psi(\bar{f}) y=0$, and $y=0$. This proves that $\mathscr{R}(\Psi(f))$ is dense in $H$.
+
+Since $\Psi(f)$ is closed, so is $\Psi(f)^{-1}$. If $\mathscr{R}(\Psi(f))$ filled $H$, the closed graph theorem would imply that $\Psi(f)^{-1} \in \mathscr{B}(H)$. But this is impossible, in view of the sequence $\left\{x_{n}\right\}$ constructed above.
+
+Hence $(b)$ is proved.
+
+(c) It follows from $(a)$ and $(b)$ that the essential range of $f$ is a subset of $\sigma(\Psi(f))$. To obtain the opposite inclusion, assume 0 is not in the essential range of $f$. Then $g=1 / f \in L^{\infty}(E), f g=1$, hence $\Psi(f) \Psi(g)=\Psi(1)=I$, which proves that $\mathscr{R}(\Psi(f))=H$ and therefore that $\Psi(f)^{-1} \in \mathscr{B}(H)$, by the closed graph theorem.
+
+This completes the proof.
+
+The following theorem is sometimes called the change of measure principle.
+
+\subsection{Theorem Suppose}
+(a) $\mathfrak{M}$ and $\mathfrak{M}^{\prime}$ are $\sigma$-algebras in sets $\Omega$ and $\Omega^{\prime}$,
+
+(b) $E: \mathfrak{M} \rightarrow \mathscr{B}(H)$ is a resolution of the identity, and
+
+(c) $\phi: \Omega \rightarrow \Omega^{\prime}$ has the property that $\phi^{-1}\left(\omega^{\prime}\right) \in \mathfrak{M}$ for every $\omega^{\prime} \in \mathfrak{M}^{\prime}$.
+
+and If $E^{\prime}\left(\omega^{\prime}\right)=E\left(\phi^{-1}\left(\omega^{\prime}\right)\right)$, then $E^{\prime}: \mathfrak{M}^{\prime} \rightarrow \mathscr{B}(H)$ is also a resolution of the identity,
+
+$$
+\int_{\Omega^{\prime}} f d E_{x, y}^{\prime}=\int_{\Omega}(f \circ \phi) d E_{x, y}
+$$
+
+for every $\mathfrak{M}^{\prime}$-measurable $f: \Omega^{\prime} \rightarrow \mathbb{C}$ for which either of these integrals exists.
+
+PROOF For characteristic functions $f,(1)$ is just the definition of $E^{\prime}$. Hence (1) holds for simple functions $f$. The general case follows from this. The proof that $E^{\prime}$ is a resolution of the identity is a matter of straightforward verifications and is omitted.
+
+\section{The Spectral Theorem}
+13.29 Normal operators A (not necessarily bounded) linear operator $T$ in $H$ is said to be normal if $T$ is closed and densely defined and if
+
+$$
+T^{*} T=T T^{*}
+$$
+
+Every $\Psi(f)$ that arises in Theorem 13.24 is normal; this is part of the statement of the theorem. We shall now see, just as in the bounded case discussed in Chapter 12, that all normal operators can be represented in this way, by means of resolutions of the identity on their spectra (Definition 13.26). For self-adjoint operators, this can be deduced very quickly from the unitary case, via the Cayley transform (Theorem 13.30). For normal operators in general, a different proof will be given in Theorem 13.33.
+
+13.30 Theorem To every self-adjoint operator $A$ in $H$ corresponds a unique resolution $E$ of the identity, on the Borel subsets of the real line, such that
+
+$$
+(A x, y)=\int_{-\infty}^{\infty} t d E_{x, y}(t) \quad(x \in \mathscr{D}(A), y \in H)
+$$
+
+Moreover, $E$ is concentrated on $\sigma(A) \subset(-\infty, \infty)$, in the sense that $E(\sigma(A))=I$.
+
+As before, this $E$ will be called the spectral decomposition of $A$.
+
+PROOF Let $U$ be the Cayley transform of $A$, let $\Omega$ be the unit circle with the point 1 removed, and let $E^{\prime}$ be the spectral decomposition of $U$ (see Theorems 12.23 and 12.26). Since $I-U$ is one-to-one (Theorem 13.19), $E^{\prime}(\{1\})=0$, by (b) of Theorem 12.29, and therefore
+
+$$
+(U x, y)=\int_{\Omega} \lambda d E_{x, y}^{\prime}(\lambda) \quad(x \in H, y \in H)
+$$
+
+Define
+
+$$
+f(\lambda)=\frac{i(1+\lambda)}{1-\lambda} \quad(\lambda \in \Omega)
+$$
+
+and define $\Psi(f)$ as in Theorem 13.24 with $E^{\prime}$ in place of $E$ :
+
+$$
+(\Psi(f) x, y)=\int_{\Omega} f d E_{x, y}^{\prime} \quad\left(x \in \mathscr{D}_{f}, y \in H\right)
+$$
+
+Since $f$ is real-valued, $\Psi(f)$ is self-adjoint (Theorem 13.24), and since $f(\lambda)(1-\lambda)=i(1+\lambda)$, the multiplication theorem gives
+
+$$
+\Psi(f)(I-U)=i(I+U)
+$$
+
+In particular, (5) implies that $\mathscr{R}(I-U) \subset \mathscr{D}(\Psi(f))$. By Theorem 13.19,
+
+$$
+A(I-U)=i(I+U)
+$$
+
+and $\mathscr{D}(A)=\mathscr{R}(I-U) \subset \mathscr{D}(\Psi(f))$. Comparison of (5) and (6) shows now that $\Psi(f)$ is a self-adjoint extension of the self-adjoint operator $A$. By Theorem 13.15, $A=\Psi(f)$. Thus
+
+$$
+(A x, y)=\int_{\Omega} f d E_{x, y}^{\prime} \quad[x \in \mathscr{D}(A), y \in \dddot{H}] .
+$$
+
+By $(c)$ of Theorem 13.27, $\sigma(A)$ is the essential range of $f$. Thus $\sigma(A) \subset$ $(-\infty, \infty)$. Note that $f$ is one-to-one in $\Omega$. If we define
+
+$$
+E(f(\omega))=E^{\prime}(\omega)
+$$
+
+for every Borel set $\omega \subset \Omega$, we obtain the desired resolution $E$ which converts (7) to (1).
+
+: Just as (1) was derived from (2) by means of the Cayley transform, (2) can be derived from (1) by using the inverse of the Cayley transform. The uniqueness of the representation (2) (Theorem 12.23) leads therefore to the uniqueness of the resolution $E$ that satisfies (1).
+
+This completes the proof.
+
+The whole machinery developed in Theorem 13.24 can now be applied to selfadjoint operators. The following theorem furnishes an example of this.
+
+\subsection{Theorem Let $A$ be a self-adjoint operator in $H$.}
+(a) $(A x, x) \geq 0$ for every $x \in \mathscr{D}(A)$ (briefly: $A \geq 0$ ) if and only if $\sigma(A) \subset[0, \infty)$.
+
+(b) If $A \geq 0$, there exists a unique self-adjoint $B \geq 0$ such that $B^{2}=A$.
+
+PROOF The proof of $(a)$ is so similar to that of Theorem 12.32 that we omit it. Assume $A \geq 0$, so that $\sigma(A) \subset[0, \infty)$, and
+
+$$
+(A x, y)=\int_{0}^{\infty} t d E_{x, y}(t) \quad[x \in \mathscr{D}(A), y \in H]
+$$
+
+where $\mathscr{D}(A)=\left\{x \in H: \int t^{2} d E_{x, y}(t)<\infty\right\}$; the domain of integration is $[0, \infty)$. Let $s(t)$ be the nonnegative square root of $t \geq 0$, and put $B=\Psi(s)$; explicitly,
+
+$$
+(B x, y)=\int_{0}^{\infty} s(t) d E_{x, y}(t) \quad\left(x \in \mathscr{D}_{s}, y \in H\right) .
+$$
+
+The multiplication theorem $(b)$ of Theorem 13.24, with $f=g=s$, shows that $B^{2}=A$. Since $s$ is real, $B$ is self-adjoint $[(c)$ of Theorem 13.24], and since $s(t) \geq 0$, (2), with $x=y$, shows that $B \geq 0$.
+
+To prove uniqueness, suppose $C$ is self-adjoint, $C \geq 0, C^{2}=A$, and $E^{C}$ is its spectral decomposition:
+
+$$
+(C x, y)=\int_{0}^{\infty} s d E_{x, y}^{C}(s) \quad(x \in \mathscr{D}(C), y \in H)
+$$
+
+Apply Theorem 13.28 with $\Omega=[0, \infty), \phi(s)=s^{2}, f(t)=t$, and
+
+$$
+E^{\prime}(\phi(\omega))=E^{C}(\omega) \quad \text { for } \omega \subset[0, \infty)
+$$
+
+to obtain
+
+$$
+(A x, y)=\left(C^{2} x, y\right)=\int_{0}^{\infty} s^{2} d E_{x, y}^{C}(s)=\int_{0}^{\infty} t d E_{x, y}^{\prime}(t)
+$$
+
+By (1) and (5), the uniqueness statement in Theorem 13.30 shows that $E^{\prime}=E$. By (4), $E$ determines $E^{C}$, and hence $C$.
+
+The following properties of normal operators will be used in the proof of the spectral theorem 13.33.
+
+13.32 Theorem If $N$ is a normal operator in $H$, then
+
+(a) $\mathscr{D}(N)=\mathscr{D}\left(N^{*}\right)$
+
+(b) $\|N x\|=\left\|N^{*} x\right\|$ for every $x \in \mathscr{D}(N)$, and
+
+(c) $N$ is maximally normal.
+
+PROOF If $y \in \mathscr{D}\left(N^{*} N\right)=\mathscr{D}\left(N N^{*}\right)$, then $(N y, N y)=\left(y, N^{*} N y\right)$ because $N y \in$ $\mathscr{D}\left(N^{*}\right)$, and $\left(N^{*} y, N^{*} y\right)=\left(y, N N^{*} y\right)$ because $N^{*} y \in \mathscr{D}(N)$ and $N=N^{* *}$ (Theorem 13.12). Since $N^{*} N=N N^{*}$, it follows that
+
+$$
+\|N y\|=\left\|N^{*} y\right\| \quad \text { if } y \in \mathscr{D}\left(N^{*} N\right) \text {. }
+$$
+
+Now pick $x \in \mathscr{D}(N)$. Let $N^{\prime}$ be the restriction of $N$ to $\mathscr{D}\left(N^{*} N\right)$. By Theorem 13.13, $\{x, N x\}$ lies in the closure of the graph of $N^{\prime}$. Hence there are vectors $y_{i} \in \mathscr{D}\left(N^{*} N\right)$ such that
+
+$$
+\left\|y_{i}-x\right\| \rightarrow 0 \text { as } i \rightarrow \infty
+$$
+
+and
+
+$$
+\left\|N y_{i}-N x\right\| \rightarrow 0 \text { as } i \rightarrow \infty
+$$
+
+By (1), $\left\|N^{*} y_{i}-N^{*} y_{j}\right\|=\left\|N y_{i}-N y_{j}\right\|$, so that (3) implies that $\left\{N^{*} y_{i}\right\}$ is a Cauchy sequence in $H$. Hence there exists $z \in H$ such that
+
+$$
+\left\|N^{*} y_{i}-z\right\| \rightarrow 0 \text { as } i \rightarrow \infty .
+$$
+
+Since $N^{*}$ is a closed operator, (2) and (4) imply that $\{x, z\} \in \mathscr{G}\left(N^{*}\right)$. secondly that
+
+From this we conclude first that $x \in \mathscr{D}\left(N^{*}\right)$, so that $\mathscr{D}(N) \subset \mathscr{D}\left(N^{*}\right)$, and
+
+$$
+\left\|N^{*} x\right\|=\|z\|=\lim \left\|N^{*} y_{i}\right\|=\lim \left\|N y_{i}\right\|=\|N x\| .
+$$
+
+This proves $(b)$ and half of $(a)$. For the other half, note that $N^{*}$ is also normal (since $N^{* *}=N$ ), so that
+
+$$
+\mathscr{D}\left(N^{*}\right) \subset \mathscr{D}\left(N^{* *}\right)=\mathscr{D}(N)
+$$
+
+Finally, suppose $M$ is normal and $N \subset M$. Then $M^{*} \subset N^{*}$, so that
+
+$$
+\mathscr{D}(M)=\mathscr{D}\left(M^{*}\right) \subset \mathscr{D}\left(N^{*}\right)=\mathscr{D}(N) \subset \mathscr{D}(M)
+$$
+
+which gives $\mathscr{D}(M)=\mathscr{D}(N)$; hence $M=N$.
+
+13.33 Theorem Every normal operator $N$ in $H$ has a unique spectral decomposition $E$, which satisfies
+
+$$
+(N x, y)=\int_{\sigma(N)} \lambda d E_{x, y}(\lambda) \quad(x \in \mathscr{D}(N), y \in H)
+$$
+
+Moreover, $E(\omega) S=S E(\omega)$ for every Borel set $\omega \subset \sigma(N)$ and for every $S \in \mathscr{B}(H)$ that commutes with $N$, in the sense that $S N \subset N S$.
+
+It also follows from (1) and Theorem 13.24 that $E(\omega) N \subset N E(\omega)$.
+
+PROOF Our first objective is to find self-adjoint projections $P_{i}$, with pairwise orthogonal ranges, such that $P_{i} N \subset N P_{i} \in \mathscr{B}(H), N P_{i}$ is normal, and $x=\sum P_{i} x$ for every $x \in H$. The spectral theorem for bounded normal operators will then be applied to the operators $N P_{i}$, and this will lead to the desired result.
+
+By Theorem 13.13, there exist $B \in \mathscr{\mathscr { B }}(H)$ and $C \in \mathscr{B}(H)$ such that $B \geq 0$, $\|B\| \leq 1, C=N B$, and
+
+$$
+B\left(I+N^{*} N\right) \subset I=\left(I+N^{*} N\right) B .
+$$
+
+Since $N^{*} N=N N^{*}$, (2) implies
+
+$$
+B N=B N\left(I+N^{*} N\right) B=B\left(I+N^{*} N\right) N B \subset N B=C .
+$$
+
+Consequently, $B C=B(N B)=(B N) B \subset C B$. Since $B$ and $C$ are bounded, it follows that $B C=C B$ and therefore that $C$ commutes with every bounded Borel function of $B$. (See Section 12.24.)
+
+Choose $\left\{t_{i}\right\}$ so that $1=t_{0}>t_{1}>t_{2}>\cdots, \lim t_{i}=0$. Let $p_{i}$ be the
+characteristic function of $\left(t_{i}, t_{i-1}\right]$, for $i=1,2,3, \ldots$, and put $f_{i}(t)=p_{i}(t) / t$. Each $f_{i}$ is bounded on $\sigma(B) \subset[0,1]$. Let $E^{B}$ be the spectral decomposition of $B$. The equality (2) shows that $B$ is one-to-one, that is, 0 is not in the point spectrum of $B$. Hence $E^{B}(\{0\})=0$, and $E^{B}$ is concentrated in $(0,1]$.
+
+Define
+
+$$
+P_{i}=p_{i}(B) \quad(i=1,2,3, \ldots)
+$$
+
+Since $p_{i} p_{j}=0$ if $i \neq j$, the projections $P_{i}$ have mutually orthogonal ranges. Since $\sum p_{i}$ is the characteristic function of $(0,1]$, we have
+
+$$
+\sum_{i=1}^{\infty} P_{i} x=E^{B}((0,1]) x=x \quad(x \in H)
+$$
+
+Since $p_{i}(t)=t f_{i}(t)$,
+
+$$
+N P_{i}=N B f_{i}(B)=C f_{i}(B) \in \mathscr{B}(H),
+$$
+
+and $P_{i} N=f_{i}(B) B N \subset f_{i}(B) C$, by (3), so that
+
+$$
+\bar{P}_{i} \bar{N} \subset \bar{N} \bar{P}_{i}
+$$
+
+By $(6), \mathscr{D}\left(N P_{i}\right)=H$, so that
+
+$$
+\mathscr{R}\left(P_{i}\right) \subset \mathscr{D}(N) \quad(i=1,2,3, \ldots)
+$$
+
+Hence, if $P_{i} x=x$, (7) implies $P_{i} N x=N P_{i} x=x$. Thus $N$ carries $\mathscr{R}\left(P_{i}\right)$ into $\mathscr{R}\left(P_{i}\right)$, or: $\mathscr{R}\left(P_{i}\right)$ is an invariant subspace of $N$.
+
+Next, we wish to prove that each $N P_{i}$ is normal. By (7) and Theorem 13.2,
+
+$$
+\left(N P_{i}\right)^{*} \subset\left(P_{i} N\right)^{*}=N^{*} P_{i}
+$$
+
+But $N P_{i} \in \mathscr{B}(H)$, so that $\left(N P_{i}\right)^{*}$ has domain $H$. Hence
+
+$$
+\left(N P_{i}\right)^{*}=N^{*} P_{i}
+$$
+
+and now Theorem 13.32 shows, by (8) and (10), that
+
+$$
+\left\|N P_{i} x\right\|=\left\|N^{*} P_{i} x\right\|=\left\|\left(N P_{i}\right)^{*} x\right\| \quad(x \in H)
+$$
+
+By Theorem 12.12, (11) implies that $N P_{i}$ is normal.
+
+Hence (5), (6), and (7) show that our first objective has now been reached.
+
+By Theorem 12.23, each $N P_{i}$ has a spectral decomposition $E^{i}$, defined on the Borel subsets of $\mathscr{C}$.
+
+Since $N$ carries $\mathscr{R}\left(P_{i}\right)$ into $\mathscr{R}\left(P_{i}\right), P_{i}$ commutes with $N P_{i}$. Therefore $P_{i}$ commutes with $E^{i}(\omega)$, for every Borel set $\omega \subset \mathbb{C}$, so that
+
+$$
+E^{i}(\omega) P_{i} x=P_{i} E^{i}(\omega) x \in \mathscr{R}\left(P_{i}\right) \quad(x \in H, i=1,2,3, \ldots)
+$$
+
+Since these ranges are pairwise orthogonal, and since (5) implies
+
+$$
+\sum_{i=1}^{\infty}\left\|E^{i}(\omega) P_{i} x\right\|^{2} \leq \sum_{i=1}^{\infty}\left\|P_{i} x\right\|^{2}=\|x\|^{2}
+$$
+
+the series $\sum E^{i}(\omega) P_{i} x$ converges, in the norm of $H$, and it makes sense to define
+
+for all Borel sets $\omega \subset \mathbb{C}$.
+
+$$
+E(\omega)=\sum_{i=1}^{\infty} E^{i}(\omega) P_{\imath}
+$$
+
+It is easy to check that $E$ is a resolution of the identity. Hence there is a normal operator $M$, defined by
+
+$$
+(M x, y)=\int \lambda d E_{x, y}(\lambda) \quad(x \in \mathscr{D}(M), y \in H)
+$$
+
+where the domain of integration is $\mathscr{C}$, and
+
+$$
+\mathscr{D}(M)=\left\{x \in H: \int|\lambda|^{2} d E_{x, x}(\lambda)<\infty\right\}
+$$
+
+\begin{itemize}
+  \item Our assertion (1) will now be proved by showing that $M=N$.
+\end{itemize}
+
+For any $x \in H,(14)$ shows that
+
+$$
+E_{x, x}(\omega)=\|E(\omega) x\|^{2}=\sum_{i=1}^{\infty}\left\|E^{i}(\omega) P_{i} x\right\|^{2}=\sum_{i=1}^{\infty} E_{x_{i}, x_{i}}^{i}(\omega)
+$$
+
+where $x_{i}=P_{i} x$. If $x \in \mathscr{D}(N)$, then $P_{i} N x=N P_{i} x$, so that
+
+$$
+\sum_{i=1}^{\infty} \int|\lambda|^{2} d E_{x_{i}, x_{i}}^{i}(\lambda)=\sum_{i=1}^{\infty}\left\|N P_{i} x_{i}\right\|^{2}=\sum_{i=1}^{\infty}\left\|P_{i} N x\right\|^{2}=\|N x\|^{2}
+$$
+
+It follows from (17) and (18) that the integral in (16) is finite for every $x \in \mathscr{D}(N)$. Hence
+
+$$
+\mathscr{D}(N) \subset \mathscr{D}(M)
+$$
+
+If $x \in \mathscr{R}\left(P_{i}\right)$, then $x=P_{i} x$, and so $E(\omega) x=E^{i}(\omega) x$; thus $E_{x, y}=E_{x, y}^{i}$ for every $y \in H$. Hence
+
+$$
+(N x, y)=\left(N P_{i} x, y\right)=\int \lambda d E_{x, y}^{i}(\lambda)=\int \lambda d E_{x, y}(\lambda)=(M x, y)
+$$
+
+Consequently
+
+$$
+P_{i} N x=N P_{i} x=M P_{i} x \quad[x \in \mathscr{D}(N), i=1,2,3, \ldots]
+$$
+
+If $Q_{i}=P_{1}+\cdots+P_{i}$, it follows that $Q_{i} N x=M Q_{i} x$. Thus
+
+$$
+\left\{Q_{i} x, Q_{i} N x\right\} \in \mathscr{G}(M) \quad[x \in \mathscr{D}(N), i=1,2,3, \ldots]
+$$
+
+Since $\mathscr{G}(M)$ is closed, it follows from (5) and (21) that $\{x, N x\} \in \mathscr{G}(M)$, that is, that $N x=M x$ for every $x \in \mathscr{D}(N)$. Thus $N \subset M$, by (19), and now the maximality of $N$ (Theorem 13.32) implies $N=M$.
+
+This gives the representation (1), with $\mathbb{C}$ in place of $\sigma(N)$. That $E$ is actually concentrated on $\sigma(N)$ follows from $(c)$ of Theorem 13.27.
+
+To prove the uniqueness of $E$, consider the operator
+
+$$
+T=N\left(I+\sqrt{N^{*} N}\right)^{-1},
+$$
+
+where $\sqrt{N^{*} N}$ is the unique positive square root of $N^{*} N$. If (1) holds, it follows from Theorem 13.24 that
+
+$$
+T=\int \phi d E
+$$
+
+where $\phi(\lambda)=\lambda /(1+|\lambda|)$, so that $T \in \mathscr{B}(H)$, and since $\phi$ is one-to-one on $\mathbb{C}$, Theorem 13.28 implies that the spectral decomposition $E^{T}$ of $T$ satisfies
+
+$$
+E(\omega)=E^{T}(\phi(\omega))
+$$
+
+for every Borel set $\omega \subset \mathbb{C}$. The uniqueness of $E$ follows now from that of $E^{T}$ (Theorem 12.23).
+
+Finally, assume $S \in \mathscr{B}(H)$ and $S N \subset N S$. Put $Q=Q_{n}=E(\tilde{\omega})$, where $\tilde{\omega}=\{\lambda:|\lambda|<n\}$, and $n$ is some positive integer. Then $N Q \in \mathscr{B}(H)$ is normal and is given by
+
+$$
+N Q=\int f d E
+$$
+
+where $f(\lambda)=\lambda$ on $\tilde{\omega}, f(\lambda)=0$ outside $\tilde{\omega}$. Theorem 13.28 implies that the spectral decomposition $E^{\prime}$ of $N Q$ satisfies $E^{\prime}(\omega)=E\left(f^{-1}(\omega)\right)$, or
+
+$$
+\left\{\begin{array}{l}
+E^{\prime}(\omega)=E(\omega \cap \tilde{\omega})=Q E(\omega) \quad \text { if } 0 \notin \omega, \\
+E^{\prime}(\{0\})=E(\{0\} \cup(\mathbb{C}-\tilde{\omega}))=E(\{0\})+I-Q .
+\end{array}\right.
+$$
+
+Hence
+
+$$
+E(\omega)=Q E(\omega)=Q E^{\prime}(\omega) \quad \text { if } \omega \subset \tilde{\omega}
+$$
+
+By Theorem 13.24, $Q N \subset N Q=Q N Q$, so that
+
+$$
+(Q S Q)(N Q)=Q S N Q \subset Q N S Q \subset(N Q)(Q S Q)
+$$
+
+Since $(Q S Q)(N Q) \in \mathscr{B}(H)$, the inclusions in (28) are actually equalities. Now Theorem 12.23 implies that $Q S Q$ commutes with every $E^{\prime}(\omega)$.
+
+Consider a bounded $\omega$, and take $n$ so large that $\omega \subset \tilde{\omega}$. By (27)
+
+$$
+Q S E(\omega)=Q S Q E^{\prime}(\omega)=E^{\prime}(\omega) Q S Q=E(\omega) S Q
+$$
+
+so that
+
+$$
+Q_{n} S E(\omega)=E(\omega) S Q_{n} \quad(n=1,2,3, \ldots)
+$$
+
+It now follows from Proposition 12.18 that
+
+$$
+S E(\omega)=E(\omega) S
+$$
+
+if $\omega$ is bounded [let $n \rightarrow \infty$ in (29)], and hence also if $\omega$ is any Borel set in $\mathbb{C}$.
+
+\section{Semigroups of Operators}
+13.34 Definitions Let $X$ be a Banach space, and suppose that to every $t \in[0, \infty)$ is associated an operator $Q(i) \in \mathscr{B}(X)$, in such a way that
+
+(a) $Q(0)=I$,
+
+(b) $. Q(s+t)=Q(s) Q(t)$ for all $s \geq 0$ and $t \geq 0$, and
+
+(c) $\lim _{t \rightarrow 0}\|Q(t) x-x\|=0$ for every $x \in X$.
+
+If $(a)$ and $(b)$ hold, $\{Q(t)\}$ is called a semigroup (or, more precisely, a one-parameter semigroup). Such semigroups have cxponential representations, provided that the mapping $t \rightarrow Q(t)$ satisfies some continuity assumption. The one that is chosen here, namely $(c)$, is easy to work with.
+
+Motivated by the fact that every continuous complex function that satisfies $f(s+t)=f(s) f(t)$ has the form $f(t)=\exp (A t)$, and that $f$ is determined by the number $A=f^{\prime}(0)$, we associate with $\{Q(t)\}$ the operators $A_{\varepsilon}$, by
+
+$$
+A_{\varepsilon} x=\frac{1}{\varepsilon}[Q(\varepsilon) x-x] \quad(x \in X, \varepsilon>0)
+$$
+
+and define
+
+$$
+A x=\lim _{\varepsilon \rightarrow 0} A_{\varepsilon} x
+$$
+
+for all $x \in \mathscr{D}(A)$, that is, for all $x$ for which the limit (2) exists in the norm topology of $X$. in $X$.
+
+It is clear that $\mathscr{D}(A)$ is a subspace of $X$ and that $A$ is thus a linear operator
+
+This operator, which is essentiaily $Q^{\prime}(0)$, is called the infinitesimal generator of the semigroup $\{Q(t)\}$.
+
+13.35 Theorem If the semigroup $\{Q(t)\}$ satisfies the preceding hypotheses, then
+
+(a) $t \rightarrow Q(t) x$ is a continuous mapping of $[0, \infty)$ into $X$, for every $x \in X$,
+
+(b) $A$ is a closed densely defined linear operator in $X$,
+
+(c) for every $x \in \mathscr{D}(A), Q(t) x$ satisfies the differential equation
+
+$$
+\frac{d}{d t} Q(t) x=A Q(t) x=Q(t) A x
+$$
+
+and
+
+(d) for every $x \in X$,
+
+$$
+Q(t) x=\lim _{\varepsilon \rightarrow 0}\left[\exp \left(t A_{\varepsilon}\right)\right] x
+$$
+
+the convergence being uniform on every compact subset of $[0, \infty)$.
+
+It is remarkable that the conclusion $(d)$ holds for every $x \in X$, not just for $x \in \mathscr{D}(A)$. The limit in $(d)$, as well as the one that is implicit in the derivative used in $(c)$, is understood to refer to the norm topology of $X$.
+
+PROOF If there were a sequence $t_{n} \rightarrow 0$ such that $\left\|Q\left(t_{n}\right)\right\| \rightarrow \infty$, the BanachSteinhaus theorem would imply the existence of an $x \in X$ for which $\left\{\left\|Q\left(t_{n}\right) x\right\|\right\}$ is unbounded. This contradicts our assumption that
+
+$$
+\|Q(t) x-x\| \rightarrow 0 \quad \text { as } t \rightarrow 0 .
+$$
+
+Hence there exist $\delta>0$ and $\gamma_{0}<\infty$ such that
+
+$$
+\|Q(t)\| \leq \gamma_{0} \quad \text { if } 0 \leq t \leq \delta
+$$
+
+Put $\gamma=\sup \{\|Q(s)\|: 0 \leq s \leq 1\}$. By the functional equation
+
+$$
+Q(s+t)=Q(s) Q(t)
+$$
+
+(2) implies that $\gamma<\infty$. Moreover, $\gamma \geq 1$, and
+
+$$
+\|Q(t)\| \leq \gamma^{1+\hat{\imath}} \quad(0 \leq t<\infty)
+$$
+
+for if $n \leq t<n+1$, then $Q(t)=Q(1)^{n} Q(t-n)$.
+
+The equality (4) can be applied to
+
+and yields
+
+$$
+\exp \left(t A_{\varepsilon}\right)=e^{-t / \varepsilon} \exp \left\{\frac{t}{\varepsilon} Q(\varepsilon)\right\}=e^{-t / \varepsilon} \sum_{n=0}^{\infty} \frac{t^{n} Q(n \varepsilon)}{n ! \varepsilon^{n}}
+$$
+
+$$
+\left\|\exp \left(t A_{\varepsilon}\right)\right\| \leq e^{-t / \varepsilon} \sum_{n=0}^{\infty} \frac{t^{n} \gamma^{1+n \varepsilon}}{n ! \varepsilon^{n}}=\gamma \exp \left\{t \frac{\gamma^{\varepsilon}-1}{\varepsilon}\right\}
+$$
+
+If $0<\varepsilon \leq 1$, then $\gamma^{\varepsilon}-1 \leq \varepsilon(\gamma-1)$. Hence
+
+$$
+\left\|\operatorname{cxp}\left(t A_{\varepsilon}\right)\right\| \leq \gamma \exp (t \gamma) \quad(0<\varepsilon \leq 1,0 \leq t<\infty)
+$$
+
+After these preparations, we turn to the main part of the proof.
+
+If $x \in X$ and $\varepsilon>0$, (1) shows that there exists $\eta=\eta(x, \varepsilon)>0$ such that $\|Q(t) x-x\|<\varepsilon$ if $0 \leq t \leq \eta$. If $0 \leq s \leq t \leq s+\eta \leq n$, it follows from (4) that
+
+This proves $(a)$
+
+$$
+\begin{aligned}
+\|Q(t) x-Q(s) x\| & =\|Q(s)[Q(t-s) x-x]\| \\
+& \leq\|Q(s)\|\|Q(i-s) x-x\| \leq \gamma^{n+1} \varepsilon
+\end{aligned}
+$$
+
+The $X$-valued integrals
+
+$$
+M_{t} \dot{x}=\frac{1}{t} \int_{0}^{t} Q(s) x d s \quad(x \in X, t>0)
+$$
+
+can therefore be defined. In fact, $M_{t} \in \mathscr{B}(X)$ and $\left\|M_{t}\right\| \leq \gamma^{1+t}$, by (4). We claim that the identity
+
+$$
+A_{\varepsilon} M_{t}=A_{t} M_{\varepsilon} \quad(\varepsilon>0, t>0)
+$$
+
+holds.
+
+To prove (7), rewrite the obvious relation
+
+in the form
+
+$$
+\int_{0}^{\varepsilon}+\int_{\varepsilon}^{t+\varepsilon}=\int_{0}^{t}+\int_{t}^{t+\varepsilon}
+$$
+
+$$
+\int_{\varepsilon}^{t+\varepsilon}-\int_{0}^{t}=\int_{t}^{t+\varepsilon}-\int_{0}^{\varepsilon}
+$$
+
+and insert the integrand $Q(s) x d s$. By (3), the left side of (8) becomes
+
+$$
+\int_{0}^{t}[Q(\varepsilon+s)-Q(s)] x d s=[Q(\varepsilon)-I] \int_{0}^{t} Q(s) x d s=\varepsilon A_{\varepsilon} t M_{t}
+$$
+
+In the same way, the right side becomes $t A_{t} \varepsilon M_{\varepsilon}$. This gives (7).
+
+We can now prove (b). By (6), $M_{t} x \rightarrow x$ as $t \rightarrow 0$, for every $x \in X$. For $t>0, A_{t} \in \mathscr{B}(X)$. Hence (7) gives
+
+$$
+\lim _{\varepsilon \rightarrow 0} A_{\varepsilon} M_{t} x=A_{t} \lim _{\varepsilon \rightarrow 0} M_{\varepsilon} x=A_{t} x
+$$
+
+It follows that $M_{t} x \in \mathscr{D}(A)$, for every $t>0$, so that $\mathscr{D}(A)$ is dense in $X$, and that
+
+$$
+A M_{t} x=A_{t} x \quad(x \in X, t>0)
+$$
+
+Since $Q(s)$ commutes with $Q(t), A_{\varepsilon}$ commutes with $M_{t}$. If $x \in \mathscr{D}(A)$, (7) implies therefore, for $t>0$, that
+
+$$
+M_{t} A x=M_{t} \lim _{\varepsilon \rightarrow 0} A_{\varepsilon} x=\lim _{\varepsilon \rightarrow 0} M_{\varepsilon} A_{t} x=A_{t} x
+$$
+
+If now $x_{n} \in \mathscr{D}(A), x_{n} \rightarrow x$, and $A x_{n} \rightarrow y$ as $n \rightarrow \infty$, then (11) shows that $A_{t} x_{n}=M_{t} A x_{n}$. Hence $A_{t} x=M_{t} y$. Since $M_{t} y \rightarrow y$ as $t \rightarrow 0$, it follows that $x \in \mathscr{D}(A)$ and that $A x=y$. Thus $A$ is a closed operator, and $(b)$ is proved.
+
+Assume now that $x \in \mathscr{D}(A)$. Then, for all $t>0$,
+
+$$
+A_{\varepsilon} Q(t) x=Q(t) A_{\varepsilon} x \rightarrow Q(t) A x \quad \text { as } \varepsilon \rightarrow 0 \text {, }
+$$
+
+so that $Q(t) x \in \mathscr{D}(A)$ and
+
+$$
+A Q(t) x=Q(t) A x .
+$$
+
+If (11) is multiplied by $t$, we get
+
+$$
+\int_{0}^{t} Q(s) A x d s=Q(t) x-x
+$$
+
+The continuity of the integrand, proved in $(a)$, shows that the derivative of this integral is $Q(t) A x$. In conjunction with (13), this proves $(c)$.
+
+We turn to $(d)$. If $x \in \mathscr{D}(A)$ and $0<s<t$, then $(c)$ shows that
+
+$$
+\frac{d}{d s}\left[\exp \left\{(t-s) A_{\varepsilon}\right\} Q(s) x\right]=\exp \left\{(t-s) A_{\varepsilon}\right\} Q(s)\left(A x-A_{\varepsilon} x\right)
+$$
+
+and since
+
+$$
+\exp \left\{(t-s) A_{\varepsilon}\right\} Q(s) x= \begin{cases}Q(t) x & \text { when } s=t \\ \exp \left(t A_{\varepsilon}\right) x & \text { when } s=0\end{cases}
+$$
+
+we have
+
+$$
+Q(t) x-\exp \left(t A_{\varepsilon}\right) x=\int_{0}^{t} \exp \left\{(t-s) A_{\varepsilon}\right\} Q(s)\left(A x-A_{\varepsilon} x\right) d s .
+$$
+
+By (4) and (5), the norm of this integrand is at most
+
+$$
+\gamma \exp \{(t-s) \gamma\} \gamma^{1+s}\left\|A x-A_{\varepsilon} x\right\|,
+$$
+
+so that
+
+$$
+\left\|Q(t) x-\exp \left(t A_{\varepsilon}\right) x\right\| \leq K(t)\left\|A x-A_{\varepsilon} x\right\|,
+$$
+
+where $K$ is an increasing continuous function on $[0, \infty)$.
+
+To complete the proof, fix $t_{0}>0$, and define
+
+$$
+S(t, \varepsilon)=Q(t)-\exp \left(t A_{\varepsilon}\right) \quad(t>0,0<\varepsilon \leq 1)
+$$
+
+By (4) and (5), there exists $K_{0}<\infty$ such that
+
+$$
+\|S(t, \varepsilon)\| \leq K_{0} \quad\left(0 \leq t \leq t_{0}, 0<\varepsilon \leq 1\right) .
+$$
+
+If $x_{0} \in X$, and $\eta>0$, there exists $x \in \mathscr{D}(A)$ such that
+
+$$
+\left\|x-x_{0}\right\|<\frac{\eta}{K_{0}} \text {. }
+$$
+
+Then (15) to (18) imply that
+
+$$
+\begin{aligned}
+\left\|S(t, \varepsilon) x_{0}\right\| & \leq\|S(t, \varepsilon) x\|+\|S(t, \varepsilon)\|\left\|x-x_{0}\right\| \\
+& <K\left(t_{0}\right)\left\|A x-A_{\varepsilon} x\right\|+\eta
+\end{aligned}
+$$
+
+if $0 \leq t \leq t_{0}$. Since $x \in \mathscr{D}(A)$, we finally get
+
+$$
+\left\|Q(t) x_{0}-\exp \left(t A_{\varepsilon}\right) x_{0}\right\|<\eta \quad\left(0 \leq t \leq t_{0}\right)
+$$
+
+for all sufficiently small $\varepsilon$.
+
+This completes the proof.
+
+It is now natural to ask whether the limit can be removed from the conclusion $(d)$, that is, under what conditions the exponential representation $Q(t)=\exp (t A)$ is valid. The next two theorems give answers to these questions.
+
+13.36. Theorem If $\{Q(t)\}$ is as in Theorem 13.35, then any of the following three conditions implies the other two:
+
+(a) $\mathscr{D}(A)=X$.
+
+(b) $\lim _{\varepsilon \rightarrow 0}\|Q(\varepsilon)-I\|=0$.
+
+(c) $A \in \mathscr{B}(X)$ and $Q(t)=e^{t A} \quad(0 \leq t<\infty)$.
+
+PROOF We shall use the same notations as in the proof of Theorem 13.35.
+
+If $(a)$ holds, the Banach-Steinhaus theorem implies that the norms of the operators $A_{\varepsilon}$ are bounded, for all sufficiently small $\varepsilon>0$. Since $Q(\varepsilon)-I=\varepsilon A_{\varepsilon}$, (b) follows from $(a)$.
+
+If $(b)$ holds, then also $\left\|M_{t}-I\right\| \rightarrow 0$ as $t \rightarrow 0$. Fix $t>0$, so small that $M_{t}$ is invertible in $\mathscr{B}(X)$. Since $M_{t} A_{\varepsilon}=A_{t} M_{\varepsilon}$, we have
+
+$$
+A_{\varepsilon}=\left(M_{t}\right)^{-1} A_{t} M_{\varepsilon} .
+$$
+
+As $\varepsilon \rightarrow 0$, (1) shows first of all that $A_{\varepsilon} x$ converges, for every $x \in X$ [since $M_{\varepsilon} x \rightarrow x$ and $\left.\left(M_{t}\right)^{-1} A_{t} \in \mathscr{B}(X)\right]$, secondly that $A=\left(M_{t}\right)^{-1} A_{t}$, and thirdly that
+
+$$
+\left\|A_{\varepsilon}-A\right\| \leq\left\|\left(M_{t}\right)^{-1} A_{t}\right\|\left\|M_{\varepsilon}-I\right\| \rightarrow 0 \quad \text { as } \varepsilon \rightarrow 0 \text {. }
+$$
+
+The formula $Q(t)=\exp (t A)$ follows now from $(d)$ of Theorem 13.35, since (2) implies that
+
+$$
+\lim _{\varepsilon \rightarrow 0}\left\|\exp \left(t A_{\varepsilon}\right)-\exp (t A)\right\|=0 \quad(0 \leq t<\infty)
+$$
+
+Thus $(c)$ follows from $(b)$.
+
+The implication $(c) \rightarrow(a)$ is trivial.
+
+For our final theorem, we return to the Hilbert space setting.
+
+3.37 Theorem Assume that $\{Q(t): 0 \leq t<\infty\}$ is a semigroup of normal operators $\mathcal{2}(t) \in \mathscr{B}(H)$, which satisfies the continuity condition
+
+$$
+\lim _{t \rightarrow 0}\|Q(t) x-x\|=0 \quad(x \in H)
+$$
+
+The infinitesimal generator $A$ of $\{Q(t)\}$ is then a normal operator in $H$, there is a ,$<\infty$ such that $\operatorname{Re} \lambda \leq \gamma$ for every $\lambda \in \sigma(A)$, and
+
+$$
+Q(t)=e^{t A} \quad(0 \leq t<\infty)
+$$
+
+If each $Q(t)$ is unitary, then there is a self-adjoint operator $S$ in $H$ such that
+
+$$
+Q(t)=e^{i t S} \quad(0 \leq t<\infty)
+$$
+
+This representation of unitary semigroups is a classical theorem of $\mathrm{M}$. H. Stone.
+
+Note: Although $\mathscr{D}(A)$ may be a proper subspace of $H$, the operators $e^{t A}$ are lefined in all of $H$ and are bounded. To see this, let $E^{A}$ be the spectral decomposition of $A$ (Theorem 13.33). Since $\left|e^{t \lambda}\right| \leq e^{t \gamma}$ for all $\lambda \in \sigma(A)$, the symbolic calculus described in Theorem 12.21 allows us to define bounded operators $e^{t A}$ by
+
+$$
+e^{t A}=\int_{\sigma(A)} e^{t \lambda} d E^{A}(\lambda) \quad(0 \leq t<\infty)
+$$
+
+The theorem has an easy converse: If $A$ is as in the conclusion, then (2) obviously defines a semigroup of normal operators, and (1) holds because
+
+$$
+\|Q(t) x-x\|^{2}=\int_{\sigma(A)}\left|e^{t \lambda}-1\right|^{2} d E_{x, x}^{A}(\lambda) \rightarrow 0
+$$
+
+as $t \rightarrow 0$, by the dominated convergence theorem.
+
+PROOF Since each $Q(s)$ commutes with each $Q(t)$, Theorem 12.16 implies that $Q(s)$ and $Q(t)$ * commute. The smallest closed subalgebra of $\mathscr{B}(H)$ that contains all $Q(t)$ and all $Q(t)^{*}$ is therefore normal. Let $\Delta$ be its maximal ideal space, and let $E$, be the corresponding resolution of the identity, as in Theorem 12.22.
+
+Let $f_{t}$ and $a_{\varepsilon}$ be the Gelfand transforms of $Q(t)$ and $A_{\varepsilon}$, respectively. Then
+
+$$
+a_{\varepsilon}=\frac{f_{\varepsilon}-1}{\varepsilon} \quad(\varepsilon>0)
+$$
+
+and a simple computation gives
+
+$$
+a_{2 \varepsilon}-a_{\varepsilon}=\frac{\varepsilon}{2}\left(a_{\varepsilon}\right)^{2}
+$$
+
+since $f_{2 \varepsilon}=\left(f_{\varepsilon}\right)^{2}$. Define
+
+$$
+b(p)=\lim _{n \rightarrow \infty} a_{2-n}(p)
+$$
+
+for those $p \in \Delta$ at which this limit exists (as a complex number), and define $b(p)=0$ at all other $p \in \Delta$. Then $b$ is a complex Borel function on $\Delta$. Puit $B=\Psi(b)$, as in Theorem 13.24, with domain
+
+$$
+\mathscr{D}(B)=\left\{x \in H: \int_{\Delta}|b|^{2} d E_{x, x}<\infty\right\} .
+$$
+
+Then $B$ is a normal operator in $H$.
+
+We will show that $A=B$. such that
+
+If $x \in \mathscr{D}(A)$ then $\left\|A_{\varepsilon} x\right\|$ is bounded, as $\varepsilon \rightarrow 0$. Hence there exists $C_{x}<\infty$
+
+$$
+\int_{\Delta}\left|a_{\varepsilon}\right|^{2} d E_{x, x}=\left\|A_{\varepsilon} x\right\|^{2} \leq C_{x} \quad(0<\varepsilon \leq 1)
+$$
+
+and therefore
+
+$$
+\int_{\Delta}\left|a_{2 \varepsilon}-a_{\varepsilon}\right| d E_{x, x} \leq \frac{\varepsilon}{2} C_{x} \quad(0<\varepsilon \leq 1)
+$$
+
+by (7). Take $\varepsilon=2^{-n}(n=1,2,3, \ldots)$ in (11) and add the resulting inequalities. It follows that
+
+$$
+\sum_{n=1}^{\infty}\left|a_{2-n+1}-a_{2-n}\right|<\infty \quad \text { a.e. }\left[E_{x, x}\right] .
+$$
+
+The limit (8) exists therefore a.e. $\left[E_{x, x}\right]$, and now Fatou's lemma and (10) imply that
+
+$$
+\int_{\Delta}|b|^{2} d E_{x, x} \leq C_{x}
+$$
+
+Consequently, $\mathscr{D}(A) \subset \mathscr{D}(B)$.
+
+Formula (5) in the proof of Theorem 13.35 shows that $\left\|\exp \left(A_{\varepsilon}\right)\right\| \leq \gamma_{1}<\infty$ for $0<\varepsilon \leq 1$, where $\gamma_{1}$ depends on $\{Q(t)\}$. Hence $\left|\exp a_{\varepsilon}(p)\right| \leq \gamma_{1}$ for every $p \in \Delta$, since the Gelfand transform is an isometry on $B^{*}$-algebras. It now follows
+from (8) that $|\exp b(p)| \leq \gamma_{1}$ for every $p \in \Delta$. Hence there exists $\gamma<\infty$ such that
+
+$$
+\operatorname{Re} b(p) \leq \gamma \quad(p \in \Delta)
+$$
+
+For every $x \in \mathscr{D}(A)$ and every $t \geq 0$,
+
+$$
+\left\|\exp \left(t A_{\varepsilon}\right) x-\exp (t B) x\right\|^{2}=\int_{\Delta}\left|\exp \left(t a_{\varepsilon}\right)-\exp (t b)\right|^{2} d E_{x, x}
+$$
+
+tends to 0 as $\varepsilon \rightarrow 0$ through the sequence $\left\{2^{-n}\right\}$, because the integrand is bounded by $4 \gamma_{1}^{2 t}$ and its limit is 0 a.e. $\left[E_{x, x}\right]$. Hence $(d)$ of Theorem 13.35 implies that
+
+$$
+Q(t) x=e^{t B} x \quad[x \in \mathscr{D}(A)]
+$$
+
+However, $e^{t b}$ is a bounded function on $\Delta$, hence $e^{t B} \in \mathscr{B}(H)$, and since (16) shows that the continuous operators $Q(t)$ and $e^{t B}$ coincide on the dense set $\mathscr{D}(A)$, we conclude that
+
+$$
+Q(t)=e^{t B} \quad(0 \leq t<\infty)
+$$
+
+It follows from (17) that
+
+$$
+A_{\varepsilon} x-B x=\left(\frac{e^{\varepsilon B}-I}{\varepsilon}-B\right) x
+$$
+
+so that
+
+$$
+\left\|A_{\varepsilon} x-B x\right\|^{2}=\int_{\Delta}\left|\frac{e^{\varepsilon b}-1}{\varepsilon}-b\right|^{2} d E_{x, x} .
+$$
+
+As $\varepsilon \rightarrow 0$, the integrand (19) tends to 0 , at every point of $\Delta$. Since $\left|\left(e^{z}-1\right) / z\right|$ is bounded on every half-plane $\{z: \operatorname{Re} z \leq c\}$, and since the integrand (19) can be written in the form
+
+$$
+\left|\frac{e^{\varepsilon b}-1}{\varepsilon b}-1\right||b|^{2}
+$$
+
+it follows from (14) and the dominated convergence theorem that
+
+$$
+\lim _{\varepsilon \rightarrow 0}\left\|A_{c} x-B x\right\|^{2}=0 \quad \text { if } x \in \mathscr{D}(B)
+$$
+
+This proves that $\mathscr{D}(B) \subset \mathscr{D}(A)$ and that $A=B$.
+
+That the real part of $\sigma(A)$ is bounded above follows now from (14) and (c) of Theorem 13.27.
+
+This completes the proof, except for the final statement about unitary semigroups. If each $Q(t)$ is unitary, then $\left|f_{\varepsilon}\right|=1$, (6) shows that $\lim a_{\varepsilon}$ is pure
+imaginary at every point at which it exists, as $\varepsilon \rightarrow 0$, hence $b(p)$ is pure imaginary at every $p \in \Delta$, and if $S=-i B$ then (17) gives (3), and (c) of Theorem 13.24 shows that $S$ is self-adjoint.
+
+
+\end{document}

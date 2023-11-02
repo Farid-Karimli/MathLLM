@@ -1,0 +1,1164 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+
+\begin{document}
+\section{ABSTRACT INTEGRATION}
+Toward the end of the nineteenth century it became clear to many mathematicians that the Riemann integral (about which one learns in calculus courses) should be replaced by some other type of integral, more general and more flexible, better suited for dealing with limit processes. Among the attempts made in this direction, the most notable ones were due to Jordan, Borel, W. H. Young, and Lebesgue. It was Lebesgue's construction which turned out to be the most successful.
+
+In brief outline, here is the main idea: The Riemann integral of a function $f$ over an interval $[a, b]$ can be approximated by sums of the form
+
+$$
+\sum_{i=1}^{n} f\left(t_{i}\right) m\left(E_{i}\right)
+$$
+
+where $E_{1}, \ldots, E_{n}$ are disjoint intervals whose union is $[a, b], m\left(E_{i}\right)$ denotes the length of $E_{i}$, and $t_{i} \in E_{i}$ for $i=1, \ldots, n$. Lebesgue discovered that a completely satisfactory theory of integration results if the sets $E_{i}$ in the above sum are allowed to belong to a larger class of subsets of the line, the so-called "measurable sets," and if the class of functions under consideration is enlarged to what he called "measurable functions." The crucial set-theoretic properties involved are the following: The union and the intersection of any countable family of measurable sets are measurable; so is the complement of every measurable set; and, most important, the notion of "length" (now called "measure") can be extended to them in such a way that
+
+$$
+m\left(E_{1} \cup E_{2} \cup E_{3} \cup \cdots\right)=m\left(E_{1}\right)+m\left(E_{2}\right)+m\left(E_{3}\right)+\cdots
+$$
+
+for every countable collection $\left\{E_{i}\right\}$ of pairwise disjoint measurable sets. This property of $m$ is called countable additivity.
+
+The passage from Riemann's theory of integration to that of Lebesque is a process of completion (in a sense which will appear more precisely later). It is of the same fundamental importance in analysis as is the construction of the real number system from the rationals.
+
+The above-mentioned measure $m$ is of course intimately related to the geometry of the real line. In this chapter we shall present an abstract (axiomatic) version of the Lebesgue integral, relative to any countably additive measure on any set. (The precise definitions follow.) This abstract theory is not in any way more difficult than the special case of the real line; it shows that a large part of integration theory is independent of any geometry (or topology) of the underlying space; and, of course, it gives us a tool of much wider applicability. The existence of a large class of measures, among them that of Lebesgue, will be established in Chap. 2.
+
+\section{Set-Theoretic Notations and Terminology}
+1.1 Some sets can be described by listing their members. Thus $\left\{x_{1}, \ldots, x_{n}\right\}$ is the set whose members are $x_{1}, \ldots, x_{n}$; and $\{x\}$ is the set whose only member is $x$. More often, sets are described by properties. We write
+
+$$
+\{x: P\}
+$$
+
+for the set of all elements $x$ which have the property $P$. The symbol $\varnothing$ denotes the empty set. The words collection, family, and class will be used synonymously with set.
+
+We write $x \in A$ if $x$ is a member of the set $A$; otherwise $x \notin A$. If $B$ is a subset of $A$, i.e., if $x \in B$ implies $x \in A$, we write $B \subset A$. If $B \subset A$ and $A \subset B$, then $A=B$. If $B \subset A$ and $A \neq B, B$ is a proper subset of $A$. Note that $\varnothing \subset A$ for every set $A$.
+
+$A \cup B$ and $A \cap B$ are the union and intersection of $A$ and $B$, respectively. If $\left\{A_{\alpha}\right\}$ is a collection of sets, where $\alpha$ runs through some index set $I$, we write
+
+$$
+\bigcup_{\alpha \in I} A_{\alpha} \text { and } \bigcap_{\alpha \in I} A_{\alpha}
+$$
+
+for the union and intersection of $\left\{A_{\alpha}\right\}$ :
+
+$$
+\begin{aligned}
+& \bigcup_{\alpha \in I} A_{\alpha}=\left\{x: x \in A_{\alpha} \text { for at least one } \alpha \in I\right\} \\
+& \bigcap_{\alpha \in I} A_{\alpha}=\left\{x: x \in A_{\alpha} \text { for every } \alpha \in I\right\}
+\end{aligned}
+$$
+
+If $I$ is the set of all positive integers, the customary notations are
+
+$$
+\bigcup_{n=1}^{\infty} A_{n} \text { and } \bigcap_{n=1}^{\infty} A_{n}
+$$
+
+If no two members of $\left\{A_{\alpha}\right\}$ have an element in common, then $\left\{A_{\alpha}\right\}$ is a disjoint collection of sets:
+
+We write $A-B=\{x: x \in A, x \notin B\}$, and denote the complement of $A$ by $A^{c}$ whenever it is clear from the context with respect to which larger set the complement is taken.
+
+The cartesian product $A_{1} \times \cdots \times A_{n}$ of the sets $A_{1}, \ldots, A_{n}$ is the set of all ordered $n$-tuples $\left(a_{1}, \ldots, a_{n}\right)$ where $a_{i} \in A_{i}$ for $i=1, \ldots, n$.
+
+The real line (or real number system) is $R^{1}$, and
+
+$$
+R^{k}=R^{1} \times \cdots \times R^{1} \quad(k \text { factors })
+$$
+
+The extended real number system is $R^{1}$ with two symbols, $\infty$ and $-\infty$, adjoined, and with the obvious ordering. If $-\infty \leq a \leq b \leq \infty$, the interval $[a, b]$ and the segment $(a, b)$ are defined to be
+
+$$
+[a, b]=\{x: a \leq x \leq b\}, \quad(a, b)=\{x: a<x<b\}
+$$
+
+We also write
+
+$$
+[a, b)=\{x: a \leq x<b\}, \quad(a, b]=\{x: a<x \leq b\}
+$$
+
+If $E \subset[-\infty, \infty]$ and $E \neq \varnothing$, the least upper bound (supremum) and greatest lower bound (infimum) of $E$ exist in $[-\infty, \infty]$ and are denoted by sup $E$ and inf $E$.
+
+Sometimes (but only when $\sup E \in E$ ) we write $\max E$ for $\sup E$.
+
+The symbol
+
+$$
+f: X \rightarrow Y
+$$
+
+means that $f$ is a function (or mapping or transformation) of the set $X$ into the set $Y$; i.e., $f$ assigns to each $x \in X$ an element $f(x) \in Y$. If $A \subset X$ and $B \subset Y$, the image of $A$ and the inverse image (or pre-image) of $B$ are
+
+$$
+\begin{aligned}
+f(A) & =\{y: y=f(x) \text { for some } x \in A\} \\
+f^{-1}(B) & =\{x: f(x) \in B\} .
+\end{aligned}
+$$
+
+Note that $f^{-1}(B)$ may be empty even when $B \neq \varnothing$.
+
+The domain of $f$ is $X$. The range of $f$ is $f(X)$.
+
+If $f(X)=Y, f$ is said to map $X$ onto $Y$.
+
+We write $f^{-1}(y)$, instead of $f^{-1}(\{y\})$, for every $y \in Y$. If $f^{-1}(y)$ consists of at most one point, for each $y \in Y, f$ is said to be one-to-one. If $f$ is one-to-one, then $f^{-1}$ is a function with domain $f(X)$ and range $X$.
+
+If $f: X \rightarrow[-\infty, \infty]$ and $E \subset X$, it is customary to write $\sup _{x \in E} f(x)$ rather than $\sup f(E)$.
+
+If $f: X \rightarrow Y$ and $g: Y \rightarrow Z$, the composite function $g \circ f: X \rightarrow Z$ is defined by the formula
+
+$$
+(g \circ f)(x)=g(f(x)) \quad(x \in X) .
+$$
+
+If the range of $f$ lies in the real line (or in the complex plane), then $f$ is said to be a real function (or a complex function). For a complex function $f$, the statement " $f \geq 0$ " means that all values $f(x)$ of $f$ are nonnegative real numbers.
+
+\section{The Concept of Measurability}
+The class of measurable functions plays a fundamental role in integration theory. It has some basic properties in common with another most important class of functions, namely, the continuous ones. It is helpful to keep these similarities in mind. Our presentation is therefore organized in such a way that the analogies between the concepts topological space, open set, and continuous function, on the one hand, and measurable space, measurable set, and measurable function, on the other, are strongly emphasized. It seems that the relations between these concepts emerge most clearly when the setting is quite abstract, and this (rather than a desire for mere generality) motivates our approach to the subject.
+
+\subsection{Definition}
+(a) A collection $\tau$ of subsets of a set $X$ is said to be a topology in $X$ if $\tau$ has the following three properties:
+
+(i) $\varnothing \in \tau$ and $X \in \tau$.
+
+(ii) If $V_{i} \in \tau$ for $i=1, \ldots, n$, then $V_{1} \cap V_{2} \cap \cdots \cap V_{n} \in \tau$.
+
+(iii) If $\left\{V_{\alpha}\right\}$ is an arbitrary collection of members of $\tau$ (finite, countable, or uncountable), then $\bigcup_{\alpha} V_{\alpha} \in \tau$.
+
+(b) If $\tau$ is a topology in $X$, then $X$ is called a topological space, and the members of $\tau$ are called the open sets in $X$.
+
+(c) If $X$ and $Y$ are topological spaces and if $f$ is a mapping of $X$ into $Y$, then $f$ is said to be continuous provided that $f^{-1}(V)$ is an open set in $X$ for every open set $V$ in $Y$.
+
+\subsection{Definition}
+(a) A collection $\mathfrak{M}$ of subsets of a set $X$ is said to be a $\sigma$-algebra in $X$ if $\mathfrak{M}$ has the following properties:
+
+(i) $X \in \mathfrak{M}$.
+
+(ii) If $A \in \mathfrak{M}$, then $A^{\mathfrak{c}} \in \mathfrak{M}$, where $A^{c}$ is the complement of $A$ relative to $X$.
+
+(iii) If $A=\bigcup_{n=1}^{\infty} A_{n}$ and if $A_{n} \in \mathfrak{M}$ for $n=1,2,3, \ldots$, then $A \in \mathfrak{M}$.
+
+(b) If $\mathfrak{M}$ is a $\sigma$-algebra in $X$, then $X$ is called a measurable space, and the members of $\mathfrak{M}$ are called the measurable sets in $X$.
+
+(c) If $X$ is a measurable space, $Y$ is a topological space, and $f$ is a mapping of $X$ into $Y$, then $f$ is said to be measurable provided that $f^{-1}(V)$ is a measurable set in $X$ for every open set $V$ in $Y$.
+
+It would perhaps be more satisfactory to apply the term "measurable space" to the ordered pair $(X, \mathfrak{M})$, rather than to $X$. After all, $X$ is a set, and $X$ has not been changed in any way by the fact that we now also have a $\sigma$-algebra of its subsets in mind. Similarly, a topological space is an ordered pair $(X, \tau)$. But if this sort of thing were systematically done in all mathematics, the terminology would become awfully cumbersome. We shall discuss this again at somewhat greater length in Sec. 1.21.
+
+1.4 Comments on Definition 1.2 The most familiar topological spaces are the metric spaces. We shall assume some familiarity with metric spaces but shall give the basic definitions, for the sake of completeness.
+
+A metric space is a set $X$ in which a distance function (or metric) $\rho$ is defined, with the following properties:
+
+(a) $0 \leq \rho(x, y)<\infty$ for all $x$ and $y \in X$.
+
+(b) $\rho(x, y)=0$ if and only if $x=y$.
+
+(c) $\rho(x, y)=\rho(y, x)$ for all $x$ and $y \in X$.
+
+(d) $\rho(x, y) \leq \rho(x, z)+\rho(z, y)$ for all $x, y$, and $z \in X$.
+
+Property $(d)$ is called the triangle inequality.
+
+If $x \in X$ and $r \geq 0$, the open ball with center at $x$ and radius $r$ is the set $\{y \in X: \rho(x, y)<r\}$.
+
+If $X$ is a metric space and if $\tau$ is the collection of all sets $E \subset X$ which are arbitrary unions of open balls, then $\tau$ is a topology in $X$. This is not hard to verify; the intersection property depends on the fact that if $x \in B_{1} \cap B_{2}$, where $B_{1}$ and $B_{2}$ are open balls, then $x$ is the center of an open ball $B \subset B_{1} \cap B_{2}$. We leave this as an exercise.
+
+For instance, in the real line $R^{1}$ a set is open if and only if is a union of open segments $(a, b)$. In the plane $R^{2}$, the open sets are those which are unions of open circular discs.
+
+Another topological space, which we shall encounter frequently, is the extended real line $[-\infty, \infty]$; its topology is defined by declaring the following sets to be open: $(a, b),[-\infty, a),(a, \infty]$, and any union of segments of this type.
+
+The definition of continuity given in Sec. 1.2(c) is a global one. Frequently it is desirable to define continuity locally: A mapping $f$ of $X$ into $Y$ is said to be continuous at the point $x_{0} \in X$ if to every neighborhood $V$ of $f\left(x_{0}\right)$ there corresponds a neighborhood $W$ of $x_{0}$ such that $f(W) \subset V$.
+
+(A neighborhood of a point $x$ is, by definition, an open set which contains $x$.)
+
+When $X$ and $Y$ are metric spaces, this local definition is of course the same as the usual epsilon-delta definition, and is equivalent to the requirement that $\lim f\left(x_{n}\right)=f\left(x_{0}\right)$ in $Y$ whenever $\lim x_{n}=x_{0}$ in $X$.
+
+The following easy proposition relates the local and global definitions of continuity in the expected manner:
+
+1.5 Proposition Let $X$ and $Y$ be topological spaces. A mapping $f$ of $X$ into $Y$ is continuous if and only if $f$ is continuous at every point of $X$.
+
+Proof If $f$ is continuous and $x_{0} \in X$, then $f^{-1}(V)$ is a neighborhood of $x_{0}$, for every neighborhood $V$ of $f\left(x_{0}\right)$. Since $f\left(f^{-1}(V)\right) \subset V$, it follows that $f$ is continuous at $x_{0}$.
+
+If $f$ is continuous at every point of $X$ and if $V$ is open in $Y$, every point $x \in f^{-1}(V)$ has a neighborhood $W_{x}$ such that $f\left(W_{x}\right) \subset V$. Therefore $W_{x} \subset$ $f^{-1}(V)$. It follows that $f^{-1}(V)$ is the union of the open sets $W_{x}$, so $f^{-1}(V)$ is itself open. Thus $f$ is continuous.
+
+1.6 Comments on Definition 1.3 Let $\mathfrak{M}$ be a $\sigma$-algebra in a set $X$. Referring to Properties (i) to (iii) of Definition 1.3(a), we immediately derive the following facts.
+
+(a) Since $\varnothing=X^{c}$, (i) and (ii) imply that $\varnothing \in \mathfrak{M}$.
+
+(b) Taking $A_{n+1}=A_{n+2}=\cdots=\varnothing$ in (iii), we see that $A_{1} \cup A_{2} \cup \cdots \cup A_{n}$ $\in \mathfrak{M}$ if $A_{i} \in \mathfrak{M}$ for $i=1, \ldots, n$.
+
+(c) Since
+
+$$
+\bigcap_{n=1}^{\infty} A_{n}=\left(\bigcup_{n=1}^{\infty} A_{n}^{c}\right)^{c}
+$$
+
+$\mathfrak{M}$ is closed under the formation of countable (and also finite) intersections.
+
+(d) Since $A-B=B^{c} \cap A$, we have $A-B \in \mathfrak{M}$ if $A \in \mathfrak{M}$ and $B \in \mathfrak{M}$.
+
+The prefix $\sigma$ refers to the fact that (iii) is required to hold for all countable unions of members of $\mathfrak{M}$. If (iii) is required for finite unions only, then $\mathfrak{M}$ is called an algebra of sets.
+
+1.7 Theorem Let $Y$ and $Z$ be topological spaces, and let $g: Y \rightarrow Z$ be continuous.
+
+(a) If $X$ is a topological space, if $f: X \rightarrow Y$ is continuous, and if $h=g \circ f$, then $h: X \rightarrow Z$ is continuous.
+
+(b) If $X$ is a measurable space, if $f: X \rightarrow Y$ is measurable, and if $h=g \circ f$, then $h: X \rightarrow Z$ is measurable.
+
+Stated informally, continuous functions of continuous functions are continuous; continuous functions of measurable functions are measurable.
+
+Proof If $V$ is open in $Z$, then $g^{-1}(V)$ is open in $Y$, and
+
+$$
+h^{-1}(V)=f^{-1}\left(g^{-1}(V)\right)
+$$
+
+If $f$ is continuous, it follows that $h^{-1}(V)$ is open, proving $(a)$.
+
+If $f$ is measurable, it follows that $h^{-1}(V)$ is measurable, proving $(b)$.
+
+1.8 Theorem Let $u$ and $v$ be real measurable functions on a measurable space $X$, let $\Phi$ be a continuous mapping of the plane into a topological space $Y$, and define
+
+$$
+h(x)=\Phi(u(x), v(x))
+$$
+
+for $x \in X$. Then $h: X \rightarrow Y$ is measurable.
+
+Proof Put $f(x)=(u(x), v(x))$. Then $f$ maps $X$ into the plane. Since $h=\Phi \circ f$, Theorem 1.7 shows that it is enough to prove the measurability of $f$.
+
+If $R$ is any open rectangle in the plane, with sides parallel to the axes, then $R$ is the cartesian product of two segments $I_{1}$ and $I_{2}$, and
+
+$$
+f^{-1}(R)=u^{-1}\left(I_{1}\right) \cap v^{-1}\left(I_{2}\right)
+$$
+
+which is measurable, by our assumption on $u$ and $v$. Every open set $V$ in the plane is a countable union of such rectangles $R_{i}$, and since
+
+$$
+f^{-1}(V)=f^{-1}\left(\bigcup_{i=1}^{\infty} R_{i}\right)=\bigcup_{i=1}^{\infty} f^{-1}\left(R_{i}\right)
+$$
+
+$f^{-1}(V)$ is measurable.
+
+1.9 Let $X$ be a measurable space. The following propositions are corollaries of Theorems 1.7 and 1.8:
+
+(a) If $f=u+i v$, where $u$ and $v$ are real measurable functions on $X$, then $f$ is a complex measurable function on $X$.
+
+This follows from Theorem 1.8, with $\Phi(z)=z$.
+
+(b) If $f=u+i v$ is a complex measurable function on $X$, then $u, v$, and $|f|$ are real measurable functions on $X$.
+
+This follows from Theorem 1.7, with $g(z)=\operatorname{Re}(z), \operatorname{Im}(z)$, and $|z|$.
+
+(c) If $f$ and $g$ are complex measurable functions on $X$, then so are $f+g$ and $f g$.
+
+For real $f$ and $g$ this follaws from Theorem 1.8, with
+
+$$
+\Phi(s, t)=s+t
+$$
+
+and $\Phi(s, t)=s t$. The complex case then follows from $(a)$ and $(b)$.
+
+(d) If $E$ is a measurable set in $X$ and if
+
+$$
+\chi_{E}(x)= \begin{cases}1 & \text { if } x \in E \\ 0 & \text { if } x \notin E\end{cases}
+$$
+
+then $\chi_{E}$ is a measurable function.
+
+This is obvious. We call $\chi_{E}$ the characteristic function of the set $E$. The letter $\chi$ will be reserved for characteristic functions throughout this book.
+
+(e) If $f$ is a complex measurable function on $X$, there is a complex measurable function $\alpha$ on $X$ such that $|\alpha|=1$ and $f=\alpha|f|$.
+
+Proof Let $E=\{x: f(x)=0\}$, let $Y$ be the complex plane with the origin removed, define $\varphi(z)=z /|z|$ for $z \in Y$, and put
+
+$$
+\alpha(x)=\varphi\left(f(x)+\chi_{E}(x)\right) \quad(x \in X)
+$$
+
+If $x \in E, \alpha(x)=1$; if $x \notin E, \alpha(x)=f(x) /|f(x)|$. Since $\varphi$ is continuous on $Y$ and since $E$ is measurable (why?), the measurability of $\alpha$ follows from $(c),(d)$, and Theorem 1.7.
+
+We now show that $\sigma$-algebras exist in great profusion.
+
+1.10 Theorem If $\mathscr{F}$ is any collection of subsets of $X$, there exists a smallest $\sigma$-algebra $\mathfrak{M}^{*}$ in $X$ such that $\mathscr{F} \subset \mathfrak{M}^{*}$.
+
+This $\mathfrak{M}^{*}$ is sometimes called the $\sigma$-algebra generated by $\mathscr{F}$.
+
+ProOF Let $\Omega$ be the family of all $\sigma$-algebras $\mathfrak{M}$ in $X$ which contain $\mathscr{F}$. Since the collection of all subsets of $X$ is such a $\sigma$-algebra, $\Omega$ is not empty. Let $\mathfrak{M}^{*}$ be the intersection of all $\mathfrak{M} \in \Omega$. It is clear that $\mathscr{F} \subset \mathfrak{M}^{*}$ and that $\mathfrak{M}^{*}$ lies in every $\sigma$-algebra in $X$ which contains $\mathscr{F}$. To complete the proof, we have to show that $\mathfrak{M}^{*}$ is itself a $\sigma$-algebra.
+
+If $A_{n} \in \mathfrak{M}^{*}$ for $n=1,2,3, \ldots$, and if $\mathfrak{M} \in \Omega$, then $A_{n} \in \mathfrak{M}$, so $\bigcup A_{n} \in \mathfrak{M}$, since $\mathfrak{M}$ is a $\sigma$-algebra. Since $\bigcup A_{n} \in \mathfrak{M}$ for every $\mathfrak{M} \in \Omega$, we conclude that $\bigcup A_{n} \in \mathfrak{M}^{*}$. The other two defining properties of a $\sigma$-algebra are verified in the same manner.
+
+1.11 Borel Sets Let $X$ be a topological space. By Theorem 1.10, there exists a smallest $\sigma$-algebra $\mathscr{B}$ in $X$ such that every open set in $X$ belongs to $\mathscr{B}$. The members of $\mathscr{B}$ are called the Borel sets of $X$.
+
+In particular, closed sets are Borel sets (being, by definition, the complements of open sets), and so are all countable unions of closed sets and all countable intersections of open sets. These last two are called $F_{\sigma}$ 's and $G_{\delta}$ 's, respectively, and play a considerable role. The notation is due to Hausdorff. The letters $F$ and $G$ were used for closed and open sets, respectively, and $\sigma$ refers to union (Summe), $\delta$ to intersection (Durchschnitt). For example, every half-open interval $[a, b)$ is a $G_{\delta}$ and an $F_{\sigma}$ in $R^{1}$.
+
+Since $\mathscr{B}$ is a $\sigma$-algebra, we may now regard $X$ as a measurable space, with the Borel sets playing the role of the measurable sets; more concisely, we consider the measurable space $(X, \mathscr{B})$. If $f: X \rightarrow Y$ is a continuous mapping of $X$, where $Y$ is any topological space, then it is evident from the definitions that $f^{-1}(V) \in \mathscr{B}$ for every open set $V$ in $Y$. In other words, every continuous mapping of $X$ is Borel measurable.
+
+Borel measurable mappings are often called Borel mappings, or Borel functions.
+
+1.12 Theorem Suppose $\mathfrak{M}$ is a $\sigma$-algebra in $X$, and $Y$ is a topological space. Let $f$ map $X$ into $Y$.
+
+(a) If $\Omega$ is the collection of all sets $E \subset Y$ such that $f^{-1}(E) \in \mathfrak{M}$, then $\Omega$ is a $\sigma$-algebra in $Y$.
+
+(b) If $f$ is measurable and $E$ is a Borel set in $Y$, then $f^{-1}(E) \in \mathfrak{M}$.
+
+(c) If $Y=[-\infty, \infty]$ and $f^{-1}((\alpha, \infty]) \in \mathfrak{M}$ for every real $\alpha$, then $f$ is measurable.
+
+(d) If $f$ is measurable, if $Z$ is a topological space, if $g: Y \rightarrow Z$ is a Borel mapping, and if $h=g \circ f$, then $h: X \rightarrow Z$ is measurable.
+
+Part $(c)$ is a frequently used criterion for the measurability of real-valued functions. (See also Exercise 3.) Note that $(d)$ generalizes Theorem 1.7(b).
+
+Proof (a) follows from the relations
+
+$$
+\begin{aligned}
+f^{-1}(Y) & =X \\
+f^{-1}(Y-A) & =X-f^{-1}(A)
+\end{aligned}
+$$
+
+and
+
+$$
+f^{-1}\left(A_{1} \cup A_{2} \cup \cdots\right)=f^{-1}\left(A_{1}\right) \cup f^{-1}\left(A_{2}\right) \cup \cdots
+$$
+
+To prove $(b)$, let $\Omega$ be as in $(a)$; the measurability of $f$ implies that $\Omega$ contains all open sets in $Y$, and since $\Omega$ is a $\sigma$-algebra, $\Omega$ contains all Borel sets in $Y$.
+
+To prove (c), let $\Omega$ be the collection of all $E \subset[-\infty, \infty]$ such that $f^{-1}(E) \in \mathfrak{M}$. Choose a real number $\alpha$, and choose $\alpha_{n}<\alpha$ so that $\alpha_{n} \rightarrow \alpha$ as $n \rightarrow \infty$. Since $\left(\alpha_{n}, \infty\right] \in \Omega$ for each $n$, since
+
+$$
+[-\infty, \alpha)=\bigcup_{n=1}^{\infty}\left[-\infty, \alpha_{n}\right]=\bigcup_{n=1}^{\infty}\left(\alpha_{n}, \infty\right]^{c}
+$$
+
+and since (a) shows that $\Omega$ is a $\sigma$-algebra, we see that $[-\infty, \alpha) \in \Omega$. The same is then true of
+
+$$
+(\alpha, \beta)=[-\infty, \beta) \cap(\alpha, \infty]
+$$
+
+Since every open set in $[-\infty, \infty]$ is a countable union of segments of the above types, $\Omega$ contains every open set. Thus $f$ is measurable. since
+
+To prove $(d)$, let $V \subset Z$ be open. Then $g^{-1}(V)$ is a Borel set of $Y$, and
+
+$$
+h^{-1}(V)=f^{-1}\left(g^{-1}(V)\right)
+$$
+
+(b) shows that $h^{-1}(V) \in \mathfrak{M}$.
+
+1.13 Definition Let $\left\{a_{n}\right\}$ be a sequence in $[-\infty, \infty]$, and put
+
+$$
+b_{k}=\sup \left\{a_{k}, a_{k+1}, a_{k+2}, \ldots\right\} \quad(k=1,2,3, \ldots)
+$$
+
+and
+
+$$
+\beta=\inf \left\{b_{1}, b_{2}, b_{3}, \ldots\right\}
+$$
+
+We call $\beta$ the upper limit of $\left\{a_{n}\right\}$, and write
+
+$$
+\beta=\limsup _{n \rightarrow \infty} a_{n}
+$$
+
+The following properties are easily verified: First, $b_{1} \geq b_{2} \geq b_{3} \geq \cdots$, so that $b_{k} \rightarrow \beta$ as $k \rightarrow \infty$; secondly, there is a subsequence $\left\{a_{n_{i}}\right\}$ of $\left\{a_{n}\right\}$ such that $a_{n_{i}} \rightarrow \beta$ as $i \rightarrow \infty$, and $\beta$ is the largest number with this property.
+
+The lower limit is defined analogously: simply interchange sup and inf in (1) and (2). Note that
+
+$$
+\liminf _{n \rightarrow \infty} a_{n}=-\limsup _{n \rightarrow \infty}\left(-a_{n}\right) .
+$$
+
+If $\left\{a_{n}\right\}$ converges, then evidently
+
+$$
+\limsup _{n \rightarrow \infty} a_{n}=\liminf _{n \rightarrow \infty} a_{n}=\lim _{n \rightarrow \infty} a_{n} .
+$$
+
+Suppose $\left\{f_{n}\right\}$ is a sequence of extended-real functions on a set $X$. Then $\sup f_{n}$ and $\lim \sup f_{n}$ are the functions defined on $X$ by
+
+$$
+\begin{aligned}
+\left(\sup _{n} f_{n}\right)(x) & =\sup _{n}\left(f_{n}(x)\right), \\
+\left(\limsup _{n \rightarrow \infty} f_{n}\right)(x) & =\limsup _{n \rightarrow \infty}\left(f_{n}(x)\right)
+\end{aligned}
+$$
+
+If
+
+$$
+f(x)=\lim _{n \rightarrow \infty} f_{n}(x),
+$$
+
+the limit being assumed to exist at every $x \in X$, then we call $f$ the pointwise limit of the sequence $\left\{f_{n}\right\}$.
+
+1.14 Theorem If $f_{n}: X \rightarrow[-\infty, \infty]$ is measurable, for $n=1,2,3, \ldots$, and
+
+$$
+g=\sup _{n \geq 1} f_{n}, \quad h=\limsup _{n \rightarrow \infty} f_{n},
+$$
+
+then $g$ and $h$ are measurable.
+
+ProOF $g^{-1}((\alpha, \infty])=\bigcup_{n=1}^{\infty} f_{n}^{-1}((\alpha, \infty])$. Hence Theorem 1.12(c) implies that $g$ is measurable. The same result holds of course with inf in place of sup, and since
+
+$$
+h=\inf _{k \geq 1}\left\{\sup _{i \geq k} f_{i}\right\}
+$$
+
+it follows that $h$ is measurable.
+
+\section{Corollaries}
+(a) The limit of every pointwise convergent sequence of complex measurable functions is measurable.
+
+(b) If $f$ and $g$ are measurable (with range in $[-\infty, \infty])$, then so are $\max \{f, g\}$ and $\min \{f, g\}$. In particular, this is true of the functions
+
+$$
+f^{+}=\max \{f, 0\} \quad \text { and } \quad f^{-}=-\min \{f, 0\} \text {. }
+$$
+
+1.15 The above functions $f^{+}$and $f^{-}$are called the positive and negative parts of $f$. We have $|f|=f^{+}+f^{-}$and $f=f^{+}-f^{-}$, a standard representation of $f$ as a difference of two nonnegative functions, with a certain minimality property:
+
+Proposition Iff $=g-h, g \geq 0$, and $h \geq 0$, then $f^{+} \leq g$ and $f^{-} \leq h$.
+
+Proof $f \leq g$ and $0 \leq g$ clearly implies $\max \{f, 0\} \leq g$.
+
+\section{Simple Functions}
+1.16 Definition A complex function $s$ on a measurable space $X$ whose range consists of only finitely many points will be called a simple function. Among these are the nonnegative simple functions, whose range is a finite subset of $[0, \infty)$. Note that we explicitly exclude $\infty$ from the values of a simple function.
+
+If $\alpha_{1}, \ldots, \alpha_{n}$ are the distinct values of a simple function $s$, and if we set $A_{i}=\left\{x: s(x)=\alpha_{i}\right\}$, then clearly
+
+$$
+s=\sum_{i=1}^{n} \alpha_{i} \chi_{A_{i}}
+$$
+
+where $\chi_{A_{i}}$ is the characteristic function of $A_{i}$, as defined in Sec. 1.9(d).
+
+It is also clear that $s$ is measurable if and only if each of the sets $A_{i}$ is measurable.
+
+1.17 Theorem Let $f: X \rightarrow[0, \infty]$ be measurable. There exist simple measurable functions $s_{n}$ on $X$ such that
+
+(a) $0 \leq s_{1} \leq s_{2} \leq \cdots \leq f$
+
+(b) $s_{n}(x) \rightarrow f(x)$ as $n \rightarrow \infty$, for every $x \in X$.
+
+ProOF Put $\delta_{n}=2^{-n}$. To each positive integer $n$ and each real number $t$ corresponds a unique integer $k=k_{n}(t)$ that satisfies $k \delta_{n} \leq t<(k+1) \delta_{n}$. Define
+
+$$
+\varphi_{n}(t)= \begin{cases}k_{n}(t) \delta_{n} & \text { if } 0 \leq t<n \\ n & \text { if } n \leq t \leq \infty\end{cases}
+$$
+
+Each $\varphi_{n}$ is then a Borel function on $[0, \infty]$,
+
+$$
+t-\delta_{n}<\varphi_{n}(t) \leq t \quad \text { if } 0 \leq t \leq n
+$$
+
+$0 \leq \varphi_{1} \leq \varphi_{2} \leq \cdots \leq t$, and $\varphi_{n}(t) \rightarrow t$ as $n \rightarrow \infty$, for every $t \in[0, \infty]$. It follows that the functions
+
+$$
+s_{n}=\varphi_{n} \circ f
+$$
+
+satisfy $(a)$ and $(b)$; they are measurable, by Theorem $1.12(d)$.
+
+\section{Elementary Properties of Measures}
+\subsection{Definition}
+(a) A positive measure is a function $\mu$, defined on a $\sigma$-algebra $\mathfrak{M}$, whose range is in $[0, \infty]$ and which is countably additive. This means that if $\left\{A_{i}\right\}$ is a disjoint countable collection of members of $\mathfrak{M}$, then
+
+$$
+\mu\left(\bigcup_{i=1}^{\infty} A_{i}\right)=\sum_{i=1}^{\infty} \mu\left(A_{i}\right)
+$$
+
+To avoid trivialities, we shall also assume that $\mu(A)<\infty$ for at least one $A \in \mathfrak{M}$.
+
+(b) A measure space is a measurable space which has a positive measure defined on the $\sigma$-algebra of its measurable sets.
+
+(c) A complex measure is a complex-valued countably additive function defined on a $\sigma$-algebra.
+
+Note: What we have called a positive measure is frequently just called a measure; we add the word "positive" for emphasis. If $\mu(E)=0$ for every $E \in \mathfrak{M}$, then $\mu$ is a positive measure, by our definition. The value $\infty$ is admissible for a positive measure; but when we talk of a complex measure $\mu$, it is understood that $\mu(E)$ is a complex number, for every $E \in \mathfrak{M}$. The real measures form a subclass of the complex ones, of course.
+
+1.19 Theorem Let $\mu$ be a positive measure on a $\sigma$-algebra $\mathfrak{M}$. Then
+
+(a) $\mu(\varnothing)=0$.
+
+(b) $\mu\left(A_{1} \cup \cdots \cup A_{n}\right)=\mu\left(A_{1}\right)+\cdots+\mu\left(A_{n}\right)$ if $A_{1}, \ldots, A_{n}$ are pairwise disjoint members of $\mathfrak{M}$.
+
+(c) $A \subset B$ implies $\mu(A) \leq \mu(B)$ if $A \in \mathfrak{M}, B \in \mathfrak{M}$.
+
+(d) $\mu\left(A_{n}\right) \rightarrow \mu(A)$ as $n \rightarrow \infty$ if $A=\bigcup_{n=1}^{\infty} A_{n}, A_{n} \in \mathfrak{M}$, and
+
+$$
+A_{1} \subset A_{2} \subset A_{3} \subset \cdots
+$$
+
+(e) $\mu\left(A_{n}\right) \rightarrow \mu(A)$ as $n \rightarrow \infty$ if $A=\bigcap_{n=1}^{\infty} A_{n}, A_{n} \in \mathfrak{M}$,
+
+$$
+A_{1} \supset A_{2} \supset A_{3} \supset \cdots
+$$
+
+and $\mu\left(A_{1}\right)$ is finite.
+
+As the proof will show, these properties, with the exception of $(c)$, also hold for complex measures; $(b)$ is called finite additivity; $(c)$ is called monotonicity.
+
+\section{ProOF}
+(a) Take $A \in \mathfrak{M}$ so that $\mu(A)<\infty$, and take $A_{1}=A$ and $A_{2}=A_{3}=\cdots=$ $\varnothing$ in $1.18(1)$.
+
+(b) Take $A_{n+1}=A_{n+2}=\cdots=\varnothing$ in 1.18(1).
+
+(c) Since $B=A \cup(B-A)$ and $A \cap(B-A)=\varnothing$, we see that (b) implies $\mu(B)=\mu(A)+\mu(B-A) \geq \mu(A)$.
+
+(d) Put $B_{1}=A_{1}$, and put $B_{n}=A_{n}-A_{n-1}$ for $n=2,3,4, \ldots$ Then $B_{n} \in \mathfrak{M}$, $B_{i} \cap B_{j}=\varnothing$ if $i \neq j, A_{n}=B_{1} \cup \cdots \cup B_{n}$, and $A=\bigcup_{i=1}^{\infty} B_{i}$. Hence
+
+$$
+\mu\left(A_{n}\right)=\sum_{i=1}^{n} \mu\left(B_{i}\right) \quad \text { and } \quad \mu(A)=\sum_{i=1}^{\infty} \mu\left(B_{i}\right)
+$$
+
+Now $(d)$ follows, by the definition of the sum of an infinite series.
+
+(e) Put $C_{n}=A_{1}-A_{n}$. Then $C_{1} \subset C_{2} \subset C_{3} \subset \cdots$,
+
+$$
+\mu\left(C_{n}\right)=\mu\left(A_{1}\right)-\mu\left(A_{n}\right)
+$$
+
+$A_{1}-A=\bigcup C_{n}$, and so $(d)$ shows that
+
+$$
+\mu\left(A_{1}\right)-\mu(A)=\mu\left(A_{1}-A\right)=\lim _{n \rightarrow \infty} \mu\left(C_{n}\right)=\mu\left(A_{1}\right)-\lim _{n \rightarrow \infty} \mu\left(A_{n}\right)
+$$
+
+This implies $(e)$.
+
+1.20 Examples The construction of interesting measure spaces requires some labor, as we shall see. However, a few simple-minded examples can be given immediately:
+
+(a) For any $E \subset X$, where $X$ is any set, define $\mu(E)=\infty$ if $E$ is an infinite set, and let $\mu(E)$ be the number of points in $E$ if $E$ is finite. This $\mu$ is called the counting measure on $X$.
+
+(b) Fix $x_{0} \in X$, define $\mu(E)=1$ if $x_{0} \in E$ and $\mu(E)=0$ if $x_{0} \notin E$, for any $E \subset X$. This $\mu$ may be called the unit mass concentrated at $x_{0}$.
+
+(c) Let $\mu$ be the counting measure on the set $\{1,2,3, \ldots\}$, let $A_{n}=\{n, n+1$, $n+2, \ldots\}$. Then $\cap A_{n}=\varnothing$ but $\mu\left(A_{n}\right)=\infty$ for $n=1,2,3, \ldots$ This shows that the hypothesis
+
+$$
+\mu\left(A_{1}\right)<\infty
+$$
+
+is not superfluous in Theorem 1.19(e).
+
+1.21 A Comment on Terminology One frequently sees measure spaces referred to as "ordered triples" $(X, \mathfrak{M}, \mu)$ where $X$ is a set, $\mathfrak{M}$ is a $\sigma$-algebra in $X$, and $\mu$ is a
+
+\begin{center}
+\includegraphics[max width=\textwidth]{2023_10_28_a97b060161bc7188ac24g-032}
+\end{center}
+
+This is logically all right, and often convenient, though somewhat redundant. For instance, in $(X, \mathfrak{M})$ the set $X$ is merely the largest member of $\mathfrak{M}$, so if we know $\mathfrak{M}$ we also know $X$. Similarly, every measure has a $\sigma$-algebra for its domain, by definition, so if we know a measure $\mu$ we also know the $\sigma$-algebra $\mathfrak{M}$ on which $\mu$ is defined and we know the set $X$ in which $\mathfrak{M}$ is a $\sigma$-algebra.
+
+It is therefore perfectly legitimate to use expressions like "Let $\mu$ be a measure" or, if we wish to emphasize the $\sigma$-algebra or the set in question, to say "Let $\mu$ be a measure on $\mathfrak{M}$ " or "Let $\mu$ be a measure on $X$."
+
+What is logically rather meaningless but customary (and we shall often follow mathematical custom rather than logic) is to say "Let $X$ be a measure space"; the emphasis should not be on the set, but on the measure. Of course, when this wording is used, it is tacitly understood that there is a measure defined on some $\sigma$-algebra in $X$ and that it is this measure which is really under discussion.
+
+Similarly, a topological space is an ordered pair $(X, \tau)$, where $\tau$ is a topology in the set $X$, and the significant data are contained in $\tau$, not in $X$, but "the topological space $X$ " is what one talks about.
+
+This sort of tacit convention is used throughout mathematics. Most mathematical systems are sets with some class of distinguished subsets or some binary operations or some relations (which are required to have certain properties), and one can list these and then describe the system as an ordered pair, triple, etc., depending on what is needed. For instance, the real line may be described as a quadruple $\left(R^{1},+, \cdot,<\right)$, where,$+ \cdot$, and $<$ satisfy the axioms of a complete archimedean ordered field. But it is a safe bet that very few mathematicians think of the real field as an ordered quadruple.
+
+\section{Arithmetic in $[0, \infty]$}
+1.22 Throughout integration theory, one inevitably encounters $\infty$. One reason is that one wants to be able to integrate over sets of infinite measure; after all, the real line has infinite length. Another reason is that even if one is primarily interested in real-valued functions, the lim sup of a sequence of positive real functions or the sum of a sequence of positive real functions may well be $\infty$ at some points, and much of the elegance of theorems like 1.26 and 1.27 would be lost if one had to make some special provisions whenever this occurs.
+
+Let us define $a+\infty=\infty+a=\infty$ if $0 \leq a \leq \infty$, and
+
+$$
+a \cdot \infty=\infty \cdot a= \begin{cases}\infty & \text { if } 0<a \leq \infty \\ 0 & \text { if } a=0\end{cases}
+$$
+
+sums and products of real numbers are of course defined in the usual way.
+
+It may seem strange to define $0 \cdot \infty=0$. However, one verifies without difficulty that with this definition the commutative, associative, and distributive laws hold in $[0, \infty]$ without any restriction.
+
+The cancellation laws have to be treated with some care: $a+b=a+c$ implies $b=c$ only when $a<\infty$, and $a b=a c$ implies $b=c$ only when $0<a<\infty$.
+
+Observe that the following useful proposition holds:
+
+If $0 \leq a_{1} \leq a_{2} \leq \cdots, 0 \leq b_{1} \leq b_{2} \leq \cdots, a_{n} \rightarrow a$, and $b_{n} \rightarrow b$, then $a_{n} b_{n} \rightarrow a b$.
+
+If we combine this with Theorems 1.17 and 1.14 , we see that sums and products of measurable functions into $[0, \infty]$ are measurable.
+
+\section{Integration of Positive Functions}
+In this section, $\mathfrak{M}$ will be a $\sigma$-algebra in a set $X$ and $\mu$ will be a positive measure on $\mathfrak{M}$.
+
+1.23 Definition If $s: X \rightarrow[0, \infty)$ is a measurable simple function, of the form
+
+$$
+s=\sum_{i=1}^{n} \alpha_{i} \chi_{A_{i}}
+$$
+
+where $\alpha_{1}, \ldots, \alpha_{n}$ are the distinct values of $s$ (compare Definition 1.16), and if $E \in \mathfrak{M}$, we define
+
+$$
+\int_{E} s d \mu=\sum_{i=1}^{n} \alpha_{i} \mu\left(A_{i} \cap E\right)
+$$
+
+The convention $0 \cdot \infty=0$ is used here; it may happen that $\alpha_{i}=0$ for some $i$ and that $\mu\left(A_{i} \cap E\right)=\infty$.
+
+If $f: X \rightarrow[0, \infty]$ is measurable, and $E \in \mathfrak{M}$, we define
+
+$$
+\int_{E} f d \mu=\sup \int_{E} s d \mu
+$$
+
+the supremum being taken over all simple measurable functions $s$ such that $0 \leq s \leq f$.
+
+The left member of (3) is called the Lebesgue integral of $f$ over $E$, with respect to the measure $\mu$. It is a number in $[0, \infty]$.
+
+Observe that we apparently have two definitions for $\int_{E} f d \mu$ if $f$ is simple, namely, (2) and (3). However, these assign the same value to the integral, since $f$ is, in this case, the largest of the functions $s$ which occur on the right of (3).
+
+1.24 The following propositions are immediate consequences of the definitions. The functions and sets occurring in them are assumed to be measurable:
+
+(a) If $0 \leq f \leq g$, then $\int_{E} f d \mu \leq \int_{E} g d \mu$.
+
+(b) If $A \subset B$ and $f \geq 0$, then $\int_{A} f d \mu \leq \int_{B} f d \mu$.
+(c) If $f \geq 0$ and $c$ is a constant, $0 \leq c<\infty$, then
+
+$$
+\int_{E} c f d \mu=c \int_{E} f d \mu
+$$
+
+(d) If $f(x)=0$ for all $x \in E$, then $\int_{E} f d \mu=0$, even if $\mu(E)=\infty$.
+
+(e) If $\mu(E)=0$, then $\int_{E} f d \mu=0$, even if $f(x)=\infty$ for every $x \in E$.
+
+(f) If $f \geq 0$, then $\int_{E} f d \mu=\int_{X} \chi_{E} f d \mu$.
+
+This last result shows that we could have restricted our definition of integration to integrals over all of $X$, without losing any generality. If we wanted to integrate over subsets, we could then use $(f)$ as the definition. It is purely a matter of taste which definition is preferred.
+
+One may also remark here that every measurable subset $E$ of a measure space $X$ is again a measure space, in a perfectly natural way: The new measurable sets are simply those measurable subsets of $X$ which lie in $E$, and the measure is unchanged, except that its domain is restricted. This shows again that as soon as we have integration defined over every measure space, we automatically have it defined over every measurable subset of every measure space.
+
+1.25 Proposition Let $s$ and $t$ be nonnegative measurable simple functions on $X$. For $E \in \mathfrak{M}$, define
+
+$$
+\varphi(E)=\int_{E} s d \mu
+$$
+
+Then $\varphi$ is a measure on $\mathfrak{M}$. Also
+
+$$
+\int_{X}(s+t) d \mu=\int_{X} s d \mu+\int_{X} t d \mu
+$$
+
+(This proposition contains provisional forms of Theorems 1.27 and 1.29.)
+
+Proof If $s$ is as in Definition 1.23, and if $E_{1}, E_{2}, \ldots$ are disjoint members of $\mathfrak{M}$ whose union is $E$, the countable additivity of $\mu$ shows that
+
+$$
+\begin{aligned}
+\varphi(E) & =\sum_{i=1}^{n} \alpha_{i} \mu\left(A_{i} \cap E\right)=\sum_{i=1}^{n} \alpha_{i} \sum_{r=1}^{\infty} \mu\left(A_{i} \cap E_{r}\right) \\
+& =\sum_{r=1}^{\infty} \sum_{i=1}^{n} \alpha_{i} \mu\left(A_{i} \cap E_{r}\right)=\sum_{r=1}^{\infty} \varphi\left(E_{r}\right) .
+\end{aligned}
+$$
+
+Also, $\varphi(\varnothing)=0$, so that $\varphi$ is not identically $\infty$.
+
+Next, let $s$ be as before, let $\beta_{1}, \ldots, \beta_{m}$ be the distinct values of $t$, and let $B_{j}=\left\{x: t(x)=\beta_{j}\right\}$. If $E_{i j}=A_{i} \cap B_{j}$, then
+
+and
+
+$$
+\begin{gathered}
+\int_{E_{i j}}(s+t) d \mu=\left(\alpha_{i}+\beta_{j}\right) \mu\left(E_{i j}\right) \\
+\int_{E_{i j}} s d \mu+\int_{E_{i j}} t d \mu=\alpha_{i} \mu\left(E_{i j}\right)+\beta_{j} \mu\left(E_{i j}\right)
+\end{gathered}
+$$
+
+Thus (2) holds with $E_{i j}$ in place of $X$. Since $X$ is the disjoint union of the sets $E_{i j}(1 \leq i \leq n, 1 \leq j \leq m)$, the first half of our proposition implies that (2) holds.
+
+We now come to the interesting part of the theory. One of its most remarkable features is the ease with which it handles limit operations.
+
+1.26 Lebesgue's Monotone Convergence Theorem Let $\left\{f_{n}\right\}$ be a sequence of measurable functions on $X$, and suppose that
+
+(a) $0 \leq f_{1}(x) \leq f_{2}(x) \leq \cdots \leq \infty$ for every $x \in X$,
+
+(b) $f_{n}(x) \rightarrow f(x)$ as $n \rightarrow \infty$, for every $x \in X$.
+
+Then $f$ is measurable, and
+
+$$
+\int_{X} f_{n} d \mu \rightarrow \int_{X} f d \mu \quad \text { as } n \rightarrow \infty
+$$
+
+Proof Since $\int f_{n} \leq \int f_{n+1}$, there exists an $\alpha \in[0, \infty]$ such that
+
+$$
+\int_{X} f_{n} d \mu \rightarrow \alpha \quad \text { as } n \rightarrow \infty
+$$
+
+By Theorem 1.14, $f$ is measurable. Since $f_{n} \leq f$, we have $\int f_{n} \leq \int f$ for every $n$, so (1) implies
+
+$$
+\alpha \leq \int_{x} f d \mu
+$$
+
+Let $s$ be any simple measurable function such that $0 \leq s \leq f$, let $c$ be a constant, $0<c<1$, and define
+
+$$
+E_{n}=\left\{x: f_{n}(x) \geq c s(x)\right\} \quad(n=1,2,3, \ldots)
+$$
+
+Each $E_{n}$ is measurable, $E_{1} \subset E_{2} \subset E_{3} \subset \cdots$, and $X=\bigcup E_{n}$. To see this equality, consider some $x \in X$. If $f(x)=0$, then $x \in E_{1}$; if $f(x)>0$, then $c s(x)<f(x)$, since $c<1$; hence $x \in E_{n}$ for some $n$. Also
+
+$$
+\int_{X} f_{n} d \mu \geq \int_{E_{n}} f_{n} d \mu \geq c \int_{E_{n}} s d \mu \quad(n=1,2,3, \ldots)
+$$
+
+Let $n \rightarrow \infty$, applying Proposition 1.25 and Theorem $1.19(d)$ to the last integral in (4). The result is
+
+$$
+\alpha \geq c \int_{X} s d \mu
+$$
+
+Since (5) holds for every $c<1$, we have
+
+$$
+\alpha \geq \int_{X} s d \mu
+$$
+
+for every simple measurable $s$ satisfying $0 \leq s \leq f$, so that
+
+$$
+\alpha \geq \int_{X} f d \mu
+$$
+
+The theorem follows from (1), (2), and (7).
+
+1.27 Theorem If $f_{n}: X \rightarrow[0, \infty]$ is measurable, for $n=1,2,3, \ldots$, and
+
+$$
+f(x)=\sum_{n=1}^{\infty} f_{n}(x) \quad(x \in X)
+$$
+
+then
+
+$$
+\int_{X} f d \mu=\sum_{n=1}^{\infty} \int_{X} f_{n} d \mu
+$$
+
+ProOF First, there are sequences $\left\{s_{i}^{\prime}\right\},\left\{s_{i}^{\prime \prime}\right\}$ of simple measurable functions such that $s_{i}^{\prime} \rightarrow f_{1}$ and $s_{i}^{\prime \prime} \rightarrow f_{2}$, as in Theorem 1.17. If $s_{i}=s_{i}^{\prime}+s_{i}^{\prime \prime}$, then $s_{i} \rightarrow f_{1}+f_{2}$, and the monotone convergence theorem, combined with Proposition 1.25 , shows that
+
+$$
+\int_{X}\left(f_{1}+f_{2}\right) d \mu=\int_{X} f_{1} d \mu+\int_{X} f_{2} d \mu
+$$
+
+Next, put $g_{N}=f_{1}+\cdots+f_{N}$. The sequence $\left\{g_{N}\right\}$ converges monotonically to $f$, and if we apply induction to (3) we see that
+
+$$
+\int_{X} g_{N} d \mu=\sum_{n=1}^{N} \int_{X} f_{n} d \mu
+$$
+
+Applying the monotone convergence theorem once more, we obtain (2), and the proof is complete.
+
+If we let $\mu$ be the counting measure on a countable set, Theorem 1.27 is a statement about double series of nonnegative real numbers (which can of course be proved by more elementary means):
+
+Corollary If $a_{i j} \geq 0$ for $i$ and $j=1,2,3, \ldots$, then
+
+$$
+\sum_{i=1}^{\infty} \sum_{j=1}^{\infty} a_{i j}=\sum_{j=1}^{\infty} \sum_{i=1}^{\infty} a_{i j}
+$$
+
+1.28 Fatou's Lemma If $f_{n}: X \rightarrow[0, \infty]$ is measurable, for each positive integer $n$, then
+
+$$
+\int_{X}\left(\liminf _{n \rightarrow \infty} f_{n}\right) d \mu \leq \liminf _{n \rightarrow \infty} \int_{X} f_{n} d \mu
+$$
+
+Strict inequality can occur in (1); see Exercise 8.
+
+Proof Put
+
+$$
+g_{k}(x)=\inf _{i \geq k} f_{i}(x) \quad(k=1,2,3, \ldots ; x \in X)
+$$
+
+Then $g_{k} \leq f_{k}$, so that
+
+$$
+\int_{X} g_{k} d \mu \leq \int_{X} f_{k} d \mu \quad(k=1,2,3, \ldots)
+$$
+
+Also, $0 \leq g_{1} \leq g_{2} \leq \cdots$, each $g_{k}$ is measurable, by Theorem 1.14, and $g_{k}(x) \rightarrow \lim \inf f_{n}(x)$ as $k \rightarrow \infty$, by Definition 1.13. The monotone convergence theorem shows therefore that the left side of (3) tends to the left side of (1), as $k \rightarrow \infty$. Hence (1) follows from (3).
+
+1.29 Theorem Suppose $f: X \rightarrow[0, \infty]$ is measurable, and
+
+$$
+\varphi(E)=\int_{E} f d \mu \quad(E \in \mathfrak{M})
+$$
+
+Then $\varphi$ is a measure on $\mathfrak{M}$, and
+
+$$
+\int_{X} g d \varphi=\int_{x} g f d \mu
+$$
+
+for every measurable $g$ on $X$ with range in $[0, \infty]$.
+
+Proof Let $E_{1}, E_{2}, E_{3}, \ldots$ be disjoint members of $\mathfrak{M}$ whose union is $E$. Observe that
+
+$$
+\chi_{E} f=\sum_{j=1}^{\infty} \chi_{E_{j}} f
+$$
+
+and that
+
+$$
+\varphi(E)=\int_{X} \chi_{E} f d \mu, \quad \varphi\left(E_{j}\right)=\int_{X} \chi_{E_{j}} f d \mu
+$$
+
+It now follows from Theorem 1.27 that
+
+$$
+\varphi(E)=\sum_{j=1}^{\infty} \varphi\left(E_{j}\right)
+$$
+
+Since $\varphi(\varnothing)=0,(5)$ proves that $\varphi$ is a measure.
+
+Next, (1) shows that (2) holds whenever $g=\chi_{E}$ for some $E \in \mathfrak{M}$. Hence
+
+(2) holds for every simple measurable function $g$, and the general case follows from the monotone convergence theorem.
+
+Remark The second assertion of Theorem 1.29 is sometimes written in the form
+
+$$
+d \varphi=f d \mu
+$$
+
+We assign no independent meaning to the symbols $d \varphi$ and $d \mu$; (6) merely means that (2) holds for every measurable $g \geq 0$.
+
+Theorem 1.29 has a very important converse, the Radon-Nikodym theorem, which will be proved in Chap. 6 .
+
+\section{Integration of Complex Functions}
+As before, $\mu$ will in this section be a positive measure on an arbitrary measurable space $X$.
+
+1.30 Definition We define $L^{1}(\mu)$ to be the collection of all complex measurable functions $f$ on $X$ for which
+
+$$
+\int_{X}|f| d \mu<\infty
+$$
+
+Note that the measurability of $f$ implies that of $|f|$, as we saw in Proposition $1.9(b)$; hence the above integral is defined.
+
+The members of $L^{1}(\mu)$ are called Lebesgue integrable functions (with respect to $\mu$ ) or summable functions. The significance of the exponent 1 will become clear in Chap. 3.
+
+1.31 Definition If $f=u+i v$, where $u$ and $v$ are real measurable functions on $X$, and if $f \in L^{1}(\mu)$, we define
+
+$$
+\int_{E} f d \mu=\int_{E} u^{+} d \mu-\int_{E} u^{-} d \mu+i \int_{E} v^{+} d \mu-i \int_{E} v^{-} d \mu
+$$
+
+for every measurable set $E$.
+
+Here $u^{+}$and $u^{-}$are the positive and negative parts of $u$, as defined in Sec. $1.15 ; v^{+}$and $v^{-}$are similarly obtained from $v$. These four functions are measurable, real, and nonnegative; hence the four integrals on the right of (1) exist, by Definition 1.23. Furthermore, we have $u^{+} \leq|u|<|f|$, etc., so that
+each of these four integrals is finite. Thus (1) defines the integral on the left as a complex number.
+
+Occasionally it is desirable to define the integral of a measurable function $f$ with range in $[-\infty, \infty]$ to be
+
+$$
+\int_{E} f d \mu=\int_{E} f^{+} d \mu-\int_{E} f^{-} d \mu
+$$
+
+provided that at least one of the integrals on the right of (2) is finite. The left side of $(2)$ is then a number in $[-\infty, \infty]$.
+
+1.32 Theorem Suppose $f$ and $g \in L^{1}(\mu)$ and $\alpha$ and $\beta$ are complex numbers. Then $\alpha f+\beta g \in L^{1}(\mu)$, and
+
+$$
+\int_{X}(\alpha f+\beta g) d \mu=\alpha \int_{X} f d \mu+\beta \int_{X} g d \mu
+$$
+
+ProOF The measurability of $\alpha f+\beta g$ follows from Proposition 1.9(c). By Sec. 1.24 and Theorem 1.27,
+
+$$
+\begin{aligned}
+\int_{X}|\alpha f+\beta g| d \mu & \leq \int_{X}(|\alpha||f|+|\beta||g|) d \mu \\
+& =|\alpha| \int_{X}|f| d \mu+|\beta| \int_{X}|g| d \mu<\infty .
+\end{aligned}
+$$
+
+Thus $\alpha f+\beta g \in L^{1}(\mu)$.
+
+To prove (1), it is clearly sufficient to prove
+
+$$
+\int_{X}(f+g) d \mu=\int_{X} f d \mu+\int_{X} g d \mu
+$$
+
+and
+
+$$
+\int_{X}(\alpha f) d \mu=\alpha \int_{X} f d \mu
+$$
+
+and the general case of (2) will follow if we prove (2) for real $f$ and $g$ in $L^{1}(\mu)$.
+
+Assuming this, and setting $h=f+g$, we have
+
+$$
+h^{+}-h^{-}=f^{+}-f^{-}+g^{+}-g^{-}
+$$
+
+or
+
+$$
+h^{+}+f^{-}+g^{-}=f^{+}+g^{+}+h^{-} \text {. }
+$$
+
+By Theorem 1.27,
+
+$$
+\int h^{+}+\int f^{-}+\int g^{-}=\int f^{+}+\int g^{+}+\int h^{-}
+$$
+
+and since each of these integrals is finite, we may transpose and obtain (2).
+
+That (3) holds if $\alpha \geq 0$ follows from Proposition 1.24(c). It is easy to verify that (3) holds if $\alpha=-1$, using relations like $(-u)^{+}=u^{-}$. The case $\alpha=i$ is also easy: If $f=u+i v$, then
+
+$$
+\begin{aligned}
+\int(i f) & =\int(i u-v)=\int(-v)+i \int u=-\int v+i \int u=i\left(\int u+i \int v\right) \\
+& =i \int f
+\end{aligned}
+$$
+
+Combining these cases with (2), we obtain (3) for any complex $\alpha$.
+
+1.33 Theorem If $f \in L^{1}(\mu)$, then
+
+$$
+\left|\int_{X} f d \mu\right| \leq \int_{X}|f| d \mu
+$$
+
+Proof Put $z=\int_{X} f d \mu$. Since $z$ is a complex number, there is a complex number $\alpha$, with $|\alpha|=1$, such that $\alpha z=|z|$. Let $u$ be the real part of $\alpha f$. Then $u \leq|\alpha f|=|f|$. Hence
+
+$$
+\left|\int_{X} f d \mu\right|=\alpha \int_{X} f d \mu=\int_{X} \alpha f d \mu=\int_{X} u d \mu \leq \int_{X}|f| d \mu .
+$$
+
+The third of the above equalities holds since the preceding ones show that $\int \alpha f d \mu$ is real.
+
+We conclude this section with another important convergence theorem.
+
+1.34 Lebesgue's Dominated Convergence Theorem Suppose $\left\{f_{n}\right\}$ is a sequence of complex measurable functions on $X$ such that
+
+$$
+f(x)=\lim _{n \rightarrow \infty} f_{n}(x)
+$$
+
+exists for every $x \in X$. If there is a function $g \in L^{1}(\mu)$ such that
+
+$$
+\left|f_{n}(x)\right| \leq g(x) \quad(n=1,2,3, \ldots ; x \in X)
+$$
+
+then $f \in L^{1}(\mu)$,
+
+$$
+\lim _{n \rightarrow \infty} \int_{X}\left|f_{n}-f\right| d \mu=0
+$$
+
+and
+
+$$
+\lim _{n \rightarrow \infty} \int_{X} f_{n} d \mu=\int_{x} f d \mu
+$$
+
+Proof Since $|f| \leq g$ and $f$ is measurable, $f \in L^{1}(\mu)$. Since $\left|f_{n}-f\right| \leq 2 g$, Fatou's lemma applies to the functions $2 g-\left|f_{n}-f\right|$ and yields
+
+$$
+\begin{aligned}
+\int_{X} 2 g d \mu & \leq \liminf _{n \rightarrow \infty} \int_{X}\left(2 g-\left|f_{n}-f\right|\right) d \mu \\
+& =\int_{X} 2 g d \mu+\liminf _{n \rightarrow \infty}\left(-\int_{X}\left|f_{n}-f\right| d \mu\right) \\
+& =\int_{X} 2 g d \mu-\limsup _{n \rightarrow \infty} \int_{X}\left|f_{n}-f\right| d \mu .
+\end{aligned}
+$$
+
+Since $\int 2 g d \mu$ is finite, we may subtract it and obtain
+
+$$
+\limsup _{n \rightarrow \infty} \int_{X}\left|f_{n}-f\right| d \mu \leq 0
+$$
+
+If a sequence of nonnegative real numbers fails to converge to 0 , then its upper limit is positive. Thus (5) implies (3). By Theorem 1.33, applied to $f_{n}-f,(3)$ implies (4).
+
+\section{The Role Played by Sets of Measure Zero}
+1.35 Definition Let $P$ be a property which a point $x$ may or may not have. For instance, $P$ might be the property " $f(x)>0$ " if $f$ is a given function, or it might be " $\left\{f_{n}(x)\right\}$ converges" if $\left\{f_{n}\right\}$ is a given sequence of functions.
+
+If $\mu$ is a measure on a $\sigma$-algebra $\mathfrak{M}$ and if $E \in \mathfrak{M}$, the statement " $P$ holds almost everywhere on $E$ " (abbreviated to " $P$ holds a.e. on $E$ ") means that there exists an $N \in \mathfrak{M}$ such that $\mu(N)=0, N \subset E$, and $P$ holds at every point of $E-N$. This concept of a.e. depends of course very strongly on the given measure, and we shall write "a.e. $[\mu]$ " whenever clarity requires that the measure be indicated.
+
+For example, if $f$ and $g$ are measurable functions and if
+
+$$
+\mu(\{x: f(x) \neq g(x)\})=0
+$$
+
+we say that $f=g$ a.e. $[\mu]$ on $X$, and we may write $f \sim g$. This is easily seen to be an equivalence relation. The transitivity $(f \sim g$ and $g \sim h$ implies $f \sim h)$ is a consequence of the fact that the union of two sets of measure 0 has measure 0 .
+
+Note that if $f \sim g$, then, for every $E \in \mathfrak{M}$,
+
+$$
+\int_{E} f d \mu=\int_{E} g d \mu
+$$
+
+To see this, let $N$ be the set which appears in (1); then $E$ is the union of the disjoint sets $E-N$ and $E \cap N$; on $E-N, f=g$, and $\mu(E \cap N)=0$.
+
+Thus, generally speaking, sets of measure 0 are negligible in integration. It ought to be true that every subset of a negligible set is negligible. But it may happen that some set $N \in \mathfrak{M}$ with $\mu(N)=0$ has a subset $E$ which is not a member of $\mathfrak{M}$. Of course we can define $\mu(E)=0$ in this case. But will this extension of $\mu$ still be a measure, i.e., will it still be defined on a $\sigma$-algebra? It is a pleasant fact that the answer is affirmative:
+
+1.36 Theorem Let $(X, \mathfrak{M}, \mu)$ be a measure space, let $\mathfrak{M}^{*}$ be the collection of all $E \subset X$ for which there exist sets $A$ and $B \in \mathfrak{M}$ such that $A \subset E \subset B$ and $\mu(B-A)=0$, and define $\mu(E)=\mu(A)$ in this situation. Then $\mathfrak{M}^{*}$ is a $\sigma$-algebra, and $\mu$ is a measure on $\mathfrak{M}^{*}$.
+
+This extended measure $\mu$ is called complete, since all subsets of sets of measure 0 are now measurable; the $\sigma$-algebra $\mathfrak{M}^{*}$ is called the $\mu$-completion of $\mathfrak{M}$. The theorem says that every measure can be completed, so, whenever it is convenient, we may assume that any given measure is complete; this just gives us more measurable sets, hence more measurable functions. Most measures that one meets in the ordinary course of events are already complete, but there are exceptions; one of these will occur in the proof of Fubini's theorem in Chap. 8.
+
+Proof We begin by checking that $\mu$ is well defined for every $E \in \mathfrak{M}^{*}$. Suppose $A \subset E \subset B, A_{1} \subset E \subset B_{1}$, and $\mu(B-A)=\mu\left(B_{1}-A_{1}\right)=0$. (The letters $A$ and $B$ will denote members of $\mathfrak{M}$ throughout this proof.) Since
+
+$$
+A-A_{1} \subset E-A_{1} \subset B_{1}-A_{1}
+$$
+
+we have $\mu\left(A-A_{1}\right)=0$, hence $\mu(A)=\mu\left(A \cap A_{1}\right)$. For the same reason, $\mu\left(A_{1}\right)=\mu\left(A_{1} \cap A\right)$. We conclude that indeed $\mu\left(A_{1}\right)=\mu(A)$.
+
+Next, let us verify that $\mathfrak{M}^{*}$ has the three defining properties of a $\sigma$ algebra.
+
+(i) $X \in \mathfrak{M}^{*}$, because $X \in \mathfrak{M}$ and $\mathfrak{M} \subset \mathfrak{M}^{*}$.
+
+(ii) If $A \subset E \subset B$ then $B^{c} \subset E^{c} \subset A^{c}$. Thus $E \in \mathfrak{M}^{*}$ implies $E^{c} \in \mathfrak{M}^{*}$, because $A^{c}-B^{c}=A^{c} \cap B=B-A$.
+
+(iii) If $A_{i} \subset E_{i} \subset B_{i}, E=\bigcup E_{i}, A=\bigcup A_{i}, B=\bigcup B_{i}$, then $A \subset E \subset B$ and
+
+$$
+B-A=\bigcup_{1}^{\infty}\left(B_{i}-A\right) \subset \bigcup_{1}^{\infty}\left(B_{i}-A_{i}\right)
+$$
+
+Since countable unions of sets of measure zero have measure zero, it follows that $E \in \mathfrak{M}^{*}$ if $E_{i} \in \mathfrak{M}^{*}$ for $i=1,2,3, \ldots$
+
+Finally, if the sets $E_{i}$ are disjoint in step (iii), the same is true of the sets $A_{i}$, and we conclude that
+
+$$
+\mu(E)=\mu(A)=\sum_{1}^{\infty} \mu\left(A_{i}\right)=\sum_{1}^{\infty} \mu\left(E_{i}\right)
+$$
+
+This proves that $\mu$ is countably additive on $\mathfrak{M}^{*}$.
+
+1.37 The fact that functions which are equal a.e. are indistinguishable as far as integration is concerned suggests that our definition of measurable function might profitably be enlarged. Let us call a function $f$ defined on a set $E \in \mathfrak{M}$ measurable on $X$ if $\mu\left(E^{c}\right)=0$ and if $f^{-1}(V) \cap E$ is measurable for every open set $V$. If we define $f(x)=0$ for $x \in E^{c}$, we obtain a measurable function on $X$, in the old sense. If our measure happens to be complete, we can define $f$ on $E^{c}$ in a perfectly arbitrary manner, and we still get a measurable function. The integral of $f$ over any set $A \in \mathfrak{M}$ is independent of the definition of $f$ on $E^{c}$; therefore this definition need not even be specified at all.
+
+There are many situations where this occurs naturally. For instance, a function $f$ on the real line may be differentiable only almost everywhere (with respect to Lebesgue measure), but under certain conditions it is still true that $f$ is the integral of its derivative; this will be discussed in Chap. 7. Or a sequence $\left\{f_{n}\right\}$ of measurable functions on $X$ may converge only almost everywhere; with our new definition of measurability, the limit is still a measurable function on $X$, and we do not have to cut down to the set on which convergence actually occurs.
+
+To illustrate, let us state a corollary of Lebesgue's dominated convergence theorem in a form in which exceptional sets of measure zero are admitted:
+
+1.38 Theorem Suppose $\left\{f_{n}\right\}$ is a sequence of complex measurable functions defined a.e. on $X$ such that
+
+$$
+\sum_{n=1}^{\infty} \int_{X}\left|f_{n}\right| d \mu<\infty
+$$
+
+Then the series
+
+$$
+f(x)=\sum_{n=1}^{\infty} f_{n}(x)
+$$
+
+converges for almost all $x, f \in L^{1}(\mu)$, and
+
+$$
+\int_{X} f d \mu=\sum_{n=1}^{\infty} \int_{X} f_{n} d \mu
+$$
+
+Proof Let $S_{n}$ be the set on which $f_{n}$ is defined, so that $\mu\left(S_{n}^{c}\right)=0$. Put $\varphi(x)=$ $\sum\left|f_{n}(x)\right|$, for $x \in S=\bigcap S_{n}$. Then $\mu\left(S^{c}\right)=0$. By (1) and Theorem 1.27,
+
+$$
+\int_{s} \varphi d \mu<\infty
+$$
+
+If $E=\{x \in S: \varphi(x)<\infty\}$, it follows from (4) that $\mu\left(E^{c}\right)=0$. The series (2) converges absolutely for every $x \in E$, and if $f(x)$ is defined by (2) for $x \in E$, then $|f(x)| \leq \varphi(x)$ on $E$, so that $f \in L^{1}(\mu)$ on $E$, by (4). If $g_{n}=f_{1}+\cdots+f_{n}$, then $\left|g_{n}\right| \leq \varphi, g_{n}(x) \rightarrow f(x)$ for all $x \in E$, and Theorem 1.34 gives (3) with $E$ in place of $X$. This is equivalent to (3), since $\mu\left(E^{c}\right)=0$.
+
+Note that even if the $f_{n}$ were defined at every point of $X$, (1) would only imply that (2) converges almost everywhere. Here are some other situations in which we can draw conclusions only almost everywhere:
+
+\subsection{Theorem}
+(a) Suppose $f: X \rightarrow[0, \infty]$ is measurable, $E \in \mathfrak{M}$, and $\int_{E} f d \mu=0$. Then $f=0$ a.e. on $E$.
+
+(b) Suppose $f \in L^{1}(\mu)$ and $\int_{E} f d \mu=0$ for every $E \in \mathfrak{M}$. Then $f=0$ a.e. on $X$.
+
+(c) Suppose $f \in L^{1}(\mu)$ and
+
+$$
+\left|\int_{X} f d \mu\right|=\int_{X}|f| d \mu
+$$
+
+Then there is a constant $\alpha$ such that $\alpha f=|f|$ a.e. on $X$.
+
+Note that $(c)$ describes the condition under which equality holds in Theorem 1.33.
+
+\section{ProOF}
+(a) If $A_{n}=\{x \in E: f(x)>1 / n\}, n=1,2,3, \ldots$, then
+
+$$
+\frac{1}{n} \mu\left(A_{n}\right) \leq \int_{A_{n}} f d \mu \leq \int_{E} f d \mu=0
+$$
+
+so that $\mu\left(A_{n}\right)=0$. Since $\{x \in E: f(x)>0\}=\bigcup A_{n},(a)$ follows.
+
+(b) Put $f=u+i v$, let $E=\{x: u(x) \geq 0\}$. The real part of $\int_{E} f d \mu$ is then $\int_{E} u^{+} d \mu$. Hence $\int_{E} u^{+} d \mu=0$, and $(a)$ implies that $u^{+}=0$ a.e. We conclude similarly that
+
+$$
+u^{-}=v^{+}=v^{-}=0 \quad \text { a.e. }
+$$
+
+(c) Examine the proof of Theorem 1.33. Our present assumption implies that the last inequality in the proof of Theorem 1.33 must actually be an equality. Hence $\int(|f|-u) d \mu=0$. Since $|f|-u \geq 0$, (a) shows that $|f|=u$ a.e. This says that the real part of $\alpha f$ is equal to $|\alpha f|$ a.e., hence $\alpha f=|\alpha f|=|f|$ a.e., which is the desired conclusion.
+
+1.40 Theorem Suppose $\mu(X)<\infty, f \in L^{1}(\mu), S$ is a closed set in the complex plane, and the averages
+
+$$
+A_{E}(f)=\frac{1}{\mu(E)} \int_{E} f d \mu
+$$
+
+lie in $S$ for every $E \in \mathfrak{M}$ with $\mu(E)>0$. Then $f(x) \in S$ for almost all $x \in X$.
+
+Proof Let $\Delta$ be a closed circular disc (with center at $\alpha$ and radius $r>0$, say) in the complement of $S$. Since $S^{c}$ is the union of countably many such discs, it is enough to prove that $\mu(E)=0$, where $E=f^{-1}(\Delta)$.
+
+If we had $\mu(E)>0$, then
+
+$$
+\left|A_{E}(f)-\alpha\right|=\frac{1}{\mu(E)}\left|\int_{E}(f-\alpha) d \mu\right| \leq \frac{1}{\mu(E)} \int_{E}|f-\alpha| d \mu \leq r
+$$
+
+which is impossible, since $A_{E}(f) \in S$. Hence $\mu(E)=0$.
+
+1.41 Theorem Let $\left\{E_{k}\right\}$ be a sequence of measurable sets in $X$, such that
+
+$$
+\sum_{k=1}^{\infty} \mu\left(E_{k}\right)<\infty
+$$
+
+Then almost all $x \in X$ lie in at most finitely many of the sets $E_{k}$.
+
+Proof If $A$ is the set of all $x$ which lie in infinitely many $E_{k}$, we have to prove that $\mu(A)=0$. Put
+
+$$
+g(x)=\sum_{k=1}^{\infty} \chi_{E_{k}}(x) \quad(x \in X)
+$$
+
+For each $x$, each term in this series is either 0 or 1 . Hence $x \in A$ if and only if $g(x)=\infty$. By Theorem 1.27, the integral of $g$ over $\boldsymbol{X}$ is equal to the sum in (1). Thus $g \in L^{1}(\mu)$, and so $g(x)<\infty$ a.e.
+
+
+\end{document}

@@ -1,0 +1,418 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+\begin{document}
+\section{$L^{p}$-SPACES}
+\section{Convex Functions and Inequalities}
+Many of the most common inequalities in analysis have their origin in the notion of convexity.
+
+3.1 Definition A real function $\varphi$ defined on a segment $(a, b)$, where $-\infty \leq a<b \leq \infty$, is called convex if the inequality
+
+$$
+\varphi((1-\lambda) x+\lambda y) \leq(1-\lambda) \varphi(x)+\lambda \varphi(y)
+$$
+
+holds whenever $a<x<b, a<y<b$, and $0 \leq \lambda \leq 1$.
+
+Graphically, the condition is that if $x<t<y$, then the point $(t, \varphi(t))$ should lie below or on the line connecting the points $(x, \varphi(x))$ and $(y, \varphi(y))$ in the plane. Also, (1) is equivalent to the requirement that
+
+$$
+\frac{\varphi(t)-\varphi(s)}{t-s} \leq \frac{\varphi(u)-\varphi(t)}{u-t}
+$$
+
+whenever $a<s<t<u<b$.
+
+The mean value theorem for differentiation, combined with (2), shows immediately that a real differentiable function $\varphi$ is convex in $(a, b)$ if and only if $a<s<t<b$ implies $\varphi^{\prime}(s) \leq \varphi^{\prime}(t)$, i.e., if and only if the derivative $\varphi^{\prime}$ is a monotonically increasing function.
+
+For example, the exponential function is convex on $(-\infty, \infty)$.
+
+3.2 Theorem If $\varphi$ is convex on $(a, b)$ then $\varphi$ is continuous on $(a, b)$.
+
+Proof The idea of the proof is most easily conveyed in geometric language. Those who may worry that this is not "rigorous" are invited to transcribe it in terms of epsilons and deltas.
+
+Suppose $a<s<x<y<t<b$. Write $S$ for the point $(s, \varphi(s))$ in the plane, and deal similarly with $x, y$, and $t$. Then $X$ is on or below the line $S Y$, hence $Y$ is on or above the line through $S$ and $X$; also, $Y$ is on or below $X T$. As $y \rightarrow x$, it follows that $Y \rightarrow X$, i.e., $\varphi(y) \rightarrow \varphi(x)$. Left-hand limits are handled in the same manner, and the continuity of $\varphi$ follows.
+
+Note that this theorem depends on the fact that we are working on an open segment. For instance, if $\varphi(x)=0$ on $[0,1)$ and $\varphi(1)=1$, then $\varphi$ satisfies 3.1(1) on $[0,1]$ without being continuous.
+
+3.3 Theorem (Jensen's Inequality) Let $\mu$ be a positive measure on a $\sigma$-algebra $\mathfrak{M}$ in a set $\Omega$, so that $\mu(\Omega)=1$. If $f$ is a real function in $L^{1}(\mu)$, if $a<f(x)<b$ for all $x \in \Omega$, and if $\varphi$ is convex on $(a, b)$, then
+
+$$
+\varphi\left(\int_{\Omega} f d \mu\right) \leq \int_{\Omega}(\varphi \circ f) d \mu \text {. }
+$$
+
+Note: The cases $a=-\infty$ and $b=\infty$ are not excluded. It may happen that $\varphi \circ f$ is not in $L^{1}(\mu)$; in that case, as the proof will show, the integral of $\varphi \circ f$ exists in the extended sense described in Sec. 1.31, and its value is $+\infty$.
+
+Proof Put $t=f_{\Omega} f d \mu$. Then $a<t<b$. If $\beta$ is the supremum of the quotients on the left of 3.1(2), where $a<s<t$, then $\beta$ is no larger than any of the quotients on the right of 3.1(2), for any $u \in(t, b)$. It follows that
+
+$$
+\varphi(s) \geq \varphi(t)+\beta(s-t) \quad(a<s<b)
+$$
+
+Hence
+
+$$
+\varphi(f(x))-\varphi(t)-\beta(f(x)-t) \geq 0
+$$
+
+for every $x \in \Omega$. Since $\varphi$ is continuous, $\varphi \circ f$ is measurable. If we integrate both sides of (3) with respect to $\mu$, (1) follows from our choice of $t$ and the assumption $\mu(\Omega)=1$.
+
+To give an example, take $\varphi(x)=e^{x}$. Then (1) becomes
+
+$$
+\exp \left\{\int_{\Omega} f d \mu\right\} \leq \int_{\Omega} e^{f} d \mu
+$$
+
+If $\Omega$ is a finite set, consisting of points $p_{1}, \ldots, p_{n}$, say, and if
+
+$$
+\mu\left(\left\{p_{i}\right\}\right)=1 / n, \quad f\left(p_{i}\right)=x_{i}
+$$
+
+(4) becomes
+
+$$
+\exp \left\{\frac{1}{n}\left(x_{1}+\cdots+x_{n}\right)\right\} \leq \frac{1}{n}\left(e^{x_{1}}+\cdots+e^{x_{n}}\right)
+$$
+
+for real $x_{i}$. Putting $y_{i}=e^{x_{i}}$, we obtain the familiar inequality between the arithmetic and geometric means of $n$ positive numbers:
+
+$$
+\left(y_{1} y_{2} \cdots y_{n}\right)^{1 / n} \leq \frac{1}{n}\left(y_{1}+y_{2}+\cdots+y_{n}\right) .
+$$
+
+Going back from this to (4), it should become clear why the left and right sides of
+
+$$
+\exp \left\{\int_{\Omega} \log g d \mu\right\} \leq \int_{\Omega} g d \mu
+$$
+
+are often called the geometric and arithmetic means, respectively, of the positive function $g$.
+
+If we take $\mu\left(\left\{p_{i}\right\}\right)=\alpha_{i}>0$, where $\sum \alpha_{i}=1$, then we obtain
+
+$$
+y_{1}^{\alpha_{1}} y_{2}^{\alpha_{2}} \cdots y_{n}^{\alpha_{n}} \leq \alpha_{1} y_{1}+\alpha_{2} y_{2}+\cdots+\alpha_{n} y_{n}
+$$
+
+in place of (6). These are just a few samples of what is contained in Theorem 3.3.
+
+For a converse, see Exercise 20.
+
+3.4 Definition If $p$ and $q$ are positive real numbers such that $p+q=p q$, or equivalently
+
+$$
+\frac{1}{p}+\frac{1}{q}=1
+$$
+
+then we call $p$ and $q$ a pair of conjugate exponents. It is clear that (1) implies $1<p<\infty$ and $1<q<\infty$. An important special case is $p=q=2$.
+
+As $p \rightarrow 1$, (1) forces $q \rightarrow \infty$. Consequently 1 and $\infty$ are also regarded as a pair of conjugate exponents. Many analysts denote the exponent conjugate to $p$ by $p^{\prime}$, often without saying so explicitly.
+
+3.5 Theorem Let $p$ and $q$ be conjugate exponents, $1<p<\infty$. Let $X$ be a measure space, with measure $\mu$. Let $f$ and $g$ be measurable functions on $X$, with range in $[0, \infty]$. Then
+
+$$
+\int_{X} f g d \mu \leq\left\{\int_{X} f^{p} d \mu\right\}^{1 / p}\left\{\int_{X} g^{q} d \mu\right\}^{1 / q}
+$$
+
+and
+
+$$
+\left\{\int_{X}(f+g)^{p} d \mu\right\}^{1 / p} \leq\left\{\int_{X} f^{p} d \mu\right\}^{1 / p}+\left\{\int_{X} g^{p} d \mu\right\}^{1 / p}
+$$
+
+The inequality (1) is Hölder's; (2) is Minkowski's. If $p=q=2$, (1) is known as the Schwarz inequality.
+
+Proof Let $A$ and $B$ be the two factors on the right of (1). If $A=0$, then $f=0$ a.e. (by Theorem 1.39); hence $f g=0$ a.e., so (1) holds. If $A>0$ and $B=\infty$, (1) is again trivial. So we need consider only the case $0<A<\infty, 0<B<\infty$. Put
+
+$$
+F=\frac{f}{A}, \quad G=\frac{g}{B}
+$$
+
+This gives
+
+$$
+\int_{X} F^{p} d \mu=\int_{X} G^{q} d \mu=1
+$$
+
+If $x \in X$ is such that $0<F(x)<\infty$ and $0<G(x)<\infty$, there are real numbers $s$ and $t$ such that $F(x)=e^{s / p}, G(x)=e^{t / q}$. Since $1 / p+1 / q=1$, the convexity of the exponential function implies that
+
+$$
+e^{s / p+t / q} \leq p^{-1} e^{s}+q^{-1} e^{t}
+$$
+
+It follows that
+
+$$
+F(x) G(x) \leq p^{-1} F(x)^{p}+q^{-1} G(x)^{q}
+$$
+
+for every $x \in X$. Integration of (6) yields
+
+$$
+\int_{X} F G d \mu \leq p^{-1}+q^{-1}=1
+$$
+
+by (4); inserting (3) into (7), we obtain (1).
+
+Note that (6) could also have been obtained as a special case of the inequality 3.3(8).
+
+To prove (2), we write
+
+$$
+(f+g)^{p}=f \cdot(f+g)^{p-1}+g \cdot(f+g)^{p-1}
+$$
+
+Hölder's inequality gives
+
+$$
+\int f \cdot(f+g)^{p-1} \leq\left\{\int f^{p}\right\}^{1 / p}\left\{\int(f+g)^{(p-1) q}\right\}^{1 / q} .
+$$
+
+Let $\left(9^{\prime}\right)$ be the inequality (9) with $f$ and $g$ interchanged. Since $(p-1) q=p$, addition of $(9)$ and $\left(9^{\prime}\right)$ gives
+
+$$
+\int(f+g)^{p} \leq\left\{\int(f+g)^{p}\right\}^{1 / q}\left[\left\{\int f^{p}\right\}^{1 / p}+\left\{\int g^{p}\right\}^{1 / p}\right] \text {. }
+$$
+
+Clearly, it is enough to prove (2) in the case that the left side is greater than 0 and the right side is less than $\infty$. The convexity of the function $t^{p}$ for $0<t<\infty$ shows that
+
+$$
+\left(\frac{f+g}{2}\right)^{p} \leq \frac{1}{2}\left(f^{p}+g^{p}\right)
+$$
+
+Hence the left side of (2) is less than $\infty$, and (2) follows from (10) if we divide by the first factor on the right of (10), bearing in mind that $1-1 / q=1 / p$. This completes the proof.
+
+It is sometimes useful to know the conditions under which equality can hold in an inequality. In many cases this information may be obtained by examining the proof of the inequality.
+
+For instance, equality holds in (7) if and only if equality holds in (6) for almost every $x$. In (5), equality holds if and only if $s=t$. Hence " $F^{p}=G^{q}$ a.e." is a necessary and sufficient condition for equality in (7), if (4) is assumed. In terms of the original functions $f$ and $g$, the following result is then obtained:
+
+Assuming $A<\infty$ and $B<\infty$, equality holds in (1) if and only if there are constants $\alpha$ and $\beta$, not both 0 , such that $\alpha f^{p}=\beta g^{q}$ a.e.
+
+We leave the analogous discussion of equality in (2) as an exercise.
+
+\section{The $L^{p}$-spaces}
+In this section, $X$ will be an arbitrary measure space with a positive measure $\mu$.
+
+3.6 Definition If $0<p<\infty$ and if $f$ is a complex measurable function on $X$, define
+
+$$
+\|f\|_{p}=\left\{\int_{X}|f|^{p} d \mu\right\}^{1 / p}
+$$
+
+and let $L^{p}(\mu)$ consist of all $f$ for which
+
+$$
+\|f\|_{p}<\infty
+$$
+
+We call $\|f\|_{p}$ the $L^{p}$-norm of $f$.
+
+If $\mu$ is Lebesgue measure on $R^{k}$, we write $L^{p}\left(R^{k}\right)$ instead of $L^{p}(\mu)$, as in Sec. 2.21. If $\mu$ is the counting measure on a set $A$, it is customary to denote the corresponding $L^{p}$-space by $\ell^{p}(A)$, or simply by $\ell^{p}$, if $A$ is countable. An element of $\ell^{p}$ may be regarded as a complex sequence $x=\left\{\xi_{n}\right\}$, and
+
+$$
+\|x\|_{p}=\left\{\sum_{n=1}^{\infty}\left|\xi_{n}\right|^{p}\right\}^{1 / p}
+$$
+
+3.7 Definition Suppose $g: X \rightarrow[0, \infty]$ is measurable. Let $S$ be the set of all real $\alpha$ such that
+
+$$
+\mu\left(g^{-1}((\alpha, \infty])\right)=0
+$$
+
+If $S=\varnothing$, put $\beta=\infty$. If $S \neq \varnothing$, put $\beta=\inf S$. Since
+
+$$
+g^{-1}((\beta, \infty])=\bigcup_{n=1}^{\infty} g^{-1}\left(\left(\beta+\frac{1}{n}, \infty\right]\right)
+$$
+
+and since the union of a countable collection of sets of measure 0 has measure 0 , we see that $\beta \in S$. We call $\beta$ the essential supremum of $g$.
+
+If $f$ is a complex measurable function on $X$, we define $\|f\|_{\infty}$ to be the essential supremum of $|f|$, and we let $L^{\infty}(\mu)$ consist of all $f$ for which $\|f\|_{\infty}<\infty$. The members of $L^{\infty}(\mu)$ are sometimes called essentially bounded measurable functions on $X$.
+
+It follows from this definition that the inequality $|f(x)| \leq \lambda$ holds for almost all $x$ if and only if $\lambda \geq\|f\|_{\infty}$.
+
+As in Definition 3.6, $L^{\infty}\left(R^{k}\right)$ denotes the class of all essentially bounded (with respect to Lebesgue measure) functions on $R^{k}$, and $\ell^{\infty}(A)$ is the class of all bounded functions on $A$. (Here bounded means the same as essentially bounded, since every nonempty set has positive measure!)
+
+3.8 Theorem If $p$ and $q$ are conjugate exponents, $1 \leq p \leq \infty$, and if $f \in L^{p}(\mu)$ and $g \in L^{q}(\mu)$, then $f g \in L^{1}(\mu)$, and
+
+$$
+\|f g\|_{1} \leq\|f\|_{p}\|g\|_{q} .
+$$
+
+ProOF For $1<p<\infty,(1)$ is simply Hölder's inequality, applied to $|f|$ and $|g|$. If $p=\infty$, note that
+
+$$
+|f(x) g(x)| \leq\|f\|_{\infty}|g(x)|
+$$
+
+for almost all $x$; integrating (2), we obtain (1). If $p=1$, then $q=\infty$, and the same argument applies.
+
+3.9 Theorem Suppose $1 \leq p \leq \infty$, and $f \in L^{p}(\mu), g \in L^{p}(\mu)$. Then $f+g \in L^{p}(\mu)$, and
+
+$$
+\|f+g\|_{p} \leq\|f\|_{p}+\|g\|_{p} .
+$$
+
+ProOF For $1<p<\infty$, this follows from Minkowski's inequality, since
+
+$$
+\int_{X}|f+g|^{p} d \mu \leq \int_{X}(|f|+|g|)^{p} d \mu .
+$$
+
+For $p=1$ or $p=\infty$, (1) is a trivial consequence of the inequality $|f+g| \leq|f|+|g|$.
+
+3.10 Remarks Fix $p, 1 \leq p \leq \infty$. If $f \in L^{p}(\mu)$ and $\alpha$ is a complex number, it is clear that $\alpha f \in L^{p}(\mu)$. In fact,
+
+$$
+\|\alpha f\|_{p}=|\alpha|\|f\|_{p}
+$$
+
+In conjunction with Theorem 3.9, this shows that $L^{p}(\mu)$ is a complex vector space.
+
+Suppose $f, g$, and $h$ are in $L^{p}(\mu)$. Replacing $f$ by $f-g$ and $g$ by $g-h$ in Theorem 3.9, we obtain
+
+$$
+\|f-h\|_{p} \leq\|f-g\|_{p}+\|g-h\|_{p} .
+$$
+
+This suggests that a metric may be introduced in $L^{p}(\mu)$ by defining the distance between $f$ and $g$ to be $\|f-g\|_{p}$. Call this distance $d(f, g)$ for the moment. Then $0 \leq d(f, g)<\infty, d(f, f)=0, d(f, g)=d(g, f)$, and (2) shows that the triangle inequality $d(f, h) \leq d(f, g)+d(g, h)$ is satisfied. The only other property which $d$ should have to define a metric space is that $d(f, g)=0$ should imply that $f=g$. In our present situation this need not be so; we have $d(f, g)=0$ precisely when $f(x)=g(x)$ for almost all $x$.
+
+Let us write $f \sim g$ if and only if $d(f, g)=0$. It is clear that this is an equivalence relation in $L^{p}(\mu)$ which partitions $L^{p}(\mu)$ into equivalence classes; each class consists of all functions which are equivalent to a given one. If $F$ and $G$ are two equivalence classes, choose $f \in F$ and $g \in G$, and define $d(F, G)=d(f, g)$; note that $f \sim f_{1}$ and $g \sim g_{1}$ implies
+
+$$
+d(f, g)=d\left(f_{1}, g_{1}\right)
+$$
+
+so that $d(F, G)$ is well defined.
+
+With this definition, the set of equivalence classes is now a metric space. Note that it is also a vector space, since $f \sim f_{1}$ and $g \sim g_{1}$ implies $f+g \sim$ $f_{1}+g_{1}$ and $\alpha f \sim \alpha f_{1}$.
+
+When $L^{p}(\mu)$ is regarded as a metric space, then the space which is really under consideration is therefore not a space whose elements are functions, but a space whose elements are equivalence classes of functions. For the sake of simplicity of language, it is, however, customary to relegate this distinction to the status of a tacit understanding and to continue to speak of $L^{p}(\mu)$ as a space of functions. We shall follow this custom.
+
+If $\left\{f_{n}\right\}$ is a sequence in $L^{p}(\mu)$, if $f \in L^{p}(\mu)$, and if $\lim _{n \rightarrow \infty}\left\|f_{n}-f\right\|_{p}=0$, we say that $\left\{f_{n}\right\}$ converges to $f$ in $L^{p}(\mu)$ (or that $\left\{f_{n}\right\}$ converges to $f$ in the mean of order $p$, or that $\left\{f_{n}\right\}$ is $L^{p}$-convergent to $f$ ). If to every $\epsilon>0$ there corresponds an integer $N$ such that $\left\|f_{n}-f_{m}\right\|_{p}<\epsilon$ as soon as $n>N$ and $m>N$, we call $\left\{f_{n}\right\}$ a Cauchy sequence in $L^{p}(\mu)$. These definitions are exactly as in any metric space.
+
+It is a very important fact that $L^{p}(\mu)$ is a complete metric space, i.e., that every Cauchy sequence in $L^{p}(\mu)$ converges to an element of $L^{p}(\mu)$ :
+
+3.11 Theorem $L^{p}(\mu)$ is a complete metric space, for $1 \leq p \leq \infty$ and for every positive measure $\mu$.
+
+Proof Assume first that $1 \leq p<\infty$. Let $\left\{f_{n}\right\}$ be a Cauchy sequence in $L^{p}(\mu)$. There is a subsequence $\left\{f_{n_{i}}\right\}, n_{1}<n_{2}<\cdots$, such that
+
+$$
+\left\|f_{n_{i+1}}-f_{n i}\right\|_{p}<2^{-i} \quad(i=1,2,3, \ldots)
+$$
+
+Put
+
+$$
+g_{k}=\sum_{i=1}^{k}\left|f_{n_{i+1}}-f_{n_{i}}\right|, \quad g=\sum_{i=1}^{\infty}\left|f_{n_{i+1}}-f_{n_{i}}\right|
+$$
+
+Since (1) holds, the Minkowski inequality shows that $\left\|g_{k}\right\|_{p}<1$ for $k=1$, $2,3, \ldots$. Hence an application of Fatou's lemma to $\left\{g_{k}^{p}\right\}$ gives $\|g\|_{p} \leq 1$. In particular, $g(x)<\infty$ a.e., so that the series
+
+$$
+f_{n_{1}}(x)+\sum_{i=1}^{\infty}\left(f_{n_{i+1}}(x)-f_{n_{i}}(x)\right)
+$$
+
+converges absolutely for almost every $x \in X$. Denote the sum of (3) by $f(x)$, for those $x$ at which (3) converges; put $f(x)=0$ on the remaining set of measure zero. Since
+
+$$
+f_{n_{1}}+\sum_{i=1}^{k-1}\left(f_{n_{i}+1}-f_{n_{i}}\right)=f_{n_{k}}
+$$
+
+we see that
+
+$$
+f(x)=\lim _{i \rightarrow \infty} f_{n_{i}}(x) \quad \text { a.e. }
+$$
+
+Having found a function $f$ which is the pointwise limit a.e. of $\left\{f_{n_{i}}\right\}$, we now have to prove that this $f$ is the $L^{p}$-limit of $\left\{f_{n}\right\}$. Choose $\epsilon>0$. There exists an $N$ such that $\left\|f_{n}-f_{m}\right\|_{p}<\epsilon$ if $n>N$ and $m>N$. For every $m>N$, Fatou's lemma shows therefore that
+
+$$
+\int_{X}\left|f-f_{m}\right|^{p} d \mu \leq \lim _{i \rightarrow \infty} \inf _{X}\left|f_{n_{i}}-f_{i m}\right|^{p} d \mu \leq \epsilon^{p}
+$$
+
+We conclude from (6) that $f-f_{m} \in L^{p}(\mu)$, hence that $f \in L^{p}(\mu)$ [since $f=$ $\left.\left(f-f_{m}\right)+f_{m}\right]$, and finally that $\left\|f-f_{m}\right\|_{p} \rightarrow 0$ as $m \rightarrow \infty$. This completes the proof for the case $1 \leq p<\infty$.
+
+In $L^{\infty}(\mu)$ the proof is much easier. Suppose $\left\{f_{n}\right\}$ is a Cauchy sequence in $L^{\infty}(\mu)$, let $A_{k}$ and $B_{m, n}$ be the sets where $\left|f_{k}(x)\right|>\left\|f_{k}\right\|_{\infty}$ and where $\left|f_{n}(x)-f_{m}(x)\right|>\left\|f_{n}-f_{m}\right\|_{\infty}$, and let $E$ be the union of these sets, for $k, m$, $n=1,2,3, \ldots$ Then $\mu(E)=0$, and on the complement of $E$ the sequence $\left\{f_{n}\right\}$ converges uniformly to a bounded function $f$. Define $f(x)=0$ for $x \in E$. Then $f \in L^{\infty}(\mu)$, and $\left\|f_{n}-f\right\|_{\infty} \rightarrow 0$ as $n \rightarrow \infty$.
+
+The preceding proof contains a result which is interesting enough to be stated separately:
+
+3.12 Theorem If $1 \leq p \leq \infty$ and if $\left\{f_{n}\right\}$ is a Cauchy sequence in $L^{p}(\mu)$, with limit $f$, then $\left\{f_{n}\right\}$ has a subsequence which converges pointwise almost everywhere to $f(x)$.
+
+The simple functions play an interesting role in $L^{p}(\mu)$ :
+
+3.13 Theorem Let $S$ be the class of all complex, measurable, simple functions on $X$ such that
+
+$$
+\mu(\{x: s(x) \neq 0\})<\infty
+$$
+
+If $1 \leq p<\infty$, then $S$ is dense in $L^{p}(\mu)$.
+
+Proof First, it is clear that $S \subset L^{p}(\mu)$. Suppose $f \geq 0, f \in L^{p}(\mu)$, and let $\left\{s_{n}\right\}$ be as in Theorem 1.17. Since $0 \leq s_{n} \leq f$, we have $s_{n} \in L^{p}(\mu)$, hence $s_{n} \in S$. Since $\left|f-s_{n}\right|^{p} \leq f^{p}$, the dominated convergence theorem shows that $\left\|f-s_{n}\right\|_{p} \rightarrow 0$ as $n \rightarrow \infty$. Thus $f$ is in the $L^{p}$-closure of $S$. The general case ( $f$ complex) follows from this.
+
+\section{Approximation by Continuous Functions}
+So far we have considered $L^{p}(\mu)$ on any measure space. Now let $X$ be a locally compact Hausdorff space, and let $\mu$ be a measure on a $\sigma$-algebra $\mathfrak{M}$ in $X$, with the properties stated in Theorem 2.14. For example, $X$ might be $R^{k}$, and $\mu$ might be Lebesgue measure on $R^{k}$.
+
+Under these circumstances, we have the following analogue of Theorem 3.13:
+
+3.14 Theorem For $1 \leq p<\infty, C_{c}(X)$ is dense in $L^{p}(\mu)$.
+
+Proof Define $S$ as in Theorem 3.13. If $s \in S$ and $\epsilon>0$, there exists a $g \in$ $C_{c}(X)$ such that $g(x)=s(x)$ except on a set of measure $<\epsilon$, and $|g| \leq\|s\|_{\infty}$ (Lusin's theorem). Hence
+
+$$
+\|g-s\|_{p} \leq 2 \epsilon^{1 / p}\|s\|_{\infty}
+$$
+
+Since $S$ is dense in $L^{p}(\mu)$, this completes the proof.
+
+3.15 Remarks Let us discuss the relations between the spaces $L^{p}\left(R^{k}\right)$ (the $L^{p}$ spaces in which the underlying measure is Lebesgue measure on $R^{k}$ ) and the space $C_{c}\left(R^{k}\right)$ in some detail. We consider a fixed dimension $k$.
+
+For every $p \in[1, \infty]$ we have a metric on $C_{c}\left(R^{k}\right)$; the distance between $f$ and $g$ is $\|f-g\|_{p}$. Note that this is a genuine metric, and that we do not have to pass to equivalence classes. The point is that if two continuous functions on $R^{k}$ are not identical, then they differ on some nonempty open set $V$, and $m(V)>0$, since $V$ contains a $k$-cell. Thus if two members of $C_{c}\left(R^{k}\right)$ are equal a.e., they are equal. It is also of interest to note that in $C_{c}\left(R^{k}\right)$ the essential supremum is the same as the actual supremum: for $f \in C_{c}\left(R^{k}\right)$
+
+$$
+\|f\|_{\infty}=\sup _{x \in R^{k}}|f(x)| .
+$$
+
+If $1 \leq p<\infty$, Theorem 3.14 says that $C_{c}\left(R^{k}\right)$ is dense in $L^{p}\left(R^{k}\right)$, and Theorem 3.11 shows that $L^{p}\left(R^{k}\right)$ is complete. Thus $L^{p}\left(R^{k}\right)$ is the completion of the metric space which is obtained by endowing $C_{c}\left(R^{k}\right)$ with the $L^{p}$-metric.
+
+The cases $p=1$ and $p=2$ are the ones of greatest interest. Let us state once more, in different words, what the preceding result says if $p=1$ and $k=1$; the statement shows that the Lebesgue integral is indeed the "right" generalization of the Riemann integral:
+
+If the distance between two continuous functions $f$ and $g$, with compact supports in $R^{1}$, is defined to be
+
+$$
+\int_{-\infty}^{\infty}|f(t)-g(t)| d t
+$$
+
+the completion of the resulting metric space consists precisely of the Lebesgue integrable functions on $R^{1}$, provided we identify any two that are equal almost everywhere.
+
+Of course, every metric space $S$ has a completion $S^{*}$ whose elements may be viewed abstractly as equivalence classes of Cauchy sequences in $S$ (see [26], p. 82). The important point in the present situation is that the various $L^{p}$ completions of $C_{c}\left(R^{k}\right)$ again turn out to be spaces of functions on $R^{k}$.
+
+The case $p=\infty$ differs from the cases $p<\infty$. The $L^{\infty}$-completion of $C_{c}\left(R^{k}\right)$ is not $L^{\infty}\left(R^{k}\right)$, but is $C_{0}\left(R^{k}\right)$, the space of all continuous functions on $R^{k}$ which "vanish at infinity," a concept which will be defined in Sec. 3.16. Since (1) shows that the $L^{\infty}$-norm coincides with the supremum norm on $C_{c}\left(R^{k}\right)$, the above assertion about $C_{0}\left(R^{k}\right)$ is a special case of Theorem 3.17.
+
+3.16 Definition A complex function $f$ on a locally compact Hausdorff space $X$ is said to vanish at infinity if to every $\epsilon>0$ there exists a compact set $K \subset X$ such that $|f(x)|<\epsilon$ for all $x$ not in $K$.
+
+The class of all continuous $f$ on $X$ which vanish at infinity is called $C_{0}(X)$.
+
+It is clear that $C_{c}(X) \subset C_{0}(X)$, and that the two classes coincide if $X$ is compact. In that case we write $C(X)$ for either of them.
+
+3.17 Theorem If $X$ is a locally compact Hausdorff space, then $C_{0}(X)$ is the completion of $C_{c}(X)$, relative to the metric defined by the supremum norm
+
+$$
+\|f\|=\sup _{x \in X}|f(x)|
+$$
+
+Proof An elementary verification shows that $C_{0}(X)$ satisfies the axioms of a metric space if the distance between $f$ and $g$ is taken to be $\|f-g\|$. We have to show that $(a) C_{c}(X)$ is dense in $C_{0}(X)$ and $(b) C_{0}(X)$ is a complete metric space.
+
+Given $f \in C_{0}(X)$ and $\epsilon>0$, there is a compact set $K$ so that $|f(x)|<\epsilon$ outside $K$. Urysohn's lemma gives us a function $g \in C_{c}(X)$ such that $0 \leq g \leq 1$ and $g(x)=1$ on $K$. Put $h=f g$. Then $h \in C_{c}(X)$ and $\|f-h\|<\epsilon$. This proves $(a)$.
+
+To prove $(b)$, let $\left\{f_{n}\right\}$ be a Cauchy sequence in $C_{0}(X)$, i.e., assume that $\left\{f_{n}\right\}$ converges uniformly. Then its pointwise limit function $f$ is continuous. Given $\epsilon>0$, there exists an $n$ so that $\left\|f_{n}-f\right\|<\epsilon / 2$ and there is a compact set $K$ so that $\left|f_{n}(x)\right|<\epsilon / 2$ outside $K$. Hence $|f(x)|<\epsilon$ outside $K$, and we have proved that $f$ vanishes at infinity. Thus $C_{0}(X)$ is complete.
+
+
+\end{document}

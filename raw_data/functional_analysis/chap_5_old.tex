@@ -1,0 +1,909 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+\usepackage{mathrsfs}
+
+\begin{document}
+\section{SOME APPLICATIONS}
+\section{A Continuity Theorem}
+One of the very early theorems in functional analysis (Hellinger and Toeplitz, 1910) states that if $T$ is a linear operator on a Hilbert space $H$ which is symmetric in the sense that
+
+$$
+(T x, y)=(x, T y)
+$$
+
+for all $x \in H$ and $y \in H$, then $T$ is continuous. Here $(x, y)$ denotes the usual Hilbert space inner product. (See Section 12.1.)
+
+If $\left\{x_{n}\right\}$ is a sequence in $H$ such that $\left\|x_{n}\right\| \rightarrow 0$, the symmetry of $T$ implies that $T x_{n} \rightarrow 0$ weakly. (This depends on knowing that all continuous linear functionals on $H$ are given by inner products.) The Hellinger-Toeplitz theorem is therefore a consequence of the following one.
+
+5.1 Theorem Suppose $X$ and $Y$ are F-spaces, $Y^{*}$ separates points on $Y, T: X \rightarrow Y$ is linear, and $\Lambda T x_{n} \rightarrow 0$ for every $\Lambda \in Y^{*}$ whenever $x_{n} \rightarrow 0$. Then $T$ is continuous.
+
+PROOF Suppose $x_{n} \rightarrow x$ and $T x_{n} \rightarrow y$. If $\Lambda \in Y^{*}$, then
+
+so that
+
+$$
+\Lambda T\left(x_{n}-x\right) \rightarrow 0
+$$
+
+$$
+\Lambda y=\lim \Lambda T x_{n}=\Lambda T x
+$$
+
+Consequently, $y=T x$, and the closed graph theorem can be applied.
+
+In the context of Banach spaces, Theorem 5.1 can be stated as follows: If $T: X \rightarrow Y$ is linear, if $\left\|x_{n}\right\| \rightarrow 0$ implies that $T x_{n} \rightarrow 0$ weakly, then $\left\|x_{n}\right\| \rightarrow 0$ actually implies that $\left\|T x_{n}\right\| \rightarrow 0$.
+
+To see that completeness is important here, let $X$ be the vector space of all complex polynomials $f$ such that $f(0)=f(1)=0$, put
+
+$$
+(f, g)=\int_{0}^{1} f \bar{g}, \quad\|f\|=(f, f)^{1 / 2}
+$$
+
+and define $T: X \rightarrow X$ by $(T f)(x)=i f^{\prime}(x)$. Then $(T f, g)=(f, T g)$, but $T$ is not continuous.
+
+\section{Closed Subspaces of $L^{p}$-spaces}
+The proof of the following theorem of Grothendieck also involves the closed graph theorem.
+
+\subsection{Theorem Suppose $0<p<\infty$, and}
+(a) $\mu$ is a probability measure on a measure space $\Omega$.
+
+(b) $S$ is a closed subspace of $L^{p}(\mu)$.
+
+(c) $S \subset L^{\infty}(\mu)$.
+
+Then $S$ is finite-dimensional.
+
+PROOF Let $j$ be the identity map that takes $S$ into $L^{\infty}$, where $S$ is given the $L^{p}$-topology, so that $S$ is complete. If $\left\{f_{n}\right\}$ is a sequence in $S$ such that $f_{n} \rightarrow f$ in $S$ and $f_{n} \rightarrow g$ in $L^{\infty}$, it is obvious that $f=g$ a.e. Hence $j$ satisfies the hypotheses of the closed graph theorem, and we conclude that there is a constant $K<\infty$ such that
+
+$$
+\|f\|_{\infty} \leq K\|f\|_{p}
+$$
+
+for all $f \in S$. As usual, $\|f\|_{p}$ means $\left(\int|f|^{p} d \mu\right)^{1 / p}$, and $\|f\|_{\infty}$ is the essential supremum of $|f|$. If $p \leq 2$ then $\|f\|_{p} \leq\|f\|_{2}$. If $2<p<\infty$, integration of the inequality
+
+$$
+|f|^{p} \leq\|f\|_{\infty}^{p-2}|f|^{2}
+$$
+
+leads to $\|f\|_{\infty} \leq K^{p / 2}\|f\|_{2}$. In either case, we have a constant $M<\infty$ such that
+
+$$
+\|f\|_{\infty} \leq M\|f\|_{2} \quad(f \in S) .
+$$
+
+In the rest of the proof we shall deal with individual functions, not with equivalence classes modulo null sets.
+
+Let $\left\{\phi_{1}, \ldots, \phi_{n}\right\}$ be an orthonormal set in $S$, regarded as a subspace of $L^{2}$. Let $Q$ be a countable dense subset of the euclidean unit ball $B$ of $\mathbb{C}^{n}$. If $c=$ $\left(c_{1}, \ldots, c_{n}\right) \in B$, define $f_{c}=\sum c_{i} \phi_{i}$. Then $\left\|f_{c}\right\|_{2} \leq 1$, and so $\left\|f_{c}\right\|_{\infty} \leq M$. Since $Q$ is countable, there is a set $\Omega^{\prime} \subset \Omega$, with $\mu\left(\Omega^{\prime}\right)=1$, such that $\left|f_{c}(x)\right| \leq M$ for every $c \in Q$ and for every $x \in \Omega^{\prime}$. If $x$ is fixed, $c \rightarrow\left|f_{c}(x)\right|$ is a continuous function on $B$. Hence $\left|f_{c}(x)\right| \leq M$ whenever $c \in B$ and $x \in \Omega^{\prime}$. It follows that $\sum\left|\phi_{i}(x)\right|^{2} \leq M^{2}$ for every $x \in \Omega^{\prime}$. Integration of this inequality gives $n \leq M^{2}$. We conclude that $\operatorname{dim} S \leq M^{2}$. This proves the theorem.
+
+It is crucial in this theorem that $L^{\infty}$ occurs in the hypothesis $(c)$. To illustrate this we will now construct an infinite-dimensional closed subspace of $L^{1}$ which lies in $L^{4}$. For our probability measure we take Lebesgue measure on the unit circle, divided by $2 \pi$.
+
+5.3 Theorem Let $E$ be an infinite set of integers such that no integer has more than one representation as a sum of two members of $E$. Let $P_{E}$ be the vector space of all finite sums $f$ of the form
+
+$$
+f\left(e^{i \theta}\right)=\sum_{n=-\infty}^{\infty} c(n) e^{i n \theta}
+$$
+
+in which $c(n)=0$ whenever $n$ is not in $E$. Let $S_{E}$ be the $L^{1}$-closure of $P_{E}$. Then $S_{E}$ is a closed subspace of $L^{4}$.
+
+An example of such a set is furnished by $2^{k}, k=1,2,3, \ldots$ Much slower growth can also be achieved.
+
+PROOF If $f$ is as in (1), then
+
+$$
+f^{2}\left(e^{i \theta}\right)=\sum_{n} c(n)^{2} e^{2 i n \theta}+\sum_{n \neq m} c(n) c(m) e^{i(n+m) \theta}
+$$
+
+Our combinatorial hypothesis about $E$ implies that
+
+$$
+\int|f|^{4}=\int\left|f^{2}\right|^{2}=\sum_{n}|c(n)|^{4}+4 \sum_{m<n}|c(m)|^{2}|c(n)|^{2}
+$$
+
+so that
+
+$$
+\text { . } \int|f|^{4} \leq 2\left(\sum|c(n)|^{2}\right)^{2}=2\left(\int|f|^{2}\right)^{2} .
+$$
+
+Hölder's inequality, with 3 and $\frac{3}{2}$ as conjugate exponents, gives
+
+$$
+\int|f|^{2} \leq\left(\int|f|^{4}\right)^{1 / 3}\left(\int|f|\right)^{2 / 3}
+$$
+
+It follows from (2) and (3) that
+
+$$
+\therefore\|f\|_{4} \leq 2^{1 / 4}\|f\|_{2} \quad \text { and } \quad\|f\|_{2} \leq 2^{1 / 2}\|f\|_{1}
+$$
+
+for every $f \in P_{E}$. Every $L^{1}$-Cauchy sequence in $P_{E}$ is therefore also a Cauchy sequence in $L^{4}$. Hence $S_{E} \subset L^{4}$. The obvious inequality $\|f\|_{1} \leq\|f\|_{4}$ then shows that $S_{E}$ is closed in $L^{4}$.
+
+An interesting result can be obtained by applying a duality argument to the second inequality (4). Recall that the Fourier coefficients $\hat{g}(n)$ of every $g \in L^{\infty}$ satisfy $\sum|\hat{g}(n)|^{2}<\infty$. The next theorem shows that nothing more can be said about the restriction of $\hat{g}$ to $E$.
+
+5.4 Theorem If $E$ is as in Theorem 5.3 and if
+
+$$
+\sum_{-\infty}^{\infty}|a(n)|^{2}=A^{2}<\infty
+$$
+
+then there exists $g \in L^{\infty}$ such that $\hat{g}(n)=a(n)$ for every $n \in E$.
+
+PROOF If $f \in P_{E}$, the preceding proof shows that
+
+$$
+\left|\sum \hat{f}(n) a(n)\right| \leq A\left\{\sum|\hat{f}(n)|^{2}\right\}^{1 / 2}=A\|f\|_{2} \leq 2^{1 / 2} A\|f\|_{1} .
+$$
+
+Hence $f \rightarrow \sum \hat{f}(n) a(n)$ is a linear functional on $P_{E}$ which is continuous relative to the $L^{1}$-norm. By the Hahn-Banach theorem, this functional has a continuous linear extension to $L^{1}$. Hence there exists $g \in L^{\infty}$ (with $\|g\|_{\infty} \leq 2^{1 / 2} A$ ) such that
+
+$$
+\sum_{-\infty}^{\infty} \hat{f}(n) a(n)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f\left(e^{-i \theta}\right) g\left(e^{i \theta}\right) d \theta \quad\left(f \in P_{E}\right)
+$$
+
+With $f\left(e^{i \theta}\right)=e^{i n \theta}(n \in E)$, this shows that $\hat{g}(n)=a(n)$.
+
+\section{The Range of a Vector-valued Measure}
+We now give a rather striking application of the theorems of Krein-Milman and Banach-Alaoglu.
+
+Let $\mathfrak{M}$ be a $\sigma$-algebra. A real-valued measure $\lambda$ on $\mathfrak{M}$ is said to be nonatomic if every set $E \in \mathfrak{M}$ with $|\lambda|(E)>0$ contains a set $A \in \mathfrak{M}$ with $0<|\lambda|(A)<|\lambda|(E)$. Here $|\lambda|$ denotes the total variation measure of $\lambda$; the terminology is as in [23].
+
+5.5 Theorem Suppose $\mu_{1}, \ldots, \mu_{n}$ are real-valued nonatomic measures on a $\sigma$-algebra M. Define
+
+$$
+\mu(E)=\left(\mu_{1}(E), \ldots, \mu_{n}(E)\right) \quad(E \in \mathfrak{M})
+$$
+
+Then $\mu$ is a function with domain $\mathfrak{M}$ whose range is a compact convex subset of $R^{n}$.
+
+PROOF Associate to each bounded measurable real function $g$ the vector
+
+$$
+\Lambda g=\left(\int g d \mu_{1}, \ldots, \int g d \mu_{n}\right)
+$$
+
+in $R^{n}$. Put $\sigma=\left|\mu_{1}\right|+\cdots+\left|\mu_{n}\right|$. If $g_{1}=g_{2}$ a.e. $[\sigma]$, then $\Lambda g_{1}=\Lambda g_{2}$. Hence $\Lambda$ may be regarded as a linear mapping of $L^{\infty}(\sigma)$ into $R^{n}$.
+
+Each $\mu_{i}$ is absolutely continuous with respect to $\sigma$. The Radon-Nikodym theorem [23] shows therefore that there are functions $h_{i} \in L^{1}(\sigma)$ such that $d \mu_{i}=$ $h_{i} d \sigma(1 \leq i \leq n)$. Hence $\Lambda$ is a weak*-continuous linear mapping of $L^{\infty}(\sigma)$ into $R^{n}$; recall that $L^{\infty}(\sigma)=L^{1}(\sigma)^{*}$. Put
+
+$$
+K=\left\{g \in L^{\infty}(\sigma): 0 \leq g \leq 1\right\} .
+$$
+
+It is obvious that $K$ is convex. Since $g \in K$ if and only if
+
+$$
+0 \leq \int f g d \sigma \leq \int f d \sigma
+$$
+
+for every nonnegative $f \in L^{1}(\sigma), K$ is weak*-closed. And since $K$ lies in the closed unit ball of $L^{\infty}(\sigma)$, the Banach-Alaoglu theorem shows that $K$ is weak*-compact. Hence $\Lambda(K)$ is a compact convex set in $R^{n}$.
+
+We shall prove that $\mu(\mathfrak{M})=\Lambda(K)$.
+
+If $\chi_{E}$ is the characteristic function of a set $E \in \mathfrak{M}$, then $\chi_{E} \in K$ and $\mu(E)=$ $\Lambda g$. Thus $\mu(\mathfrak{M}) \subset \Lambda(K)$. To obtain the opposite inclusion, pick a point $p \in \Lambda(K)$ and define
+
+$$
+K_{p}=\{g \in K: \Lambda g=p\}
+$$
+
+We have to show that $K_{p}$ contains some $\chi_{E}$, for then $p=\mu(E)$.
+
+Note that $K_{p}$ is convex; since $\Lambda$ is continuous, $K_{p}$ is weak*-compact. By the Krein-Milman theorem, $K_{p}$ has an extreme point.
+
+Suppose $g_{0} \in K_{p}$ and $g_{0}$ is not a characteristic function in $L^{\infty}(\sigma)$. Then there is a set $E \in \mathfrak{M}$ and an $r>0$ such that $\sigma(E)>0$ and $r \leq g_{0} \leq 1-r$ on $E$. Put $Y=\chi_{E} \cdot L^{\infty}(\sigma)$. Since $\sigma(E)>0$ and $\sigma$ is nonatomic, $\operatorname{dim} Y>n$. Hence there exists $g \in Y$, not the zero element of $L^{\infty}(\sigma)$, such that $\Lambda g=0$, and such that $-r<g<r$. It follows that $g_{0}+g$ and $g_{0}-g$ are in $K_{p}$. Thus $g_{0}$ is not an extreme point of $K_{p}$.
+
+Every extreme point of $K_{p}$ is therefore a characteristic function. This completes the proof.
+
+\section{A Generalized Stone-Weierstrass Theorem}
+The theorems of Krein-Milman, Hahn-Banach, and Banach-Alaoglu will now be applied to an approximation problem.
+
+5.6 Definitions Let $C(S)$ be the familiar sup-normed Banach space of all continuous complex functions on the compact Hausdorff space $S$. A subspace $A$ of $C(S)$ is an algebra if $f g \in A$ ' whenever $f \in A$ and $g \in A$. A set $E \subset S$ is said to be $A$-antisymmetric if every $f \in A$ which is real on $E$ is constant on $E$; in other words, the algebra $A_{E}$ which consists of the restrictions $\left.f\right|_{E}$ of the functions $f \in A$ to $E$ contains no nonconstant real functions.
+
+For example, if $S$ is a compact set in $\overparen{C}$ and if $A$ consists of all $f \in C(S)$ that are holomorphic in the interior of $S$, then every component of the interior of $S$ is $A$-antisymmetric.
+
+Suppose $A \subset C(S), p \in S, q \in S$, and write $p \sim q$ provided that there is an $A$-antisymmetric set $E$ which contains both $p$ and $q$. It is easily verified that this defines an equivalence relation in $S$ and that each equivalence class is a closed set. These equivalence classes are the maximal $A$-antisymmetric sets.
+
+5.7 . Bishop's theorem Let $A$ be a closed subalgebra of $C(S)$ which contains the constant functions. Suppose $g \in C(S)$ and $\left.g\right|_{E} \in A_{E}$ for every maximal A-antisymmetric set $E$. Then $g \in A$.
+
+Stated differently, the hypothesis on $g$ is that to every maximal $A$-antisymmetric set $E$ corresponds a function $f \in A$ which coincides with $g$ on $E$; the conclusion is that one $f$ exists which does this for every $E$, namely, $f=g$.
+
+A special case of Bishop's theorem is the Stone-Weierstrass theorem:
+
+If $A$ is a closed subalgebra of $C(S)$ which contains the constants, which separates points on $S$, and which is self-adjoint (that is, $\bar{f} \in A$ whenever $f \in A$ ), then $A=C(S)$.
+
+For in this case the real-valued members of $A$ separate points on $S$. Since no $A$-antisymmetric set contains therefore more than one point, every $g \in C(S)$ satisfies the hypothesis of Bishop's theorem.
+
+PROOF The annihilator $A^{1}$ of $A$ consists of all regular complex Borel measures $\mu$ on $S$ such that $\int f d \mu=0$ for every $f \in A$. Define
+
+$$
+K=\left\{\mu \in A^{\perp}:\|\mu\| \leq 1\right\}
+$$
+
+where $\|\mu\|=|\mu|(S)$. Then $K$ is convex, balanced, and weak*-compact, by $(c)$ of Theorem 4.3. If $K=\{0\}$, then $A^{\perp}=\{0\}$; hence $A=C(S)$, and there is nothing to prove.
+
+Assume $K \neq\{0\}$, and let $\mu$ be an extreme point of $K$. Clearly, $\|\mu\|=1$. Let $E$ be the support of $\mu$; this means that $E$ is compact, that $|\mu|(E)=\|\mu\|$, and that $E$ is the smallest set with these two properties. Consider an $f \in A$ such that $0<$ $f(x)<1$ for every $x \in E$, and define
+
+$$
+d \sigma=f d \mu, \quad d \tau=(1-f) d \mu
+$$
+
+Since $A$ is an algebra, $\sigma \in A^{\perp}$ and $\tau \in A^{\perp}$. Since $0<f<1$ on $E,\|\sigma\|>0$ and $\|\tau\|>0$. Also,
+
+$$
+\|\sigma\|+\|\tau\|=\int_{E} f d|\mu|+\int_{E}(1-f) d|\mu|=|\mu|(E)=1 .
+$$
+
+This shows that $\mu$ is a convex combination of the measures $\sigma_{1}=\sigma /\|\sigma\|$ and $\tau_{1}=\tau /\|\tau\|$. Both of these are in $K$. Since $\mu$ is extreme in $K, \mu=\sigma_{1}$. In other words, $f d \mu=\|\sigma\| d \mu$, so that $f(x)=\|\sigma\|$ for every $x \in E$. Since $A$ contains the constants, it follows that every $f \in A$ which is real on $E$ is constant on $E$.
+
+So far we have proved that the support of $\mu$ is A-antisymmetric if $\mu$ is an extreme point of $K$.
+
+If $g$ satisfies the hypothesis of the theorem, it follows that $\int g d \mu=0$ for every $\mu$ that is extreme in $K$, hence for every $\mu$ in the convex hull of these extreme points. Since $\mu \rightarrow \int g d \mu$ is a weak*-continuous function on $K$, the KreinMilman theorem implies that $\int g d \mu=0$ for every $\mu \in K$, hence for every $\mu \in A^{\perp}$.
+
+Thus every continuous linear functional on $C(S)$ that annihilates $A$ also annihilates $g$. Hence $g \in A$, by the Hahn-Banach separation theorem.
+
+Here is an example that illustrates Bishop's theorem:
+
+\subsection{Theorem Suppose}
+(a) $K$ is a compact subset of $R^{n} \times \mathscr{C}$ and
+
+(b) if $t=\left(t_{1}, \ldots, t_{n}\right) \in R^{n}$, the set
+
+$$
+K_{t}=\{z \in \mathbb{C}:(t, z) \in K\}
+$$
+
+does not separate $\mathbb{C}$. If $g \in C(K)$, define $g_{t}$ on $K_{t}$ by $g_{t}(z)=g(t, z)$.
+
+Assume that $g \in C(K)$, that each $g_{t}$ is holomorphic in the interior of $K_{t}$ and that $\varepsilon>0$. Then there is a polynomial $P$ in the variables $t_{1}, \ldots, t_{n}, z$ such that
+
+$$
+|P(t, z)-g(t, z)|<\varepsilon
+$$
+
+for every $(t, z) \in K$.
+
+PROOF Let $A$ be the closure in : $C(K)$ of the set of all polynomials $P(t, z)$. Since the real polynomials on $R^{n}$ separate points, every $A$-antisymmetric set lies in
+some $K_{t} \cdot{ }^{-}$By Theorem 5.7 it is therefore enough to show that to every $t \in R^{n}$ corresponds an $f \in A$ such that $f_{t}=g_{t}$. that
+
+Fix $t \in R^{n}$. By Mergelyan's theorem [23] there are polynomials $P_{i}(z)$ such
+
+$$
+g_{t}(z)=\sum_{i=1}^{\infty} P_{i}(z) \quad\left(z \in K_{t}\right)
+$$
+
+and $\left|P_{i}\right|<2^{-i}$ if $i>1$. There is a polynomial $Q$ on $R^{n}$ that peaks at $t$, in the sense that $Q(t)=1$ but $|Q(s)|<1$ if $s \neq t$ and $K_{s} \neq \varnothing$. Consider a fixed $i>1$. The functions $\phi_{m}$ defined on $K$ by
+
+$$
+\phi_{m}(s, z)=\left|Q^{m}(s) P_{i}(z)\right|
+$$
+
+form a monotonically decreasing sequence of continuous functions whose limit is $<2^{-i}$ at every point of $K$. Since $K$ is compact, it follows that there is a positive integer $m_{i}$ such that $\phi_{m_{i}}(s, z)<2^{-i}$ at every point of $K$. The series
+
+$$
+f(s, z)=\sum_{i=1}^{\infty} Q^{m_{i}}(s) P_{i}(z)
+$$
+
+.converges uniformly on $K$. Hence $f \in A$, and obviously $f_{t}=g_{t}$.
+
+\section{Two Interpolation Theorems}
+The proof of the first of these theorems involves the adjoint of an operator. The second furnishes another application of the Krein-Milman theorem. rem 5.7.
+
+The first one (due to Bishop) again concerns $C(S)$. Our notation is as in Theo-
+
+5.9 Theorem Suppose $Y$ is a closed subspace of $C(S), K$ is a compact subset of $S$, and $|\mu|(K)=0$ for every $\mu \in Y^{\perp}$. If $g \in C(K)$ and $|g|<1$, it follows that there exists $f \in Y$ such that $\left.f\right|_{K}=g$ and $|f|<1$ on $S$.
+
+Thus every continuous function on $K$ extends to a member of $Y$. In other words, the restriction map $\left.f \rightarrow f\right|_{K}$ maps $Y$ onto $C(K)$.
+
+This theorem generalizes the following special case.
+
+Let $A$ be the disc algebra, i.e., the set of all continuous functions on the closure of the unit disc $U$ in $\mathbb{C}$ which are holomorphic in $U$. Take $S=T$, the unit circle. Let $Y$ consist of the restrictions to $T$ of the members of $A$. By the maximum modulus theorem, $Y$ is a closed subspace of $C(T)$. If $K \subset T$ is compact and has Lebesgue measure 0, the theorem of $\mathbf{F}$. and M. Riesz [23] states precisely that $K$ satisfies the hypothesis of Theorem 5.9. Consequently, to eve: $y, g \in C(K)$ corresponds an $f \in A$ such that $f=g$ on $K$.
+
+PROOF Let $\rho: Y \rightarrow C(K)$ be the restriction map defined by $\rho f=\left.f\right|_{K}$. We have to prove that $\rho$ maps the open unit ball of $Y$ onto the open unit ball of $C(K)$.
+
+Consider the adjoint $\rho^{*}: M(K) \rightarrow Y^{*}$, where $M(K)=C(K)^{*}$ is the Banach space of all regular complex Borel measures on $K$, with the total variation norm $\|\mu\|=|\mu|(K)$. For each $\mu \in M(K), \rho^{*} \mu$ is a bounded linear functional on $Y$; by the Hahn-Banach theorem, $\rho^{*} \mu$ extends to a linear functional on $C(S)$, of the same norm. In other words, there exists $\sigma \in M(S)$, with $\|\sigma\|=\left\|\rho^{*} \mu\right\|$, such that
+
+$$
+\int_{\mathrm{S}} f d \sigma=\left\langle f, \rho^{*} \mu\right\rangle=\langle\rho f, \mu\rangle=\int_{K} f d \mu
+$$
+
+for every $f \in Y$. Regard $\mu$ as a member of $M(S)$, with support in $K$. Then $\sigma-\mu \in Y^{\perp}$, and our hypothesis about $K$ implies that $\sigma(E)=\mu(E)$ for every Borel set $E \subset K$. Hence $\|\mu\| \leq\|\sigma\|$. We conclude that $\|\mu\| \leq\left\|\rho^{*} \mu\right\|$. By $(b)$ of Lemma 4.13, this inequality proves the theorem.
+
+Note: Since $\left\|\rho^{*}\right\|=\|\rho\| \leq 1$, we also have $\|\sigma\| \leq\|\mu\|$ in the preceding proof. It follows that $\sigma=\mu$. Hence $\rho^{*} \mu$ has a unique norm-preserving extension to $C(S)$.
+
+Our second interpolation theorem concerns finite Blaschke products, i.e., functions $B$ of the form
+
+$$
+B(z)=c \prod_{k=1}^{N} \frac{z-\alpha_{k}}{1-\bar{\alpha}_{k} z}
+$$
+
+where $|c|=1$ and $\left|\alpha_{k}\right|<1$ for $1 \leq k \leq N$. It is easy to see that the finite Blaschke products are precisely those members of the disc algebra whose absolute value is 1 at every point of the unit circle.
+
+The data of the Pick-Nevanlinna interpolation problem are two finite sets of complex numbers, $\left\{z_{0}, \ldots, z_{n}\right\}$ and $\left\{w_{0}, \ldots, w_{n}\right\}$, all of absolute value less than 1 , with $z_{i} \neq z_{j}$ if $i \neq j$. The problem is to find a holomorphic function $f$ in the open unit disc $U$, such that $|f(z)|<1$ for all $z \in U$, and such that
+
+$$
+f\left(z_{i}\right)=w_{i} \quad(0 \leq i \leq n)
+$$
+
+The data may very well admit no solution. For example, if $\left\{z_{0}, z_{1}\right\}=\left\{0, \frac{1}{2}\right\}$ and $\left\{w_{0}, w_{1}\right\}=\left\{0, \frac{3}{2}\right\}$, the Schwarz lemma shows this. But if the problem has solutions, then among them there must be some very nice ones. The next theorem shows this.
+
+5.10 Theorem Let $\left\{z_{0}, \ldots, z_{n}\right\},\left\{w_{0}, \ldots, w_{n}\right\}$ be Pick-Nevanlinna data. Let $E$ be the set of all holomorphic functions $f$ in $U$ such that $|f|<1$ and $f\left(z_{i}\right)=w_{i}$ for $0 \leq i \leq n$. If $E$ is not empty, thèn $E$ contains a finite Blaschke product.
+
+PROOF Without loss of generality, assume $z_{0}=w_{0}=0$. We will show that there is a holomorphic function $F$ in $U$ which satisfies
+
+$$
+\begin{gathered}
+\operatorname{Re} F(z)>0 \quad \text { for } z \in U, F(0)=1 \\
+F\left(z_{i}\right)=\beta_{i}=\frac{1+w_{i}}{1-w_{i}} \quad \text { for } 1 \leq i \leq n
+\end{gathered}
+$$
+
+and which has the form
+
+$$
+F(z)=\sum_{k=1}^{N} c_{k} \frac{a_{k}+z}{a_{k}-z}
+$$
+
+where $c_{k}>0, \sum c_{k}=1$, and $\left|a_{k}\right|=1$. Once such an $F$ is found, put $B=$ $(F-1) /(F+1)$. This is a finite Blaschke product that satisfies $B\left(z_{i}\right)=w_{i}$ for $0 \leq i \leq n$.
+
+Let $K$ be the set of all holomorphic functions $F$ in $U$ that satisfy (1).
+
+Associate to each $\mu \in M(T)=C(T)^{*}$ the function
+
+$$
+F_{\mu}(z)=\int_{-\pi}^{\pi} \frac{e^{i \theta}+z}{e^{i \theta}-z} d \mu\left(e^{i \theta}\right) \quad(z \in U) .
+$$
+
+If $P$ is the set of all Borel probability measures on $T$, then $\mu \leftrightarrow F_{\mu}$ is a one-to-one correspondence between $\bar{P}$ and $K$. (Theorems 11.12 and 11.19 of [23].) Define $\Lambda: M(T) \rightarrow \mathbb{C}^{n}$ by
+
+$$
+\Lambda \mu=\left(F_{\mu}\left(z_{1}\right)_{;} \ldots, F_{\mu}\left(z_{n}\right)\right)
+$$
+
+Since $E$ is assumed to be nonempty, there exists $\mu_{0} \in P$ such that
+
+$$
+\Lambda \mu_{0}=\beta=\left(\beta_{1}, \ldots, \beta_{n}\right)
+$$
+
+Since $P$ is convex and weak*-compact, and since $\Lambda$ is linear and weak*-continuous, $\Lambda(P)$ is a convex compact set in $\ell^{n}=R^{2 n}$. Since $\beta \in \Lambda(P), \beta$ is a convex combination of $N \leq 2 n+1$ extreme points of $\Lambda(P)$. (Exercise 19, Chapter 3.) If $\gamma$ is an extreme point of $\Lambda(P)$, then $\Lambda^{-1}(\gamma)$ is an extreme set of $K$, and every extreme point of $\Lambda^{-1}(\gamma)$ (their existence follows from the Krein-Milman theorem) is an extreme point of $P$. It follows that there are extreme points $\mu_{1}, \ldots, \mu_{N}$ of $P$ and positive numbers $c_{k}$ with $\sum c_{k}=1$, such that
+
+$$
+\Lambda\left(c_{1} \mu_{1}+\cdots+c_{N} \mu_{N}\right)=\beta
+$$
+
+Being an extreme point of $P$, each $\mu_{k}$ that occurs in (7) has a single point $a_{k} \in T$ for its support; hence
+
+$$
+\cdot F_{\mu_{k}}(z)=\frac{a_{k}+z}{a_{k}-z}
+$$
+
+If $F$ is now defined by (3), it follows from (7) and (8) that $F$ satisfies (1) and (2).
+
+\section{A Fixed Point Theorem}
+Fixed point theorems play an important role in many parts of analysis and topology. The one that we shall now prove is due to Kakutani; it will be used to prove the existence of a Haar measure on any compact group. The proof of Kakutani's theorem involves only the most basic properties of locally convex spaces.
+
+\subsection{Theorem Suppose}
+(a) $K$ is a nonempty compact convex set in a locally convex space $X$,
+
+(b) $G$ is an equicontinuous group of linear mappings of $X$ onto $X$, and
+
+(c) $\Lambda(K) \subset K$ for every $\Lambda \in G$.
+
+Then $G$ has a common fixed point in $K$; that is, there exists $p \in K$ such that $\Lambda p=p$ for every $\Lambda \in G$.
+
+Part $(b)$ of the hypothesis should perhaps be made more explicit. Equicontinuity, is defined in Section 2.3. To say that $G$ is a group means that every $\Lambda \subset G$ is a one-toone mapping of $X$ onto $X$ whose inverse $\Lambda^{-1}$ also belongs to $G$ and that $\Lambda_{1} \Lambda_{2} \in G$ whenever $\Lambda_{i} \in G(i=1,2)$. Here $\left(\Lambda_{1} \Lambda_{2}\right) x=\Lambda_{1}\left(\Lambda_{2} x\right)$, of course. Hypothesis $(b)$ is satisfied, for instance, when $G$ is a group of linear isometries on a normed space $X$.
+
+PROOF Let $\Omega$ be the collection of all nonempty compact convex sets $H \subset K$ such that $\Lambda(H) \subset H$ for every $\Lambda \in G$. Partially order $\Omega$ by set inclusion. Note that $\Omega \neq \varnothing$, since $K \in \Omega$. By Hausdorff's maximality theorem, $\Omega$ contains a maximal totally ordered subcollection $\Omega_{0}$. The intersection $H_{0}$ of all members of $\Omega_{0}$ is a minimal member of $\Omega$. The theorem will be proved by showing that $H_{0}$ contains only one point. To do this, we shall consider a set $H \in \Omega$ which contains at least two points, and we shall prove that some $H_{1} \in \Omega$ is a proper subset of $H$.
+
+Before doing this, we prove that $X$ has a local base consisting of balanced convex sets $U$ that satisfy $\Lambda(U) \subset U$ for every $\Lambda \in G$.
+
+Let $V$ be a convex neighborhood of 0 in $X$. Since $G$ is equicontinuous, there is a balanced neighborhood $V_{1}$ of 0 such that $\Lambda\left(V_{1}\right) \subset V$ for every $\Lambda \in G$. Let $U$ be the convex hull of the union of all sets $\Lambda\left(V_{1}\right)$, as $\Lambda$ ranges over $G$. Then $U$ is convex and balanced, and $U \subset V$, since $V$ is convex. Every $u \in U$ has the form
+
+$$
+u=c_{1} \Lambda_{1} v_{1}+\cdots+c_{n} \Lambda_{n} v_{n}
+$$
+
+where $c_{i} \geq 0, \sum c_{i}=1, \Lambda_{i} \in G, v_{i} \in V_{1}$. If $\Lambda \in G$, then
+
+$$
+\Lambda u=c_{1} \Lambda \Lambda_{1} v_{1}+\cdots+c_{n} \Lambda \Lambda_{n} v_{n}
+$$
+
+lies also in $U$, because $\Lambda \Lambda_{i} \in G$. Hence $\Lambda(U) \subset U$.
+
+Noẃ suppose $H \in \Omega$, and $H$ contains at least two points. Then $H-H \neq$ $\{0\}$, and some set $U$ as above fails to cover $H-H$. Since $H-H$ is compact, $H-H \subset s U$ for some $s>0$. Let $t$ be the greatest lower bound of these numbers $s$. Then $t \geq 1$. Put $W=t U$. Then $W$ is a convex balanced open set such that
+
+(3)
+
+$$
+\begin{aligned}
+& \Lambda(W) \subset W \quad \text { for every } \Lambda \in G, \\
+& H-H \subset(1+r) W \quad \text { if } r>0
+\end{aligned}
+$$
+
+. $(1-r) \bar{W}$ does not cover $H-H \quad$ if $0<r<1$.
+
+Properties (1) and (2) are obvious. Since $W$ is convex,
+
+$$
+(1-r) \bar{W} \subset(1-r) \bar{W}+\frac{i}{2} r \bar{W}=\left(1-\frac{r}{2}\right) W
+$$
+
+this last set does not cover $H-H$; hence (3) holds.
+
+Since $H$ is compact, $H$ contains points $x_{1}, \cdots, x_{n}$ such that
+
+$$
+H \subset \bigcup_{i=1}^{n}\left(x_{i}+\frac{1}{2} W\right)
+$$
+
+Put $r=1 /(4 n)$, and define
+
+$$
+H_{1}=H \cap \bigcap_{y \in H}(y+(1-r) \bar{W}) .
+$$
+
+It is clear that $H_{1}$ is compact and convex.
+
+Suppose $x \in H_{1}$ and $y \in H$. Since $\Lambda^{-1}(H) \subset H, y=\Lambda y_{1}$ for some $y_{1} \in H$. By (5), $x \in y_{1}+(1-r) \bar{W}$. Hence (1) implies that
+
+$$
+\Lambda x \in \Lambda y_{1}+(1-r) \Lambda(\bar{W}) \subset y+(1-r) \bar{W}
+$$
+
+It follows that $\Lambda\left(H_{1}\right) \subset H_{1}$ for every $\Lambda \in G$.
+
+By (3), there are points $x \in H, y \in H$, such that $x-y$ does not lie in $(1-r) \bar{W}$. Any such $x$ is not in $H_{1}$. Thus $H_{1} \neq H$.
+
+To complete the proof, we have to show that $H_{1} \neq \varnothing$. We do this by showing that $H_{1}$ contains the point
+
+$$
+x_{0}=\frac{1}{n}\left(x_{1}+\cdots+x_{n}\right)
+$$
+
+Since $H$ is convex, $x_{0} \in H$. Fix $y \in H$. By (4), there exists $j$ such that
+
+$$
+y \in x_{j}+\frac{1}{2} W
+$$
+
+If $i \neq j, 1 \leq i \leq n$, property (2) implies that
+
+$$
+y \in x_{i}+(1+r) W
+$$
+
+Add the relations (7) and (8), divide by $n$, and use the convexity of $W$ to obtain
+
+$$
+y-x_{0} \in \frac{1}{n}\left[\frac{1}{2}+(n-1)(1+r)\right] W \subset(1-r) W,
+$$
+
+since $r=1 /(4 n)$. Thus $x_{0} \in y+(1-r) W$, for every $y \in H$. Hence $x_{0} \in H_{1}$, and the proof is complete.
+
+\section{Haar Measure on Compact Groups}
+5.12 Definitions A topological group is a group $G$ in which a topology is defined that makes the group operations continuous. The most concise way to express this requirement is to postulate the continuity of the mapping $\phi: G \times G \rightarrow G$ defined by
+
+$$
+\phi(x, y)=x y^{-1}
+$$
+
+For each $a \in G$, the mappings $x \rightarrow a x$ and $x \rightarrow x a$ are homeomorphisms of $G$ onto $G$; so is $x \rightarrow x^{-1}$. The topology of $G$ is therefore completely determined by any local base at the identity element $e$.
+
+If we require (as we shall from now on) that every point of $G$ is a closed set, then the analogues of Theorems 1.10 to 1.12 hold (with exactly the same proofs, except for changes in notation); in particular, the Hausdorff separation axiom holds.
+
+If $f$ is any function with domain $G$, its left translates $L_{s} f$ and its right translates $R_{s} f$ are defined, for every $s \in G$, by
+
+$$
+\left(L_{s} f\right)(x)=f(s x), \quad\left(R_{s} f\right)(x)=f(x s) \quad(x \in G)
+$$
+
+A complex function $f$ on $G$ is said to be uniformly continuous if to every $\varepsilon>0$ corresponds a neighborhood $V$ of $e$ in $G$ such that
+
+$$
+|f(t)-f(s)|<\varepsilon
+$$
+
+whenever $s \in G, t \in G$, and $s^{-1} t \in V$.
+
+A topological group $G$ whose topology is compact is called a compact group; in this case, $C(G)$ is, as usual, the Banach space of all complex continuous functions on $G$, with the supremum norm.
+
+5.13 Theorem Let $G$ be a compact group, suppose $f \in C(G)$, and define $H_{L}(f)$ to be the convex hull of the set of all left translates of $f$. Then
+
+(a) $f$ is uniformly continuous, and
+
+(b) $H_{L}(f)$ is a totally bounded subset of $C(G)$.
+
+In other words, the closure of $H_{L}(f)$ in $C(G)$ is compact. (Appendix A4.)
+
+PROOF Fix $\varepsilon>0$. Since $f$ is continuous there corresponds to each $a \in G$ a neighborhood $W_{a}$ of $e$ such that $|f(t)-f(a)|<\varepsilon$ for all $t$ in $a W_{a}$. The continuity of the group operations gives neighborhoods $V_{a}$ of $e$ that satisfy $V_{a} V_{a}^{-1} \subset W_{a}$. Since $G$ is compact, there is a finite set $A \subset G$ such that
+
+Put
+
+$$
+\widehat{G}=\bigcup_{a \in A} a \bar{V}_{a} .
+$$
+
+$$
+V=\bigcap_{a \in A} V_{a} .
+$$
+
+Assume $x^{-1} y \in V$. Choose $a \in A$ so that $y \in a V_{a}$. Then $|f(y)-f(a)|<\varepsilon$. Also, $|f(x)-f(a)|<\varepsilon$, because
+
+$$
+x \in y V^{-1} \subset a V_{a} V^{-1} \subset a W_{a} .
+$$
+
+Hence $|f(x)-f(y)|<2 \varepsilon$. This proves $(a)$.
+
+Since $(s x)^{-1}(s y)=x^{-1} y$ for every $s \in G$, it follows that
+
+$$
+\left|\left(L_{s} f\right)(x)-\left(L_{s} f\right)(y)\right|=|f(s x)-f(s y)|<2 \varepsilon
+$$
+
+whenever $x^{-1} y \in V$. Every $g \in H_{L}(f)$ is a finite sum of the form $\sum c_{s} L_{s} f$, with $c_{s} \geq 0, \sum c_{s}=1$. Hence
+
+$$
+|g(x)-g(y)|<2 \varepsilon
+$$
+
+if $x^{-1} y \in V$ and $g \in H_{L}(f)$. This proves that $H_{L}(f)$ is an equicontinuous subset of $C(G)$. Now $(b)$ follows from Ascoli's theorem. (Appendix A5.)
+
+5.14 Theorem On every compact group $G$ exists a unique regular Borel probability measure $m$ which is left-invariant, in the sense that
+
+$$
+\int_{G} f d m=\int_{G}\left(L_{s} f\right) d m \quad[s \in G, f \in C(G)] .
+$$
+
+This $m$ is also right-invariant:
+
+$$
+\int_{G} f d m=\int_{G}\left(R_{s} f\right) d m \quad[s \in G, f \in C(G)]
+$$
+
+and it satisfies the relation
+
+$$
+\int_{G} f(x) d m(x)=\int_{G} f\left(x^{-1}\right) d m(x) \quad[f \in C(G)] .
+$$
+
+This $m$ is called the Haar measure of $G$.
+
+PROOF The operators $L_{s}$ satisfy $L_{s} L_{t}=L_{t s}$, because
+
+$$
+\left(L_{s} L_{t} f\right)(x)=\left(L_{t} f\right)(s x)=f(t s x)=\left(L_{t s} f\right)(x)
+$$
+
+Since each $L_{s}$ is an isometry of $C(G)$ onto itself, $\left\{L_{s}: s \in G\right\}$ is an equicontinuous group of linear operators on $C(G)$. If $f \in C(G)$, let $K_{f}$ be the closure of $H_{L}(f)$. By Theorem $5.13, K_{f}$ is compact. It is obvious that $L_{s}\left(K_{f}\right)=K_{f}$ for every $s \in G$. The fixed point theorem 5.11 now implies that $K_{f}$ contains a function $\phi$ such that $L_{s} \phi=\phi$ for every $s \in G$. In particular, $\phi(s)=\phi(e)$, so that $\phi$ is constant. By the definition of $K_{f}$, this constant can be uniformly approximated by functions in $H_{L}(f)$.
+
+So far we have proved that to each $f \in C(G)$ corresponds at least one constant $c$ which can be uniformly approximated on $G$ by convex combinations of left translates of $f$. Likewise, there is a constant $c^{\prime}$ which bears the same relation to the right translates of $f$. We claim that $c^{\prime}=c$.
+
+To prove this, pick $\varepsilon>0$. There exist finite sets $\left\{a_{i}\right\}$ and $\left\{b_{j}\right\}$ in $G$, and there exist numbers $\alpha_{i}>0, \beta_{j}>0$, with $\sum \alpha_{i}=1=\sum \beta_{j}$, such that
+
+$$
+\left|c-\sum_{i} \alpha_{i} f\left(a_{i} x\right)\right|<\varepsilon \quad(x \in G)
+$$
+
+and
+
+$$
+\left|c^{\prime}-\sum_{j} \beta_{j} f\left(x b_{j}\right)\right|<\varepsilon \quad(x \in G) .
+$$
+
+Put $x=b_{j}$ in (4); multiply (4) by $\beta_{j}$, and add with respect to $j$. The result is
+
+$$
+\left|c-\sum_{i, j} \alpha_{i} \beta_{j} f\left(a_{i} b_{j}\right)\right|<\varepsilon .
+$$
+
+Put $x=a_{i}$ in (5), multiply (5) by $\alpha_{i}$, and add with respect to $i$, to obtain
+
+$$
+\left|c^{\prime}-\sum_{i, j} \alpha_{i} \beta_{j} f\left(a_{i} b_{j}\right)\right|<\varepsilon
+$$
+
+Now (6) and (7) imply that $c=c^{\prime}$.
+
+It follows that to each $f \in C(G)$ corresponds a unique number, which we shall write $M f$, which can be uniformly approximated by convex combinations of left translates of $f$; the same $M f$ is also the unique number that can be uniformily approximated by convex combinations of right translates of $f$. The following properties of $M$ are obvious:
+
+$$
+\begin{aligned}
+M f & \geq 0 \quad \text { if } f \geq 0 \\
+M 1 & =1 . \\
+M(\alpha f) & =\alpha M f \quad \text { if } \alpha \text { is a scalar. } \\
+M\left(L_{s} f\right) & =M f=M\left(R_{s} f\right) \quad \text { for every } s \in G .
+\end{aligned}
+$$
+
+We now prove that
+
+$$
+M(f+g)=M f+\overline{M g}
+$$
+
+Pick $\varepsilon>0$. Then
+
+$$
+\left|M f-\sum_{i} \alpha_{i} f\left(a_{i} x\right)\right|<\varepsilon \quad(x \in G)
+$$
+
+for some finite set $\left\{a_{i}\right\} \subset G$ and for some numbers $\alpha_{i}>0$ with $\sum \alpha_{i}=1$. Define
+
+$$
+h(x)=\sum_{i} \alpha_{i} g\left(a_{i} x\right)
+$$
+
+Then $h \in K_{g}$, hence $K_{h} \subset K_{g}$, and since each of these sets contains a unique constant function, we have $M h=M g$. Hence there is a finite set $\left\{b_{j}\right\} \subset G$, and there are numbers $\beta_{j}>0$ with $\sum \beta_{j}=1$, such that
+
+$$
+\left|M g-\sum_{j} \beta_{j} h\left(b_{j} x\right)\right|<\varepsilon \quad(x \in G)
+$$
+
+by (14), this gives
+
+$$
+\left|M g-\sum_{i, j} \alpha_{i} \beta_{j} g\left(a_{i} b_{j} x\right)\right|<\varepsilon \quad(x \in G)
+$$
+
+Replace $x$ by $b_{j} x$ in (13), multiply (13) by $\beta_{j}$, and add with respect to $j$, to obtain
+
+$$
+\left|M f-\sum_{i, j} \alpha_{i} \beta_{j} f\left(a_{i} b_{j} x\right)\right|<\varepsilon \quad(x \in G) .
+$$
+
+Thus
+
+$$
+\left|M f+M g-\sum_{i, j} \alpha_{i} \beta_{j}(f+g)\left(a_{i} b_{j} x\right)\right|<2 \varepsilon \quad(x \in G)
+$$
+
+Since $\sum \alpha_{i} \beta_{j}=1$, (18) implies (12).
+
+The Riesz representation theorem, combined with (8), (9), (10), and (12), yields a unique regular Borel probability measure $m$ that satisfies
+
+$$
+M f=\int_{G} f d m \quad(f \in C(G))
+$$
+
+properties (1) and (2) now follow from (11).
+
+To prove (3), denote the right side of (3) by $M^{\prime} f$, and observe that $M^{\prime}$ also satisfies properties (8) to (12), hence that $M^{\prime}=M$.
+
+\section{Uncomplemented Subspaces}
+Complemented subspaces of a topological vector space were defined in Section 4.20; Lemma 4.21 furnished some examples. It is also very easy to see that every closed subspace of a Hilbert space is complemented (Theorem 12.4). We will now show that some very familiar closed subspaces of certain other Banach spaces are, in fact, not complemented. These examples will be derived from a rather general theorem about
+compact groups of operators that have an invariant subspace; its proof uses vectorvalued integration with respect to Haar measure.
+
+We begin by looking at some relations that exist between complemented subspaces on the one hand and projections on the other.
+
+5.15 Projections Let $X$ be a vector space. A linear mapping $P: X \rightarrow X$ is called a projection in $X$ if
+
+$$
+P^{2}=P
+$$
+
+i.e., if $P(P x)=P x$ for every $x \in X$.
+
+Suppose $P$ is a projection in $X$, with null space $\mathcal{N}(P)$ and range $\mathscr{R}(P)$. The following facts are almost obvious.
+
+(a) $\mathscr{R}(P)=\mathscr{N}(I-P)=\{x \in X: P x=x\}$.
+
+(b) $\mathscr{N}(P)=\mathscr{R}(I-P)$.
+
+(c) $\mathscr{R}(P) \cap \mathscr{N}(P)=\{0\}$ and $X=\mathscr{R}(P)+\mathscr{N}(P)$.
+
+(d) If $A$ and $B$ are subspaces of $X$ such that $A \cap B=\{0\}$ and $X=A+B$, then there is a unique projection $P$ in $X$ with $A=\mathscr{R}(P)$ and $B=\mathscr{N}(P)$.
+
+Since $(I-P) P=0, \mathscr{R}(P) \subset \mathscr{N}(I-P)$. If $x \in \mathscr{N}(I-P)$, then $x-P x=0$, and so $x=P x \in \mathscr{R}(P)$. This gives $(a) ;(b)$ follows by applying $(a)$ to $I-P$. If $x \in \mathscr{R}(P) \cap \mathscr{N}(P)$, then $x=P x=0$; if $x \in X$, then $x=P x+(x-P x)$, and $x-P x \in \mathscr{N}(P)$. This proves (c). If $A$ and $B$ satisfy $(d)$, every $x \in X$ has a unique decomposition $x=x^{\prime}+x^{\prime \prime}$, with $x^{\prime} \in A, x^{\prime \prime} \in \vec{B}$. Define $P x=x^{\prime}$. Trivial verifications then prove $(d)$.
+
+\subsection{Theorem}
+(a) If $P$ is a continuous projection in a topological vector space $X$, then
+
+$$
+X=\mathscr{R}(P) \oplus \mathscr{N}(P)
+$$
+
+(b) Conversely, if $X$ is an $F$-space and if $X=A \oplus B$, then the projection $P$ with range $A$ and null space $B$ is continuous.
+
+Recall that we use the notation $X=A \oplus B$ only when $A$ and $B$ are closed subspaces of $X$ such that $A \cap B=\{0\}$ and $A+B=X$.
+
+PROOF Statement $(a)$ is contained in $(c)$ of Section 5.15, except for the assertion that $\mathscr{R}(P)$ is closed. To see the latter, note that $\mathscr{R}(P)=\mathscr{N}(I-P)$ and that $I-P$ is continuous.
+
+Next, suppose $P$ is the projection with range $A$ and null space $B$, as in $(b)$. To prove that $P$ is continuous we verify that $P$ satisfies the hypotheses of the closed graph theorem: Suppose $x_{n} \rightarrow x$ and $P x_{n} \rightarrow y$. Since $P x_{n} \in A$ and $A$ is
+closed, we have $y \in A$, hence $y=P y$. Since $x_{n}-P x_{n} \in B$ and $B$ is closed, we have $x-y \in B$, hence $P y=P x$. It follows that $y=P x$. Hence $P$ is continuous.
+
+Corollary A closed subspace of an $F$-space $X$ is complemented in $X$ if and only if it is the range of some continuous projection in $X$.
+
+5.17 Groups of linear operators Suppose that a topological vector space $X$ and a topological group $G$ are related in the following manner: To every $s \in G$ corresponds a continuous linear operator $T_{s}: X \rightarrow X$ such that
+
+$$
+T_{e}=I, \quad T_{s t}=T_{s} T_{t} \quad(s \in G, t \in G)
+$$
+
+also, the mapping $(s, x) \rightarrow T_{s} x$ of $G \times X$ into $X$ is continuous.
+
+Under these conditions, $G$ is said to act as a group of continuous linear operators on $X$.
+
+\subsection{Theorem Suppose}
+(a) $X$ is a Fréchet space,
+
+(b) $Y$ is a complemented subspace of $X$,
+
+(c) $G$ is a compact group which acts as a group of continuous linear operators on $X$, and
+
+(d) $T_{s}(Y) \subset Y$ for every $s \in G$.
+
+Then there is a continuous projection $Q$ of $X$ onto $Y$ which commutes with every $T_{s}$. PROOF For simplicity, write $s x$ in place of $T_{s} x$. By $(b)$ and Theorem 5.16, there is a continuous projection $P$ of $X$ onto $Y$. The desired projection $Q$ is to satisfy $s^{-1} Q s=Q$ for all $s \in G$. The idea of the proof is to obtain $Q$ by averaging the operators $s^{-1} P s$ with respect to the Haar measure $m$ of $G$ : define
+
+$$
+Q x=\int_{G} s^{-1} P s x d m(s) \quad(x \in X)
+$$
+
+To show that this integral exists, in accordance with Definition 3.26, put
+
+$$
+f_{x}(s)=s^{-1} P s x \quad(s \in G) .
+$$
+
+By Theorem 3.27, it suffices to show that $f_{x}: G \rightarrow X$ is continuous. Fix $s_{0} \in G$; let $U$ be a neighborhood of $f_{x}\left(s_{0}\right)$ in $X$. Put $y=P_{s_{0}} x$, so that
+
+$$
+s_{0}^{-1} y=f_{x}\left(s_{0}\right)
+$$
+
+Since $(s, z) \rightarrow s z$ is assumed to be continuous, $s_{0}$ has a neighborhood $V_{1}$ and $y$ has a neighborhood $W$ such that
+
+$$
+s^{-1}(W) \subset U \quad \text { if } s \in V_{1}
+$$
+
+Also, $s_{0}$ has a neighborhood $V_{2}$ such that
+
+$P s x \in W \quad$ if $s \in V_{2}$.
+
+The continuity of $P$ was used here. If $s \in V_{1} \cap V_{2}$, it follows from (2), (4), and (5) that $f_{x}(s) \in U$. Thus $f_{x}$ is continuous.
+
+Since $G$ is compact, each $f_{x}$ has compact range in $X$. The Banach-Steinhaus theorem 2.6 implies therefore that $\left\{s^{-1} P s: s \in G\right\}$ is an equicontinuous collection of linear operators on $X$. To every convex neighborhood $U_{1}$ of 0 in $X$ corresponds therefore a neighborhood $U_{2}$ of 0 such that $s^{-1} P s\left(U_{2}\right) \subset U_{1}$. It now follows from (1) and the convexity of $U_{1}$ that $Q\left(U_{2}\right) \subset \bar{U}_{1}$. (See Theorem 3.27.) Hence $Q$ is continuous. The linearity of $Q$ is obvious.
+
+If $x \in X$, then $P s x \in Y$, hence $s^{-1} P_{s x} \in Y$ by $(d)$, for every $s \in G$. Since $Y$ is closed, $Q x \in Y$.
+
+If $x \in Y$, then $s x \in Y, P s x=s x$, and so $s^{-1} P s x=x$, for every $s \in G$. Hence $Q x=x$
+
+These two statements prove that $Q$ is a projection of $X$ onto $Y$. To complete the proof, we have to show that
+
+$$
+Q s_{0}=s_{0} Q \quad \text { for every } s_{0} \in G \text {. }
+$$
+
+Note that $s^{-1} P s s_{0}=s_{0}\left(s s_{0}\right)^{-1} P\left(s s_{0}\right)$. It now follows from (1) and (2) that
+
+$$
+\begin{aligned}
+Q s_{0} x & =\int_{G} s^{-1} P s s_{0} x d m(s) \\
+& =\int_{G} s_{0} f_{x}\left(s s_{0}\right) d m(s) \\
+& =\int_{G} s_{0} f_{x}(s) d m(s) \\
+& =s_{0} \int_{G} f_{x}(s) d m(s)=s_{0} Q x .
+\end{aligned}
+$$
+
+The third equality is due to the translation-invariance of $m$; for the fourth (moving $s_{0}$ across the integral sign), see Exercise 24 of Chapter 3.
+
+5.19 Examples In our first example, we take $X=L^{1}, Y=H^{1}$. Here $L^{1}$ is the space of all integrable functions on the unit circle, and $H^{1}$ consists of those $f \in L^{1}$ that satisfy $\hat{f}(n)=0$ for all $n<0$. Recall that $\hat{f}(n)$ denotes the $n$th Fourier coefficient of $f:-$
+
+$$
+\hat{f}(n)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(\theta) e^{-i n \theta} d \theta \quad(n=0, \pm 1, \pm 2, \ldots) .
+$$
+
+Note that we write $f(\theta)$ in place of $f\left(e^{i \theta}\right)$, for simplicity.
+
+For $G$ we take the unit circle, i.e., the multiplicative group of all complex numbers of absolute value 1 , and we associate to each $e^{i s} \in G$ the translation operators $\tau_{s}$ defined by
+
+$$
+\left(\tau_{s} f\right)(\theta)=f(s+\theta) .
+$$
+
+It is a simple matter to verify that $G$ then acts on $L^{1}$ as described in Section 5.17 and that
+
+$$
+\left(\tau_{s} f\right)^{\wedge}(n)=e^{i n s} \hat{f}(n)
+$$
+
+Hence $\tau_{s}\left(H^{1}\right)=H^{1}$ for every real s. (See Exercise 12.)
+
+If $H^{1}$ were complemented in $L^{1}$, Theorem 5.18 would imply that there is a continuous projection $Q$ of $L^{1}$ onto $H^{1}$ such that
+
+$$
+\tau_{s} Q=Q \tau_{s} \quad \text { for all } s
+$$
+
+Let us see what such a $Q$ would have to be.
+
+Put $e_{n}(\theta)=e^{i n \theta}$. Then $\tau_{s} e_{n}=e^{i n s} e_{n}$, and
+
+$$
+Q \tau_{s} e_{n}=e^{i n s} Q e_{n},
+$$
+
+since $Q$ is linear. It follows from (4) and (5) that
+
+$$
+\left(Q e_{n}\right)(s+\theta)=e^{i n s}\left(Q e_{n}\right)(\theta)
+$$
+
+Put $c_{n}=\left(Q e_{n}\right)(0)$. With $\theta=0$, (6) becomes
+
+$$
+Q e_{n}=c_{n} e_{n} \quad(n=0, \pm 1, \pm 2, \ldots)
+$$
+
+So far we have just used (4). Since $Q e_{n} \in H^{1}$ for all $n, c_{n}=0$ when $n<0$. Since $Q f=f$ for every $f \in H^{1}, c_{n}=1$ when $n \geq 0$. Thus $Q$ (if it exists at all) is the "natural" projection of $L^{1}$ onto $H^{1}$, the one that replaces $\hat{f}(n)$ by 0 when $n<0$. In terms of Fourier series,
+
+$$
+Q\left(\sum_{-\infty}^{\infty} a_{n} e^{i n \theta}\right)=\sum_{0}^{\infty} a_{n} e^{i n \theta}
+$$
+
+To get our contradiction, consider the functions
+
+$$
+f_{r}(\theta)=\sum_{-\infty}^{\infty} r^{|n|} e^{i n \theta} \quad(0<r<1)
+$$
+
+These are the well-known Poisson kernels. Explicit summation of the series (9) shows that $f_{r} \geq 0$. Hence
+
+$$
+\left\|f_{r}\right\|_{1}=\frac{1}{2 \pi} \int_{-\pi}^{\pi}\left|f_{r}(\theta)\right| d \theta=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f_{r}(\theta) d \theta=1
+$$
+
+for all $r$. But
+
+$$
+\left(Q f_{r}\right)(\theta)=\sum_{0}^{\infty} r^{n} e^{i n \theta}=\frac{1}{1-r e^{i \theta}}
+$$
+
+and Fatou's lemma implies that $\left\|Q f_{r}\right\|_{1} \rightarrow \infty$ as $r \rightarrow 1$, since $\int\left|1-e^{i \theta}\right|^{-1} d \theta=\infty$. By (10), this contradicts the continuity of $Q$.
+
+Hence $H^{1}$ is not complemented in $L^{1}$.
+
+The same analysis can be applied to $A$ and $C$, where $C$ is the space of all continuous functions on the unit circle, and $A$ consists of those $f \in C$ that have $\hat{f}(n)=0$ for all $n<0$. If $A$ were complemented in $C$, the opcrator $Q$ described by (8) would be a continuous projection from $C$ onto $A$. Application of $Q$ to real-valued $f \in C$ shows that there is a constant $M<\infty$ that satisfies
+
+$$
+\sup _{\theta}|f(\theta)| \leq M \cdot \sup _{\theta}|\operatorname{Re} f(\theta)|
+$$
+
+for every $f \in A$. To see that no such $M$ can exist, consider conformal mappings of the closed unit disc onto tall thin ellipses.
+
+Hence $A$ is not complemented in $C$.
+
+However, the projection (8) is continuous as an operator in $L^{p}$, if $1<p<\infty$. Hence $H^{p}$ is then a complemented subspace of $L^{p}$. This is a theorem of M. Riesz (Th. 17.26 of [23]).
+
+We conclude with an analogue of $(b)$ of Theorem 5.16 ; it will be used in the proof of Theorem 11.31.
+
+5.20 Theorem Suppose $X$ is a Banach space, $A$ and $B$ are closed subspaces of $X$, and $X=A+B$. Then there exists a constant $\gamma<\infty$ such that every $x \in X$ has a representation $x=a+b$, where $a \in A, b \in B$, and $\|a\|+\|b\| \leq \gamma\|x\|$.
+
+This differs from $(b)$ of Theorem 5.16 inasmuch as it is not assumed that $A \cap B=\{0\}$.
+
+PROOF Let $Y$ be the vector space of all ordered pairs $(a, b)$, with $a \in A, b \in B$, and componentwise addition and scalar multiplication, normed by
+
+$$
+\|(a, b)\|=\|a\|+\|b\| .
+$$
+
+Since $A$ and $B$ are complete, $Y$ is a Banach space. The mapping $\Lambda: Y \rightarrow X$ defined by
+
+$$
+\Lambda(a, b)=a+b
+$$
+
+is continuous, since $\|a+b\| \leq\|(a, b)\|$, and maps $Y$ onto $X$. By the open mapping theorem, there exists $\gamma<\infty$ such that each $x \in X$ is $\Lambda(a, b)$ for some $(a, b)$ with $\|(a, b)\| \leq \gamma\|x\|$.
+
+
+\end{document}

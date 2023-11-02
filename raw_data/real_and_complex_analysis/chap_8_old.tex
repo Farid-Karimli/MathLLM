@@ -1,0 +1,451 @@
+CHAPTER
+EIGHT
+INTEGRATION ON PRODUCT SPACES
+
+This chapter is devoted to the proof and discussion of the theorem of Fubini concerning integration of functions of two variables. We first present the theorem in its abstract form.
+
+Measurability on Cartesian Products
+8.1 Definitions If $X$ and $Y$ are two sets, their cartesian product $X \times Y$ is the set of all ordered pairs $(x, y)$, with $x \in X$ and $y \in Y$. If $A \subset X$ and $B \subset Y$, it follows that $A \times B \subset X \times Y$. We call any set of the form $A \times B$ a rectangle in $X \times Y$.
+Suppose now that $(X, \mathscr{S})$ and $(Y, \mathscr{T})$ are measurable spaces. Recall that this simply means that $\mathscr{S}$ is a $\sigma$-algebra in $X$ and $\mathscr{T}$ is a $\sigma$-algebra in $Y$.
+A measurable rectangle is any set of the form $A \times B$, where $A \in \mathscr{S}$ and $B \in \mathscr{T}$.
+If $Q=R_1 \cup \cdots \cup R_n$, where each $R_i$ is a measurable rectangle and $R_i \cap$ $R_j=\varnothing$ for $i \neq j$, we say that $Q \in \mathscr{E}$, the class of all elementary sets.
+$\mathscr{S} \times \mathscr{T}$ is defined to be the smallest $\sigma$-algebra in $X \times Y$ which contains every measurable rectangle.
+A monotone class $\mathfrak{M}$ is a collection of sets with the following properties: If $A_i \in \mathfrak{M}, B_i \in \mathfrak{M}, A_i \subset A_{i+1}, B_i \supset B_{i+1}$, for $i=1,2,3, \ldots$, and if
+$$
+A=\bigcup_{i=1}^{\infty} A_i, \quad B=\bigcap_{i=1}^{\infty} B_i,
+$$
+then $A \in \mathfrak{M}$ and $B \in \mathfrak{M}$.
+
+If $E \subset X \times Y, x \in X, y \in Y$, we define
+$$
+E_x=\{y:(x, y) \in E\}, \quad E^y=\{x:(x, y) \in E\} .
+$$
+
+We call $E_x$ and $E^y$ the $x$-section and $y$-section, respectively, of $E$. Note that $E_x \subset Y, E^y \subset X$.
+8.2 Theorem If $E \in \mathscr{S} \times \mathscr{T}$, then $E_x \in \mathscr{T}$ and $E^y \in \mathscr{S}$, for every $x \in X$ and $y \in Y$.
+
+Proof Let $\Omega$ be the class of all $E \in \mathscr{S} \times \mathscr{T}$ such that $E_x \in \mathscr{T}$ for every $x \in X$. If $E=A \times B$, then $E_x=B$ if $x \in A, E_x=\varnothing$ if $x \notin A$. Therefore every measurable rectangle belongs to $\Omega$. Since $\mathscr{T}$ is a $\sigma$-algebra, the following three statements are true. They prove that $\Omega$ is a $\sigma$-algebra and hence that $\Omega=\mathscr{S} \times \mathscr{T}$ :
+(a) $X \times Y \in \Omega$.
+(b) If $E \in \Omega$, then $\left(E^c\right)_x=\left(E_x\right)^c$, hence $E^c \in \Omega$.
+(c) If $E_i \in \Omega(i=1,2,3, \ldots)$ and $E=\bigcup E_i$, then $E_x=\bigcup\left(E_i\right)_x$, hence $E \in \Omega$.
+
+The proof is the same for $E^y$.
+
+8.3 Theorem $\mathscr{S} \times \mathscr{T}$ is the smallest monotone class which contains all elementary sets.
+
+Proof Let $\mathfrak{M}$ be the smallest monotone class which contains $\mathscr{E}$; the proof that this class exists is exactly like that of Theorem 1.10. Since $\mathscr{S} \times \mathscr{T}$ is a monotone class, we have $\mathfrak{M} \subset \mathscr{S} \times \mathscr{T}$.
+The identities
+$$
+\begin{aligned}
+& \left(A_1 \times B_1\right) \cap\left(A_2 \times B_2\right)=\left(A_1 \cap A_2\right) \times\left(B_1 \cap B_2\right), \\
+& \left(A_1 \times B_1\right)-\left(A_2 \times B_2\right)=\left[\left(A_1-A_2\right) \times B_1\right] \cup\left[\left(A_1 \cap A_2\right) \times\left(B_1-B_2\right)\right]
+\end{aligned}
+$$
+show that the intersection of two measurable rectangles is a measurable rectangle and that their difference is the union of two disjoint measurable rectangles, hence is an elementary set. If $P \in \mathscr{E}$ and $Q \in \mathscr{E}$, it follows easily that $P \cap Q \in \mathscr{E}$ and $P-Q \in \mathscr{E}$. Since
+$$
+P \cup Q=(P-Q) \cup Q
+$$
+and $(P-Q) \cap Q=\varnothing$, we also have $P \cup Q \in \mathscr{E}$.
+For any set $P \subset X \times Y$, define $\Omega(P)$ to be the class of all $Q \subset X \times Y$ such that $P-Q \in \mathfrak{M}, Q-P \in \mathfrak{M}$, and $P \cup Q \in \mathfrak{M}$. The following properties are obvious:
+(a) $Q \in \Omega(P)$ if and only if $P \in \Omega(Q)$.
+(b) Since $\mathfrak{M}$ is a monotone class, so is each $\Omega(P)$.
+Fix $P \in \mathscr{E}$. Our preceding remarks about $\mathscr{E}$ show that $Q \in \Omega(P)$ for all $Q \in \mathscr{E}$, hence $\mathscr{E} \subset \Omega(P)$, and now $(b)$ implies that $\mathfrak{M} \subset \Omega(P)$.
+Next, fix $Q \in \mathfrak{M}$. We just saw that $Q \in \Omega(P)$ if $P \in \mathscr{E}$. By $(a), P \in \Omega(Q)$, hence $\mathscr{E} \subset \Omega(Q)$, and if we refer to $(b)$ once more we obtain $\mathfrak{M} \subset \Omega(Q)$.
+Summing up: If $P$ and $Q \in \mathfrak{M}$, then $P-Q \in \mathfrak{M}$ and $P \cup Q \in \mathfrak{M}$.
+It now follows that $\mathfrak{M}$ is a $\sigma$-algebra in $X \times Y$ :
+(i) $X \times Y \in \mathscr{E}$. Hence $X \times Y \in \mathfrak{M}$.
+(ii) If $Q \in \mathfrak{M}$, then $Q^c \in \mathfrak{M}$, since the difference of any two members of $\mathfrak{M}$ is in $\mathfrak{M}$.
+(iii) If $P_i \in \mathfrak{M}$ for $i=1,2,3, \ldots$, and $P=\bigcup P_i$, put
+$$
+Q_n=P_1 \cup \cdots \cup P_n .
+$$
+
+Since $\mathfrak{M}$ is closed under the formation of finite unions, $Q_n \in \mathfrak{M}$.
+Since $Q_n \subset Q_{n+1}$ and $P=\bigcup Q_n$, the monotonicity of $\mathfrak{M}$ shows that $P \in \mathfrak{M}$.
+
+Thus $\mathfrak{M}$ is a $\sigma$-algebra, $\mathscr{E} \subset \mathfrak{M} \subset \mathscr{S} \times \mathscr{T}$, and (by definition) $\mathscr{S} \times \mathscr{T}$ is the smallest $\sigma$-algebra which contains $\mathscr{E}$. Hence $\mathfrak{M}=\mathscr{S} \times \mathscr{T}$.
+IIII
+8.4 Definition With each function $f$ on $X \times Y$ and with each $x \in X$ we associate a function $f_x$ defined on $Y$ by $f_x(y)=f(x, y)$.
+Similarly, if $y \in Y, f^y$ is the function defined on $X$ by $f^y(x)=f(x, y)$.
+Since we are now dealing with three $\sigma$-algebras, $\mathscr{S}, \mathscr{T}$, and $\mathscr{S} \times \mathscr{T}$, we shall, for the sake of clarity, indicate in the sequel to which of these three $\sigma$-algebras the word "measurable" refers.
+8.5 Theorem Let $f$ be an $(\mathscr{S} \times \mathscr{T})$-measurable function on $X \times Y$. Then
+(a) For each $x \in X, f_x$ is a $\mathscr{T}$-measurable function.
+(b) For each $y \in Y, f^y$ is an $\mathscr{S}$-measurable function.
+
+Proof For any open set $V$, put
+$$
+Q=\{(x, y): f(x, y) \in V\} .
+$$
+
+Then $Q \in \mathscr{S} \times \mathscr{T}$, and
+$$
+Q_x=\left\{y: f_x(y) \in V\right\} .
+$$
+
+Theorem 8.2 shows that $Q_x \in \mathscr{T}$. This proves $(a)$; the proof of $(b)$ is similar.
+
+Product Measures
+8.6 Theorem Let $(X, \mathscr{S}, \mu)$ and $(Y, \mathscr{T}, \lambda)$ be $\sigma$-finite measure spaces. Suppose $Q \in \mathscr{S} \times \mathscr{T}$. If
+$$
+\varphi(x)=\lambda\left(Q_x\right), \quad \psi(y)=\mu\left(Q^y\right)
+$$
+for every $x \in X$ and $y \in Y$, then $\varphi$ is $\mathscr{S}$-measurable, $\psi$ is $\mathscr{T}$-measurable, and
+$$
+\int_X \varphi d \mu=\int_Y \psi d \lambda
+$$
+
+Notes: The assumptions on the measure spaces are, more explicitly, that $\mu$ and $\lambda$ are positive measures on $\mathscr{S}$ and $\mathscr{T}$, respectively, that $X$ is the union of countably many disjoint sets $X_n$ with $\mu\left(X_n\right)<\infty$, and that $Y$ is the union of countably many disjoint sets $Y_m$ with $\lambda\left(Y_m\right)<\infty$.
+Theorem 8.2 shows that the definitions (1) make sense. Since
+$$
+\lambda\left(Q_x\right)=\int_Y \chi_Q(x, y) d \lambda(y) \quad(x \in X),
+$$
+with a similar statement for $\mu\left(Q^y\right)$, the conclusion (2) can be written in the form
+$$
+\int_X d \mu(x) \int_Y \chi_Q(x, y) d \lambda(y)=\int_Y d \lambda(y) \int_X \chi_Q(x, y) d \mu(x) .
+$$
+
+Proof Let $\Omega$ be the class of all $Q \in \mathscr{S} \times \mathscr{T}$ for which the conclusion of the theorem holds. We claim that $\Omega$ has the following four properties:
+(a) Every measurable rectangle belongs to $\Omega$.
+(b) If $Q_1 \subset Q_2 \subset Q_3 \subset \cdots$, if each $Q_i \in \Omega$, and if $Q=\bigcup Q_i$, then $Q \in \Omega$.
+(c) If $\left\{Q_i\right\}$ is a disjoint countable collection of members of $\Omega$, and if $Q=\bigcup Q_i$, then $Q \in \Omega$.
+(d) If $\mu(A)<\infty$ and $\lambda(B)<\infty$, if $A \times B \supset Q_1 \supset Q_2 \supset Q_3 \supset \cdots$, if $Q=\bigcap Q_i$ and $Q_i \in \Omega$ for $i=1,2,3, \ldots$, then $Q \in \Omega$.
+If $Q=A \times B$, where $A \in \mathscr{S}, B \in \mathscr{T}$, then
+$$
+\lambda\left(Q_x\right)=\lambda(B) \chi_A(x) \text { and } \mu\left(Q^y\right)=\mu(A) \chi_B(y),
+$$
+and therefore each of the integrals in (2) is equal to $\mu(A) \lambda(B)$. This gives $(a)$.
+To prove (b), let $\varphi_i$ and $\psi_i$ be associated with $Q_i$ in the way in which (1) associates $\varphi$ and $\psi$ with $Q$. The countable additivity of $\mu$ and $\lambda$ shows that
+$$
+\varphi_i(x) \rightarrow \varphi(x), \quad \psi_i(y) \rightarrow \psi(y) \quad(i \rightarrow \infty),
+$$
+the convergence being monotone increasing at every point. Since $\varphi_i$ and $\psi_i$ are assumed to satisfy the conclusion of the theorem, $(b)$ follows from the monotone convergence theorem.
+
+For finite unions of disjoint sets, $(c)$ is clear, because the characteristic function of a union of disjoint sets is the sum of their characteristic functions. The general case of $(c)$ now follows from $(b)$.
+The proof of $(d)$ is like that of $(b)$, except that we use the dominated convergence theorem in place of the monotone convergence theorem. This is legitimate, since $\mu(A)<\infty$ and $\lambda(B)<\infty$.
+Now define
+$$
+Q_{m n}=Q \cap\left(X_n \times Y_m\right) \quad(m, n=1,2,3, \ldots)
+$$
+and let $\mathfrak{M}$ be the class of all $Q \in \mathscr{S} \times \mathscr{T}$ such that $Q_{m n} \in \Omega$ for all choices of $m$ and $n$. Then $(b)$ and $(d)$ show that $\mathfrak{M}$ is a monotone class; $(a)$ and $(c)$ show that $\mathscr{E} \subset \mathfrak{M}$; and since $\mathfrak{M} \subset \mathscr{S} \times \mathscr{T}$, Theorem 8.3 implies that $\mathfrak{M}=\mathscr{S} \times \mathscr{T}$.
+
+Thus $Q_{m n} \in \Omega$ for every $Q \in \mathscr{S} \times \mathscr{T}$ and for all choices of $m$ and $n$. Since $Q$ is the union of the sets $Q_{m n}$ and since these sets are disjoint, we conclude from (c) that $Q \in \Omega$. This completes the proof.
+IIII
+8.7 Definition If $(X, \mathscr{S}, \mu)$ and $(Y, \mathscr{T}, \lambda)$ are as in Theorem 8.6, and if $Q \in \mathscr{S} \times \mathscr{T}$, we define
+$$
+(\mu \times \lambda)(Q)=\int_X \lambda\left(Q_x\right) d \mu(x)=\int_Y \mu\left(Q^y\right) d \lambda(y) .
+$$
+
+The equality of the integrals in (1) is the content of Theorem 8.6. We call $\mu \times \lambda$ the product of the measures $\mu$ and $\lambda$. That $\mu \times \lambda$ is really a measure (i.e., that $\mu \times \lambda$ is countably additive on $\mathscr{S} \times \mathscr{T}$ ) follows immediately from Theorem 1.27.
+Observe also that $\mu \times \lambda$ is $\sigma$-finite.
+
+The Fubini Theorem
+8.8 Theorem Let $(X, \mathscr{S}, \mu)$ and $(Y, \mathscr{T}, \lambda)$ be $\sigma$-finite measure spaces, and let $f$ be an $(\mathscr{S} \times \mathscr{T})$-measurable function on $X \times Y$.
+(a) If $0 \leq f \leq \infty$, and if
+$$
+\varphi(x)=\int_Y f_x d \lambda, \quad \psi(y)=\int_X f^y d \mu \quad(x \in X, y \in Y),
+$$
+then $\varphi$ is $\mathscr{S}$-measurable, $\psi$ is $\mathscr{T}$-measurable, and
+$$
+\int_X \varphi d \mu=\int_{X \times Y} f d(\mu \times \lambda)=\int_Y \psi d \lambda
+$$
+(b) Iff is complex and if
+$$
+\varphi^*(x)=\int_Y|f|_x d \lambda \text { and } \int_X \varphi^* d \mu<\infty
+$$
+then $f \in L^1(\mu \times \lambda)$.
+
+(c) If $f \in L^1(\mu \times \lambda)$, then $f_x \in L^1(\lambda)$ for almost all $x \in X, f^y \in L^1(\mu)$ for almost all $y \in Y$; the functions $\varphi$ and $\psi$, defined by (1) a.e., are in $L^1(\mu)$ and $L^1(\lambda)$, respectively, and (2) holds.
+
+Notes: The first and last integrals in (2) can also be written in the more usual form
+$$
+\int_X d \mu(x) \int_Y f(x, y) d \lambda(y)=\int_Y d \lambda(y) \int_X f(x, y) d \mu(x)
+$$
+
+These are the so-called "iterated integrals" of $f$. The middle integral in (2) is often referred to as a double integral.
+
+The combination of $(b)$ and $(c)$ gives the following useful result: If $f$ is $(\mathscr{S} \times \mathscr{T})$-measurable and if
+$$
+\int_X d \mu(x) \int_Y|f(x, y)| d \lambda(y)<\infty
+$$
+then the two iterated integrals (4) are finite and equal.
+In other words, "the order of integration may be reversed" for $(\mathscr{S} \times \mathscr{T})$ measurable functions $f$ whenever $f \geq 0$ and also whenever one of the iterated integrals of $|f|$ is finite.
+Proof We first consider (a). By Theorem 8.5, the definitions of $\varphi$ and $\psi$ make sense. Suppose $Q \in \mathscr{S} \times \mathscr{T}$ and $f=\chi_Q$. By Definition 8.7, (2) is then exactly the conclusion of Theorem 8.6. Hence $(a)$ holds for all nonnegative simple $(\mathscr{S} \times \mathscr{T})$-measurable functions $s$. In the general case, there is a sequence of such functions $s_n$, such that $0 \leq s_1 \leq s_2 \leq \cdots$ and $s_n(x, y) \rightarrow$ $f(x, y)$ at every point of $X \times Y$. If $\varphi_n$ is associated with $s_n$ in the same way in which $\varphi$ was associated to $f$, we have
+$$
+\int_X \varphi_n d \mu=\int_{X \times Y} s_n d(\mu \times \lambda) \quad(n=1,2,3, \ldots) .
+$$
+
+The monotone convergence theorem, applied on $(Y, \mathscr{T}, \lambda)$, shows that $\varphi_n(x)$ increases to $\varphi(x)$, for every $x \in X$, as $n \rightarrow \infty$. Hence the monotone convergence theorem applies again, to the two integrals in (6), and the first equality (2) is obtained. The second half of (2) follows by interchanging the roles of $x$ and $y$. This completes $(a)$.
+If we apply $(a)$ to $|f|$, we see that $(b)$ is true.
+Obviously, it is enough to prove $(c)$ for real $L^1(\mu \times \lambda)$; the complex case then follows. If $f$ is real, $(a)$ applies to $f^{+}$and to $f^{-}$. Let $\varphi_1$ and $\varphi_2$ correspond to $f^{+}$and $f^{-}$as $\varphi$ corresponds to $f$ in (1). Since $f \in L^1(\mu \times \lambda)$ and
+$f^{+} \leq|f|$, and since $(a)$ holds for $f^{+}$, we see that $\varphi_1 \in L^1(\mu)$. Similarly, $\varphi_2 \in$ $L^1(\mu)$. Since
+$$
+f_x=\left(f^{+}\right)_x-\left(f^{-}\right)_x
+$$
+we have $f_x \in L^1(\lambda)$ for every $x$ for which $\varphi_1(x)<\infty$ and $\varphi_2(x)<\infty$; since $\varphi_1$ and $\varphi_2$ are in $L^1(\mu)$, this happens for almost all $x$; and at any such $x$, we have $\varphi(x)=\varphi_1(x)-\varphi_2(x)$. Hence $\varphi \in L^1(\mu)$. Now (2) holds with $\varphi_1$ and $f^{+}$and with $\varphi_2$ and $f^{-}$, in place of $\varphi$ and $f$; if we subtract the resulting equations, we obtain one half of $(c)$. The other half is proved in the same manner, with $f^y$ and $\psi$ in place of $f_x$ and $\varphi$.
+//II
+8.9 Counterexamples The following three examples will show that the various hypotheses in Theorems 8.6 and 8.8 cannot be dispensed with.
+(a) Let $X=Y=[0,1], \mu=\lambda=$ Lebesgue measure on $[0,1]$. Choose $\left\{\delta_n\right\}$ so that $0=\delta_1<\delta_2<\delta_3<\cdots, \delta_n \rightarrow 1$, and let $g_n$ be a real continuous function with support in $\left(\delta_n, \delta_{n+1}\right)$, such that $\int_0^1 g_n(t) d t=1$, for $n=1,2,3, \ldots$. Define
+$$
+f(x, y)=\sum_{n=1}^{\infty}\left[g_n(x)-g_{n+1}(x)\right] g_n(y) .
+$$
+
+Note that at each point $(x, y)$ at most one term in this sum is different from 0 . Thus no convergence problem arises in the definition of $f$. An easy computation shows that
+$$
+\int_0^1 d x \int_0^1 f(x, y) d y=1 \neq 0=\int_0^1 d y \int_0^1 f(x, y) d x,
+$$
+so that the conclusion of the Fubini theorem fails, although both iterated integrals exist. Note that $f$ is continuous in this example, except at the point $(1,1)$, but that
+$$
+\int_0^1 d x \int_0^1|f(x, y)| d y=\infty .
+$$
+(b) Let $X=Y=[0,1], \mu=$ Lebesgue measure on $[0,1], \lambda=$ counting measure on $Y$, and put $f(x, y)=1$ if $x=y, f(x, y)=0$ if $x \neq y$. Then
+$$
+\int_X f(x, y) d \mu(x)=0, \quad \int_Y f(x, y) d \lambda(y)=1
+$$
+for all $x$ and $y$ in $[0,1]$, so that
+$$
+\int_Y d \lambda(y) \int_X f(x, y) d \mu(x)=0 \neq 1=\int_X d \mu(x) \int_Y f(x, y) d \lambda(y) .
+$$
+
+This time the failure is due to the fact that $\lambda$ is not $\sigma$-finite.
+Observe that our function $f$ is $(\mathscr{S} \times \mathscr{T})$-measurable, if $\mathscr{S}$ is the class of all Lebesgue measurable sets in $[0,1]$ and $\mathscr{T}$ consists of all subsets of $[0,1]$.
+To see this, note that $f=\chi_D$, where $D$ is the diagonal of the unit square. Given $n$, put
+$$
+I_j=\left[\frac{j-1}{n}, \frac{j}{n}\right]
+$$
+and put
+$$
+Q_n=\left(I_1 \times I_1\right) \cup\left(I_2 \times I_2\right) \cup \cdots \cup\left(I_n \times I_n\right)
+$$
+
+Then $Q_n$ is a finite union of measurable rectangles, and $D=\bigcap Q_n$.
+(c) In examples (a) and (b), the failure of the Fubini theorem was due to the fact that either the function or the space was "too big." We now turn to the role played by the requirement that $f$ be measurable with respect to the $\sigma$-algebra $\mathscr{S} \times \mathscr{T}$.
+To pose the question more precisely, suppose $\mu(X)=\lambda(Y)=1,0 \leq f \leq 1$ (so that "bigness" is certainly avoided); assume $f_x$ is $\mathscr{T}$-measurable and $f^y$ is $\mathscr{S}$-measurable, for all $x$ and $y$; and assume $\varphi$ is $\mathscr{S}$-measurable and $\psi$ is $\mathscr{T}$-measurable, where $\varphi$ and $\psi$ are defined as in 8.8(1). Then $0 \leq \varphi \leq 1$, $0 \leq \psi \leq 1$, and both iterated integrals are finite. (Note that no reference to product measures is needed to define iterated integrals.) Does it follow that the two iterated integrals of $f$ are equal?
+The (perhaps surprising) answer is no.
+In the following example (due to Sierpinski), we take
+$$
+(X, \mathscr{S}, \mu)=(Y, \mathscr{T}, \lambda)=[0,1]
+$$
+with Lebesgue measure. The construction depends on the continuum hypothesis. It is a consequence of this hypothesis that there is a one-to-one mapping $j$ of the unit interval $[0,1]$ onto a well-ordered set $W$ such that $j(x)$ has at most countably many predecessors in $W$, for each $x \in[0,1]$. Taking this for granted, let $Q$ be the set of all $(x, y)$ in the unit square such that $j(x)$ precedes $j(y)$ in $W$. For each $x \in[0,1], Q_x$ contains all but countably many points of $[0,1]$; for each $y \in[0,1], Q^y$ contains at most countably many points of $[0,1]$. If $f=\chi_Q$, it follows that $f_x$ and $f^y$ are Borel measurable and that
+$$
+\varphi(x)=\int_0^1 f(x, y) d y=1, \quad \psi(y)=\int_0^1 f(x, y) d x=0
+$$
+for all $x$ and $y$. Hence
+$$
+\int_0^1 d x \int_0^1 f(x, y) d y=1 \neq 0=\int_0^1 d y \int_0^1 f(x, y) d x .
+$$
+
+Completion of Product Measures
+8.10 If $(X, \mathscr{S}, \mu)$ and $(Y, \mathscr{T}, \lambda)$ are complete measure spaces, it need not be true that $(X \times Y, \mathscr{S} \times \mathscr{T}, \mu \times \lambda)$ is complete. There is nothing pathological about this phenomenon: Suppose that there exists an $A \in \mathscr{S}, A \neq \varnothing$, with $\mu(A)=0$; and suppose that there exists a $B \subset Y$ so that $B \notin \mathscr{T}$. Then $A \times B \subset A \times Y$, $(\mu \times \lambda)(A \times Y)=0$, but $A \times B \notin \mathscr{S} \times \mathscr{T}$. (The last assertion follows from Theorem 8.2.)
+
+For instance, if $\mu=\lambda=m_1$ (Lebesgue measure on $R^1$ ), let $A$ consist of any one point, and let $B$ be any nonmeasurable set in $R^1$. Thus $m_1 \times m_1$ is not a complete measure; in particular, $m_1 \times m_1$ is not $m_2$, since the latter is complete, by its construction. However, $m_2$ is the completion of $m_1 \times m_1$. This result generalizes to arbitrary dimensions:
+8.11 Theorem Let $m_k$ denote Lebesgue measure on $R^k$. If $k=r+s, r \geq 1$, $s \geq 1$, then $m_k$ is the completion of the product measure $m_r \times m_s$.
+PROOF Let $\mathscr{B}_k$ and $\mathfrak{M}_k$ be the $\sigma$-algebras of all Borel sets and of all Lebesgue measurable sets in $R^k$, respectively. We shall first show that
+$$
+\mathscr{B}_k \subset \mathfrak{M}_r \times \mathfrak{M}_s \subset \mathfrak{M}_k .
+$$
+
+Every $k$-cell belongs to $\mathfrak{M}_r \times \mathfrak{M}_s$. The $\sigma$-algebra generated by the $k$-cells is $\mathscr{B}_k$. Hence $\mathscr{B}_k \subset \mathfrak{M}_r \times \mathfrak{M}_s$. Next, suppose $E \in \mathfrak{M}_r$ and $F \in \mathfrak{M}_s$. It is easy to see, by Theorem $2.20(b)$, that both $E \times R^s$ and $R^r \times F$ belong to $\mathfrak{M}_k$. The same is true of their intersection $E \times F$. It follows that $\mathfrak{M}_r \times \mathfrak{M}_s \subset \mathfrak{M}_k$.
+
+Choose $Q \in \mathfrak{M}_r \times \mathfrak{M}_s$. Then $Q \in \mathfrak{M}_k$, so there are sets $P_1$ and $P_2 \in \mathscr{B}_k$ such that $P_1 \subset Q \subset P_2$ and $m_k\left(P_2-P_1\right)=0$. Both $m_k$ and $m_r \times m_s$ are translation invariant Borel measures on $R^k$. They assign the same value to each $k$-cell. Hence they agree on $\mathscr{B}_k$, by Theorem $2.20(d)$. In particular,
+$$
+\left(m_r \times m_s\right)\left(Q-P_1\right) \leq\left(m_r \times m_s\right)\left(P_2-P_1\right)=m_k\left(P_2-P_1\right)=0
+$$
+and therefore
+$$
+\left(m_r \times m_s\right)(Q)=\left(m_r \times m_s\right)\left(P_1\right)=m_k\left(P_1\right)=m_k(Q) .
+$$
+
+So $m_r \times m_s$ agrees with $m_k$ on $\mathfrak{M}_r \times \mathfrak{M}_s$.
+It now follows that $\mathfrak{M}_k$ is the $\left(m_r \times m_s\right)$-completion of $\mathfrak{M}_r \times \mathfrak{M}_s$, and this is what the theorem asserts.
+/III
+
+We conclude this section with an alternative statement of Fubini's theorem which is of special interest in view of Theorem 8.11.
+8.12 Theorem Let $(X, \mathscr{S}, \mu)$ and $(Y, \mathscr{T}, \lambda)$ be complete $\sigma$-finite measure spaces. Let $(\mathscr{S} \times \mathscr{T})^*$ be the completion of $\mathscr{S} \times \mathscr{T}$, relative to the measure $\mu \times \lambda$. Let $f$ be an $(\mathscr{S} \times \mathscr{T})^*$-measurable function on $X \times Y$. Then all conclusions of Theorem 8.8 hold, the only difference being as follows:
+The $\mathscr{T}$-measurability of $f_x$ can be asserted only for almost all $x \in X$, so that $\varphi(x)$ is only defined a.e. $[\mu]$ by 8.8(1); a similar statement holds for $f^y$ and $\psi$.
+
+
+The proof depends on the following two lemmas:
+
+Lemma 1 Suppose $v$ is a positive measure on a $\sigma$-algebra $\mathfrak{M}, \mathfrak{M} *$ is the completion of $\mathfrak{M}$ relative to $v$, and $f$ is an $\mathfrak{M}^*$-measurable function. Then there exists an $\mathfrak{M}$-measurable function $g$ such that $f=g$ a.e. $[v]$.
+(An interesting special case of this arises when $v$ is Lebesgue measure on $R^k$ and $\mathfrak{M}$ is the class of all Borel sets in $R^k$.)
+
+Lemma 2 Let $h$ be an $(\mathscr{S} \times \mathscr{T})^*$-measurable function on $X \times Y$ such that $h=0$ a.e. $[\mu \times \lambda]$. Then for almost all $x \in X$ it is true that $h(x, y)=0$ for almost all $y \in Y$; in particular, $h_x$ is $\mathscr{T}$-measurable for almost all $x \in X . A$ similar statement holds for $h^y$.
+
+If we assume the lemmas, the proof of the theorem is immediate: If $f$ is as in the theorem, Lemma 1 (with $v=\mu \times \lambda$ ) shows that $f=g+h$, where $h=0$ a.e. $[\mu \times \lambda]$ and $g$ is $(\mathscr{S} \times \mathscr{T})$-measurable. Theorem 8.8 applies to $g$. Lemma 2 shows that $f_x=g_x$ a.e. $[\lambda]$ for almost all $x$ and that $f^y=g^y$ a.e. $[\mu]$ for almost all $y$. Hence the two iterated integrals of $f$, as well as the double integral, are the same as those of $g$, and the theorem follows.
+Proof of Lemma 1 Suppose $f$ is $\mathfrak{M}{ }^*$-measurable and $f \geq 0$. There exist $\mathfrak{M} *_{\text {- }}$ measurable simple functions $0=s_0 \leq s_1 \leq s_2 \leq \cdots$ such that $s_n(x) \rightarrow f(x)$ for each $x \in X$, as $n \rightarrow \infty$. Hence $f=\sum\left(s_{n+1}-s_n\right)$. Since $s_{n+1}-s_n$ is a finite linear combination of characteristic functions, it follows that there are constants $c_i>0$ and sets $E_i \in \mathfrak{M}^*$ such that
+$$
+f(x)=\sum_{i=1}^{\infty} c_i \chi_{E_i}(x) \quad(x \in X) .
+$$
+
+The definition of $\mathfrak{M}^*$ (see Theorem 1.36) shows that there are sets $A_i \in \mathfrak{M}$, $B_i \in \mathfrak{M}$, such that $A_i \subset E_i \subset B_i$ and $v\left(B_i-A_i\right)=0$. Define
+$$
+g(x)=\sum_{i=1}^{\infty} c_i \chi_{A_i}(x) \quad(x \in X) .
+$$
+
+Then the function $g$ is $\mathfrak{M}$-measurable, and $g(x)=f(x)$, except possibly when $x \in \bigcup\left(E_i-A_i\right) \subset \bigcup\left(B_i-A_i\right)$. Since $v\left(B_i-A_i\right)=0$ for each $i$, we conclude that $g=f$ a.e. $[v]$. The general case $(f$ real or complex) follows from this. $/ / /$
+
+Proof OF Lemma 2 Let $P$ be the set of all points in $X \times Y$ at which $h(x, y) \neq 0$. Then $P \in(\mathscr{S} \times \mathscr{T})^*$ and $(\mu \times \lambda)(P)=0$. Hence there exists a $Q \in \mathscr{S} \times \mathscr{T}$ such that $P \subset Q$ and $(\mu \times \lambda)(Q)=0$. By Theorem 8.6,
+$$
+\int_X \lambda\left(Q_x\right) d \mu(x)=0 .
+$$
+Let $N$ be the set of all $x \in X$ at which $\lambda\left(Q_x\right)>0$. It follows from (1) that $\mu(N)=0$. For every $x \notin N, \lambda\left(Q_x\right)=0$. Since $P_x \subset Q_x$ and $(Y, \mathscr{T}, \lambda)$ is a complete measure space, every subset of $P_x$ belongs to $\mathscr{T}$ if $x \notin N$. If $y \notin P_x$, then $h_x(y)=0$. Thus we see, for every $x \notin N$, that $h_x$ is $\mathscr{T}$-measurable and that $h_x(y)=0$ a.e. $[\lambda]$.
+
+Convolutions
+8.13 It happens occasionally that one can prove that a certain set is not empty by proving that it is actually large. The word "large" may of course refer to various properties. One of these (a rather crude one) is cardinality. An example is furnished by the familiar proof that there exist transcendental numbers: There are only countably many algebraic numbers but uncountably many real numbers, hence the set of transcendental real numbers is not empty. Applications of Baire's theorem are based on a topological notion of largeness: The dense $G_\delta$ 's are "large" subsets of a complete metric space. A third type of largeness is measure-theoretic: One can try to show that a certain set in a measure space is not empty by showing that it has positive measure or, better still, by showing that its complement has measure zero. Fubini's theorem often occurs in this type of argument.
+
+For example, let $f$ and $g \in L^1\left(R^1\right)$, assume $f \geq 0$ and $g \geq 0$ for the moment, and consider the integral
+$$
+h(x)=\int_{-\infty}^{\infty} f(x-t) g(t) d t \quad(-\infty<x<\infty) .
+$$
+
+For any fixed $x$, the integrand in (1) is a measurable function with range in $[0, \infty]$, so that $h(x)$ is certainly well defined by (1), and $0 \leq h(x) \leq \infty$.
+
+But is there any $x$ for which $h(x)<\infty$ ? Note that the integrand in (1) is, for each fixed $x$, the product of two members of $L^1$, and such a product is not always in $L^1$. [Example: $f(x)=g(x)=1 / \sqrt{x}$ if $0<x<1,0$ otherwise.] The Fubini theorem will give an affirmative answer. In fact, it will show that $h \in L^1\left(R^1\right)$, hence that $h(x)<\infty$ a.e.
+8.14 Theorem Suppose $f \in L^1\left(R^1\right), g \in L^1\left(R^1\right)$. Then
+$$
+\int_{-\infty}^{\infty}|f(x-y) g(y)| d y<\infty
+$$
+for almost all $x$. For these $x$, define
+$$
+h(x)=\int_{-\infty}^{\infty} f(x-y) g(y) d y .
+$$
+
+Then $h \in L^1\left(R^1\right)$, and
+$$
+\|h\|_1 \leq\|f\|_1\|g\|_1,
+$$
+
+where
+$$
+\|f\|_1=\int_{-\infty}^{\infty}|f(x)| d x
+$$
+
+We call $h$ the convolution of $f$ and $g$, and write $h=f * g$.
+
+Proof There exist Borel functions $f_0$ and $g_0$ such that $f_0=f$ a.e. and $g_0=g$ a.e. The integrals (1) and (2) are unchanged, for every $x$, if we replace $f$ by $f_0$ and $g$ by $g_0$. Hence we may assume, to begin with, that $f$ and $g$ are Borel functions.
+
+To apply Fubini's theorem, we shall first prove that the function $F$ defined by
+$$
+F(x, y)=f(x-y) g(y)
+$$
+is a Borel function on $R^2$.
+Define $\varphi: R^2 \rightarrow R^1$ and $\psi: R^2 \rightarrow R^1$ by
+$$
+\varphi(x, y)=x-y, \quad \psi(x, y)=y .
+$$
+
+Then $f(x-y)=(f \circ \varphi)(x, y)$ and $g(y)=(g \circ \psi)(x, y)$. Since $\varphi$ and $\psi$ are Borel functions, Theorem 1.12(d) shows that $f \circ \varphi$ and $g \circ \psi$ are Borel functions on $R^2$. Hence so is their product.
+Next we observe that
+$$
+\int_{-\infty}^{\infty} d y \int_{-\infty}^{\infty}|F(x, y)| d x=\int_{-\infty}^{\infty}|g(y)| d y \int_{-\infty}^{\infty}|f(x-y)| d x=\|f\|_1\|g\|_1,
+$$
+since
+$$
+\int_{-\infty}^{\infty}|f(x-y)| d x=\|f\|_1
+$$
+for every $y \in R^1$, by the translation-invariance of Lebesgue measure.
+Thus $F \in L^1\left(R^2\right)$, and Fubini's theorem implies that the integral (2) exists for almost all $x \in R^1$ and that $h \in L^1\left(R^1\right)$. Finally,
+$$
+\begin{aligned}
+\|h\|_1 & =\int_{-\infty}^{\infty}|h(x)| d x \leq \int_{-\infty}^{\infty} d x \int_{-\infty}^{\infty}|F(x, y)| d y \\
+& =\int_{-\infty}^{\infty} d y \int_{-\infty}^{\infty}|F(x, y)| d x=\|f\|_1\|g\|_1,
+\end{aligned}
+$$
+by (7). This gives (3), and completes the proof.
+
+Convolutions will play an important role in Chap. 9.
+
+Distribution Functions
+8.15 Definition Let $\mu$ be a $\sigma$-finite positive measure on some $\sigma$-algebra in some set $X$. Let $f: X \rightarrow[0, \infty]$ be measurable. The function that assigns to each $t \in[0, \infty)$ the number
+$$
+\mu\{f>t\}=\mu(\{x \in X: f(x)>t\})
+$$
+is called the distribution function of $f$. It is clearly a monotonic (nonincreasing) function of $t$ and is therefore Borel measurable.
+
+One reason for introducing distribution functions is that they make it possible to replace integrals over $X$ by integrals over $[0, \infty)$; the formula .
+$$
+\int_X f d \mu=\int_0^{\infty} \mu\{f>t\} d t
+$$
+is the special case $\varphi(t)=t$ of our next theorem. This will then be used to derive an $L^p$-property of the maximal functions that were introduced in Chap. 7.
+8.16 Theorem Suppose that $f$ and $\mu$ are as above, that $\varphi:[0, \infty] \rightarrow[0, \infty]$ is monotonic, absolutely continuous on $[0, T]$ for every $T<\infty$, and that $\varphi(0)=0$ and $\varphi(t) \rightarrow \varphi(\infty)$ as $t \rightarrow \infty$. Then
+$$
+\int_X(\varphi \circ f) d \mu=\int_0^{\infty} \mu\{f>t\} \varphi^{\prime}(t) d t .
+$$
+
+Proof Let $E$ be the set of all $(x, t) \in X \times[0, \infty)$ where $f(x)>t$. When $f$ is simple, then $E$ is a union of finitely many measurable rectangles, and is therefore measurable. In the general case, the measurability of $E$ follows via the standard approximation of $f$ by simple functions (Theorem 1.17). As in Sec. 8.1 , put
+$$
+E^t=\{x \in X:(x, t) \in E\} \quad(0 \leq t<\infty) .
+$$
+
+The distribution function of $f$ is then
+$$
+\mu\left(E^t\right)=\int_X \chi_E(x, t) d \mu(x) .
+$$
+
+The right side of (1) is therefore
+$$
+\int_0^{\infty} \mu\left(E^t\right) \varphi^{\prime}(t) d t=\int_X d \mu(x) \int_0^{\infty} \chi_E(x, t) \varphi^{\prime}(t) d t
+$$
+by Fubini's theorem.
+
+For each $x \in X, \chi_E(x, t)=1$ if $t<f(x)$ and is 0 if $t \geq f(x)$. The inner integral in (4) is therefore
+$$
+\int_0^{f(x)} \varphi^{\prime}(t) d t=\varphi(f(x))
+$$
+by Theorem 7.20. Now (1) follows from (4) and (5).
+//II
+8.17 Recall now that the maximal function $M f$ lies in weak $L^1$ when $f \in L^1\left(R^k\right)$ (Theorem 7.4). We also have the trivial estimate
+$$
+\|M f\|_{\infty} \leq\|f\|_{\infty}
+$$
+valid for all $f \in L^{\infty}\left(R^k\right)$. A technique invented by Marcinkiewicz makes it possible to "interpolate" between these two extremes and to prove the following theorem of Hardy and Littlewood (which fails when $p=1$; see Exercise 22, Chap. 7).
+8.18 Theorem If $1<p<\infty$ and $f \in L^p\left(R^k\right)$ then $M f \in L^p\left(R^k\right)$.
+Proof Since $M f=M(|f|)$ we may assume, without loss of generality, that $f \geq 0$. Theorem 7.4 shows that there is a constant $A$, depending only on the dimension $k$, such that
+$$
+m\{M g>t\} \leq \frac{A}{t}\|g\|_1
+$$
+for every $g \in L^1\left(R^k\right)$. Here, and in the rest of this proof, $m=m_k$, the Lebesgue measure on $R^k$.
+
+Pick a constant $c, 0<c<1$, which will be specified later so as to minimize a certain upper bound. For each $t \in(0, \infty)$, split $f$ into a sum
+$$
+f=g_t+h_t
+$$
+where
+$$
+g_t(x)= \begin{cases}f(x) & \text { if } f(x)>c t \\ 0 & \text { if } f(x) \leq c t .\end{cases}
+$$
+
+Then $0 \leq h_t(x) \leq c t$ for every $x \in R^k$. Hence $h_t \in L^{\infty}, M h_t \leq c t$, and
+$$
+M f \leq M g_t+M h_t \leq M g_t+c t .
+$$
+
+If $(M f)(x)>t$ for some $x$, it follows that
+$$
+\left(M g_t\right)(x)>(1-c) t .
+$$
+
+Setting $E_t=\{f>c t\}$, (5), (1), and (3) imply that
+$$
+m\{M f>t\} \leq m\left\{M g_t>(1-c) t\right\} \leq \frac{A}{(1-c) t}\left\|g_t\right\|_1=\frac{A}{(1-c) t} \int_{E_t} f d m .
+$$
+We now use Theorem 8.16, with $X=R^k, \mu=m, \varphi(t)=t^p$, to calculate
+$$
+\begin{aligned}
+\int_{R^k}(M f)^p d m & =p \int_0^{\infty} m\{M f>t\} t^{p-1} d t \leq \frac{A p}{1-c} \int_0^{\infty} t^{p-2} d t \int_{E_t} f d m \\
+& =\frac{A p}{1-c} \int_{R^k} f d m \int_0^{J / c} t^{p-2} d t=\frac{A p c^{1-p}}{(1-c)(p-1)} \int_{R^k} f^p d m .
+\end{aligned}
+$$
+
+This proves the theorem. However, to get a good constant, let us choose $c$ so as to minimize that last expression. This happens when $c=(p-1) / p=1 / q$, where $q$ is the exponent conjugate to $p$. For this $c$,
+$$
+c^{1-p}=\left(1+\frac{1}{p-1}\right)^{p-1}<e,
+$$
+and the preceding computation yields
+$$
+\|M f\|_p \leq C_p\|f\|_p
+$$
+where $C_p=(\text { Aepq })^{1 / p}$.
+
+
+Note that $C_p \rightarrow 1$ as $p \rightarrow \infty$, which agrees with formula $8.17(1)$, and that $C_p \rightarrow \infty$ as $p \rightarrow 1$.
