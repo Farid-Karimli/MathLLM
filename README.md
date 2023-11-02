@@ -55,3 +55,15 @@ For any inquiries or further information, feel free to contact:
 - Ben Badnani: [bbadnani@bu.com](mailto:bbadnani@bu.com)
 - Cindy Zhang: [xyz0906@bu.edu](mailto:xyz0906@bu.edu)
 - Farid Karimli: [faridkar@bu.edu](mailto:faridkar@bu.edu)
+
+
+## TODO:
+
+1) Farid and Cindy work on preprocessing the textbooks.
+2) Ben will finish script that will result in 3 csvs for each textbook. definitions.csv, theorems.csv, and corollaries.csv. Each csv will contain as columns a theorem number and letter, the theorem statement, the proof statement (for corollaries and theorems), the number and letter of any theorems used in the proof of the theorem in question, and the those theorem statements.
+
+3) Using this, we can create a (input theorem statement, statements of theorems/corollaries/definitions used in its proof) training data set.
+4) Next we write a script to fine-tune gpt-3.5 turbo on this training data set.
+5) Finally, we take this fine-tuned gpt-3.5 model, feed it the real analysis questions from the math harvard entrance exam.
+6) Then we get back as output proposed theorems/corollaries/definitions that are predicted to be needed in a proof of the statement/problem.
+7) We then feed the original question as well as these predicted definitions/theorems/corollaries to gpt-4 as zero-shot learning context and compare its answer as to when its just given the problem statement itself. 
