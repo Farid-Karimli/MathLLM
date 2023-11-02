@@ -45,7 +45,13 @@ for chapter in CHAPTERS:
     # Create a latex file for the output of each chapter
     chp = open(f"chap_{chapter}.tex", "w")
 
-    for i in range(CHAPTERS[chapter], CHAPTERS[str(int(chapter) + 1)]):
+    # Check if this is the last chapter
+    if chapter == list(CHAPTERS.keys())[-1]:  
+        end_page = LAST_PAGE + 1 
+    else:
+        end_page = CHAPTERS[str(int(chapter) + 1)] 
+
+    for i in range(CHAPTERS[chapter], end_page):
         print("Page number: ", i)
 
         # Change the filenames to what you have
