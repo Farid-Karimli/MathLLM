@@ -1,0 +1,1220 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+
+\begin{document}
+\section{6}
+\section{THE RIEMANN-STIELTJES INTEGRAL}
+The present chapter is based on a definition of the Riemann integral which depends very explicitly on the order structure of the real line. Accordingly, we begin by discussing integration of real-valued functions on intervals. Extensions to complex- and vector-valued functions on intervals follow in later sections. Integration over sets other than intervals is discussed in Chaps. 10 and 11 .
+
+\section{DEFINITION AND EXISTENCE OF THE INTEGRAL}
+6.1 Definition Let $[a, b]$ be a given interval. By a partition $P$ of $[a, b]$ we mean a finite set of points $x_{0}, x_{1}, \ldots, x_{n}$, where
+
+$$
+a=x_{0} \leq x_{1} \leq \cdots \leq x_{n-1} \leq x_{n}=b
+$$
+
+We write
+
+$$
+\Delta x_{i}=x_{i}-x_{i-1} \quad(i=1, \ldots, n)
+$$
+
+Now suppose $f$ is a bounded real function defined on $[a, b]$. Corresponding to each partition $P$ of $[a, b]$ we put
+
+$$
+\begin{array}{rlrl}
+M_{i} & =\sup f(x) & & \left(x_{i-1} \leq x \leq x_{i}\right), \\
+m_{i} & =\inf f(x) & & \left(x_{i-1} \leq x \leq x_{i}\right), \\
+U(P, f) & =\sum_{i=1}^{n} M_{i} \Delta x_{i}, & \\
+L(P, f) & =\sum_{i=1}^{n} m_{i} \Delta x_{i}, &
+\end{array}
+$$
+
+and finally
+
+$$
+\begin{aligned}
+& \int_{a}^{b} f d x=\inf U(P, f) \\
+& \int_{a}^{b} f d x=\sup L(P, f)
+\end{aligned}
+$$
+
+where the inf and the sup are taken over all partitions $P$ of $[a, b]$. The left members of (1) and (2) are called the upper and lower Riemann integrals of $f$ over $[a, b]$, respectively.
+
+If the upper and lower integrals are equal, we say that $f$ is Riemannintegrable on $[a, b]$, we write $f \in \mathscr{R}$ (that is, $\mathscr{R}$ denotes the set of Riemannintegrable functions), and we denote the common value of (1) and (2) by
+
+$$
+\int_{a}^{b} f d x,
+$$
+
+or by
+
+$$
+\int_{a}^{b} f(x) d x
+$$
+
+This is the Riemann integral of $f$ over $[a, b]$. Since $f$ is bounded, there exist two numbers, $m$ and $M$, such that
+
+$$
+m \leq f(x) \leq M \quad(a \leq x \leq b)
+$$
+
+Hence, for every $P$,
+
+$$
+m(b-a) \leq L(P, f) \leq U(P, f) \leq M(b-a)
+$$
+
+so that the numbers $L(P, f)$ and $U(P, f)$ form a bounded set. This shows that the upper and lower integrals are defined for every bounded function $f$. The question of their equality, and hence the question of the integrability of $f$, is a more delicate one. Instead of investigating it separately for the Riemann integral, we shall immediately consider a more general situation.
+
+6.2 Definition Let $\alpha$ be a monotonically increasing function on $[a, b]$ (since $\alpha(a)$ and $\alpha(b)$ are finite, it follows that $\alpha$ is bounded on $[a, b])$. Corresponding to each partition $P$ of $[a, b]$, we write
+
+$$
+\Delta \alpha_{i}=\alpha\left(x_{i}\right)-\alpha\left(x_{i-1}\right)
+$$
+
+It is clear that $\Delta \alpha_{i} \geq 0$. For any real function $f$ which is bounded on $[a, b]$ we put
+
+$$
+\begin{aligned}
+& U(P, f, \alpha)=\sum_{i=1}^{n} M_{i} \Delta \alpha_{i} \\
+& L(P, f, \alpha)=\sum_{i=1}^{n} m_{i} \Delta \alpha_{i}
+\end{aligned}
+$$
+
+where $M_{i}, m_{i}$ have the same meaning as in Definition 6.1 , and we define
+
+$$
+\begin{aligned}
+& \int_{a}^{b} f d \alpha=\inf U(P, f, \alpha) \\
+& \int_{a}^{b} f d \alpha=\sup L(P, f, \alpha)
+\end{aligned}
+$$
+
+the inf and sup again being taken over all partitions.
+
+If the left members of (5) and (6) are equal, we denote their common value by
+
+$$
+\int_{a}^{b} f d \alpha
+$$
+
+or sometimes by
+
+$$
+\int_{a}^{b} f(x) d \alpha(x)
+$$
+
+This is the Riemann-Stieltjes integral (or simply the Stieltjes integral) of $f$ with respect to $\alpha$, over $[a, b]$.
+
+If (7) exists, i.e., if (5) and (6) are equal, we say that $f$ is integrable with respect to $\alpha$, in the Riemann sense, and write $f \in \mathscr{R}(\alpha)$.
+
+By taking $\alpha(x)=x$, the Riemann integral is seen to be a special case of the Riemann-Stieltjes integral. Let us mention explicitly, however, that in the general case $\alpha$ need not even be continuous.
+
+A few words should be said about the notation. We prefer (7) to (8), since the letter $x$ which appears in (8) adds nothing to the content of (7). It is immaterial which letter we use to represent the so-called "variable of integration." For instance, (8) is the same as
+
+$$
+\int_{a}^{b} f(y) d \alpha(y)
+$$
+
+The integral depends on $f, \alpha, a$ and $b$, but not on the variable of integration, which may as well be omitted.
+
+The role played by the variable of integration is quite analogous to that of the index of summation: The two symbols
+
+$$
+\sum_{i=1}^{n} c_{i}, \quad \sum_{k=1}^{n} c_{k}
+$$
+
+mean the same thing, since each means $c_{1}+c_{2}+\cdots+c_{n}$.
+
+Of course, no harm is done by inserting the variable of integration, and in many cases it is actually convenient to do so.
+
+We shall now investigate the existence of the integral (7). Without saying so every time, $f$ will be assumed real and bounded, and $\alpha$ monotonically increasing on $[a, b]$; and, when there can be no misunderstanding, we shall write $\int$ in place of $\int_{a}^{b}$.
+
+6.3 Definition We say that the partition $P^{*}$ is a refinement of $P$ if $P^{*} \supset P$ (that is, if every point of $P$ is a point of $P^{*}$ ). Given two partitions, $P_{1}$ and $P_{2}$, we say that $P^{*}$ is their common refinement if $P^{*}=P_{1} \cup P_{2}$.
+
+6.4 Theorem If $P^{*}$ is a refinement of $P$, then
+
+and
+
+$$
+L(P, f, \alpha) \leq L\left(P^{*}, f, \alpha\right)
+$$
+
+$$
+U\left(P^{*}, f, \alpha\right) \leq U(P, f, \alpha)
+$$
+
+Proof To prove (9), suppose first that $P^{*}$ contains just one point more than $P$. Let this extra point be $x^{*}$, and suppose $x_{i-1}<x^{*}<x_{i}$, where $x_{i-1}$ and $x_{i}$ are two consecutive points of $P$. Put
+
+$$
+\begin{array}{ll}
+w_{1}=\inf f(x) & \left(x_{i-1} \leq x \leq x^{*}\right) \\
+w_{2}=\inf f(x) & \left(x^{*} \leq x \leq x_{i}\right)
+\end{array}
+$$
+
+Clearly $w_{1} \geq m_{i}$ and $w_{2} \geq m_{i}$, where, as before,
+
+Hence
+
+$$
+m_{i}=\inf f(x) \quad\left(x_{i-1} \leq x \leq x_{i}\right)
+$$
+
+$$
+\begin{aligned}
+& L\left(P^{*}, f, \alpha\right)-L(P, f, \alpha) \\
+& \quad=w_{1}\left[\alpha\left(x^{*}\right)-\alpha\left(x_{i-1}\right)\right]+w_{2}\left[\alpha\left(x_{i}\right)-\alpha\left(x^{*}\right)\right]-m_{i}\left[\alpha\left(x_{i}\right)-\alpha\left(x_{i-1}\right)\right] \\
+& \quad=\left(w_{1}-m_{i}\right)\left[\alpha\left(x^{*}\right)-\alpha\left(x_{i-1}\right)\right]+\left(w_{2}-m_{i}\right)\left[\alpha\left(x_{i}\right)-\alpha\left(x^{*}\right)\right] \geq 0
+\end{aligned}
+$$
+
+If $P^{*}$ contains $k$ points more than $P$, we repeat this reasoning $k$ times, and arrive at (9). The proof of (10) is analogous.
+
+6.5 Theorem $\int_{a}^{b} f d \alpha \leq \int_{a}^{b} f d \alpha$.
+
+Proof Let $P^{*}$ be the common refinement of two partitions $P_{1}$ and $P_{2}$. By Theorem 6.4,
+
+$$
+L\left(P_{1}, f, \alpha\right) \leq L\left(P^{*}, f, \alpha\right) \leq U\left(P^{*}, f, \alpha\right) \leq U\left(P_{2}, f, \alpha\right)
+$$
+
+Hence
+
+$$
+L\left(P_{1}, f, \alpha\right) \leq U\left(P_{2}, f, \alpha\right)
+$$
+
+If $P_{2}$ is fixed and the sup is taken over all $P_{1}$, (11) gives
+
+$$
+\int_{\underline{1}} f d \alpha \leq U\left(P_{2}, f, \alpha\right)
+$$
+
+The theorem follows by taking the inf over all $P_{2}$ in (12).
+
+6.6 Theorem $f \in \mathscr{R}(\alpha)$ on $[a, b]$ if and only if for every $\varepsilon>0$ there exists a partition $P$ such that
+
+$$
+U(P, f, \alpha)-L(P, f, \alpha)<\varepsilon
+$$
+
+Proof For every $P$ we have
+
+$$
+L(P, f, \alpha) \leq \int_{0} f d \alpha \leq \bar{\int} f d \alpha \leq U(P, f, \alpha)
+$$
+
+Thus (13) implies
+
+$$
+0 \leq \bar{\int} f d \alpha-\int f d \alpha<\varepsilon .
+$$
+
+Hence, if (13) can be satisfied for every $\varepsilon>0$, we have
+
+$$
+\bar{\int} f d \alpha=\int f d \alpha
+$$
+
+that is, $f \in \mathscr{R}(\alpha)$.
+
+Conversely, suppose $f \in \mathscr{R}(\alpha)$, and let $\varepsilon>0$ be given. Then there exist partitions $P_{1}$ and $P_{2}$ such that
+
+$$
+\begin{aligned}
+& U\left(P_{2}, f, \alpha\right)-\int f d \alpha<\frac{\varepsilon}{2} \\
+& \int f d \alpha-L\left(P_{1}, f, \alpha\right)<\frac{\varepsilon}{2}
+\end{aligned}
+$$
+
+We choose $P$ to be the common refinement of $P_{1}$ and $P_{2}$. Then Theorem 6.4 , together with (14) and (15), shows that
+
+$$
+U(P, f, \alpha) \leq U\left(P_{2}, f, \alpha\right)<\int f d \alpha+\frac{\varepsilon}{2}<L\left(P_{1}, f, \alpha\right)+\varepsilon \leq L(P, f, \alpha)+\varepsilon
+$$
+
+so that (13) holds for this partition $P$.
+
+Theorem 6.6 furnishes a convenient criterion for integrability. Before we apply it, we state some closely related facts.
+
+\subsection{Theorem}
+(a) If (13) holds for some $P$ and some $\varepsilon$, then (13) holds (with the same $\varepsilon$ ) for every refinement of $P$.
+
+(b) If (13) holds for $P=\left\{x_{0}, \ldots, x_{n}\right\}$ and if $s_{i}, t_{i}$ are arbitrary points in $\left[x_{i-1}, x_{i}\right]$, then
+
+$$
+\sum_{i=1}^{n}\left|f\left(s_{i}\right)-f\left(t_{i}\right)\right| \Delta \alpha_{i}<\varepsilon
+$$
+
+(c) If $f \in \mathscr{R}(\alpha)$ and the hypotheses of (b) hold, then
+
+$$
+\left|\sum_{i=1}^{n} f\left(t_{i}\right) \Delta \alpha_{i}-\int_{a}^{b} f d \alpha\right|<\varepsilon
+$$
+
+Proof Theorem 6.4 implies $(a)$. Under the assumptions made in $(b)$, both $f\left(s_{i}\right)$ and $f\left(t_{i}\right)$ lie in $\left[m_{i}, M_{i}\right]$, so that $\left|f\left(s_{i}\right)-f\left(t_{i}\right)\right| \leq M_{i}-m_{i}$. Thus
+
+$$
+\sum_{i=1}^{n}\left|f\left(s_{i}\right)-f\left(t_{i}\right)\right| \Delta \alpha_{i} \leq U(P, f, \alpha)-L(P, f, \alpha)
+$$
+
+which proves $(b)$. The obvious inequalities
+
+and
+
+$$
+L(P, f, \alpha) \leq \sum f\left(t_{i}\right) \Delta \alpha_{i} \leq U(P, f, \alpha)
+$$
+
+$$
+L(P, f, \alpha) \leq \int f d \alpha \leq U(P, f, \alpha)
+$$
+
+prove $(c)$.
+
+6.8 Theorem If $f$ is continuous on $[a, b]$ then $f \in \mathscr{R}(\alpha)$ on $[a, b]$.
+
+Proof Let $\varepsilon>0$ be given. Choose $\eta>0$ so that
+
+$$
+[\alpha(b)-\alpha(a)] \eta<\varepsilon
+$$
+
+Since $f$ is uniformly continuous on $[a, b]$ (Theorem 4.19), there exists a $\delta>0$ such that
+
+$$
+|f(x)-f(t)|<\eta
+$$
+
+if $x \in[a, b], t \in[a, b]$, and $|x-t|<\delta$.
+
+If $P$ is any partition of $[a, b]$ such that $\Delta x_{i}<\delta$ for all $i$, then (16) implies that
+
+$$
+M_{i}-m_{i} \leq \eta \quad(i-1, \ldots, n)
+$$
+
+and therefore
+
+$$
+\begin{aligned}
+U(P, f, \alpha)-L(P, f, \alpha) & =\sum_{i=1}^{n}\left(M_{i}-m_{i}\right) \Delta \alpha_{i} \\
+\leq \eta \sum_{i=1}^{n} \Delta \alpha_{i} & =\eta[\alpha(b)-\alpha(a)]<\varepsilon
+\end{aligned}
+$$
+
+By Theorem 6.6, $f \in \mathscr{R}(\alpha)$.
+
+6.9 Theorem If $f$ is monotonic on $[a, b]$, and if $\alpha$ is continuous on $[a, b]$, then $f \in \mathscr{R}(\alpha)$. (We still assume, of course, that $\alpha$ is monotonic.)
+
+Proof Let $\varepsilon>0$ be given. For any positive integer $n$, choose a partition such that
+
+$$
+\Delta \alpha_{i}=\frac{\alpha(b)-\alpha(a)}{n} \quad(i=1, \ldots, n)
+$$
+
+This is possible since $\alpha$ is continuous (Theorem 4.23).
+
+We suppose that $f$ is monotonically increasing (the proof is analogous in the other case). Then
+
+so that
+
+$$
+M_{i}=f\left(x_{i}\right), \quad m_{i}=f\left(x_{i-1}\right) \quad(i=1, \ldots, n)
+$$
+
+$$
+\begin{aligned}
+U(P, f, \alpha)-L(P, f, \alpha) & =\frac{\alpha(b)-\alpha(a)}{n} \sum_{i=1}^{n}\left[f\left(x_{i}\right)-f\left(x_{i-1}\right)\right] \\
+& =\frac{\alpha(b)-\alpha(a)}{n} \cdot[f(b)-f(a)]<\varepsilon
+\end{aligned}
+$$
+
+if $n$ is taken large enough. By Theorem 6.6, $f \in \mathscr{R}(\alpha)$.
+
+6.10 Theorem Suppose $f$ is bounded on $[a, b], f$ has only finitely many points of discontinuity on $[a, b]$, and $\alpha$ is continuous at every point at which $f$ is discontinuous. Then $f \in \mathscr{R}(\alpha)$.
+
+Proof Let $\varepsilon>0$ be given. Put $M=\sup |f(x)|$, let $E$ be the set of points at which $f$ is discontinuous. Since $E$ is finite and $\alpha$ is continuous at every point of $E$, we can cover $E$ by finitely many disjoint intervals $\left[u_{j}, v_{j}\right] \subset$ $[a, b]$ such that the sum of the corresponding differences $\alpha\left(v_{j}\right)-\alpha\left(u_{j}\right)$ is less than $\varepsilon$. Furthermore, we can place these intervals in such a way that every point of $E \cap(a, b)$ lies in the interior of some $\left[u_{j}, v_{j}\right]$.
+
+Remove the segments $\left(u_{j}, v_{j}\right)$ from $[a, b]$. The remaining set $K$ is compact. Hence $f$ is uniformly continuous on $K$, and there exists $\delta>0$ such that $|f(s)-f(t)|<\varepsilon$ if $s \in K, t \in K,|s-t|<\delta$.
+
+Now form a partition $P=\left\{x_{0}, x_{1}, \ldots, x_{n}\right\}$ of $[a, b]$, as follows: Each $u_{j}$ occurs in $P$. Each $v_{j}$ occurs in $P$. No point of any segment $\left(u_{j}, v_{j}\right)$ occurs in $P$. If $x_{i-1}$ is not one of the $u_{j}$, then $\Delta x_{i}<\delta$.
+
+Note that $M_{i}-m_{i} \leq 2 M$ for every $i$, and that $M_{i}-m_{i} \leq \varepsilon$ unless $x_{i-1}$ is one of the $u_{j}$. Hence, as in the proof of Theorem 6.8,
+
+$$
+U(P, f, \alpha)-L(P, f, \alpha) \leq[\alpha(b)-\alpha(a)] \varepsilon+2 M \varepsilon
+$$
+
+Since $\varepsilon$ is arbitrary, Theorem 6.6 shows that $f \in \mathscr{R}(\alpha)$.
+
+Note: If $f$ and $\alpha$ have a common point of discontinuity, then $f$ need not be in $\mathscr{R}(\alpha)$. Exercise 3 shows this.
+
+6.11 Theorem Suppose $f \in \mathscr{R}(\alpha)$ on $[a, b], m \leq f \leq M, \phi$ is continuous on $[m, M]$, and $h(x)=\phi(f(x))$ on $[a, b]$. Then $h \in \mathscr{R}(\alpha)$ on $[a, b]$.
+
+Proof Choose $\varepsilon>0$. Since $\phi$ is uniformly continuous on $[m, M]$, there exists $\delta>0$ such that $\delta<\varepsilon$ and $|\phi(s)-\phi(t)|<\varepsilon$ if $|s-t| \leq \delta$ and $s, t \in[m, M]$.
+
+Since $f \in \mathscr{R}(\alpha)$, there is a partition $P=\left\{x_{0}, x_{1}, \ldots, x_{n}\right\}$ of $[a, b]$ such that
+
+$$
+U(P, f, \alpha)-L(P, f, \alpha)<\delta^{2}
+$$
+
+Let $M_{i}, m_{i}$ have the same meaning as in Definition 6.1, and let $M_{i}^{*}, m_{i}^{*}$ be the analogous numbers for $h$. Divide the numbers $1, \ldots, n$ into two classes: $i \in A$ if $M_{i}-m_{i}<\delta, i \in B$ if $M_{i}-m_{i} \geq \delta$.
+
+For $i \in A$, our choice of $\delta$ shows that $M_{i}^{*}-m_{i}^{*} \leq \varepsilon$.
+
+For $i \in B, M_{i}^{*}-m_{i}^{*} \leq 2 K$, where $K=\sup |\phi(t)|, m \leq t \leq M$. By (18), we have
+
+$$
+\delta \sum_{i \in B} \Delta \alpha_{i} \leq \sum_{i \in B}\left(M_{i}-m_{i}\right) \Delta \alpha_{i}<\delta^{2}
+$$
+
+so that $\sum_{i \in B} \Delta \alpha_{i}<\delta$. It follows that
+
+$$
+\begin{aligned}
+U(P, h, \alpha)-L(P, h, \alpha) & =\sum_{i \in A}\left(M_{i}^{*}-m_{i}^{*}\right) \Delta \alpha_{i}+\sum_{i \in B}\left(M_{i}^{*}-m_{i}^{*}\right) \Delta \alpha_{i} \\
+& \leq \varepsilon[\alpha(b)-\alpha(a)]+2 K \delta<\varepsilon[\alpha(b)-\alpha(a)+2 K]
+\end{aligned}
+$$
+
+Since $\varepsilon$ was arbitrary, Theorem 6.6 implies that $h \in \mathscr{R}(\alpha)$.
+
+Remark: This theorem suggests the question: Just what functions are Riemann-integrable? The answer is given by Theorem $11.33(b)$.
+
+\section{PROPERTIES OF THE INTEGRAL}
+\subsection{Theorem}
+(a) If $f_{1} \in \mathscr{R}(\alpha)$ and $f_{2} \in \mathscr{R}(\alpha)$ on $[a, b]$, then
+
+$$
+f_{1}+f_{2} \in \mathscr{R}(\alpha)
+$$
+
+$c f \in \mathscr{R}(\alpha)$ for every constant $c$, and
+
+$$
+\begin{aligned}
+\int_{a}^{b}\left(f_{1}+f_{2}\right) d \alpha & =\int_{a}^{b} f_{1} d \alpha+\int_{a}^{b} f_{2} d \alpha \\
+\int_{a}^{b} c f d \alpha & =c \int_{a}^{b} f d \alpha .
+\end{aligned}
+$$
+
+(b) If $f_{1}(x) \leq f_{2}(x)$ on $[a, b]$, then
+
+$$
+\int_{a}^{b} f_{1} d \alpha \leq \int_{a}^{b} f_{2} d \alpha
+$$
+
+(c) If $f \in \mathscr{R}(\alpha)$ on $[a, b]$ and if $a<c<b$, then $f \in \mathscr{R}(\alpha)$ on $[a, c]$ and on $[c, b]$, and
+
+$$
+\int_{a}^{c} f d \alpha+\int_{c}^{b} f d \alpha=\int_{a}^{b} f d \alpha
+$$
+
+(d) If $f \in \mathscr{R}(\alpha)$ on $[a, b]$ and if $|f(x)| \leq M$ on $[a, b]$, then
+
+$$
+\left|\int_{a}^{b} f d \alpha\right| \leq M[\alpha(b)-\alpha(a)]
+$$
+
+(e) If $f \in \mathscr{R}\left(\alpha_{1}\right)$ and $f \in \mathscr{R}\left(\alpha_{2}\right)$, then $f \in \mathscr{R}\left(\alpha_{1}+\alpha_{2}\right)$ and
+
+$$
+\int_{a}^{b} f d\left(\alpha_{1}+\alpha_{2}\right)=\int_{a}^{b} f d \alpha_{1}+\int_{a}^{b} f d \alpha_{2}
+$$
+
+if $f \in \mathscr{R}(\alpha)$ and $c$ is a positive constant, then $f \in \mathscr{R}(c \alpha)$ and
+
+$$
+\int_{a}^{b} f d(c \alpha)=c \int_{a}^{b} f d \alpha
+$$
+
+Proof If $f=f_{1}+f_{2}$ and $P$ is any partition of $[a, b]$, we have
+
+$$
+\begin{aligned}
+L\left(P, f_{1}, \alpha\right)+L\left(P, f_{2}, \alpha\right) \leq L(P, f, \alpha) & \\
+& \leq U(P, f, \alpha) \leq U\left(P, f_{1}, \alpha\right)+U\left(P, f_{2}, \alpha\right)
+\end{aligned}
+$$
+
+If $f_{1} \in \mathscr{R}(\alpha)$ and $f_{2} \in \mathscr{R}(\alpha)$, let $\varepsilon>0$ be given. There are partitions $P_{j}$ $(j=1,2)$ such that
+
+$$
+U\left(P_{j}, f_{j}, \alpha\right)-L\left(P_{j}, f_{j}, \alpha\right)<\varepsilon
+$$
+
+These inequalities persist if $P_{1}$ and $P_{2}$ are replaced by their common refinement $P$. Then (20) implies
+
+$$
+U(P, f, \alpha)-L(P, f, \alpha)<2 \varepsilon
+$$
+
+which proves that $f \in \mathscr{R}(\alpha)$.
+
+With this same $P$ we have
+
+$$
+U\left(P, f_{J}, \alpha\right)<\int f_{j} d \alpha+\varepsilon \quad(j=1,2)
+$$
+
+hence (20) implies
+
+$$
+\int f d \alpha \leq U(P, f, \alpha)<\int f_{1} d \alpha+\int f_{2} d \alpha+2 \varepsilon
+$$
+
+Since $\varepsilon$ was arbitrary, we conclude that
+
+$$
+\int f d \alpha \leq \int f_{1} d \alpha+\int f_{2} d \alpha
+$$
+
+If we replace $f_{1}$ and $f_{2}$ in (21) by $-f_{1}$ and $-f_{2}$, the inequality is reversed, and the equality is proved.
+
+The proofs of the other assertions of Theorem 6.12 are so similar that we omit the details. In part $(c)$ the point is that (by passing to refinements) we may restrict ourselves to partitions which contain the point $c$, in approximating $\int f d \alpha$.
+
+6.13 Theorem If $f \in \mathscr{R}(\alpha)$ and $g \in \mathscr{R}(\alpha)$ on $[a, b]$, then
+
+(a) $f g \in \mathscr{R}(\alpha)$;
+
+(b) $|f| \in \mathscr{R}(\alpha)$ and $\left|\int_{a}^{b} f d \alpha\right| \leq \int_{a}^{b}|f| d \alpha$.
+
+Proof If we take $\phi(t)=t^{2}$, Theorem 6.11 shows that $f^{2} \in \mathscr{R}(\alpha)$ if $f \in \mathscr{R}(\alpha)$. The identity
+
+$$
+4 f g=(f+g)^{2}-(f-g)^{2}
+$$
+
+completes the proof of $(a)$.
+
+If we take $\phi(t)=|t|$, Theorem 6.11 shows similarly that $|f| \in \mathscr{R}(\alpha)$. Choose $c= \pm 1$, so that
+
+Then
+
+$$
+c \int f d \alpha \geq 0
+$$
+
+$$
+\left|\int f d \alpha\right|=c \int f d \alpha=\int c f d \alpha \leq-\int|f| d \alpha
+$$
+
+since $c f \leq|f|$.
+
+6.14 Definition The unit step function $I$ is defined by
+
+$$
+I(x)= \begin{cases}0 & (x \leq 0) \\ 1 & (x>0)\end{cases}
+$$
+
+6.15 Theorem If $a<s<b, f$ is bounded on $[a, b], f$ is continuous at $s$, and $\alpha(x)=I(x-s)$, then
+
+$$
+\int_{a}^{b} f d \alpha=f(s)
+$$
+
+Proof Consider partitions $P=\left\{x_{0}, x_{1}, x_{2}, x_{3}\right\}$, where $x_{0}=a$, and $x_{1}=s<x_{2}<x_{3}=b$. Then
+
+$$
+U(P, f, \alpha)=M_{2}, \quad L(P, f, \alpha)=m_{2}
+$$
+
+Since $f$ is continuous at $s$, we see that $M_{2}$ and $m_{2}$ converge to $f(s)$ as $x_{2} \rightarrow s$.
+
+6.16 Theorem Suppose $c_{n} \geq 0$ for $1,2,3, \ldots, \Sigma c_{n}$ converges, $\left\{s_{n}\right\}$ is a sequence of distinct points in $(a, b)$, and
+
+$$
+\alpha(x)=\sum_{n=1}^{\infty} c_{n} I\left(x-s_{n}\right)
+$$
+
+Let $f$ be continuous on $[a, b]$. Then
+
+$$
+\int_{a}^{b} f d \alpha=\sum_{n=1}^{\infty} c_{n} f\left(s_{n}\right)
+$$
+
+Proof The comparison test shows that the series (22) converges for every $x$. Its sum $\alpha(x)$ is evidently monotonic, and $\alpha(a)=0, \alpha(b)=\Sigma c_{n}$. (This is the type of function that occurred in Remark 4.31.)
+
+Let $\varepsilon>0$ be given, and choose $N$ so that
+
+$$
+\sum_{N+1}^{\infty} c_{n}<\varepsilon
+$$
+
+Put
+
+$$
+\alpha_{1}(x)=\sum_{n=1}^{N} c_{n} I\left(x-s_{n}\right), \quad \alpha_{2}(x)=\sum_{N+1}^{\infty} c_{n} I\left(x-s_{n}\right)
+$$
+
+By Theorems 6.12 and 6.15,
+
+$$
+\int_{a}^{b} f d \alpha_{1}=\sum_{i=1}^{N} c_{n} f\left(s_{n}\right)
+$$
+
+Since $\alpha_{2}(b)-\alpha_{2}(a)<\varepsilon$
+
+$$
+\left|\int_{a}^{b} f d \alpha_{2}\right| \leq M \varepsilon
+$$
+
+where $M=\sup |f(x)|$. Since $\alpha=\alpha_{1}+\alpha_{2}$, it follows from (24) and (25) that
+
+$$
+\left|\int_{a}^{b} f d \alpha-\sum_{i=1}^{N} c_{n} f\left(s_{n}\right)\right| \leq M \varepsilon
+$$
+
+If we let $N \rightarrow \infty$, we obtain (23).
+
+6.17 Theorem Assume $\alpha$ increases monotonically and $\alpha^{\prime} \in \mathscr{R}$ on $[a, b]$. Let $f$ be a bounded real function on $[a, b]$.
+
+Then $f \in \mathscr{R}(\alpha)$ if and only if $f \alpha^{\prime} \in \mathscr{R}$. In that case
+
+$$
+\int_{a}^{b} f d \alpha=\int_{a}^{b} f(x) \alpha^{\prime}(x) d x .
+$$
+
+Proof Let $\varepsilon>0$ be given and apply Theorem 6.6 to $\alpha^{\prime}$ : There is a partition $P=\left\{x_{0}, \ldots, x_{n}\right\}$ of $[a, b]$ such that
+
+$$
+U\left(P, \alpha^{\prime}\right)-L\left(P, \alpha^{\prime}\right)<\varepsilon .
+$$
+
+The mean value theorem furnishes points $t_{i} \in\left[x_{i-1}, x_{i}\right]$ such that
+
+$$
+\Delta \alpha_{i}=\alpha^{\prime}\left(t_{i}\right) \Delta x_{i}
+$$
+
+for $i=1, \ldots, n$. If $s_{i} \in\left[x_{i-1}, x_{i}\right]$, then
+
+$$
+\sum_{i=1}^{n}\left|\alpha^{\prime}\left(s_{i}\right)-\alpha^{\prime}\left(t_{i}\right)\right| \Delta x_{i}<\varepsilon
+$$
+
+by (28) and Theorem 6.7(b). Put $M=\sup |f(x)|$. Since
+
+$$
+\sum_{i=1}^{n} f\left(s_{i}\right) \Delta \alpha_{i}=\sum_{i=1}^{n} f\left(s_{i}\right) \alpha^{\prime}\left(t_{i}\right) \Delta x_{i}
+$$
+
+it follows from (29) that
+
+$$
+\left|\sum_{i=1}^{n} f\left(s_{i}\right) \Delta \alpha_{i}-\sum_{i=1}^{n} f\left(s_{i}\right) \alpha^{\prime}\left(s_{i}\right) \Delta x_{i}\right| \leq M \varepsilon
+$$
+
+In particular,
+
+$$
+\sum_{i=1}^{n} f\left(s_{i}\right) \Delta \alpha_{i} \leq U\left(P, f \alpha^{\prime}\right)+M \varepsilon
+$$
+
+for all choices of $s_{i} \in\left[x_{i-1}, x_{i}\right]$, so that
+
+$$
+U(P, f, \alpha) \leq U\left(P, f \alpha^{\prime}\right)+M \varepsilon
+$$
+
+The same argument leads from (30) to
+
+Thus
+
+$$
+U\left(P, f \alpha^{\prime}\right) \leq U(P, f, \alpha)+M \varepsilon
+$$
+
+$$
+\left|U(P, f, \alpha)-U\left(P, f \alpha^{\prime}\right)\right| \leq M \varepsilon
+$$
+
+Now note that (28) remains true if $P$ is replaced by any refinement. Hence (31) also remains true. We conclude that
+
+$$
+\left|\int_{a}^{b} f d \alpha-\bar{\int}_{a}^{b} f(x) \alpha^{\prime}(x) d x\right| \leq M \varepsilon
+$$
+
+But $\varepsilon$ is arbitrary. Hence
+
+$$
+\int_{a}^{b} f d \alpha=\bar{\int}_{a}^{b} f(x) \alpha^{\prime}(x) d x
+$$
+
+for any bounded $f$. The equality of the lower integrals follows from (30) in exactly the same way. The theorem follows.
+
+6.18 Remark The two preceding theorems illustrate the generality and flexibility which are inherent in the Stieltjes process of integration. If $\alpha$ is a pure step function [this is the name often given to functions of the form (22)], the integral reduces to a finite or infinite series. If $\alpha$ has an integrable derivative, the integral reduces to an ordinary Riemann integral. This makes it possible in many cases to study series and integrals simultaneously, rather than separately.
+
+To illustrate this point, consider a physical example. The moment of inertia of a straight wire of unit length, about an axis through an endpoint, at right angles to the wire, is
+
+$$
+\int_{0}^{1} x^{2} d m
+$$
+
+where $m(x)$ is the mass contained in the interval $[0, x]$. If the wire is regarded as having a continuous density $\rho$, that is, if $m^{\prime}(x)=\rho(x)$, then (33) turns into
+
+$$
+\int_{0}^{1} x^{2} \rho(x) d x
+$$
+
+On the other hand, if the wire is composed of masses $m_{i}$ concentrated at points $x_{i},(33)$ becomes
+
+$$
+\sum_{i} x_{i}^{2} m_{i}
+$$
+
+Thus (33) contains (34) and (35) as special cases, but it contains much more; for instance, the case in which $m$ is continuous but not everywhere differentiable.
+
+6.19 Theorem (change of variable) Suppose $\varphi$ is a strictly increasing continuous function that maps an interval $[A, B]$ onto $[a, b]$. Suppose $\alpha$ is monotonically increasing on $[a, b]$ and $f \in \mathscr{R}(\alpha)$ on $[a, b]$. Define $\beta$ and $g$ on $[A, B]$ by
+
+$$
+\beta(y)=\alpha(\varphi(y)), \quad g(y)=f(\varphi(y)) .
+$$
+
+Then $g \in \mathscr{R}(\beta)$ and
+
+$$
+\int_{A}^{B} g d \beta=\int_{a}^{b} f d \alpha .
+$$
+
+Proof To each partition $P=\left\{x_{0}, \ldots, x_{n}\right\}$ of $[a, b]$ corresponds a partition $Q=\left\{y_{0}, \ldots, y_{n}\right\}$ of $[A, B]$, so that $x_{i}=\varphi\left(y_{i}\right)$. All partitions of $[A, B]$ are obtained in this way. Since the values taken by $f$ on $\left[x_{i-1}, x_{i}\right]$ are exactly the same as those taken by $g$ on $\left[y_{i-1}, y_{i}\right]$, we see that
+
+$$
+U(Q, g, \beta)=U(P, f, \alpha), \quad L(Q, g, \beta)=L(P, f, \alpha)
+$$
+
+Since $f \in \mathscr{R}(\alpha), P$ can be chosen so that both $U(P, f, \alpha)$ and $L(P, f, \alpha)$ are close to $\int f d \alpha$. Hence (38), combined with Theorem 6.6, shows that $g \in \mathscr{R}(\beta)$ and that (37) holds. This completes the proof.
+
+Let us note the following special case:
+
+Take $\alpha(x)=x$. Then $\beta=\varphi$. Assume $\varphi^{\prime} \in \mathscr{R}$ on $[A, B]$. If Theorem 6.17 is applied to the left side of (37), we obtain
+
+$$
+\int_{a}^{b} f(x) d x=\int_{A}^{B} f(\varphi(y)) \varphi^{\prime}(y) d y
+$$
+
+\section{INTEGRATION AND DIFFERENTIATION}
+We still confine ourselves to real functions in this section. We shall show that integration and differentiation are, in a certain sense, inverse operations.
+
+6.20 Theorem Let $f \in \mathscr{R}$ on $[a, b]$. For $a \leq x \leq b$, put
+
+$$
+F(x)=\int_{a}^{x} f(t) d t
+$$
+
+Then $F$ is continuous on $[a, b]$; furthermore, if $f$ is continuous at a point $x_{0}$ of $[a, b]$, then $F$ is differentiable at $x_{0}$, and
+
+$$
+F^{\prime}\left(x_{0}\right)=f\left(x_{0}\right)
+$$
+
+Proof Since $f \in \mathscr{R}, f$ is bounded. Suppose $|f(t)| \leq M$ for $a \leq t \leq b$. If $a \leq x<y \leq b$, then
+
+$$
+|F(y)-F(x)|=\left|\int_{x}^{y} f(t) d t\right| \leq M(y-x)
+$$
+
+by Theorem $6.12(c)$ and $(d)$. Given $\varepsilon>0$, we see that
+
+$$
+|F(y)-F(x)|<\varepsilon
+$$
+
+provided that $|y-x|<\varepsilon / M$. This proves continuity (and, in fact, uniform continuity) of $F$.
+
+Now suppose $f$ is continuous at $x_{0}$. Given $\varepsilon>0$, choose $\delta>0$ such that
+
+$$
+\left|f(t)-f\left(x_{0}\right)\right|<\varepsilon
+$$
+
+if $\left|t-x_{0}\right|<\delta$, and $a \leq t \leq b$. Hence, if
+
+$$
+x_{0}-\delta<s \leq x_{0} \leq t<x_{0}+\delta \quad \text { and } \quad a \leq s<t \leq b
+$$
+
+we have, by Theorem 6.12(d),
+
+$$
+\left|\frac{F(t)-F(s)}{t-s}-f\left(x_{0}\right)\right|=\left|\frac{1}{t-s} \int_{s}^{t}\left[f(u)-f\left(x_{0}\right)\right] d u\right|<\varepsilon .
+$$
+
+It follows that $F^{\prime}\left(x_{0}\right)=f\left(x_{0}\right)$.
+
+6.21 The fundamental theorem of calculus If $f \in \mathscr{R}$ on $[a, b]$ and if there is a differentiable function $F$ on $[a, b]$ such that $F^{\prime}=f$, then
+
+$$
+\int_{a}^{b} f(x) d x=F(b)-F(a)
+$$
+
+Proof Let $\varepsilon>0$ be given. Choose a partition $P=\left\{x_{0}, \ldots, x_{n}\right\}$ of $[a, b]$ so that $U(P, f)-L(P, f)<\varepsilon$. The mean value theorem furnishes points $t_{i} \in\left[x_{i-1}, x_{i}\right]$ such that
+
+$$
+F\left(x_{i}\right)-F\left(x_{i-1}\right)=f\left(t_{i}\right) \Delta x_{i}
+$$
+
+for $i=1, \ldots, n$. Thus
+
+$$
+\sum_{i=1}^{n} f\left(t_{i}\right) \Delta x_{i}=F(b)-F(a)
+$$
+
+It now follows from Theorem 6.7(c) that
+
+$$
+\left|F(b)-F(a)-\int_{a}^{b} f(x) d x\right|<\varepsilon
+$$
+
+Since this holds for every $\varepsilon>0$, the proof is complete.
+
+6.22 Theorem (integration by parts) Suppose $F$ and $G$ are differentiable functions on $[a, b], F^{\prime}=f \in \mathscr{R}$, and $G^{\prime}=g \in \mathscr{R}$. Then
+
+$$
+\int_{a}^{b} F(x) g(x) d x=F(b) G(b)-F(a) G(a)-\int_{a}^{b} f(x) G(x) d x
+$$
+
+Proof Put $H(x)=F(x) G(x)$ and apply Theorem 6.21 to $H$ and its derivative. Note that $H^{\prime} \in \mathscr{R}$, by Theorem 6.13 .
+
+\section{INTEGRATION OF VECTOR-VALUED FUNCTIONS}
+6.23 Definition Let $f_{1}, \ldots, f_{k}$ be real functions on $[a, b]$, and let $\mathbf{f}=\left(f_{1}, \ldots, f_{k}\right)$ be the corresponding mapping of $[a, b]$ into $R^{k}$. If $\alpha$ increases monotonically on $[a, b]$, to say that $\mathbf{f} \in \mathscr{R}(\alpha)$ means that $f_{j} \in \mathscr{R}(\alpha)$ for $j=1, \ldots, k$. If this is the case, we define
+
+$$
+\int_{a}^{b} \mathbf{f} d \alpha=\left(\int_{a}^{b} f_{1} d \alpha, \ldots, \int_{a}^{b} f_{k} d \alpha\right)
+$$
+
+In other words, $\int \mathbf{f} d \alpha$ is the point in $R^{k}$ whose $j$ th coordinate is $\int f_{j} d \alpha$.
+
+It is clear that parts $(a),(c)$, and $(e)$ of Theorem 6.12 are valid for these vector-valued integrals; we simply apply the earlier results to each coordinate. The same is true of Theorems 6.17, 6.20, and 6.21. To illustrate, we state the analogue of Theorem 6.21.
+
+6.24 Theorem If $\mathbf{f}$ and $\mathbf{F}$ map $[a, b]$ into $R^{k}$, if $\mathbf{f} \in \mathscr{R}$ on $[a, b]$, and if $\mathbf{F}^{\prime}=\mathbf{f}$, then
+
+$$
+\int_{a}^{b} \mathbf{f}(t) d t=\mathbf{F}(b)-\mathbf{F}(a)
+$$
+
+The analogue of Theorem 6.13(b) offers some new features, however, at least in its proof.
+
+6.25 Theorem If $\mathbf{f}$ maps $[a, b]$ into $R^{k}$ and if $\mathbf{f} \in \mathscr{R}(\alpha)$ for some monotonically increasing function $\alpha$ on $[a, b]$, then $|\mathbf{f}| \in \mathscr{R}(\alpha)$, and
+
+$$
+\left|\int_{a}^{b} \mathbf{f} d \alpha\right| \leq \int_{a}^{b}|\mathbf{f}| d \alpha
+$$
+
+Proof If $f_{1}, \ldots, f_{k}$ are the components of $\mathbf{f}$, then
+
+$$
+|\mathbf{f}|=\left(f_{1}^{2}+\cdots+f_{k}^{2}\right)^{1 / 2} .
+$$
+
+By Theorem 6.11, each of the functions $f_{i}^{2}$ belongs to $\mathscr{R}(\alpha)$; hence so does their sum. Since $x^{2}$ is a continuous function of $x$, Theorem 4.17 shows that the square-root function is continuous on $[0, M]$, for every real $M$. If we apply Theorem 6.11 once more, (41) shows that $|\mathbf{f}| \in \mathscr{R}(\alpha)$.
+
+To prove (40), put $\mathbf{y}=\left(y_{1}, \ldots, y_{k}\right)$, where $y_{j}=\int f_{j} d \alpha$. Then we have $\mathbf{y}=\int \mathbf{f} d \alpha$, and
+
+$$
+|\mathbf{y}|^{2}=\sum y_{i}^{2}=\sum y_{j} \int f_{j} d \alpha=\int\left(\sum y_{J} f_{j}\right) d \alpha .
+$$
+
+By the Schwarz inequality,
+
+$$
+\sum y_{j} f_{j}(t) \leq|\mathbf{y}||\mathbf{f}(t)| \quad(a \leq t \leq b)
+$$
+
+hence Theorem 6.12(b) implies
+
+$$
+|\mathbf{y}|^{2} \leq|\mathbf{y}| \int|\mathbf{f}| d \alpha
+$$
+
+If $\mathbf{y}=\mathbf{0}$, (40) is trivial. If $\mathbf{y} \neq \mathbf{0}$, division of (43) by $|\mathbf{y}|$ gives (40).
+
+\section{RECTIFIABLE CURVES}
+We conclude this chapter with a topic of geometric interest which provides an application of some of the preceding theory. The case $k=2$ (i.e., the case of plane curves) is of considerable importance in the study of analytic functions of a complex variable.
+
+6.26 Definition A continuous mapping $\gamma$ of an interval $[a, b]$ into $R^{k}$ is called a curve in $R^{k}$. To emphasize the parameter interval $[a, b]$, we may also say that $\gamma$ is a curve on $[a, b]$.
+
+If $\gamma$ is one-to-one, $\gamma$ is called an arc.
+
+If $\gamma(a)=\gamma(b), \gamma$ is said to be a closed curve.
+
+It should be noted that we define a curve to be a mapping, not a point set. Of course, with each curve $\gamma$ in $R^{k}$ there is associated a subset of $R^{k}$, namely the range of $\gamma$, but different curves may have the same rarige.
+
+We associate to each partition $P=\left\{x_{0}, \ldots, x_{n}\right\}$ of $[a, b]$ and to each curve $\gamma$ on $[a, b]$ the number
+
+$$
+\Lambda(P, \gamma)=\sum_{i=1}^{n}\left|\gamma\left(x_{i}\right)-\gamma\left(x_{i-1}\right)\right|
+$$
+
+The $i$ th term in this sum is the distance (in $R^{k}$ ) between the points $\gamma\left(x_{i-1}\right)$ and $\gamma\left(x_{i}\right)$. Hence $\Lambda(P, \gamma)$ is the length of a polygonal path with vertices at $\gamma\left(x_{0}\right)$, $\gamma\left(x_{1}\right), \ldots, \gamma\left(x_{n}\right)$, in this order. As our partition becomes finer and finer, this polygon approaches the range of $\gamma$ more and more closely. This makes it seem reasonable to define the length of $\gamma$ as
+
+$$
+\Lambda(\gamma)=\sup \Lambda(P, \gamma)
+$$
+
+where the supremum is taken over all partitions of $[a, b]$.
+
+If $\Lambda(\gamma)<\infty$, we say that $\gamma$ is rectifiable.
+
+In certain cases, $\Lambda(\gamma)$ is given by a Riemann integral. We shall prove this for continuously differentiable curves, i.e., for curves $\gamma$ whose derivative $\gamma^{\prime}$ is continuous.
+
+6.27 Theorem If $\gamma^{\prime}$ is continuous on $[a, b]$, then $\gamma$ is rectifiable, and
+
+$$
+\Lambda(\gamma)=\int_{a}^{b}\left|\gamma^{\prime}(t)\right| d t
+$$
+
+Proof If $a \leq x_{i-1}<x_{i} \leq b$, then
+
+Hence
+
+$$
+\left|\gamma\left(x_{i}\right)-\gamma\left(x_{i-1}\right)\right|=\left|\int_{x_{i-1}}^{x_{t}} \gamma^{\prime}(t) d t\right| \leq \int_{x_{i-1}}^{x_{t}}\left|\gamma^{\prime}(t)\right| d t
+$$
+
+$$
+\Lambda(P, \gamma) \leq \int_{a}^{b}\left|\gamma^{\prime}(t)\right| d t
+$$
+
+for every partition $P$ of $[a, b]$. Consequently,
+
+$$
+\Lambda(\gamma) \leq \int_{a}^{b}\left|\gamma^{\prime}(t)\right| d t
+$$
+
+To prove the opposite inequality, let $\varepsilon>0$ be given. Since $\gamma^{\prime}$ is uniformly continuous on $[a, b]$, there exists $\delta>0$ such that
+
+$$
+\left|\gamma^{\prime}(s)-\gamma^{\prime}(t)\right|<\varepsilon \quad \text { if }|s-t|<\delta \text {. }
+$$
+
+Let $P=\left\{x_{0}, \ldots, x_{n}\right\}$ be a partition of $[a, b]$, with $\Delta x_{i}<\delta$ for all $i$. If $x_{i-1} \leq t \leq x_{i}$, it follows that
+
+Hence
+
+$$
+\left|\gamma^{\prime}(t)\right| \leq\left|\gamma^{\prime}\left(x_{i}\right)\right|+\varepsilon \text {. }
+$$
+
+$$
+\begin{aligned}
+\int_{x_{i-1}}^{x_{i}}\left|\gamma^{\prime}(t)\right| d t & \leq\left|\gamma^{\prime}\left(x_{i}\right)\right| \Delta x_{i}+\varepsilon \Delta x_{i} \\
+& =\left|\int_{x_{i-1}}^{x_{i}}\left[\gamma^{\prime}(t)+\gamma^{\prime}\left(x_{i}\right)-\gamma^{\prime}(t)\right] d t\right|+\varepsilon \Delta x_{i} \\
+& \leq\left|\int_{x_{i-1}}^{x_{i}} \gamma^{\prime}(t) d t\right|+\left|\int_{x_{i-1}}^{x_{i}}\left[\gamma^{\prime}\left(x_{i}\right)-\gamma^{\prime}(t)\right] d t\right|+\varepsilon \Delta x_{i} \\
+& \leq\left|\gamma\left(x_{i}\right)-\gamma\left(x_{i-1}\right)\right|+2 \varepsilon \Delta x_{i} .
+\end{aligned}
+$$
+
+If we add these inequalities, we obtain
+
+Since $\varepsilon$ was arbitrary,
+
+$$
+\begin{aligned}
+\int_{a}^{b}\left|\gamma^{\prime}(t)\right| d t & \leq \Lambda(P, \gamma)+2 \varepsilon(b-a) \\
+& \leq \Lambda(\gamma)+2 \varepsilon(b-a)
+\end{aligned}
+$$
+
+$$
+\int_{a}^{b}\left|\gamma^{\prime}(t)\right| d t \leq \Lambda(\gamma)
+$$
+
+This completes the proof.
+
+\section{EXERCISES}
+\begin{enumerate}
+  \item Suppose $\alpha$ increases on $[a, b], a \leq x_{0} \leq b, \alpha$ is continuous at $x_{0}, f\left(x_{0}\right)=1$, and $f(x)=0$ if $x \neq x_{0}$. Prove that $f \in \mathscr{R}(\alpha)$ and that $\int f d \alpha=0$.
+
+  \item Suppose $f \geq 0, f$ is continuous on $[a, b]$, and $\int_{a}^{b} f(x) d x=0$. Prove that $f(x)=0$ for all $x \in[a, b]$. (Compare this with Exercise 1.)
+
+  \item Define three functions $\beta_{1}, \beta_{2}, \beta_{3}$ as follows: $\beta_{J}(x)=0$ if $x<0, \beta_{J}(x)=1$ if $x>0$ for $j=1,2,3$; and $\beta_{1}(0)=0, \beta_{2}(0)=1, \beta_{3}(0)=\frac{1}{2}$. Let $f$ be a bounded function on $[-1,1]$.
+
+\end{enumerate}
+
+(a) Prove that $f \in \mathscr{R}\left(\beta_{1}\right)$ if and only if $f(0+)=f(0)$ and that then
+
+$$
+\int f d \beta_{1}=f(0)
+$$
+
+(b) State and prove a similar result for $\beta_{2}$.
+
+(c) Prove that $f \in \mathscr{R}\left(\beta_{3}\right)$ if and only if $f$ is continuous at 0 .
+
+$(d)$ If $f$ is continuous at 0 prove that
+
+$$
+\int f d \beta_{1}=\int f d \beta_{2}=\int f d \beta_{3}=f(0)
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item If $f(x)=0$ for all irrational $x, f(x)=1$ for all rational $x$, prove that $f \notin \mathscr{R}$ on $[a, b]$ for any $a<b$.
+
+  \item Suppose $f$ is a bounded real function on $[a, b]$, and $f^{2} \in \mathscr{R}$ on $[a, b]$. Does it follow that $f \in \mathscr{R}$ ? Does the answer change if we assume that $f^{3} \in \mathscr{R}$ ?
+
+  \item Let $P$ be the Cantor set constructed in Sec. 2.44. Let $f$ be a bounded real function on $[0,1]$ which is continuous at every point outside $P$. Prove that $f \in \mathscr{R}$ on $[0,1]$. Hint: $P$ can be covered by finitely many segments whose total length can be made as small as desired. Proceed as in Theorem 6.10.
+
+  \item Suppose $f$ is a real function on $(0,1]$ and $f \in \mathscr{R}$ on $[c, 1]$ for every $c>0$. Define
+
+\end{enumerate}
+
+$$
+\int_{0}^{1} f(x) d x=\lim _{c \rightarrow 0} \int_{c}^{1} f(x) d x
+$$
+
+if this limit exists (and is finite).
+
+(a) If $f \in \mathscr{R}$ on $[0,1]$, show that this definition of the integral agrees with the old one.
+
+(b) Construct a function $f$ such that the above limit exists, although it fails to exist with $|f|$ in place of $f$.
+
+\begin{enumerate}
+  \setcounter{enumi}{7}
+  \item Suppose $f \in \mathscr{R}$ on $[a, b]$ for every $b>a$ where $a$ is fixed. Define
+\end{enumerate}
+
+$$
+\int_{a}^{\infty} f(x) d x=\lim _{b \rightarrow \infty} \int_{a}^{b} f(x) d x
+$$
+
+if this limit exists (and is finite). In that case, we say that the integral on the left converges. If it also converges after $f$ has been replaced by $|f|$, it is said to converge absolutely.
+
+Assume that $f(x) \geq 0$ and that $f$ decreases monotonically on $[1, \infty)$. Prove that
+
+$$
+\int_{1}^{\infty} f(x) d x
+$$
+
+converges if and only if
+
+$$
+\sum_{n=1}^{\infty} f(n)
+$$
+
+converges. (This is the so-called "integral test" for convergence of series.)
+
+\begin{enumerate}
+  \setcounter{enumi}{8}
+  \item Show that integration by parts can sometimes be applied to the "improper" integrals defined in Exercises 7 and 8. (State appropriate hypotheses, formulate a theorem, and prove it.) For instance show that
+\end{enumerate}
+
+$$
+\int_{0}^{\infty} \frac{\cos x}{1+x} d x=\int_{0}^{\infty} \frac{\sin x}{(1+x)^{2}} d x
+$$
+
+Show that one of these integrals converges absolutely, but that the other does not.
+
+\begin{enumerate}
+  \setcounter{enumi}{9}
+  \item Let $p$ and $q$ be positive real numbers such that
+\end{enumerate}
+
+$$
+\frac{1}{p}+\frac{1}{q}=1
+$$
+
+Prove the following statements.
+
+(a) If $u \geq 0$ and $v \geq 0$, then
+
+$$
+u v \leq \frac{u^{p}}{p}+\frac{v^{q}}{q}
+$$
+
+Equality holds if and only if $u^{p}=v^{q}$.
+
+(b) If $f \in \mathscr{R}(\alpha), g \in \mathscr{R}(\alpha), f \geq 0, g \geq 0$, and
+
+$$
+\int_{a}^{b} f^{p} d \alpha=1=\int_{a}^{b} g^{a} d \alpha
+$$
+
+then
+
+$$
+\int_{a}^{b} f g d \alpha \leq 1
+$$
+
+(c) If $f$ and $g$ are complex functions in $\mathscr{R}(\alpha)$, then
+
+$$
+\left|\int_{a}^{b} f g d \alpha\right| \leq\left\{\int_{a}^{b}|f|^{p} d \alpha\right\}^{1 / p}\left\{\int_{a}^{b}|g|^{a} d \alpha\right\}^{1 / a}
+$$
+
+This is Hölder's inequality. When $p=q=2$ it is usually called the Schwarz inequality. (Note that Theorem 1.35 is a very special case of this.)
+
+(d) Show that Hölder's inequality is also true for the "improper" integrals described in Exercises 7 and 8.
+
+\begin{enumerate}
+  \setcounter{enumi}{10}
+  \item Let $\alpha$ be a fixed increasing function on $[a, b]$. For $u \in \mathscr{R}(\alpha)$, define
+\end{enumerate}
+
+$$
+\|u\|_{2}=\left\{\int_{a}^{b}|u|^{2} d \alpha\right\}^{1 / 2}
+$$
+
+Suppose $f, g, h \in \mathscr{R}(\alpha)$, and prove the triangle inequality
+
+$$
+\|f-h\|_{2} \leq\|f-g\|_{2}+\|g-h\|_{2}
+$$
+
+as a consequence of the Schwarz inequality, as in the proof of Theorem 1.37.
+
+\begin{enumerate}
+  \setcounter{enumi}{11}
+  \item With the notations of Exercise 11, suppose $f \in \mathscr{R}(\alpha)$ and $\varepsilon>0$. Prove that there exists a continuous function $g$ on $[a, b]$ such that $\|f-g\|_{2}<\varepsilon$.
+\end{enumerate}
+
+Hint: Let $P=\left\{x_{0}, \ldots, x_{n}\right\}$ be a suitable partition of $[a, b]$, define
+
+$$
+g(t)=\frac{x_{i}-t}{\Delta x_{i}} f\left(x_{i-1}\right)+\frac{t-x_{i-1}}{\Delta x_{i}} f\left(x_{i}\right)
+$$
+
+if $x_{t-1} \leq t \leq x_{i}$.
+
+\begin{enumerate}
+  \setcounter{enumi}{12}
+  \item Define
+\end{enumerate}
+
+$$
+f(x)=\int_{x}^{x+1} \sin \left(t^{2}\right) d t
+$$
+
+(a) Prove that $|f(x)|<1 / x$ if $x>0$.
+
+Hint: Put $t^{2}=u$ and integrate by parts, to show that $f(x)$ is equal to
+
+$$
+\frac{\cos \left(x^{2}\right)}{2 x}-\frac{\cos \left[(x+1)^{2}\right]}{2(x+1)}-\int_{x^{2}}^{(x+1)^{2}} \frac{\cos u}{4 u^{3 / 2}} d u
+$$
+
+Replace $\cos u$ by -1 .
+
+(b) Prove that
+
+$$
+2 x f(x)=\cos \left(x^{2}\right)-\cos \left[(x+1)^{2}\right]+r(x)
+$$
+
+where $|r(x)|<c / x$ and $c$ is a constant.
+
+(c) Find the upper and lower limits of $x f(x)$, as $x \rightarrow \infty$.
+
+(d) Does $\int_{0}^{\infty} \sin \left(t^{2}\right) d t$ converge?
+
+\begin{enumerate}
+  \setcounter{enumi}{13}
+  \item Deal similarly with
+\end{enumerate}
+
+$$
+f(x)=\int_{x}^{x+1} \sin \left(e^{t}\right) d t
+$$
+
+Show that
+
+$$
+e^{x}|f(x)|<2
+$$
+
+and that
+
+$$
+e^{x} f(x)=\cos \left(e^{x}\right)-e^{-1} \cos \left(e^{x+1}\right)+r(x)
+$$
+
+where $|r(x)|<C e^{-x}$, for some constant $C$.
+
+\begin{enumerate}
+  \setcounter{enumi}{14}
+  \item Suppose $f$ is a real, continuously differentiable function on $[a, b], f(a)=f(b)=0$, and
+\end{enumerate}
+
+$$
+\int_{a}^{b} f^{2}(x) d x=1
+$$
+
+Prove that
+
+$$
+\int_{a}^{b} x f(x) f^{\prime}(x) d x=-\frac{1}{2}
+$$
+
+and that
+
+$$
+\int_{a}^{b}\left[f^{\prime}(x)\right]^{2} d x \cdot \int_{a}^{b} x^{2} f^{2}(x) d x>1
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{15}
+  \item For $1<s<\infty$, define
+\end{enumerate}
+
+$$
+\zeta(s)=\sum_{n=1}^{\infty} \frac{1}{n^{s}}
+$$
+
+(This is Riemann's zeta function, of great importance in the study of the distribution of prime numbers.) Prove that
+
+(a) $\zeta(s)=s \int_{1}^{\infty} \frac{[x]}{x^{s+1}} d x$
+
+and that
+
+(b) $\zeta(s)=\frac{s}{s-1}-s \int_{1}^{\infty} \frac{x-[x]}{x^{s+1}} d x$,
+
+where $[x]$ denotes the greatest integer $\leq x$.
+
+Prove that the integral in $(b)$ converges for all $s>0$.
+
+Hint: To prove (a), compute the difference between the integral over $[1, N]$ and the $N$ th partial sum of the series that defines $\zeta(s)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{16}
+  \item Suppose $\alpha$ increases monotonically on $[a, b], g$ is continuous, and $g(x)=G^{\prime}(x)$ for $a \leq x \leq b$. Prove that
+\end{enumerate}
+
+$$
+\int_{a}^{b} \alpha(x) g(x) d x=G(b) \alpha(b)-G(a) \alpha(a)-\int_{a}^{b} G d \alpha .
+$$
+
+Hint: Take $g$ real, without loss of generality. Given $P=\left\{x_{0}, x_{1}, \ldots, x_{n}\right\}$, choose $t_{i} \in\left(x_{t-1}, x_{i}\right)$ so that $g\left(t_{i}\right) \Delta x_{i}=G\left(x_{i}\right)-G\left(x_{i-1}\right)$. Show that
+
+$$
+\sum_{i=1}^{n} \alpha\left(x_{i}\right) g\left(t_{i}\right) \Delta x_{i}=G(b) \alpha(b)-G(a) \alpha(a)-\sum_{i=1}^{n} G\left(x_{i-1}\right) \Delta \alpha_{i} .
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{17}
+  \item Let $\gamma_{1}, \gamma_{2}, \gamma_{3}$ be curves in the complex plane, defined on $[0,2 \pi]$ by
+\end{enumerate}
+
+$$
+\gamma_{1}(t)=e^{i t}, \quad \gamma_{2}(t)=e^{2 t t}, \quad \gamma_{3}(t)=e^{2 \pi l t \sin (1 / t)}
+$$
+
+Show that these three curves have the same range, that $\gamma_{1}$ and $\gamma_{2}$ are rectifiable, that the length of $\gamma_{1}$ is $2 \pi$, that the length of $\gamma_{2}$ is $4 \pi$, and that $\gamma_{3}$ is not rectifiable.
+
+\begin{enumerate}
+  \setcounter{enumi}{18}
+  \item Let $\gamma_{1}$ be a curve in $R^{k}$, defined on $[a, b]$; let $\phi$ be a continuous 1-1 mapping of $[c, d]$ onto $[a, b]$, such that $\phi(c)=a$; and define $\gamma_{2}(s)=\gamma_{1}(\phi(s))$. Prove that $\gamma_{2}$ is an arc, a closed curve, or a rectifiable curve if and only if the same is true of $\gamma_{1}$. Prove that $\gamma_{2}$ and $\gamma_{1}$ have the same length.
+\end{enumerate}
+
+\end{document}
