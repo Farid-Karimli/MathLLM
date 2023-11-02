@@ -15,7 +15,7 @@ import sys
 #  - - - - - - - - - - - - - - - - - -
 
 
-# Change this to your folder path that contains the pages of the pdf
+# Folder path that contains the images of the pdf - CHANGE
 FOLDER_PATH = "/Users/faridkarimli/Downloads/ilovepdf_pages-to-jpg"
 
 images = sorted(os.listdir(FOLDER_PATH))[1:]
