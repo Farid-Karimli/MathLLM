@@ -26,69 +26,54 @@ function_schema = {
             "theorems": {
                 "type": "object",
                 "description": "Dictionary of theorems, keyed by theorem number and letter. Each value is an object with the theorem statement and its proof.",
-                "additionalProperties": {
-                    "type": "object",
-                    "properties": {
-                        "statement": {
-                            "type": "string",
-                            "description": "The statement of the theorem."
-                        },
-                        "proof": {
-                            "type": ["string", "null"],
-                            "description": "The proof of the theorem. If the proof is not provided, this will be null."
-                        }
+                "properties": {
+                    "statement": {
+                        "type": "string",
+                        "description": "The statement of the theorem."
                     },
-                    "required": ["statement"]
+                    "proof": {
+                        "type": ["string", "null"],
+                        "description": "The proof of the theorem. If the proof is not provided, this will be null."
+                    }
                 }
             },
             "definitions": {
                 "type": "object",
-                "description": "Dictionary of definitions, keyed by definition number and letter. Each value is the statement of the definition, including any notes on notation or common usage.",
-                "additionalProperties": {
-                    "type": "string",
-                    "description": "The statement of the definition, potentially including author's notes."
-                }
+                "description": "Dictionary of definitions, keyed by definition number and letter. Each value is the statement of the definition, including any notes on notation or common usage."
             },
             "corollaries": {
                 "type": "object",
                 "description": "Dictionary of corollaries, similar to theorems, keyed by corollary number and letter. Each value is an object with the corollary statement and its proof.",
-                "additionalProperties": {
-                    "type": "object",
-                    "properties": {
-                        "statement": {
-                            "type": "string",
-                            "description": "The statement of the corollary."
-                        },
-                        "proof": {
-                            "type": ["string", "null"],
-                            "description": "The proof of the corollary. If the proof is not provided, this will be null."
-                        }
+                "properties": {
+                    "statement": {
+                        "type": "string",
+                        "description": "The statement of the corollary."
                     },
-                    "required": ["statement"]
+                    "proof": {
+                        "type": ["string", "null"],
+                        "description": "The proof of the corollary. If the proof is not provided, this will be null."
+                    }
                 }
             },
             "propositions": {
                 "type": "object",
                 "description": "Dictionary of propositions, structured like theorems, keyed by proposition number and letter. Each value is an object with the proposition statement and its proof.",
-                "additionalProperties": {
-                    "type": "object",
-                    "properties": {
-                        "statement": {
-                            "type": "string",
-                            "description": "The statement of the proposition."
-                        },
-                        "proof": {
-                            "type": ["string", "null"],
-                            "description": "The proof of the proposition. If the proof is not provided, this will be null."
-                        }
+                "properties": {
+                    "statement": {
+                        "type": "string",
+                        "description": "The statement of the proposition."
                     },
-                    "required": ["statement"]
+                    "proof": {
+                        "type": ["string", "null"],
+                        "description": "The proof of the proposition. If the proof is not provided, this will be null."
+                    }
                 }
             }
         },
         "required": ["theorems", "definitions", "corollaries", "propositions"]
     }
 }
+
 
 
 with open('examples.md', 'r') as f:
@@ -130,21 +115,21 @@ def extract_theorems(chapter_text):
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo-1106",
                 messages=[
-                {"role": "system", "content": "You are a machine that takes as input chapters from a math text. \
-                You must extract the relevant data from this input to use as arguments to pass into the given function provided.\
+                {"role": "system", "content": "You are a machine that takes as input chapters from a math text and extracts\
+                  the relevant data from the input to use as arguments to pass into the given function provided.\
                 If the theorem/corollary/definition/proposition has multiple parts, i.e. (a), (b), (c), etc., then \
-                 you must parse the main statement and add the necessary information from it to each of the cases, and treat it as its own theorem/corollary/definition/proposition;\
-                  e.g. Theorem 10 (a), Theorem 10 (b), etc. .\
+                 you must parse the main statement and add the necessary information from it to each of the cases, and pass it as its own theorem/corollary/definition/proposition;\
+                  to the function, e.g. Theorem 10 (a), Theorem 10 (b), etc. \
                   If the chapter does not seem like it is from a math text, it may be the appendix, introduction\
                 or some other part of the book that hasn't gotten to the material yet, then just pass in empty arguments\
-                to the function and nothing else."},
-                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + content_example},
+                to the function and nothing else. You must pass all function arguments to the function provided!"},
+                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + content_example},
                 create_sample_resopnses(json.dumps(example_output)),
-                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_2},
+                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_2},
                 create_sample_resopnses(output_2),
-                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_3},
+                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_3},
                 create_sample_resopnses(output_3),
-                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + chapter_text}],
+                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + chapter_text}],
                 functions=[function_schema],
                 function_call={"name": "parse_math_text"},
                 temperature=0,
@@ -153,8 +138,8 @@ def extract_theorems(chapter_text):
             if bool(ret):
                 break
             if count == 5:
-                with open("errors.log", "'a+'") as logf:
-                    logf.write(f'Failed to parse text {chapter_text}\n')
+                with open("errors.log", "a+") as logf:
+                    logf.write(f'Failed to parse text {chapter_text} \n')
                 return example_output_empty
         except openai.RateLimitError as e:
             sleep(60)
@@ -164,12 +149,16 @@ def extract_theorems(chapter_text):
 
 
 def string_to_dicts(ret_dict):
-    
-    return ret_dict['theorems'], ret_dict['definitions'], ret_dict['corollaries'], ret_dict['propositions']
+    try:
+        return ret_dict['theorems'], ret_dict['definitions'], ret_dict['corollaries'], ret_dict['propositions']
+    except:
+        print(ret_dict)
+        exit(1)
+
 
 def extract_correct_theorems(chunk):
     # Process completed futures as they complete
-    return string_to_dicts(extract_theorems(chunk).strip())
+    return string_to_dicts(extract_theorems(chunk))
     
 def merge_dictionaries(dict1, dict2):
     return dict1.update(dict2)
@@ -228,7 +217,7 @@ def process_md_files(folder_path, output_dir):
     corollaries = {}
     propositions = {}
 
-    with ThreadPoolExecutor(max_workers=8) as executor:
+    with ThreadPoolExecutor(max_workers=4) as executor:
         for filename in os.listdir(folder_path):
             if filename.endswith('.md'):
                 file_path = os.path.join(folder_path, filename)
@@ -251,6 +240,7 @@ def process_md_files(folder_path, output_dir):
                     corollaries.update(corollaries_temp)
                     propositions.update(propositions_temp)
                     pbar.update(1)
+                    
 
     # build up dataframe consisting of these elements
     theorems_pd = pd.DataFrame.from_dict(theorems)
