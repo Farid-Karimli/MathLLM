@@ -108,8 +108,7 @@ def create_sample_resopnses(json_input):
     return {"role": "assistant", "content": None, "function_call": {"name": "parse_math_text", "arguments": json_input}}
 
 def extract_theorems(chapter_text):
-    global content_example, example_output, example_2, output_2, example_3, output_3
-    count = 0
+    global content_example, example_output, example_2, output_2, example_3, output_3, example_output_empty
     while True:
         try: 
             response = client.chat.completions.create(
@@ -134,26 +133,25 @@ def extract_theorems(chapter_text):
                 function_call={"name": "parse_math_text"},
                 temperature=0,
             )
-            ret = json.loads(response.choices[0].message.function_call.arguments)
-            if bool(ret):
-                break
-            if count == 5:
-                with open("errors.log", "a+") as logf:
-                    logf.write(f'Failed to parse text {chapter_text} \n')
-                return example_output_empty
+            ret = json.loads(response.choices[0].message.function_call.arguments.strip())
+            break
         except openai.RateLimitError as e:
             sleep(60)
-        count += 1
+    # keep track of which keys were not found for which text
+    with open("errors.log", "a+") as logf:
+        for key,_ in example_output_empty.items():
+            try:
+                ret[key]
+            except:
+                logf.write(f'{key=} not found for text: {chapter_text} \n')
+    return ret
     
-    return ret 
+
 
 
 def string_to_dicts(ret_dict):
-    try:
-        return ret_dict['theorems'], ret_dict['definitions'], ret_dict['corollaries'], ret_dict['propositions']
-    except:
-        print(ret_dict)
-        exit(1)
+    # using get with empty dictionary in case gpt fails on output
+    return ret_dict.get('theorems',{}), ret_dict.get('definitions', {}), ret_dict.get('corollaries', {}), ret_dict.get('propositions', {})
 
 
 def extract_correct_theorems(chunk):
