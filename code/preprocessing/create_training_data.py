@@ -8,6 +8,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 import re
 from time import sleep 
+
 # Set your OpenAI API key here
 
 load_dotenv()
@@ -118,12 +119,12 @@ example_3 = '10.23 Theorem Suppose $T$ is a $\\mathscr{C}^{\\prime}$-mapping of 
 
 output_3 = '{"theorems": {"10.23": ["Suppose $T$ is a $\\\\mathscr{C}^{\\\\prime}$-mapping of an open set $E \\\\subset R^{n}$ into an open set $V \\\\subset R^{m}, S$ is a $\\\\mathscr{C}^{\\\\prime}$-mapping of $V$ into an open set $W \\\\subset R^{p}$, and $\\\\omega$ is a $k$-form in $W$, so that $\\\\omega_{S}$ is a $k$-form in $V$ and both $\\\\left(\\\\omega_{S}\\\\right)_{T}$ and $\\\\omega_{S T}$ are $k$-forms in $E$, where $S T$ is defined by $(S T)(\\\\mathbf{x})=S(T(\\\\mathbf{x}))$. Then\\n\\n$$\\n\\\\left(\\\\omega_{S}\\\\right)_{T}=\\\\omega_{S T}\\n$$","If $\\omega$ and $\\lambda$ are forms in $W$, Theorem 10.22 shows that\n\n$$\n\\left((\\omega \\wedge \\lambda)_{S}\\right)_{T}=\\left(\\omega_{S} \\wedge \\lambda_{S}\\right)_{T}=\\left(\\omega_{S}\\right)_{T} \\wedge\\left(\\lambda_{S}\\right)_{T}\n$$\n\nand\n\n$$\n(\\omega \\wedge \\lambda)_{S T}=\\omega_{S T} \\wedge \\lambda_{S T}\n$$\n\nThus if (71) holds for $\\omega$ and for $\\lambda$, it follows that (71) also holds for $\\omega \\wedge \\lambda$. Since every form can be built up from 0 -forms and 1 -forms by addition and multiplication, and since (71) is trivial for 0 -forms, it is enough to prove (71) in the case $\\omega=d z_{q}, q=1, \\ldots, p$. (We denote the points of $E, V, W$ by $\\mathbf{x}, \\mathbf{y}, \\mathbf{z}$, respectively.)\n\nLet $t_{1}, \\ldots, t_{m}$ be the components of $T$, let $s_{1}, \\ldots, s_{p}$ be the components of $S$, and let $r_{1}, \\ldots, r_{p}$ be the components of $S T$. If $\\omega=d z_{q}$, then\n\n$$\n\\omega_{s}=d s_{q}=\\sum_{j}\\left(D_{j} s_{q}\\right)(\\mathbf{y}) d y_{j}\n$$\n\nso that the chain rule implies\n\n$$\n\\begin{aligned}\n\\left(\\omega_{S}\\right)_{T} & =\\sum_{j}\\left(D_{j} s_{q}\\right)(T(\\mathbf{x})) d t_{j} \\\\\n& =\\sum_{j}\\left(D_{j} s_{q}\\right)(T(\\mathbf{x})) \\sum_{i}\\left(D_{i} t_{j}\\right)(\\mathbf{x}) d x_{i} \\\\\n& =\\sum_{i}\\left(D_{i} r_{q}\\right)(\\mathbf{x}) d x_{i}=d r_{q}=\\omega_{S T} .\n\\end{aligned}\n$$" ], "definitions": {}, "corollaries": {}, "propositions": {}}'
 
-
 def create_sample_resopnses(json_input):
     return {"role": "assistant", "content": None, "function_call": {"name": "parse_math_text", "arguments": json_input}}
 
 def extract_theorems(chapter_text):
     global content_example, example_output, example_2, output_2, example_3, output_3
+    count = 0
     while True:
         try: 
             response = client.chat.completions.create(
@@ -131,32 +132,40 @@ def extract_theorems(chapter_text):
                 messages=[
                 {"role": "system", "content": "You are a machine that takes as input chapters from a math text. \
                 You must extract the relevant data from this input to use as arguments to pass into the given function provided.\
-                If the chapter does not seem like it is from a math text, it may be the appendix, introduction\
+                If the theorem/corollary/definition/proposition has multiple parts, i.e. (a), (b), (c), etc., then \
+                 you must parse the main statement and add the necessary information from it to each of the cases, and treat it as its own theorem/corollary/definition/proposition;\
+                  e.g. Theorem 10 (a), Theorem 10 (b), etc. .\
+                  If the chapter does not seem like it is from a math text, it may be the appendix, introduction\
                 or some other part of the book that hasn't gotten to the material yet, then just pass in empty arguments\
                 to the function and nothing else."},
-                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + content_example},
+                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + content_example},
                 create_sample_resopnses(json.dumps(example_output)),
-                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_2},
+                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_2},
                 create_sample_resopnses(output_2),
-                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_3},
+                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_3},
                 create_sample_resopnses(output_3),
-                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + content_example}],
+                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + chapter_text}],
                 functions=[function_schema],
                 function_call={"name": "parse_math_text"},
                 temperature=0,
             )
-            break
+            ret = json.loads(response.choices[0].message.function_call.arguments)
+            if bool(ret):
+                break
+            if count == 5:
+                with open("errors.log", "'a+'") as logf:
+                    logf.write(f'Failed to parse text {chapter_text}\n')
+                return example_output_empty
         except openai.RateLimitError as e:
             sleep(60)
+        count += 1
     
+    return ret 
+
+
+def string_to_dicts(ret_dict):
     
-    return json.loads(response.choices[0].message.function_call.arguments)
-
-
-
-def string_to_dicts(theorem_def_corrolaires_text):
-    dictionary = json.loads(theorem_def_corrolaires_text)
-    return dictionary['theorems'], dictionary['definitions'], dictionary['corollaries'], dictionary['propositions']
+    return ret_dict['theorems'], ret_dict['definitions'], ret_dict['corollaries'], ret_dict['propositions']
 
 def extract_correct_theorems(chunk):
     # Process completed futures as they complete
