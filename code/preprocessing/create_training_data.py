@@ -139,13 +139,18 @@ def extract_theorems(chapter_text):
                 function_call={"name": "parse_math_text"},
                 temperature=0,
             )
-            ret = json.loads(response.choices[0].message.function_call.arguments.strip())
+            try:
+                ret = json.loads(response.choices[0].message.function_call.arguments.strip())
+            except Exception as e:
+                ret = example_output_empty
+                with open("json_errors.log", "a+") as logf:
+                    logf.write(f'{e=}, step_reason = {response.choices[0].finish_reason} for text: {chapter_text} \n')
             break
         except openai.RateLimitError as e:
             sleep(60)
     
     # keep track of which keys were not found for which text
-    with open("errors.log", "a+") as logf:
+    with open("incomplete_dict_errors.log", "a+") as logf:
         for key,_ in example_output_empty.items():
             try:
                 ret[key]
@@ -219,7 +224,7 @@ def process_md_files(folder_path, output_dir):
     corollaries = {}
     propositions = {}
 
-    with ThreadPoolExecutor(max_workers=4) as executor:
+    with ThreadPoolExecutor(max_workers=40) as executor:
         for filename in os.listdir(folder_path):
             if filename.endswith('.md'):
                 file_path = os.path.join(folder_path, filename)
