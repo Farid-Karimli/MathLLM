@@ -1,5 +1,6 @@
 import os
-from openai import OpenAI
+from openai import AsyncOpenAI
+import asyncio
 import openai
 import pandas as pd
 from dotenv import load_dotenv
@@ -12,7 +13,7 @@ from time import sleep
 
 load_dotenv()
 api_key = os.getenv('OPENAI_API_KEY') 
-client = OpenAI()
+client = AsyncOpenAI()
 
 chunksize = 4096
 
@@ -111,11 +112,11 @@ output_4 = {'theorems': {}, 'definitions': {'2.18 (a)': 'For a metric space X an
 def create_sample_resopnses(json_input):
     return {"role": "assistant", "content": None, "function_call": {"name": "parse_math_text", "arguments": json_input}}
 
-def extract_theorems(chapter_text):
+async def extract_theorems(chapter_text):
     global content_example, example_output, example_2, output_2, example_3, output_3, example_4, output_4
     while True:
         try: 
-            response = client.chat.completions.create(
+            response = await client.chat.completions.create(
                 model="gpt-3.5-turbo-1106",
                 messages=[
                 {"role": "system", "content": "You are a machine that takes as input chapters from a math text. \
@@ -147,9 +148,9 @@ def extract_theorems(chapter_text):
                     logf.write(f'{e=}, step_reason = {response.choices[0].finish_reason} for text: {chapter_text} \n')
             break
         except openai.RateLimitError as e:
-            sleep(60)
+            await asyncio.sleep(60)
         except Exception as e:
-            sleep(5)
+            await asyncio.sleep(5)
             continue
     
     # keep track of which keys were not found for which text
@@ -166,9 +167,10 @@ def string_to_dicts(ret_dict):
     return ret_dict.get('theorems',{}), ret_dict.get('definitions', {}), ret_dict.get('corollaries', {}), ret_dict.get('propositions', {})
 
 
-def extract_correct_theorems(chunk):
-    # Process completed futures as they complete
-    return string_to_dicts(extract_theorems(chunk))
+async def extract_correct_theorems(chunk):
+    # Await the coroutine and then process its result
+    theorems_result = await extract_theorems(chunk)
+    return string_to_dicts(theorems_result)
     
 def merge_dictionaries(dict1, dict2):
     return dict1.update(dict2)
@@ -219,37 +221,37 @@ def get_chunks(document_content):
     # Now `chunks` contains all the segments of the document.
     return chunks
 
-
-def process_md_files(folder_path, output_dir):
+async def process_md_files(folder_path, output_dir):
     global chunksize
     theorems = {}
     definitions = {}
     corollaries = {}
     propositions = {}
 
-    with ThreadPoolExecutor(max_workers=40) as executor:
-        for filename in os.listdir(folder_path):
-            if filename.endswith('.md'):
-                file_path = os.path.join(folder_path, filename)
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                # Split content into chunks and submit to the executor
-                chunks = get_chunks(content)
-                future_to_content = {}
-                for chunk in chunks: #increments smaller than chunksize to allow for window to see any missed text for theorem possibly
-                    # Submit the extract_theorems function to the executor
-                    future = executor.submit(extract_correct_theorems, chunk)
-                    future_to_content[future] = chunk
-                        
-                pbar = tqdm(total=len(chunks), desc=f"Processing file {filename}")
-                
-                for future in as_completed(future_to_content):
-                    theorems_temp, defitions_temp, corollaries_temp, propositions_temp = future.result()
-                    theorems.update(theorems_temp)
-                    definitions.update(defitions_temp)
-                    corollaries.update(corollaries_temp)
-                    propositions.update(propositions_temp)
-                    pbar.update(1)
+    tasks = []
+    for filename in os.listdir(folder_path):
+        if filename.endswith('.md'):
+            file_path = os.path.join(folder_path, filename)
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            # Split content into chunks
+            chunks = get_chunks(content)
+            for chunk in chunks:
+                # Create and append the task
+                task = asyncio.create_task(extract_correct_theorems(chunk))
+                tasks.append(task)
+
+    pbar = tqdm(total=len(chunks), desc=f"Processing file {filename}")
+    # Wait for all tasks to complete
+    for task in asyncio.as_completed(tasks):
+        theorems_temp, definitions_temp, corollaries_temp, propositions_temp = await task
+        theorems.update(theorems_temp)
+        definitions.update(definitions_temp)
+        corollaries.update(corollaries_temp)
+        propositions.update(propositions_temp)
+        pbar.update(1)
+
+    pbar.close()
                     
 
     # build up dataframe consisting of these elements
@@ -266,7 +268,7 @@ def process_md_files(folder_path, output_dir):
     return 
 
 
-def main():
+async def main():
     # we are working in MathLLM/code/preprocessing directory
 
     mathllm_folder = os.path.dirname(os.path.dirname(os.getcwd())) 
@@ -286,8 +288,8 @@ def main():
             os.makedirs(temp)
 
     for book in books: 
-        process_md_files(os.path.join(mathllm_folder, f'raw_data/{book}'), os.path.join(mathllm_folder, f'training_data/{book}'))
+        await process_md_files(os.path.join(mathllm_folder, f'raw_data/{book}'), os.path.join(mathllm_folder, f'training_data/{book}'))
     
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
