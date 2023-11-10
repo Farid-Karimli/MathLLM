@@ -148,6 +148,9 @@ def extract_theorems(chapter_text):
             break
         except openai.RateLimitError as e:
             sleep(60)
+        except Exception as e:
+            sleep(5)
+            continue
     
     # keep track of which keys were not found for which text
     with open("incomplete_dict_errors.log", "a+") as logf:
