@@ -129,16 +129,18 @@ def extract_theorems(chapter_text):
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo-1106",
                 messages=[
-                {"role": "system", "content": f"You are a machine that takes as input chapters from a math text. \
+                {"role": "system", "content": "You are a machine that takes as input chapters from a math text. \
                 You must extract the relevant data from this input to use as arguments to pass into the given function provided.\
                 If the chapter does not seem like it is from a math text, it may be the appendix, introduction\
-                or some other part of the book that hasn't gotten to the material yet. In that case just pass in empty arguments\
+                or some other part of the book that hasn't gotten to the material yet, then just pass in empty arguments\
                 to the function and nothing else."},
-                {"role": "user", "content": example_2},
+                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + content_example},
+                create_sample_resopnses(json.dumps(example_output)),
+                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_2},
                 create_sample_resopnses(output_2),
-                {"role": "user", "content": example_3},
+                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_3},
                 create_sample_resopnses(output_3),
-                {"role": "user", "content": chapter_text}],
+                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + content_example}],
                 functions=[function_schema],
                 function_call={"name": "parse_math_text"},
                 temperature=0,
@@ -147,7 +149,9 @@ def extract_theorems(chapter_text):
         except openai.RateLimitError as e:
             sleep(60)
     
-    return response.choices[0].message.function_call.arguments
+    
+    return json.loads(response.choices[0].message.function_call.arguments)
+
 
 
 def string_to_dicts(theorem_def_corrolaires_text):
