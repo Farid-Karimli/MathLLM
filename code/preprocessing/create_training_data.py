@@ -8,7 +8,6 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 import re
 from time import sleep 
-
 # Set your OpenAI API key here
 
 load_dotenv()
@@ -104,31 +103,38 @@ example_3 = '10.23 Theorem Suppose $T$ is a $\\mathscr{C}^{\\prime}$-mapping of 
 
 output_3 = '{"theorems": {"10.23": ["Suppose $T$ is a $\\\\mathscr{C}^{\\\\prime}$-mapping of an open set $E \\\\subset R^{n}$ into an open set $V \\\\subset R^{m}, S$ is a $\\\\mathscr{C}^{\\\\prime}$-mapping of $V$ into an open set $W \\\\subset R^{p}$, and $\\\\omega$ is a $k$-form in $W$, so that $\\\\omega_{S}$ is a $k$-form in $V$ and both $\\\\left(\\\\omega_{S}\\\\right)_{T}$ and $\\\\omega_{S T}$ are $k$-forms in $E$, where $S T$ is defined by $(S T)(\\\\mathbf{x})=S(T(\\\\mathbf{x}))$. Then\\n\\n$$\\n\\\\left(\\\\omega_{S}\\\\right)_{T}=\\\\omega_{S T}\\n$$","If $\\omega$ and $\\lambda$ are forms in $W$, Theorem 10.22 shows that\n\n$$\n\\left((\\omega \\wedge \\lambda)_{S}\\right)_{T}=\\left(\\omega_{S} \\wedge \\lambda_{S}\\right)_{T}=\\left(\\omega_{S}\\right)_{T} \\wedge\\left(\\lambda_{S}\\right)_{T}\n$$\n\nand\n\n$$\n(\\omega \\wedge \\lambda)_{S T}=\\omega_{S T} \\wedge \\lambda_{S T}\n$$\n\nThus if (71) holds for $\\omega$ and for $\\lambda$, it follows that (71) also holds for $\\omega \\wedge \\lambda$. Since every form can be built up from 0 -forms and 1 -forms by addition and multiplication, and since (71) is trivial for 0 -forms, it is enough to prove (71) in the case $\\omega=d z_{q}, q=1, \\ldots, p$. (We denote the points of $E, V, W$ by $\\mathbf{x}, \\mathbf{y}, \\mathbf{z}$, respectively.)\n\nLet $t_{1}, \\ldots, t_{m}$ be the components of $T$, let $s_{1}, \\ldots, s_{p}$ be the components of $S$, and let $r_{1}, \\ldots, r_{p}$ be the components of $S T$. If $\\omega=d z_{q}$, then\n\n$$\n\\omega_{s}=d s_{q}=\\sum_{j}\\left(D_{j} s_{q}\\right)(\\mathbf{y}) d y_{j}\n$$\n\nso that the chain rule implies\n\n$$\n\\begin{aligned}\n\\left(\\omega_{S}\\right)_{T} & =\\sum_{j}\\left(D_{j} s_{q}\\right)(T(\\mathbf{x})) d t_{j} \\\\\n& =\\sum_{j}\\left(D_{j} s_{q}\\right)(T(\\mathbf{x})) \\sum_{i}\\left(D_{i} t_{j}\\right)(\\mathbf{x}) d x_{i} \\\\\n& =\\sum_{i}\\left(D_{i} r_{q}\\right)(\\mathbf{x}) d x_{i}=d r_{q}=\\omega_{S T} .\n\\end{aligned}\n$$" ], "definitions": {}, "corollaries": {}, "propositions": {}}'
 
+with open('example_2.md', 'r') as f:
+    example_4 = f.read()
+
+output_4 = {'theorems': {}, 'definitions': {'2.18 (a)': 'For a metric space X and a point $p \\in X$:A neighborhood of $p$ is a set $N_{r}(p)$ consisting of all $q$ such that $d(p, q)<r$, for some $r>0$. The number $r$ is called the radius of $N_{r}(p)$.', '2.18 (b)': 'For a metric space X and a point $p \\in X$: A point $p$ is a limit point of the set $E$ if every neighborhood of $p$ contains a point $q \\neq p$ such that $q \\in E$.', '2.18 (c)': 'For a metric space X and a point $p \\in X$, and $E \\subset X$: If $p \\in E$ and $p$ is not a limit point of $E$, then $p$ is called an isolated point of $E$.', '2.18 (d)': 'For a metric space X and $E \\subset X$: $E$ is closed if every limit point of $E$ is a point of $E$.', '2.18 (e)': 'For a metric space X and a point $p \\in X$, and $E \\subset X$: A point $p$ is an interior point of $E$ if there is a neighborhood $N$ of $p$ such that $N \\subset E$.', '2.18 (f)': 'For a metric space X and $E \\subset X$: $E$ is open if every point of $E$ is an interior point of $E$.', '2.18 (g)': 'For a metric space X and points $p \\in X$, and $E \\subset X$: The complement of $E$ (denoted by $E^{c}$ ) is the set of all points $p \\in X$ such that $p \\notin E$.', '2.18 (h)': 'For a metric space X  $E \\subset X$: $E$ is perfect if $E$ is closed and if every point of $E$ is a limit point of $E$.', '2.18 (i)': 'For a metric space X and $E \\subset X$: $E$ is bounded if there is a real number $M$ and a point $q \\in X$ such that $d(p, q)<M$ for all $p \\in E$.', '2.18 (j)': 'For a metric space X and $E \\subset X$: $E$ is dense in $X$ if every point of $X$ is a limit point of $E$, or a point of $E$ (or both). Let us note that in $R^{1}$ neighborhoods are segments, whereas in $R^{2}$ neighborhoods are interiors of circles.'}, 'corollaries': {}, 'propositions': {}}
+
 def create_sample_resopnses(json_input):
     return {"role": "assistant", "content": None, "function_call": {"name": "parse_math_text", "arguments": json_input}}
 
 def extract_theorems(chapter_text):
-    global content_example, example_output, example_2, output_2, example_3, output_3, example_output_empty
+    global content_example, example_output, example_2, output_2, example_3, output_3, example_4, output_4
     while True:
         try: 
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo-1106",
                 messages=[
-                {"role": "system", "content": "You are a machine that takes as input chapters from a math text and extracts\
-                  the relevant data from the input to use as arguments to pass into the given function provided.\
+                {"role": "system", "content": "You are a machine that takes as input chapters from a math text. \
+                You must extract the relevant data from this input to use as arguments to pass into the given function provided.\
                 If the theorem/corollary/definition/proposition has multiple parts, i.e. (a), (b), (c), etc., then \
-                 you must parse the main statement and add the necessary information from it to each of the cases, and pass it as its own theorem/corollary/definition/proposition;\
-                  to the function, e.g. Theorem 10 (a), Theorem 10 (b), etc. \
+                 you must parse the main statement and add the necessary information from it to each of the cases, and treat it as its own theorem/corollary/definition/proposition;\
+                  e.g. Theorem 10 (a), Theorem 10 (b), etc. .\
                   If the chapter does not seem like it is from a math text, it may be the appendix, introduction\
                 or some other part of the book that hasn't gotten to the material yet, then just pass in empty arguments\
-                to the function and nothing else. You must pass all function arguments to the function provided!"},
-                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + content_example},
+                to the function and nothing else."},
+                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + content_example},
                 create_sample_resopnses(json.dumps(example_output)),
-                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_2},
+                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_2},
                 create_sample_resopnses(output_2),
-                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_3},
+                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_3},
                 create_sample_resopnses(output_3),
-                {"role": "user", "content": "Extract the relevant data from this input to use as arguments to pass into the given function provided:" + chapter_text}],
+                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_4},
+                create_sample_resopnses(json.dumps(output_4)),
+                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + chapter_text}],
                 functions=[function_schema],
                 function_call={"name": "parse_math_text"},
                 temperature=0,
@@ -137,6 +143,7 @@ def extract_theorems(chapter_text):
             break
         except openai.RateLimitError as e:
             sleep(60)
+    
     # keep track of which keys were not found for which text
     with open("errors.log", "a+") as logf:
         for key,_ in example_output_empty.items():
@@ -145,9 +152,6 @@ def extract_theorems(chapter_text):
             except:
                 logf.write(f'{key=} not found for text: {chapter_text} \n')
     return ret
-    
-
-
 
 def string_to_dicts(ret_dict):
     # using get with empty dictionary in case gpt fails on output
