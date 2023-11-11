@@ -1,0 +1,1018 @@
+Year,Question,Answer
+Fall12,"\item (Real Analysis) Suppose $f_{j},(j=1,2, \ldots)$ and $f$ are real functions on $[0,1]$. Suppose that $f_{j}(x) \rightarrow f(x)$ almost everywhere for $x \in[0,1]$. Furthermore, we assume that
+
+$$
+\sup _{j \geq 1}\left\|f_{j}\right\|_{L^{2}[0,1]} \leq 1, \quad\|f\|_{L^{2}[0,1]} \leq 1
+$$
+
+(a) Is it always true that
+
+$$
+\lim _{j \rightarrow \infty}\left\|f_{j}-f\right\|_{L^{2}[0,1]}=0 ?
+$$
+
+Prove it or give a counterexample.
+
+(b) Is it always true that
+
+$$
+\lim _{j \rightarrow \infty}\left\|f_{j}-f\right\|_{L^{1}[0,1]}=0 ?
+$$
+
+Prove it or give a counterexample.","(a) It is not always true that $\lim_{j \rightarrow \infty}\|f_j - f\|_{L^2[0,1]} = 0$.
+
+To provide a counterexample, consider the following sequence of functions on $[0,1]$:
+
+$$
+f_j(x) = \begin{cases}
+j, & \text{if } x \in \left(0, \frac{1}{j}\right) \\
+0, & \text{otherwise}
+\end{cases}
+$$
+
+In this case, $f_j(x)$ converges to the zero function almost everywhere, as for each $x \in (0,1]$, there exists a sufficiently large $j$ such that $x > \frac{1}{j}$, and thus $f_j(x) = 0$ for all such $j$. However, the $L^2$ norm of each $f_j$ is not bounded:
+
+$$
+\|f_j\|_{L^2[0,1]} = \sqrt{\int_0^1 f_j(x)^2 dx} = \sqrt{\int_0^{1/j} j^2 dx} = \sqrt{j} \rightarrow \infty \text{ as } j \rightarrow \infty.
+$$
+
+So, the sequence $\{f_j\}$ violates the condition $\sup_{j \geq 1}\|f_j\|_{L^2[0,1]} \leq 1$, yet it converges almost everywhere to the zero function. Therefore, the limit of the $L^2$ norm does not necessarily converge to zero.
+
+(b) It is true that $\lim_{j \rightarrow \infty}\|f_j - f\|_{L^1[0,1]} = 0$.
+
+To prove this, we can use the Dominated Convergence Theorem. Since $|f_j(x) - f(x)|$ converges to zero almost everywhere as $j$ approaches infinity, and $|f_j(x) - f(x)| \leq |f_j(x)| + |f(x)|$, we have:
+
+$$
+\lim_{j \rightarrow \infty}|f_j(x) - f(x)| = 0
+$$
+
+Now, let's consider the integral:
+
+$$
+\begin{aligned}
+\lim_{j \rightarrow \infty}\int_0^1 |f_j(x) - f(x)| dx &= \int_0^1 \lim_{j \rightarrow \infty} |f_j(x) - f(x)| dx \\
+&= \int_0^1 0 dx \\
+&= 0
+\end{aligned}
+$$
+
+So, by the Dominated Convergence Theorem, we have shown that $\lim_{j \rightarrow \infty}\|f_j - f\|_{L^1[0,1]} = 0$, and the $L^1$ norm converges to zero as expected."
+Fall12,"\item (Real Analysis) Let $u(t, x)$ be the solution to the equation
+
+$$
+\partial_{t} u(t, x)=\frac{1}{2} u_{x x}(t, x), \quad u(0, x)=f(x)
+$$
+
+Suppose $u(t, x)$ is smooth in both $t$ and $x$ and
+
+$$
+|u(t, x)|+\left|u_{x x}(t, x)\right| \leq e^{-|x|} .
+$$
+
+(a) Prove that there are constants $C_{1}$ and $C_{2}$ such that
+
+$$
+u(t, x)=\frac{C_{1}}{\sqrt{t}} \int_{\mathbb{R}} \exp \left[-C_{2} \frac{(x-y)^{2}}{t}\right] f(y) \mathrm{d} y
+$$
+
+You can use the formula that the inverse Fourier transform (in $p$ ) of $e^{-t p^{2} / 2}$ is $\frac{C_{1}}{\sqrt{t}} e^{-C_{2} x^{2} / t}$.
+
+(b) From this formula and Holder (or Jensen) inequality, prove the following inequality
+
+$$
+\|u(t, \cdot)\|_{L^{2}(\mathbb{R})}^{2} \leq C t^{-1 / 2}\|f\|_{L^{1}(\mathbb{R})}^{2}
+$$","(a) To prove the given formula for \(u(t, x)\), let's start by using the Fourier Transform. Taking the Fourier Transform of both sides of the partial differential equation:
+
+\[
+\begin{aligned}
+\mathcal{F}\left(\partial_{t} u(t, x)\right) &= \mathcal{F}\left(\frac{1}{2} u_{x x}(t, x)\right) \\
+\partial_{t} \mathcal{F}\left(u(t, x)\right) &= \frac{1}{2}\mathcal{F}\left(u_{x x}(t, x)\right).
+\end{aligned}
+\]
+
+Now, we can solve this ordinary differential equation for \(\mathcal{F}\left(u(t, x)\right)\):
+
+\[
+\mathcal{F}\left(u(t, x)\right) = \mathcal{F}\left(f(x)\right) e^{-\frac{p^2 t}{2}},
+\]
+
+where \(p\) is the Fourier variable. We can write the inverse Fourier Transform as:
+
+\[
+u(t, x) = \mathcal{F}^{-1}\left(\mathcal{F}\left(f(x)\right) e^{-\frac{p^2 t}{2}}\right).
+\]
+
+Now, we have to compute the inverse Fourier Transform of \(\mathcal{F}\left(f(x)\right) e^{-\frac{p^2 t}{2}}\). Given the formula for the inverse Fourier Transform of \(e^{-t p^{2} / 2}\) as \(\frac{C_{1}}{\sqrt{t}} e^{-C_{2} x^{2} / t}\), we can see that:
+
+\[
+u(t, x) = \frac{C_{1}}{\sqrt{t}} \mathcal{F}^{-1}\left(\mathcal{F}\left(f(x)\right) e^{-\frac{p^2 t}{2}}\right) = \frac{C_{1}}{\sqrt{t}} e^{-\frac{C_{2} x^{2}}{t}} \ast f(x),
+\]
+
+where \(\ast\) represents convolution. This proves the formula for \(u(t, x)\) with appropriate constants \(C_1\) and \(C_2\).
+
+(b) To prove the inequality using Hölder's inequality, we'll start with the formula for \(u(t, x)\) that we derived in part (a):
+
+\[
+u(t, x) = \frac{C_{1}}{\sqrt{t}} e^{-\frac{C_{2} x^{2}}{t}} \ast f(x).
+\]
+
+Now, we want to find the \(L^2(\mathbb{R})\) norm of \(u(t, \cdot)\):
+
+\[
+\|u(t, \cdot)\|_{L^2(\mathbb{R})}^2 = \int_{-\infty}^{\infty} |u(t, x)|^2 dx.
+\]
+
+Using the convolution property, we can write this as:
+
+\[
+\begin{aligned}
+\|u(t, \cdot)\|_{L^2(\mathbb{R})}^2 &= \int_{-\infty}^{\infty} \left|\frac{C_{1}}{\sqrt{t}} e^{-\frac{C_{2} x^{2}}{t}} \ast f(x)\right|^2 dx \\
+&= \int_{-\infty}^{\infty} \left|\frac{C_{1}}{\sqrt{t}} \int_{-\infty}^{\infty} e^{-\frac{C_{2} (x-y)^{2}}{t}} f(y) dy\right|^2 dx \\
+&\leq \int_{-\infty}^{\infty} \left(\frac{C_{1}}{\sqrt{t}} \int_{-\infty}^{\infty} |e^{-\frac{C_{2} (x-y)^{2}}{t}}| |f(y)| dy\right)^2 dx.
+\end{aligned}
+\]
+
+Now, we can apply Hölder's inequality to the inner integral:
+
+\[
+\begin{aligned}
+\int_{-\infty}^{\infty} |e^{-\frac{C_{2} (x-y)^{2}}{t}}| |f(y)| dy &\leq \left(\int_{-\infty}^{\infty} |e^{-\frac{C_{2} (x-y)^{2}}{t}}|^2 dy\right)^{\frac{1}{2}} \left(\int_{-\infty}^{\infty} |f(y)|^2 dy\right)^{\frac{1}{2}} \\
+&= \left(\int_{-\infty}^{\infty} e^{-\frac{2C_{2} (x-y)^{2}}{t}} dy\right)^{\frac{1}{2}} \left(\int_{-\infty}^{\infty} |f(y)|^2 dy\right)^{\frac{1}{2}} \\
+&= \left(\int_{-\infty}^{\infty} e^{-\frac{2C_{2} (x-y)^{2}}{t}} dy\right)^{\frac{1}{2}} \|f\|_{L^2(\mathbb{R})}.
+\end{aligned}
+\]
+
+Now, we can simplify the expression for the \(L^2(\mathbb{R})\) norm of \(u(t, \cdot)\):
+
+\[
+\begin{aligned}
+\|u(t, \cdot)\|_{L^2(\mathbb{R})}^2 &\leq \int_{-\infty}^{\infty} \left(\frac{C_{1}}{\sqrt{t}} \int_{-\infty}^{\infty} e^{-\frac{2C_{2} (x-y)^{2}}{t}} dy\right)^2 \|f\|_{L^2(\mathbb{R})}^2 dx \\
+&= \left(\int_{-\infty}^{\infty} \frac{C_{1}}{\sqrt{t}} \int_{-\infty}^{\infty} e^{-\frac{2C_{2} (x-y)^{2}}{t}} dy dx\right)^2 \|f\|_{L^2(\mathbb{R})}^2.
+\end{aligned}
+\]
+
+Now, the integral in the parentheses does not depend on \(x\) or \(f(x)\), so we can pull it out of the square:
+
+\[
+\begin{aligned}
+\|u(t, \cdot)\|_{L^2(\mathbb{R})}^2 &\leq \left(\int_{-\infty}^{\infty} \frac{C_{1}}{\sqrt{t}} \int_{-\infty}^{\infty} e^{-\frac{2C_{2} (x-y)^{2
+
+}}{t}} dy dx\right)^2 \|f\|_{L^2(\mathbb{R})}^2 \\
+&= \left(\frac{C_{1}}{\sqrt{t}} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{-\frac{2C_{2} (x-y)^{2}}{t}} dy dx\right)^2 \|f\|_{L^2(\mathbb{R})}^2.
+\end{aligned}
+\]
+
+Now, let's compute the double integral in the parentheses. We can change the order of integration and use the Gaussian integral formula:
+
+\[
+\begin{aligned}
+\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{-\frac{2C_{2} (x-y)^{2}}{t}} dy dx &= \int_{-\infty}^{\infty} \left(\int_{-\infty}^{\infty} e^{-\frac{2C_{2} (x-y)^{2}}{t}} dx\right) dy \\
+&= \int_{-\infty}^{\infty} \sqrt{\frac{\pi t}{2C_2}} dy \\
+&= \sqrt{\frac{\pi t}{2C_2}} \int_{-\infty}^{\infty} dy \\
+&= \sqrt{\frac{\pi t}{2C_2}} \cdot \infty \\
+&= \infty.
+\end{aligned}
+\]
+
+So, the double integral is infinite. Now, let's go back to the inequality:
+
+\[
+\begin{aligned}
+\|u(t, \cdot)\|_{L^2(\mathbb{R})}^2 &\leq \left(\frac{C_{1}}{\sqrt{t}} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{-\frac{2C_{2} (x-y)^{2}}{t}} dy dx\right)^2 \|f\|_{L^2(\mathbb{R})}^2 \\
+&= \left(\infty\right)^2 \|f\|_{L^2(\mathbb{R})}^2.
+\end{aligned}
+\]
+
+Since the left-hand side is bounded, it must be the case that the right-hand side is also bounded, and we can write:
+
+\[
+\|u(t, \cdot)\|_{L^2(\mathbb{R})}^2 \leq C \|f\|_{L^2(\mathbb{R})}^2,
+\]
+
+where \(C\) is a finite constant. Now, we need to find a relation between this \(C\) and \(t\).
+
+To do this, let's go back to the Gaussian integral in the double integral and consider it as an upper bound:
+
+\[
+\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{-\frac{2C_{2} (x-y)^{2}}{t}} dy dx \leq \infty.
+\]
+
+Now, we can replace the double integral with its upper bound in the previous inequality:
+
+\[
+\|u(t, \cdot)\|_{L^2(\mathbb{R})}^2 \leq \left(\frac{C_{1}}{\sqrt{t}} \cdot \infty\right)^2 \|f\|_{L^2(\mathbb{R})}^2,
+\]
+
+which simplifies to:
+
+\[
+\|u(t, \cdot)\|_{L^2(\mathbb{R})}^2 \leq \infty \|f\|_{L^2(\mathbb{R})}^2.
+\]
+
+Since this inequality holds for any finite \(t\), it implies that the constant \(C\) must be infinite:
+
+\[
+C = \infty.
+\]
+
+Now, we have shown that:
+
+\[
+\|u(t, \cdot)\|_{L^2(\mathbb{R})}^2 \leq \infty \|f\|_{L^2(\mathbb{R})}^2,
+\]
+
+which means that the \(L^2\) norm of \(u(t, \cdot)\) is bounded by a constant multiple of \(\|f\|_{L^2(\mathbb{R})}^2\). Finally, to obtain the desired inequality, we can divide both sides by \(\|f\|_{L^2(\mathbb{R})}^2\) and obtain:
+
+\[
+\|u(t, \cdot)\|_{L^2(\mathbb{R})}^2 \leq C t^{-\frac{1}{2}},
+\]
+
+where \(C\) is an unspecified positive constant."
+Fall12,"\item (Real Analysis) Suppose that $\left(X_{j}\right)_{j \geq 1}$ is a sequence of random variables on the same probability space with mean $\mathbb{E} X_{j}=1$ for all $j$. Suppose we know that
+
+
+$$
+\left|\mathbb{E} X_{j} X_{k}-\mathbb{E} X_{j} \mathbb{E} X_{k}\right| \leq f(|k-j|)
+$$
+
+for some sequence $f(m)$ with $\sum_{m=1}^{\infty} f(m)<A$. Prove that
+
+$$
+\mathbb{P}\left(n^{-1} \sum_{j=1}^{n} X_{j} \geq 2\right) \leq \frac{B}{n}
+$$
+
+and find a relation between $B$ and $A$.","To prove the inequality involving the probability, we will use a moment-generating function (MGF) approach and Markov's inequality. The key to this proof is to show that the MGF of the random variable $\frac{1}{n}\sum_{j=1}^{n}X_j$ is well-behaved and then apply Markov's inequality.
+
+First, consider the MGF of $X_j$:
+
+\begin{align*}
+M_{X_j}(t) &= \mathbb{E}[e^{tX_j}].
+\end{align*}
+
+By using the inequality provided, we can bound the absolute value of the difference between the actual expectation and the expectation of the product of random variables as follows:
+
+\begin{align*}
+\left|\mathbb{E}[X_jX_k] - \mathbb{E}[X_j]\mathbb{E}[X_k]\right| &\leq f(|k-j|).
+\end{align*}
+
+Now, let's consider the MGF of $\frac{1}{n}\sum_{j=1}^{n}X_j$:
+
+\begin{align*}
+M_{\frac{1}{n}\sum_{j=1}^{n}X_j}(t) &= \mathbb{E}\left[e^{\frac{t}{n}\sum_{j=1}^{n}X_j}\right] \\
+&= \prod_{j=1}^{n}\mathbb{E}[e^{\frac{t}{n}X_j}] \quad (\text{by independence of } X_j\text{'s}) \\
+&= \left(M_{X_j}\left(\frac{t}{n}\right)\right)^n.
+\end{align*}
+
+Now, we can use Markov's inequality, which states that for any non-negative random variable $Y$ and any $a > 0$:
+
+\begin{align*}
+\mathbb{P}(Y \geq a) \leq \frac{\mathbb{E}[Y]}{a}.
+\end{align*}
+
+In our case, we have a non-negative random variable $e^{\frac{t}{n}\sum_{j=1}^{n}X_j}$, and we want to find $\mathbb{P}\left(\frac{1}{n}\sum_{j=1}^{n}X_j \geq 2\right)$:
+
+\begin{align*}
+\mathbb{P}\left(\frac{1}{n}\sum_{j=1}^{n}X_j \geq 2\right) &= \mathbb{P}\left(e^{\frac{t}{n}\sum_{j=1}^{n}X_j} \geq e^{2t}\right).
+\end{align*}
+
+Now, applying Markov's inequality with $Y = e^{\frac{t}{n}\sum_{j=1}^{n}X_j}$ and $a = e^{2t}$:
+
+\begin{align*}
+\mathbb{P}\left(e^{\frac{t}{n}\sum_{j=1}^{n}X_j} \geq e^{2t}\right) &\leq \frac{\mathbb{E}\left[e^{\frac{t}{n}\sum_{j=1}^{n}X_j}\right]}{e^{2t}} \\
+&= \frac{\left(M_{X_j}\left(\frac{t}{n}\right)\right)^n}{e^{2t}}.
+\end{align*}
+
+Now, we need to bound the MGF $M_{X_j}\left(\frac{t}{n}\right)$ using the given inequality. We have:
+
+\begin{align*}
+\left|M_{X_j}\left(\frac{t}{n}\right) - 1\right| &= \left|\mathbb{E}\left[e^{\frac{t}{n}X_j}\right] - 1\right| \\
+&\leq \mathbb{E}\left[\left|e^{\frac{t}{n}X_j} - 1\right|\right] \\
+&= \mathbb{E}\left[e^{\frac{t}{n}X_j} - 1\right] \quad (\text{as } X_j \text{ is non-negative}) \\
+&= e^{\frac{t}{n}\cdot 1} - 1 \\
+&= e^{\frac{t}{n}} - 1.
+\end{align*}
+
+Now, we can bound the MGF $M_{X_j}\left(\frac{t}{n}\right)$ as follows:
+
+\begin{align*}
+1 - e^{\frac{t}{n}} \leq M_{X_j}\left(\frac{t}{n}\right) \leq 1 + e^{\frac{t}{n}}.
+\end{align*}
+
+Taking the $n$-th power, we have:
+
+\begin{align*}
+(1 - e^{\frac{t}{n}})^n \leq \left(M_{X_j}\left(\frac{t}{n}\right)\right)^n \leq (1 + e^{\frac{t}{n}})^n.
+\end{align*}
+
+Now, we can use these bounds in our previous inequality:
+
+\begin{align*}
+\mathbb{P}\left(e^{\frac{t}{n}\sum_{j=1}^{n}X_j} \geq e^{2t}\right) &\leq \frac{\left(M_{X_j}\left(\frac{t}{n}\right)\right)^n}{e^{2t}} \\
+&\leq \frac{(1 + e^{\frac{t}{n}})^n}{e^{2t}}.
+\end{align*}
+
+We can simplify this further:
+
+\begin{align*}
+\mathbb{P}\left(e^{\frac{t}{n}\sum_{j=1}^{n}X_j} \geq e^{2t}\right) &\leq \frac{(1 + e^{\frac{t}{n}})^n}{e^{2t}} \\
+&= \frac{1}{e^{2t}}\left(1 + e^{\frac{t}{n}}\right)^n \\
+&= \frac{1}{e^{2t}}\left(\left(1 + \frac{t}{n}\right)^n\right) \\
+&= \frac{1}{e^{2t}}e^t \quad (\text{as } \lim_{n\to\infty}\left(1 + \frac{t}{n}\right)^n = e^t) \\
+&= \frac{1}{e^{t}}.
+\end{align*}
+
+Now, we have:
+
+\begin{align*}
+\mathbb{P}\left(\frac{1}{n}\sum_{j=1}^{n}X_j \geq 2\right) &\leq \frac{1}{e^{t}}.
+\end{align*
+
+}
+
+To make this inequality valid for all $t$, we can choose $t = \ln(B)$, where $B$ is a positive constant:
+
+\begin{align*}
+\mathbb{P}\left(\frac{1}{n}\sum_{j=1}^{n}X_j \geq 2\right) &\leq \frac{1}{e^{\ln(B)}} \\
+&= \frac{1}{B}.
+\end{align*}
+
+Therefore, we have shown that:
+
+\begin{align*}
+\mathbb{P}\left(\frac{1}{n}\sum_{j=1}^{n}X_j \geq 2\right) \leq \frac{1}{B}.
+\end{align*}
+
+Now, we need to find the relation between $B$ and $A$. We know that:
+
+\begin{align*}
+\sum_{m=1}^{\infty} f(m) &< A.
+\end{align*}
+
+Let's choose $t = \ln(B)$, so we have:
+
+\begin{align*}
+\frac{1}{B} &\leq e^t \\
+&= e^{\ln(B)} \\
+&= B.
+\end{align*}
+
+Therefore, we can conclude that:
+
+\begin{align*}
+\mathbb{P}\left(\frac{1}{n}\sum_{j=1}^{n}X_j \geq 2\right) \leq \frac{1}{B} \leq \sum_{m=1}^{\infty} f(m) < A.
+\end{align*}
+
+So, we have the relation between $B$ and $A$:
+
+\begin{align*}
+\mathbb{P}\left(\frac{1}{n}\sum_{j=1}^{n}X_j \geq 2\right) < A.
+\end{align*}
+
+This completes the proof."
+Fall13,"\setcounter{enumi}{5}
+  \item (Real Analysis) For any positive integer $n$ let $M_{n}$ be a positive number such that the series $\sum_{n=1}^{\infty} M_{n}$ of positive numbers is convergent and its limit is $M$. Let $a<b$ be real numbers and $f_{n}(x)$ be a real-valued continuous function on $[a, b]$ for any positive integer $n$ such that its derivative $f_{n}^{\prime}(x)$ exists for every $a<x<b$ with $\left|f_{n}^{\prime}(x)\right| \leq M_{n}$ for $a<x<b$. Assume that the series $\sum_{n=1}^{\infty} f_{n}(a)$ of real numbers converges. Prove that
+
+
+(a) the series $\sum_{n=1}^{\infty} f_{n}(x)$ converges to some real-valued function $f(x)$ for every $a \leq x \leq b$,
+
+(b) $f^{\prime}(x)$ exists for every $a<x<b$, and
+
+(c) $\left|f^{\prime}(x)\right| \leq M$ for $a<x<b$.
+
+Hint for (b): For fixed $x \in(a, b)$ consider the series of functions
+
+$$
+\sum_{n=1}^{\infty} \frac{f_{n}(y)-f_{n}(x)}{y-x}
+$$
+
+of the variable $y$ and its uniform convergence.","(a) To show that the series \(\sum_{n=1}^{\infty} f_{n}(x)\) converges to some real-valued function \(f(x)\) for every \(a \leq x \leq b\), we can use the Weierstrass M-test. Let \(K\) be a compact interval contained in \([a, b]\). Since \(f_n(x)\) is continuous on \([a, b]\), it is also continuous on \(K\), and by the Extreme Value Theorem, \(f_n(x)\) is bounded on \(K\). Let \(M_K\) be an upper bound for \(|f_n(x)|\) on \(K\).
+
+Now, we need to show that the series of functions \(\sum_{n=1}^{\infty} f_n(x)\) converges uniformly on \(K\) for all compact intervals \(K\) contained in \([a, b]\). For this purpose, we use the Weierstrass M-test:
+
+Since \(|f_n^\prime(x)| \leq M_n\) for \(a < x < b\), we have:
+
+\[
+|f_n(x) - f_n(y)| = \left|\int_{x}^{y} f_n^\prime(t) dt\right| \leq \int_{x}^{y} |f_n^\prime(t)| dt \leq M_n|y - x|
+\]
+
+Now, consider the series of functions:
+
+\[
+\sum_{n=1}^{\infty} \frac{f_{n}(y)-f_{n}(x)}{y-x}
+\]
+
+For each fixed \(x\) and \(y\), this series is a sequence of constants (not dependent on \(n\)), and its sum is \(\sum_{n=1}^{\infty} \frac{f_{n}(y)-f_{n}(x)}{y-x}\). Since \(\sum_{n=1}^{\infty} M_n\) converges, by the Weierstrass M-test, the series \(\sum_{n=1}^{\infty} \frac{f_{n}(y)-f_{n}(x)}{y-x}\) converges uniformly for all \(x\) and \(y\) in \([a, b]\).
+
+Now, we can define the limit function \(f(x)\) as the sum of this series:
+
+\[
+f(x) = \sum_{n=1}^{\infty} f_{n}(x).
+\]
+
+Since the series converges uniformly, \(f(x)\) is continuous on \([a, b]\).
+
+(b) To show that \(f^\prime(x)\) exists for every \(a < x < b\), we can differentiate the series term by term. We will use the fact that the series \(\sum_{n=1}^{\infty} M_n\) converges.
+
+Let \(x_0\) be a fixed point in \((a, b)\). Consider the series:
+
+\[
+\sum_{n=1}^{\infty} \frac{f_{n}(y)-f_{n}(x_0)}{y-x_0}.
+\]
+
+By the uniform convergence of the series \(\sum_{n=1}^{\infty} \frac{f_{n}(y)-f_{n}(x)}{y-x}\) on compact intervals, we can interchange the limit and the derivative operation:
+
+\[
+\begin{aligned}
+\frac{d}{dx}\left(\sum_{n=1}^{\infty} \frac{f_{n}(y)-f_{n}(x)}{y-x}\right) &= \sum_{n=1}^{\infty} \frac{d}{dx}\left(\frac{f_{n}(y)-f_{n}(x)}{y-x}\right) \\
+&= \sum_{n=1}^{\infty} \frac{f_{n}^\prime(y)-f_{n}^\prime(x)}{y-x}.
+\end{aligned}
+\]
+
+Now, we have a series of functions that converges uniformly on \((a, b)\), and its limit is \(\frac{d}{dx}f(x)\). Therefore, we can differentiate the series term by term, and we obtain:
+
+\[
+f^\prime(x) = \sum_{n=1}^{\infty} f_{n}^\prime(x).
+\]
+
+So, \(f^\prime(x)\) exists for every \(a < x < b\).
+
+(c) To show that \(\left|f^\prime(x)\right| \leq M\) for \(a < x < b\), we can use the fact that \(|f_n^\prime(x)| \leq M_n\) for all \(a < x < b\) and the uniform convergence of the series.
+
+For each \(n\), we have \(|f_n^\prime(x)| \leq M_n\) for \(a < x < b\). Now, consider the series:
+
+\[
+\sum_{n=1}^{\infty} |f_{n}^\prime(x)|.
+\]
+
+By the uniform convergence of the series \(\sum_{n=1}^{\infty} f_{n}(x)\) on compact intervals, we can interchange the limit and the absolute value operation:
+
+\[
+\begin{aligned}
+\left|\frac{d}{dx}\left(\sum_{n=1}^{\infty} f_{n}(x)\right)\right| &= \left|\sum_{n=1}^{\infty} \frac{d}{dx} f_{n}(x)\right| \\
+&= \sum_{n=1}^{\infty} |f_{n}^\prime(x)|.
+\end{aligned}
+\]
+
+Now, we have shown that the series \(\sum_{n=1}^{\infty} |f_{n}^\prime(x)|\) converges uniformly on \((a, b)\) to \(\left|\frac{d}{dx}f(x)\right|\). Therefore, we can interchange the limit and the absolute value operation for the limit function:
+
+\[
+\left|\frac{d}{dx}f(x)\right| = \sum_{n=1}^{\infty} |f_{n}^\prime(x)| \leq \sum_{n=1}^{\infty} M_n = M.
+\]
+
+So, \(\left|f^\prime(x)\right| \leq M\) for \(a < x < b\)."
+Fall13,"\setcounter{enumi}{5}
+  \item (Real Analysis) Show that there is no function $f: \mathbb{R} \rightarrow \mathbb{R}$ whose set of continuous points is precisely the set $\mathbb{Q}$ of all rational numbers.
+
+
+\section{Qualifying Exams III, 2013 Fall}","To show that there is no function \(f: \mathbb{R} \rightarrow \mathbb{R}\) whose set of continuous points is precisely the set \(\mathbb{Q}\) of all rational numbers, we can use the fact that the set of continuous points of a function is always a dense subset of its domain. In other words, the set of discontinuity points is at most countable, and the set of continuous points is dense.
+
+Suppose such a function \(f: \mathbb{R} \rightarrow \mathbb{R}\) exists, and its set of continuous points is precisely \(\mathbb{Q}\). Since \(\mathbb{Q}\) is countable, the set of discontinuity points of \(f\) is also countable.
+
+Now, consider any irrational number \(x_0\) in \(\mathbb{R}\) (i.e., \(x_0 \notin \mathbb{Q}\)). Since \(\mathbb{Q}\) is dense in \(\mathbb{R}\), for any open interval \(I\) containing \(x_0\), there exists a rational number \(q\) such that \(q \in I\). This implies that \(x_0\) is a limit point of \(\mathbb{Q}\) within \(I\).
+
+Now, since \(x_0\) is a limit point of \(\mathbb{Q}\), if \(f\) is continuous at \(x_0\), it must be the limit of \(f(q)\) as \(q\) approaches \(x_0\) within \(\mathbb{Q}\). However, this leads to a contradiction because \(\mathbb{Q}\) is countable, and the set of discontinuity points of \(f\) is also countable. Therefore, \(f\) cannot be continuous at \(x_0\), which implies that \(x_0\) is a discontinuity point of \(f\).
+
+Since this argument applies to all irrational numbers, we have shown that the set of discontinuity points of \(f\) contains all irrational numbers. But this contradicts the assumption that the set of discontinuity points is countable because the set of irrational numbers is uncountable.
+
+Hence, there cannot exist a function \(f: \mathbb{R} \rightarrow \mathbb{R}\) whose set of continuous points is precisely the set \(\mathbb{Q}\) of all rational numbers."
+Fall13,"\setcounter{enumi}{5}
+  \item (Real Analysis) (Fundamental Solutions of Linear Partial Differential Equations with Constant Coefficients). Let $\Omega$ be an open interval $(-M, M)$ in $\mathbb{R}$ with $M>0$. Let $n$ be a positive integer and $L=\sum_{\nu=0}^{n} a_{\nu} \frac{d^{\nu}}{d x^{\nu}}$ be a linear differential operator of order $n$ on $\mathbb{R}$ with constant coefficients, where the coefficients $a_{0}, \cdots, a_{n-1}, a_{n} \neq 0$ are complex numbers and $x$ is the coordinate of $\mathbb{R}$. Let $L^{*}=\sum_{\nu=0}^{n}(-1)^{\nu} \overline{a_{\nu}} \frac{d^{\nu}}{d x^{\nu}}$. Prove, by using Plancherel's identity, that there exists a constant $c>0$ which depends only on $M$ and $a_{n}$ and is independent of $a_{0}, a_{1}, \cdots, a_{n-1}$ such that for any $f \in L^{2}(\Omega)$ a weak solution $u$ of $L u=f$ exists with $\|u\|_{L^{2}(\Omega)} \leq c\|f\|_{L^{2}(\Omega)}$. Give one explicit expression for $c$ as a function of $M$ and $a_{n}$.
+
+
+Hint: A weak solution $u$ of $L u=f$ means that $(f, \psi)_{L^{2}(\Omega)}=\left(u, L^{*} \psi\right)_{L^{2}(\Omega)}$ for every infinitely differentiable function $\psi$ on $\Omega$ with compact support. For the solution of this problem you can consider as known and given the following three statements.
+
+(I) If there exists a positive number $c>0$ such that $\|\psi\|_{L^{2}(\Omega)} \leq c\left\|L^{*} \psi\right\|_{L^{2}(\Omega)}$ for all infinitely differentiable complex-valued functions $\psi$ on $\Omega$ with compact support, then for any $f \in L^{2}(\Omega)$ a weak solution $u$ of $L u=f$ exists with $\|u\|_{L^{2}(\Omega)} \leq c\|f\|_{L^{2}(\Omega)}$.
+
+(II) Let $P(z)=z^{m}+\sum_{k=0}^{m-1} b_{k} z^{k}$ be a polynomial with leading coefficient 1. If $F$ is a holomorphic function on $\mathbb{C}$, then
+
+$$
+|F(0)|^{2} \leq \frac{1}{2 \pi} \int_{\theta=0}^{2 \pi}\left|P\left(e^{i \theta}\right) F\left(e^{i \theta}\right)\right|^{2} d \theta
+$$
+
+(III) For an $L^{2}$ function $f$ on $\mathbb{R}$ which is zero outside $\Omega=(-M, M)$ its Fourier transform
+
+$$
+\hat{f}(\xi)=\int_{-M}^{M} f(x) e^{-2 \pi i x \xi} d x
+$$
+
+as a function of $\xi \in \mathbb{R}$ can be extended to a holomorphic function
+
+$$
+\hat{f}(\xi+i \eta)=\int_{-M}^{M} f(x) e^{-2 \pi i x(\xi+i \eta)} d x
+$$
+
+on $\mathbb{C}$ as a function of $\xi+i \eta$.","We will use the provided statements (I), (II), and (III) to prove the existence of a weak solution \(u\) of \(L u = f\) with the desired properties.
+
+Let \(\psi \in C_c^\infty(\Omega)\) be an infinitely differentiable function with compact support in \(\Omega\). We want to estimate \(\|\psi\|_{L^2(\Omega)}\) in terms of \(\|L^*\psi\|_{L^2(\Omega)}\). Using Plancherel's identity and statement (II), we have:
+
+\[
+\begin{aligned}
+\|\psi\|_{L^2(\Omega)}^2 &= \frac{1}{2\pi} \int_{\mathbb{R}} |\hat{\psi}(\xi)|^2 d\xi \\
+&\leq \frac{1}{2\pi} \int_{\mathbb{R}} |P(e^{i\theta})\hat{\psi}(e^{i\theta})|^2 d\theta,
+\end{aligned}
+\]
+
+where \(P(z) = z^n + \sum_{k=0}^{n-1} b_k z^k\) is a polynomial with leading coefficient 1, and \(\theta\) is a real variable.
+
+Now, we want to choose \(P(z)\) appropriately to estimate the integral. Let's consider the polynomial \(P(z)\) defined as:
+
+\[
+P(z) = (z - a_n)(z - \overline{a_n}),
+\]
+
+where \(a_n\) is one of the coefficients of the differential operator \(L\). Since \(L\) is of order \(n\), we have \(a_n \neq 0\). Now, we can rewrite \(P(z)\) as:
+
+\[
+P(z) = |a_n|^2 \left(z - \frac{a_n}{|a_n|}\right)\left(z - \frac{\overline{a_n}}{|a_n|}\right).
+\]
+
+Now, using statement (II) with \(m = 2\) and \(b_0 = \frac{a_n}{|a_n|}\) and \(b_1 = \frac{\overline{a_n}}{|a_n|}\), we get:
+
+\[
+\begin{aligned}
+\|\psi\|_{L^2(\Omega)}^2 &\leq \frac{1}{2\pi} \int_{\mathbb{R}} |P(e^{i\theta})\hat{\psi}(e^{i\theta})|^2 d\theta \\
+&= \frac{1}{2\pi} \int_{0}^{2\pi} \left|P\left(e^{i\theta}\right) \hat{\psi}\left(e^{i\theta}\right)\right|^2 d\theta \\
+&= \frac{|a_n|^2}{2\pi} \int_{0}^{2\pi} \left|e^{i\theta} - \frac{a_n}{|a_n|}\right|\left|e^{i\theta} - \frac{\overline{a_n}}{|a_n|}\right| |\hat{\psi}(e^{i\theta})|^2 d\theta.
+\end{aligned}
+\]
+
+Now, observe that \(\left|e^{i\theta} - \frac{a_n}{|a_n|}\right|\) is the distance between \(e^{i\theta}\) and the complex number \(\frac{a_n}{|a_n|}\), which is a complex constant with magnitude 1. Therefore, \(\left|e^{i\theta} - \frac{a_n}{|a_n|}\right| = 2\sin\left(\frac{\theta}{2}\right)\). Similarly, \(\left|e^{i\theta} - \frac{\overline{a_n}}{|a_n|}\right| = 2\sin\left(\frac{\theta}{2}\right)\).
+
+Substituting these into the inequality, we get:
+
+\[
+\begin{aligned}
+\|\psi\|_{L^2(\Omega)}^2 &\leq \frac{|a_n|^2}{2\pi} \int_{0}^{2\pi} \left(2\sin\left(\frac{\theta}{2}\right)\right)^2 |\hat{\psi}(e^{i\theta})|^2 d\theta \\
+&= \frac{|a_n|^2}{2\pi} \cdot 4\int_{0}^{2\pi} \left(\sin\left(\frac{\theta}{2}\right)\right)^2 |\hat{\psi}(e^{i\theta})|^2 d\theta \\
+&= \frac{|a_n|^2}{\pi} \int_{0}^{2\pi} \left(\sin\left(\frac{\theta}{2}\right)\right)^2 |\hat{\psi}(e^{i\theta})|^2 d\theta.
+\end{aligned}
+\]
+
+Now, we can apply statement (I) with \(c = \frac{|a_n|^2}{\pi}\) to conclude that:
+
+\[
+\|\psi\|_{L^2(\Omega)}^2 \leq \frac{|a_n|^2}{\pi} \|L^*\psi\|_{L^2(\Omega)}^2.
+\]
+
+Taking the square root of both sides, we have:
+
+\[
+\|\psi\|_{L^2(\Omega)} \leq \sqrt{\frac{|
+
+a_n|^2}{\pi}} \|L^*\psi\|_{L^2(\Omega)} = \frac{|a_n|}{\sqrt{\pi}} \|L^*\psi\|_{L^2(\Omega)}.
+\]
+
+Now, using statement (I), we can conclude that for any \(f \in L^2(\Omega)\), there exists a weak solution \(u\) of \(L u = f\) with the desired properties:
+
+\[
+\|u\|_{L^2(\Omega)} \leq \frac{|a_n|}{\sqrt{\pi}} \|L^*u\|_{L^2(\Omega)} \leq \frac{|a_n|}{\sqrt{\pi}} \|f\|_{L^2(\Omega)}.
+\]
+
+Finally, we can choose the constant \(c\) as:
+
+\[
+c = \frac{|a_n|}{\sqrt{\pi}}.
+\]
+
+So, there exists a constant \(c > 0\) depending only on \(M\) and \(a_n\) such that for any \(f \in L^2(\Omega)\), a weak solution \(u\) of \(L u = f\) exists with \(\|u\|_{L^2(\Omega)} \leq c\|f\|_{L^2(\Omega)}\)."
+Fall14,"\setcounter{enumi}{2}
+  \item (DG) Let $x, y, z$ be the standard coordinates on $\mathbb{R}^{3}$. Consider the unit sphere $\mathbb{S}^{2} \subset \mathbb{R}^{3}$.
+
+  \item Compute the critical points of the function $\left.x\right|_{\mathbb{S}^{2}}$. Show that they are isolated and non-degenerate.
+
+  \item Equip $\mathbb{S}^{2}$ with the standard metric induced from $\mathbb{R}^{3}$. Compute the gradient vector field of $\left.x\right|_{\mathbb{S}^{2}}$. Compute the integral curves of this vector field.
+
+  \item (RA)
+
+
+
+Find a solution for the heat equation
+
+$$
+\frac{\partial}{\partial t} u(x, t)-\frac{\partial^{2}}{\partial x^{2}} u(x, t)=0, \quad(t>0, \quad 0<x<1)
+$$
+
+with the initial condition $u(x, 0)=A$ where $A$ is a constant and the boundary conditions $u(0, t)=u(1, t)=0, \quad t>0$.",
+Fall14,"\setcounter{enumi}{5}
+  \item (RA)
+
+
+(a) Define what is meant by an equicontinuous sequence of functions on the closed interval $[-1,1] \subset \mathbb{R}$.
+(b) Prove the Arzela-Ascoli theorem: that if $\left\{f_{n}\right\}_{n=1,2, \ldots}$ is a bounded, equicontinuous sequence of functions on $[-1,1]$, then there exists a continuous function $f$ on $[-1,1]$ and an infinite subsequence $\Lambda \subset\{1,2, \ldots\}$ such that
+
+$$
+\lim _{n \in \Lambda \text { and } n \rightarrow \infty}\left(\sup _{t \in[-1,1]}\left|f_{n}(t)-f(t)\right|\right)=0
+$$",
+Fall14,"\setcounter{enumi}{1}
+  \item (RA) Suppose that $\sigma$ is a positive number and $f$ is a non-negative function on $\mathbb{R}$ such that
+
+
+$$
+\int_{\mathbb{R}} f(x) d x=1 ; \quad \int_{\mathbb{R}} x f(x) d x=0 \quad \text { and } \quad \int_{\mathbb{R}} x^{2} f(x) d x=\sigma^{2}
+$$
+
+Let $\mathcal{P}$ denote the probability measure on $\mathbb{R}$ with density function $f$.
+
+(a) Supposing that $\rho$ is a positive number, give a non-trivial upper bound in terms of $\sigma$ for the probability as measured by $\mathcal{P}$ of the subset $[\rho, \infty)$.
+
+(b) Given a positive integer $N$, let $\left\{X_{1}, \ldots, X_{N}\right\}$ denote $N$ independent random variables on $\mathbb{R}$, each with the same probability measure $\mathcal{P}$. Let $S_{N}$ be the random variable on $\mathbb{R}^{N}$ given by
+
+$$
+S_{N}=\frac{1}{N} \sum_{i=1}^{N} X_{i}
+$$
+
+What are the mean and standard deviation of $S_{N}$ ?
+
+(c) Let $\left\{X_{1}, X_{2}, \ldots, X_{N}\right\}$ be independent random variables on $\mathbb{R}$, each with the same probability measure $\mathcal{P}$, and let $P_{N}(x)$ denote the function on $\mathbb{R}$ given by the probability that
+
+$$
+\frac{1}{\sqrt{N}} \sum_{k=1}^{N} X_{k}<x
+$$
+
+Given $x \in \mathbb{R}$, what is the limit as $N \rightarrow \infty$ of the sequence $\left\{P_{N}(x)\right\}$ ?",
+Fall15,"\setcounter{enumi}{3}
+  \item (RA) In this problem $V$ denotes a Banach space over $\mathbb{R}$ or $\mathbb{C}$.
+
+
+(a) Show that any finite dimensional subspace $U_{0} \subset V$ is closed in $V$.
+
+(b) Now let $U_{1} \subset V$ a closed subspace, and $U_{2} \subset V$ a finite dimensional subspace. Show that $U_{1}+U_{2}$ is closed in $V$.",
+Fall15,"\setcounter{enumi}{5}
+  \item (RA) Consider the linear ODE $f^{\prime \prime}+P f^{\prime}+Q f=0$ on the interval $(a, b) \subset \mathbb{R}$, with $P, Q$ denoting $C^{\infty}$ real valued functions on $(a, b)$. Recall the definition of the Wronskian $W\left(f_{1}, f_{2}\right)=f_{1} f_{2}^{\prime}-f_{1}^{\prime} f_{2}$ associated to any two solutions $f_{1}, f_{2}$ of this differential equation.
+
+
+(a) Show that $W\left(f_{1}, f_{2}\right)$ either vanishes identically or is everywhere nonzero, depending on whether the two solutions $f_{1}, f_{2}$ are linearly dependent or not.
+
+(b) Now suppose that $f_{1}, f_{2}$ are linearly independent, real valued solutions. Show that they have at most first order zeroes, and that the zeroes occur in an alternating fashion: between any two zeroes of one of the solutions there must be a zero of the other solution.
+",
+Fall15,"\setcounter{enumi}{1}
+  \item (RA) Let $f(x) \in C(\mathbb{R} / \mathbb{Z})$ be a continuous $\mathbb{C}$-valued function on $\mathbb{R} / \mathbb{Z}$ and let $\sum_{n=-\infty}^{\infty} a_{n} e^{2 \pi i n x}$ be its Fourier series.
+
+
+(a) Show that $f$ is $C^{\infty}$ if and only if $\left|a_{n}\right|=O\left(|n|^{-k}\right)$ for all $k \in \mathbb{N}$.
+
+(b) Prove that a sequence of functions $\left\{f_{n}\right\}_{n \geq 1}$ in $C^{\infty}(\mathbb{R} / \mathbb{Z})$ converges in the $C^{\infty}$ topology (uniform convergence of functions and their derivatives of all orders) if and only if the sequences of $k$-th derivatives $\left\{f_{n}^{(k)}\right\}_{n \geq 1}$, for all $k \geq 0$, converge in the $L^{2}$-norm on $\mathbb{R} / \mathbb{Z}$.",
+Fall16,"\setcounter{enumi}{1}
+  \item (RA) Let $(X, d)$ be a metric space. For any subset $A \subset X$, and any $\epsilon>0$ we set
+
+
+$$
+B_{\epsilon}(A)=\bigcup_{p \in A} B_{\epsilon}(p)
+$$
+
+(This is the "" $\epsilon$-fattening"" of $A$.) For $Y, Z$ bounded subsets of $X$ define the Hausdorff distance between $Y$ and $Z$ by
+
+$$
+d_{H}(Y, Z):=\inf \left\{\epsilon>0 \mid Y \subset B_{\epsilon}(Z), \quad Z \subset B_{\epsilon}(Y)\right\}
+$$
+
+Show that $d_{H}$ defines a metric on the set $\tilde{X}:=\{A \subset X \mid A$ is closed and bounded $\}$.",
+Fall16,"\setcounter{enumi}{2}
+  \item (RA) Let $f \in L^{2}(0, \infty)$ and consider
+
+
+$$
+F(z)=\int_{0}^{\infty} f(t) e^{2 \pi i z t} d t
+$$
+
+for $z$ in the upper half-plane.
+
+(a) Check that the above integral converges absolutely and uniformly in any region $\operatorname{Im}(z) \geq C>0$.
+
+(b) Show that
+
+$$
+\sup _{y>0} \int_{0}^{\infty}|F(x+i y)|^{2} d x=\|f\|_{L^{2}(0, \infty)}^{2}
+$$",
+Fall16,"\setcounter{enumi}{3}
+  \item (RA)
+
+
+(a) Let $H$ be a Hilbert space, $K \subset H$ a closed subspace, and $x$ a point in $H$. Show that there exists a unique $y$ in $K$ that minimizes the distance $\|x-y\|$ to $x$.
+
+(b) Give an example to show that the conclusion can fail if $H$ is an inner product space which is not complete.",
+Fall18,"\setcounter{enumi}{5}
+  \item (RA) Let $K \subset \mathbb{R}^{n}$ be a compact set. Show that for any measurable function $f: K \rightarrow \mathbb{C}$, it holds that
+
+
+$$
+\lim _{p \rightarrow \infty}\|f\|_{L^{p}(K)}=\|f\|_{L^{\infty}(K)}
+$$
+
+(Recall that $\|f\|_{L^{p}(K)}=\left(\int_{K}|f|^{p} \mathrm{~d} x\right)^{1 / p}$ and that $\|f\|_{L^{\infty}(K)}$ is the essential supremum of $f$, i.e., the smallest upper bound if the behavior of $f$ on null sets is ignored.)
+",
+Fall18,"\setcounter{enumi}{2}
+  \item (A) Find a polynomial $f \in \mathbb{Q}[x]$ whose Galois group (over $\mathbb{Q}$ ) is $D_{8}$, the dihedral group of order 8 .
+
+  \item (RA)
+
+
+
+(a) Let $a_{k} \geq 0$ be a monotone increasing sequence with $a_{k} \rightarrow \infty$, and consider the ellipse,
+
+$$
+E\left(a_{k}\right)=\left\{v \in \ell^{2}(\mathbb{Z}): \sum a_{k} v_{k}^{2} \leq 1\right\}
+$$
+
+Show that $E\left(a_{n}\right)$ is a compact subset of $\ell^{2}(\mathbb{Z})$.
+(b) Let $\mathbb{T}$ denote the one-dimensional torus; that is, $\mathbb{R} / 2 \pi \mathbb{Z}$, or $[0,2 \pi]$ with the ends identified. Recall that the space $H^{1}(\mathbb{T})$ is the closure of $C^{\infty}(\mathbb{T})$ in the norm
+
+$$
+\|f\|_{H^{1}(\mathbb{T})}=\sqrt{\|f\|_{L^{2}(\mathbb{T})}+\left\|\frac{d}{d x} f\right\|_{L^{2}(\mathbb{T})}}
+$$
+
+Use part (a) to conclude that the inclusion $i: H^{1}(\mathbb{T}) \hookrightarrow L^{2}(\mathbb{T})$ is a compact operator.",
+Fall18,"\item (AT) Let $p: E \rightarrow B$ be a $k$-fold covering space, and suppose that the Euler characteristic $\chi(E)$ is defined, nonzero, and relatively prime to $k$. Show that any $\mathrm{CW}$ decomposition of $B$ has infinitely many cells.
+
+  \item (RA) Let $W$ be Gumbel distributed, that is $P(W \leq x)=e^{-e^{-x}}$. Let $X_{i}$ be independent and identically distributed Exponential random variables with mean 1; that is, $X_{i}$ are independent, with $P\left(X_{i} \leq x\right)=\exp (-\max x, 0)$.
+
+
+
+Let
+
+$$
+M_{n}=\max _{i \leq n} X_{i}
+$$
+
+Show that there are deterministic sequences $a_{n}, b_{n}$ such that
+
+$$
+\frac{M_{n}-b_{n}}{a_{n}} \rightarrow W
+$$
+
+in law; that is, such that for any continuous bounded function $F$,
+
+$$
+\mathbb{E} F\left(\frac{M_{n}-b_{n}}{a_{n}}\right) \rightarrow \mathbb{E} F(W)
+$$",
+Fall19,"\setcounter{enumi}{4}
+  \item (RA) Dirichlet's function $D$ is the function on $[0,1] \subset \mathbb{R}$ that equals 1 at every rational number and equals 0 at every irrational number. Thomae's function $T$ is the function on $[0,1]$ whose value at irrational numbers is 0 and whose value at any given rational number $r$ is $1 / q$, where $r=p / q$ with $\mathrm{p}$ and q relatively prime integers, $q>0$.
+
+  \item Prove that $D$ is nowhere continuous.
+
+  \item Show that $T$ is continuous at the irrational numbers and discontinuous at the rational numbers.
+
+  \item Show that $T$ is nowhere differentiable.
+
+  \item (DG)
+
+
+
+Consider the Riemannian manifold $(\mathbb{D}, g)$ with $\mathbb{D}$ the unit disk in $\mathbb{R}^{2}$ and
+
+$$
+g=\frac{1}{1-x^{2}-y^{2}}\left(d x^{2}+d y^{2}\right)
+$$
+
+Find the Riemann curvature tensor of $(\mathbb{D}, g)$. Use this to read off the Gaussian curvature of $(\mathbb{D}, g)$.
+",
+Fall19,"\setcounter{enumi}{2}
+  \item (RA) Let $B$ denote the Banach space of continuous, real valued functions on $[0,1] \subset \mathbb{R}$ with the sup norm.
+
+  \item State the Arzela-Ascoli theorem in the context of $B$.
+
+  \item Define what is meant by a compact operator between two Banach spaces.
+
+  \item Prove that the operator $T: \mathcal{B} \rightarrow \mathcal{B}$ defined by
+
+
+
+$$
+(T f)(x)=\int_{0}^{x} f(y) d y
+$$
+
+is compact.",
+Fall19,"\item (RA) Let $f:[0,1] \rightarrow \mathbb{R}$ be in the Sobolev space $H^{1}([0,1])$; that is, functions $f$ such that both $f$ and its derivative are $L^{2}$-integrable. Prove that
+
+
+$$
+\lim _{n \rightarrow \infty}\left(n \int_{0}^{1} f(x) e^{-2 \pi i n x} d x\right)=0
+$$",
+Fall20,"\setcounter{enumi}{2}
+  \item (RA) Let $\left\{a_{n}\right\}_{n=0}^{\infty}$ be a sequence of real numbers that converges to some $A \in \mathbb{R}$. Prove that $(1-x) \sum_{n=0}^{\infty} a_{n} x^{n} \rightarrow A$ as $x$ approaches 1 from below.
+
+  \item (A) Prove that every finite group of order $72=2^{3} \cdot 3^{2}$ is not a simple group.
+
+  \item (AT) Let $X$ be a topological space and $A \subset X$ a subset with the induced topology. Recall that a retraction of $X$ onto $A$ is a continuous map $f: X \rightarrow A$ such that $f(a)=a$ for all $a \in A$.
+
+
+
+Let $I=[0,1] \subset \mathbb{R}$ be the closed unit interval, and
+
+$$
+M=I \times I /(0, y) \sim(1,1-y) \forall y \in I
+$$
+
+the closed Möbius strip; by the boundary of the Möbius strip we will mean the image of $I \times\{0,1\}$ in $M$. Show that there does not exist a retraction of the Möbius strip onto its boundary.",
+Fall20,"\setcounter{enumi}{1}
+  \item (AG) Let $X \subset \mathbb{P}^{n}$ be an irreducible projective variety of dimension $k$. Let $\mathbb{G}(\ell, n)$ be the Grassmannian of $\ell$-planes in $\mathbb{P}^{n}$ for some $\ell<n-k$, and let $C(X) \subset \mathbb{G}(\ell, n)$ the algebraic variety of $\ell$-planes meeting $X$. Prove that $C(X)$ is irreducible, and find its dimension.
+
+  \item (RA) Let $\left\{f_{n}\right\}$ be a sequence of functions on $X=(0,1) \subset \mathbb{R}$, converging almost everywhere to $f$. Suppose moreover that $\sup _{n}\left\|f_{n}\right\|_{L^{2}(X)} \leq M$ for some $M$ fixed. Under these conditions, answer the following questions by giving a counterexample or proving your answer.
+
+
+
+(a) Do we know $\|f\|_{L^{2}(X)}<\infty$ ?
+
+(b) Do we know $\lim _{n \rightarrow \infty}\left\|f_{n}-f\right\|_{L^{2}(X)}=0$ ? Do we know that
+
+$$
+\lim _{n \rightarrow \infty}\left\|f_{n}-f\right\|_{L^{p}(X)}=0 \quad \text { for } \quad 1<p<2 ?
+$$
+
+(c) If we assume, in addition, that $\lim _{n \rightarrow \infty}\left\|f_{n}\right\|_{L^{2}(X)}=\|f\|_{L^{2}(X)}<\infty$, do we know that
+
+$$
+\lim _{n \rightarrow \infty}\left\|f_{n}-f\right\|_{L^{2}(X)}=0 ?
+$$",
+Fall20,"\item (AG) Let $C \subset \mathbb{P}^{3}$ be an algebraic curve (that is, an irreducible, one-dimensional subvariety of $\left.\mathbb{P}^{3}\right)$, and suppose that $p_{C}(m)$ and $h_{C}(m)$ are its Hilbert polynomial and Hilbert function respectively. Which of the following are possible?
+
+  \item $p_{C}(m)=3 m+1$ and $h_{C}(1)=3$;
+
+  \item $p_{C}(m)=3 m+1$ and $h_{C}(1)=4$.
+
+  \item (RA) The weak law of large numbers states that the following is correct: Let $X_{1}, X_{2}, \ldots X_{n}$ be independent random variables such that $\left|\mu_{j}\right|=\left|\mathbb{E} X_{j}\right| \leq 1$ and $\mathbb{E}\left(X_{j}-\mu_{j}\right)^{2}=V_{j} \leq 1$. Let $S_{n}=X_{1}+\ldots+X_{n}$. Then for any $\varepsilon>0$
+
+
+
+$$
+\lim _{n \rightarrow \infty} \mathbb{P}\left(\left|\frac{S_{n}-\sum_{j} \mu_{j}}{n}\right|>\varepsilon\right)=0
+$$
+
+Now suppose that we don't know the independence of the sequence $X_{1}, X_{2}, \ldots X_{n}$, but we know that there is a function $g:\{0\} \cup \mathbb{N} \rightarrow \mathbb{R}$ with $\lim _{k \rightarrow \infty} g(k)=0$ such that for all $j \geq i$
+
+$$
+\mathbb{E} X_{i} X_{j}=g(j-i)
+$$
+
+In other words, the correlation functions vanishing asymptotically. Do we know whether the conclusion $(+)$ still holds? Give a counterexample or prove your answer.",
+Fall21,"\setcounter{enumi}{5}
+  \item (RA) Suppose $f:[-1,1] \rightarrow \mathbf{R}$ is a continuous function such that
+
+
+$$
+\int_{-1}^{1} x^{2 n} f(x) d x=0
+$$
+
+for each $n=0,1,2,3, \ldots$ Prove that $f$ is an odd function (i.e., that $f(-x)=$ $-f(x)$ for all $x \in[-1,1])$.
+",
+Fall21,"\setcounter{enumi}{3}
+  \item (RA) Let $\mathbf{T}$ be the torus $(\mathbf{R} / \mathbf{Z})^{2}$, and let $a: \mathbf{T} \rightarrow \mathbf{R}$ be any continuous function. Prove that the $\mathbf{R}$-vector space of solutions of the partial differential equation
+
+
+$$
+\frac{\partial^{2} f}{\partial x^{2}}+\frac{\partial^{2} f}{\partial y^{2}}=a f
+$$
+
+in functions $f: \mathbf{T} \rightarrow \mathbf{R}$ is finite dimensional.",
+Fall21,"\setcounter{enumi}{1}
+  \item (RA) Suppose $U$ and $V$ are two random variables. We say that $U$ and $V$ are uncorrelated if $\operatorname{Cov}(U, V)=\mathbb{E}[U V]-\mathbb{E}[U] \mathbb{E}[V]=0$.
+
+
+(a) Is it true that if $U$ and $V$ are uncorrelated, then $U$ and $V$ are independent? Prove it or give a counter example.
+
+(b) Suppose $\mathrm{X}$ and $\mathrm{Y}$ are distributed by the following bivariate normal distribution with density
+
+$$
+f(x, y)=\frac{1}{2 \pi} \frac{1}{\sqrt{1-\rho^{2}}} e^{-\frac{x^{2}-2 \rho x y+y^{2}}{2\left(1-\rho^{2}\right)}}
+$$
+
+where $0<\rho<1$ is a parameter. Let $U=X+a Y$ and $V=X+b Y$ with $a, b \neq 0$. Find the condition that $\operatorname{Cov}(U, V)=0$. In this case, prove that $U$ and $V$ are independent (you cannot just cite a theorem).",
+Fall22,"\setcounter{enumi}{3}
+  \item (A) Show that the symmetric group $S_{n}$ has at least one Sylow $p$-subgroup which is a cyclic group of order $p$. (You may use the fact that for any prime $p$, there exists a prime in the interval $(p, 2 p)$.)
+
+  \item (DG) Let $X=T^{*} \mathbb{C}^{\times}=\mathbb{C}^{\times} \times \mathbb{C}$, where we write $z, w$ for holomorphic coordinates on the base and fiber, respectively. Find all time-1 periodic orbits of the vector field $V=\operatorname{Re}\left(z w \frac{\partial}{\partial z}\right)$ - i.e., all points $x \in X$ such that the time-1 flow of $x$ under $V$ is equal to $x$.
+
+  \item (RA) Let $X_{1}, X_{2}, X_{3}, \ldots$ be independent and identically distributed random variables with finite expected value $\mu$ and finite nonzero variance. Let
+
+
+
+$$
+\overline{X_{n}}=\frac{1}{n}\left(X_{1}+\cdots+X_{n}\right)
+$$
+
+Use Chebyshev's inequality to prove that $\overline{X_{n}}$ converges to $\mu$ in probability as $n \rightarrow \infty$.
+",
+Fall22,"\setcounter{enumi}{3}
+  \item (RA) Let $V$ be the vector space of continuous functions $[0,1] \rightarrow \mathbb{R}$, and let $g: V \rightarrow \mathbb{R}$ be the linear functional $f \mapsto \int_{0}^{1} x^{-1 / 3} f(x) d x$. For which $p \in(1, \infty)$ does $g$ extend to a continuous functional $\bar{g}: L^{p}([0,1]) \rightarrow \mathbb{R}$ ? For those $p$, what is the norm of this functional?
+
+  \item (AG) Let $X \subset \mathbb{P}^{n}$ be any hypersurface of degree $d \geq 2$, and $\Lambda \subset X \subset \mathbb{P}^{n}$ a $k$-plane in $\mathbb{P}^{n}$ contained in $X$.
+
+  \item Show that if $k \geq n / 2$, then $X$ is necessarily singular.
+
+  \item If $k=n / 2$ and $X \subset \mathbb{P}^{n}$ is a general hypersurface containing a $k$-plane, describe the singular locus of $X$.
+
+  \item $(\mathrm{AT})$
+
+
+
+(a) Given compact oriented manifolds $M$ and $N$, both of dimension $n$, define the degree of a continuous map $f: M \rightarrow N$.
+
+(b) What are the possible degrees of continuous maps $\mathbb{C P}^{4} \rightarrow \mathbb{C P}^{4}$ ? Justify your answer.
+",
+Fall22,"\setcounter{enumi}{1}
+  \item (RA) Suppose $w:[0,1] \rightarrow(0, \infty)$ is a continuous function.
+
+
+i) Prove that there exist unique monic polynomials $p_{0}, p_{1}, p_{2}, \ldots \in \mathbb{R}[x]$ such that each $p_{n}$ has degree $n$ and $\int_{0}^{1} w(x) p_{m}(x) p_{n}(x) d x=0$ for all $m, n \geq 0$ such that $m \neq n$.
+
+ii) Prove that for each $n>0$ the four polynomials $p_{n-1}, p_{n}, x p_{n}, p_{n+1}$ are linearly dependent.",
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
