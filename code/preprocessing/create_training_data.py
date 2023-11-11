@@ -215,7 +215,7 @@ def get_chunks(document_content):
         start = end  # Start the next chunk where the last one was cut off
     # Now `chunks` contains all the segments of the document.
    
-    return chunks[-1:]
+    return chunks
 
 async def process_md_files(folder_path, output_dir):
     global chunksize
@@ -297,7 +297,7 @@ async def main():
         if not os.path.exists(temp):
             os.makedirs(temp)
 
-    for book in books[:1]: 
+    for book in books: 
         await process_md_files(os.path.join(mathllm_folder, f'raw_data/{book}'), os.path.join(mathllm_folder, f'training_data/{book}'))
     
 
