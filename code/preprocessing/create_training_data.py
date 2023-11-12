@@ -124,7 +124,7 @@ async def extract_theorems(chapter_text, output_dir):
     while True:
         try: 
             response = await client.chat.completions.create(
-                model="gpt-3.5-turbo-1106",
+                model="gpt-4-1106-preview",
                 messages=[
                 {"role": "system", "content": "You are a machine that takes as input chapters from a math text. \
                 You must extract the relevant data from this input to use as arguments to pass into the given function provided.\
