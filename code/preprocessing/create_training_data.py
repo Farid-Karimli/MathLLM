@@ -111,11 +111,16 @@ example_5 = '\n\n11.45 Theorem Let $\\left\\{\\phi_{n}\\right\\}$ be a complete 
 
 output_5 = {"theorems": {"11.45": ("Let $\\left\\{\\phi_{n}\\right\\}$ be a complete orthonormal set. If $f \\in \\mathscr{L}^{2}(\\mu)$ and if\n\n$$\nf \\sim \\sum_{n=1}^{\\infty} c_{n} \\phi_{n}\n$$\n\nthen\n\n$$\n\\int_{X}|f|^{2} d \\mu=\\sum_{n=1}^{\\infty}\\left|c_{n}\\right|^{2}\n$$\n\n", "By the Bessel inequality, $\\Sigma\\left|c_{n}\\right|^{2}$ converges. Putting\n\n$$\ns_{n}=c_{1} \\phi_{1}+\\cdots+c_{n} \\phi_{n}\n$$\n\nthe Riesz-Fischer theorem shows that there is a function $g \\in \\mathscr{L}^{2}(\\mu)$ such that\n\n$$\ng \\sim \\sum_{n=1}^{\\infty} c_{n} \\phi_{n}\n$$\n\nand such that $\\left\\|g-s_{n}\\right\\| \\rightarrow 0$. Hence $\\left\\|s_{n}\\right\\| \\rightarrow\\|g\\|$. Since\n\n$$\n\\left\\|s_{n}\\right\\|^{2}=\\left|c_{1}\\right|^{2}+\\cdots+\\left|c_{n}\\right|^{2}\n$$\n\nwe have\n\n$$\n\\int_{X}|g|^{2} d \\mu=\\sum_{n=1}^{\\infty}\\left|c_{n}\\right|^{2}\n$$\n\nNow (106), (108), and the completeness of $\\left\\{\\phi_{n}\\right\\}$ show that $\\|f-g\\|=0$, so that (109) implies (107).")}, "definitions": {}, "corollaries": {}, "propositions": {}}
 
+with open('example_3.md', 'r') as f:
+    example_6 = f.read()
+
+output_6 = {"theorems": {"4.11 (a)": ("For $M$, a closed subspace of a Hilbert space $H$: Every $x \\in H$ has then a unique decomposition\n\n$$\nx=P x+Q x\n$$\n\ninto a sum of $P x \\in M$ and $Q x \\in M^{\\perp}$", "suppose that $x^{\\prime}+y^{\\prime}=x^{\\prime \\prime}+y^{\\prime \\prime}$ for some vectors $x^{\\prime}, x^{\\prime \\prime}$ in $M$ and $y^{\\prime}, y^{\\prime \\prime}$ in $M^{\\perp}$. Then\n\n$$\nx^{\\prime}-x^{\\prime \\prime}=y^{\\prime \\prime}-y^{\\prime}\n$$\n\nSince $x^{\\prime}-x^{\\prime \\prime} \\in M, y^{\\prime \\prime}-y^{\\prime} \\in M^{\\perp}$, and $M \\cap M^{\\perp}=\\{0\\}$ [an immediate consequence of the fact that $(x, x)=0$ implies $x=0]$, we have $x^{\\prime \\prime}=x^{\\prime}, y^{\\prime \\prime}=y^{\\prime}$.\n\nTo prove the existence of the decomposition, note that the set\n\n$$\nx+M=\\{x+y: y \\in M\\}\n$$\n\nis closed and convex. Define $Q x$ to be the element of smallest norm in $x+M$; this exists, by Theorem 4.10. Define $P x=x-Q x$.\n\nSince $Q x \\in x+M$, it is clear that $P x \\in M$. Thus $P$ maps $H$ into $M$.\n\nTo prove that $Q$ maps $H$ into $M^{\\perp}$ we show that $(Q x, y)=0$ for all $y \\in M$. Assume $\\|y\\|=1$, without loss of generality, and put $z=Q x$. The minimizing property of $Q x$ shows that\n\n$$\n(z, z)=\\|z\\|^{2} \\leq\\|z-\\alpha y\\|^{2}=(z-\\alpha y, z-\\alpha y)\n$$\n\nfor every scalar $\\alpha$. This simplifies to\n\n$$\n0 \\leq-\\alpha(y, z)-\\bar{\\alpha}(z, y)+\\alpha \\bar{\\alpha} .\n$$\n\nWith $\\alpha=(z, y)$, this gives $0 \\leq-|(z, y)|^{2}$, so that $(z, y)=0$. Thus $Q x \\in M^{\\perp}$."), "4.11 (b)": ("For $M$, a closed subspace of a Hilbert space $H$, and the existing unique decomposition a unique decomposition \n\n$$\nx=P x+Q x\n$$\n\ninto a sum of $P x \\in M$ and $Q x \\in M^{\\perp}$: $P x$ and $Q x$ are the nearest points to $x$ in $M$ and in $M^{\\perp}$, respectively", "\n\nWe have already seen by $4.11 (a)$ that $P x \\in M$. If $y \\in M$, it follows that\n\n$$\n\\|x-y\\|^{2}=\\|Q x+(P x-y)\\|^{2}=\\|Q x\\|^{2}+\\|P x-y\\|^{2}\n$$\n\nwhich is obviously minimized when $y=P x$.\n\n"), "4.11 (c)": ("The mappings $P: H \\rightarrow M$ and $Q: H \\rightarrow M^{\\perp}$ are linear.\n\n", "If we apply $4.11 (a)$ to $x$, to $y$, and to $\\alpha x+\\beta y$, we obtain\n\n$$\nP(\\alpha x+\\beta y)-\\alpha P x-\\beta P y=\\alpha Q x+\\beta Q y-Q(\\alpha x+\\beta y) .\n$$\n\nThe left side is in $M$, the right side in $M^{\\perp}$. Hence both are 0 , so $P$ and $Q$ are linear."), "4.11 (d)": ("For $M$, a closed subspace of a Hilbert space $H$, and the existing unique decomposition a unique decomposition \n\n$$\nx=P x+Q x\n$$\n\ninto a sum of $P x \\in M$ and $Q x \\in M^{\\perp}$: $\\|x\\|^{2}=\\|P x\\|^{2}+\\|Q x\\|^{2}$", "\n\nSince $P x \\perp Q x,this follows from 4.11 (a)")} , "definitions": {}, "corollaries": {"4.11": ("For $M$, a closed subspace of a Hilbert space $H$: If $M \\neq H$, then there exists $y \\in H, y \\neq 0$, such that $y \\perp M$.", "take $x \\in H, x \\notin M$, and put $y=Q x$. Since $P x \\in M, x \\neq P x$, hence $y=x-P x \\neq 0$")}, "propositions": {} }
+
 def create_sample_resopnses(json_input):
     return {"role": "assistant", "content": None, "function_call": {"name": "parse_math_text", "arguments": json_input}}
 
 async def extract_theorems(chapter_text, output_dir):
-    global content_example, example_output, example_2, output_2, example_3, output_3, example_4, output_4, example_5, output_5
+    global content_example, example_output, example_2, output_2, example_3, output_3, example_4, output_4, example_5, output_5, example_6, output_6
     while True:
         try: 
             response = await client.chat.completions.create(
@@ -126,6 +131,11 @@ async def extract_theorems(chapter_text, output_dir):
                 If the theorem/corollary/definition/proposition has multiple parts, i.e. (a), (b), (c), etc., then \
                  you must parse the main statement and add the necessary information from it to each of the cases, and treat it as its own theorem/corollary/definition/proposition;\
                   e.g. Theorem 10 (a), Theorem 10 (b), etc. .\
+                 Some corollaries may not be numbered, but they will be stated right after the theorem they follow from. In that case you must \
+                 simply give the corollary the same number as the theorem it results from.\
+                 If in the case of multiple sub theorem statements such as (a), (b), (c), ..., they may make references to each other\
+                 In deriving their proof. You must make sure to make the references absolute, not relative. \
+                 So if in Theorem 10 (b), it's proof referenences part (a), add text so that its clear it references Theorem 10 (a).\
                   If the chapter does not seem like it is from a math text, it may be the appendix, introduction\
                 or some other part of the book that hasn't gotten to the material yet, then just pass in empty arguments\
                 to the function and nothing else."},
@@ -139,6 +149,8 @@ async def extract_theorems(chapter_text, output_dir):
                 create_sample_resopnses(json.dumps(output_4)),
                 {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_5},
                 create_sample_resopnses(json.dumps(output_5)),
+                 {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_6},
+                create_sample_resopnses(json.dumps(output_6)),
                 {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + chapter_text}],
                 functions=[function_schema],
                 function_call={"name": "parse_math_text"},
