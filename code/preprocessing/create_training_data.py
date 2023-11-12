@@ -119,7 +119,8 @@ output_6 = {"theorems": {"4.11 (a)": ("For $M$, a closed subspace of a Hilbert s
 def create_sample_resopnses(json_input):
     return {"role": "assistant", "content": None, "function_call": {"name": "parse_math_text", "arguments": json_input}}
 
-async def extract_theorems(chapter_text, output_dir):
+
+async def extract_theorems(chapter_text, output_dir, message_prompt = "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:"):
     global content_example, example_output, example_2, output_2, example_3, output_3, example_4, output_4, example_5, output_5, example_6, output_6
     while True:
         try: 
@@ -151,7 +152,7 @@ async def extract_theorems(chapter_text, output_dir):
                 create_sample_resopnses(json.dumps(output_5)),
                  {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_6},
                 create_sample_resopnses(json.dumps(output_6)),
-                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + chapter_text}],
+                {"role": "user", "content": message_prompt + chapter_text}],
                 functions=[function_schema],
                 function_call={"name": "parse_math_text"},
                 temperature=0,
@@ -159,21 +160,15 @@ async def extract_theorems(chapter_text, output_dir):
             try:
                 ret = json.loads(response.choices[0].message.function_call.arguments.strip())
             except Exception as e:
-                ret = example_output_empty
-                with open(f"{output_dir}/json_errors.log", "a+") as logf:
-                    logf.write(f'{e=}, step_reason = {response.choices[0].finish_reason} for text: {chapter_text} \n' + u'\u2500' * 10)
+                if response.choices[0].finish_reason == 'length':
+                    ret = await extract_theorems(chapter_text + ret, output_dir, "Please continue the response: Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:")
+                else:   
+                    ret = example_output_empty
+                    with open(f"{output_dir}/json_errors.log", "a+") as logf:
+                        logf.write(f'{e=}, stop_reason = {response.choices[0].finish_reason} for text: {chapter_text} \n' + u'\u2500' * 10)
             break
         except Exception as e:
             await asyncio.sleep(60)
-    
-    # keep track of which keys were not found for which text
-    with open(f"{output_dir}/incomplete_dict_errors.log", "a+") as logf:
-        for key,_ in example_output_empty.items():
-            try:
-                ret[key]
-            except:
-                logf.write(f'{key=} not found for text: {chapter_text} \n' + u'\u2500' * 10)
-    return ret
 
 def string_to_dicts(ret_dict):
     # using get with empty dictionary in case gpt fails on output
