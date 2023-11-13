@@ -1,4 +1,4 @@
-Year,Question,Answer
+Year,Question,Answer(4),Answer(3.5)
 Fall12,"\item (Real Analysis) Suppose $f_{j},(j=1,2, \ldots)$ and $f$ are real functions on $[0,1]$. Suppose that $f_{j}(x) \rightarrow f(x)$ almost everywhere for $x \in[0,1]$. Furthermore, we assume that
 
 $$
@@ -19,7 +19,33 @@ $$
 \lim _{j \rightarrow \infty}\left\|f_{j}-f\right\|_{L^{1}[0,1]}=0 ?
 $$
 
-Prove it or give a counterexample.","(a) It is not always true that $\lim_{j \rightarrow \infty}\|f_j - f\|_{L^2[0,1]} = 0$.
+Prove it or give a counterexample.","This is a fascinating problem in real analysis and functional analysis. Let's address each part separately:
+
+### Part (a)
+
+**Question**: Is it always true that \(\lim _{j \rightarrow \infty}\left\|f_{j}-f\right\|_{L^{2}[0,1]}=0\)?
+
+**Analysis**:
+- We are given \( f_j(x) \rightarrow f(x) \) almost everywhere.
+- We also know that both \( \{f_j\} \) and \( f \) are bounded in \( L^2[0,1] \).
+
+**Answer**:
+- This is not necessarily true. The convergence of \( f_j(x) \) to \( f(x) \) almost everywhere does not imply convergence in the \( L^2 \) norm.
+- **Counterexample**: Consider the sequence of functions \( f_j(x) = \chi_{[0,1/j]}(x) \) where \( \chi \) is the characteristic function. This sequence converges to 0 almost everywhere in \([0,1]\). However, \( \left\|f_j\right\|_{L^{2}[0,1]} = \sqrt{1/j} \), which does not converge to 0. So, \( \left\|f_{j}-f\right\|_{L^{2}[0,1]} \) where \( f(x) = 0 \) does not converge to 0.
+
+### Part (b)
+
+**Question**: Is it always true that \(\lim _{j \rightarrow \infty}\left\|f_{j}-f\right\|_{L^{1}[0,1]}=0\)?
+
+**Analysis**:
+- Again, we have \( f_j(x) \rightarrow f(x) \) almost everywhere.
+- Boundedness in \( L^2 \) does not necessarily imply boundedness in \( L^1 \), but in this case, it's given that \( \|f\|_{L^{2}[0,1]} \leq 1 \).
+
+**Answer**:
+- This is also not necessarily true. Almost everywhere convergence does not imply convergence in the \( L^1 \) norm.
+- **Counterexample**: Using the same sequence of functions as above, \( f_j(x) = \chi_{[0,1/j]}(x) \), we have \( \left\|f_j\right\|_{L^{1}[0,1]} = 1/j \), which does not converge to 0. So, \( \left\|f_{j}-f\right\|_{L^{1}[0,1]} \) where \( f(x) = 0 \) does not converge to 0.
+
+In summary, the convergence of \( f_j \) to \( f \) almost everywhere does not guarantee convergence in either the \( L^2 \) or \( L^1 \) norm. Counterexamples in both cases can be constructed using simple characteristic functions.","(a) It is not always true that $\lim_{j \rightarrow \infty}\|f_j - f\|_{L^2[0,1]} = 0$.
 
 To provide a counterexample, consider the following sequence of functions on $[0,1]$:
 
@@ -81,7 +107,47 @@ You can use the formula that the inverse Fourier transform (in $p$ ) of $e^{-t p
 
 $$
 \|u(t, \cdot)\|_{L^{2}(\mathbb{R})}^{2} \leq C t^{-1 / 2}\|f\|_{L^{1}(\mathbb{R})}^{2}
-$$","(a) To prove the given formula for \(u(t, x)\), let's start by using the Fourier Transform. Taking the Fourier Transform of both sides of the partial differential equation:
+$$","To solve this problem, we'll need to utilize some concepts from partial differential equations (PDEs) and Fourier analysis. Let's go through each part step by step.
+
+### Part (a)
+
+**Question**: Prove that there are constants \( C_1 \) and \( C_2 \) such that
+\[ u(t, x) = \frac{C_1}{\sqrt{t}} \int_{\mathbb{R}} \exp\left[-C_2 \frac{(x-y)^2}{t}\right] f(y) \, dy \]
+
+**Analysis**:
+1. The equation given is the heat equation: \(\partial_t u = \frac{1}{2} u_{xx}\).
+2. The solution to the heat equation can be expressed using the heat kernel, which is essentially the inverse Fourier transform of \(e^{-tp^2/2}\).
+
+**Answer**:
+- The solution to the heat equation can be represented as the convolution of the initial condition \(f(x)\) with the heat kernel. 
+- Given that the inverse Fourier transform of \(e^{-tp^2/2}\) is \(\frac{C_1}{\sqrt{t}} e^{-C_2 x^2/t}\), the heat kernel \(K(t,x)\) for the heat equation is given by this inverse Fourier transform.
+- Thus, \( u(t, x) \) can be represented as:
+  \[ u(t, x) = \int_{\mathbb{R}} K(t, x-y) f(y) \, dy \]
+- Substituting the heat kernel, we get:
+  \[ u(t, x) = \frac{C_1}{\sqrt{t}} \int_{\mathbb{R}} \exp\left[-C_2 \frac{(x-y)^2}{t}\right] f(y) \, dy \]
+
+### Part (b)
+
+**Question**: Prove that
+\[ \|u(t, \cdot)\|_{L^{2}(\mathbb{R})}^{2} \leq C t^{-1/2} \|f\|_{L^{1}(\mathbb{R})}^{2} \]
+
+**Analysis**:
+1. We need to use Hölder's or Jensen's inequality to relate the \(L^2\) norm of \(u\) to the \(L^1\) norm of \(f\).
+2. The formula for \(u(t, x)\) derived in part (a) will be central to this proof.
+
+**Answer**:
+- From part (a), we have \( u(t, x) = \frac{C_1}{\sqrt{t}} \int_{\mathbb{R}} \exp\left[-C_2 \frac{(x-y)^2}{t}\right] f(y) \, dy \).
+- To find \( \|u(t, \cdot)\|_{L^{2}(\mathbb{R})}^{2} \), we square \( u(t, x) \) and integrate over \( \mathbb{R} \):
+  \[ \|u(t, \cdot)\|_{L^{2}(\mathbb{R})}^{2} = \int_{\mathbb{R}} \left| \frac{C_1}{\sqrt{t}} \int_{\mathbb{R}} \exp\left[-C_2 \frac{(x-y)^2}{t}\right] f(y) \, dy \right|^2 dx \]
+- Using Hölder's inequality on the inner integral, we can bound this expression by:
+  \[ \|u(t, \cdot)\|_{L^{2}(\mathbb{R})}^{2} \leq \frac{C_1^2}{t} \int_{\mathbb{R}} \left( \int_{\mathbb{R}} \exp\left[-C_2 \frac{(x-y)^2}{t}\right] |f(y)| \, dy \right)^2 dx \]
+- Considering the properties of the exponential function and the boundedness condition \( |f(y)| \leq e^{-|y|} \), this can further be simplified and bounded, leading to the inequality:
+  \[ \|u(t, \cdot)\|_{L^{2}(\mathbb{R})}^{2} \leq C t^{-1/2} \|f\|_{L^{1}(\mathbb{R})}^{2} \]
+- The constant \( C \) here would depend on \( C_1 \) and \( C_2 \), as well as the properties of the exponential function used in the kernel.
+
+This proof relies heavily on the properties of the heat kernel and the application of Hölder's inequality to relate the \(L^2
+
+\) norm of the solution to the \(L^1\) norm of the initial condition.","(a) To prove the given formula for \(u(t, x)\), let's start by using the Fourier Transform. Taking the Fourier Transform of both sides of the partial differential equation:
 
 \[
 \begin{aligned}
@@ -241,7 +307,50 @@ $$
 \mathbb{P}\left(n^{-1} \sum_{j=1}^{n} X_{j} \geq 2\right) \leq \frac{B}{n}
 $$
 
-and find a relation between $B$ and $A$.","To prove the inequality involving the probability, we will use a moment-generating function (MGF) approach and Markov's inequality. The key to this proof is to show that the MGF of the random variable $\frac{1}{n}\sum_{j=1}^{n}X_j$ is well-behaved and then apply Markov's inequality.
+and find a relation between $B$ and $A$.","This problem involves a sequence of random variables \((X_j)_{j \geq 1}\) and seeks to establish a probability bound for the average of these variables. To tackle this problem, we can use Chebyshev's inequality and properties of variance.
+
+### Chebyshev's Inequality
+
+Chebyshev's inequality states that for any random variable \( Y \) with finite expected value \(\mu\) and finite non-zero variance \(\sigma^2\), and for any \( k > 0 \),
+\[ \mathbb{P}(|Y - \mu| \geq k\sigma) \leq \frac{1}{k^2}. \]
+
+### Applying Chebyshev's Inequality
+
+Let \( S_n = \frac{1}{n} \sum_{j=1}^{n} X_j \). We need to find \( \mathbb{P}(S_n \geq 2) \).
+
+Given \(\mathbb{E}X_j = 1\), we have \(\mathbb{E}S_n = 1\). So, we can rewrite the probability as \( \mathbb{P}(S_n - 1 \geq 1) \).
+
+Applying Chebyshev's inequality with \( k = 1 \) and \( Y = S_n \), we get
+\[ \mathbb{P}(S_n - 1 \geq 1) \leq \frac{\text{Var}(S_n)}{1^2}. \]
+
+### Variance of \( S_n \)
+
+The variance of \( S_n \) is 
+\[ \text{Var}(S_n) = \text{Var}\left(\frac{1}{n} \sum_{j=1}^{n} X_j\right) = \frac{1}{n^2} \text{Var}\left(\sum_{j=1}^{n} X_j\right). \]
+
+The variance of the sum is
+\[ \text{Var}\left(\sum_{j=1}^{n} X_j\right) = \sum_{j=1}^{n} \text{Var}(X_j) + 2 \sum_{1 \leq j < k \leq n} \text{Cov}(X_j, X_k). \]
+
+Since \( \mathbb{E}X_j = 1 \), we have \( \text{Var}(X_j) = \mathbb{E}X_j^2 - (\mathbb{E}X_j)^2 \).
+
+### Covariance
+
+For the covariance terms, we use the given inequality:
+\[ |\mathbb{E}X_j X_k - \mathbb{E}X_j \mathbb{E}X_k| \leq f(|k-j|). \]
+
+So, \( \text{Cov}(X_j, X_k) = \mathbb{E}X_j X_k - \mathbb{E}X_j \mathbb{E}X_k \) is bounded by \( f(|k-j|) \).
+
+### Bounding the Variance
+
+Using these bounds, we can derive an upper bound for \( \text{Var}(S_n) \) in terms of \( f(m) \) and then \( A \). Since \( \sum_{m=1}^{\infty} f(m) < A \), the double sum in the variance term is bounded by a function of \( A \).
+
+### Result
+
+Putting this all together, we find
+\[ \mathbb{P}(S_n \geq 2) \leq \frac{\text{Var}(S_n)}{1^2} \leq \frac{B}{n}, \]
+where \( B \) is a constant derived from the bounds on variance and covariance, relating to \( A \).
+
+This establishes the required probability bound and the relation between \( B \) and \( A \). The exact relation depends on the detailed behavior of \( f(m) \) and the variance of each \( X_j \). In practical terms, \( B \) would typically be a function that depends linearly or quadratically on \( A \), reflecting the contributions from the variances and covariances of the \( X_j \)s.","To prove the inequality involving the probability, we will use a moment-generating function (MGF) approach and Markov's inequality. The key to this proof is to show that the MGF of the random variable $\frac{1}{n}\sum_{j=1}^{n}X_j$ is well-behaved and then apply Markov's inequality.
 
 First, consider the MGF of $X_j$:
 
@@ -385,7 +494,7 @@ $$
 \sum_{n=1}^{\infty} \frac{f_{n}(y)-f_{n}(x)}{y-x}
 $$
 
-of the variable $y$ and its uniform convergence.","(a) To show that the series \(\sum_{n=1}^{\infty} f_{n}(x)\) converges to some real-valued function \(f(x)\) for every \(a \leq x \leq b\), we can use the Weierstrass M-test. Let \(K\) be a compact interval contained in \([a, b]\). Since \(f_n(x)\) is continuous on \([a, b]\), it is also continuous on \(K\), and by the Extreme Value Theorem, \(f_n(x)\) is bounded on \(K\). Let \(M_K\) be an upper bound for \(|f_n(x)|\) on \(K\).
+of the variable $y$ and its uniform convergence.",,"(a) To show that the series \(\sum_{n=1}^{\infty} f_{n}(x)\) converges to some real-valued function \(f(x)\) for every \(a \leq x \leq b\), we can use the Weierstrass M-test. Let \(K\) be a compact interval contained in \([a, b]\). Since \(f_n(x)\) is continuous on \([a, b]\), it is also continuous on \(K\), and by the Extreme Value Theorem, \(f_n(x)\) is bounded on \(K\). Let \(M_K\) be an upper bound for \(|f_n(x)|\) on \(K\).
 
 Now, we need to show that the series of functions \(\sum_{n=1}^{\infty} f_n(x)\) converges uniformly on \(K\) for all compact intervals \(K\) contained in \([a, b]\). For this purpose, we use the Weierstrass M-test:
 
@@ -464,7 +573,7 @@ Fall13,"\setcounter{enumi}{5}
   \item (Real Analysis) Show that there is no function $f: \mathbb{R} \rightarrow \mathbb{R}$ whose set of continuous points is precisely the set $\mathbb{Q}$ of all rational numbers.
 
 
-\section{Qualifying Exams III, 2013 Fall}","To show that there is no function \(f: \mathbb{R} \rightarrow \mathbb{R}\) whose set of continuous points is precisely the set \(\mathbb{Q}\) of all rational numbers, we can use the fact that the set of continuous points of a function is always a dense subset of its domain. In other words, the set of discontinuity points is at most countable, and the set of continuous points is dense.
+\section{Qualifying Exams III, 2013 Fall}",,"To show that there is no function \(f: \mathbb{R} \rightarrow \mathbb{R}\) whose set of continuous points is precisely the set \(\mathbb{Q}\) of all rational numbers, we can use the fact that the set of continuous points of a function is always a dense subset of its domain. In other words, the set of discontinuity points is at most countable, and the set of continuous points is dense.
 
 Suppose such a function \(f: \mathbb{R} \rightarrow \mathbb{R}\) exists, and its set of continuous points is precisely \(\mathbb{Q}\). Since \(\mathbb{Q}\) is countable, the set of discontinuity points of \(f\) is also countable.
 
@@ -501,7 +610,7 @@ $$
 \hat{f}(\xi+i \eta)=\int_{-M}^{M} f(x) e^{-2 \pi i x(\xi+i \eta)} d x
 $$
 
-on $\mathbb{C}$ as a function of $\xi+i \eta$.","We will use the provided statements (I), (II), and (III) to prove the existence of a weak solution \(u\) of \(L u = f\) with the desired properties.
+on $\mathbb{C}$ as a function of $\xi+i \eta$.",,"We will use the provided statements (I), (II), and (III) to prove the existence of a weak solution \(u\) of \(L u = f\) with the desired properties.
 
 Let \(\psi \in C_c^\infty(\Omega)\) be an infinitely differentiable function with compact support in \(\Omega\). We want to estimate \(\|\psi\|_{L^2(\Omega)}\) in terms of \(\|L^*\psi\|_{L^2(\Omega)}\). Using Plancherel's identity and statement (II), we have:
 
@@ -592,7 +701,7 @@ $$
 \frac{\partial}{\partial t} u(x, t)-\frac{\partial^{2}}{\partial x^{2}} u(x, t)=0, \quad(t>0, \quad 0<x<1)
 $$
 
-with the initial condition $u(x, 0)=A$ where $A$ is a constant and the boundary conditions $u(0, t)=u(1, t)=0, \quad t>0$.","To solve the heat equation
+with the initial condition $u(x, 0)=A$ where $A$ is a constant and the boundary conditions $u(0, t)=u(1, t)=0, \quad t>0$.",,"To solve the heat equation
 
 \[
 \frac{\partial}{\partial t} u(x, t) - \frac{\partial^2}{\partial x^2} u(x, t) = 0,
@@ -692,7 +801,7 @@ Fall14,"\setcounter{enumi}{5}
 
 $$
 \lim _{n \in \Lambda \text { and } n \rightarrow \infty}\left(\sup _{t \in[-1,1]}\left|f_{n}(t)-f(t)\right|\right)=0
-$$","(a) An equicontinuous sequence of functions on the closed interval \([-1, 1]\) is a sequence \(\{f_n\}_{n=1,2,\ldots}\) of functions \(f_n: [-1, 1] \rightarrow \mathbb{R}\) such that for every \(\epsilon > 0\), there exists a \(\delta > 0\) such that for all \(n\) and for all \(x, y\) in \([-1, 1]\) with \(|x - y| < \delta\), we have \(|f_n(x) - f_n(y)| < \epsilon\) for all \(n\).
+$$",,"(a) An equicontinuous sequence of functions on the closed interval \([-1, 1]\) is a sequence \(\{f_n\}_{n=1,2,\ldots}\) of functions \(f_n: [-1, 1] \rightarrow \mathbb{R}\) such that for every \(\epsilon > 0\), there exists a \(\delta > 0\) such that for all \(n\) and for all \(x, y\) in \([-1, 1]\) with \(|x - y| < \delta\), we have \(|f_n(x) - f_n(y)| < \epsilon\) for all \(n\).
 
 In other words, the equicontinuous sequence ensures that the functions in the sequence do not exhibit excessive variation for small changes in the input variable \(x\).
 
@@ -755,7 +864,7 @@ $$
 \frac{1}{\sqrt{N}} \sum_{k=1}^{N} X_{k}<x
 $$
 
-Given $x \in \mathbb{R}$, what is the limit as $N \rightarrow \infty$ of the sequence $\left\{P_{N}(x)\right\}$ ?","(a) We want to find an upper bound for the probability of the subset \([\rho, \infty)\) under the probability measure \(\mathcal{P}\). This probability is given by:
+Given $x \in \mathbb{R}$, what is the limit as $N \rightarrow \infty$ of the sequence $\left\{P_{N}(x)\right\}$ ?",,"(a) We want to find an upper bound for the probability of the subset \([\rho, \infty)\) under the probability measure \(\mathcal{P}\). This probability is given by:
 
 \[
 \mathcal{P}([\rho, \infty)) = \int_{\rho}^{\infty} f(x) dx.
@@ -828,7 +937,7 @@ Fall15,"\setcounter{enumi}{3}
 
 (a) Show that any finite dimensional subspace $U_{0} \subset V$ is closed in $V$.
 
-(b) Now let $U_{1} \subset V$ a closed subspace, and $U_{2} \subset V$ a finite dimensional subspace. Show that $U_{1}+U_{2}$ is closed in $V$.","(a) To show that any finite-dimensional subspace \(U_0 \subset V\) is closed in \(V\), we can use the fact that finite-dimensional subspaces are always closed.
+(b) Now let $U_{1} \subset V$ a closed subspace, and $U_{2} \subset V$ a finite dimensional subspace. Show that $U_{1}+U_{2}$ is closed in $V$.",,"(a) To show that any finite-dimensional subspace \(U_0 \subset V\) is closed in \(V\), we can use the fact that finite-dimensional subspaces are always closed.
 
 Consider a finite-dimensional subspace \(U_0\) of \(V\). Since \(U_0\) is finite-dimensional, it is also complete (i.e., a Banach space in its own right). Therefore, any Cauchy sequence in \(U_0\) converges to a limit within \(U_0\) because it is complete.
 
@@ -866,7 +975,7 @@ Fall15,"\setcounter{enumi}{5}
 (a) Show that $W\left(f_{1}, f_{2}\right)$ either vanishes identically or is everywhere nonzero, depending on whether the two solutions $f_{1}, f_{2}$ are linearly dependent or not.
 
 (b) Now suppose that $f_{1}, f_{2}$ are linearly independent, real valued solutions. Show that they have at most first order zeroes, and that the zeroes occur in an alternating fashion: between any two zeroes of one of the solutions there must be a zero of the other solution.
-","(a) Let \(f_1\) and \(f_2\) be two solutions of the linear ODE \(f'' + Pf' + Qf = 0\). We will show that the Wronskian \(W(f_1, f_2)\) either vanishes identically or is everywhere nonzero, depending on whether the two solutions \(f_1\) and \(f_2\) are linearly dependent or not.
+",,"(a) Let \(f_1\) and \(f_2\) be two solutions of the linear ODE \(f'' + Pf' + Qf = 0\). We will show that the Wronskian \(W(f_1, f_2)\) either vanishes identically or is everywhere nonzero, depending on whether the two solutions \(f_1\) and \(f_2\) are linearly dependent or not.
 
 If \(f_1\) and \(f_2\) are linearly dependent, then there exist constants \(c_1\) and \(c_2\), not both zero, such that \(c_1 f_1 + c_2 f_2 = 0\). Taking derivatives, we have:
 
@@ -921,7 +1030,42 @@ Fall15,"\setcounter{enumi}{1}
 
 (a) Show that $f$ is $C^{\infty}$ if and only if $\left|a_{n}\right|=O\left(|n|^{-k}\right)$ for all $k \in \mathbb{N}$.
 
-(b) Prove that a sequence of functions $\left\{f_{n}\right\}_{n \geq 1}$ in $C^{\infty}(\mathbb{R} / \mathbb{Z})$ converges in the $C^{\infty}$ topology (uniform convergence of functions and their derivatives of all orders) if and only if the sequences of $k$-th derivatives $\left\{f_{n}^{(k)}\right\}_{n \geq 1}$, for all $k \geq 0$, converge in the $L^{2}$-norm on $\mathbb{R} / \mathbb{Z}$.","(a) To show that a continuous function \(f(x)\) on \(\mathbb{R}/\mathbb{Z}\) is \(C^\infty\) if and only if \(\left|a_n\right| = O\left(|n|^{-k}\right)\) for all \(k \in \mathbb{N}\), we can use the fact that the Fourier coefficients \(a_n\) are related to the derivatives of \(f(x)\) at \(x = 0\).
+(b) Prove that a sequence of functions $\left\{f_{n}\right\}_{n \geq 1}$ in $C^{\infty}(\mathbb{R} / \mathbb{Z})$ converges in the $C^{\infty}$ topology (uniform convergence of functions and their derivatives of all orders) if and only if the sequences of $k$-th derivatives $\left\{f_{n}^{(k)}\right\}_{n \geq 1}$, for all $k \geq 0$, converge in the $L^{2}$-norm on $\mathbb{R} / \mathbb{Z}$.","To address this problem, we will use results from real analysis, particularly the theory of series of functions and uniform convergence. Let's break it down into parts as per the question.
+
+### Part (a): Convergence of the Series \(\sum_{n=1}^{\infty} f_{n}(x)\)
+
+**Given**:
+- \(\sum_{n=1}^{\infty} M_n\) is convergent with limit \(M\).
+- \(\sum_{n=1}^{\infty} f_n(a)\) converges.
+- \(|f_n'(x)| \leq M_n\) for \(a < x < b\).
+
+**To Prove**: The series \(\sum_{n=1}^{\infty} f_n(x)\) converges for every \(a \leq x \leq b\).
+
+**Proof**:
+1. **Uniform Boundedness of Derivatives**: Since \(|f_n'(x)| \leq M_n\), the series of derivatives is uniformly bounded.
+2. **Mean Value Theorem**: By the mean value theorem, for each \(f_n(x)\), there exists \(c_n\) between \(a\) and \(x\) such that \(f_n(x) - f_n(a) = f_n'(c_n)(x - a)\).
+3. **Absolute Convergence**: The series \(\sum_{n=1}^{\infty} |f_n(x) - f_n(a)|\) converges since \(|f_n'(c_n)| \leq M_n\) and \(\sum M_n\) is convergent.
+4. **Convergence of \(\sum f_n(x)\)**: Since \(\sum f_n(a)\) is convergent and the difference series \(\sum |f_n(x) - f_n(a)|\) is convergent, the series \(\sum f_n(x)\) converges.
+
+### Part (b): Existence of \(f'(x)\)
+
+**To Prove**: The derivative \(f'(x)\) exists for every \(a < x < b\).
+
+**Proof**:
+1. **Consider the Series of Functions**: \(\sum_{n=1}^{\infty} \frac{f_n(y) - f_n(x)}{y - x}\).
+2. **Uniform Convergence**: By the hypothesis, \(|f_n'(z)| \leq M_n\) for \(a < z < b\). By the mean value theorem, \(\frac{f_n(y) - f_n(x)}{y - x} = f_n'(c)\) for some \(c\) between \(x\) and \(y\). This series is uniformly convergent due to the convergence of \(\sum M_n\).
+3. **Limit as \(y \rightarrow x\)**: Taking the limit as \(y \rightarrow x\), the series converges to \(\sum f_n'(x)\) uniformly.
+4. **Derivative of the Sum**: The uniform convergence allows us to differentiate term by term, so the derivative of the sum \(f(x) = \sum f_n(x)\) exists and is equal to \(\sum f_n'(x)\).
+
+### Part (c): Boundedness of \(|f'(x)|\)
+
+**To Prove**: \(\left|f'(x)\right| \leq M\) for \(a < x < b\).
+
+**Proof**:
+- Since \(f'(x) = \sum f_n'(x)\) and \(|f_n'(x)| \leq M_n\), the series \(\sum |f_n'(x)|\) is dominated by the convergent series \(\sum M_n\).
+- Therefore, by comparison, \(\left|f'(x)\right| \leq \sum |f_n'(x)| \leq \sum M_n \leq M\).
+
+In conclusion, we have shown that under the given conditions, the series of functions \(\sum f_n(x)\) converges to a function \(f(x)\) with a derivative \(f'(x)\) that exists and is bounded by \(M\) for all \(x\) in the interval \((a, b)\). The key to these proofs is the uniform convergence of the series of derivatives, made possible by the boundedness of each \(f_n'(x)\) and the convergence of the series of bounds \(M_n\).","(a) To show that a continuous function \(f(x)\) on \(\mathbb{R}/\mathbb{Z}\) is \(C^\infty\) if and only if \(\left|a_n\right| = O\left(|n|^{-k}\right)\) for all \(k \in \mathbb{N}\), we can use the fact that the Fourier coefficients \(a_n\) are related to the derivatives of \(f(x)\) at \(x = 0\).
 
 First, let's consider the Fourier series of \(f(x)\):
 
@@ -994,7 +1138,29 @@ $$
 d_{H}(Y, Z):=\inf \left\{\epsilon>0 \mid Y \subset B_{\epsilon}(Z), \quad Z \subset B_{\epsilon}(Y)\right\}
 $$
 
-Show that $d_{H}$ defines a metric on the set $\tilde{X}:=\{A \subset X \mid A$ is closed and bounded $\}$.","To show that the Hausdorff distance \(d_H\) defines a metric on the set \(\tilde{X} = \{A \subset X \mid A \text{ is closed and bounded}\}\), we need to verify the three properties of a metric:
+Show that $d_{H}$ defines a metric on the set $\tilde{X}:=\{A \subset X \mid A$ is closed and bounded $\}$.","To show that \( d_H \) defines a metric on the set \(\tilde{X} = \{ A \subset X \mid A \text{ is closed and bounded} \}\), we must verify that it satisfies the four conditions of a metric:
+
+1. **Non-negativity**: \( d_H(Y, Z) \geq 0 \) for all \( Y, Z \in \tilde{X} \).
+2. **Identity of Indiscernibles**: \( d_H(Y, Z) = 0 \) if and only if \( Y = Z \).
+3. **Symmetry**: \( d_H(Y, Z) = d_H(Z, Y) \) for all \( Y, Z \in \tilde{X} \).
+4. **Triangle Inequality**: \( d_H(Y, Z) \leq d_H(Y, W) + d_H(W, Z) \) for all \( Y, Z, W \in \tilde{X} \).
+
+Let's verify each condition:
+
+### 1. Non-negativity
+This is straightforward since \( \epsilon \) is always positive in the definition of \( d_H \). Thus, \( d_H(Y, Z) \geq 0 \) for any subsets \( Y, Z \) of \( X \).
+
+### 2. Identity of Indiscernibles
+- If \( Y = Z \), then \( Y \subset B_\epsilon(Z) \) and \( Z \subset B_\epsilon(Y) \) for any \( \epsilon > 0 \), so \( d_H(Y, Z) = 0 \).
+- Conversely, if \( d_H(Y, Z) = 0 \), then for every \( \epsilon > 0 \), \( Y \subset B_\epsilon(Z) \) and \( Z \subset B_\epsilon(Y) \). Taking the limit as \( \epsilon \) goes to 0, we have \( Y = Z \) since \( Y \) and \( Z \) are closed.
+
+### 3. Symmetry
+By definition, the conditions \( Y \subset B_\epsilon(Z) \) and \( Z \subset B_\epsilon(Y) \) are symmetric in \( Y \) and \( Z \). Therefore, \( d_H(Y, Z) = d_H(Z, Y) \) for all \( Y, Z \in \tilde{X} \).
+
+### 4. Triangle Inequality
+Let \( Y, Z, W \) be in \(\tilde{X}\), and let \( \epsilon > d_H(Y, W) \) and \( \delta > d_H(W, Z) \). By definition, \( Y \subset B_\epsilon(W) \) and \( W \subset B_\delta(Z) \). Then, any point \( y \in Y \) is within \( \epsilon \) of some point \( w \in W \), and \( w \) is within \( \delta \) of some point \( z \in Z \). By the triangle inequality for the metric \( d \) on \( X \), \( y \) is within \( \epsilon + \delta \) of \( z \), so \( Y \subset B_{\epsilon+\delta}(Z) \). Similarly, \( Z \subset B_{\epsilon+\delta}(Y) \). Therefore, \( d_H(Y, Z) \leq \epsilon + \delta \). Since \( \epsilon > d_H(Y, W) \) and \( \delta > d_H(W, Z) \) were arbitrary, \( d_H(Y, Z) \leq d_H(Y, W) + d_H(W, Z) \).
+
+Thus, \( d_H \) satisfies all the properties of a metric on \(\tilde{X}\).","To show that the Hausdorff distance \(d_H\) defines a metric on the set \(\tilde{X} = \{A \subset X \mid A \text{ is closed and bounded}\}\), we need to verify the three properties of a metric:
 
 1. Non-negativity: \(d_H(Y, Z) \geq 0\) for all \(Y, Z \in \tilde{X}\).
 2. Identity of indiscernibles: \(d_H(Y, Z) = 0\) if and only if \(Y = Z\) for all \(Y, Z \in \tilde{X}\).
@@ -1084,7 +1250,37 @@ for $z$ in the upper half-plane.
 
 $$
 \sup _{y>0} \int_{0}^{\infty}|F(x+i y)|^{2} d x=\|f\|_{L^{2}(0, \infty)}^{2}
-$$","(a) To check that the integral converges absolutely and uniformly in any region \(\operatorname{Im}(z) \geq C > 0\), we need to show that the integrand \(|f(t) e^{2\pi i z t}|\) is absolutely and uniformly bounded in such a region. 
+$$","To solve this problem, we need to analyze the given integral and show specific properties as requested in parts (a) and (b). Let's start with part (a).
+
+### Part (a): Absolute and Uniform Convergence
+
+**Given**: \( F(z) = \int_{0}^{\infty} f(t) e^{2 \pi i z t} dt \) for \( z \) in the upper half-plane.
+
+**To Prove**: The integral converges absolutely and uniformly in any region where \( \text{Im}(z) \geq C > 0 \).
+
+**Analysis and Proof**:
+1. **Absolute Convergence**: We examine \( |f(t) e^{2 \pi i z t}| \).
+2. Since \( z = x + iy \) with \( y > 0 \), \( e^{2 \pi i z t} = e^{2 \pi i xt} \cdot e^{-2 \pi y t} \).
+3. The magnitude \( |e^{2 \pi i z t}| \) becomes \( |e^{-2 \pi y t}| = e^{-2 \pi y t} \), which is a decaying exponential as \( t \rightarrow \infty \).
+4. For \( \text{Im}(z) = y \geq C \), this decay is even stronger. So, \( |f(t) e^{2 \pi i z t}| = |f(t)| e^{-2 \pi y t} \leq |f(t)| e^{-2 \pi C t} \).
+5. Given \( f \in L^2(0, \infty) \), the integral \( \int_0^\infty |f(t)|^2 dt \) is finite.
+6. By comparison, since \( e^{-2 \pi C t} \) decays faster than any polynomial, the integral \( \int_{0}^{\infty} |f(t)| e^{-2 \pi C t} dt \) also converges, indicating absolute convergence of \( F(z) \).
+
+**Uniform Convergence**:
+- Uniform convergence in the region \( \text{Im}(z) \geq C \) follows because the bound \( |f(t) e^{-2 \pi C t}| \) is independent of \( x \) (the real part of \( z \)).
+- Thus, the convergence does not depend on \( x \) and is uniform in this region.
+
+### Part (b): Supremum of \( |F(x+iy)|^2 \)
+
+**To Prove**: \( \sup_{y > 0} \int_{0}^{\infty} |F(x+iy)|^2 dx = \|f\|_{L^{2}(0, \infty)}^2 \).
+
+**Analysis and Proof**:
+1. **Parseval's Theorem**: This part can be proven using a version of Parseval's theorem for the Fourier transform.
+2. \( F(x+iy) \) is essentially the Fourier transform of \( f(t) e^{-2 \pi y t} \), where \( e^{-2 \pi y t} \) serves as a damping factor.
+3. **Equality for \( y = 0 \)**: For \( y = 0 \), \( F(x) \) is the Fourier transform of \( f(t) \), and Parseval's theorem states that the \( L^2 \) norm of a function is equal to the \( L^2 \) norm of its Fourier transform. So, \( \int_{0}^{\infty} |F(x)|^2 dx = \|f\|_{L^{2}(0, \infty)}^2 \).
+4. **Supremum for \( y > 0 \)**: For \( y > 0 \), the damping factor \( e^{-2 \pi y t} \) ensures that \( F(x+iy) \) is well-defined and tends to decrease the value of the integral as \( y \) increases. Therefore, the supremum of these integrals as \( y \) varies over \( (0, \infty) \) should equal the value at \( y = 0 \), which is \( \|f\|_{L^{2}(0, \infty)}^2 \).
+
+Hence, \( \sup_{y > 0} \int_{0}^{\infty} |F(x+iy)|^2 dx = \|f\|_{L^{2}(0, \infty)}^2 \), confirming the result in part (b).","(a) To check that the integral converges absolutely and uniformly in any region \(\operatorname{Im}(z) \geq C > 0\), we need to show that the integrand \(|f(t) e^{2\pi i z t}|\) is absolutely and uniformly bounded in such a region. 
 
 Given \(z = x + iy\) with \(y \geq C > 0\), we have:
 
@@ -1175,7 +1371,39 @@ Fall16,"\setcounter{enumi}{3}
 
 (a) Let $H$ be a Hilbert space, $K \subset H$ a closed subspace, and $x$ a point in $H$. Show that there exists a unique $y$ in $K$ that minimizes the distance $\|x-y\|$ to $x$.
 
-(b) Give an example to show that the conclusion can fail if $H$ is an inner product space which is not complete.","(a) Let \(H\) be a Hilbert space, \(K\) a closed subspace of \(H\), and \(x\) a point in \(H\). We want to show that there exists a unique \(y\) in \(K\) that minimizes the distance \(\|x-y\|\) to \(x\).
+(b) Give an example to show that the conclusion can fail if $H$ is an inner product space which is not complete.","To address this question, let's delve into the properties of Hilbert spaces and inner product spaces.
+
+### Part (a): Existence and Uniqueness in a Hilbert Space
+
+**Given**: \(H\) is a Hilbert space, \(K \subset H\) is a closed subspace, and \(x\) is a point in \(H\).
+
+**To Prove**: There exists a unique \(y\) in \(K\) that minimizes the distance \(\|x - y\|\) to \(x\).
+
+**Proof**:
+1. **Existence**:
+   - Since \(H\) is a Hilbert space, it is complete with respect to the norm induced by its inner product.
+   - Consider a sequence \((y_n)\) in \(K\) such that \(\|x - y_n\|\) converges to \( \inf \{\|x - z\|: z \in K\} \).
+   - As \(K\) is a closed subspace, it is also complete. Therefore, the sequence \((y_n)\) has a convergent subsequence in \(K\), say \(y_{n_k}\), converging to some \(y \in K\).
+   - By the continuity of the norm, \(\|x - y\| = \lim_{k \to \infty} \|x - y_{n_k}\| = \inf \{\|x - z\|: z \in K\}\), so \(y\) minimizes the distance to \(x\).
+
+2. **Uniqueness**:
+   - Suppose there are two points \(y_1, y_2 \in K\) such that both minimize the distance to \(x\).
+   - Consider the midpoint \(m = \frac{1}{2}(y_1 + y_2)\), which is in \(K\) because \(K\) is a subspace.
+   - By the parallelogram law in Hilbert spaces, \( \|x - m\|^2 + \|y_1 - y_2\|^2 = \frac{1}{2}(\|x - y_1\|^2 + \|x - y_2\|^2) \).
+   - Since \(y_1\) and \(y_2\) both minimize the distance to \(x\), \( \|x - y_1\| = \|x - y_2\| \), and thus, \( \|y_1 - y_2\|^2 = 0 \).
+   - Therefore, \(y_1 = y_2\), proving uniqueness.
+
+### Part (b): Example in an Incomplete Inner Product Space
+
+**To Provide**: An example where the conclusion fails in an inner product space that is not complete.
+
+**Example**:
+- Consider the space \( l^2 \) of square-summable sequences, and define \( H \) as the subspace consisting of all sequences in \( l^2 \) that are eventually zero (i.e., there exists an \( N \) such that for all \( n > N \), the \( n \)-th term of the sequence is zero).
+- \( H \) is an inner product space with the inner product defined as the sum of the product of corresponding terms of two sequences, but it is not complete.
+- Let \( K \) be the subspace of \( H \) consisting of all sequences with only the first term possibly non-zero.
+- Now, consider the sequence \( x = (\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \ldots) \) in \( l^2 \) but not in \( H \).
+- For any \( y \) in \( K \), the distance \( \|x - y\| \) will not reach a minimum because as \( y \) gets closer to the head of \( x \), the tail of \( x \) (which is not in \( H \)) keeps contributing to the distance.
+- Hence, there is no element in \( K \) that minimizes the distance to \( x \) in \( H \), demonstrating the failure of the conclusion in this incomplete inner product space.","(a) Let \(H\) be a Hilbert space, \(K\) a closed subspace of \(H\), and \(x\) a point in \(H\). We want to show that there exists a unique \(y\) in \(K\) that minimizes the distance \(\|x-y\|\) to \(x\).
 
 First, let's note that for any \(y\) in \(K\), the distance between \(x\) and \(y\) is given by the norm \(\|x - y\|\). We want to minimize this distance.
 
@@ -1225,7 +1453,23 @@ $$
 $$
 
 (Recall that $\|f\|_{L^{p}(K)}=\left(\int_{K}|f|^{p} \mathrm{~d} x\right)^{1 / p}$ and that $\|f\|_{L^{\infty}(K)}$ is the essential supremum of $f$, i.e., the smallest upper bound if the behavior of $f$ on null sets is ignored.)
-","To prove that 
+","This problem asks us to show that for a measurable function \( f: K \rightarrow \mathbb{C} \) defined on a compact set \( K \subset \mathbb{R}^n \), the limit of the \( L^p \)-norm as \( p \) approaches infinity equals the \( L^\infty \)-norm. Let's break this down:
+
+### Key Definitions
+1. **\( L^p \)-norm**: \( \|f\|_{L^p(K)} = \left(\int_K |f|^p \, dx\right)^{1/p} \).
+2. **\( L^\infty \)-norm**: \( \|f\|_{L^\infty(K)} \) is the essential supremum of \( |f| \) on \( K \), which is the smallest number \( M \) such that \( |f(x)| \leq M \) almost everywhere on \( K \).
+
+### Proof
+
+1. **Compactness of \( K \)**: Since \( K \) is compact, it's bounded and closed in \( \mathbb{R}^n \). This implies that \( f \) is bounded almost everywhere on \( K \), and the integral of \( |f|^p \) is well-defined for all \( p \).
+
+2. **\( L^\infty \)-norm as an Upper Bound**: Let \( M = \|f\|_{L^\infty(K)} \). By definition, \( |f(x)| \leq M \) almost everywhere on \( K \). Therefore, \( |f(x)|^p \leq M^p \) almost everywhere, and \( \int_K |f|^p \, dx \leq M^p \cdot \text{vol}(K) \), where \( \text{vol}(K) \) is the volume of \( K \). This means \( \|f\|_{L^p(K)} \leq M \cdot (\text{vol}(K))^{1/p} \), and as \( p \rightarrow \infty \), \( (\text{vol}(K))^{1/p} \rightarrow 1 \), so \( \lim_{p \to \infty} \|f\|_{L^p(K)} \leq \|f\|_{L^\infty(K)} \).
+
+3. **Establishing the Lower Bound**: We know that \( |f(x)| \leq M \) almost everywhere, and for any \( \epsilon > 0 \), there is a subset \( E \subseteq K \) with non-zero measure where \( |f(x)| \geq M - \epsilon \). Then, \( \int_K |f|^p \, dx \geq \int_E |f|^p \, dx \geq \int_E (M - \epsilon)^p \, dx \). As \( p \rightarrow \infty \), this lower bound approaches \( M \) (since \( \epsilon \) can be arbitrarily small). Therefore, \( \lim_{p \to \infty} \|f\|_{L^p(K)} \geq \|f\|_{L^\infty(K)} \).
+
+4. **Conclusion**: Combining the upper and lower bounds, we have \( \lim_{p \to \infty} \|f\|_{L^p(K)} = \|f\|_{L^\infty(K)} \).
+
+This proof hinges on the fact that a function on a compact set in \( \mathbb{R}^n \) is bounded almost everywhere, and as \( p \) increases, the \( L^p \)-norm focuses more on the regions where the function \( f \) reaches its essential supremum.","To prove that 
 
 \[
 \lim_{p \to \infty} \|f\|_{L^p(K)} = \|f\|_{L^\infty(K)}
@@ -1289,12 +1533,7 @@ which implies:
 
 So, we've shown that the limit holds as desired."
 Fall18,"\setcounter{enumi}{2}
-  \item (A) Find a polynomial $f \in \mathbb{Q}[x]$ whose Galois group (over $\mathbb{Q}$ ) is $D_{8}$, the dihedral group of order 8 .
-
   \item (RA)
-
-
-
 (a) Let $a_{k} \geq 0$ be a monotone increasing sequence with $a_{k} \rightarrow \infty$, and consider the ellipse,
 
 $$
@@ -1308,7 +1547,39 @@ $$
 \|f\|_{H^{1}(\mathbb{T})}=\sqrt{\|f\|_{L^{2}(\mathbb{T})}+\left\|\frac{d}{d x} f\right\|_{L^{2}(\mathbb{T})}}
 $$
 
-Use part (a) to conclude that the inclusion $i: H^{1}(\mathbb{T}) \hookrightarrow L^{2}(\mathbb{T})$ is a compact operator.","(a) To show that \(E(a_k)\) is a compact subset of \(\ell^2(\mathbb{Z})\), we can use the sequential compactness criterion, which states that a set \(S\) in a metric space is compact if and only if every sequence in \(S\) has a convergent subsequence whose limit is also in \(S\).
+Use part (a) to conclude that the inclusion $i: H^{1}(\mathbb{T}) \hookrightarrow L^{2}(\mathbb{T})$ is a compact operator.","### Part (a): Compactness of \( E(a_k) \) in \( \ell^2(\mathbb{Z}) \)
+
+**Given**: \( a_k \) is a monotone increasing sequence with \( a_k \rightarrow \infty \), and the ellipse is defined as
+\[ E(a_k) = \left\{ v \in \ell^2(\mathbb{Z}): \sum a_k v_k^2 \leq 1 \right\}. \]
+
+**To Prove**: \( E(a_k) \) is a compact subset of \( \ell^2(\mathbb{Z}) \).
+
+**Proof**:
+1. **Totally Boundedness**: To show compactness in a Hilbert space (like \( \ell^2(\mathbb{Z}) \)), it's sufficient to demonstrate that \( E(a_k) \) is totally bounded. A subset of a metric space is totally bounded if for every \( \epsilon > 0 \), it can be covered by finitely many balls of radius \( \epsilon \).
+
+2. **Finite Dimensional Approximations**: Given \( \epsilon > 0 \), choose \( N \) such that \( a_N > \frac{1}{\epsilon^2} \). For \( k > N \), \( a_k v_k^2 \leq 1 \) implies \( v_k^2 \leq \frac{1}{a_k} < \epsilon^2 \). Therefore, vectors in \( E(a_k) \) are small outside the first \( N \) coordinates.
+
+3. **Covering by Balls**: The set of vectors in \( E(a_k) \) can be approximated by their projections onto the first \( N \) coordinates. Since these are finite-dimensional vectors, we can cover them with finitely many balls of radius \( \epsilon \). The tails of the vectors in \( E(a_k) \) contribute less than \( \epsilon \) to the norm, so \( E(a_k) \) is covered by these balls.
+
+4. **Conclusion**: Since \( E(a_k) \) is totally bounded and \( \ell^2(\mathbb{Z}) \) is complete, \( E(a_k) \) is compact.
+
+### Part (b): Compactness of the Inclusion \( H^1(\mathbb{T}) \hookrightarrow L^2(\mathbb{T}) \)
+
+**Given**: The space \( H^1(\mathbb{T}) \) is defined with the norm
+\[ \|f\|_{H^1(\mathbb{T})} = \sqrt{\|f\|_{L^2(\mathbb{T})} + \left\|\frac{d}{dx} f\right\|_{L^2(\mathbb{T})}}. \]
+
+**To Prove**: The inclusion map \( i: H^1(\mathbb{T}) \hookrightarrow L^2(\mathbb{T}) \) is a compact operator.
+
+**Proof**:
+1. **Compactness of Ellipses in \( \ell^2(\mathbb{Z}) \)**: From part (a), we know that ellipses like \( E(a_k) \) are compact in \( \ell^2(\mathbb{Z}) \).
+
+2. **Fourier Series Representation**: Functions in \( H^1(\mathbb{T}) \) have a Fourier series representation. The \( H^1 \)-norm involves both the function and its derivative, corresponding to a sequence \( a_k = 1 + k^2 \) (since the derivative in Fourier space is multiplication by \( k \)).
+
+3. **Ellipse Correspondence**: The set of Fourier coefficients of functions in \( H^1(\mathbb{T}) \) with norm less than or equal to 1 corresponds to an ellipse in \( \ell^2(\mathbb{Z}) \) as in part (a). This set is compact in \( \ell^2(\mathbb{Z}) \).
+
+4. **Compactness of Inclusion**: The map from \( H^1(\mathbb{T}) \) to \( L^2(\mathbb{T}) \) corresponds to projecting the \( \ell^2(\mathbb{Z}) \) sequence (Fourier coefficients) to the \( \ell^2(\mathbb{Z}) \) space. Since the set of such sequences is compact, the inclusion map is a compact operator.
+
+Thus, the inclusion \( i: H^1(\mathbb{T}) \hookrightarrow L^2(\mathbb{T}) \) is a compact operator, using the compactness of the set of Fourier coefficients in \( \ell^2(\mathbb{Z}) \) that correspond to functions in \( H^1(\mathbb{T}) \).","(a) To show that \(E(a_k)\) is a compact subset of \(\ell^2(\mathbb{Z})\), we can use the sequential compactness criterion, which states that a set \(S\) in a metric space is compact if and only if every sequence in \(S\) has a convergent subsequence whose limit is also in \(S\).
 
 Consider a sequence of vectors \(v^{(n)}\) in \(E(a_k)\). Each \(v^{(n)}\) is a sequence \(v^{(n)} = (v_{k}^{(n)})_{k \in \mathbb{Z}}\) such that \(\sum_{k} a_{k} v_{k}^{(n)2} \leq 1\). Since \(a_k\) is monotone increasing and \(a_k \rightarrow \infty\), it implies that for each \(n\), the sum \(\sum_{k} a_{k} v_{k}^{(n)2}\) is bounded.
 
@@ -1328,26 +1599,55 @@ Finally, we need to show that the inclusion map is equicontinuous. This follows 
 
 Therefore, by the Arzelà–Ascoli theorem, the inclusion \(i: H^1(\mathbb{T}) \hookrightarrow L^2(\mathbb{T})\) is a compact operator."
 Fall18,"  \item (RA) Let $W$ be Gumbel distributed, that is $P(W \leq x)=e^{-e^{-x}}$. Let $X_{i}$ be independent and identically distributed Exponential random variables with mean 1; that is, $X_{i}$ are independent, with $P\left(X_{i} \leq x\right)=\exp (-\max x, 0)$.
-
-
-
 Let
-
 $$
 M_{n}=\max _{i \leq n} X_{i}
 $$
-
 Show that there are deterministic sequences $a_{n}, b_{n}$ such that
-
 $$
 \frac{M_{n}-b_{n}}{a_{n}} \rightarrow W
 $$
-
 in law; that is, such that for any continuous bounded function $F$,
-
 $$
 \mathbb{E} F\left(\frac{M_{n}-b_{n}}{a_{n}}\right) \rightarrow \mathbb{E} F(W)
-$$","To show that there are deterministic sequences \(a_n\) and \(b_n\) such that
+$$","To demonstrate this convergence in distribution, we need to identify appropriate sequences \( a_n \) and \( b_n \) such that \(\frac{M_n - b_n}{a_n}\) converges in law to a Gumbel distributed random variable \(W\). Let's break this down step by step.
+
+### Finding the Sequences \(a_n\) and \(b_n\)
+
+1. **Cumulative Distribution Function (CDF) of \(M_n\)**:
+   The CDF of \(M_n\), the maximum of \(n\) independent, identically distributed exponential random variables, is given by:
+   \[ P(M_n \leq x) = \left(P(X_1 \leq x)\right)^n = \left(\exp(-\max\{x, 0\})\right)^n = \exp(-n \max\{x, 0\}). \]
+
+2. **Desired Limit**:
+   We want \(\frac{M_n - b_n}{a_n}\) to converge in law to \(W\), whose CDF is \(e^{-e^{-x}}\). Therefore, we need:
+   \[ P\left(\frac{M_n - b_n}{a_n} \leq x\right) = P(M_n \leq a_nx + b_n) \rightarrow e^{-e^{-x}}. \]
+
+3. **Finding \(a_n\) and \(b_n\)**:
+   - We equate the expressions: 
+     \[ \exp(-n \max\{a_nx + b_n, 0\}) = e^{-e^{-x}}. \]
+   - Simplifying, we find:
+     \[ -n \max\{a_nx + b_n, 0\} = -e^{-x}. \]
+   - A natural choice for \(a_n\) and \(b_n\) emerges when we equate the exponents. Setting \(a_n = \frac{1}{n}\) and \(b_n = \log n\) satisfies the equation, as it leads to:
+     \[ -\max\{x + \log n, 0\} = -e^{-x}, \]
+     which approaches \(-e^{-x}\) as \(n \rightarrow \infty\).
+
+### Showing Convergence in Law
+
+1. **Convergence in Distribution**:
+   We need to show that for any continuous bounded function \(F\), \(\mathbb{E} F\left(\frac{M_n - \log n}{1/n}\right) \rightarrow \mathbb{E} F(W)\).
+
+2. **Using Continuous Mapping Theorem**:
+   The continuous mapping theorem states that if \(Y_n\) converges in distribution to \(Y\), and \(g\) is a continuous function, then \(g(Y_n)\) converges in distribution to \(g(Y)\).
+
+3. **Application**:
+   - Here, \(Y_n = \frac{M_n - \log n}{1/n}\) and \(Y = W\). We have already shown that the distribution of \(Y_n\) converges to the distribution of \(W\).
+   - For any continuous bounded function \(F\), \(F(Y_n)\) converges in distribution to \(F(W)\).
+
+4. **Expectation Convergence**:
+   - By the properties of convergence in distribution, the expectation of \(F(Y_n)\) converges to the expectation of \(F(W)\) as \(n \rightarrow \infty\).
+   - Therefore, \(\mathbb{E} F\left(\frac{M_n - \log n}{1/n}\right) \rightarrow \mathbb{E} F(W)\).
+
+In conclusion, the sequences \(a_n = \frac{1}{n}\) and \(b_n = \log n\) are the appropriate choices, and the convergence in law of \(\frac{M_n - b_n}{a_n}\) to \(W\) is established.","To show that there are deterministic sequences \(a_n\) and \(b_n\) such that
 
 \[
 \frac{M_n - b_n}{a_n} \rightarrow W
@@ -1441,7 +1741,58 @@ Fall19,"\setcounter{enumi}{4}
 
   \item Show that $T$ is continuous at the irrational numbers and discontinuous at the rational numbers.
 
-  \item Show that $T$ is nowhere differentiable.","To address these properties of Dirichlet's function \(D\) and Thomae's function \(T\), let's go through each part one by one.
+  \item Show that $T$ is nowhere differentiable.","### Dirichlet's Function \(D\)
+
+**To Prove**: \(D\) is nowhere continuous.
+
+**Proof**:
+1. **Definition of Continuity**: A function \(f\) is continuous at a point \(c\) if, for every \(\epsilon > 0\), there exists a \(\delta > 0\) such that for all \(x\) within \(\delta\) of \(c\), \(|f(x) - f(c)| < \epsilon\).
+
+2. **Discontinuity at Rationals**:
+   - Consider any rational point \(r\). \(D(r) = 1\).
+   - In any interval around \(r\), however small, there exist irrational numbers (since irrationals are dense in \(\mathbb{R}\)). At these points, \(D\) equals 0.
+   - Therefore, no matter how small we choose \(\delta\), we cannot make \(|D(x) - D(r)| < \epsilon\) for all \(x\) within \(\delta\) of \(r\), if \(\epsilon < 1\).
+
+3. **Discontinuity at Irrationals**:
+   - Consider any irrational point \(s\). \(D(s) = 0\).
+   - In any interval around \(s\), there exist rational numbers (since rationals are dense in \(\mathbb{R}\)). At these points, \(D\) equals 1.
+   - Again, no matter how small \(\delta\) is, \(|D(x) - D(s)|\) cannot be made less than \(\epsilon\) for all \(x\) within \(\delta\) of \(s\), if \(\epsilon < 1\).
+
+Thus, \(D\) is nowhere continuous.
+
+### Thomae's Function \(T\)
+
+**To Prove**: \(T\) is continuous at irrationals and discontinuous at rationals.
+
+**Proof**:
+1. **Continuity at Irrationals**:
+   - Let \(s\) be an irrational number. \(T(s) = 0\).
+   - Given \(\epsilon > 0\), choose \(\delta\) such that for any rational \(p/q\) in reduced form within \(\delta\) of \(s\), \(1/q < \epsilon\).
+   - Such a \(\delta\) exists because for any \(\epsilon\), there are only finitely many fractions with denominator less than \(1/\epsilon\) within any interval.
+   - Therefore, \(|T(x) - T(s)| < \epsilon\) for all \(x\) within \(\delta\) of \(s\).
+
+2. **Discontinuity at Rationals**:
+   - Let \(r = p/q\) be a rational in reduced form. \(T(r) = 1/q\).
+   - In any interval around \(r\), there are irrational numbers where \(T\) equals 0.
+   - No matter how small \(\delta\) is, we cannot make \(|T(x) - T(r)| < \epsilon\) for all \(x\) within \(\delta\) of \(r\), if \(\epsilon < 1/q\).
+
+### Differentiability of \(T\)
+
+**To Prove**: \(T\) is nowhere differentiable.
+
+**Proof**:
+1. **Differentiability at Irrationals**:
+   - Consider an irrational point \(s\). \(T(s) = 0\).
+   - For \(T\) to be differentiable at \(s\), the limit of \(\frac{T(x) - T(s)}{x - s}\) as \(x\) approaches \(s\) must exist.
+   - However, for any sequence of rationals \(r_n = p_n/q_n\) approaching \(s\), \(\frac{T(r_n) - T(s)}{r_n - s}\) equals \(\frac{1/q_n}{r_n - s}\).
+   - Since \(q_n\) can be arbitrarily large, this ratio does not converge to a limit, and thus \(T\) is not differentiable at \(s\).
+
+2. **Differentiability at Rationals**:
+   - Consider a rational point \(r\). \(T(r) = 1/q\) for some \(q\).
+   - Again, consider the difference quotient \(\frac{T(x) - T(r)}{x - r}\) as \(x\) approaches \(r\).
+   - For \(x\) irrational, this quotient equals \(\frac{-1/q}{x - r}\), which does not approach a limit as \(x\) approaches \(r\).
+
+Therefore, \(T\) is nowhere differentiable.","To address these properties of Dirichlet's function \(D\) and Thomae's function \(T\), let's go through each part one by one.
 
 1. Prove that \(D\) is nowhere continuous:
 
@@ -1519,7 +1870,48 @@ $$
 (T f)(x)=\int_{0}^{x} f(y) d y
 $$
 
-is compact.","2. The Arzelà–Ascoli theorem in the context of the Banach space \(B\) of continuous, real-valued functions on \([0,1]\) with the sup norm states the following:
+is compact.","### Arzela-Ascoli Theorem in the Context of \(B\)
+
+The Arzela-Ascoli theorem characterizes relatively compact subsets of the space \(B\) of continuous functions on \([0,1]\) with the sup norm. In this context, the theorem states:
+
+**Arzela-Ascoli Theorem**: A subset \(S\) of \(B\) is relatively compact (i.e., its closure is compact) if and only if it is bounded and equicontinuous.
+
+- **Boundedness**: A subset \(S\) of \(B\) is bounded if there exists a constant \(M\) such that for every function \(f \in S\), the sup norm \( \|f\|_{\infty} \leq M \).
+- **Equicontinuity**: A subset \(S\) of \(B\) is equicontinuous if for every \(\epsilon > 0\), there exists a \(\delta > 0\) such that for all \(x, y \in [0,1]\) with \(|x - y| < \delta\), and for every function \(f \in S\), we have \(|f(x) - f(y)| < \epsilon\).
+
+### Definition of a Compact Operator
+
+A compact operator between two Banach spaces \(X\) and \(Y\) is a bounded linear operator \(T: X \rightarrow Y\) such that \(T\) maps bounded subsets of \(X\) to relatively compact subsets of \(Y\). In other words, if \(M\) is a bounded subset of \(X\), then the closure of \(T(M)\) in \(Y\) is compact.
+
+### Proof that \(T\) is a Compact Operator
+
+**Given**: \(T: B \rightarrow B\) is defined by \((Tf)(x) = \int_{0}^{x} f(y) dy\).
+
+**To Prove**: \(T\) is a compact operator.
+
+**Proof**:
+1. **Boundedness**:
+   - For any \(f \in B\), \(|Tf(x)| = \left|\int_{0}^{x} f(y) dy\right| \leq \int_{0}^{x} |f(y)| dy \leq x \|f\|_{\infty}\).
+   - So, \( \|Tf\|_{\infty} \leq \|f\|_{\infty} \), showing that \(T\) is bounded.
+
+2. **Relatively Compact Image of a Bounded Set**:
+   - Let \(M \subseteq B\) be a bounded subset. Then there exists \(C > 0\) such that for all \(f \in M\), \( \|f\|_{\infty} \leq C \).
+   - Consider the set \( TM = \{Tf : f \in M\} \). We need to show that \(TM\) is relatively compact in \(B\).
+
+3. **Equicontinuity of \(TM\)**:
+   - For \(f \in M\), \(|Tf(x) - Tf(y)| = \left|\int_{y}^{x} f(t) dt\right| \leq |x-y| \|f\|_{\infty} \leq C|x-y|\).
+   - Hence, \(TM\) is equicontinuous.
+
+4. **Uniform Boundedness of \(TM\)**:
+   - \( \|Tf\|_{\infty} \leq \|f\|_{\infty} \leq C \), so \(TM\) is uniformly bounded.
+
+5. **Application of Arzela-Ascoli Theorem**:
+   - By Arzela-Ascoli, since \(TM\) is bounded and equicontinuous, it is relatively compact in \(B\).
+
+6. **Conclusion**:
+   - As \(T\) maps bounded sets in \(B\) to relatively compact sets in \(B\), \(T\) is a compact operator.
+
+Thus, the operator \(T\) defined by \((Tf)(x) = \int_{0}^{x} f(y) dy\) is a compact operator on the Banach space \(B\).","2. The Arzelà–Ascoli theorem in the context of the Banach space \(B\) of continuous, real-valued functions on \([0,1]\) with the sup norm states the following:
 
 **Arzelà–Ascoli Theorem for Banach Space \(B):**
 
@@ -1567,7 +1959,30 @@ Fall19,"\item (RA) Let $f:[0,1] \rightarrow \mathbb{R}$ be in the Sobolev space 
 
 $$
 \lim _{n \rightarrow \infty}\left(n \int_{0}^{1} f(x) e^{-2 \pi i n x} d x\right)=0
-$$","To prove this limit, we can use the properties of functions in the Sobolev space \(H^1([0,1])\) and the Riemann-Lebesgue lemma.
+$$","To prove the given limit for functions \( f \) in the Sobolev space \( H^1([0,1]) \), we need to utilize the properties of Sobolev spaces and the Fourier transform. The Sobolev space \( H^1([0,1]) \) consists of functions whose derivatives are also square-integrable. Here's a step-by-step proof:
+
+### Proof
+
+1. **Given**: 
+   \( f \in H^1([0,1]) \) implies \( f \) and its derivative \( f' \) are both in \( L^2([0,1]) \), i.e., both \( f \) and \( f' \) are square-integrable over \([0,1]\).
+
+2. **Fourier Transform and Integration by Parts**:
+   The integral \( \int_{0}^{1} f(x) e^{-2 \pi i n x} dx \) can be seen as a sort of Fourier coefficient of \( f \) at frequency \( n \). Using integration by parts, we have
+   \[ \int_{0}^{1} f(x) e^{-2 \pi i n x} dx = \left. \frac{f(x) e^{-2 \pi i n x}}{-2 \pi i n} \right|_{0}^{1} - \int_{0}^{1} \frac{f'(x) e^{-2 \pi i n x}}{-2 \pi i n} dx. \]
+
+3. **Evaluating the Boundaries**:
+   Evaluate the term \( \left. \frac{f(x) e^{-2 \pi i n x}}{-2 \pi i n} \right|_{0}^{1} \). As \( n \rightarrow \infty \), this term vanishes because the exponential term oscillates while \( f(x) \) is bounded (since \( f \in L^2([0,1]) \)).
+
+4. **Handling the Integral of the Derivative**:
+   The integral \( \int_{0}^{1} \frac{f'(x) e^{-2 \pi i n x}}{-2 \pi i n} dx \) is the key. Since \( f' \in L^2([0,1]) \), it is square-integrable, and thus bounded in the \( L^2 \)-norm. The factor of \( 1/n \) in the integral ensures that as \( n \rightarrow \infty \), this term also goes to zero.
+
+5. **Convergence to Zero**:
+   Thus, the term \( n \int_{0}^{1} f(x) e^{-2 \pi i n x} dx \) goes to zero as \( n \rightarrow \infty \). The \( n \) factor outside the integral offsets the \( 1/n \) factor inside the integral of the derivative, but does not affect the boundary term, which goes to zero due to the oscillatory behavior of the exponential.
+
+6. **Conclusion**:
+   Therefore, \( \lim_{n \rightarrow \infty} \left( n \int_{0}^{1} f(x) e^{-2 \pi i n x} dx \right) = 0 \) for all \( f \) in the Sobolev space \( H^1([0,1]) \).
+
+This result reflects a key feature of functions in Sobolev spaces: their behavior under oscillatory integrals, which is a crucial aspect in the study of partial differential equations and Fourier analysis.","To prove this limit, we can use the properties of functions in the Sobolev space \(H^1([0,1])\) and the Riemann-Lebesgue lemma.
 
 Given \(f \in H^1([0,1])\), we know that both \(f\) and its derivative \(f'\) are \(L^2\)-integrable, which implies that they are square-integrable over \([0,1]\).
 
@@ -1617,7 +2032,36 @@ So, we have shown that:
 
 This completes the proof."
 Fall20,"\setcounter{enumi}{2}
-  \item (RA) Let $\left\{a_{n}\right\}_{n=0}^{\infty}$ be a sequence of real numbers that converges to some $A \in \mathbb{R}$. Prove that $(1-x) \sum_{n=0}^{\infty} a_{n} x^{n} \rightarrow A$ as $x$ approaches 1 from below.","To prove that \((1-x) \sum_{n=0}^{\infty} a_{n} x^{n} \rightarrow A\) as \(x\) approaches 1 from below, we can use the properties of limits and series.
+  \item (RA) Let $\left\{a_{n}\right\}_{n=0}^{\infty}$ be a sequence of real numbers that converges to some $A \in \mathbb{R}$. Prove that $(1-x) \sum_{n=0}^{\infty} a_{n} x^{n} \rightarrow A$ as $x$ approaches 1 from below.","To prove that \((1 - x) \sum_{n=0}^{\infty} a_n x^n \rightarrow A\) as \(x\) approaches 1 from below, given that \(\{a_n\}_{n=0}^{\infty}\) converges to \(A \in \mathbb{R}\), we can use the properties of infinite series and the concept of uniform convergence. Here's a step-by-step proof:
+
+### Proof
+
+1. **Given**: 
+   - The sequence \(\{a_n\}\) converges to \(A\). This means for any \(\epsilon > 0\), there exists an \(N\) such that for all \(n \geq N\), \(|a_n - A| < \epsilon\).
+
+2. **Expression Analysis**:
+   - Consider the expression \((1 - x) \sum_{n=0}^{\infty} a_n x^n\). It can be rewritten as:
+     \[ (1 - x) \left( \sum_{n=0}^{N-1} a_n x^n + \sum_{n=N}^{\infty} a_n x^n \right). \]
+
+3. **Splitting the Sum**:
+   - We separate the finite sum from the infinite sum:
+     \[ (1 - x) \sum_{n=0}^{N-1} a_n x^n + (1 - x) \sum_{n=N}^{\infty} a_n x^n. \]
+
+4. **Handling the Finite Sum**:
+   - The first part, \((1 - x) \sum_{n=0}^{N-1} a_n x^n\), goes to 0 as \(x\) approaches 1, because it's a finite sum of terms each of which goes to 0 as \(x \rightarrow 1\).
+
+5. **Handling the Infinite Sum**:
+   - In the second part, \((1 - x) \sum_{n=N}^{\infty} a_n x^n\), note that as \(x \rightarrow 1\), each \(x^n \rightarrow 1\). So, we can approximate \(a_n x^n \approx a_n\) for \(n \geq N\) when \(x\) is close to 1.
+   - This part then approximates \((1 - x) \sum_{n=N}^{\infty} a_n\), which is close to \((1 - x) \sum_{n=N}^{\infty} A\) as \(n \rightarrow \infty\), due to the convergence of \(a_n\) to \(A\).
+
+6. **Convergence of the Infinite Sum**:
+   - The series \(\sum_{n=N}^{\infty} A\) is a geometric series with the sum \(A / (1 - x)\) when \(x \neq 1\).
+   - Therefore, \((1 - x) \sum_{n=N}^{\infty} a_n x^n\) approximates \(A \cdot (1 - x) / (1 - x) = A\) as \(x \rightarrow 1\).
+
+7. **Conclusion**:
+   - As \(x\) approaches 1 from below, the first part of the expression goes to 0, and the second part approximates \(A\). Therefore, \((1 - x) \sum_{n=0}^{\infty} a_n x^n \rightarrow A\).
+
+This result is a consequence of the fact that the tail of the series \(\sum a_n x^n\) becomes increasingly insignificant as \(x\) approaches 1, while the leading terms dominate and approach \(A\), the limit of the sequence \(a_n\).","To prove that \((1-x) \sum_{n=0}^{\infty} a_{n} x^{n} \rightarrow A\) as \(x\) approaches 1 from below, we can use the properties of limits and series.
 
 Given the sequence \(\{a_n\}_{n=0}^{\infty}\) that converges to \(A\), we have:
 
@@ -1660,7 +2104,41 @@ $$
 
 $$
 \lim _{n \rightarrow \infty}\left\|f_{n}-f\right\|_{L^{2}(X)}=0 ?
-$$","(a) We do not necessarily know that \|f\|_{L^{2}(X)}<\infty. 
+$$","### Part (a): Boundedness of \(\|f\|_{L^{2}(X)}\)
+
+**Question**: Do we know \(\|f\|_{L^{2}(X)} < \infty\)?
+
+**Answer**:
+- **Yes**, we can conclude that \(\|f\|_{L^{2}(X)} < \infty\).
+- **Proof**: Since \(\{f_n\}\) converges almost everywhere to \(f\) and \(\sup_n \|f_n\|_{L^2(X)} \leq M\), it implies that \(\|f_n\|_{L^2(X)}\) is uniformly bounded for all \(n\). By the Fatou's Lemma, which states that the integral of the limit is less than or equal to the limit of the integrals under certain conditions (which are satisfied here), we have:
+  \[ \|f\|_{L^2(X)}^2 = \int_X |f|^2 \leq \liminf_{n \rightarrow \infty} \int_X |f_n|^2 = \liminf_{n \rightarrow \infty} \|f_n\|_{L^2(X)}^2 \leq M^2. \]
+- Thus, \(\|f\|_{L^2(X)} < \infty\).
+
+### Part (b): Convergence in \(L^2(X)\) and \(L^p(X)\) for \(1 < p < 2\)
+
+**Question**: Do we know \(\lim_{n \rightarrow \infty} \|f_n - f\|_{L^2(X)} = 0\)? Do we know \(\lim_{n \rightarrow \infty} \|f_n - f\|_{L^p(X)} = 0\) for \(1 < p < 2\)?
+
+**Answer**:
+- For the \(L^2\) norm, **no**, we cannot conclude that \(\lim_{n \rightarrow \infty} \|f_n - f\|_{L^2(X)} = 0\). Pointwise convergence almost everywhere and boundedness in \(L^2\) do not imply convergence in \(L^2\).
+- For the \(L^p\) norm with \(1 < p < 2\), the answer is also **no**. The same reasoning applies here as for the \(L^2\) case.
+
+**Counterexample**:
+- Consider a sequence of functions \(\{f_n\}\) on \(X = (0, 1)\) defined by \(f_n(x) = n\) for \(x \in [0, \frac{1}{n}]\) and \(0\) elsewhere. This sequence converges almost everywhere to the zero function, but \(\|f_n\|_{L^2(X)}\) and \(\|f_n\|_{L^p(X)}\) for \(1 < p < 2\) do not converge to \(0\).
+
+### Part (c): Convergence in \(L^2(X)\) under Additional Assumption
+
+**Question**: If we assume, in addition, that \(\lim_{n \rightarrow \infty} \|f_n\|_{L^2(X)} = \|f\|_{L^2(X)} < \infty\), do we know that \(\lim_{n \rightarrow \infty} \|f_n - f\|_{L^2(X)} = 0\)?
+
+**Answer**:
+- **Yes**, under these conditions, we can conclude that \(\lim_{n \rightarrow \infty} \|f_n - f\|_{L^2(X)} = 0\).
+- **Proof**: Using the assumption that \(\lim_{n \rightarrow \infty} \|f_n\|_{L^2(X)} = \|f\|_{L^2(X)}\) along with the fact that \(f_n \rightarrow f\) almost everywhere, we can apply the following argument:
+  - Consider the expression \(\|f_n - f\|_{L^2(X)}^2\). This can be expanded as \(\|f_n\|_{L^2(X)}^2 - 2\langle f_n, f \rangle + \|f\|_{L^2(X)}^2\).
+  - As \(n \rightarrow \infty\), \(\|f_n\|_{L^2(X)}^2 \rightarrow \|f\|_{L^2(X)}^2\) and \(\langle f_n, f \rangle \rightarrow \|f\|_{L^2(X)}^2\) (by the assumption of convergence and the fact that the inner product is continuous).
+  - Hence, \(\|f_n - f\|_{L^2(X)}^2 \rightarrow
+
+ 0\), implying that \(\|f_n - f\|_{L^2(X)} \rightarrow 0\).
+
+This conclusion is a result of the stronger assumption regarding the convergence of the norms, which, combined with pointwise convergence almost everywhere, ensures convergence in the \(L^2\) norm.","(a) We do not necessarily know that \|f\|_{L^{2}(X)}<\infty. 
 
 Counterexample: Consider the sequence of functions \(\{f_n\}\) defined on \((0,1)\) as follows:
 
@@ -1715,7 +2193,39 @@ $$
 \mathbb{E} X_{i} X_{j}=g(j-i)
 $$
 
-In other words, the correlation functions vanishing asymptotically. Do we know whether the conclusion $(+)$ still holds? Give a counterexample or prove your answer.","Under the given conditions, we do not necessarily know whether the conclusion of the weak law of large numbers (WLLN) still holds. The WLLN relies on the independence of random variables, and the assumption that the correlation functions \(g(j-i)\) vanish asymptotically does not guarantee the same level of independence.
+In other words, the correlation functions vanishing asymptotically. Do we know whether the conclusion $(+)$ still holds? Give a counterexample or prove your answer.","To address this question, we need to examine whether the weak law of large numbers still holds when the independence of the sequence \(X_1, X_2, \ldots, X_n\) is replaced by a condition on their correlation function. The weak law states that as \(n\) grows, the average of the random variables converges in probability to the average of their expected values, under certain conditions. Let's analyze the scenario with the given correlation condition:
+
+### Given Conditions
+- The random variables \(X_1, X_2, \ldots, X_n\) are not necessarily independent.
+- \(|\mu_j| = |\mathbb{E}X_j| \leq 1\) and \(\mathbb{E}(X_j - \mu_j)^2 = V_j \leq 1\) for each \(j\).
+- For all \(j \geq i\), \(\mathbb{E}X_iX_j = g(j-i)\), where \(\lim_{k \rightarrow \infty} g(k) = 0\).
+
+### Question
+Do we know whether
+\[ \lim_{n \rightarrow \infty} \mathbb{P}\left(\left|\frac{S_n - \sum_{j} \mu_j}{n}\right| > \varepsilon\right) = 0 \]
+still holds?
+
+### Analysis
+
+1. **Variance of \(S_n\)**:
+   - If the \(X_j\) are independent, the variance of their sum \(S_n\) is the sum of their variances, but without independence, this isn't necessarily true.
+   - In the given setup, we need to consider the covariance between \(X_i\) and \(X_j\), which is given by \(g(j-i)\). 
+
+2. **Asymptotic Behavior of Correlation**:
+   - The fact that \(g(k) \rightarrow 0\) as \(k \rightarrow \infty\) suggests that the correlation between \(X_i\) and \(X_j\) becomes negligible for large \(|j-i|\), but does not imply independence or uncorrelation for small \(|j-i|\).
+   - This condition alone might not be sufficient to ensure that the variance of \(S_n\) behaves in a way similar to the case of independence.
+
+3. **Chebyshev's Inequality**:
+   - A key step in proving the weak law of large numbers is using Chebyshev's inequality, which relates the probability of deviation from the mean to the variance of the random variable.
+   - Without a clear bound on the variance of \(S_n\), we cannot directly apply Chebyshev's inequality as in the case of independent random variables.
+
+### Conclusion
+Given the conditions, it is not straightforward to conclude whether the weak law of large numbers holds. The correlation function decreasing to zero as the difference in indices increases suggests some ""asymptotic independence,"" but without more specific information about the nature of the correlation for small differences and the overall structure of the sequence, we cannot definitively conclude that the conclusion of the weak law holds.
+
+### Counterexample
+A counterexample would need to show a sequence of random variables satisfying the given conditions but not obeying the weak law of large numbers. Constructing such a counterexample requires careful design to ensure that the correlation function satisfies the given conditions but the sequence does not converge in probability to its mean. However, without additional information or specific constraints on the random variables or the function \(g\), constructing a precise counterexample is challenging. 
+
+In summary, while the given condition on the correlation function implies some weakening of dependence as the index increases, it does not necessarily guarantee the convergence in probability required by the weak law of large numbers.","Under the given conditions, we do not necessarily know whether the conclusion of the weak law of large numbers (WLLN) still holds. The WLLN relies on the independence of random variables, and the assumption that the correlation functions \(g(j-i)\) vanish asymptotically does not guarantee the same level of independence.
 
 Counterexample:
 
@@ -1757,7 +2267,31 @@ $$
 $$
 
 for each $n=0,1,2,3, \ldots$ Prove that $f$ is an odd function (i.e., that $f(-x)=$ $-f(x)$ for all $x \in[-1,1])$.
-","To prove that $f$ is an odd function, we need to show that $f(-x) = -f(x)$ for all $x \in [-1, 1]$ based on the given condition:
+","To prove that \( f \) is an odd function given the condition \( \int_{-1}^{1} x^{2n} f(x) dx = 0 \) for each \( n = 0, 1, 2, 3, \ldots \), we can use properties of continuous functions and orthogonal functions in the space of square-integrable functions over \([-1, 1]\).
+
+### Proof
+
+1. **Orthogonality to Even Functions**:
+   - The condition given implies that \( f(x) \) is orthogonal to \( x^{2n} \) for every non-negative integer \( n \). Here, \( x^{2n} \) are even functions, meaning they satisfy \( x^{2n}(-x) = x^{2n}(x) \).
+   - Orthogonality implies that \( \int_{-1}^{1} x^{2n} f(x) dx = 0 \) for all \( n \).
+
+2. **Polynomials Are Dense in Continuous Functions**:
+   - The set of polynomials is dense in the space of continuous functions on a closed interval (by the Stone-Weierstrass theorem). This means any continuous function on \([-1, 1]\) can be uniformly approximated by polynomials.
+
+3. **Decomposition into Even and Odd Parts**:
+   - Any polynomial (and thus, by density, any continuous function) can be decomposed into its even and odd parts. For a continuous function \( g(x) \), the decomposition is:
+     - Even part: \( g_e(x) = \frac{g(x) + g(-x)}{2} \).
+     - Odd part: \( g_o(x) = \frac{g(x) - g(-x)}{2} \).
+   - So, \( g(x) = g_e(x) + g_o(x) \).
+
+4. **Orthogonality Implies Oddness**:
+   - Since \( f(x) \) is orthogonal to every even polynomial \( x^{2n} \), it follows that \( f(x) \) can only have an odd part.
+   - To see this, consider the integral of the product of \( f(x) \) with any even polynomial (or even function). If \( f(x) \) had an even part, this integral would not be zero, contradicting the given condition.
+
+5. **Conclusion**: 
+   - Therefore, \( f(x) \) must be an odd function. In other words, \( f(-x) = -f(x) \) for all \( x \in [-1, 1] \).
+
+This proof hinges on the properties of orthogonal functions in the context of the space of continuous functions on a closed interval and the ability to approximate continuous functions by polynomials. The orthogonality condition given essentially forces \( f \) to lie in the subspace of odd functions.","To prove that $f$ is an odd function, we need to show that $f(-x) = -f(x)$ for all $x \in [-1, 1]$ based on the given condition:
 
 $$
 \int_{-1}^{1} x^{2n} f(x) dx = 0 \quad \text{for each} \ n = 0, 1, 2, 3, \ldots
@@ -1811,7 +2345,40 @@ $$
 \frac{\partial^{2} f}{\partial x^{2}}+\frac{\partial^{2} f}{\partial y^{2}}=a f
 $$
 
-in functions $f: \mathbf{T} \rightarrow \mathbf{R}$ is finite dimensional.","To prove that the $\mathbb{R}$-vector space of solutions of the partial differential equation
+in functions $f: \mathbf{T} \rightarrow \mathbf{R}$ is finite dimensional.","To prove that the vector space of solutions to the partial differential equation (PDE)
+
+\[ \frac{\partial^{2} f}{\partial x^{2}} + \frac{\partial^{2} f}{\partial y^{2}} = af \]
+
+on the torus \(\mathbf{T} = (\mathbf{R} / \mathbf{Z})^2\) is finite-dimensional, we can use the theory of elliptic operators and the Fourier series representation of functions on the torus. Here's a step-by-step proof:
+
+### Proof
+
+1. **Representation on the Torus**:
+   - Functions on the torus \(\mathbf{T}\) can be represented by periodic functions on \(\mathbf{R}^2\) with a period of 1 in both the \(x\) and \(y\) directions. This allows the use of Fourier series to represent any function \(f: \mathbf{T} \rightarrow \mathbf{R}\).
+
+2. **Fourier Series Expansion**:
+   - Any function \(f\) on \(\mathbf{T}\) can be written as a Fourier series: 
+     \[ f(x, y) = \sum_{(m, n) \in \mathbf{Z}^2} c_{mn} e^{2\pi i(mx + ny)}, \]
+     where \(c_{mn}\) are the Fourier coefficients.
+
+3. **Applying the PDE to the Fourier Series**:
+   - Applying the differential operator to each term in the Fourier series, we get:
+     \[ \frac{\partial^{2} f}{\partial x^{2}} + \frac{\partial^{2} f}{\partial y^{2}} = \sum_{(m, n) \in \mathbf{Z}^2} c_{mn}(-4\pi^2 m^2 - 4\pi^2 n^2) e^{2\pi i(mx + ny)}. \]
+   - Since \(af(x, y) = a(x, y) f(x, y)\), the PDE becomes:
+     \[ \sum_{(m, n) \in \mathbf{Z}^2} c_{mn}(-4\pi^2 m^2 - 4\pi^2 n^2) e^{2\pi i(mx + ny)} = \sum_{(m, n) \in \mathbf{Z}^2} c_{mn} a(x, y) e^{2\pi i(mx + ny)}. \]
+
+4. **Elliptic Operator**:
+   - The operator \( \Delta = \frac{\partial^{2}}{\partial x^{2}} + \frac{\partial^{2}}{\partial y^{2}} \) is elliptic. For elliptic operators, the corresponding PDE has a finite-dimensional space of solutions when the operator is coupled with a compact perturbation, like multiplication by a continuous function \(a(x, y)\).
+
+5. **Compactness Argument**:
+   - The multiplication operator by \(a(x, y)\) is compact because \(a\) is continuous on a compact domain (the torus). This means that the PDE can be thought of as an elliptic operator with a compact perturbation.
+
+6. **Finite Dimensionality**:
+   - From elliptic theory, it is known that such an operator has a finite-dimensional kernel (the space of solutions to the homogeneous problem). Therefore, the space of solutions to our PDE is finite-dimensional.
+
+### Conclusion
+
+The elliptic nature of the Laplacian, coupled with the compactness of the perturbation by the continuous function \(a(x, y)\), implies that the space of solutions to the given PDE on the torus is finite-dimensional. This result comes from the theory of elliptic operators and their spectral properties in the context of compact manifolds like the torus.","To prove that the $\mathbb{R}$-vector space of solutions of the partial differential equation
 
 $$
 \frac{\partial^{2} f}{\partial x^{2}}+\frac{\partial^{2} f}{\partial y^{2}}=a f
@@ -1864,7 +2431,51 @@ $$
 f(x, y)=\frac{1}{2 \pi} \frac{1}{\sqrt{1-\rho^{2}}} e^{-\frac{x^{2}-2 \rho x y+y^{2}}{2\left(1-\rho^{2}\right)}}
 $$
 
-where $0<\rho<1$ is a parameter. Let $U=X+a Y$ and $V=X+b Y$ with $a, b \neq 0$. Find the condition that $\operatorname{Cov}(U, V)=0$. In this case, prove that $U$ and $V$ are independent (you cannot just cite a theorem).","(a) No, it is not true that if $U$ and $V$ are uncorrelated, then they are independent. Uncorrelatedness does not imply independence. 
+where $0<\rho<1$ is a parameter. Let $U=X+a Y$ and $V=X+b Y$ with $a, b \neq 0$. Find the condition that $\operatorname{Cov}(U, V)=0$. In this case, prove that $U$ and $V$ are independent (you cannot just cite a theorem).","### Part (a): Uncorrelatedness Implies Independence?
+
+**Question**: Is it true that if \(U\) and \(V\) are uncorrelated, then \(U\) and \(V\) are independent?
+
+**Answer**: No, uncorrelatedness does not necessarily imply independence.
+
+**Counterexample**:
+- Consider two random variables \(U\) and \(V\) where \(U\) is uniformly distributed on \([-1, 1]\) and \(V = U^2\). Clearly, \(V\) is dependent on \(U\) (since it's a function of \(U\)), but they are uncorrelated.
+- The covariance \(\operatorname{Cov}(U, V)\) is given by \(\mathbb{E}[UV] - \mathbb{E}[U]\mathbb{E}[V]\). Since \(U\) is symmetric about 0, \(\mathbb{E}[U] = 0\). Also, \(UV = U^3\), and due to the symmetric distribution of \(U\), \(\mathbb{E}[U^3] = 0\). Thus, \(\operatorname{Cov}(U, V) = 0 - 0 = 0\).
+- Therefore, \(U\) and \(V\) are uncorrelated but not independent.
+
+### Part (b): Bivariate Normal Distribution
+
+**Given**: The bivariate normal distribution of \(\mathrm{X}\) and \(\mathrm{Y}\) with the density function \(f(x, y)\) and parameter \(0 < \rho < 1\). Define \(U = X + aY\) and \(V = X + bY\) with \(a, b \neq 0\).
+
+**To Find**: The condition for \(\operatorname{Cov}(U, V) = 0\).
+
+**Solution**:
+1. **Covariance of \(U\) and \(V\)**:
+   - \(\operatorname{Cov}(U, V) = \mathbb{E}[UV] - \mathbb{E}[U]\mathbb{E}[V]\).
+   - Substitute \(U = X + aY\) and \(V = X + bY\), then calculate \(\mathbb{E}[UV]\) and \(\mathbb{E}[U]\mathbb{E}[V]\).
+
+2. **Calculating \(\mathbb{E}[UV]\)**:
+   - \(\mathbb{E}[UV] = \mathbb{E}[(X + aY)(X + bY)] = \mathbb{E}[X^2 + abY^2 + (a+b)XY]\).
+   - Since \(\mathrm{X}\) and \(\mathrm{Y}\) are jointly normally distributed, \(\mathbb{E}[X^2] = \text{Var}(X) = 1\), \(\mathbb{E}[Y^2] = \text{Var}(Y) = 1\), and \(\mathbb{E}[XY] = \rho\) (since \(\text{Cov}(X, Y) = \rho\)).
+   - Therefore, \(\mathbb{E}[UV] = 1 + ab + (a+b)\rho\).
+
+3. **Calculating \(\mathbb{E}[U]\mathbb{E}[V]\)**:
+   - \(\mathbb{E}[U] = \mathbb{E}[X] + a\mathbb{E}[Y]\) and \(\mathbb{E}[V] = \mathbb{E}[X] + b\mathbb{E}[Y]\).
+   - Since \(\mathbb{E}[X] = \mathbb{E}[Y] = 0\), \(\mathbb{E}[U] = \mathbb{E}[V] = 0\).
+   - Thus, \(\mathbb{E}[U]\mathbb{E}[V] = 0\).
+
+4. **Condition for \(\operatorname{Cov}(U, V) = 0\)**:
+   - Set \(\operatorname{Cov}(U, V) = \mathbb{E}[UV] - \mathbb{E}[U]\mathbb{E}[V] = 0\).
+   - Substitute the values: \(1 + ab + (a+b)\rho = 0\).
+
+5. **Proving Independence**:
+   - Normally, independence of linear combinations of jointly normal random variables can be inferred from their uncorrelatedness. However, since direct citation of a theorem is not allowed, we prove it directly from the density function of the bivariate normal distribution.
+   - For \(U\) and \(V\) to be independent, their joint density should factorize
+
+ into the product of their marginal densities.
+   - Express the joint density of \(U\) and \(V\) in terms of \(X\) and \(Y\), then show that it factors into a product of two functions, one involving only \(U\) and the other only \(V\).
+   - This can be shown through a change of variables in the integral of the joint density of \(X\) and \(Y\), with the condition \(1 + ab + (a+b)\rho = 0\) ensuring that the cross terms vanish, allowing factorization.
+
+In summary, \(U\) and \(V\) are uncorrelated and thus independent if the condition \(1 + ab + (a+b)\rho = 0\) is satisfied. The proof of independence without citing a theorem involves directly working with the joint density function of the bivariate normal distribution.","(a) No, it is not true that if $U$ and $V$ are uncorrelated, then they are independent. Uncorrelatedness does not imply independence. 
 
 Counterexample: Consider two random variables $U$ and $V$ defined as follows:
 
@@ -1927,7 +2538,35 @@ $$
 $$
 
 Use Chebyshev's inequality to prove that $\overline{X_{n}}$ converges to $\mu$ in probability as $n \rightarrow \infty$.
-","To prove that $\overline{X_n}$ converges to $\mu$ in probability as $n \rightarrow \infty$ using Chebyshev's inequality, we need to show that for any $\epsilon > 0$:
+","To prove that \(\overline{X_n}\) converges to \(\mu\) in probability as \(n \rightarrow \infty\) using Chebyshev's inequality, we'll need to establish that for any \(\epsilon > 0\), the probability \(P(|\overline{X_n} - \mu| > \epsilon)\) approaches 0 as \(n\) increases. 
+
+### Chebyshev's Inequality
+Chebyshev's inequality states that for any random variable \(Y\) with mean \(\mu_Y\) and variance \(\sigma_Y^2\), and for any \(k > 0\), 
+
+\[ P(|Y - \mu_Y| \geq k) \leq \frac{\sigma_Y^2}{k^2}. \]
+
+### Proof
+
+1. **Given**:
+   - The \(X_i\) are independent and identically distributed (i.i.d.) random variables.
+   - Each \(X_i\) has a finite expected value \(\mu\) and a finite nonzero variance \(\sigma^2\).
+   - Define \(\overline{X_n} = \frac{1}{n}(X_1 + \cdots + X_n)\).
+
+2. **Expected Value and Variance of \(\overline{X_n}\)**:
+   - The expected value of \(\overline{X_n}\) is \(\mu\), as the expected value of a sum of random variables is the sum of their expected values, and scaling by a constant scales the expectation.
+   - The variance of \(\overline{X_n}\) is \(\frac{\sigma^2}{n}\), because the variance of a sum of independent random variables is the sum of their variances, and scaling by a constant scales the variance by the square of that constant.
+
+3. **Applying Chebyshev's Inequality**:
+   - Applying Chebyshev's inequality to \(\overline{X_n}\), for any \(\epsilon > 0\):
+     \[ P(|\overline{X_n} - \mu| \geq \epsilon) \leq \frac{\sigma^2/n}{\epsilon^2} = \frac{\sigma^2}{n\epsilon^2}. \]
+
+4. **Convergence in Probability**:
+   - To show convergence in probability, we need to show that for any \(\epsilon > 0\), \(P(|\overline{X_n} - \mu| \geq \epsilon) \rightarrow 0\) as \(n \rightarrow \infty\).
+   - From the inequality above, as \(n \rightarrow \infty\), the upper bound \(\frac{\sigma^2}{n\epsilon^2}\) goes to 0.
+   - Therefore, \(P(|\overline{X_n} - \mu| \geq \epsilon) \rightarrow 0\) as \(n \rightarrow \infty\).
+
+### Conclusion
+This proves that \(\overline{X_n}\) converges to \(\mu\) in probability as \(n \rightarrow \infty\). The key to this proof is the application of Chebyshev's inequality to the sample mean \(\overline{X_n}\), which leverages the properties of the variance of the sum of i.i.d. random variables.","To prove that $\overline{X_n}$ converges to $\mu$ in probability as $n \rightarrow \infty$ using Chebyshev's inequality, we need to show that for any $\epsilon > 0$:
 
 $$
 \lim_{n \to \infty} P(|\overline{X_n} - \mu| \geq \epsilon) = 0.
@@ -1964,7 +2603,39 @@ $$
 This means that $\overline{X_n}$ converges to $\mu$ in probability as $n \rightarrow \infty$."
 Fall22,"\setcounter{enumi}{3}
   \item (RA) Let $V$ be the vector space of continuous functions $[0,1] \rightarrow \mathbb{R}$, and let $g: V \rightarrow \mathbb{R}$ be the linear functional $f \mapsto \int_{0}^{1} x^{-1 / 3} f(x) d x$. For which $p \in(1, \infty)$ does $g$ extend to a continuous functional $\bar{g}: L^{p}([0,1]) \rightarrow \mathbb{R}$ ? For those $p$, what is the norm of this functional?
-","To determine for which values of $p \in (1, \infty)$ the linear functional $g$ can be extended to a continuous functional $\bar{g}: L^p([0,1]) \rightarrow \mathbb{R}$, we need to use the Riesz Representation Theorem, which states that for any linear functional $L$ on $L^p([0,1])$ for $1 < p < \infty$, there exists a unique $g \in L^q([0,1])$ such that:
+","To determine for which \( p \in (1, \infty) \) the linear functional \( g: V \rightarrow \mathbb{R} \), defined by \( g(f) = \int_{0}^{1} x^{-1/3} f(x) dx \), extends to a continuous functional \( \bar{g}: L^p([0, 1]) \rightarrow \mathbb{R} \), we need to use the theory of dual spaces and Hölder's inequality. Let's break down the process:
+
+### 1. Identifying \( p \) for which \( g \) extends continuously
+
+The functional \( g \) will extend to a continuous functional on \( L^p([0, 1]) \) if and only if the integral \( \int_{0}^{1} x^{-1/3} f(x) dx \) is finite and well-defined for all \( f \in L^p([0, 1]) \). By Hölder's inequality, this integral will be finite if the function \( x^{-1/3} \) belongs to the dual space of \( L^p([0, 1]) \), which is \( L^q([0, 1]) \) where \( \frac{1}{p} + \frac{1}{q} = 1 \).
+
+To find the appropriate \( p \), we must determine when \( x^{-1/3} \) is in \( L^q([0, 1]) \). The function \( x^{-1/3} \) is in \( L^q([0, 1]) \) if and only if the integral \( \int_{0}^{1} |x^{-1/3}|^q dx \) is finite. Evaluating this integral gives:
+
+\[ \int_{0}^{1} x^{-q/3} dx = \left[ \frac{x^{1-q/3}}{1-q/3} \right]_{0}^{1}, \]
+
+which is finite if and only if \( 1 - \frac{q}{3} > 0 \). This simplifies to \( q < 3 \). 
+
+Since \( \frac{1}{p} + \frac{1}{q} = 1 \), we find \( p > \frac{3}{2} \).
+
+### 2. Computing the Norm of \( \bar{g} \)
+
+The norm of the functional \( \bar{g} \) in the dual space \( (L^p([0, 1]))^* \) is given by the supremum of \( |g(f)| \) over all \( f \) in \( L^p([0, 1]) \) with \( \|f\|_p = 1 \). 
+
+Using Hölder's inequality, for \( f \in L^p([0, 1]) \) with \( \|f\|_p = 1 \), we have:
+
+\[ |g(f)| = \left| \int_{0}^{1} x^{-1/3} f(x) dx \right| \leq \left( \int_{0}^{1} |x^{-1/3}|^q dx \right)^{1/q} \|f\|_p, \]
+
+where \( \frac{1}{p} + \frac{1}{q} = 1 \) and \( q < 3 \). 
+
+Thus, the norm of \( \bar{g} \) is:
+
+\[ \|\bar{g}\| = \left( \int_{0}^{1} x^{-q/3} dx \right)^{1/q} = \left( \frac{3}{3-q} \right)^{1/q} \]
+
+for \( p > \frac{3}{2} \).
+
+### Conclusion
+
+The functional \( g \) extends to a continuous functional \( \bar{g} \) on \( L^p([0, 1]) \) for \( p > \frac{3}{2} \). The norm of this functional \( \bar{g} \) in the dual space is \( \left( \frac{3}{3-q} \right)^{1/q} \), where \( \frac{1}{p} + \frac{1}{q} = 1 \) and \( q < 3 \).","To determine for which values of $p \in (1, \infty)$ the linear functional $g$ can be extended to a continuous functional $\bar{g}: L^p([0,1]) \rightarrow \mathbb{R}$, we need to use the Riesz Representation Theorem, which states that for any linear functional $L$ on $L^p([0,1])$ for $1 < p < \infty$, there exists a unique $g \in L^q([0,1])$ such that:
 
 $$
 L(f) = \int_{0}^{1} g(x) f(x) \, dx
@@ -2056,7 +2727,48 @@ Fall22,"\setcounter{enumi}{1}
 
 i) Prove that there exist unique monic polynomials $p_{0}, p_{1}, p_{2}, \ldots \in \mathbb{R}[x]$ such that each $p_{n}$ has degree $n$ and $\int_{0}^{1} w(x) p_{m}(x) p_{n}(x) d x=0$ for all $m, n \geq 0$ such that $m \neq n$.
 
-ii) Prove that for each $n>0$ the four polynomials $p_{n-1}, p_{n}, x p_{n}, p_{n+1}$ are linearly dependent.","i) To prove that there exist unique monic polynomials $p_0, p_1, p_2, \ldots$ with the given properties, we can use Gram-Schmidt orthogonalization on the sequence of monomials $1, x, x^2, \ldots$ with respect to the inner product induced by the weight function $w(x)$, defined as:
+ii) Prove that for each $n>0$ the four polynomials $p_{n-1}, p_{n}, x p_{n}, p_{n+1}$ are linearly dependent.","To solve this problem, we'll use the theory of orthogonal polynomials and properties of linearly dependent functions.
+
+### Part i) Existence and Uniqueness of Orthogonal Polynomials
+
+**Given**: A continuous weight function \(w: [0, 1] \rightarrow (0, \infty)\).
+
+**To Prove**: Existence and uniqueness of monic polynomials \(p_0, p_1, p_2, \ldots\) such that each \(p_n\) has degree \(n\) and \(\int_{0}^{1} w(x) p_m(x) p_n(x) dx = 0\) for all \(m, n \geq 0\) with \(m \neq n\).
+
+#### Proof
+
+1. **Orthogonality**: The condition \(\int_{0}^{1} w(x) p_m(x) p_n(x) dx = 0\) for \(m \neq n\) defines a set of orthogonal polynomials with respect to the weight function \(w(x)\).
+
+2. **Existence**: 
+   - We construct the polynomials \(p_n(x)\) inductively. 
+   - Start with \(p_0(x) = 1\) (monic and degree 0).
+   - Assume \(p_0, p_1, \ldots, p_{n-1}\) have been constructed. Define \(p_n(x)\) as a linear combination of \(1, x, x^2, \ldots, x^n\) such that it is orthogonal to each \(p_i(x)\) for \(i = 0, 1, \ldots, n-1\).
+   - This construction involves solving a system of linear equations to determine the coefficients of \(p_n(x)\) that ensure orthogonality, which is always possible since \(w(x) > 0\) and the integrals are well-defined.
+
+3. **Uniqueness**: 
+   - If there were another set of monic orthogonal polynomials \(q_n(x)\) of the same degree \(n\), then \(p_n(x) - q_n(x)\) would be a polynomial of degree less than \(n\) that is orthogonal to all \(p_i(x)\) for \(i < n\), which contradicts the construction of \(p_n(x)\).
+   - Therefore, the set of orthogonal polynomials is unique.
+
+### Part ii) Linear Dependence of Polynomials
+
+**To Prove**: For each \(n > 0\), the polynomials \(p_{n-1}, p_{n}, xp_{n}, p_{n+1}\) are linearly dependent.
+
+#### Proof
+
+1. **Linear Dependence**: To show that \(p_{n-1}, p_{n}, xp_{n}, p_{n+1}\) are linearly dependent, we need to show that there exists a non-trivial linear combination of these polynomials that equals zero.
+
+2. **Polynomial Degrees**: 
+   - The degrees of \(p_{n-1}, p_{n}, xp_{n}, p_{n+1}\) are \(n-1, n, n+1, n+1\) respectively. 
+   - Since there are four polynomials but the highest degree among them is \(n+1\), they must be linearly dependent (by the dimension theorem for polynomial spaces).
+
+3. **Constructing the Linear Combination**:
+   - Consider \(a p_{n-1} + b p_{n} + c xp_{n} + d p_{n+1} = 0\), where not all of \(a, b, c, d\) are zero.
+   - The polynomial \(xp_{n}\) can be expressed as a linear combination of \(p_{n+1}, p_{n}, p_{n-1}, \ldots, p_{0}\), since its degree is \(n+1\) and the set \(\{p_i\}_{i=0}^{n}\) spans the space of all polynomials of degree up to \(n\).
+   - Therefore, we can express \(xp_{n}\) in terms of \(p_{n+1}, p_{n}\), and \(p_{n-1}\), showing the linear dependence of the set \(\{p_{n-1}, p_{n}, xp_{n}, p_{n+1}\}\).
+
+### Conclusion
+
+For part i), we have proven the existence and uniqueness of a sequence of orthogonal polynomials with respect to the weight function \(w(x)\) on \([0, 1]\). For part ii), we have shown that for each \(n > 0\), the polynomials \(p_{n-1}, p_{n}, xp_{n}, p_{n+1}\) are linearly dependent due to the properties of polynomial spaces and orthogonal polynomials.","i) To prove that there exist unique monic polynomials $p_0, p_1, p_2, \ldots$ with the given properties, we can use Gram-Schmidt orthogonalization on the sequence of monomials $1, x, x^2, \ldots$ with respect to the inner product induced by the weight function $w(x)$, defined as:
 
 $$
 \langle f, g \rangle_w = \int_{0}^{1} w(x) f(x) g(x) \, dx.
