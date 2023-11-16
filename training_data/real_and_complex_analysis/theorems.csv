@@ -1,0 +1,145 @@
+Theorem,Statement,Proof
+3.2,"If $\varphi$ is convex on $(a, b)$ then $\varphi$ is continuous on $(a, b)$.","Suppose $a<s<x<y<t<b$. Write $S$ for the point $(s, \varphi(s))$ in the plane, and deal similarly with $x, y$, and $t$. Then $X$ is on or below the line $S Y$, hence $Y$ is on or above the line through $S$ and $X$; also, $Y$ is on or below $X T$. As $y \rightarrow x$, it follows that $Y \rightarrow X$, i.e., $\varphi(y) \rightarrow \varphi(x)$. Left-hand limits are handled in the same manner, and the continuity of $\varphi$ follows."
+3.9,"Suppose $1 \leq p \leq \infty$, and $f \in L^{p}(\mu), g \in L^{p}(\mu)$. Then $f+g \in L^{p}(\mu)$, and
+
+$$
+\|f+g\|_{p} \leq\|f\|_{p}+\|g\|_{p} .
+$$
+
+","For $1<p<\infty$, this follows from Minkowski's inequality, since
+
+$$
+\int_{X}|f+g|^{p} d \mu \leq \int_{X}(|f|+|g|)^{p} d \mu .
+$$
+
+For $p=1$ or $p=\infty$, (1) is a trivial consequence of the inequality $|f+g| \leq|f|+|g|$."
+2.4,"Suppose $K$ is compact and $F$ is closed, in a topological space $X$. If $F \subset K$, then $F$ is compact.","If $\left\{V_{\alpha}\right\}$ is an open cover of $F$ and $W=F^{c}$, then $W \cup \bigcup_{\alpha} V_{\alpha}$ covers $X$; hence there is a finite collection $\left\{V_{\alpha_{i}}\right\}$ such that
+
+$$
+K \subset W \cup V_{\alpha_{1}} \cup \cdots \cup V_{\alpha_{n}}
+$$
+
+Then $F \subset V_{\alpha_{1}} \cup \cdots \cup V_{\alpha_{n}}$."
+18.7,"If $A$ is a complex Banach algebra with unit in which each nonzero element is invertible, then $A$ is (isometrically isomorphic to) the complex field.","If $x \in A$ and $\lambda_{1} \neq \lambda_{2}$, at least one of the elements $x-\lambda_{1} e$ and $x-\lambda_{2} e$ must be invertible, since they cannot both be 0 . It now follows from Theorem 18.6 that $\sigma(x)$ consists of exactly one point, say $\lambda(x)$, for each $x \in A$. Since $x-\lambda(x) e$ is not invertible, it must be 0 , hence $x=\lambda(x) e$. The mapping $x \rightarrow \dot{\lambda}(x)$ is therefore an isomorphism of $A$ onto the complex field, which is also an isometry, since $|\lambda(x)|=\|\lambda(x) e\|=\|x\|$ for all $x \in A$."
+2.6,"If $\left\{K_{\alpha}\right\}$ is a collection of compact subsets of a Hausdorff space and if $\bigcap_{\alpha} K_{\alpha}=\varnothing$, then some finite subcollection of $\left\{K_{\alpha}\right\}$ also has empty intersection.","Put $V_{\alpha}=K_{\alpha}^{c}$. Fix a member $K_{1}$ of $\left\{K_{\alpha}\right\}$. Since no point of $K_{1}$ belongs to every $K_{\alpha},\left\{V_{\alpha}\right\}$ is an open cover of $K_{1}$. Hence $K_{1} \subset V_{\alpha_{1}} \cup \cdots \cup V_{\alpha_{n}}$ for some finite collection $\left\{V_{\alpha_{i}}\right\}$. This implies that
+
+$$
+K_{1} \cap K_{\alpha_{1}} \cap \cdots \cap K_{\alpha_{n}}=\varnothing
+$$"
+15.10,"Let $f$ be an entire function, suppose $f(0) \neq 0$, and let $z_{1}, z_{2}, z_{3}$, $\ldots$ be the zeros of $f$, listed according to their multiplicities. Then there exist an entire function $g$ and a sequence $\left\{p_{n}\right\}$ of nonnegative integers, such that
+
+$$
+f(z)=e^{g(z)} \prod_{n=1}^{\infty} E_{p_{n}}\left(\frac{z}{z_{n}}\right)
+$$
+
+","Let $P$ be the product in Theorem 15.9, formed with the zeros of $f$. Then $f / P$ has only removable singularities in the plane, hence is (or can be extended to) an entire function. Also, $f / P$ has no zero, and since the plane is simply connected, $f / P=e^{g}$ for some entire function $g$."
+1.40,"Suppose $\mu(X)<\infty, f \in L^{1}(\mu), S$ is a closed set in the complex plane, and the averages
+
+$$
+A_{E}(f)=\frac{1}{\mu(E)} \int_{E} f d \mu
+$$
+
+lie in $S$ for every $E \in \mathfrak{M}$ with $\mu(E)>0$. Then $f(x) \in S$ for almost all $x \in X$.","Let $\Delta$ be a closed circular disc (with center at $\alpha$ and radius $r>0$, say) in the complement of $S$. Since $S^{c}$ is the union of countably many such discs, it is enough to prove that $\mu(E)=0$, where $E=f^{-1}(\Delta)$.
+
+If we had $\mu(E)>0$, then
+
+$$
+\left|A_{E}(f)-\alpha\right|=\frac{1}{\mu(E)}\left|\int_{E}(f-\alpha) d \mu\right| \leq \frac{1}{\mu(E)} \int_{E}|f-\alpha| d \mu \leq r
+$$
+
+which is impossible, since $A_{E}(f) \in S$. Hence $\mu(E)=0$."
+5.10,"If $X$ and $Y$ are Banach spaces and if $\Lambda$ is a bounded linear transformation of $X$ onto $Y$ which is also one-to-one, then there is a $\delta>0$ such that
+
+$$
+\|\Lambda x\| \geq \delta\|x\| \quad(x \in X) .
+$$
+
+In other words, $\Lambda^{-1}$ is a bounded linear transformation of $Y$ onto $X$.","If $\delta$ is chosen as in the statement of Theorem 5.9, the conclusion of that theorem, combined with the fact that $\Lambda$ is now one-to-one, shows that $\|\Lambda x\|<\delta$ implies $\|x\|<1$. Hence $\|x\| \geq 1$ implies $\|\Lambda x\| \geq \delta$, and (1) is proved.
+
+The transformation $\Lambda^{-1}$ is defined on $Y$ by the requirement that $\Lambda^{-1} y=x$ if $y=\Lambda x$. A trivial verification shows that $\Lambda^{-1}$ is linear, and (1) implies that $\left\|\Lambda^{-1}\right\| \leq 1 / \delta$."
+2.5,"Suppose $X$ is a Hausdorff space, $K \subset X, K$ is compact, and $p \in K^{c}$. Then there are open sets $U$ and $W$ such that $p \in U, K \subset W$, and $U \cap W=\varnothing$.","If $q \in K$, the Hausdorff separation axiom implies the existence of disjoint open sets $U_{q}$ and $V_{q}$, such that $p \in U_{q}$ and $q \in V_{q}$. Since $K$ is compact, there are points $q_{1}, \ldots, q_{n} \in K$ such that
+
+$$
+K \subset V_{q_{1}} \cup \cdots \cup V_{q_{n}}
+$$
+
+Our requirements are then satisfied by the sets
+
+$$
+U=U_{q_{1}} \cap \cdots \cap U_{q_{n}} \text { and } \quad W=V_{q_{1}} \cup \cdots \cup V_{q_{n}} \text {. }
+$$"
+1.29,"Suppose $f: X \rightarrow[0, \infty]$ is measurable, and
+
+$$
+\varphi(E)=\int_{E} f d \mu \quad(E \in \mathfrak{M})
+$$
+
+Then $\varphi$ is a measure on $\mathfrak{M}$, and
+
+$$
+\int_{X} g d \varphi=\int_{x} g f d \mu
+$$
+
+for every measurable $g$ on $X$ with range in $[0, \infty]$","Let $E_{1}, E_{2}, E_{3}, \ldots$ be disjoint members of $\mathfrak{M}$ whose union is $E$. Observe that
+
+$$
+\chi_{E} f=\sum_{j=1}^{\infty} \chi_{E_{j}} f
+$$
+
+and that
+
+$$
+\varphi(E)=\int_{X} \chi_{E} f d \mu, \quad \varphi\left(E_{j}\right)=\int_{X} \chi_{E_{j}} f d \mu
+$$
+
+It now follows from Theorem 1.27 that
+
+$$
+\varphi(E)=\sum_{j=1}^{\infty} \varphi\left(E_{j}\right)
+$$
+
+Since $\varphi(\varnothing)=0,(5)$ proves that $\varphi$ is a measure.
+
+Next, (1) shows that (2) holds whenever $g=\chi_{E}$ for some $E \in \mathfrak{M}$. Hence
+
+(2) holds for every simple measurable function $g$, and the general case follows from the monotone convergence theorem."
+2.7,"Suppose $U$ is open in a locally compact Hausdorff space $X$, $K \subset U$, and $K$ is compact. Then there is an open set $V$ with compact closure such that
+
+$$
+K \subset V \subset \bar{V} \subset U .
+$$","Since every point of $K$ has a neighborhood with compact closure, and since $K$ is covered by the union of finitely many of these neighborhoods, $K$ lies in an open set $G$ with compact closure. If $U=X$, take $V=G$.
+
+Otherwise, let $C$ be the complement of $U$. Theorem 2.5 shows that to each $p \in C$ there corresponds an open set $W_{p}$ such that $K \subset W_{p}$ and $p \notin \bar{W}_{p}$. Hence $\left\{C \cap \bar{G} \cap W_{p}\right\}$, where $p$ ranges over $C$, is a collection of compact sets with empty intersection. By Theorem 2.6 there are points $p_{1}, \ldots, p_{n} \in C$ such that
+
+$$
+C \cap \bar{G} \cap \bar{W}_{p_{1}} \cap \cdots \cap \bar{W}_{p_{n}}=\varnothing
+$$
+
+The set
+
+$$
+V=G \cap W_{p_{1}} \cap \cdots \cap W_{p_{n}}
+$$
+
+then has the required properties, since
+
+$$
+\bar{V} \subset \bar{G} \cap \bar{W}_{p_{1}} \cap \cdots \cap \bar{W}_{p_{n}} .
+$$"
+7.10,"Associate to each $x \in R^{k}$ a sequence $\left\{E_{i}(x)\right\}$ that shrinks to $x$ nicely, and let $f \in L^{1}\left(R^{k}\right)$. Then
+
+$$
+f(x)=\lim _{i \rightarrow \infty} \frac{1}{m\left(E_{i}(x)\right)} \int_{E_{i}(x)} f d m
+$$
+
+at every Lebesgue point of $f$, hence a.e. $[m]$.
+
+","Let $x$ be a Lebesgue point of $f$ and let $\alpha(x)$ and $B\left(x, r_{i}\right)$ be the positive number and the balls that are associated to the sequence $\left\{E_{i}(x)\right\}$. Then, because $E_{i}(x) \subset B\left(x, r_{i}\right)$,
+
+$$
+\frac{\alpha(x)}{m\left(E_{i}(x)\right)} \int_{E_{i}(x)}|f-f(x)| d m \leq \frac{1}{m\left(B\left(x, r_{i}\right)\right)} \int_{B\left(x, r_{i}\right)}|f-f(x)| d m
+$$
+
+The right side converges to 0 as $i \rightarrow \infty$, because $r_{i} \rightarrow 0$ and $x$ is a Lebesgue point of $f$. Hence the left side converges to 0 , and (1) follows.
+
+Note that no relation of any sort was assumed to exist between $\left\{E_{i}(x)\right\}$ and $\left\{E_{i}(y)\right\}$, for different points $x$ and $y$."

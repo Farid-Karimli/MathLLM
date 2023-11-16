@@ -1,0 +1,7 @@
+Definition,Statement
+1.4,"Throughout Chap. 1, the set of all rational numbers will be denoted by $Q$."
+3.12,A metric space in which every Cauchy sequence converges is said to be complete.
+1.7,"Suppose $S$ is an ordered set, and $E \subset S$. If there exists a $\beta \in S$ such that $x \leq \beta$ for every $x \in E$, we say that $E$ is bounded above, and call $\beta$ an upper bound of $E$.
+
+Lower bounds are defined in the same way (with $\geq$ in place of $\leq$ )."
+2.26,"If $X$ is a metric space, if $E \subset X$, and if $E^{\prime}$ denotes the set of all limit points of $E$ in $X$, then the closure of $E$ is the set $\bar{E}=E \cup E^{\prime}$."

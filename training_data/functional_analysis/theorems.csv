@@ -1,0 +1,2083 @@
+Theorem,Statement,Proof
+1.23,"If $X$ is a locally bounded topological vector space with the Heine-Borel property, then $X$ has finite dimension.","By assumption, the origin of $X$ has a bounded neighborhood $V$. Statement $(f)$ of Theorem 1.13 shows that $\bar{V}$ is also bounded. Thus $\bar{V}$ is compact, by the Heine-Borel property. This says that $X$ is locally compact, hence finite-dimensional, by Theorem 1.22."
+2.8,"If $\left\{\Lambda_{n}\right\}$ is a sequence of continuous linear mappings from an $F$-space $X$ into a topological vector space $Y$, and if
+
+$$
+\Lambda x=\lim _{n \rightarrow \infty} \Lambda_{n} x
+$$
+
+exists for every $x \in X$, then $\Lambda$ is continuous.","Theorem 2.6 implies that $\left\{\Lambda_{n}\right\}$ is equicontinuous. Therefore if $W$ is a neighborhood of 0 in $Y$, we have $\Lambda_{n}(V) \subset W$ for all $n$ and for some neighborhood $V$ of 0 in $X$. It follows that $\Lambda(V) \subset \bar{W}$; hence (being obviously linear) $\Lambda$ is continuous."
+4.24 (a),"Suppose $X$ is a Banach space, $T \in \mathscr{B}(X), T$ is compact, $r>0$, and $E$ is a set of eigenvalues $\lambda$ of $T$ such that $|\lambda|>r$. Then for each $\lambda \in E, \mathscr{R}(T-\lambda I) \neq X",
+4.24 (b),"Suppose $X$ is a Banach space, $T \in \mathscr{B}(X), T$ is compact, $r>0$, and $E$ is a set of eigenvalues $\lambda$ of $T$ such that $|\lambda|>r$. Then $E$ is a finite set.",
+1.17,"Let $X$ and $Y$ be topological vector spaces. If $\Lambda: X \rightarrow Y$ is linear and continuous at 0, then $\Lambda$ is continuous. In fact, $\Lambda$ is uniformly continuous, in the following sense: To each neighborhood $W$ of 0 in $Y$ corresponds a neighborhood $V$ of 0 in $X$ such that
+
+$$
+y-x \in V \text { implies } \Lambda y-\Lambda x \in W .
+$$","Once $W$ is chosen, the continuity of $\Lambda$ at 0 shows that $\Lambda V \subset W$ for some neighborhood $V$ of 0. If now $y-x \in V$, the linearity of $\Lambda$ shows that $\Lambda y-\Lambda x=\Lambda(y-x) \in W$. Thus $\Lambda$ maps the neighborhood $x+V$ of $x$ into the preassigned neighborhood $\Lambda x+W$ of $\Lambda x$, which says that $\Lambda$ is continuous at $x$."
+2.4,"Suppose $X$ and $Y$ are topological vector spaces, $\Gamma$ is an equicontinuous collection of linear mappings from $X$ into $Y$, and $E$ is a bounded subset of $X$. Then $Y$ has a bounded subset $F$ such that $\Lambda(E) \subset F$ for every $\Lambda \in \Gamma$.","Let $F$ be the union of the sets $\Lambda(E)$, for $\Lambda \in \Gamma$. Let $W$ be a neighborhood of 0 in $Y$. Since $\Gamma$ is equicontinuous, there is a neighborhood $V$ of 0 in $X$ such that $\Lambda(V) \subset W$ for all $\Lambda \in \Gamma$. Since $E$ is bounded, $E \subset t V$ for all sufficiently large $t$. For these $t$,
+
+$$
+\Lambda(E) \subset \Lambda(t V)=t \Lambda(V) \subset t W
+$$
+
+so that $F \subset t W$. Hence $F$ is bounded."
+3.17,"If $V$ is a neighborhood of 0 in a separable topological vector space $X$, and if $\left\{\Lambda_{n}\right\}$ is a sequence in $X^{*}$ such that
+
+$$
+\left|\Lambda_{n} x\right| \leq 1 \quad(x \in V, n=1,2,3, \ldots)
+$$
+
+then there is a subsequence $\left\{\Lambda_{n_{i}}\right\}$ and there is $a \Lambda \in X^{*}$ such that
+
+$$
+\Lambda x=\lim _{i \rightarrow \infty} \Lambda_{n_{i}} x \quad(x \in X)
+$$
+
+In other words, the polar of $V$ is sequentially compact in the weak*topology.",Combine Theorems 3.15 and 3.16.
+2.6,"If $\Gamma$ is a collection of continuous linear mappings from an $F$-space $X$ into a topological vector space $Y$, and if the sets
+
+$$
+\Gamma(x)=\{\Lambda x: \Lambda \in \Gamma\}
+$$
+
+are bounded in $Y$, for every $x \in X$, then $\Gamma$ is equicontinuous.","Briefly, pointwise boundedness implies uniform boundedness (Theorem 2.4).
+
+As a special case of Theorem 2.6, let $X$ and $Y$ be Banach spaces, and suppose that
+
+$$
+\sup _{\Lambda \in \Gamma}\|\Lambda x\|<\infty \quad \text { for every } x \in X
+$$
+
+The conclusion is that there exists $M<\infty$ such that
+
+$$
+\|\Lambda x\| \leq M \quad \text { if }\|x\| \leq 1 \text { and } \Lambda \in \Gamma \text {. }
+$$
+
+Hence
+
+$$
+\|\Lambda x\| \leq M\|x\| \quad \text { if } x \in X \text { and } \Lambda \in \Gamma \text {. }
+$$"
+1.39,A topological vector space $X$ is normable if and only if its origin has a convex bounded neighborhood.,"If $X$ is normable, and if $\|\cdot\|$ is a norm that is compatible with the topology of $X$, then the open unit ball $\{x:\|x\|<1\}$ is convex and bounded.
+
+For the converse, assume $V$ is a convex bounded neighborhood of 0 . By Theorem 1.14, $V$ contains a convex balanced neighborhood $U$ of 0 ; of course, $U$ is also bounded. Define
+
+$$
+\|x\|=
+\mu(x) \quad(x \in X)
+$$
+
+where $\mu$ is the Minkowski functional of $U$.
+
+By $(c)$ of Theorem 1.15, the sets $r U(r>0)$ form a local base for the topology of $X$. If $x \neq 0$, then $x \notin r U$ for some $r>0$; hence $\|x\| \geq r$. It now follows from Theorem 1.35 that (1) defines a norm. The definition of the Minkowski functional, together with the fact that $U$ is open, implies that
+
+$$
+\{x:\|x\|<r\}=r U
+$$
+
+for every $r>0$. The norm topology coincides therefore with the given one."
+3.12,Suppose $E$ is a convex subset of a locally convex space $X$. Then the weak closure $\bar{E}_{w}$ of $E$ is equal to its original closure $\bar{E}$.,"$\bar{E}_{w}$ is weakly closed, hence originally closed, so that $\bar{E} \subset \bar{E}_{w}$. To obtain the opposite inclusion, choose $x_{0} \in X, x_{0} \notin \bar{E}$. Part $(b)$ of the separation theorem 3.4 shows that there exist $\Lambda \in X^{*}$ and $\gamma \in R$ such that, for every $x \in \bar{E}$,
+
+$$
+\operatorname{Re} \Lambda x_{0}<\gamma<\operatorname{Re} \Lambda x .
+$$
+
+The set $\{x: \operatorname{Re} \Lambda x<\gamma\}$ is therefore a weak neighborhood of $x_{0}$ that does not intersect $E$. Thus $x_{0}$ is not in $\bar{E}_{w}$. This proves $\bar{E}_{w} \subset \bar{E}$."
+4.15 (a),"Suppose $X$ and $Y$ are Banach spaces, and $T \in \mathscr{B}(X, Y)$. Then $
+\mathscr{R}(T)=Y$ if and only if $T^{*}$ is one-to-one and $
+\mathscr{R}\left(T^{*}\right)$ is norm-closed.","If $(a)$ holds then $T^{*}$ is one-to-one, by Theorem 4.12. The implication $(d) \rightarrow(a)$ of Theorem 4.13 shows that $T^{*}$ is (a multiple of) a dilation; hence $
+\mathscr{R}\left(T^{*}\right)$ is closed, by Theorem 1.26."
+4.15 (b),"Suppose $X$ and $Y$ are Banach spaces, and $T \in \mathscr{B}(X, Y)$. Then $T^{*}$ is one-to-one and $
+\mathscr{R}\left(T^{*}\right)$ is norm-closed if and only if $
+\mathscr{R}(T)=Y$.","If $(b)$ holds, then $
+\mathscr{R}(T)$ is dense in $Y$, again by Theorem 4.12 , and $
+\mathscr{R}(T)$ is closed by Theorem 4.14."
+5.20,"Suppose $X$ is a Banach space, $A$ and $B$ are closed subspaces of $X$, and $X=A+B$. Then there exists a constant $\gamma<\infty$ such that every $x \in X$ has a representation $x=a+b$, where $a \in A, b \in B$, and $\|a\|+\|b\| \leq \gamma\|x\|$","Let $Y$ be the vector space of all ordered pairs $(a, b)$, with $a \in A, b \in B$, and componentwise addition and scalar multiplication, normed by
+
+$$
+\|(a, b)\|=\|a\|+\|b\| .
+$$
+
+Since $A$ and $B$ are complete, $Y$ is a Banach space. The mapping $\Lambda: Y \rightarrow X$ defined by
+
+$$
+\Lambda(a, b)=a+b
+$$
+
+is continuous, since $\|a+b\| \leq\|(a, b)\|$, and maps $Y$ onto $X$. By the open mapping theorem, there exists $\gamma<\infty$ such that each $x \in X$ is $\Lambda(a, b)$ for some $(a, b)$ with $\|(a, b)\| \leq \gamma\|x\|$."
+1.26,"Suppose that $(X, d_{1})$ and $(Y, d_{2})$ are metric spaces, and $(X, d_{1})$ is complete. If $E$ is a closed set in $X, f: E \rightarrow Y$ is continuous, and
+
+$$
+d_{2}\left(f\left(x^{\prime}\right), f\left(x^{\prime \prime}\right)\right) \geq d_{1}\left(x^{\prime}, x^{\prime \prime}\right)
+$$
+
+for all $x^{\prime}, x^{\prime \prime} \in E$, then $f(E)$ is closed.","Pick $y \in \overline{f(E)}$. There exist points $x_{n} \in E$ so that $y=\lim f\left(x_{n}\right)$. Thus $\left\{f\left(x_{n}\right)\right\}$ is Cauchy in $Y$. Our hypothesis implies therefore that $\left\{x_{n}\right\}$ is Cauchy in $X$. Being a closed subset of a complete metric space, $E$ is complete; hence there exists $x=\lim x_{n}$ in $E$. Since $f$ is continuous,
+
+$$
+f(x)=\lim f\left(x_{n}\right)=y .
+$$
+
+Thus $y \in f(E)$."
+3.6,"If $f$ is a continuous linear functional on a subspace $M$ of a locally convex space $X$, then there exists $\Lambda \in X^{*}$ such that $\Lambda=f$ on $M$.","Assume, without loss of generality, that $f$ is not identically 0 on $M$. Put
+
+$$
+M_{0}=\{x \in M: f(x)=0\}
+$$
+
+and pick $x_{0} \in M$ such that $f\left(x_{0}\right)=1$. Since $f$ is continuous, $x_{0}$ is not in the $M$-closure of $M_{0}$, and since $M$ inherits its topology from $X$, it follows that $x_{0}$ is not in the $X$-closure of $M_{0}$.
+
+Theorem 3.5 therefore assures the existence of a $\Lambda \in X^{*}$ such that $\Lambda x_{0}=1$ and $\Lambda=0$ on $M_{0}$.
+
+If $x \in M$, then $x-f(x) x_{0} \in M_{0}$, since $f\left(x_{0}\right)=1$. Hence
+
+$$
+\Lambda x-f(x)=\Lambda x-f(x) \Lambda x_{0}=\Lambda\left(x-f(x) x_{0}\right)=0
+$$
+
+Thus $\Lambda=f$ on $M$."
+1.42,"Suppose $N$ and $F$ are subspaces of a topological vector space $X, N$ is closed, and $F$ has finite dimension. Then $N+F$ is closed.","Let $\pi$ be the quotient map of $X$ onto $X / N$, and give $X / N$ its quotient topology. Then $\pi(F)$ is a finite-dimensional subspace of $X / N$; since $X / N$ is a topological vector space, Theorem 1.21 implies that $\pi(F)$ is closed in $X / N$. Since $N+F=\pi^{-1}(\pi(F))$ and $\pi$ is continuous, we conclude that $N+F$ is closed. (Compare Exercise 20.)"
+1.43,"Suppose $p$ is a seminorm on a vector space $X$ and $N=\{x: p(x)=0\}$. Then $N$ is a subspace of $X$ (Theorem 1.34). Let $\pi$ be the quotient map of $X$ onto $X / N$, and define $\tilde{p}(\pi(x))=p(x)$. If $\pi(x)=\pi(y)$, then $p(x-y)=0$, and since $|p(x)-p(y)| \leq p(x-y)$, it follows that $\tilde{p}(\pi(x))=\tilde{p}(\pi(y))$. Thus $\tilde{p}$ is well defined on $X / N$, and it is now easy to verify that $\tilde{p}$ is a norm on $X / N$.",
+5.1,"Suppose $X$ and $Y$ are $F$-spaces, $Y^{*}$ separates points on $Y$, $T: X \rightarrow Y$ is linear, and $\Lambda T x_{n} \rightarrow 0$ for every $\Lambda \in Y^{*}$ whenever $x_{n} \rightarrow 0$. Then $T$ is continuous.","Suppose $x_{n} \rightarrow x$ and $T x_{n} \rightarrow y$. If $\Lambda \in Y^{*}$, then
+
+$$
+\Lambda T\left(x_{n}-x\right) \rightarrow 0
+$$
+
+so that
+
+$$
+\Lambda y=\lim \Lambda T x_{n}=\Lambda T x
+$$
+
+Consequently, $y=T x$, and the closed graph theorem can be applied.
+
+In the context of Banach spaces, Theorem 5.1 can be stated as follows: If $T: X \rightarrow Y$ is linear, if $\left\|x_{n}\right\| \rightarrow 0$ implies that $T x_{n} \rightarrow 0$ weakly, then $\left\|x_{n}\right\| \rightarrow 0$ actually implies that $\left\|T x_{n}\right\| \rightarrow 0$.
+
+To see that completeness is important here, let $X$ be the vector space of all complex infinitely differentiable functions on $(-\infty, \infty)$ which vanish outside the unit interval, put
+
+$$
+(f, g)=\int_{0}^{1} f \bar{g}, \quad\|f\|=(f, f)^{1 / 2}
+$$
+
+and define $T: X \rightarrow X$ by $(T f)(x)=i f^{\prime}(x)$. Then $(T f, g)=(f, T g)$, but $T$ is not continuous."
+1.36 (a),"Suppose $\mathscr{B}$ is a convex balanced local base in a topological vector space $X$. Associate to every $V \in \mathscr{B}$ its Minkowski functional $\mu_{V}$. Then
+
+$$
+V=\left\{x \in X: \mu_{V}(x)<1\right\}
+$$
+
+for every $V \in \mathscr{B}$","If $x \in V$, then $x / t \in V$ for some $t<1$, because $V$ is open; hence $\mu_{V}(x)<1$. If $x \notin V$, then $x / t \in V$ implies $t \geq 1$, because $V$ is balanced; hence $\mu_{V}(x) \geq 1$. This proves $(a)$."
+1.36 (b),"Suppose $\mathscr{B}$ is a convex balanced local base in a topological vector space $X$. Associate to every $V \in \mathscr{B}$ its Minkowski functional $\mu_{V}$. Then
+
+$$
+\left\{\mu_{V}: V \in \mathscr{B}\right\}
+$$
+
+is a separating family of continuous seminorms on $X$","Theorem 1.35 shows that each $\mu_{V}$ is a seminorm. If $r>0$, it follows from $(a)$ and Theorem 1.34 that
+
+$$
+\left|\mu_{V}(x)-\mu_{V}(y)\right| \leq \mu_{V}(x-y)<r
+$$
+
+if $x-y \in r V$. Hence $\mu_{V}$ is continuous. If $x \in X$ and $x \neq 0$, then $x \notin V$ for some $V \in \mathscr{B}$. For this $V, \mu_{V}(x) \geq 1$. Thus $\left\{\mu_{V}\right\}$ is separating."
+5.4,"If $E$ is as in Theorem 5.3 and if
+
+$$
+\sum_{-\infty}^{\infty}|a(n)|^{2}=A^{2}<\infty
+$$
+
+then there exists $g \in L^{\infty}$ such that $\hat{g}(n)=a(n)$ for every $n \in E$.","If $f \in P_{E}$, the preceding proof shows that
+
+$$
+\left|\sum \hat{f}(n) a(n)\right| \leq A\left\{\sum|\hat{f}(n)|^{2}\right\}^{1 / 2}=A\|f\|_{2} \leq 2^{1 / 2} A\|f\|_{1} .
+$$
+
+Hence $f \rightarrow \sum \hat{f}(n) a(n)$ is a linear functional on $P_{E}$ which is continuous relative to the $L^{1}$-norm. By the Hahn-Banach theorem, this functional has a continuous linear extension to $L^{1}$. Hence there exists $g \in L^{\infty}$
+(with $\|g\|_{\infty} \leq 2^{1 / 2} A$ ) such that
+
+$$
+\sum_{-\infty}^{\infty} \hat{f}(n) a(n)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f\left(e^{-i \theta}\right) g\left(e^{i \theta}\right) d \theta \quad\left(f \in P_{E}\right)
+$$
+
+With $f\left(e^{i \theta}\right)=e^{i n \theta}(n \in E)$, this shows that $\hat{g}(n)=a(n)$."
+1.30,"The following two properties of a set $E$ in a topological vector space are equivalent:
+
+(a) $E$ is bounded.
+
+(b) If $\left\{x_{n}\right\}$ is a sequence in $E$ and $\left\{\alpha_{n}\right\}$ is a sequence of scalars such that $\alpha_{n} \rightarrow 0$ as $n \rightarrow \infty$, then $\alpha_{n} x_{n} \rightarrow 0$ as $n \rightarrow \infty$.","Suppose $E$ is bounded. Let $V$ be a balanced neighborhood of 0 in $X$. Then $E \subset t V$ for some $t$. If $x_{n} \in E$ and $\alpha_{n} \rightarrow 0$, there exists $N$ such that $\left|\alpha_{n}\right| t<1$ if $n>N$. Since $t^{-1} E \subset V$ and $V$ is balanced, $\alpha_{n} x_{n} \in V$ for all $n>N$. Thus $\alpha_{n} x_{n} \rightarrow 0$.
+
+Conversely, if $E$ is not bounded, there is a neighborhood $V$ of 0 and a sequence $r_{n} \rightarrow \infty$ such that no $r_{n} V$ contains $E$. Choose $x_{n} \in E$ such that $x_{n} \notin r_{n} V$. Then no $r_{n}^{-1} x_{n}$ is in $V$, so that $\left\{r_{n}^{-1} x_{n}\right\}$ does not converge to 0 ."
+1.21 (a),If $n$ is a positive integer and $Y$ is an n-dimensional subspace of a complex topological vector space $X$: every isomorphism of $\mathbb{C}^{n}$ onto $Y$ is a homeomorphism.,"Suppose $f: \mathbb{C}^{n} \rightarrow Y$ is an isomorphism. This means that $f$ is linear, one-to-one, and $f\left(\mathcal{C}^{n}\right)=Y$. Put $K=f(S)$. Since $f$ is continuous (Lemma 1.20), $K$ is compact. Since $f(0)=0$ and $f$ is one-to-one, $0 \notin K$, and therefore there is a balanced neighborhood $V$ of 0 in $X$ which does not intersect $K$. The set
+
+$$
+E=f^{-1}(V)=f^{-1}(V \cap Y)
+$$
+
+is therefore disjoint from $S$. Since $f$ is linear, $E$ is balanced, and hence connected. Thus $E \subset B$, because $0 \in E$, and this implies that the linear $\operatorname{map} f^{-1}$ takes $V \cap Y$ into $B$. Since $f^{-1}$ is an $n$-tuple of linear functionals on $Y$, the implication $(d) \rightarrow(a)$ in Theorem 1.18 shows that $f^{-1}$ is continuous. Thus $f$ is a homeomorphism."
+1.21 (b),If $n$ is a positive integer and $Y$ is an n-dimensional subspace of a complex topological vector space $X$: Y is closed.,"choose $p \in \bar{Y}$, and let $f$ and $V$ be as above. For some $t>0, p \in t V$, so that $p$ lies in the closure of
+
+$$
+Y \cap(t V) \subset f(t B) \subset f(t \bar{B})
+$$
+
+Being compact, $f(t \bar{B})$ is closed in $X$. Hence $p \in f(t \bar{B}) \subset Y$, and this proves that $\bar{Y}=Y$."
+2.5,"Suppose $X$ and $Y$ are topological vector spaces, $\Gamma$ is a collection of continuous linear mappings from $X$ into $Y$, and $B$ is the set of all $x \in X$ whose orbits
+
+$$
+\Gamma(x)=\{\Lambda x: \Lambda \in \Gamma\}
+$$
+
+are bounded in $Y$.
+
+If $B$ is of the second category in $X$, then $B=X$ and $\Gamma$ is equicontinuous.","Pick balanced neighborhoods $W$ and $U$ of 0 in $Y$ such that $\bar{U}+\bar{U} \subset W$. Put
+
+$$
+E=\bigcap_{\Lambda \in \Gamma} \Lambda^{-1}(\bar{U})
+$$
+
+If $x \in B$, then $\Gamma(x) \subset n U$ for some $n$, so that $x \in n E$. Consequently,
+
+$$
+B \subset \bigcup_{n=1}^{\infty} n E
+$$
+
+At least one $n E$ is of the second category in $X$, since this is true of $B$. Since $x \rightarrow n x$ is a homeomorphism of $X$ onto $X, E$ is itself of the second category in $X$. But $E$ is closed because each $\Lambda$ is continuous. Therefore $E$ has an interior point $x$. Then $x-E$ contains a neighbor-
+hood $V$ of 0 in $X$, and
+
+$$
+\Lambda(V) \subset \Lambda x-\Lambda(E) \subset \bar{U}-\bar{U} \subset W
+$$
+
+for every $\Lambda \in \Gamma$.
+
+This proves that $\Gamma$ is equicontinuous. By Theorem 2.4, $\Gamma$ is uniformly bounded; in particular, each $\Gamma(x)$ is bounded in $Y$. Hence $B=X$.
+
+In many applications, the hypothesis that $B$ is of the second category is a consequence of Baire's theorem. For example, $F$-spaces are of the second category. This gives the following corollary of the Banach-Steinhaus theorem:"
+1.22,Every locally compact topological vector space $X$ has finite dimension.,"The origin of $X$ has a neighborhood $V$ whose closure is compact. By Theorem 1.15, $V$ is bounded, and the sets $2^{-n} V(n=1,2$, $3, \ldots$ ) form a local base for $X$.
+
+The compactness of $\bar{V}$ shows that there exist $x_{1}, \ldots, x_{m}$ in $X$ such that
+
+$$
+\bar{V} \subset\left(x_{1}+\frac{1}{2} V\right) \cup \cdots \cup\left(x_{m}+\frac{1}{2} V\right)
+$$
+
+Let $Y$ be the vector space spanned by $x_{1}, \ldots, x_{m}$. Then $\operatorname{dim} Y \leq m$. By Theorem 1.21, $Y$ is a closed subspace of $X$.
+
+Since $V \subset Y+\frac{1}{2} V$ and since $\lambda Y=Y$ for every scalar $\lambda \neq 0$, it follows that
+
+$$
+\frac{1}{2} V \subset Y+\frac{1}{4} V
+$$
+
+so that
+
+$$
+V \subset Y+\frac{1}{2} V \subset Y+Y+\frac{1}{4} V=Y+\frac{1}{4} V
+$$
+
+If we continue in this way, we see that
+
+$$
+V \subset \bigcap_{n=1}^{\infty}\left(Y+2^{-n} V\right)
+$$
+
+Since $\left\{2^{-n} V\right\}$ is a local base, it now follows from $(a)$ of Theorem 1.13 that $V \subset \bar{Y}$. But $\bar{Y}=Y$. Thus $V \subset Y$, which implies that $k V \subset Y$ for $k=1,2,3, \ldots$ Hence $Y=X$, by $(a)$ of Theorem 1.15 , and consequently $\operatorname{dim} X \leq m$."
+3.3,"Suppose $M$ is a subspace of a vector space $X, p$ is a seminorm on $X$, and $f$ is a linear functional on $M$ such that
+
+$$
+|f(x)| \leq p(x) \quad(x \in M)
+$$
+
+Then $f$ extends to a linear functional $\Lambda$ on $X$ that satisfies
+
+$$
+|\Lambda x| \leq p(x) \quad(x \in X) .
+$$
+
+","If the scalar field is $R$, this is contained in Theorem 3.2, since $p$ now satisfies $p(-x)=p(x)$.
+
+Assume that the scalar field is $\varnothing$. Put $u=\operatorname{Re} f$. By Theorem 3.2 there is a real-linear $U$ on $X$ such that $U=u$ on $M$ and $U \leq p$ on $X$. Let $\Lambda$ be the complex-linear functional on $X$ whose real part is $U$. The discussion in Section 3.1 implies that $\Lambda=f$ on $M$.
+
+Finally, to every $x \in X$ corresponds an $\alpha \in \mathscr{C},|\alpha|=1$, such that $\alpha \Lambda x=|\Lambda x|$. Hence
+
+$$
+|\Lambda x|=\Lambda(\alpha x)=U(\alpha x) \leq p(\alpha x)=p(x)
+$$"
+4.23,"If $X$ is a Banach space, $T \in \mathscr{B}(X), T$ is compact, and $\lambda \neq 0$, then $T-\lambda I$ has closed range.","By $(d)$ of Theorem 4.18, $\operatorname{dim} \mathscr{N}(T-\lambda I)<\infty$. By $(a)$ of Lemma 4.21, $X$ is the direct sum of $\mathscr{N}(T-\lambda I)$ and a closed subspace $M$. Define an operator $S \in \mathscr{B}(M, X)$ by
+
+$$
+S x=T x-\lambda x .
+$$
+
+Then $S$ is one-to-one on $M$. Also, $\mathscr{R}(S)=\mathscr{R}(T-\lambda I)$. To show that $\mathscr{R}(S)$ is closed, it suffices to show the existence of an $r>0$ such that
+
+$$
+r\|x\| \leq\|S x\| \quad \text { for all } x \in M
+$$
+
+by Theorem 1.26.
+
+If (2) fails for every $r>0$, there exists $\left\{x_{n}\right\}$ in $M$ such that $\left\|x_{n}\right\|=1, S x_{n} \rightarrow 0$, and (after passage to a subsequence) $T x_{n} \rightarrow x_{0}$ for some $x_{0} \in X$. (This is where compactness of $T$ is used.) It follows that $\lambda x_{n} \rightarrow x_{0}$. Thus $x_{0} \in M$, and
+
+$$
+S x_{0}=\lim \left(\lambda S x_{n}\right)=0
+$$
+
+Since $S$ is one-to-one, $x_{0}=0$. But $\left\|x_{n}\right\|=1$ for all $n$, and $x_{0}=$ $\lim \lambda x_{n}$, and so $\left\|x_{0}\right\|=|\lambda|>0$. This contradiction proves (2) for some $r>0$."
+1.34 (a),Suppose $p$ is a seminorm on a vector space $X$: $p(0)=0$,"Statement $(a)$ follows from $p(\alpha x)=|\alpha| p(x)$, with $\alpha=0$."
+1.34 (b),Suppose $p$ is a seminorm on a vector space $X$: $|p(x)-p(y)| \leq p(x-y)$,"The subadditivity of $p$ shows that
+
+$$
+p(x)=p(x-y+y) \leq p(x-y)+p(y)
+$$
+
+so that $p(x)-p(y) \leq p(x-y)$. This also holds with $x$ and $y$ interchanged. Since $p(x-y)=p(y-x),(b)$ follows."
+1.34 (c),Suppose $p$ is a seminorm on a vector space $X$: $p(x) \geq 0$,"With $y=0,(b)$ implies (c)."
+1.34 (d),Suppose $p$ is a seminorm on a vector space $X$: $\{x: p(x)=0\}$ is a subspace of $X$,"If $p(x)=p(y)=0$ and $\alpha, \beta$ are scalars, (c) implies
+
+$$
+0 \leq p(\alpha x+\beta y) \leq|\alpha| p(x)+|\beta| p(y)=0
+$$
+
+This proves $(d)$."
+1.34 (e),"Suppose $p$ is a seminorm on a vector space $X$: The set $B=\{x: p(x)<1\}$ is convex, balanced, absorbing, and $p=\mu_{B}$","As to $(e)$, it is clear that $B$ is balanced. If $x \in B, y \in B$, and $0<t<1$, then
+
+$$
+p(t x+(1-t) y) \leq t p(x)+(1-t) p(y)<1 .
+$$
+
+Thus $B$ is convex. If $x \in X$ and $s>p(x)$ then $p\left(s^{-1} x\right)=s^{-1} p(x)<1$. This shows that $B$ is absorbing and also that $\mu_{B}(x) \leq s$. Hence $\mu_{B} \leq p$. But if $0<t \leq p(x)$ then $p\left(t^{-1} x\right) \geq 1$, and so $t^{-1} x$ is not in $B$. This implies $p(x) \leq \mu_{B}(x)$ and completes the proof."
+2.2,"If $S$ is either
+
+(a) a complete metric space, or
+
+(b) a locally compact Hausdorff space,
+
+then the intersection of every countable collection of dense open subsets of $S$ is dense in $S$.","Suppose $V_{1}, V_{2}, V_{3}, \ldots$ are dense open subsets of $S$. Let $B_{0}$ be an arbitrary nonempty open set in $S$. If $n \geq 1$ and an open $B_{n-1} \neq \varnothing$ has been chosen, then (because $V_{n}$ is dense) there exists an open $B_{n} \neq \varnothing$ with
+
+$$
+\bar{B}_{n} \subset V_{n} \cap B_{n-1}
+$$
+
+In case $(a), B_{n}$ may be taken to be a ball of radius $<1 / n$; in case $(b)$ the choice can be made so that $\overline{B_{n}}$ is compact. Put
+
+$$
+K=\bigcap_{n=1}^{\infty} \overline{B_{n}}
+$$
+
+In case $(a)$, the centers of the nested balls $B_{n}$ form a Cauchy sequence which converges to some point of $K$, and so $K \neq \varnothing$. In case $(b)$, $K \neq \varnothing$ by compactness. Our construction shows that $K \subset B_{0}$ and $K \subset V_{n}$ for each $n$. Hence $B_{0}$ intersects $\bigcap V_{n}$."
+1.35 (a),Suppose $A$ is a convex absorbing set in a vector space $X$: $\mu_{A}(x+y) \leq \mu_{A}(x)+\mu_{A}(y)$,"If $t=\mu_{A}(x)+\varepsilon$ and $s=\mu_{A}(y)+\varepsilon$, for some $\varepsilon>0$, then $x / t$ and $y / s$ are in $A$; hence so is their convex combination
+
+$$
+\frac{x+y}{s+t}=\frac{t}{s+t} \cdot \frac{x}{t}+\frac{s}{s+t} \cdot \frac{y}{s}
+$$
+
+This shows that $\mu_{A}(x+y) \leq s+t=\mu_{A}(x)+\mu_{A}(y)+2 \varepsilon$, and $(a)$ is proved."
+1.35 (b),Suppose $A$ is a convex absorbing set in a vector space $X$: $\mu_{A}(t x)=t \mu_{A}(x)$ if $t \geq 0$,Property $(b)$ is clear
+1.35 (c),Suppose $A$ is a convex absorbing set in a vector space $X$ and $A$ is balanced: $\mu_{A}$ is a seminorm,$(c)$ follows from $(a)$ and $(b)$.
+1.35 (d),Suppose $A$ is a convex absorbing set in a vector space $X$ and define $B=\left\{x: \mu_{A}(x)<1\right\}$ and $C=\left\{x: \mu_{A}(x) \leq 1\right\}$: $B \subset A \subset C$ and $\mu_{B}=\mu_{A}=\mu_{C}$,"When we turn to $(d)$, the inclusions $B \subset A \subset C$ show that $\mu_{C} \leq$ $\mu_{A} \leq \mu_{B}$. To prove equality, fix $x \in X$, and choose $s, t$ so that $\mu_{C}(x)<$ $s<t$. Then $x / s \in C, \mu_{A}(x / s) \leq 1, \mu_{A}(x / t) \leq s / t<1$; hence $x / t \in B$, so that $\mu_{B}(x) \leq t$. This holds for every $t>\mu_{C}(x)$. Hence $\mu_{B}(x) \leq \mu_{C}(x)$."
+1.32,"Suppose $X$ and $Y$ are topological vector spaces and $\Lambda: X \rightarrow Y$ is linear. Among the following four properties of $\Lambda$, the implications
+
+$$
+(a) \rightarrow(b) \rightarrow(c)
+$$
+
+hold. If $X$ is metrizable, then also
+
+$$
+(c) \rightarrow(d) \rightarrow(a)
+$$
+
+so that all four properties are equivalent.
+
+(a) $\Lambda$ is continuous.
+
+(b) $\Lambda$ is bounded.
+
+(c) If $x_{n} \rightarrow 0$ then $\left\{\Lambda x_{n}: n=1,2,3, \ldots\right\}$ is bounded.
+
+(d) If $x_{n} \rightarrow 0$ then $\Lambda x_{n} \rightarrow 0$.
+
+","Assume (a), let $E$ be a bounded set in $X$, and let $W$ be a neighborhood of 0 in $Y$. Since $\Lambda$ is continuous (and $\Lambda 0=0$ ) there is a neighborhood $V$ of 0 in $X$ such that $\Lambda(V) \subset W$. Since $E$ is bounded,
+$E \subset t V$ for all large $t$, so that
+
+$$
+\Lambda(E) \subset \Lambda(t V)=t \Lambda(V) \subset t W
+$$
+
+This shows that $\Lambda(E)$ is a bounded set in $Y$.
+
+Thus $(a) \rightarrow(b)$. Since convergent sequences are bounded, $(b) \rightarrow(c)$.
+
+Assume now that $X$ is metrizable, that $\Lambda$ satisfies $(c)$, and that $x_{n} \rightarrow 0$. By Theorem 1.28, there are positive scalars $\gamma_{n} \rightarrow \infty$ such that $\gamma_{n} x_{n} \rightarrow 0$. Hence $\left\{\Lambda\left(\gamma_{n} x_{n}\right)\right\}$ is a bounded set in $Y$, and now Theorem 1.30 implies that
+
+$$
+\Lambda x_{n}=\gamma_{n}^{-1} \Lambda\left(\gamma_{n} x_{n}\right) \rightarrow 0 \quad \text { as } \quad n \rightarrow \infty
+$$
+
+Finally, assume that $(a)$ fails. Then there is a neighborhood $W$ of 0 in $Y$ such that $\Lambda^{-1}(W)$ contains no neighborhood of 0 in $X$. If $X$ has a countable local base, there is therefore a sequence $\left\{x_{n}\right\}$ in $X$ so that $x_{n} \rightarrow 0$ but $\Lambda x_{n} \notin W$. Thus $(d)$ fails."
+5.3,"Let $E$ be an infinite set of integers such that no integer has more than one representation as a sum of two members of $E$. Let $P_{E}$ be the vector space of all finite sums $f$ of the form
+
+$$
+f\left(e^{i \theta}\right)=\sum_{n=-\infty}^{\infty} c(n) e^{i n \theta}
+$$
+
+in which $c(n)=0$ whenever $n$ is not in $E$. Let $S_{E}$ be the $L^{1}$-closure of $P_{E}$. Then $S_{E}$ is a closed subspace of $L^{4}$.
+
+","If $f$ is as in (1), then
+
+$$
+f^{2}\left(e^{i \theta}\right)=\sum_{n} c(n)^{2} e^{2 i n \theta}+\sum_{n \neq m} c(n) c(m) e^{i(n+m) \theta}
+$$
+
+Our combinatorial hypothesis about $E$ implies that
+
+$$
+\int|f|^{4}=\int\left|f^{2}\right|^{2}=\sum_{n}|c(n)|^{4}+4 \sum_{m<n}|c(m)|^{2}|c(n)|^{2}
+$$
+
+so that
+
+$$
+\int|f|^{4} \leq 2\left(\sum|c(n)|^{2}\right)^{2}=2\left(\int|f|^{2}\right)^{2}
+$$
+
+Hölder's inequality, with 3 and $\frac{3}{2}$ as conjugate exponents, gives
+
+$$
+\int|f|^{2} \leq\left(\int|f|^{4}\right)^{1 / 3}\left(\int|f|\right)^{2 / 3}
+$$
+
+It follows from (2) and (3) that
+
+$$
+\|f\|_{4} \leq 2^{1 / 4}\|f\|_{2} \quad \text { and } \quad\|f\|_{2} \leq 2^{1 / 2}\|f\|_{1}
+$$
+
+for every $f \in P_{E}$. Every $L^{1}$-Cauchy sequence in $P_{E}$ is therefore also a Cauchy sequence in $L^{4}$. Hence $S_{E} \subset L^{4}$. The obvious inequality $\|f\|_{1} \leq\|f\|_{4}$ then shows that $S_{E}$ is closed in $L^{4}$."
+4.12,"Suppose $X$ and $Y$ are Banach spaces, and $T \in \mathscr{B}(X, Y)$. Then
+
+$$
+\mathscr{N}\left(T^{*}\right)=\mathscr{R}(T)^{\perp} \quad \text { and } \quad \mathscr{N}(T)={ }^{\perp} \mathscr{R}\left(T^{*}\right)
+$$
+
+","In each of the following two columns, each statement is obviously equivalent to the one that immediately follows and/or precedes it.
+
+$$
+\begin{array}{ll}
+y^{*} \in \mathscr{N}\left(T^{*}\right) . & x \in \mathscr{N}(T) . \\
+T^{*} y^{*}=0 . & T x=0 . \\
+\left\langle x, T^{*} y^{*}\right\rangle=0 \text { for all } x . & \left\langle T x, y^{*}\right\rangle=0 \text { for all } y^{*} . \\
+\left\langle T x, y^{*}\right\rangle=0 \text { for all } x . & \left\langle x, T^{*} y^{*}\right\rangle=0 \text { for all } y^{*} . \\
+y^{*} \in \mathscr{R}(T)^{\perp} . & x \in{ }^{\perp} \mathscr{R}\left(T^{*}\right) .
+\end{array}
+$$
+"
+6.27,"Suppose $K$ is compact, $V$ and $\Omega$ are open in $R^{n}$, and $K \subset V \subset \Omega$. Suppose also that $\Lambda \in \mathscr{D}^{\prime}(\Omega)$, that $K$ is the support of $\Lambda$, and that $\Lambda$ has order $N$. Then there exist finitely many continuous functions $f_{\beta}$ in $\Omega$ (one for each multi-index $\beta$ with $\beta_{i} \leq N+2$ for $i=1, \ldots, n$ ) with supports in $V$, such that
+
+$$
+\Lambda=\sum_{\beta} D^{\beta} f_{\beta}
+$$
+
+These derivatives are, of course, to be understood in the distribution sense: (1) means that
+
+$$
+\Lambda \phi=\sum_{\beta}(-1)^{|\beta|} \int_{\Omega} f_{\beta}(x)\left(D^{\beta} \phi\right)(x) d x \quad[\phi \in \mathscr{D}(\Omega)]
+$$","Choose an open set $W$ with compact closure $\bar{W}$, such that $K \subset W$ and $\bar{W} \subset V$. Apply Theorem 6.26 with $\bar{W}$ in place of $K$. Put $\alpha=(N+2, \ldots, N+2)$. The proof of Theorem 6.26 shows that there is a continuous function $f$ in $\Omega$ such that
+
+$$
+\Lambda \phi=(-1)^{|\alpha|} \int_{\Omega} f(x)\left(D^{\alpha} \phi\right)(x) d x \quad[\phi \in \mathscr{D}(W)]
+$$
+
+We may multiply $f$ by a continuous function which is 1 on $\bar{W}$ and whose support lies in $V$, without disturbing (3).
+
+Fix $\psi \in \mathscr{D}(\Omega)$, with support in $W$, such that $\psi=1$ on some open set containing $K$. Then (3) implies, for every $\phi \in \mathscr{D}(\Omega)$, that
+
+$$
+\begin{aligned}
+\Lambda \phi & =\Lambda(\psi \phi)=(-1)^{|\alpha|} \int_{\Omega} f \cdot D^{\alpha}(\psi \phi) \\
+& =(-1)^{|\alpha|} \int_{\Omega} f \sum_{\beta \leq \alpha} c_{\alpha \beta} D^{\alpha-\beta} \psi D^{\beta} \phi .
+\end{aligned}
+$$
+
+This is (2), with
+
+$$
+f_{\beta}=(-1)^{|\alpha-\beta|} c_{\alpha \beta} f \cdot D^{\alpha-\beta} \psi \quad(\beta \leq \alpha)
+$$"
+1.10,"Suppose $K$ and $C$ are subsets of a topological vector space $X, K$ is compact, $C$ is closed, and $K \cap C=\varnothing$. Then 0 has a neighborhood $V$ such that
+
+$$
+(K+V) \cap(C+V)=\varnothing
+$$
+
+","We begin with the following proposition, which will be useful in other contexts as well:
+
+If $W$ is a neighborhood of 0 in $X$, then there is a neighborhood $U$ of 0 which is symmetric (in the sense that $U=-U$ ) and which satisfies $U+U \subset W$.
+
+To see this, note that $0+0=0$, that addition is continuous, and that 0 therefore has neighborhoods $V_{1}, V_{2}$ such that $V_{1}+V_{2} \subset W$. If
+
+$$
+U=V_{1} \cap V_{2} \cap\left(-V_{1}\right) \cap\left(-V_{2}\right)
+$$
+
+then $U$ has the required properties.
+
+The proposition can now be applied to $U$ in place of $W$ and yields a new symmetric neighborhood $U$ of 0 such that
+
+$$
+U+U+U+U \subset W .
+$$
+
+It is clear how this can be continued.
+
+If $K=\varnothing$, then $K+V=\varnothing$, and the conclusion of the theorem is obvious. We therefore assume that $K \neq \varnothing$, and consider a point $x \in K$. Since $C$ is closed, since $x$ is not in $C$, and since the topology of $X$ is invariant under translations, the preceding proposition shows that 0 has a symmetric neighborhood $V_{x}$ such that $x+V_{x}+V_{x}+V_{x}$ does not intersect $C$; the symmetry of $V_{x}$ shows then that
+
+$$
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+$$
+
+Since $K$ is compact, there are finitely many points $x_{1}, \ldots, x_{n}$ in $K$ such that
+
+$$
+K \subset\left(x_{1}+V_{x_{1}}\right) \cup \cdots \cup\left(x_{n}+V_{x_{n}}\right)
+$$
+
+Put $V=V_{x_{1}} \cap \cdots \cap V_{x_{n}}$. Then
+
+$$
+K+V \subset \bigcup_{i=1}^{n}\left(x_{i}+V_{x_{i}}+V\right) \subset \bigcup_{i=1}^{n}\left(x_{i}+V_{x_{i}}+V_{x_{i}}\right)
+$$
+
+and no term in this last union intersects $C+V$, by (1). This completes the proof.
+
+Since $C+V$ is open, it is even true that the closure of $K+V$ does not intersect $C+V$; in particular, the closure of $K+V$ does not intersect $C$. The following special case of this, obtained by taking $K=\{0\}$, is of considerable interest."
+6.20,"If $\Gamma$ is a collection of open sets in $R^{n}$ whose union is $\Omega$, then there exists a sequence $\left\{\psi_{i}\right\} \subset \mathscr{D}(\Omega)$, with $\psi_{i} \geq 0$, such that
+
+(a) each $\psi_{i}$ has its support in some member of $\Gamma$,
+
+(b) $\sum_{i=1}^{\infty} \psi_{i}(x)=1$ for every $x \in \Omega$,
+
+(c) to every compact $K \subset \Omega$ correspond an integer $m$ and an open set $W \supset K$ such that
+
+$$
+\psi_{1}(x)+\cdots+\psi_{m}(x)=1
+$$
+
+for all $x \in W$.","Let $S$ be a countable dense subset of $\Omega$. Let $\left\{B_{1}, B_{2}, B_{3}, \ldots\right\}$ be a sequence that contains every closed ball $B_{i}$ whose center $p_{i}$ lies in $S$, whose radius $r_{i}$ is rational, and which lies in some member of $\Gamma$. Let
+$V_{i}$ be the open ball with center $p_{i}$ and radius $r_{i} / 2$. It is easy to see that $\Omega=\bigcup V_{i}$.
+
+The construction described in Section 1.46 shows that there are functions $\phi_{i} \in \mathscr{D}(\Omega)$ such that $0 \leq \phi \leq 1, \phi_{i}=1$ in $V_{i}, \phi_{i}=0$ off $B_{i}$. Define $\psi_{1}=\phi_{1}$, and, inductively,
+
+$$
+\psi_{i+1}=\left(1-\phi_{1}\right) \cdots\left(1-\phi_{i}\right) \phi_{i+1} \quad(i \geq 1)
+$$
+
+Obviously, $\psi_{i}=0$ outside $B_{i}$. This gives $(a)$. The relation
+
+$$
+\psi_{1}+\cdots+\psi_{i}=1-\left(1-\phi_{1}\right) \cdots\left(1-\phi_{i}\right)
+$$
+
+is trivial when $i=1$. If (3) holds for some $i$, addition of (2) and (3) yields (3) with $i+1$ in place of $i$. Hence (3) holds for every $i$. Since $\phi_{i}=1$ in $V_{i}$, it follows that
+
+$$
+\psi_{1}(x)+\cdots+\psi_{m}(x)=1 \quad \text { if } x \in V_{1} \cup \cdots \cup V_{m} .
+$$
+
+This gives $(b)$. Moreover, if $K$ is compact, then $K \subset V_{1} \cup \cdots \cup V_{m}$ for some $m$, and $(c)$ follows."
+6.6,"Suppose $\Lambda$ is a linear mapping of $\mathscr{D}(\Omega)$ into a locally convex space $Y$. Then each of the following four properties implies the others:
+
+(a) $\Lambda$ is continuous.
+
+(b) $\Lambda$ is bounded.
+
+(c) If $\phi_{i} \rightarrow 0$ in $\mathscr{D}(\Omega)$ then $\Lambda \phi_{i} \rightarrow 0$ in $Y$.
+
+(d) The restrictions of $\Lambda$ to every $\mathscr{D}_{K} \subset \mathscr{D}(\Omega)$ are continuous.","The implication $(a) \rightarrow(b)$ is contained in Theorem 1.32.
+
+Assume $\Lambda$ is bounded and $\phi_{i} \rightarrow 0$ in $\mathscr{D}(\Omega)$. By Theorem 6.5, $\phi_{i} \rightarrow 0$ in some $\mathscr{D}_{K}$, and the restriction of $\Lambda$ to this $\mathscr{D}_{K}$ is bounded. Theorem 1.32, applied to $\Lambda: \mathscr{D}_{K} \rightarrow Y$, shows that $\Lambda \phi_{i} \rightarrow 0$ in $Y$. Thus (b) implies $(c)$.
+
+Assume (c) holds, $\left\{\phi_{i}\right\} \subset \mathscr{D}_{K}$, and $\phi_{i} \rightarrow 0$ in $\mathscr{D}_{K}$. By $(b)$ of Theorem 6.5, $\phi_{i} \rightarrow 0$ in $\mathscr{D}(\Omega)$. Hence $(c)$ implies that $\Lambda \phi_{i} \rightarrow 0$ in $Y$, as $i \rightarrow \infty$. Since $\mathscr{D}_{K}$ is metrizable, $(d)$ follows.
+
+To prove that $(d)$ implies $(a)$, let $U$ be a convex balanced neighborhood of 0 in $Y$, and put $V=\Lambda^{-1}(U)$. Then $V$ is convex and balanced. By $(a)$ of Theorem 6.5, $V$ is open in $\mathscr{D}(\Omega)$ if and only if $\mathscr{D}_{K} \cap V$ is open in $\mathscr{D}_{K}$, for every $\mathscr{D}_{K} \subset \mathscr{D}(\Omega)$. This proves the equivalence of $(a)$ and $(d)$."
+3.10,"Suppose $X$ is a vector space and $X^{\prime}$ is a separating vector space of linear functionals on $X$. Then the $X^{\prime}$-topology $\tau^{\prime}$ makes $X$ into a locally convex space whose dual space is $X^{\prime}$.
+
+The assumptions on $X^{\prime}$ are, more explicitly, that $X^{\prime}$ is closed under addition and scalar multiplication and that $\Lambda x_{1} \neq \Lambda x_{2}$ for some $\Lambda \in X^{\prime}$ whenever $x_{1}$ and $x_{L}$ are distinct points of $X$.","Since $R$ and $\mathscr{C}$ are Hausdorff spaces, (b) of Section 3.8 shows that $\tau^{\prime}$ is a Hausdorff topology. The linearity of the members of $X^{\prime}$ shows that $\tau^{\prime}$ is translation-invariant. If $\Lambda_{1}, \ldots, \Lambda_{n} \in X^{\prime}$, if $r_{i}>0$, and if
+
+$$
+V=\left\{x:\left|\Lambda_{i} x\right|<r_{i} \text { for } 1 \leq i \leq n\right\}
+$$
+
+then $V$ is convex, balanced, and $V \in \tau^{\prime}$. In fact, the collection of all $V$ of the form (1) is a local base for $\tau^{\prime}$. Thus $\tau^{\prime}$ is a locally convex topology on $X$.
+
+If (1) holds, then $\frac{1}{2} V+\frac{1}{2} V=V$. This proves that addition is continuous. Suppose $x \in X$ and $\alpha$ is a scalar. Then $x \in s V$ for some $s>0$. If $|\beta-\alpha|<r$ and $y-x \in r V$ then
+
+$$
+\beta y-\alpha x=(\beta-\alpha) y+\alpha(y-x)
+$$
+
+lies in $V$, provided that $r$ is so small that
+
+$$
+r(s+r)+|\alpha| r<1
+$$
+
+Hence scalar multiplication is continuous.
+
+We have now proved that $\tau^{\prime}$ is a locally convex vector topology. Every $\Lambda \in X^{\prime}$ is $\tau^{\prime}$-continuous. Conversely, suppose $\Lambda$ is a $\tau^{\prime}$-continuous linear functional on $X$. Then $|\Lambda x|<1$ for all $x$ in some set $V$ of the form (1). Condition (b) of Lemma 3.9 therefore holds; hence so does $(a): \Lambda=\sum \alpha_{i} \Lambda_{i}$. Since $\Lambda_{i} \in X^{\prime}$ and $X^{\prime}$ is a vector space, $\Lambda \in X^{\prime}$. This completes the proof."
+1.18,"Let $\Lambda$ be a linear functional on a topological vector space $X$. Assume $\Lambda x \neq 0$ for some $x \in X$. Then each of the following four properties implies the other three:
+
+(a) $\Lambda$ is continuous.
+
+(b) The null space $\mathcal{N}(\Lambda)$ is closed.
+
+(c) $\mathcal{N}(\Lambda)$ is not dense in $X$.
+
+(d) $\Lambda$ is bounded in some neighborhood $V$ of 0 .","Since $\mathscr{N}(\Lambda)=\Lambda^{-1}(\{0\})$ and $\{0\}$ is a closed subset of the scalar field $\Phi,(a)$ implies $(b)$. By hypothesis, $\mathcal{N}(\Lambda) \neq X$. Hence $(b)$ implies $(c)$.
+
+Assume (c) holds; i.e., assume that the complement of $\mathcal{N}(\Lambda)$ has nonempty interior. By Theorem 1.14,
+
+$$
+(x+V) \cap \mathcal{N}(\Lambda)=\varnothing
+$$
+
+for some $x \in X$ and some balanced neighborhood $V$ of 0 . Then $\Lambda V$ is a balanced subset of the field $\Phi$. Thus either $\Lambda V$ is bounded, in which case $(d)$ holds, or $\Lambda V=\Phi$. In the latter case, there exists $y \in V$ such that $\Lambda y=-\Lambda x$, and so $x+y \in \mathcal{N}(\Lambda)$, in contradiction to (1). Thus (c) implies $(d)$.
+
+Finally, if $(d)$ holds then $|\Lambda x|<M$ for all $x$ in $V$ and for some $M<\infty$. If $r>0$ and if $W=(r / M) V$, then $|\Lambda x|<r$ for every $x$ in $W$. Hence $\Lambda$ is continuous at the origin. By Theorem 1.17, this implies $(a)$."
+3.18,"In a locally convex space $X$, every weakly bounded set is originally bounded, and vice versa.","Since every weak neighborhood of 0 in $X$ is an original neighborhood of 0 , it is obvious from the definition of ""bounded"" that every originally bounded subset of $X$ is weakly bounded. The converse is the nontrivial part of the theorem.
+
+Suppose $E \subset X$ is weakly bounded and $U$ is an original neighborhood of 0 in $X$.
+
+Since $X$ is locally convex, there is a convex, balanced, original neighborhood $V$ of 0 in $X$ such that $\bar{V} \subset U$. Let $K \subset X^{*}$ be the polar of $V$ :
+
+$$
+K=\left\{\Lambda \in X^{*}:|\Lambda x| \leq 1 \text { for all } x \in V\right\}
+$$
+
+We claim that
+
+$$
+\bar{V}=\{x \in X:|\Lambda x| \leq 1 \quad \text { for all } \quad \Lambda \in K\} .
+$$
+
+It is clear that $V$ is a subset of the right side of (2) and hence so is $\bar{V}$, since the right side of (2) is closed. Suppose $x_{0} \in X$ but $x_{0} \notin \bar{V}$. Theorem 3.7 (with $\bar{V}$ in place of $B$ ) then shows that $\Lambda x_{0}>1$ for some $\Lambda \in K$. This proves (2).
+
+Since $E$ is weakly bounded, there corresponds to each $\Lambda \in X^{*}$ a number $\gamma(\Lambda)<\infty$ such that
+
+$$
+|\Lambda x| \leq \gamma(\Lambda) \quad(x \in E)
+$$
+
+Since $K$ is convex and weak*-compact (Theorem 3.15) and since the functions $\Lambda \rightarrow \Lambda x$ are weak*-continuous, we can apply Theorem 2.9 (with $X^{*}$ in place of $X$ and the scalar field in place of $Y$ ) to conclude from (3) that there is a constant $\gamma<\infty$ such that
+
+$$
+|\Lambda x| \leq \gamma \quad(x \in E, \Lambda \in K)
+$$
+
+Now (2) and (4) show that $\gamma^{-1} x \in \bar{V} \subset U$ for all $x \in E$. Since $V$ is balanced,
+
+$$
+E \subset t \bar{V} \subset t U \quad(t>\gamma)
+$$
+
+Thus $E$ is originally bounded."
+3.24,"If $K$ is a compact subset of a locally convex space then $K \subset \overline{c o}(E(K))$.
+
+Equivalently, $\overline{c o}(K)=\overline{c o}(E(K))$.
+
+It may happen in this situation that $\overline{c o}(K)$ has extreme points which are not in $K$. (See Exercise 33.) The next theorem shows that this pathology cannot occur if $\overline{c o}(K)$ is compact. Therefore it occurs in no Fr\'echet space, by $(c)$ of Theorem 3.20.",
+3.25,"If $K$ is a compact set in a locally convex space $X$, and if $\overline{c o}(K)$ is also compact, then every extreme point of $\overline{c o}(K)$ lies in $K$.","Assume that some extreme point $p$ of $\overline{c o}(K)$ is not in $K$. Then there is a convex balanced neighborhood $V$ of 0 in $X$ such that
+
+$$
+(p+\bar{V}) \cap K=\varnothing
+$$
+
+Choose $x_{1}, \ldots, x_{n}$ in $K$ so that $K \subset \bigcup_{1}^{n}\left(x_{i}+V\right)$. Each set
+
+$$
+A_{i}=\overline{c o}\left(K \cap\left(x_{i}+V\right)\right) \quad(1 \leq i \leq n)
+$$
+
+is convex and also compact, since $A_{i} \subset \overline{c o}(K)$. Also, $K \subset A_{1} \cup \cdots \cup$ $A_{n}$. Part (a) of Theorem 3.20 shows therefore that
+
+$$
+\overline{c o}(K) \subset \overline{c o}\left(A_{1} \cup \cdots \cup A_{n}\right)=c o\left(A_{1} \cup \cdots \cup A_{n}\right)
+$$
+
+But the opposite inclusion holds also, because $A_{i} \subset \overline{c o}(K)$ for each $i$. Thus
+
+$$
+\overline{c o}(K)=c o\left(A_{1} \cup \cdots \cup A_{n}\right)
+$$
+
+In particular, $p=t_{1} y_{1}+\cdots+t_{N} y_{N}$, where each $y_{j}$ lies in some $A_{i}$, each $t_{j}$ is positive, and $\sum t_{j}=1$. The grouping
+
+$$
+p=t_{1} y_{1}+\left(1-t_{1}\right) \frac{t_{2} y_{2}+\cdots+t_{N} y_{N}}{t_{2}+\cdots+t_{N}}
+$$
+
+exhibits $p$ as a convex combination of two points of $\overline{c o}(K)$, by (4). Since $p$ is an extreme point of $\overline{c o}(K)$, we conclude from (5) that $y_{1}=p$. Thus, for some $i$,
+
+$$
+p \in A_{i} \subset x_{i}+\bar{V} \subset K+\bar{V}
+$$
+
+which contradicts (1). [Note that $A_{i} \subset x_{i}+\bar{V}$, by (2), because $V$ is convex.]"
+5.2,"Suppose $0<p<\infty$, and
+
+(a) $\mu$ is a probability measure on a measure space $\Omega$.
+
+(b) $S$ is a closed subspace of $L^{p}(\mu)$.
+
+(c) $S \subset L^{\infty}(\mu)$.
+
+Then $S$ is finite-dimensional.","Let $j$ be the identity map that takes $S$ into $L^{\infty}$, where $S$ is given the $L^{p}$-topology, so that $S$ is complete. If $\left\{f_{n}\right\}$ is a sequence in $S$ such that $f_{n} \rightarrow f$ in $S$ and $f_{n} \rightarrow g$ in $L^{\infty}$, it is obvious that $f=g$ a.e. Hence $j$ satisfies the hypotheses of the closed graph theorem, and we conclude that there is a constant $K<\infty$ such that
+
+$$
+\|f\|_{\infty} \leq K\|f\|_{p}
+$$
+
+for all $f \in S$. As usual, $\|f\|_{p}$ means $\left(\int|f|^{p} d \mu\right)^{1 / p}$, and $\|f\|_{\infty}$ is the essential supremum of $|f|$. If $p \leq 2$ then $\|f\|_{p} \leq\|f\|_{2}$. If $2<p<\infty$, integration of the inequality
+
+$$
+|f|^{p} \leq\|f\|_{\infty}^{p-2}|f|^{2}
+$$
+
+leads to $\|f\|_{\infty} \leq K^{p / 2}\|f\|_{2}$. In either case, we have a constant $M<\infty$ such that
+
+$$
+\|f\|_{\infty} \leq M\|f\|_{2} \quad(f \in S) .
+$$
+
+In the rest of the proof we shall deal with individual functions, not with equivalence classes modulo null sets.
+
+Let $\left\{\phi_{1}, \ldots, \phi_{n}\right\}$ be an orthonormal set in $S$, regarded as a subspace of $L^{2}$. Let $Q$ be a countable dense subset of the euclidean unit ball $B$ of $\mathcal{C}^{n}$. If $c=\left(c_{1}, \ldots, c_{n}\right) \in B$, define $f_{c}=\sum c_{i} \phi_{i}$. Then $\left\|f_{c}\right\|_{2} \leq 1$, and so $\left\|f_{c}\right\|_{\infty} \leq M$. Since $Q$ is countable, there is a set $\Omega^{\prime} \subset \Omega$, with $\mu\left(\Omega^{\prime}\right)=1$, such that $\left|f_{c}(x)\right| \leq M$ for every $c \in Q$ and for every $x \in \Omega^{\prime}$. If $x$ is fixed, $c \rightarrow\left|f_{c}(x)\right|$ is a continuous function on $B$. Hence $\left|f_{c}(x)\right| \leq M$ whenever $c \in B$ and $x \in \Omega^{\prime}$. It follows that $\sum\left|\phi_{i}(x)\right|^{2} \leq$ $M^{2}$ for every $x \in \Omega^{\prime}$. Integration of this inequality gives $n \leq M^{2}$. We conclude that $\operatorname{dim} S \leq M^{2}$. This proves the theorem."
+6.21,"Suppose $\Gamma$ is an open cover of an open set $\Omega \subset R^{n}$, and suppose that to each $\omega \in \Gamma$ corresponds a distribution $\Lambda_{\omega} \in \mathscr{D}^{\prime}(\omega)$ such that
+
+$$
+\Lambda_{\omega^{\prime}}=\Lambda_{\omega^{\prime \prime}} \text { in } \omega^{\prime} \cap \omega^{\prime \prime}
+$$
+
+whenever $\omega^{\prime} \cap \omega^{\prime \prime} \neq \varnothing$.
+
+Then there exists a unique $\Lambda \in \mathscr{D}^{\prime}(\Omega)$ such that
+
+$$
+\Lambda=\Lambda_{\omega} \text { in } \omega
+$$
+
+for every $\omega \in \Gamma$.","Let $\left\{\psi_{i}\right\}$ be a locally finite partition of unity, subordinate to $\Gamma$, as in Theorem 6.20, and associate to each $i$ a set $\omega_{i} \in \Gamma$ such that $\omega_{i}$ contains the support of $\psi_{i}$.
+
+If $\phi \in \mathscr{D}(\Omega)$, then $\phi=\sum \psi_{i} \phi$. Only finitely many terms in this sum are different from 0 , since $\phi$ has compact support. Define
+
+$$
+\Lambda \phi=\sum_{i=1}^{\infty} \Lambda_{\omega_{i}}\left(\psi_{i} \phi\right)
+$$
+
+It is clear that $\Lambda$ is a linear functional on $\mathscr{D}(\Omega)$.
+
+To show that $\Lambda$ is continuous, suppose $\phi_{j} \rightarrow 0$ in $\mathscr{D}(\Omega)$. There is a compact $K \subset \Omega$ which contains the support of every $\phi_{j}$. If $m$ is chosen as in part $(c)$ of Theorem 6.20 , then
+
+$$
+\Lambda \phi_{j}=\sum_{i=1}^{m} \Lambda_{\omega_{i}}\left(\psi_{i} \phi_{j}\right) \quad(j=1,2,3, \ldots)
+$$
+
+Since $\psi_{i} \phi_{j} \rightarrow 0$ in $\mathscr{D}\left(\omega_{i}\right)$, as $j \rightarrow \infty$, it follows from (4) that $\Lambda \phi_{j} \rightarrow 0$. By Theorem 6.6, $\Lambda \in \mathscr{D}^{\prime}(\Omega)$.
+
+To prove (2), pick $\phi \in \mathscr{D}(\omega)$. Then
+
+$$
+\psi_{i} \phi \in \mathscr{D}\left(\omega_{i} \cap \omega\right) \quad(i=1,2,3, \ldots)
+$$
+
+so that (1) implies $\Lambda_{\omega_{i}}\left(\psi_{i} \phi\right)=\Lambda_{\omega}\left(\psi_{i} \phi\right)$. Hence
+
+$$
+\Lambda \phi=\sum \Lambda_{\omega}\left(\psi_{i} \phi\right)=\Lambda_{\omega}\left(\sum \psi_{i} \phi\right)=\Lambda_{\omega} \phi
+$$
+
+which proves (2).
+
+This gives the existence of $\Lambda$. The uniqueness is trivial since (2) (with $\omega_{i}$ in place of $\omega$ ) implies that $\Lambda$ must satisfy (3)."
+1.27,"Suppose $Y$ is a subspace of a topological vector space $X$, and $Y$ is an $F$-space (in the topology inherited from $X$ ). Then $Y$ is a closed subspace of $X$.","Choose an invariant metric $d$ on $Y$, compatible with its topology. Let
+
+$$
+B_{1 / n}=\left\{y \in Y: d(y, 0)<\frac{1}{n}\right\}
+$$
+
+let $U_{n}$ be a neighborhood of 0 in $X$ such that $Y \cap U_{n}=B_{1 / n}$, and choose symmetric neighborhoods $V_{n}$ of 0 in $X$ such that $V_{n}+V_{n} \subset U_{n}$ and $V_{n+1} \subset V_{n}$.
+
+Suppose $x \in \bar{Y}$, and define
+
+$$
+E_{n}=Y \cap\left(x+V_{n}\right) \quad(n=1,2,3, \ldots)
+$$
+
+If $y_{1} \in E_{n}$ and $y_{2} \in E_{n}$, then $y_{1}-y_{2}$ lies in $Y$ and also in $V_{n}+V_{n} \subset$ $U_{n}$, hence in $B_{1 / n}$. The diameters of the sets $E_{n}$ therefore tend to 0 . Since each $E_{n}$ is nonempty and since $Y$ is complete, it follows that the $Y$-closures of the sets $E_{n}$ have exactly one point $y_{0}$ in common.
+
+Let $W$ be a neighborhood of 0 in $X$, and define
+
+$$
+F_{n}=Y \cap\left(x+W \cap V_{n}\right)
+$$
+
+The preceding argument shows that the $Y$-closures of the sets $F_{n}$ have one common point $y_{W}$. But $F_{n} \subset E_{n}$. Hence $y_{W}=y_{0}$. Since $F_{n} \subset$ $x+W$, it follows that $y_{0}$ lies in the $X$-closure of $x+W$, for every $W$. This implies $y_{0}=x$. Thus $x \in Y$. This proves that $\bar{Y}=Y$."
+1.28 (a),"If $d$ is a translation-invariant metric on a vector space $X$ then
+
+$$
+d(n x, 0) \leq n d(x, 0)
+$$
+
+for every $x \in X$ and for $n=1,2,3, \ldots$","Statement $(a)$ follows from
+
+$$
+d(n x, 0) \leq \sum_{k=1}^{n} d(k x,(k-1) x)=n d(x, 0)
+$$"
+1.28 (b),"If $\left\{x_{n}\right\}$ is a sequence in a metrizable topological vector space $X$ and if $x_{n} \rightarrow 0$ as $n \rightarrow \infty$, then there are positive scalars $\gamma_{n}$ such that $\gamma_{n} \rightarrow \infty$ and $\gamma_{n} x_{n} \rightarrow 0$.","To prove $(b)$, let $d$ be a metric as in (a), compatible with the topology of $X$. Since $d\left(x_{n}, 0\right) \rightarrow 0$, there is an increasing sequence of positive integers $n_{k}$ such that $d\left(x_{n}, 0\right)<k^{-2}$ if $n \geq n_{k}$. Put $\gamma_{n}=1$ if $n<n_{1}$; put $\gamma_{n}=k$ if $n_{k} \leq n<n_{k+1}$. For such $n$,
+
+$$
+d\left(\gamma_{n} x_{n}, 0\right)=d\left(k x_{n}, 0\right) \leq k d\left(x_{n}, 0\right)<k^{-1}
+$$
+
+Hence $\gamma_{n} x_{n} \rightarrow 0$ as $n \rightarrow \infty$."
+6.24 (a),"Suppose $\Lambda \in \mathscr{D}^{\prime}(\Omega)$ and $S_{\Lambda}$ is the support of $\Lambda$. If the support of some $\phi \in \mathscr{D}(\Omega)$ does not intersect $S_{\Lambda}$, then $\Lambda \phi=0$.",Parts (a) and $(b)$ are obvious.
+6.24 (b),"Suppose $\Lambda \in \mathscr{D}^{\prime}(\Omega)$ and $S_{\Lambda}$ is the support of $\Lambda$. If $S_{\Lambda}$ is empty, then $\Lambda=0$.",Parts (a) and $(b)$ are obvious.
+6.24 (c),"Suppose $\Lambda \in \mathscr{D}^{\prime}(\Omega)$ and $S_{\Lambda}$ is the support of $\Lambda$. If $\psi \in C^{\infty}(\Omega)$ and $\psi=1$ in some open set $V$ containing $S_{\Lambda}$, then $\psi \Lambda=\Lambda$.","If $\psi$ is as in $(c)$ and if $\phi \in \mathscr{D}(\Omega)$, then the support of $\phi-\psi \phi$ does not intersect $S_{\Lambda}$. Thus $\Lambda \phi=$ $\Lambda(\psi \phi)=(\psi \Lambda)(\phi)$, by $(a)$."
+6.24 (d),"Suppose $\Lambda \in \mathscr{D}^{\prime}(\Omega)$ and $S_{\Lambda}$ is the support of $\Lambda$. If $S_{\Lambda}$ is a compact subset of $\Omega$, then $\Lambda$ has finite order; in fact, there is a constant $C<\infty$ and a nonnegative integer $N$ such that
+
+$$
+|\Lambda \phi| \leq C\|\phi\|_{N}
+$$
+
+for every $\phi \in \mathscr{D}(\Omega)$. Furthermore, $\Lambda$ extends in a unique way to a continuous linear functional on $C^{\infty}(\Omega)$.","If $S_{\Lambda}$ is compact, it follows from Theorem 6.20 that there exists $\psi \in \mathscr{D}(\Omega)$ that satisfies (c). Fix such a $\psi$; call its support $K$. By Theorem 6.8, there exist $c_{1}$ and $N$ such that $|\Lambda \phi| \leq c_{1}\|\phi\|_{N}$ for all $\phi \in \mathscr{D}_{K}$. The Leibniz formula shows that there is a constant $c_{2}$ such that $\|\psi \phi\|_{N} \leq c_{2}\|\phi\|_{N}$ for every $\phi \in \mathscr{D}(\Omega)$. Hence
+
+$$
+|\Lambda \phi|=|\Lambda(\psi \phi)| \leq c_{1}\|\psi \phi\|_{N} \leq c_{1} c_{2}\|\phi\|_{N}
+$$
+
+for every $\phi \in \mathscr{D}(\Omega)$.
+
+Since $\Lambda \phi=\Lambda(\psi \phi)$ for all $\phi \in \mathscr{D}(\Omega)$, the formula
+
+$$
+\Lambda f=\Lambda(\psi f) \quad\left[f \in C^{\infty}(\Omega)\right]
+$$
+
+defines an extension of $\Lambda$. This extension is continuous, for if $f_{i} \rightarrow 0$ in $C^{\infty}(\Omega)$, then each derivative of $f_{i}$ tends to 0 , uniformly on compact subsets of $\Omega$; the Leibniz formula shows therefore that $\psi f_{i} \rightarrow 0$ in $\mathscr{D}(\Omega)$; since $\Lambda \in \mathscr{D}^{\prime}(\Omega)$, it follows that $\Lambda f_{i} \rightarrow 0$.
+
+If $f \in C^{\infty}(\Omega)$ and if $K_{0}$ is any compact subset of $\Omega$, there exists $\phi \in \mathscr{D}(\Omega)$ such that $\phi=f$ on $K_{0}$. It follows that $\mathscr{D}(\Omega)$ is dense in $C^{\infty}(\Omega)$. Each $\Lambda \in \mathscr{D}^{\prime}(\Omega)$ has therefore at most one continuous extension to $C^{\infty}(\Omega)$."
+1.15 (a),"Suppose $V$ is a neighborhood of 0 in a topological vector space $X$ and $0<r_{1}<r_{2}<\cdots$ and $r_{n} \rightarrow \infty$ as $n \rightarrow \infty$, then
+
+$$
+X=\bigcup_{n=1}^{\infty} r_{n} V
+$$","Fix $x \in X$. Since $\alpha \rightarrow \alpha x$ is a continuous mapping of the scalar field into $X$, the set of all $\alpha$ with $\alpha x \in V$ is open, contains 0 , hence contains $1 / r_{n}$ for all large $n$. Thus $\left(1 / r_{n}\right) x \in V$, or $x \in r_{n} V$, for large $n$."
+1.15 (b),"Suppose $V$ is a neighborhood of 0 in a topological vector space $X$, then every compact subset $K$ of $X$ is bounded.","Let $W$ be a balanced neighborhood of 0 such that $W \subset V$. By $(a)$,
+
+$$
+K \subset \bigcup_{n=1}^{\infty} n W
+$$
+
+Since $K$ is compact, there are integers $n_{1}<\cdots<n_{s}$ such that
+
+$$
+K \subset n_{1} W \cup \cdots \cup n_{s} W=n_{s} W .
+$$
+
+The equality holds because $W$ is balanced. If $t>n_{s}$, it follows that $K \subset t W \subset t V$."
+1.15 (c),"Suppose $V$ is a neighborhood of 0 in a topological vector space $X$ and $V$ is bounded, and if $\delta_{1}>\delta_{2}>\cdots$ and $\delta_{n} \rightarrow 0$ as $n \rightarrow \infty$, then the collection
+
+$$
+\left\{\delta_{n} V: n=1,2,3, \ldots\right\}
+$$
+
+is a local base for $X$.","Let $U$ be a neighborhood of 0 in $X$. If $V$ is bounded, there exists $s>0$ such that $V \subset t U$ for all $t>s$. If $n$ is so large that $s \delta_{n}<1$, it follows that $V \subset\left(1 / \delta_{n}\right) U$. Hence $U$ actually contains all but finitely many of the sets $\delta_{n} V$."
+3.4 (a),"Suppose $A$ and $B$ are disjoint, nonempty, convex sets in a topological vector space $X$ and $A$ is open: there exist $\Lambda \in X^{*}$ and $\gamma \in R$ such that
+
+$$
+\operatorname{Re} \Lambda x<\gamma \leq \operatorname{Re} \Lambda y
+$$
+
+for every $x \in A$ and for every $y \in B$.","It is enough to prove this for real scalars. For if the scalar field is $\mathscr{C}$ and the real case has been proved, then there is a continuous real-linear $\Lambda_{1}$ on $X$ that gives the required separation; if $\Lambda$ is the
+unique complex-linear functional on $X$ whose real part is $\Lambda_{1}$, then $\Lambda \in X^{*}$. (See Section 3.1.) Assume real scalars.
+
+(a) Fix $A_{0} \in A, b_{0} \in B$. Put $x_{0}=b_{0}-a_{0}$; put $C=A-B+x_{0}$. Then $C$ is a convex neighborhood of 0 in $X$. Let $p$ be the Minkowski functional of $C$. By Theorem 1.35, $p$ satisfies hypothesis $(b)$ of Theorem 3.2. Since $A \cap B=\varnothing, x_{0} \notin C$, and so $p\left(x_{0}\right) \geq 1$.
+
+Define $f\left(t x_{0}\right)=t$ on the subspace $M$ of $X$ generated by $x_{0}$. If $t \geq 0$ then
+
+$$
+f\left(t x_{0}\right)=t \leq t p\left(x_{0}\right)=p\left(t x_{0}\right)
+$$
+
+if $t<0$ then $f\left(t x_{0}\right)<0 \leq p\left(t x_{0}\right)$. Thus $f \leq p$ on $M$. By Theorem 3.2, $f$ extends to a linear functional $\Lambda$ on $X$ that also satisfies $\Lambda \leq p$. In particular, $\Lambda \leq 1$ on $C$, hence $\Lambda \geq-1$ on $-C$, so that $|\Lambda| \leq 1$ on the neighborhood $C \cap(-C)$ of 0 . By Theorem 1.18, $\Lambda \in X^{*}$.
+
+If now $\alpha \in A$ and $b \in B$, we have
+
+$$
+\Lambda a-\Lambda b+1=\Lambda\left(a-b+x_{0}\right) \leq p\left(a-b+x_{0}\right)<1
+$$
+
+since $\Lambda x_{0}=1, a-b+x_{0} \in C$, and $C$ is open. Thus $\Lambda a<\Lambda b$.
+
+It follows that $\Lambda(A)$ and $\Lambda(B)$ are disjoint convex subsets of $R$, with $\Lambda(A)$ to the left of $\Lambda(B)$. Also, $\Lambda(A)$ is an open set since $A$ is open and since every nonconstant linear functional on $X$ is an open mapping. Let $\gamma$ be the right end point of $\Lambda(A)$ to get the conclusion of part $(a)$."
+3.4 (b),"Suppose $A$ and $B$ are disjoint, nonempty, convex sets in a topological vector space $X$, $A$ is compact, $B$ is closed, and $X$ is locally convex: then there exist $\Lambda \in X^{*}, \gamma_{1} \in R, \gamma_{2} \in R$, such that
+
+$$
+\operatorname{Re} \Lambda x<\gamma_{1}<\gamma_{2}<\operatorname{Re} \Lambda y
+$$
+
+for every $x \in A$ and for every $y \in B$.","By Theorem 1.10 there is a convex neighborhood $V$ of 0 in $X$ such that $(A+V) \cap B=\varnothing$. Part $(a)$, with $A+V$ in place of $A$, shows that there exists $\Lambda \in X^{*}$ such that $\Lambda(A+V)$ and $\Lambda(B)$ are disjoint convex subsets of $R$, with $\Lambda(A+V)$ open and to the left of $\Lambda(B)$. Since $\Lambda(A)$ is a compact subset of $\Lambda(A+V)$, we obtain the conclusion of $(b)$."
+5.5,"Suppose $\mu_{1}, \ldots, \mu_{n}$ are real-valued nonatomic measures on a $\sigma$-algebra $\mathfrak{M}$. Define
+
+$$
+\mu(E)=\left(\mu_{1}(E), \ldots, \mu_{n}(E)\right) \quad(E \in \mathfrak{M})
+$$
+
+Then $\mu$ is a function with domain $\mathfrak{M}$ whose range is a compact convex subset of $R^{n}$.
+
+","Associate to each bounded measurable real function $g$ the vector
+
+$$
+\Lambda g=\left(\int g d \mu_{1}, \ldots, \int g d \mu_{n}\right)
+$$
+
+in $R^{n}$. Put $\sigma=\left|\mu_{1}\right|+\cdots+\left|\mu_{n}\right|$. If $g_{1}=g_{2}$ a.e. $[\sigma]$, then $\Lambda g_{1}=\Lambda g_{2}$. Hence $\Lambda$ may be regarded as a linear mapping of $L^{\infty}(\sigma)$ into $R^{n}$.
+
+Each $\mu_{i}$ is absolutely continuous with respect to $\sigma$. The RadonNikodym theorem [23] shows therefore that there are functions $h_{i} \in L^{1}(\sigma)$ such that $d \mu_{i}=h_{i} d \sigma(1 \leq i \leq n)$. Hence $\Lambda$ is a weak*continuous linear mapping of $L^{\infty}(\sigma)$ into $R^{n}$; recall that $L^{\infty}(\sigma)=L^{1}(\sigma)^{*}$. Put
+
+$$
+K=\left\{g \in L^{\infty}(\sigma): 0 \leq g \leq 1\right\}
+$$
+
+It is obvious that $K$ is convex. Since $g \in K$ if and only if
+
+$$
+0 \leq \int f g d \sigma \leq \int f d \sigma
+$$
+
+for every nonnegative $f \in L^{1}(\sigma), K$ is weak*-closed. And since $K$ lies in the closed unit ball of $L^{\infty}(\sigma)$, the Banach-Alaoglu theorem shows that $K$ is weak*-compact. Hence $\Lambda(K)$ is a compact convex set in $R^{n}$.
+
+We shall prove that $\mu(\mathfrak{M})=\Lambda(K)$.
+
+If $\chi_{E}$ is the characteristic function of a set $E \in \mathfrak{M}$, then $\chi_{E} \in K$ and $\mu(E)=\Lambda g$. Thus $\mu(\mathfrak{M}) \subset \Lambda(K)$. To obtain the opposite inclusion, pick a point $p \in \Lambda(K)$ and define
+
+$$
+K_{p}=\{g \in K: \Lambda g=p\}
+$$
+
+We have to show that $K_{p}$ contains some $\chi_{E}$, for then $p=\mu(E)$.
+
+Note that $K_{p}$ is convex; since $\Lambda$ is continuous, $K_{p}$ is weak*compact. By the Krein-Milman theorem, $K_{p}$ has an extreme point.
+
+Suppose $g_{0} \in K_{p}$ and $g_{0}$ is not a characteristic function in $L^{\infty}(\sigma)$. Then there is a set $E \in \mathfrak{M}$ and an $r>0$ such that $\sigma(E)>0$ and $r \leq$ $g_{0} \leq 1-r$ on $E$. Put $Y=\chi_{E} \cdot L^{\infty}(\sigma)$. Since $\sigma(E)>0$ and $\sigma$ is nonatomic, $\operatorname{dim} Y>n$. Hence there exists $g \in Y$, not the zero element of $L^{\infty}(\sigma)$, such that $\Lambda g=0$, and such that $-r<g<r$. It follows that $g_{0}+g$ and $g_{0}-g$ are in $K_{p}$. Thus $g_{0}$ is not an extreme point of $K_{p}$.
+
+Every extreme point of $K_{p}$ is therefore a characteristic function. This completes the proof."
+4.9 (a),"Let $M$ be a closed subspace of a Banach space $X$: The Hahn-Banach theorem extends each $m^{*} \in M^{*}$ to a functional $x^{*} \in X^{*}$. Define
+
+$$
+\sigma m^{*}=x^{*}+M^{\perp} \text {. }
+$$
+
+Then $\sigma$ is an isometric isomorphism of $M^{*}$ onto $X^{*} / M^{\perp}$","If $x^{*}$ and $x_{1}^{*}$ are extensions of $m^{*}$, then $x^{*}-x_{1}^{*}$ is in $M^{\perp}$; hence $x^{*}+M^{\perp}=x_{1}^{*}+M^{\perp}$. Thus $\sigma$ is well defined. A trivial verification shows that $\sigma$ is linear. Since the restriction of every $x^{*} \in X^{*}$ to $M$ is a member of $M^{*}$, the range of $\sigma$ is all of $X^{*} / M^{\perp}$.
+
+Fix $m^{*} \in M^{*}$. If $x^{*} \in X^{*}$ extends $m^{*}$, it is obvious that $\left\|m^{*}\right\| \leq\left\|x^{*}\right\|$. The greatest lower bound of the numbers $\left\|x^{*}\right\|$ so obtained is $\left\|x^{*}+M^{\perp}\right\|$, by the definition of the quotient norm. Hence
+
+$$
+\left\|m^{*}\right\| \leq\left\|\sigma m^{*}\right\| \leq\left\|x^{*}\right\| .
+$$
+
+But Theorem 3.3 furnishes an extension $x^{*}$ of $m^{*}$ with $\left\|x^{*}\right\|=\left\|m^{*}\right\|$. It follows that $\left\|\sigma m^{*}\right\|=\left\|m^{*}\right\|$. This completes $(a)$."
+4.9 (b),"Let $M$ be a closed subspace of a Banach space $X$ and let $\pi: X \rightarrow X / M$ be the quotient map. Put $Y=X / M$. For each $y^{*} \in Y^{*}$, define
+
+$$
+\tau y^{*}=y^{*} \pi \text {. }
+$$
+
+Then $\tau$ is an isometric isomorphism of $Y^{*}$ onto $M^{\perp}$","If $x \in X$ and $y^{*} \in Y^{*}$, then $\pi x \in Y$; hence $x \rightarrow y^{*} \pi x$ is a continuous linear functional on $X$ which vanishes for $x \in M$. Thus $\tau y^{*} \in M^{\perp}$. The linearity of $\tau$ is obvious. Fix $x^{*} \in M^{\perp}$. Let $N$ be the null space of $x^{*}$. Since $M \subset N$, there is a linear functional $\Lambda$ on $Y$ such that $\Lambda \pi=x^{*}$. The null space of $\Lambda$ is $\pi(N)$, a closed subspace of $Y$, by the definition of the quotient topology in $Y=X / M$. By Theorem 1.18, $\Lambda$ is continuous, that is, $\Lambda \in Y^{*}$. Hence $\tau \Lambda=\Lambda \pi=x^{*}$. The range of $\tau$ is therefore all of $M^{\perp}$.
+
+It remains to be shown that $\tau$ is an isometry.
+
+Let $B$ be the open unit ball in $X$. Then $\pi B$ is the open unit ball of $Y=\pi X$. Since $\tau y^{*}=y^{*} \pi$, we have
+
+$$
+\begin{aligned}
+\left\|\tau y^{*}\right\| & =\left\|y^{*} \pi\right\|=\sup \left\{\left|\left\langle\pi x, y^{*}\right\rangle\right|: x \in B\right\} \\
+& =\sup \left\{\left|\left\langle y, y^{*}\right\rangle\right|: y \in \pi B\right\}=\left\|y^{*}\right\|
+\end{aligned}
+$$
+
+for every $y^{*} \in Y^{*}$."
+1.41 (a),"Let $N$ be a closed subspace of a topological vector space $X$. Define $\tau_{N}$ as the quotient topology induced by the natural map $\pi: X \rightarrow X / N$.
+
+$\tau_{N}$ is a vector topology on $X / N$; the quotient map $\pi$ is linear, continuous, and open.","Since $\pi^{-1}(A \cap B)=\pi^{-1}(A) \cap \pi^{-1}(B)$ and
+
+$$
+\pi^{-1}\left(\bigcup E_{\lambda}\right)=\bigcup \pi^{-1}\left(E_{\lambda}\right)
+$$
+
+$\tau_{N}$ is a topology. A set $F \subset X / N$ is $\tau_{N}$-closed if and only if $\pi^{-1}(F)$ is $\tau$-closed. In particular, every point of $X / N$ is closed, since
+
+$$
+\pi^{-1}(\pi(x))=N+x
+$$
+
+and $N$ was assumed to be closed.
+
+The continuity of $\pi$ follows directly from the definition of $\tau_{N}$. Next, suppose $V \in \tau$. Since
+
+$$
+\pi^{-1}(\pi(V))=N+V
+$$
+
+and $N+V \in \tau$, it follows that $\pi(V) \in \tau_{N}$. Thus $\pi$ is an open mapping.
+
+If now $W$ is a neighborhood of 0 in $X / N$, there is a neighborhood $V$ of 0 in $X$ such that
+
+$$
+V+V \subset \pi^{-1}(W)
+$$
+
+Hence $\pi(V)+\pi(V) \subset W$. Since $\pi$ is open, $\pi(V)$ is a neighborhood of 0 in $X / N$. Addition is therefore continuous in $X / N$.
+
+The continuity of scalar multiplication in $X / N$ is proved in the same manner."
+1.41 (b),"Let $\mathscr{B}$ be a local base for the topology $\tau$ of a topological vector space $X$ with a closed subspace $N$.
+
+The collection of all sets $\pi(V)$ with $V \in \mathscr{B}$ is a local base for $\tau_{N}$, the quotient topology induced by the natural map $\pi: X \rightarrow X / N$.",It is clear that $(a)$ implies $(b)$.
+1.41 (c),"Let $X$ be a topological vector space with a closed subspace $N$.
+
+Each of the following properties of $X$ is inherited by $X / N$ : local convexity, local boundedness, metrizability, normability.","With the aid of Theorems 1.32, 1.24 , and 1.39 , it is just as easy to see that $(b)$ implies $(c)$."
+1.41 (d),"Let $X$ be a topological vector space with a closed subspace $N$.
+
+If $X$ is an $F$-space, or a Fréchet space, or a Banach space, so is $X / N$.","Suppose $d$ is an invariant metric on $X$, compatible with $\tau$. Define $\rho$ by
+
+$$
+\rho(\pi(x), \pi(y))=\inf \{d(x-y, z): z \in N\}
+$$
+
+This may be interpreted as the distance from $x-y$ to $N$. We omit the verifications that are now needed to show that $\rho$ is well defined and that it is an invariant metric on $X / N$. Since
+
+$$
+\pi(\{x: d(x, 0)<r\})=\{u: \rho(u, 0)<r\}
+$$
+
+it follows from (b) that $\rho$ is compatible with $\tau_{N}$.
+
+If $X$ is normed, this definition of $\rho$ specializes to yield what is usually called the quotient norm of $X / N$ :
+
+$$
+\|\pi(x)\|=\inf \{\|x-z\|: z \in N\} .
+$$
+
+To prove $(d)$ we have to show that $\rho$ is a complete metric whenever $d$ is complete.
+
+Suppose $\left\{u_{n}\right\}$ is a Cauchy sequence in $X / N$, relative to $\rho$. There is a subsequence $\left\{u_{n_{i}}\right\}$ with $\rho\left(u_{n_{i}}, u_{n_{i+1}}\right)<2^{-i}$. One can then inductively choose $x_{i} \in X$ such that $\pi\left(x_{i}\right)=u_{n_{i}}$ and $d\left(x_{i}, x_{i+1}\right)<2^{-i}$. If $d$ is complete, the Cauchy sequence $\left\{x_{i}\right\}$ converges to some $x \in X$. The continuity of $\pi$ implies that $u_{n_{i}} \rightarrow \pi(x)$ as $i \rightarrow \infty$. But if a Cauchy sequence has a convergent subsequence then the full sequence must converge. Hence $\rho$ is complete, and so is the proof of Theorem 1.41."
+1.37,"Suppose $\mathscr{P}$ is a separating family of seminorms on a vector space $X$. Associate to each $p \in \mathscr{P}$ and to each positive integer $n$ the set
+
+$$
+V(p, n)=\left\{x: p(x)<\frac{1}{n}\right\}
+$$
+
+Let $\mathscr{B}$ be the collection of all finite intersections of the sets $V(p, n)$. Then $\mathscr{B}$ is a convex balanced local base for a topology $\tau$ on $X$, which turns $X$ into a locally convex space such that
+(a) every $p \in \mathscr{P}$ is continuous, and
+
+(b) a set $E \subset X$ is bounded if and only if every $p \in \mathscr{P}$ is bounded on $E$.","Declare a set $A \subset X$ to be open if and only if $A$ is a (possibly empty) union of translates of members of $\mathscr{B}$. This clearly defines a translation-invariant topology $\tau$ on $X$; each member of $\mathscr{B}$ is convex and balanced, and $\mathscr{B}$ is a local base for $\tau$.
+
+Suppose $x \in X, x \neq 0$. Then $p(x)>0$ for some $p \in \mathscr{P}$. Since $x$ is not in $V(p, n)$ if $n p(x)>1$, we see that 0 is not in the neighborhood $x-V(p, n)$ of $x$, so that $x$ is not in the closure of $\{0\}$. Thus $\{0\}$ is a closed set, and since $\tau$ is translation-invariant, every point of $X$ is a closed set.
+
+Next we show that addition and scalar multiplication are continuous. Let $U$ be a neighborhood of 0 in $X$. Then
+
+$$
+U \supset V\left(p_{1}, n_{1}\right) \cap \cdots \cap V\left(p_{m}, n_{m}\right)
+$$
+
+for some $p_{1}, \ldots, p_{m} \in \mathscr{P}$ and some positive integers $n_{1}, \ldots, n_{m}$. Put
+
+$$
+V=V\left(p_{1}, 2 n_{1}\right) \cap \cdots \cap V\left(p_{m}, 2 n_{m}\right)
+$$
+
+Since every $p \in \mathscr{P}$ is subadditive, $V+V \subset U$. This proves that addition is continuous.
+
+Suppose now that $x \in X, \alpha$ is a scalar, and $U$ and $V$ are as above. Then $x \in s V$ for some $s>0$. Put $t=s /(1+|\alpha| s)$. If $y \in x+t V$ and $|\beta-\alpha|<1 / s$, then
+
+$$
+\beta y-\alpha x=\beta(y-x)+(\beta-\alpha) x
+$$
+
+which lies in
+
+$$
+|\beta| t V+|\beta-\alpha| s V \subset V+V \subset U
+$$
+
+since $|\beta| t \leq 1$ and $V$ is balanced. This proves that scalar multiplication is continuous.
+
+Thus $X$ is a locally convex space. The definition of $V(p, n)$ shows that every $p \in \mathscr{P}$ is continuous at 0 . Hence $p$ is continuous on $X$, by (b) of Theorem 1.34.
+
+Finally, suppose $E \subset X$ is bounded. Fix $p \in \mathscr{P}$. Since $V(p, 1)$ is a neighborhood of $0, E \subset k V(p, 1)$ for some $k<\infty$. Hence $p(x)<k$ for every $x \in E$. It follows that every $p \in \mathscr{P}$ is bounded on $E$.
+
+Conversely, suppose $E$ satisfies this condition, $U$ is a neighborhood of 0 , and (1) holds. There are numbers $M_{i}<\infty$ such that $p_{i}<$ $M_{i}$ on $E(1 \leq i \leq m)$. If $n>M_{i} n_{i}$ for $1 \leq i \leq m$, it follows that $E \subset n U$, so that $E$ is bounded."
+4.18 (a),"Let $X$ and $Y$ be Banach spaces. If $T \in \mathscr{B}(X, Y)$ and $\operatorname{dim} \mathscr{R}(T)<\infty$, then $T$ is compact.",Statement $(a)$ is obvious.
+4.18 (b),"Let $X$ and $Y$ be Banach spaces. If $T \in \mathscr{B}(X, Y), T$ is compact, and $\mathscr{R}(T)$ is closed, then $\operatorname{dim} \mathscr{R}(T)<\infty$.","If $\mathscr{R}(T)$ is closed, then $\mathscr{R}(T)$ is complete (since $Y$ is complete), so that $T$ is an open mapping of $X$ onto $\mathscr{R}(T)$; if $T$ is compact, it follows that $\mathscr{R}(T)$ is locally compact; thus (b) is a consequence of Theorem 1.22."
+4.18 (c),"Let $X$ and $Y$ be Banach spaces. The compact operators form a closed subspace of $\mathscr{B}(X, Y)$ in its norm topology.","If $S$ and $T$ are compact operators from $X$ into $Y$, so is $S+T$, because the sum of any two compact subsets of $Y$ is compact. It follows that the compact operators form a subspace $\Sigma$ of $\mathscr{B}(X, Y)$. To complete the proof of $(c)$, we now show that $\Sigma$ is closed. Let $T \in$ $\mathscr{B}(X, Y)$ be the closure of $\Sigma$, choose $r>0$, and let $U$ be the open unit ball in $X$. There exists $S \in \Sigma$ with $\|S-T\|<r$. Since $S(U)$ is totally bounded, there are points $x_{1}, \ldots, x_{n}$ in $U$ such that $S(U)$ is covered by the balls of radius $r$ with centers at the points $S x_{i}$. Since
+$\|S x-T x\|<r$ for every $x \in U$, it follows that $T(U)$ is covered by the balls of radius $3 r$ with centers at the points $T x_{i}$. Thus $T(U)$ is totally bounded, which proves that $T \in \Sigma$."
+4.18 (d),"Let $X$ be a Banach space. If $T \in \mathscr{B}(X), T$ is compact, and $\lambda \neq 0$, then $\operatorname{dim} \mathscr{N}(T-\lambda I)<\infty$.","Put $Y=\mathscr{N}(T-\lambda I)$ in $(d)$. The restriction of $T$ to $Y$ is a compact operator whose range is $Y$. Thus $(d)$ follows from $(b)$, and so does $(e)$, for if 0 is not in $\sigma(T)$, then $\mathscr{R}(T)=X$."
+4.18 (e),"Let $X$ be a Banach space. If $\operatorname{dim} X=\infty, T \in \mathscr{B}(X)$, and $T$ is compact, then $0 \in \sigma(T)$.",
+4.18 (f),"Let $X$ be a Banach space. If $S \in \mathscr{B}(X), T \in \mathscr{B}(X)$, and $T$ is compact, so are $S T$ and $T S$.",The proof of $(f)$ is trivial.
+4.14,"If $X$ and $Y$ are Banach spaces and if $T \in \mathscr{B}(X, Y)$, then each of the following three conditions implies the other two:
+
+(a) $\mathscr{R}(T)$ is closed in $Y$.
+
+(b) $\mathscr{R}\left(T^{*}\right)$ is weak*-closed in $X^{*}$.
+
+(c) $\mathscr{R}\left(T^{*}\right)$ is norm-closed in $X^{*}$.
+
+","It is obvious that $(b)$ implies $(c)$. We will prove that $(a)$ implies $(b)$ and that $(c)$ implies $(a)$.
+
+Suppose $(a)$ holds. By Theorem 4.12 and $(b)$ of Theorem 4.7, $\mathscr{N}(T)^{\perp}$ is the weak*-closure of $\mathscr{R}\left(T^{*}\right)$. To prove $(b)$ it is therefore enough to show that $\mathscr{N}(T)^{\perp} \subset \mathscr{R}\left(T^{*}\right)$.
+
+Pick $x^{*} \in \mathscr{N}(T)^{\perp}$. Define a linear functional $\Lambda$ on $\mathscr{R}(T)$ by
+
+$$
+\Lambda T x=\left\langle x, x^{*}\right\rangle \quad(x \in X)
+$$
+
+Note that $\Lambda$ is well defined, for if $T x=T x^{\prime}$, then $x-x^{\prime} \in \mathcal{N}(T)$; hence
+
+$$
+\left\langle x-x^{\prime}, x^{*}\right\rangle=0 .
+$$
+
+The open mapping theorem applies to
+
+$$
+T: X \rightarrow \mathscr{R}(T)
+$$
+
+since $\mathscr{R}(T)$ is assumed to be a closed subspace of the complete space $Y$ and is therefore complete. It follows that there exists $K<\infty$ such that to each $y \in \mathscr{R}(T)$ corresponds an $x \in X$ with $T x=y,\|x\| \leq K\|y\|$, and
+
+$$
+|\Lambda y|=|\Lambda T x|=\left|\left\langle x, x^{*}\right\rangle\right| \leq K\|y\|\left\|x^{*}\right\| .
+$$
+
+Thus $\Lambda$ is continuous. By the Hahn-Banach theorem, some $y^{*} \in Y^{*}$ extends $\Lambda$. Hence
+
+$$
+\left\langle T x, y^{*}\right\rangle=\Lambda T x=\left\langle x, x^{*}\right\rangle \quad(x \in X) .
+$$
+
+This implies $x^{*}=T^{*} y^{*}$. Since $x^{*}$ was an arbitrary element of $\mathcal{N}(T)^{\perp}$, we have shown that $\mathscr{N}(T)^{\perp} \subset \mathscr{R}\left(T^{*}\right)$. Thus $(b)$ follows from $(a)$.
+
+Suppose next that (c) holds. Let $Z$ be the closure of $\mathscr{R}(T)$ in $Y$. Define $S \in \mathscr{B}(X, Z)$ by setting $S x=T x$. Since $\mathscr{R}(S)$ is dense in $Z$, Corollary $(b)$ to Theorem 4.12 implies that
+
+$$
+S^{*}: Z^{*} \rightarrow X^{*}
+$$
+
+is one-to-one.
+
+If $z^{*} \in Z^{*}$, the Hahn-Banach theorem furnishes an extension $y^{*}$ of $z^{*}$; for every $x \in X$,
+
+$$
+\left\langle x, T^{*} y^{*}\right\rangle=\left\langle T x, y^{*}\right\rangle=\left\langle S x, z^{*}\right\rangle=\left\langle x, S^{*} z^{*}\right\rangle .
+$$
+
+Hence $S^{*} z^{*}=T^{*} y^{*}$. It follows that $S^{*}$ and $T^{*}$ have identical ranges. Since $(c)$ is assumed to hold, $\mathscr{R}\left(S^{*}\right)$ is closed, hence complete.
+
+Apply the open mapping theorem to
+
+$$
+S^{*}: Z^{*} \rightarrow \mathscr{R}\left(S^{*}\right)
+$$
+
+Since $S^{*}$ is one-to-one, the conclusion is that there is a constant $c>0$ which satisfies
+
+$$
+c\left\|z^{*}\right\| \leq\left\|S^{*} z^{*}\right\|
+$$
+
+for every $z^{*} \in Z^{*}$. Hence $S: X \rightarrow Z$ is an open mapping, by Theorem 4.13. In particular, $S(X)=Z$. But $\mathscr{R}(T)=\mathscr{R}(S)$, by the definition of $S$. Thus $\mathscr{R}(T)=Z$, a closed subspace of $Y$.
+
+This completes the proof that $(c)$ implies $(a)$."
+5.21,"If $\left\{z_{1}, z_{2}, z_{3}, \ldots\right\} \subset U$ is nontangentially dense on $T$, then to every $f \in L^{1}(T)$ and every $\varepsilon>0$ correspond scalars $c_{n}$ such that $\sum\left|c_{n}\right| \leq\|f\|_{1}+\varepsilon$ and
+
+$$
+f=\sum_{1}^{\infty} c_{n} P_{z_{n}}
+$$",
+13.25,"In the situation of Theorem $13.24, \mathscr{D}_{f}=H$ if and only if $f \in L^{\infty}(E)$.","Assume $\mathscr{D}_{f}=H$. Since $\Psi(f)$ is a closed operator, the closed graph theorem implies that $\Psi(f) \in \mathscr{B}(H)$. If $f_{n}=f \phi_{n}$ is a truncation of $f$, it follows from the multiplication theorem, combined with Theorem 12.21 , that
+
+$$
+\left\|f_{n}\right\|_{\infty}=\left\|\Psi\left(f_{n}\right)\right\|=\left\|\Psi(f) \Psi\left(\phi_{n}\right)\right\| \leq\|\Psi(f)\|,
+$$
+
+since $\left\|\Psi\left(\phi_{n}\right)\right\|=\left\|\phi_{n}\right\|_{\infty} \leq 1$. Thus $\|f\|_{\infty} \leq\|\Psi(f)\|$, and $f \in L^{\infty}(E)$. The converse is contained in Theorem 12.21."
+3.2,"Suppose
+
+(a) $M$ is a subspace of a real vector space $X$,
+
+(b) $p: X \rightarrow R$ satisfies
+
+$$
+p(x+y) \leq p(x)+p(y) \quad \text { and } \quad p(t x)=p(x)
+$$
+
+if $x \in X, y \in X, t \geq 0$,
+
+(c) $f: M \rightarrow R$ is linear and $f(x) \leq p(x)$ on $M$.
+
+Then there exists a linear $\Lambda: X \rightarrow R$ such that
+
+$$
+\Lambda x=f(x) \quad(x \in M)
+$$
+
+and
+
+$$
+-p(-x) \leq \Lambda x \leq p(x) \quad(x \in X)
+$$
+
+","If $M \neq X$, choose $x_{1} \in X, x_{1} \notin M$, and define
+
+$$
+M_{1}=\left\{x+t x_{1}: x \in M, t \in R\right\}
+$$
+
+It is clear that $M_{1}$ is a vector space. Since
+
+$$
+f(x)+f(y)=f(x+y) \leq p(x+y) \leq p\left(x-x_{1}\right)+p\left(x_{1}+y\right)
+$$
+
+we have
+
+$$
+f(x)-p\left(x-x_{1}\right) \leq p\left(y+x_{1}\right)-f(y) \quad(x, y \in M)
+$$
+
+Let $\alpha$ be the least upper bound of the left side of (1), as $x$ ranges over $M$. Then
+
+$$
+f(x)-\alpha \leq p\left(x-x_{1}\right) \quad(x \in M)
+$$
+
+and
+
+$$
+f(y)+\alpha \leq p\left(y+x_{1}\right) \quad(y \in M) .
+$$
+
+Define $f_{1}$ on $M_{1}$ by
+
+Then $f_{1}=f$ on $M$, and $f_{1}$ is linear on $M_{1}$.
+
+$$
+f_{1}\left(x+t x_{1}\right)=f(x)+t \alpha \quad(x \in M, t \in R) .
+$$
+
+Take $t>0$, replace $x$ by $t^{-1} x$ in (2), replace $y$ by $t^{-1} y$ in (3), and multiply the resulting inequalities by $t$. In combination with (4), this proves that $f_{1} \leq p$ on $M_{1}$.
+
+The second part of the proof can be done by whatever one's favorite method of transfinite induction is; one can use well-ordering, or Zorn's lemma, or Hausdorff's maximality theorem.
+
+Let $\mathscr{P}$ be the collection of all ordered pairs $\left(M^{\prime}, f^{\prime}\right)$, where $M^{\prime}$ is a subspace of $X$ that contains $M$ and $f^{\prime}$ is a linear functional on $M^{\prime}$ that extends $f$ and satisfies $f^{\prime} \leq p$ on $M^{\prime}$. Partially order $\mathscr{P}$ by declaring $\left(M^{\prime}, f^{\prime}\right) \leq\left(M^{\prime \prime}, f^{\prime \prime}\right)$ to mean that $M^{\prime} \subset M^{\prime \prime}$ and $f^{\prime \prime}=f^{\prime}$ on $M^{\prime}$. By Hausdorff's maximality theorem there exists a maximal totally ordered subcollection $\Omega$ of $\mathscr{P}$.
+
+Let $\Phi$ be the collection of all $M^{\prime}$ such that $\left(M^{\prime}, f^{\prime}\right) \in \Omega$. Then $\Phi$ is totally ordered by set inclusion, and the union $\tilde{M}$ of all members of $\Phi$ is therefore a subspace of $X$. If $x \in \tilde{M}$ then $x \in M^{\prime}$ for some $M^{\prime} \in \Phi$; define $\Lambda x=f^{\prime}(x)$, where $f^{\prime}$ is the function which occurs in the pair $\left(M^{\prime}, f^{\prime}\right) \in \Omega$.
+
+It is now easy to check that $\Lambda$ is well defined on $\tilde{M}$, that $\Lambda$ is linear, and that $\Lambda \leq p$. If $\tilde{M}$ were a proper subspace of $X$, the first part of the proof would give a further extension of $\Lambda$, and this would contradict the maximality of $\Omega$. Thus $\tilde{M}=X$.
+
+Finally, the inequality $\Lambda \leq p$ implies that
+
+$$
+-p(-x) \leq-\Lambda(-x)=\Lambda x
+$$
+
+for all $x \in X$. This completes the proof."
+4.13,"Let $U$ and $V$ be the open unit balls in the Banach spaces $X$ and $Y$, respectively. If $T \in \mathscr{B}(X, Y)$ and $\delta>0$, then the implications
+
+$$
+(a) \rightarrow(b) \rightarrow(c) \rightarrow(d)
+$$
+
+hold among the following statements:
+
+(a) $\left\|T^{*} y^{*}\right\| \geq \delta\left\|y^{*}\right\|$ for every $y^{*} \in Y^{*}$.
+
+(b) $\overline{T(U)} \supset \delta V$.
+
+(c) $T(U) \supset \delta V$.
+
+(d) $T(X)=Y$.
+
+Moreover, if (d) holds, then (a) holds for some $\delta>0$.","Assume $(a)$, and pick $y_{0} \notin \overline{T(U)}$. Since $\overline{T(U)}$ is convex, closed, and balanced, Theorem 3.7 shows that there is a $y^{*}$ such that $\left|\left\langle y, y^{*}\right\rangle\right| \leq 1$ for every $y \in \overline{T(U)}$, but $\left|\left\langle y_{0}, y^{*}\right\rangle\right|>1$. If $x \in U$, it follows that
+
+$$
+\left|\left\langle x, T^{*} y^{*}\right\rangle\right|=\left|\left\langle T x, y^{*}\right\rangle\right| \leq 1
+$$
+
+Thus $\left\|T^{*} y^{*}\right\| \leq 1$, and now (a) gives
+
+$$
+\delta<\delta\left|\left\langle y_{0}, y^{*}\right\rangle\right| \leq \delta\left\|y_{0}\right\|\left\|y^{*}\right\| \leq\left\|y_{0}\right\|\left\|T^{*} y^{*}\right\| \leq\left\|y_{0}\right\| \text {. }
+$$
+
+It follows that $y \in \overline{T(U)}$ if $\|y\| \leq \delta$. Thus $(a) \rightarrow(b)$.
+
+Next, assume $(b)$. Take $\delta=1$, without loss of generality. Then $\overline{T(U)} \supset \bar{V}$. To every $y \in Y$ and every $\varepsilon>0$ corresponds therefore an $x \in X$ with $\|x\| \leq\|y\|$ and $\|y-T x\|<\varepsilon$.
+
+Pick $y_{1} \in V$. Pick $\varepsilon_{n}>0$ so that
+
+$$
+\sum_{n=1}^{\infty} \varepsilon_{n}<1-\left\|y_{1}\right\|
+$$
+
+Assume $n \geq 1$ and $y_{n}$ is picked. There exists $x_{n}$ such that $\left\|x_{n}\right\| \leq\left\|y_{n}\right\|$ and $\left\|y_{n}-T x_{n}\right\|<\varepsilon_{n}$. Put
+
+$$
+y_{n+1}=y_{n}-T x_{n} \text {. }
+$$
+
+By induction, this process defines two sequences $\left\{x_{n}\right\}$ and $\left\{y_{n}\right\}$. Note that
+
+$$
+\left\|x_{n+1}\right\| \leq\left\|y_{n+1}\right\|=\left\|y_{n}-T x_{n}\right\|<\varepsilon_{n}
+$$
+
+Hence
+
+$$
+\sum_{n=1}^{\infty}\left\|x_{n}\right\| \leq\left\|x_{1}\right\|+\sum_{n=1}^{\infty} \varepsilon_{n} \leq\left\|y_{1}\right\|+\sum_{n=1}^{\infty} \varepsilon_{n}<1
+$$
+
+It follows that $x=\sum x_{n}$ is in $U$ (see Exercise 23) and that
+
+$$
+T x=\lim _{N \rightarrow \infty} \sum_{n=1}^{N} T x_{n}=\lim _{N \rightarrow \infty} \sum_{n=1}^{N}\left(y_{n}-y_{n+1}\right)=y_{1}
+$$
+
+since $y_{N+1} \rightarrow 0$ as $N \rightarrow \infty$. Thus $y_{1}=T x \in T(U)$, which proves $(c)$.
+
+Note that the preceding argument is just a specialized version of part of the proof of the open mapping theorem 2.11.
+
+That $(c)$ implies $(d)$ is obvious.
+
+Assume $(d)$. By the open mapping theorem, there is a $\delta>0$ such that $T(U) \supset \delta V$. Hence
+
+$$
+\begin{aligned}
+\left\|T^{*} y^{*}\right\| & =\sup \left\{\left|\left\langle x, T^{*} y^{*}\right\rangle\right|: x \in U\right\} \\
+& =\sup \left\{\left|\left\langle T x, y^{*}\right\rangle\right|: x \in U\right\} \\
+& \geq \sup \left\{\left|\left\langle y, y^{*}\right\rangle\right|: y \in \delta V\right\}=\delta\left\|y^{*}\right\|
+\end{aligned}
+$$
+
+for every $y^{*} \in Y^{*}$. This is $(a)$."
+1.11,"If $\mathscr{B}$ is a local base for a topological vector space $X$, then every member of $\mathscr{B}$ contains the closure of some member of $\mathscr{B}$.","So far we have not used the assumption that every point of $X$ is a closed set. We now use it and apply Theorem 1.10 to a pair of distinct points in place of $K$ and $C$. The conclusion is that these points have disjoint neighborhoods. In other words, the Hausdorff separation axiom holds."
+1.12,Every topological vector space is a Hausdorff space.,
+1.13 (a),"Let $X$ be a topological vector space. If $A \subset X$ then $\bar{A}=\bigcap(A+V)$, where $V$ runs through all neighborhoods of 0 .","$x \in \bar{A}$ if and only if $(x+V) \cap A \neq \varnothing$ for every neighborhood $V$ of 0 , and this happens if and only if $x \in A-V$ for every such $V$. Since $-V$ is a neighborhood of 0 if and only if $V$ is one, the proof is complete."
+1.13 (b),"Let $X$ be a topological vector space. If $A \subset X$ and $B \subset X$, then $\bar{A}+\bar{B} \subset \overline{A+B}$.","Take $a \in \bar{A}, b \in \bar{B}$; let $W$ be a neighborhood of $a+b$. There are neighborhoods $W_{1}$ and $W_{2}$ of $a$ and $b$ such that $W_{1}+W_{2} \subset W$. There exist $x \in A \cap W_{1}$ and $y \in B \cap W_{2}$, since $a \in \bar{A}$ and $b \in \bar{B}$. Then $x+y$ lies in $(A+B) \cap W$, so that this intersection is not empty. Consequently, $a+b \in \overline{A+B}$."
+1.13 (c),"Let $X$ be a topological vector space. If $Y$ is a subspace of $X$, so is $\bar{Y}$.","Suppose $\alpha$ and $\beta$ are scalars. By the proposition in Section 1.7, $a \bar{Y}=\overline{\alpha Y}$ if $\alpha \neq 0$; if $\alpha=0$, these two sets are obviously equal. Hence it follows from $1.13 (b)$ that
+
+$$
+\alpha \bar{Y}+\beta \bar{Y}=\overline{\alpha Y}+\overline{\beta Y} \subset \overline{\alpha Y+\beta Y} \subset \bar{Y}
+$$
+
+the assumption that $Y$ is a subspace was used in the last inclusion."
+1.13 (d),"Let $X$ be a topological vector space. If $C$ is a convex subset of $X$, so are $\bar{C}$ and $C^{\circ}$.","Since $C^{\circ} \subset C$ and $C$ is convex, we have
+
+$$
+t C^{\circ}+(1-t) C^{\circ} \subset C
+$$
+
+if $0<t<1$. The two sets on the left are open; hence so is their sum. Since every open subset of $C$ is a subset of $C^{\circ}$, it follows that $C^{\circ}$ is convex."
+1.13 (e),"Let $X$ be a topological vector space. If $B$ is a balanced subset of $X$, so is $\bar{B}$; if also $0 \in B^{\circ}$ then $B^{\circ}$ is balanced.","If $0<|\alpha| \leq 1$, then $\alpha B^{\circ}=(\alpha B)^{\circ}$, since $x \rightarrow \alpha x$ is a homeomorphism. Hence $\alpha B^{\circ} \subset \alpha B \subset B$, since $B$ is balanced. But $\alpha B^{\circ}$ is open. So $\alpha B^{\circ} \subset B^{\circ}$. If $B^{\circ}$ contains the origin, then $\alpha B^{\circ} \subset B^{\circ}$ even for $\alpha=0$."
+1.13 (f),"Let $X$ be a topological vector space. If $E$ is a bounded subset of $X$, so is $\bar{E}$.","Let $V$ be a neighborhood of 0 . By Theorem 1.11, $\bar{W} \subset V$ for some neighborhood $W$ of 0 . Since $E$ is bounded, $E \subset t W$ for all sufficiently large $t$. For these $t$, we have $\bar{E} \subset t \bar{W} \subset t V$."
+1.14 (a),"In a topological vector space $X$, every neighborhood of 0 contains a balanced neighborhood of 0 .","Suppose $U$ is a neighborhood of 0 in $X$. Since scalar multiplication is continuous, there is a $\delta>0$ and there is a neighborhood $V$ of 0 in $X$ such that $\alpha V \subset U$ whenever $|\alpha|<\delta$. Let $W$ be the union of all these sets $\alpha V$. Then $W$ is a neighborhood of $0, W$ is balanced, and $W \subset U$."
+1.14 (b),"In a topological vector space $X$, every convex neighborhood of 0 contains a balanced convex neighborhood of 0 .","Suppose $U$ is a convex neighborhood of 0 in $X$. Let $A=\bigcap \alpha U$, where $\alpha$ ranges over the scalars of absolute value 1 . Choose $W$ as in part $1.14 (a)$. Since $W$ is balanced, $\alpha^{-1} W=W$ when $|\alpha|=1$; hence $W \subset \alpha U$. Thus $W \subset A$, which implies that the interior $A^{\circ}$ of $A$ is a neighborhood of 0 . Clearly $A^{\circ} \subset U$. Being an intersection of convex sets, $A$ is convex; hence so is $A^{\circ}$. To prove that $A^{\circ}$ is a neighborhood with the desired properties, we have to show that $A^{\circ}$ is balanced; for this it suffices to prove that $A$ is balanced. Choose $r$ and $\beta$ so that $0 \leq r \leq 1,|\beta|=1$. Then
+
+$$
+r \beta A=\bigcap_{|\alpha|=1} r \beta \alpha U=\bigcap_{|\alpha|=1} r \alpha U
+$$
+
+Since $\alpha U$ is a convex set that contains 0 , we have $r \alpha U \subset \alpha U$. Thus $r \beta A \subset A$, which completes the proof."
+5.22,"Let $\left\{x_{n}\right\}$ be a sequence in a Banach space $X$, with $\left\|x_{n}\right\| \leq$ 1 for all $n$, and suppose that there is a $\delta>0$ such that
+
+$$
+\sup \left|\left\langle x_{n}, x^{*}\right\rangle\right| \geq \delta\left\|x^{*}\right\|
+$$
+
+for every $x^{*} \in X^{*}$. If $\varepsilon>0$, every $x \in X$ can then be represented in the form
+
+$$
+x=\sum_{n=1}^{\infty} c_{n} x_{n}
+$$
+
+with $\delta \sum_{1}^{\infty}\left|c_{n}\right| \leq\|x\|+\varepsilon$.","Define $T: \ell^{1} \rightarrow X$ by $T c=\sum_{1}^{\infty} c_{n} x_{n}$, for $c=\left\{c_{1}, c_{2}, c_{3}, \ldots\right\} \in l^{1}$.
+
+Then, for every $x^{*} \in X^{*}$,
+
+$$
+\left\langle c, T^{*} x^{*}\right\rangle=\left\langle T c, x^{*}\right\rangle=\sum_{1}^{\infty} c_{n}\left\langle x_{n}, x^{*}\right\rangle
+$$
+
+so that
+
+$$
+\left|\sum_{1}^{\infty} c_{n}\left\langle x_{n}, x^{*}\right\rangle\right| \leq\left\|T^{*} x^{*}\right\|
+$$
+
+if $\|c\|_{1} \leq 1$. The supremum of the left side, over all such $c$, is $\sup _{n}\left|\left\langle x_{n}, x^{*}\right\rangle\right|$, which is $\geq \delta\left\|x^{*}\right\|$ by assumption. Theorem 4.13 asserts therefore that $T$ maps the set of all $c$ with $\sum\left|c_{n}\right|<1 / \delta$ onto a set that contains the open unit ball of $X$."
+3.20 (a),"If $A_{1}, \ldots, A_{n}$ are compact convex sets in a topological vector space $X$, then $\operatorname{co}\left(A_{1} \cup \cdots \cup A_{n}\right)$ is compact.","Let $S$ be the simplex in $R^{n}$ consisting of all $s=\left(s_{1}, \ldots, s_{n}\right)$ with $s_{i} \geq 0, \quad s_{1}+\cdots+s_{n}=1$. Put $A=A_{1} \times \cdots \times A_{n}$. Define $f: S \times A \rightarrow X$ by
+
+$$
+f(s, a)=s_{1} a_{1}+\cdots+s_{n} a_{n}
+$$
+
+and put $K=f(S \times A)$.
+
+It is clear that $K$ is compact and that $K \subset \operatorname{co}\left(A_{1} \cup \cdots \cup A_{n}\right)$. We will see that this inclusion is actually an equality.
+
+If $(s, a)$ and $(t, b)$ are in $S \times A$ and if $\alpha \geq 0, \beta \geq 0, \alpha+\beta=1$, then
+
+$$
+\alpha f(s, a)+\beta f(t, b)=f(u, c)
+$$
+
+where $u=\alpha s+\beta t \in S$ and $c \in A$, because
+
+$$
+c_{i}=\frac{\alpha s_{i} a_{i}+\beta t_{i} b_{i}}{\alpha s_{i}+\beta t_{i}} \in A_{i} \quad(1 \leq i \leq n)
+$$
+
+This shows that $K$ is convex. Since $A_{i} \subset K$ for each $i$ [take $s_{i}=1$ in (1), $s_{j}=0$ for $\left.j \neq i\right]$, the convexity of $K$ implies that $\operatorname{co}\left(A_{1} \cup \cdots \cup\right.$ $\left.A_{n}\right) \subset K$. This proves $(a)$."
+3.20 (b),"If $X$ is a locally convex topological vector space and $E \subset X$ is totally bounded, then $\operatorname{co}(E)$ is totally bounded.","Let $U$ be a neighborhood of 0 in $X$. Choose a convex neighborhood $V$ of 0 in $X$ such that $V+V \subset U$. Then $E \subset F+V$ for some finite set $F \subset X$. Hence $E \subset c o(F)+V$. The latter set is convex. It follows that
+
+$$
+\operatorname{co}(E) \subset \operatorname{co}(F)+V .
+$$
+
+But $c o(F)$ is compact [a special case of $(a)$ ], and therefore $c o(F) \subset$ $F_{1}+V$ for some finite set $F_{1} \subset X$. Thus
+
+$$
+c o(E) \subset F_{1}+V+V \subset F_{1}+U .
+$$
+
+Since $U$ was arbitrary, $c o(E)$ is totally bounded."
+3.20 (c),"If $X$ is a Fr\'echet space and $K \subset X$ is compact, then $\overline{c o}(K)$ is compact.","Closures of totally bounded sets are totally bounded in every metric space, and hence are compact in every complete metric space (Appendix A4). So if $K$ is compact in a Fr\'echet space, then $K$ is obviously totally bounded; hence $c o(K)$ is totally bounded, by $(b)$, and therefore $\overline{c o}(K)$ is compact."
+3.20 (d),"If $K$ is a compact set in $R^{n}$, then $c o(K)$ is compact.","Let $S$ be the simplex in $R^{n+1}$ consisting of all $t=\left(t_{1}, \ldots\right.$, $\left.t_{n+1}\right)$ with $t_{i} \geq 0$ and $\sum t_{i}=1$. Let $K$ be compact, $K \subset R^{n}$. By the proposition that follows, $x \in c o(K)$ if and only if
+
+$$
+x=t_{1} x_{1}+\cdots+t_{n+1} x_{n+1}
+$$
+
+for some $t \in S$ and $x_{i} \in K(1 \leq i \leq n+1)$. In other words, $c o(K)$ is the image of $S \times K^{n+1}$ under the continuous mapping
+
+$$
+\left(t, x_{1}, \ldots, x_{n+1}\right) \rightarrow t_{1} x_{1}+\cdots+t_{n+1} x_{n+1}
+$$
+
+Hence $c o(K)$ is compact."
+1.24,"If $X$ is a topological vector space with a countable local base, then there is a metric $d$ on $X$ such that
+
+(a) $d$ is compatible with the topology of $X$,
+
+(b) the open balls centered at 0 are balanced, and
+
+(c) $d$ is invariant: $d(x+z, y+z)=d(x, y)$ for $x, y, z \in X$.
+
+If, in addition, $X$ is locally convex, then $d$ can be chosen so as to satisfy $(a),(b),(c)$, and also
+
+(d) all open balls are convex.","By Theorem 1.14, $X$ has a balanced local base $\left\{V_{n}\right\}$ such that
+
+$$
+V_{n+1}+V_{n+1}+V_{n+1}+V_{n+1} \subset V_{n} \quad(n+1,2,3, \ldots)
+$$
+
+when $X$ is locally convex, this local base can be chosen so that each $V_{n}$ is also convex.
+
+Let $D$ be the set of all rational numbers $r$ of the form
+
+$$
+r=\sum_{n=1}^{\infty} c_{n}(r) 2^{-n}
+$$
+
+where each of the ""digits"" $c_{i}(r)$ is 0 or 1 and only finitely many are 1 . Thus each $r \in D$ satisfies the inequalities $0 \leq r<1$.
+
+Put $A(r)=X$ if $r \geq 1$; for any $r \in D$, define
+
+$$
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+$$
+
+Note that each of these sums is actually finite. Define
+
+$$
+f(x)=\inf \{r: x \in A(r)\} \quad(x \in X)
+$$
+
+and
+
+$$
+d(x, y)=f(x-y) \quad(x \in X, y \in X)
+$$
+
+The proof that this $d$ has the desired properties depends on the inclusions
+
+$$
+A(r)+A(s) \subset A(r+s) \quad(r \in D, s \in D)
+$$
+
+Before proving (6), let us see how the theorem follows from it. Since every $A(s)$ contains 0 , (6) imples
+
+$$
+A(r) \subset A(r)+A(t-r) \subset A(t) \quad \text { if } \quad r<t .
+$$
+
+Thus $\{A(r)\}$ is totally ordered by set inclusion. We claim that
+
+$$
+f(x+y) \leq f(x)+f(y) \quad(x \in X, y \in X) .
+$$
+
+In the proof of (8) we may, of course, assume that the right side is $<1$. Fix $\varepsilon>0$. There exist $r$ and $s$ in $D$ such that
+
+$$
+f(x)<r, \quad f(y)<s, \quad r+s<f(x)+f(y)+\varepsilon
+$$
+
+Thus $x \in A(r), y \in A(s)$, and (6) implies $x+y \in A(r+s)$. Now (8) follows, because
+
+$$
+f(x+y) \leq r+s<f(x)+f(y)+\varepsilon,
+$$
+
+and $\varepsilon$ was arbitrary.
+
+Since each $A(r)$ is balanced, $f(x)=f(-x)$. It is obvious that $f(0)=0$. If $x \neq 0$, then $x \notin V_{n}=A\left(2^{-n}\right)$ for some $n$, and so $f(x) \geq 2^{-n}>0$.
+
+These properties of $f$ show that (5) defines a translation-invariant metric $d$ on $X$. The open balls centered at 0 are the open sets
+
+$$
+B_{\delta}(0)=\{x: f(x)<\delta\}=\bigcup_{r<\delta} A(r)
+$$
+
+If $\delta<2^{-n}$, then $B_{\delta}(0) \subset V_{n}$. Hence $\left\{B_{\delta}(0)\right\}$ is a local base for the topology of $X$. This proves $(a)$. Since each $A(r)$ is balanced, so is each $B_{\delta}(0)$.
+
+If each $V_{n}$ is convex, so is each $A(r)$, and (9) implies that the same is true of each $B_{\delta}(0)$, hence also of each translate of $B_{\delta}(0)$.
+
+We turn to the proof of (6). If $r+s \geq 1$, then $A(r+s)=X$ and (6) is obvious. We may therefore assume that $r+s<1$, and we will use the following simple proposition about addition in the binary system of notation:
+
+If $r, s$, and $r+s$ are in $D$ and $c_{n}(r)+c_{n}(s) \neq c_{n}(r+s)$ for some $n$, then at the smallest $n$ where this happens we have $c_{n}(r)=c_{n}(s)=0$, $c_{n}(r+s)=1$.
+
+Put $\alpha_{n}=c_{n}(r), \beta_{n}=c_{n}(s), \gamma_{n}=c_{n}(r+s)$. If $\alpha_{n}+\beta_{n}=\gamma_{n}$ for all $n$ then (3) shows that $A(r)+A(s)=A(r+s)$. In the other case, let $N$ be the smallest integer for which $\alpha_{N}+\beta_{N} \neq \gamma_{N}$. Then, as mentioned above, $\alpha_{N}=\beta_{N}=0, \gamma_{N}=1$. Hence
+
+$$
+\begin{aligned}
+A(r) & \subset \alpha_{1} V_{1}+\cdots+\alpha_{N-1} V_{N-1}+V_{N+1}+V_{N+2}+\cdots \\
+& \subset \alpha_{1} V_{1}+\cdots+\alpha_{N-1} V_{N-1}+V_{N+1}+V_{N+1} .
+\end{aligned}
+$$
+
+Likewise
+
+$$
+A(s) \subset \beta_{1} V_{1}+\cdots+\beta_{N-1} V_{N-1}+V_{N+1}+V_{N+1}
+$$
+
+Since $\alpha_{n}+\beta_{n}=\gamma_{n}$ for all $n<N$, (1) now leads to
+
+$$
+A(r)+A(s) \subset \gamma_{1} V_{1}+\cdots+\gamma_{N-1} V_{n-1}+V_{N} \subset A(r+s)
+$$
+
+because $\gamma_{N}=1$."
+10.12,"If $A$ is a Banach algebra, then $G(A)$ is an open subset of $A$, and the mapping $x \rightarrow x^{-1}$ is a homeomorphism of $G(A)$ onto $G(A)$.","That $G(A)$ is open and that $x \rightarrow x^{-1}$ is continuous follows from Theorem 10.11. Since $x \rightarrow x^{-1}$ maps $G(A)$ onto $G(A)$ and since it is its own inverse, it is a homeomorphism."
+9.5,Suppose $K \in L^{1}\left(R^{n}\right)$ and $Y$ is the smallest closed translation-invariant subspace of $L^{1}\left(R^{n}\right)$ that contains $K$. Then $Y=L^{1}\left(R^{n}\right)$ if and only if $\hat{K}(t) \neq 0$ for every $t \in R^{n}$.,Note that $Z(Y)=\left\{t \in R^{n}: \hat{K}(t)=0\right\}$. The theorem thus asserts that $Y=L^{1}\left(R^{n}\right)$ if and only if $Z(Y)$ is empty. One-half of this is Theorem 9.4; the other half is trivial.
+3.5,"Suppose $M$ is a subspace of a locally convex space $X$, and $x_{0} \in X$. If $x_{0}$ is not in the closure of $M$, then there exists $\Lambda \in X^{*}$ such that $\Lambda x_{0}=1$ but $\Lambda x=0$ for every $x \in M$.","By $(b)$ of Theorem 3.4, with $A=\left\{x_{0}\right\}$ and $B=\bar{M}$, there exists $\Lambda \in X^{*}$ such that $\Lambda x_{0}$ and $\Lambda(M)$ are disjoint. Thus $\Lambda(M)$ is a proper
+subspace of the scalar field. This forces $\Lambda(M)=\{0\}$ and $\Lambda x_{0} \neq 0$. The desired functional is obtained by dividing $\Lambda$ by $\Lambda x_{0}$."
+3.16,"If $X$ is a separable topological vector space, if $K \subset X^{*}$, and if $K$ is weak*-compact, then $K$ is metrizable, in the weak*-topology.","Let $\left\{x_{n}\right\}$ be a countable dense set in $X$. Put $f_{n}(\Lambda)=\Lambda x_{n}$, for $\Lambda \in X^{*}$. Each $f_{n}$ is weak*-continuous, by the definition of the weak*topology. If $f_{n}(\Lambda)=f_{n}\left(\Lambda^{\prime}\right)$ for all $n$, then $\Lambda x_{n}=\Lambda^{\prime} x_{n}$ for all $n$, which implies that $\Lambda=\Lambda^{\prime}$, since both are continuous on $X$ and coincide on a dense set.
+
+Thus $\left\{f_{n}\right\}$ is a countable family of continuous functions that separates points on $X^{*}$. The metrizability of $K$ now follows from $(c)$ of Section 3.8."
+3.29,"Suppose $Q$ is a compact Hausdorff space, $X$ is a Banach space, $f: Q \rightarrow X$ is continuous, and $\mu$ is a positive Borel measure on $Q$. Then
+
+$$
+\left\|\int_{Q} f d \mu\right\| \leq \int_{Q}\|f\| d \mu
+$$","Put $y=\int f d \mu$. By the corollary to Theorem 3.3, there is a $\Lambda \in X^{*}$ such that $\Lambda y=\|y\|$ and $|\Lambda x| \leq\|x\|$ for all $x \in X$. In particular,
+
+$$
+|\Lambda f(s)| \leq\|f(s)\|
+$$
+
+for all $s \in Q$. By Theorem 3.27, it follows that
+
+$$
+\|y\|=\Lambda y=\int_{Q}(\Lambda f) d \mu \leq \int_{Q}\|f\| d \mu
+$$"
+10.19,"If $A$ is a Banach algebra and if there exists $M<\infty$ such that
+
+$$
+\|x\|\|y\| \leq M\|x y\| \quad(x \in A, y \in A),
+$$
+
+then $A$ is (isometrically isomorphic to) $\mathbb{C}$.
+
+","Let $y$ be a boundary point of $G(A)$. Then $y=\lim y_{n}$ for some sequence $\left\{y_{n}\right\}$ in $G(A)$. By Lemma $10.17,\left\|y_{n}^{-1}\right\| \rightarrow \infty$. By hypothesis,
+
+$$
+\left\|y_{n}\right\|\left\|y_{n}^{-1}\right\| \leq M\|e\| \quad(n=1,2,3, \ldots)
+$$
+
+Hence $\left\|y_{n}\right\| \rightarrow 0$ and therefore $y=0$.
+
+If $x \in A$, each boundary point $\lambda$ of $\sigma(x)$ gives rise to a boundary point $\lambda e-x$ of $G(A)$. Thus $x=\lambda e$. In other words, $A=\{\lambda e: \lambda \in \mathscr{C})$."
+12.43,"Let $(\Omega, \mathscr{M}, \mu)$ be as above. If $\psi: \Omega \rightarrow \Omega$ is one-to-one and measure-preserving, and $f \in L^{2}(\mu)$, then the averages
+
+$$
+A_{n} f=\frac{1}{n}\left(f+f \circ \psi+\cdots+f \circ \psi^{n-1}\right)
+$$
+
+converge, in the $L^{2}$-metric, to some $g \in L^{2}(\mu)$, as $n \rightarrow \infty$.
+
+Moreover, $g \circ \psi=g$. Thus $g$ is the constant $\int_{\Omega} f d \mu$ if $\psi$ is ergodic.",The key to the proof is the observation that the map $f \rightarrow f \circ \psi$ is an isometry of $L^{2}(\mu)$ onto $L^{2}(\mu)$. It is thus a unitary operator on the Hilbert space $L^{2}(\mu)$. The following abstract reformulation of Theorem 12.43 is then an easy consequence of the spectral theorem.
+6.23,"If $W$ is as above, then $\Lambda$ vanishes in $W$.","$W$ is the union of open sets $\omega$ in which $\Lambda$ vanishes. Let $\Gamma$ be the collection of these $\omega$ 's, and let $\left\{\psi_{i}\right\}$ be a locally finite partition of unity in $W$, subordinate to $\Gamma$, as in Theorem 6.20. If $\phi \in \mathscr{D}(W)$, then $\phi=\sum \psi_{i} \phi$. Only finitely many terms of this sum are different from 0. Hence
+
+$$
+\Lambda \phi=\sum \Lambda\left(\psi_{i} \phi\right)=0
+$$
+
+since each $\psi_{i}$ has its support in some $\omega \in \Gamma$."
+10.11,"Suppose $A$ is a Banach algebra, $x \in G(A), h \in A$, and $\|h\|<\frac{1}{2}\left\|\mathrm{x}^{-1}\right\|^{-1}$. Then $x+h \in G(A)$, and
+
+$$
+\left\|(x+h)^{-1}-x^{-1}+x^{-1} h x^{-1}\right\| \leq 2\left\|x^{-1}\right\|^{3}\|h\|^{2} .
+$$","Since $x+h=x\left(e+x^{-1} h\right)$ and $\left\|x^{-1} h\right\|<\frac{1}{2}$, Theorem 10.7 implies that $x+h \in G(A)$ and that the norm of the right member of the identity
+
+$$
+(x+h)^{-1}-x^{-1}+x^{-1} h x^{-1}=\left[\left(e+x^{-1} h\right)^{-1}-e+x^{-1} h\right] x^{-1}
+$$
+
+is at most $2\left\|x^{-1} h\right\|^{2}\left\|x^{-1}\right\|$."
+2.9,"Suppose $X$ and $Y$ are topological vector spaces, $K$ is a compact convex set in $X, \Gamma$ is a collection of continuous linear mappings of $X$
+into $Y$, and the orbits
+
+$$
+\Gamma(x)=\{\Lambda x: \Lambda \in \Gamma\}
+$$
+
+are bounded subsets of $Y$, for every $x \in K$.
+
+Then there is a bounded set $B \subset Y$ such that $\Lambda(K) \subset B$ for every $\Lambda \in \Gamma$.","Let $B$ be the union of all sets $\Gamma(x)$, for $x \in K$. Pick balanced neighborhoods $W$ and $U$ of 0 in $Y$ such that $\bar{U}+\bar{U} \subset W$. Put
+
+$$
+E=\bigcap_{\Lambda \in \Gamma} \Lambda^{-1}(\bar{U})
+$$
+
+If $x \in K$, then $\Gamma(x) \subset n U$ for some $n$, so that $x \in n E$. Consequently,
+
+$$
+K=\bigcup_{n=1}^{\infty}(K \cap n E)
+$$
+
+Since $E$ is closed, Baire's theorem shows that $K \cap n E$ has nonempty interior (relative to $K$ ) for at least one $n$.
+
+We fix such an $n$, we fix an interior point $x_{0}$ of $K \cap n E$, we fix a balanced neighborhood $V$ of 0 in $X$ such that
+
+$$
+K \cap\left(x_{0}+V\right) \subset n E,
+$$
+
+and we fix a $p>1$ such that
+
+$$
+K \subset x_{0}+p V
+$$
+
+Such a $p$ exists since $K$ is compact.
+
+If now $x$ is any point of $K$ and
+
+$$
+z=\left(1-p^{-1}\right) x_{0}+p^{-1} x
+$$
+
+then $z \in K$, since $K$ is convex. Also,
+
+$$
+z-x_{0}=p^{-1}\left(x-x_{0}\right) \in V
+$$
+
+by (4). Hence $z \in n E$, by (3). Since $\Lambda(n E) \subset n \bar{U}$ for every $\Lambda \in \Gamma$ and since $x=p z-(p-1) x_{0}$, we have
+
+$$
+\Lambda x \in p n \bar{U}-(p-1) n \bar{U} \subset p n(\bar{U}+\bar{U}) \subset p n W
+$$
+
+Thus $B \subset p n W$, which proves that $B$ is bounded."
+12.44,"If $U \in \mathscr{B}(H)$ is unitary and $x \in H$, then the averages
+
+$$
+A_{n} x=\frac{1}{n}\left(x+U x+\cdots+U^{n-1} x\right)
+$$
+
+converge, in the norm topology of $H$, to some $y \in H$.","Let $E$ be the spectral decomposition of $U$. Define functions $a_{n}$ and $b$ on the unit circle by
+
+$$
+a_{n}(\lambda)=\frac{1}{n}\left(1+\lambda+\cdots+\lambda^{n-1}\right)
+$$
+
+$b(1)=1, b(\lambda)=0$ for $\lambda \neq 1$.
+
+Then $A_{n} x=a_{n}(U) x$. Set $y=b(U) x$. This gives
+
+$$
+\left\|y-A_{n} x\right\|^{2}=\left\|b(U) x-a_{n}(U) x\right\|^{2}=\int_{\sigma(U)}\left|b-a_{n}\right|^{2} d E_{x, x}
+$$
+
+Since $\left|b-a_{n}\right|<1$ on the unit circle, and $\left(b-a_{n}\right)(\lambda) \rightarrow 0$ pointwise, the dominated convergence theorem shows that
+
+$$
+\lim _{n \rightarrow \infty}\left\|y-A_{n} x\right\|=0 \text {. }
+$$"
+12.7,"If $T \in \mathscr{B}(H)$ and if $(T x, x)=0$ for every $x \in H$, then $T=0$.","Since $(T(x+y), x+y)=0$, we see that
+
+$$
+(T x, y)+(T y, x)=0 \quad(x \in H, y \in H)
+$$
+
+If $y$ is replaced by $i y$ in (1), the result is
+
+$$
+-i(T x, y)+i(T y, x)=0 \quad(x \in H, y \in H)
+$$
+
+Multiply (2) by $i$ and add to (1), to obtain
+
+$$
+(T x, y)=0 \quad(x \in H, y \in H)
+$$
+
+With $y=T x$, (3) gives $\|T x\|^{2}=0$. Hence $T x=0$."
+6.17,"Suppose $\Lambda_{i} \in \mathscr{D}^{\prime}(\Omega)$ for $i=1,2,3, \ldots$, and
+
+$$
+\Lambda \phi=\lim _{i \rightarrow \infty} \Lambda_{i} \phi
+$$
+
+exists (as a complex number) for every $\phi \in \mathscr{D}(\Omega)$. Then $\Lambda \in \mathscr{D}^{\prime}(\Omega)$, and
+
+$$
+D^{\alpha} \Lambda_{i} \rightarrow D^{\alpha} \Lambda \text { in } \mathscr{D}^{\prime}(\Omega)
+$$
+
+for every multi-index $\alpha$.","Let $K$ be an arbitrary compact subset of $\Omega$. Since (1) holds for every $\phi \in \mathscr{D}_{K}$, and since $\mathscr{D}_{K}$ is a Fr\'echet space, the Banach-Steinhaus theorem 2.8 implies that the restriction of $\Lambda$ to $\mathscr{D}_{K}$ is continuous. It follows from Theorem 6.6 that $\Lambda$ is continuous on $\mathscr{D}(\Omega)$; in other words, $\Lambda \in \mathscr{D}^{\prime}(\Omega)$. Consequently (1) implies that
+
+$$
+\begin{aligned}
+\left(D^{\alpha} \Lambda\right)(\phi) & =(-1)^{|\alpha|} \Lambda\left(D^{\alpha} \phi\right) \\
+& =(-1)^{|\alpha|} \lim _{i \rightarrow \infty} \Lambda_{i}\left(D^{\alpha} \phi\right)=\lim _{i \rightarrow \infty}\left(D^{\alpha} \Lambda_{i}\right)(\phi)
+\end{aligned}
+$$"
+6.18,"If $\Lambda_{i} \rightarrow \Lambda$ in $\mathscr{D}^{\prime}(\Omega)$ and $g_{i} \rightarrow g$ in $C^{\infty}(\Omega)$, then $g_{i} \Lambda_{i} \rightarrow g \Lambda$ in $\mathscr{D}^{\prime}(\Omega)$.","Fix $\phi \in \mathscr{D}(\Omega)$. Define a bilinear functional $B$ on $C^{\infty}(\Omega) \times \mathscr{D}^{\prime}(\Omega)$ by
+
+$$
+B(g, \Lambda)=(g \Lambda)(\phi)=\Lambda(g \phi)
+$$
+
+Then $B$ is separately continuous, and Theorem 2.17 implies that
+
+$$
+B\left(g_{i}, \Lambda_{i}\right) \rightarrow B(g, \Lambda) \quad \text { as } i \rightarrow \infty
+$$
+
+Hence
+
+$$
+\left(g_{i} \Lambda_{i}\right)(\phi) \rightarrow(g \Lambda)(\phi)
+$$"
+12.33,"Every positive $T \in \mathscr{B}(H)$ has a unique positive square root $S \in \mathscr{B}(H)$. If $T$ is invertible, so is $S$.","Let $A$ be any closed normal subalgebra of $\mathscr{B}(H)$ that contains $I$ and $T$, and let $\Delta$ be the maximal ideal space of $A$. By Theorem 11.18, $\hat{A}=C(\Delta)$. Since $T$ satisfies condition $(b)$ of Theorem 12.32, and since $\sigma(T)=\widehat{T}(\Delta)$, we see that $\hat{T} \geq 0$. Since every nonnegative continuous function has a unique nonnegative continuous square root, it follows that there is a unique $S \in A$ that satisfies $S^{2}=T$ and $\hat{S} \geq 0$; by Theorem 12.32, $\hat{S} \geq 0$ is equivalent to $S \geq 0$.
+
+In particular, let $A_{0}$ be the smallest of these algebras $A$. Then there exists $S_{0} \in A_{0}$ such that $S_{0}^{2}=T$ and $S_{0} \geq 0$. If $S \in \mathscr{B}(H)$ is any positive square root of $T$, let $A$ be the smallest closed subalgebra of $\mathscr{B}(H)$ that contains $I$ and $S$. Then $T \in A$, since $T=S^{2}$. Hence $A_{0} \subset A$, so that $S_{0} \in A$. The conclusion of the preceding paragraph shows now that $S=S_{0}$.
+
+Finally, if $T$ is invertible, then $S^{-1}=T^{-1} S$, since $S$ commutes with $S^{2}=T$."
+11.23,"Suppose $A$ is a Banach algebra, $x \in A, y \in A$, and $x y=y x$. Then
+
+$$
+\sigma(x+y) \subset \sigma(x)+\sigma(y) \quad \text { and } \quad \sigma(x y) \subset \sigma(x) \sigma(y) .
+$$","Put $S=\{x, y\}$; put $B=\Gamma(\Gamma(S))$. Then $x+y \in B, x y \in B$, and Theorem 11.22 shows that we have to prove that
+
+$$
+\sigma_{B}(x+y) \subset \sigma_{B}(x)+\sigma_{B}(y) \quad \text { and } \quad \sigma_{B}(x y) \subset \sigma_{B}(x) \sigma_{B}(y) .
+$$
+
+Since $B$ is commutative, $\sigma_{B}(z)$ is the range of the Gelfand transform $\hat{z}$, for every $z \in B$. (The Gelfand transforms are now functions on the maximal ideal space of $B$.) Since
+
+$$
+(x+y)^{\wedge}=\hat{x}+\hat{y} \quad \text { and } \quad(x y)^{\wedge}=\hat{x} \hat{y}
+$$
+
+we have the desired conclusion."
+11.12 (a),"Suppose $A$ is a commutative Banach algebra: The Gelfand transform is an isometry (that is, $\|x\| = \|\hat{x}\|_{\infty}$ for every $x \in A$) if and only if $\|x^2\| = \|x\|^2$ for every $x \in A$.","In the terminology of Lemma 11.11, the Gelfand transform is an isometry if and only if $s=1$, which happens (by the lemma) if and only if $r=1$."
+11.12 (b),Suppose $A$ is a commutative Banach algebra: $A$ is semisimple and $\hat{A}$ is closed in $C(\Delta)$ if and only if there exists $K < \infty$ such that $\|x\|^2 \leq K\|x^2\|$ for every $x \in A$.,"The existence of $K$ is equivalent to $r>0$, hence to $s>0$, by the lemma. If $s>0$, then $x \rightarrow \hat{x}$ is one-to-one and has a continuous inverse, so that $\hat{A}$ is complete (hence closed) in $C(\Delta)$. Conversely, if $x \rightarrow \hat{x}$ is one-to-one and if $\hat{A}$ is closed in $C(\Delta)$, the open mapping theorem implies that $s>0$."
+12.32 (a),"Suppose $T \in \mathscr{B}(H)$. Then $(T x, x) \geq 0$ for every $x \in H$ if and only if $T=T^{*}$ and $\sigma(T) \subset[0, \infty)$","In general, $(T x, x)$ and $(x, T x)$ are complex conjugates of each other. But if $(a)$ holds, then $(T x, x)$ is real, so that
+
+$$
+\left(x, T^{*} x\right)=(T x, x)=(x, T x)
+$$
+
+for every $x \in H$. By Theorem 12.7, $T=T^{*}$, and thus $\sigma(T)$ lies in the real axis (Theorem 12.15). If $\lambda>0,(a)$ implies that
+
+$$
+\lambda\|x\|^{2}=(\lambda x, x) \leq((T+\lambda I) x, x) \leq\|(T+\lambda I) x\|\|x\|,
+$$
+
+so that
+
+$$
+\|(T+\lambda I) x\| \geq \lambda\|x\| .
+$$
+
+By Theorem 12.12(c), $T+\lambda I$ is invertible in $\mathscr{B}(H)$, and $-\lambda$ is not in $\sigma(T)$. It follows that $(a)$ implies $(b)$.
+
+Assume now that $(b)$ holds, and let $E$ be the spectral decomposition of $T$, so that
+
+$$
+(T x, x)=\int_{\sigma(T)} \lambda d E_{x, x}(\lambda) \quad(x \in H)
+$$
+
+Since each $E_{x, x}$ is a positive measure, and since $\lambda \geq 0$ on $\sigma(T)$, we have $(T x, x) \geq 0$. Thus $(b)$ implies $(a)$."
+12.4,"If $M$ is a closed subspace of $H$, then
+
+$$
+H=M \oplus M^{\perp} .
+$$
+
+The conclusion is, more explicitly, that $M$ and $M^{\perp}$ are closed subspaces of $H$ whose intersection is $\{0\}$ and whose sum is $H$. The space $M^{\perp}$ is called the orthogonal complement of $M$.","If $E \subset H$, the linearity of $(x, y)$ as a function of $x$ shows that $E^{\perp}$ is a subspace of $H$, and the Schwarz inequality (1) of Theorem 12.2 implies then that $E^{\perp}$ is closed.
+
+If $x \in M$ and $x \in M^{\perp}$, then $(x, x)=0$; hence $x=0$. Thus $M \cap M^{\perp}=\{0\}$.
+
+If $x \in H$, apply Theorem 12.3 to the set $x-M$ to conclude that there exists $x_{1} \in M$ that minimizes $\left\|x-x_{1}\right\|$. Put $x_{2}=x-x_{1}$. Then $\left\|x_{2}\right\| \leq\left\|x_{2}+y\right\|$ for all $y \in M$. Hence $x_{2} \in M^{\perp}$, by Theorem 12.2. Since $x=x_{1}+x_{2}$, we have shown that $M+M^{\perp}=H$."
+11.9 (a),Let $\Delta$ be the maximal ideal space of a commutative Banach algebra $A$: $\Delta$ is a compact Hausdorff space.,
+11.9 (b),"Let $\Delta$ be the maximal ideal space of a commutative Banach algebra $A$: The Gelfand transform is a homomorphism of A onto a subalgebra $\hat{A}$ of $C(\Delta)$, whose kernel is $\mathrm{rad} A$. The Gelfand transform is therefore on isomorphism if and only if $A$ is semisimple.","Suppose $x \in A, y \in A, \alpha \in \not \subset, h \in \Delta$. Then
+
+$$
+\begin{aligned}
+(\alpha x)^{\wedge}(h) & =h(\alpha x)=\alpha h(x)=(\alpha \hat{x})(h) \\
+(x+y)^{\wedge}(h)=h(x+y) & =h(x)+h(y)=\hat{x}(h)+\hat{y}(h)=(\hat{x}+\hat{y})(h)
+\end{aligned}
+$$
+
+and
+
+$$
+(x y)^{\wedge}(h)=h(x y)=h(x) h(y)=\hat{x}(h) \hat{y}(h)=(\hat{x} \hat{y})(h) .
+$$
+
+Thus $x \rightarrow \hat{x}$ is a homomorphism. Its kernel consists of those $x \in A$ which satisfy $h(x)=0$ for every $h \in \Delta$; by Theorem 11.5 , this is the intersection of all maximal ideals of $A$, that is, $\operatorname{rad} A$."
+11.9 (c),"Let $\Delta$ be the maximal ideal space of a commutative Banach algebra $A$: For each $x \in A$, the range of $\hat{x}$ is the spectrum $\sigma(x)$. Hence
+
+$$
+\|\hat{x}\|_{\infty}=\rho(x) \leq\|x\|,
+$$
+
+where $\|\hat{x}\|_{\infty}$ is the maximum of $|\hat{x}(h)|$ on $\Delta$, and $x \in \operatorname{rad} A$ if and only if $\rho(x)=0$.","To say that $\lambda$ is in the range of $\hat{x}$ means that $\lambda=\hat{x}(h)=h(x)$ for some $h \in \Delta$. By $(e)$ of Theorem 11.5, this happens if and only if $\lambda \in \sigma(x)$. This proves $(b)$ and $(c)$."
+5.9,"Suppose $Y$ is a closed subspace of $C(S), K$ is a compact subset of $S$, and $|\mu|(K)=0$ for every $\mu \in Y^{\perp}$. If $g \in C(K)$ and $|g|<1$, it follows that there exists $f \in Y$ such that $\left.f\right|_{K}=g$ and $|f|<1$ on $S$.","Let $\rho: Y \rightarrow C(K)$ be the restriction map defined by $\rho f=\left.f\right|_{K}$. We have to prove that $\rho$ maps the open unit ball of $Y$ onto the open unit ball of $C(K)$.
+
+Consider the adjoint $\rho^{*}: M(K) \rightarrow Y^{*}$, where $M(K)=C(K)^{*}$ is the Banach space of all regular complex Borel measures on $K$, with the total variation norm $\|\mu\|=|\mu|(K)$. For each $\mu \in M(K), \rho^{*} \mu$ is a bounded linear functional on $Y$; by the Hahn-Banach theorem, $\rho^{*} \mu$ extends to a linear functional on $C(S)$, of the same norm. In other words, there exists $\sigma \in M(S)$, with $\|\sigma\|=\left\|\rho^{*} \mu\right\|$, such that
+
+$$
+\int_{S} f d \sigma=\left\langle f, \rho^{*} \mu\right\rangle=\langle\rho f, \mu\rangle=\int_{K} f d \mu
+$$
+
+for every $f \in Y$. Regard $\mu$ as a member of $M(S)$, with support in $K$. Then $\sigma-\mu \in Y^{\perp}$, and our hypothesis about $K$ implies that $\sigma(E)=\mu(E)$ for every Borel set $E \subset K$. Hence $\|\mu\| \leq\|\sigma\|$. We conclude that $\|\mu\| \leq\left\|\rho^{*} \mu\right\|$. By (b) of Theorem 4.13 , this inequality proves the theorem.
+
+Note: Since $\left\|\rho^{*}\right\|=\|\rho\| \leq 1$, we also have $\|\sigma\| \leq\|\mu\|$ in the preceding proof. It follows that $\sigma=\mu$. Hence $\rho^{*} \mu$ has a unique norm-preserving extension to $C(S)$."
+6.28,"Suppose $\Lambda \in \mathscr{D}^{\prime}(\Omega)$. There exist continuous functions $g_{\alpha}$ in $\Omega$, one for each multi-index $\alpha$, such that
+
+(a) each compact $K \subset \Omega$ intersects the supports of only finitely many $g_{\alpha}$, and
+
+(b) $\Lambda=\sum_{\alpha} D^{\alpha} g_{\alpha}$.
+
+If $\Lambda$ has finite order, then the functions $g_{\alpha}$ can be chosen so that only finitely many are different from 0 .","There are compact cubes $Q_{i}$ and open sets $V_{i}(i=1,2,3, \ldots)$ such that $Q_{i} \subset V_{i} \subset \Omega, \Omega$ is the union of the $Q_{i}$, and no compact subset of $\Omega$ intersects infinitely many $V_{i}$. There exist $\phi_{i} \in \mathscr{D}\left(V_{i}\right)$ such that $\phi_{i}=1$ on $Q_{i}$. Use this sequence $\left\{\phi_{i}\right\}$ to construct a partition of unity $\left\{\psi_{i}\right\}$, as in Theorem 6.20; each $\psi_{i}$ has its support in $V_{i}$.
+
+Theorem 6.27 applies to each $\psi_{i} \Lambda$. It shows that there are finitely many continuous functions $f_{i, \alpha}$ with supports in $V_{i}$, such that
+
+$$
+\psi_{i} \Lambda=\sum_{\alpha} D^{\alpha} f_{i, \alpha}
+$$
+
+Define
+
+$$
+g_{\alpha}=\sum_{i=1}^{\infty} f_{i, \alpha}
+$$
+
+These sums are locally finite, in the sense that each compact $K \subset \Omega$ intersects the supports of only finitely many $f_{i, \alpha}$. It follows that each $g_{\alpha}$ is continuous in $\Omega$ and that $(a)$ holds.
+
+Since $\phi=\sum \psi_{i} \phi$, for every $\phi \in \mathscr{D}(\Omega)$, we have $\Lambda=\sum \psi_{i} \Lambda$, and therefore (1) and (2) give (b).
+
+The final assertion follows from Theorem 6.27."
+3.13,"Suppose $X$ is a metrizable locally convex space. If $\left\{x_{n}\right\}$ is a sequence in $X$ that converges weakly to some $x \in X$, then there is a sequence $\left\{y_{i}\right\}$ in $X$ such that
+
+(a) each $y_{i}$ is a convex combination of finitely many $x_{n}$, and
+
+(b) $y_{i} \rightarrow x$ originally.","Let $H$ be the convex hull of the set of all $x_{n}$; let $K$ be the weak closure of $H$. Then $x \in K$. By Theorem 3.12, $x$ is also in the original closure of $H$. Since the original topology of $X$ is assumed to be metrizable, it follows that there is a sequence $\left\{y_{i}\right\}$ in $H$ that converges originally to $x$."
+3.15,"If $V$ is a neighborhood of 0 in a topological vector space $X$ and if
+
+$$
+K=\left\{\Lambda \in X^{*}:|\Lambda x| \leq 1 \quad \text { for every } \quad x \in V\right\}
+$$
+
+then $K$ is weak*-compact.","Since neighborhoods of 0 are absorbing, there corresponds to each $x \in X$ a number $\gamma(x)<\infty$ such that $x \in \gamma(x) V$. Hence
+
+$$
+|\Lambda x| \leq \gamma(x) \quad(x \in X, \Lambda \in K) .
+$$
+
+Let $D_{x}$ be the set of all scalars $\alpha$ such that $|\alpha| \leq \gamma(x)$. Let $\tau$ be the product topology on $P$, the cartesian product of all $D_{x}$, one for each $x \in X$. Since each $D_{x}$ is compact, so is $P$, by Tychonoff's theorem. The elements of $P$ are the functions $f$ on $X$ (linear or not) that satisfy
+
+$$
+|f(x)| \leq \gamma(x) \quad(x \in X) .
+$$
+
+Thus $K \subset X^{*} \cap P$. It follows that $K$ inherits two topologies: one from $X^{*}$ (its weak*-topology, to which the conclusion of the theorem refers) and the other, $\tau$, from $P$. We will see that
+
+(a) these two topologies coincide on $K$, and
+
+(b) $K$ is a closed subset of $P$.
+
+Since $P$ is compact, $(b)$ implies that $K$ is $\tau$-compact, and then $(a)$ implies that $K$ is weak*-compact."
+2.17,"Suppose $B: X \times Y \rightarrow Z$ is bilinear and separately continuous, $X$ is an $F$-space, and $Y$ and $Z$ are topological vector spaces. Then
+
+$$
+B\left(x_{n}, y_{n}\right) \rightarrow B\left(x_{0}, y_{0}\right) \text { in } Z
+$$
+
+whenever $x_{n} \rightarrow x_{0}$ in $X$ and $y_{n} \rightarrow y_{0}$ in $Y$. If $Y$ is metrizable, it follows that $B$ is continuous.","Let $U$ and $W$ be neighborhoods of 0 in $Z$ such that $U+U \subset W$. Define
+
+$$
+b_{n}(x)=B\left(x, y_{n}\right) \quad(x \in X, n=1,2,3, \ldots)
+$$
+
+Since $B$ is continuous as a function of $y$,
+
+$$
+\lim _{n \rightarrow \infty} b_{n}(x)=B\left(x, y_{0}\right) \quad(x \in X)
+$$
+
+Thus $\left\{b_{n}(x)\right\}$ is a bounded subset of $Z$, for each $x \in X$. Since each $b_{n}$ is a continuous linear mapping of the $F$-space $X$, the Banach-Steinhaus theorem 2.6 implies that $\left\{b_{n}\right\}$ is equicontinuous. Hence there is a neighborhood $V$ of 0 in $X$ such that
+
+$$
+b_{n}(V) \subset U \quad(n=1,2,3, \ldots)
+$$
+
+Note that
+
+$$
+B\left(x_{n}, y_{n}\right)-B\left(x_{0}, y_{0}\right)=b_{n}\left(x_{n}-x_{0}\right)+B\left(x_{0}, y_{n}-y_{0}\right)
+$$
+
+If $n$ is sufficiently large, then (i) $x_{n} \in x_{0}+V$, so that $b_{n}\left(x_{n}-x_{0}\right) \in U$, and (ii) $B\left(x_{0}, y_{n}-y_{0}\right) \in U$, since $B$ is continuous in $y$ and $B\left(x_{0}, 0\right)=$ 0 . Hence
+
+$$
+B\left(x_{n}, y_{n}\right)-B\left(x_{0}, y_{0}\right) \in U+U \subset W
+$$
+
+for all large $n$. This gives (1).
+
+If $Y$ is metrizable, so is $X \times Y$, and the continuity of $B$ then follows from (1). (See Appendix A6.)"
+12.31 (a),Suppose $T \in \mathscr{B}(H)$ is normal and compact: $T$ has an eigenvalue $\lambda$ with $|\lambda|=\|T\|$,"Since $T$ is normal, Theorem 11.18 shows that there exists $\lambda \in \sigma(T)$ with $|\lambda|=\|T\|$. If $\|T\|>0$, this $\lambda$ is an isolated point of $\sigma(T)$ (Theorem 12.30), hence an eigenvalue of $T$ (Theorem 12.29). If $\|T\|=0,(a)$ is obvious."
+12.31 (b),"Suppose $T \in \mathscr{B}(H)$ is normal and compact, and $f \in C(\sigma(T))$ and $f(0)=0$: $f(T)$ is compact","
+
+To prove $(b)$, choose $\varepsilon>0$, then $\delta>0$ so that $|f(\lambda)|<\varepsilon$ if $|\lambda| \leq \delta$; let $\lambda_{1}, \ldots, \lambda_{N}$ be the points in $\sigma(T)$ for which $\left|\lambda_{i}\right|>\delta$; find polynomials $Q_{k}(1 \leq k \leq N)$ so that $Q_{k}\left(\lambda_{k}\right)=1, Q_{k}\left(\lambda_{j}\right)=0$ for $j \neq k$, $1 \leq j \leq N$; and define
+
+$$
+P(\lambda)=\sum_{k=1}^{N} f\left(\lambda_{k}\right)\left(\lambda / \lambda_{k}\right)^{M} Q_{k}(\lambda)
+$$
+
+where $M$ is a positive integer, so large that $|P(\lambda)|<\varepsilon$ if $|\lambda| \leq \delta$. The polynomial $P$ has $\lambda$ as a factor. Hence $P(T)$ is a compact operator, by $(f)$ of Theorem 4.18. Also, $P\left(\lambda_{j}\right)=f\left(\lambda_{j}\right)$ for $1 \leq j \leq N$. It follows that $|P(\lambda)-f(\lambda)|<2 \varepsilon$ for all $\lambda \in $\sigma(T)$. Hence $\|P(T)-f(T)\|<2 \varepsilon$, and $(c)$ of Theorem 4.18 implies that $f(T)$ is compact."
+12.31 (c),"Suppose $T \in \mathscr{B}(H)$ is normal and compact, and $f \in C(\sigma(T)), f(0) \neq 0$, and $\operatorname{dim} H=\infty$: $f(T)$ is not compact","
+
+In the proof of $(c)$, assume $f(0)=1$, without loss of generality. Then $(b)$, applied to $1-f$, shows that the operator $S=I-f(T)$ is compact. Let $B$ be the unit ball of $H$. Then
+
+$$
+B \subset S(B)+f(T)(B)
+$$
+
+If $f(T)$ were compact, it would follow that $B$ lies in the sum of two compact sets; hence $H$ would be locally compact, hence finitedimensional, contrary to our hypothesis."
+2.7 (a),"Suppose $X$ and $Y$ are topological vector spaces, and $\left\{\Lambda_{n}\right\}$ is a sequence of continuous linear mappings of $X$ into $Y$. If $C$ is the set of all $x \in X$ for which $\left\{\Lambda_{n} x\right\}$ is a Cauchy sequence in $Y$, and if $C$ is of the second category in $X$, then $C=X$.","Since Cauchy sequences are bounded (Section 1.29), the Banach-Steinhaus theorem asserts that $\left\{\Lambda_{n}\right\}$ is equicontinuous.
+
+One checks easily that $C$ is a subspace of $X$. Hence $C$ is dense. (Otherwise, $\bar{C}$ is a proper subspace of $X$; proper subspaces have empty interior; thus $\bar{C}$ would be of the first category.)
+
+Fix $x \in X$; let $W$ be a neighborhood of 0 in $Y$. Since $\left\{\Lambda_{n}\right\}$ is equicontinuous, there is a neighborhood $V$ of 0 in $X$ such that $\Lambda_{n}(V) \subset W$ for $n=1,2,3, \ldots$. Since $C$ is dense, there exists $x^{\prime} \in C \cap(x+V)$. If $n$ and $m$ are so large that
+
+$$
+\Lambda_{n} x^{\prime}-\Lambda_{m} x^{\prime} \in W
+$$
+
+the identity
+
+$$
+\left(\Lambda_{n}-\Lambda_{m}\right) x=\Lambda_{n}\left(x-x^{\prime}\right)+\left(\Lambda_{n}-\Lambda_{m}\right) x^{\prime}+\Lambda_{m}\left(x^{\prime}-x\right)
+$$
+
+shows that $\Lambda_{n} x-\Lambda_{m} x \in W+W+W$. Consequently, $\left\{\Lambda_{n} x\right\}$ is a Cauchy sequence in $Y$, and $x \in C$."
+2.7 (b),"Suppose $X$ and $Y$ are topological vector spaces, and $\left\{\Lambda_{n}\right\}$ is a sequence of continuous linear mappings of $X$ into $Y$. If $L$ is the set of all $x \in X$ at which
+
+$$
+\Lambda x=\lim _{n \rightarrow \infty} \Lambda_{n} x
+$$
+
+exists, if $L$ is of the second category in $X$, and if $Y$ is an $F$-space, then $L=X$ and $\Lambda: X \rightarrow Y$ is continuous.","The completeness of $Y$ implies that $L=C$. Hence $L=X$, by (a). If $V$ and $W$ are as above, the inclusion $\Lambda_{n}(V) \subset W$, valid for all $n$, implies now that $\Lambda(V) \subset \bar{W}$. Thus $\Lambda$ is continuous."
+4.4,"If $X$ and $Y$ are normed spaces and if $\Lambda \in \mathscr{B}(X, Y)$, then
+
+$$
+\|\Lambda\|=\sup \left\{\left|\left\langle\Lambda x, y^{*}\right\rangle\right|:\|x\| \leq 1,\left\|y^{*}\right\| \leq 1\right\}
+$$","Apply $(b)$ of Theorem 4.3 with $Y$ in place of $X$. This gives
+
+$$
+\|\Lambda x\|=\sup \left\{\left|\left\langle\Lambda x, y^{*}\right\rangle\right|:\left\|y^{*}\right\| \leq 1\right\}
+$$
+
+for every $x \in X$. To complete the proof, recall that
+
+$$
+\|\Lambda\|=\sup \{\|\Lambda x\|:\|x\| \leq 1\} .
+$$"
+4.7 (a),"Under the preceding hypotheses, ${ }^{\perp}\left(M^{\perp}\right)$ is the norm-closure of $M$ in $X$, and","If $x \in M$, then $\left\langle x, x^{*}\right\rangle=0$ for every $x^{*} \in M^{\perp}$, so that $x \in{ }^{\perp}\left(M^{\perp}\right)$. Since ${ }^{\perp}\left(M^{\perp}\right)$ is norm-closed, it contains the norm-closure $\bar{M}$ of $M$. On the other hand, if $x \notin \bar{M}$ the Hahn-Banach theorem yields an $x^{*} \in M^{\perp}$ such that $\left\langle x, x^{*}\right\rangle \neq 0$. Thus $x \notin^{\perp}\left(M^{\perp}\right)$, and $(a)$ is proved."
+4.7 (b),"Under the preceding hypotheses, $\left({ }^{\perp} N\right)^{\perp}$ is the weak*-closure of $N$ in $X^{*}$","Similarly, if $x^{*} \in N$, then $\left\langle x, x^{*}\right\rangle=0$ for every $x \in{ }^{\perp} N$, so that $x^{*} \in\left({ }^{\perp} N\right)^{\perp}$. This weak*-closed subspace of $X^{*}$ contains the weak*closure $\tilde{N}$ of $N$. If $x^{*} \notin \tilde{N}$, the Hahn-Banach theorem (applied to the locally convex space $X^{*}$ with its weak*-topology) implies the existence of an $x \in{ }^{\perp} N$ such that $\left\langle x, x^{*}\right\rangle \neq 0$; thus $x^{*} \notin\left({ }^{\perp} N\right)^{\perp}$, which proves $(b)$."
+11.10,"If $\psi: A \rightarrow B$ is a homomorphism of a Banach algebra $A$ into a semisimple commutative Banach algebra $B$, then $\psi$ is continuous.","Suppose $x_{n} \rightarrow x$ in $A$ and $\psi\left(x_{n}\right) \rightarrow y$ in $B$. By the closed graph theorem, it is enough to show that $y=\psi(x)$.
+
+Pick some homomorphism $h: B \rightarrow \mathscr{C}$. Then $\varphi=h \circ \psi$ is a homomorphism of $A$ into $\mathscr{C}$. Theorem 10.7 shows that $h$ and $\varphi$ are continuous. Hence
+
+$$
+h(y)=\lim h\left(\psi\left(x_{n}\right)\right)=\lim \varphi\left(x_{n}\right)=\varphi(x)=h(\psi(x))
+$$
+
+for every $h \in \Delta_{B}$. Thus $y-\psi(x) \in \operatorname{rad} B$. Since $\operatorname{rad} B=\{0\}, y=\psi(x)$."
+11.11,"If $A$ is a commutative Banach algebra and
+
+$$
+r=\inf \frac{\left\|x^{2}\right\|}{\|x\|^{2}}, \quad s=\inf \frac{\|\hat{x}\|_{\infty}}{\|x\|} \quad(x \in A, x \neq 0)
+$$
+
+then $s^{2} \leq r \leq s$.","Since $\|\hat{x}\|_{\infty} \geq s\|x\|$,
+
+$$
+\left\|x^{2}\right\| \geq\left\|\hat{x}^{2}\right\|_{\infty}=\|\hat{x}\|_{\infty}^{2} \geq s^{2}\|x\|^{2}
+$$
+
+for every $x \in A$. Thus $s^{2} \leq r$.
+
+Since $\left\|x^{2}\right\| \geq r\|x\|^{2}$ for every $x \in A$, induction on $n$ shows that
+
+$$
+\left\|x^{m}\right\| \geq r^{m-1}\|x\|^{m} \quad\left(m=2^{n}, n=1,2,3, \ldots\right)
+$$
+
+Take $m$ th roots in (3) and let $m \rightarrow \infty$. By the spectral radius formula and $(c)$ of Theorem 11.9,
+
+$$
+\|\hat{x}\|_{\infty}=\rho(x) \geq r\|x\| \quad(x \in A) .
+$$
+
+Hence $r \leq s$."

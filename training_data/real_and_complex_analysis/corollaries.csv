@@ -1,0 +1,4 @@
+Corollary,Statement,Proof
+2.4,"If $A \subset B$ and if $B$ has compact closure, so does $A$.",
+2.5 (a),Compact subsets of Hausdorff spaces are closed.,
+2.5 (b),"If $F$ is closed and $K$ is compact in a Hausdorff space, then $F \cap K$ is compact.",Corollary $(b)$ follows from $(a)$ and Theorem 2.4.

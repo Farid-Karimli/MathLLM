@@ -1,0 +1,75 @@
+Definition,Statement
+18.8,"For any $x \in A$, the spectral radius $\rho(x)$ of $x$ is the radius of the smallest closed disc with center at the origin which contains $\sigma(x)$ (sometimes this is also called the spectral norm of $x$; see Exercise 14):
+
+$$
+\rho(x)=\sup \{|
+\lambda|: \lambda \in \sigma(x)\} .
+$$"
+8.4,"With each function $f$ on $X \times Y$ and with each $x \in X$ we associate a function $f_{x}$ defined on $Y$ by $f_{x}(y)=f(x, y)$.
+
+Similarly, if $y \in Y, f^{y}$ is the function defined on $X$ by $f^{y}(x)=f(x, y)$.
+
+Since we are now dealing with three $\sigma$-algebras, $\mathscr{S}, \mathscr{T}$, and $\mathscr{S} \times \mathscr{T}$, we shall, for the sake of clarity, indicate in the sequel to which of these three $\sigma$-algebras the word ""measurable"" refers."
+1.30,"We define $L^{1}(\mu)$ to be the collection of all complex measurable functions $f$ on $X$ for which
+
+$$
+\int_{X}|f| d \mu<\infty
+$$
+
+Note that the measurability of $f$ implies that of $|f|$, as we saw in Proposition $1.9(b)$; hence the above integral is defined.
+
+The members of $L^{1}(\mu)$ are called Lebesgue integrable functions (with respect to $\mu$ ) or summable functions. The significance of the exponent 1 will become clear in Chap. 3."
+3.4,"If $p$ and $q$ are positive real numbers such that $p+q=p q$, or equivalently
+
+$$
+\frac{1}{p}+\frac{1}{q}=1
+$$
+
+then we call $p$ and $q$ a pair of conjugate exponents. It is clear that (1) implies $1<p<\infty$ and $1<q<\infty$. An important special case is $p=q=2$.
+
+As $p \rightarrow 1$, (1) forces $q \rightarrow \infty$. Consequently 1 and $\infty$ are also regarded as a pair of conjugate exponents. Many analysts denote the exponent conjugate to $p$ by $p^{\prime}$, often without saying so explicitly."
+2.15,"A measure $\mu$ defined on the $\sigma$-algebra of all Borel sets in a locally compact Hausdorff space $X$ is called a Borel measure on $X$. If $\mu$ is positive, a Borel set $E \subset X$ is outer regular or inner regular, respectively, if $E$ has property $(c)$ or $(d)$ of Theorem 2.14. If every Borel set in $X$ is both outer and inner regular, $\mu$ is called regular."
+2.8,"Let $f$ be a real (or extended-real) function on a topological space. If
+
+$$
+\{x: f(x)>\alpha\}
+$$
+
+is open for every real $\alpha, f$ is said to be lower semicontinuous. If
+
+$$
+\{x: f(x)<\alpha\}
+$$
+
+is open for every real $\alpha, f$ is said to be upper semicontinuous.
+
+A real function is obviously continuous if and only if it is both upper and lower semicontinuous.
+
+The simplest examples of semicontinuity are furnished by characteristic functions:
+(a) Characteristic functions of open sets are lower semicontinuous.
+
+(b) Characteristic functions of closed sets are upper semicontinuous.
+
+The following property is an almost immediate consequence of the definitions:
+
+(c) The supremum of any collection of lower semicontinuous functions is lower semicontinuous. The infimum of any collection of upper semicontinuous functions is upper semicontinuous."
+3.16,"A complex function $f$ on a locally compact Hausdorff space $X$ is said to vanish at infinity if to every $\epsilon>0$ there exists a compact set $K \subset X$ such that $|f(x)|<\epsilon$ for all $x$ not in $K$. The class of all continuous $f$ on $X$ which vanish at infinity is called $C_{0}(X)$. It is clear that $C_{c}(X) \subset C_{0}(X)$, and that the two classes coincide if $X$ is compact. In that case we write $C(X)$ for either of them."
+1.31,"If $f=u+i v$, where $u$ and $v$ are real measurable functions on $X$, and if $f \in L^{1}(\mu)$, we define
+
+$$
+\int_{E} f d \mu=\int_{E} u^{+} d \mu-\int_{E} u^{-} d \mu+i \int_{E} v^{+} d \mu-i \int_{E} v^{-} d \mu
+$$
+
+for every measurable set $E$.
+
+Here $u^{+}$and $u^{-}$are the positive and negative parts of $u$, as defined in Sec. $1.15 ; v^{+}$and $v^{-}$are similarly obtained from $v$. These four functions are measurable, real, and nonnegative; hence the four integrals on the right of (1) exist, by Definition 1.23. Furthermore, we have $u^{+} \leq|u|<|f|$, etc., so that
+each of these four integrals is finite. Thus (1) defines the integral on the left as a complex number.
+
+Occasionally it is desirable to define the integral of a measurable function $f$ with range in $[-\infty, \infty]$ to be
+
+$$
+\int_{E} f d \mu=\int_{E} f^{+} d \mu-\int_{E} f^{-} d \mu
+$$
+
+provided that at least one of the integrals on the right of (2) is finite. The left side of $(2)$ is then a number in $[-\infty, \infty]$."
+6.7,"['Let $\\mu$ be a positive measure on a $\\sigma$-algebra $\\mathfrak{M}$, and let $\\lambda$ be an arbitrary measure on $\\mathfrak{M}$; $\\lambda$ may be positive or complex.\n\nWe say that $\\lambda$ is absolutely continuous with respect to $\\mu$, and write\n\n$$\n\\lambda \\ll \\mu\n$$\n\nif $\\lambda(E)=0$ for every $E \\in \\mathfrak{M}$ for which $\\mu(E)=0$.\n\nIf there is a set $A \\in \\mathfrak{M}$ such that $\\lambda(E)=\\lambda(A \\cap E)$ for every $E \\in \\mathfrak{M}$, we say that $\\lambda$ is concentrated on $A$. This is equivalent to the hypothesis that $\\lambda(E)=0$ whenever $E \\cap A=\\varnothing$.\n\nSuppose $\\lambda_{1}$ and $\\lambda_{2}$ are measures on $\\mathfrak{M}$, and suppose there exists a pair of disjoint sets $A$ and $B$ such that $\\lambda_{1}$ is concentrated on $A$ and $\\lambda_{2}$ is concentrated on $B$. Then we say that $\\lambda_{1}$ and $\\lambda_{2}$ are mutually singular, and write\n\n$$\n\\lambda_{1} \\perp \\lambda_{2} .\n$$']"

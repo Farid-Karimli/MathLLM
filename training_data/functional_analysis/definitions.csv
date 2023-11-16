@@ -1,0 +1,238 @@
+Definition,Statement
+6.7,A linear functional on $\mathscr{D}(\Omega)$ which is continuous (with respect to the topology $\tau$ described in Definition 6.3) is called a distribution in $\Omega$. The space of all distributions in $\Omega$ is denoted by $\mathscr{D}^{\prime}(\Omega)$.
+6.22,"Suppose $\Lambda \in \mathscr{D}^{\prime}(\Omega)$. If $\omega$ is an open subset of $\Omega$ and if $\Lambda \phi=0$ for every $\phi \in \mathscr{D}(\omega)$, we say that $\Lambda$ vanishes in $\omega$. Let $W$ be the union of all open $\omega \subset \Omega$ in which $\Lambda$ vanishes. The complement of $W$ (relative to $\Omega$ ) is the support of $\Lambda$."
+1.33 (a),A seminorm on a vector space $X$ is a real-valued function $p$ on $X$ such that $p(x+y) \leq p(x)+p(y)$ for all $x$ and $y$ in $X$. This property is called subadditivity.
+1.33 (b),A seminorm on a vector space $X$ is a real-valued function $p$ on $X$ such that $p(\alpha x)=|\alpha| p(x)$ for all $x$ in $X$ and all scalars $\alpha$.
+4.16,"Suppose $X$ and $Y$ are Banach spaces and $U$ is the open unit ball in $X$. A linear map $T: X \rightarrow Y$ is said to be compact if the closure of $T(U)$ is compact in $Y$. It is clear that $T$ is then bounded. Thus $T \in \mathscr{B}(X, Y)$.
+
+Since $Y$ is a complete metric space, the subsets of $Y$ whose closure is compact are precisely the totally bounded ones. Thus $T \in \mathscr{B}(X, Y)$ is compact if and only if $T(U)$ is totally bounded. Also, $T$ is compact if and only if every bounded sequence $\left\{x_{n}\right\}$ in $X$ contains a subsequence $\left\{x_{n_{i}}\right\}$ such that $\left\{T x_{n_{i}}\right\}$ converges to a point of $Y$."
+2.16,"Suppose $X, Y, Z$ are vector spaces and $B$ maps $X \times Y$ into $Z$. Associate to each $x \in X$ and to each $y \in Y$ the mappings
+
+$$
+B_{x}: Y \rightarrow Z \text { and } B^{y}: X \rightarrow Z
+$$
+
+by defining
+
+$$
+B_{x}(y)=B(x, y)=B^{y}(x) \text {. }
+$$
+
+$B$ is said to be bilinear if every $B_{x}$ and every $B^{y}$ are linear.
+
+If $X, Y, Z$ are topological vector spaces and if every $B_{x}$ and every $B^{y}$ is continuous, then $B$ is said to be separately continuous. If $B$ is continuous (relative to the product topology of $X \times Y$ ) then $B$ is obviously separately continuous. In certain situations, the converse can be proved with the aid of the Banach-Steinhaus theorem."
+3.30 (a),For an open set $\Omega$ in $\mathbb{C}$ and a complex topological vector space $X$: A function $f: \Omega \rightarrow X$ is said to be weakly holomorphic in $\Omega$ if $\Lambda f$ is holomorphic in the ordinary sense for every $\Lambda \in X^{*}$.
+3.30 (b),"For an open set $\Omega$ in $\mathbb{C}$ and a complex topological vector space $X$: A function $f: \Omega \rightarrow X$ is said to be strongly holomorphic in $\Omega$ if
+
+$$
+\lim _{w \rightarrow z} \frac{f(w)-f(z)}{w-z}
+$$
+
+exists (in the topology of $X$ ) for every $z \in \Omega$. Note that the above quotient is the product of the scalar $(w-z)^{-1}$ and the vector $f(w)-f(z)$ in $X$. The continuity of the functionals $\Lambda$ that occur in $(a)$ makes it obvious that every strongly holomorphic function is weakly holomorphic. The converse is true when $X$ is a Fr\'echet space, but it is far from obvious. (Recall that weakly convergent sequences may very well fail to converge originally.) The Cauchy theorem will play an important role in this proof, as will Theorem 3.18."
+5.12,"A topological group is a group $G$ in which a topology is defined that makes the group operations continuous. The most concise way to express this requirement is to postulate the continuity of the mapping $\phi: G \times G \rightarrow G$ defined by
+
+$$
+\phi(x, y)=x y^{-1}
+$$
+
+For each $a \in G$, the mappings $x \rightarrow a x$ and $x \rightarrow x a$ are homeomorphisms of $G$ onto $G$; so is $x \rightarrow x^{-1}$. The topology of $G$ is therefore completely determined by any local base at the identity element $e$.
+
+If we require (as we shall from now on) that every point of $G$ is a closed set, then the analogues of Theorems 1.10 to 1.12 hold (with exactly the same
+proofs, except for changes in notation); in particular, the Hausdorff separation axiom holds.
+
+If $f$ is any function with domain $G$, its left translates $L_{s} f$ and its right translates $R_{s} f$ are defined, for every $s \in G$, by
+
+$$
+\left(L_{s} f\right)(x)=f(s x), \quad\left(R_{s} f\right)(x)=f(x s) \quad(x \in G)
+$$
+
+A complex function $f$ on $G$ is said to be uniformly continuous if to every $\varepsilon>0$ corresponds a neighborhood $V$ of $e$ in $G$ such that
+
+$$
+|f(t)-f(s)|<\varepsilon
+$$
+
+whenever $s \in G, t \in G$, and $s^{-1} t \in V$.
+
+A topological group $G$ whose topology is compact is called a compact group; in this case, $C(G)$ is, as usual, the Banach space of all complex continuous functions on $G$, with the supremum norm."
+1.31,"Suppose $X$ and $Y$ are topological vector spaces and $\Lambda: X \rightarrow Y$ is linear. $\Lambda$ is said to be bounded if $\Lambda$ maps bounded sets into bounded sets, i.e., if $\Lambda(E)$ is a bounded subset of $Y$ for every bounded set $E \subset X$. This definition conflicts with the usual notion of a bounded function as being one whose range is a bounded set. In that sense, no linear function (other than 0 ) could ever be bounded. Thus when bounded linear mappings (or transformations) are discussed, it is to be understood that the definition is in terms of bounded sets, as above."
+1.40,"Let $N$ be a subspace of a vector space $X$. For every $x \in X$, let $\pi(x)$ be the coset of $N$ that contains $x$; thus
+
+$$
+\pi(x)=x+N \text {. }
+$$
+
+These cosets are the elements of a vector space $X / N$, called the quotient space of $X$ modulo $N$, in which addition and scalar multiplication are defined by
+
+$$
+\pi(x)+\pi(y)=\pi(x+y), \quad \alpha \pi(x)=\pi(\alpha x)
+$$
+
+[Note that now $\alpha \pi(x)=N$ when $\alpha=0$. This differs from the usual notation, as introduced in Section 1.4.] Since $N$ is a vector space, the operations (1) are well defined. This means that if $\pi(x)=\pi\left(x^{\prime}\right)$ (that is, $x^{\prime}-x \in N$ ) and
+$\pi(y)=\pi\left(y^{\prime}\right)$ then
+
+$$
+\pi(x)+\pi(y)=\pi\left(x^{\prime}\right)+\pi\left(y^{\prime}\right), \quad \alpha \pi\left(x^{\prime}\right)=\alpha \pi(x)
+$$
+
+The origin of $X / N$ is $\pi(0)=N$. By (1), $\pi$ is a linear mapping of $X$ onto $X / N$ with $N$ as its null space; $\pi$ is often called the quotient map of $X$ onto $X / N$.
+
+Suppose now that $\tau$ is a vector topology on $X$ and that $N$ is a closed subspace of $X$. Let $\tau_{N}$ be the collection of all sets $E \subset X / N$ for which $\pi^{-1}(E) \in \tau$. Then $\tau_{N}$ turns out to be a topology on $X / N$, called the quotient topology."
+2.1,Let $S$ be a topological space. A set $E \subset S$ is said to be nowhere dense if its closure $\bar{E}$ has an empty interior. The sets of the first category in $S$ are those that are countable unions of nowhere dense sets. Any subset of $S$ that is not of the first category is said to be of the second category in $S$.
+2.3,Suppose $X$ and $Y$ are topological vector spaces and $\Gamma$ is a collection of linear mappings from $X$ into $Y$. We say that $\Gamma$ is equicontinuous if to every neighborhood $W$ of 0 in $Y$ there corresponds a neighborhood $V$ of 0 in $X$ such that $\Lambda(V) \subset W$ for all $\Lambda \in \Gamma$.
+1.16 (a),"When $X$ and $Y$ are sets, the symbol
+
+$$
+f: X \rightarrow Y
+$$
+
+will mean that $f$ is a mapping of $X$ into $Y$. If $A \subset X$ and $B \subset Y$, the image $f(A)$ of $A$ and the inverse image or preimage $f^{-1}(B)$ of $B$ are defined by
+
+$$
+f(A)=\{f(x): x \in A\}, \quad f^{-1}(B)=\{x: f(x) \in B\} ."
+"Suppose now that $X$ and $Y$ are vector spaces over the same scalar field. A mapping $\Lambda: X \rightarrow Y$ is said to be linear if
+
+$$
+\Lambda(\alpha x+\beta y)=\alpha \Lambda x+\beta \Lambda y
+$$
+
+for all $x$ and $y$ in $X$ and all scalars $\alpha$ and $\beta$. Note that one often writes $\Lambda x$, rather than $\Lambda(x)$, when $\Lambda$ is linear.
+
+Linear mappings of $X$ into its scalar field are called linear functionals.
+
+For example, the multiplication operators $M_{\alpha}$ of Section 1.7 are linear, but the translation operators $T_{a}$ are not, except when $a=0$.",1.16 (b) (c) (d)
+4.17 (a),"Suppose $X$ is a Banach space. Then $\mathscr{B}(X)$ [which is an abbreviation for $\mathscr{B}(X, Y)]$ is not merely a Banach space (see Theorem 4.1) but also an algebra: If $S \in \mathscr{B}(X)$ and $T \in \mathscr{B}(X)$, one defines $S T \in \mathscr{B}(X)$ by
+
+$$
+(S T)(x)=S(T(x)) \quad(x \in X)
+$$
+
+The inequality
+
+$$
+\|S T\| \leq\|S\|\|T\|
+$$
+
+is trivial to verify.
+
+In particular, powers of $T \in \mathscr{B}(X)$ can be defined: $T^{0}=I$, the identity mapping on $X$, given by $I x=x$, and $T^{n}=T T^{n-1}$, for $n=1,2,3, \ldots$"
+4.17 (b),"An operator $T \in \mathscr{B}(X)$ is said to be invertible if there exists $S \in \mathscr{B}(X)$ such that
+
+$$
+S T=I=T S .
+$$
+
+In this case, we write $S=T^{-1}$. By the open mapping theorem, this happens if and only if $\mathscr{N}(T)=\{0\}$ and $\mathscr{R}(T)=X$."
+4.17 (c),"The spectrum $\sigma(T)$ of an operator $T \in \mathscr{B}(X)$ is the set of all scalars $\lambda$ such that $T-\lambda I$ is not invertible. Thus $\lambda \in \sigma(T)$ if and only if at least one of the following two statements is true:
+
+(i) The range of $T-\lambda I$ is not all of $X$.
+
+(ii) $T-\lambda I$ is not one-to-one.
+
+If (ii) holds, $\lambda$ is said to be an eigenvalue of $T$; the corresponding eigenspace is $\mathscr{N}(T-\lambda I)$; each $x \in \mathscr{N}(T-\lambda I)$ (except $x=0$ ) is an eigenvector of $T$; it satisfies the equation
+
+$$
+T x=\lambda x
+$$"
+3.1,"['The dual space of a topological vector space $X$ is the vector space $X^{*}$ whose elements are the continuous linear functionals on $X$. Note that addition and scalar multiplication are defined in $X^{*}$ by\n\n$$\n\\left(\\Lambda_{1}+\\Lambda_{2}\\right) x=\\Lambda_{1} x+\\Lambda_{2} x, \\quad(\\alpha \\Lambda) x=\\alpha \\cdot \\Lambda x\n$$\n\nIt is clear that these operations do indeed make $X^{*}$ into a vector space.\n\nIt will be necessary to use the obvious fact that every complex vector space is also a real vector space, and it will be convenient to use the following (temporary) terminology: An additive functional $\\Lambda$ on a complex vector space $X$ is called real-linear (complex-linear) if $\\Lambda(\\alpha x)=\\alpha \\Lambda x$ for every $x \\in X$ and for every real (complex) scalar $\\alpha$. Our standing rule that any statement about vector spaces in which no scalar field is mentioned applies to both cases is unaffected by this temporary terminology and is still in force.\n\nIf $u$ is the real part of a complex-linear functional $f$ on $X$, then $u$ is real-linear and\n\n$$\nf(x)=u(x)-i u(i x) \\quad(x \\in X)\n$$\n\nbecause $z=\\operatorname{Re} z-i \\operatorname{Re}(i z)$ for every $z \\in \\mathscr{C}$.\n\nConversely, if $u: X \\rightarrow R$ is real-linear on a complex vector space $X$ and if $f$ is defined by (1), a straightforward computation shows that $f$ is complex-linear.\n\nSuppose now that $X$ is a complex topological vector space. The above facts imply that a complex-linear functional on $X$ is in $X^{*}$ if and only if its real part is continuous, and that every continuous real-linear $u: X \\rightarrow R$ is the real part of a unique $f \\in X^{*}$.']"
+3.19 (a),"If $X$ is a vector space and $E \subset X$, the convex hull of $E$ will be denoted by $c o(E)$. Recall that $c o(E)$ is the intersection of all convex subsets of $X$ which contain $E$. Equivalently, $c o(E)$ is the set of all finite convex combinations of members of $E$."
+3.19 (b),"If $X$ is a topological vector space and $E \subset X$, the closed convex hull of $E$, written $\overline{c o}(E)$, is the closure of $c o(E)$."
+3.19 (c),"A subset $E$ of a metric space $X$ is said to be totally bounded if $E$ lies in the union of finitely many open balls of radius $\varepsilon$, for every $\varepsilon>0$."
+3.19 (d),A set $E$ in a topological vector space $X$ is said to be totally bounded if to every neighborhood $V$ of 0 in $X$ corresponds a finite set $F$ such that $E \subset F+V$.
+6.31,"The term approximate identity on $R^{n}$ will denote a sequence of functions $h_{j}$ of the form
+
+$$
+h_{j}(x)=j^{n} h(j x) \quad(j=1,2,3, \ldots)
+$$
+
+where $h \in \mathscr{D}\left(R^{n}\right), h \geq 0$, and $\int_{R^{n}} h(x) d x=1$."
+6.34,"Suppose now that $u \in \mathscr{D}^{\prime}$ and that $u$ has compact support. By Theorem 6.24, $u$ extends then in a unique fashion to a continuous linear functional on $C^{\infty}$. One can therefore define the convolution of $u$ and any $\phi \in C^{\infty}$ by the same formula as before, namely,
+
+$$
+(u * \phi)(x)=u\left(\tau_{x} \tilde{\phi}\right) \quad\left(x \in R^{n}\right)
+$$"
+11.27,"In a Banach algebra with involution, the statement ""$x \geq 0$"" means that $x=x^{*}$ and that $\sigma(x) \subset[0, \infty)$."
+8.10,Let $\Omega$ be open in $R^{n}$. A distribution $u \in \mathscr{D}^{\prime}(\Omega)$ is said to be locally $H^{s}$ if there corresponds to each point $x \in \Omega$ a distribution $v \in H^{s}$ such that $u=v$ in some neighborhood $\omega$ of $x$. (See Section 6.19.)
+12.11 (a),An operator $T \in \mathscr{B}(H)$ is normal if $T T^{*}=T^{*} T$.
+12.11 (b),An operator $T \in \mathscr{B}(H)$ is self-adjoint (or hermitian) if $T^{*}=T$.
+12.11 (c),"An operator $T \in \mathscr{B}(H)$ is unitary if $T^{*} T=I=T T^{*}$, where $I$ is the identity operator on $H$."
+12.11 (d),An operator $T \in \mathscr{B}(H)$ is a projection if $T^{2}=T$.
+6.29,"['In the context of distributions on $R^{n}$:\n\n- If $u$ is a function in $R^{n}$, and $x \\in R^{n}, \\tau_{x} u$ and $\\check{u}$ are the functions defined by\n\n$$\n\\left(\\tau_{x} u\\right)(y)=u(y-x), \\quad \\check{u}(y)=u(-y) \\quad\\left(y \\in R^{n}\\right)\n$$\n\n- The convolution $u * v$ of complex functions $u$ and $v$ in $R^{n}$ is defined by\n\n$$\n(u * v)(x)=\\int_{R^{n}} u(y) v(x-y) d y\n$$\n\n- For distributions, the convolution $u * \\phi$ is defined by\n\n$$\n(u * \\phi)(x)=u\\left(\\tau_{x} \\check{\\phi}\\right) \\quad\\left(u \\in \\mathscr{D}^{\\prime}, \\phi \\in \\mathscr{D}, x \\in R^{n}\\right)\n$$\n\n- The translate $\\tau_{x} u$ of a distribution $u \\in \\mathscr{D}^{\\prime}$ is defined by\n\n$$\n\\left(\\tau_{x} u\\right)(\\phi)=u\\left(\\tau_{-x} \\phi\\right) \\quad\\left(\\phi \\in \\mathscr{D}, x \\in R^{n}\\right)\n$$']"
+2.10,"Open mappings Suppose $f$ maps $S$ into $T$, where $S$ and $T$ are topological spaces. We say that $f$ is open at a point $p \in S$ if $f(V)$ contains a neighborhood of $f(p)$ whenever $V$ is a neighborhood of $p$. We say that $f$ is open if $f(U)$ is open in $T$ whenever $U$ is open in $S$.
+
+It is clear that $f$ is open if and only if $f$ is open at every point of $S$. Because of the invariance of vector topologies, it follows that a linear mapping of one topological vector space into another is open if and only if it is open at the origin.
+
+Let us also note that a one-to-one continuous mapping $f$ of $S$ onto $T$ is a homeomorphism precisely when $f$ is open."
+11.14,"A mapping $x \rightarrow x^{*}$ of a complex (not necessarily commutative) algebra $A$ into $A$ is called an involution on $A$ if it has the following four properties, for all $x \in A, y \in A$, and $\lambda \in \mathscr{C}$ :
+
+$$
+\begin{aligned}
+(x+y)^{*} & =x^{*}+y^{*} . \
+(\lambda x)^{*} & =\bar{\lambda} x^{*} . \
+(x y)^{*} & =y^{*} x^{*} . \
+x^{* *} & =x .
+\end{aligned}
+$$
+
+In other words, an involution is a conjugate-linear antiautomorphism of period 2 .
+
+Any $x \in A$ for which $x^{*}=x$ is called hermitian, or self-adjoint.
+
+For example, $f \rightarrow \bar{f}$ is an involution on $C(X)$. The one that we will be most concerned with later is the passage from an operator on a Hilbert space to its adjoint."
+7.24,"A complex measurable function $f$, defined in an open set $\Omega \subset R^{n}$, is said to be locally $L^{2}$ in $\Omega$ if $\int_{K}|f|^{2} d m_{n}<\infty$ for every compact $K \subset \Omega$.
+
+Similarly, a distribution $u \in \mathscr{D}^{\prime}(\Omega)$ is locally $L^{2}$ if there is a function $g$, locally $L^{2}$ in $\Omega$, such that $u(\phi)=\int_{\Omega} g \phi d m_{n}$ for every $\phi \in \mathscr{D}(\Omega)$. To say that a function $f$ has a distribution derivative $D^{\alpha} f$ which is locally $L^{2}$ refers to the distribution $D^{\alpha} f$ and means, explicitly, that there is a function $g$, locally $L^{2}$, such that
+
+$$
+\int_{\Omega} g \phi d m_{n}=(-1)^{|\alpha|} \int_{\Omega} f D^{\alpha} \phi d m_{n}
+$$
+
+for every $\phi \in \mathscr{D}(\Omega)$. A priori, this says nothing about the existence of $D^{\alpha} f$ in the classical sense, in terms of limits of quotients.
+
+On the other hand, the class $C^{(p)}(\Omega)$ consists, for each nonnegative integer $p$, of those complex functions $f$ in $\Omega$ whose derivatives $D^{\alpha} f$ exist in the classical sense, for each multi-index $\alpha$ with $|\alpha| \leq p$, and are continuous functions in $\Omega$.
+
+We shall write $D_{i}^{k}$ for the differential operator $\left(\partial / \partial x_{i}\right)^{k}$."
+6.19,"Suppose $\Lambda_{i} \in \mathscr{D}(\Omega)(i=1,2)$ and $\omega$ is an open subset of $\Omega$. The statement
+
+$$
+\Lambda_{1}=\Lambda_{2} \text { in } \omega
+$$
+
+means, by definition, that $\Lambda_{1} \phi=\Lambda_{2} \phi$ for every $\phi \in \mathscr{D}(\omega)$.
+
+For example, if $f$ is a locally integrable function and $\mu$ is a measure, then $\Lambda_{f}=0$ in $\omega$ if and only if $f(x)=0$ for almost every $x \in \omega$, and $\Lambda_{\mu}=0$ in $\omega$ if and only if $\mu(E)=0$ for every Borel set $E \subset \omega$."
+6.36,"If $u \in \mathscr{D}^{\prime}, v \in \mathscr{D}^{\prime}$, and at least one of these two distributions has compact support, define
+
+$$
+L \phi=u *(v * \phi) \quad(\phi \in \mathscr{D})
+$$
+
+Note that this is well defined. For if $v$ has compact support, then $v * \phi \in \mathscr{D}$, and $L \phi \in C^{\infty}$; if $u$ has compact support, then again $L \phi \in C^{\infty}$, since $v * \phi \in C^{\infty}$. Also, $\tau_{x} L=L \tau_{x}$, for all $x \in R^{n}$. These assertions follow from Theorems 6.30 and 6.35.
+
+The functional $\phi \rightarrow(L \phi)(0)$ is in fact a distribution. To see this, suppose $\phi_{i} \rightarrow 0$ in $\mathscr{D}$. By $(a)$ of Theorem 6.33,v* $\phi_{i} \rightarrow 0$ in $C^{\infty}$; if, in addition, $v$ has compact support then $v * \mathscr{\phi}_{i} \rightarrow 0$ in $\mathscr{D}$. It follows, in either case, that $\left(L \phi_{i}\right)(0) \rightarrow 0$.
+
+The proof of $(b)$ of Theorem 6.33 now shows that this distribution, which we shall denote by $u * v$, is related to $L$ by the formula
+
+$$
+L \phi=(u * v) * \phi \quad(\phi \in \mathscr{D})
+$$
+
+In other words, $u * v \in \mathscr{D}^{\prime}$ is characterized by
+
+$$
+(u * v) * \phi=u *(v * \phi) \quad(\phi \in \mathscr{D})
+$$"
+12.17,"['Let $\\mathfrak{M}$ be a $\\sigma$-algebra in a set $\\Omega$, and let $H$ be a Hilbert space. A resolution of the identity (on $\\mathfrak{M}$ ) is a mapping\n\n$$\nE: \\mathfrak{M} \\rightarrow \\mathscr{B}(H)\n$$\n\nwith the following properties:\n(a) $E(\\varnothing)=0, E(\\Omega)=I$.\n\n(b) Each $E(\\omega)$ is a self-adjoint projection.\n\n(c) $E\\left(\\omega^{\\prime} \\cap \\omega^{\\prime \\prime}\\right)=E\\left(\\omega^{\\prime}\\right) E\\left(\\omega^{\\prime \\prime}\\right)$.\n\n(d) If $\\omega^{\\prime} \\cap \\omega^{\\prime \\prime}=\\varnothing$, then $E\\left(\\omega^{\\prime} \\cup \\omega^{\\prime \\prime}\\right)=E\\left(\\omega^{\\prime}\\right)+E\\left(\\omega^{\\prime \\prime}\\right)$.\n\n(e) For every $x \\in H$ and $y \\in H$, the set function $E_{x, y}$ defined by\n\n$$\nE_{x, y}(\\omega)=(E(\\omega) x, y)\n$$\n\nis a complex measure on $\\mathfrak{M}$.\n\nWhen $\\mathfrak{M}$ is the $\\sigma$-algebra of all Borel sets on a compact or locally compact Hausdorff space, it is customary to add another requirement to $(e)$ : Each $E_{x, y}$ should be a regular Borel measure. (This is automatically satisfied on compact metric spaces, for instance. See [23].)']"
+4.20,"Suppose $M$ is a closed subspace of a topological vector space $X$. If there exists a closed subspace $N$ of $X$ such that
+
+$$
+X=M+N \quad \text { and } \quad M \cap N=\{0\}
+$$
+
+then $M$ is said to be complemented in $X$. In this case, $X$ is said to be the direct sum of $M$ and $N$, and the notation
+
+$$
+X=M \oplus N
+$$
+
+is sometimes used."
