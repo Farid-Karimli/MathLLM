@@ -285,7 +285,7 @@ def get_chunks(document_content):
 def safe_list_get(l, idx, default = "Error, no proof value given."):
   try:
     return l[idx]
-  except IndexError:
+  except KeyError:
     return default
   
 async def process_md_files(step, folder_path, output_dir):
