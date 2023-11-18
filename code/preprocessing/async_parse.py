@@ -241,7 +241,6 @@ async def extract_correct_theorems(chunk, output_dir):
             ret = json.loads(ret)
             break
         except Exception as e:
-            print(ret)
             error = e
             if finish_reason == 'length':
                 try:
@@ -280,7 +279,7 @@ def get_chunks(document_content):
     
     chunks = [document_content[start:end].strip() for start, end in zip(matches[:-1], matches[1:])]
     chunks.append(document_content[matches[-1]:])
-    return chunks[45:46]
+    return chunks
     
 
 def safe_list_get(l, idx, default = "Error, no proof value given."):
