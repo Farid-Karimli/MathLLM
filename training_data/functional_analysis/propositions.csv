@@ -1,87 +1,128 @@
 Proposition,Statement,Proof
-2.14,"If $X$ is a topological space, $Y$ is a Hausdorff space, and $f: X \rightarrow Y$ is continuous, then the graph $G$ of $f$ is closed.","Let $\Omega$ be the complement of $G$ in $X \times Y$; fix $\left(x_{0}, y_{0}\right) \in \Omega$. Then $y_{0} \neq f\left(x_{0}\right)$. Thus $y_{0}$ and $f\left(x_{0}\right)$ have disjoint neighborhoods $V$ and $W$ in $Y$. Since $f$ is continuous, $x_{0}$ has a neighborhood $U$ such that $f(U) \subset W$. The neighborhood $U \times V$ of $\left(x_{0}, y_{0}\right)$ lies therefore in $\Omega$. This proves that $\Omega$ is open."
-2.15,"Suppose
-
-(a) $X$ and $Y$ are $F$-spaces,
-
-(b) $\Lambda: X \rightarrow Y$ is linear,
-
-(c) $G=\{(x, \Lambda x): x \in X\}$ is closed in $X \times Y$.
-
-Then $\Lambda$ is continuous.","$X \times Y$ is a vector space if addition and scalar multiplication are defined componentwise:
+10.24,"Suppose $A$ is a Banach algebra, $x \in A, \alpha \in \mathbb{C}, \alpha \notin \sigma(x), \Omega$ is the complement of $\alpha$ in $\mathcal{C}$, and $\Gamma$ surrounds $\sigma(x)$ in $\Omega$. Then
 
 $$
-\alpha\left(x_{1}, y_{1}\right)+\beta\left(x_{2}, y_{2}\right)=\left(\alpha x_{1}+\beta x_{2}, \alpha y_{1}+\beta y_{2}\right) .
-$$
+\frac{1}{2 \pi i} \int_{\Gamma}(\alpha-\lambda)^{n}(\lambda e-x)^{-1} d \lambda=(\alpha e-x)^{n} \quad(n=0, \pm 1, \pm 2, \ldots)
+$$","Error, no proof value given."
+4.21 (a),"Let $M$ be a closed subspace of a topological vector space $X$.
 
-There are complete invariant metrics $d_{X}$ and $d_{Y}$ on $X$ and $Y$, respectively, which induce their topologies. If
-
-$$
-d\left(\left(x_{1}, y_{1}\right),\left(x_{2}, y_{2}\right)\right)=d_{X}\left(x_{1}, x_{2}\right)+d_{Y}\left(y_{1}, y_{2}\right)
-$$
-
-then $d$ is an invariant metric on $X \times Y$ which is compatible with its product topology and which makes $X \times Y$ into an $F$-space. (The easy but tedious verifications that are needed here are left as an exercise.)
-
-Since $\Lambda$ is linear, $G$ is a subspace of $X \times Y$. Closed subsets of complete metric spaces are complete. Therefore $G$ is an $F$-space.
-
-Define $\pi_{1}: G \rightarrow X$ and $\pi_{2}: X \times Y \rightarrow Y$ by
-
-$$
-\pi_{1}(x, \Lambda x)=x, \quad \pi_{2}(x, y)=y .
-$$
-
-Now $\pi_{1}$ is a continuous linear one-to-one mapping of the $F$-space $G$ onto the $F$-space $X$. It follows from the open mapping theorem that
-
-$$
-\pi_{1}^{-1}: X \rightarrow G
-$$
-
-is continuous. But $\Lambda=\pi_{2} \circ \pi_{1}^{-1}$ and $\pi_{2}$ is continuous. Hence $\Lambda$ is continuous."
-1.20,"If $X$ is a complex topological vector space and $f: \mathscr{C}^{n} \rightarrow X$ is linear, then $f$ is continuous.","Let $\left\{e_{1}, \ldots, e_{n}\right\}$ be the standard basis of $\mathscr{C}^{n}$ : The $k$ th coordinate of $e_{k}$ is 1 , the others are 0 . Put $u_{k}=f\left(e_{k}\right)$, for $k=1, \ldots, n$. Then $f(z)=z_{1} u_{1}+\cdots+z_{n} u_{n}$ for every $z=\left(z_{1}, \ldots, z_{n}\right)$ in $\mathscr{C}^{n}$. Every $z_{k}$ is a continuous function of $z$. The continuity of $f$ is therefore an immediate consequence of the fact that addition and scalar multiplication are continuous in $X$."
-3.20,I,f
-1.25 (a),"Suppose $d$ is a metric on a set $X$. A sequence $\left\{x_{n}\right\}$ in $X$ is a Cauchy sequence if to every $\varepsilon>0$ there corresponds an integer $N$ such that $d\left(x_{m}, x_{n}\right)<\varepsilon$ whenever $m>N$ and $n>N$. If every Cauchy sequence in $X$ converges to a point of $X$, then $d$ is said to be a complete metric on $X$.",
-1.25 (b),Let $\tau$ be the topology of a topological vector space $X$. The notion of Cauchy sequence can be defined in this setting without reference to any metric: Fix a local base $\mathscr{B}$ for $\tau$. A sequence $\left\{x_{n}\right\}$ in $X$ is then said to be a Cauchy sequence if to every $V \in \mathscr{B}$ corresponds an $N$ such that $x_{n}-x_{m} \in V$ if $n>N$ and $m>N$.,It is clear that different local bases for the same $\tau$ give rise to the same class of Cauchy sequences.
-1.25 (c),"Suppose now that $X$ is a topological vector space whose topology $\tau$ is compatible with an invariant metric $d$. Let us temporarily use the terms $d$-Cauchy sequence and $\tau$-Cauchy sequence for the concepts defined in $(a)$ and $(b)$, respectively. Since
-
-$$
-d\left(x_{n}, x_{m}\right)=d\left(x_{n}-x_{m}, 0\right)
-$$
-
-and since the $d$-balls centered at the origin form a local base for $\tau$, we conclude:
-
-A sequence $\left\{x_{n}\right\}$ in $X$ is a d-Cauchy sequence if and only if is a $\tau$-Cauchy sequence.
-
-Consequently, any two invariant metrics on $X$ that are compatible with $\tau$ have the same Cauchy sequences. They clearly also have the same convergent sequences (namely, the $\tau$-convergent ones). These remarks prove the following fact:
-
-If $d_{1}$ and $d_{2}$ are invariant metrics on a vector space $X$ which induce the same topology on $X$, then
-
-(a) $d_{1}$ and $d_{2}$ have the same Cauchy sequences, and
-
-(b) $d_{1}$ is complete if and only if $d_{2}$ is complete.",Invariance is needed in the hypothesis (Exercise 12).
-12.18,"If $E$ is a resolution of the identity, and if $x \in H$, then
-
-$$
-\omega \rightarrow E(\omega) x
-$$
-is a countably additive $H$-valued measure on $\mathfrak{M}$.",
-4.21 (a),Let $M$ be a closed subspace of a topological vector space $X$ that is locally convex and has $\operatorname{dim} M<\infty$: then $M$ is complemented in $X$.,"Let $\left\{e_{1}, \ldots, e_{n}\right\}$ be a basis for $M$. Every $x \in M$ has then a unique representation
+If $X$ is locally convex and $\operatorname{dim} M<\infty$, then $M$ is complemented in $X$.","Let $\left\{e_{1}, \ldots, e_{n}\right\}$ be a basis for $M$. Every $x \in M$ has then a unique representation
 
 $$
 x=\alpha_{1}(x) e_{1}+\cdots+\alpha_{n}(x) e_{n} .
 $$
 
 Each $\alpha_{i}$ is a continuous linear functional on $M$ (Theorem 1.21 and Lemma 1.20) which extends to a member of $X^{*}$, by the Hahn-Banach theorem. Let $N$ be the intersection of the null spaces of these extensions. Then $X=M \oplus N$."
-4.21 (b),Let $M$ be a closed subspace of a topological vector space $X$ and $\operatorname{dim}(X / M)<\infty$: then $M$ is complemented in $X$.,"Let $\pi: X \rightarrow X / M$ be the quotient map, let $\left\{e_{1}, \ldots, e_{n}\right\}$ be a basis for $X / M$, pick $x_{i} \in X$ so that $\pi x_{i}=e_{i}(1 \leq i \leq n)$, and let $N$ be the vector space spanned by $\left\{x_{1}, \ldots, x_{n}\right\}$. Then $X=M \oplus N$."
+4.21 (b),"Let $M$ be a closed subspace of a topological vector space $X$.
+
+If $\operatorname{dim}(X / M)<\infty$, then $M$ is complemented in $X$.","Let $\pi: X \rightarrow X / M$ be the quotient map, let $\left\{e_{1}, \ldots, e_{n}\right\}$ be a basis for $X / M$, pick $x_{i} \in X$ so that $\pi x_{i}=e_{i}(1 \leq i \leq n)$, and let $N$ be the vector space spanned by $\left\{x_{1}, \ldots, x_{n}\right\}$. Then $X=M \oplus N$."
 4.22,"If $M$ is a subspace of a normed space $X$, if $M$ is not dense in $X$, and if $r>1$, then there exists $x \in X$ such that
 
 $$
 \|x\|<r \quad \text { but } \quad\|x-y\| \geq 1 \quad \text { for all } y \in M \text {. }
-$$
-
-","There exists $x_{1} \in X$ whose distance from $M$ is 1 , that is,
+$$","There exists $x_{1} \in X$ whose distance from $M$ is 1 , that is,
 
 $$
 \inf \left\{\left\|x_{1}-y\right\|: y \in M\right\}=1
 $$
 
 Choose $y_{1} \in M$ such that $\left\|x_{1}-y_{1}\right\|<r$, and put $x=x_{1}-y_{1}$."
+12.19,"Suppose $E$ is a resolution of the identity. If $\omega_{n} \in \mathfrak{M}$ and $E\left(\omega_{n}\right)=0$ for $n=1,2,3, \ldots$, and if $\omega=\bigcup_{n=1}^{\infty} \omega_{n}$, then $E(\omega)=0$.","Since $E\left(\omega_{n}\right)=0, E_{x, x}\left(\omega_{n}\right)=0$ for every $x \in H$. Since $E_{x, x}$ is countably additive, it follows that $E_{x, x}(\omega)=0$. But $\|E(\omega) x\|^{2}=$ $E_{x, x}(\omega)$. Hence $E(\omega)=0$."
+10.6,"If $\phi$ is a complex homomorphism on a complex algebra $A$ with unit $e$, then $\phi(e)=1$, and $\phi(x) \neq 0$ for every invertible $x \in A$.","For some $y \in A, \phi(y) \neq 0$. Since
+
+$$
+\phi(y)=\phi(y e)=\phi(y) \phi(e)
+$$
+
+it follows that $\phi(e)=1$. If $x$ is invertible, then
+
+$$
+\phi(x) \phi\left(x^{-1}\right)=\phi\left(x x^{-1}\right)=\phi(e)=1 \text {, }
+$$
+
+so that $\phi(x) \neq 0$."
+11.2 (a),No proper ideal of $A$ contains any invertible element of $A$.,
+11.2 (b),"If $J$ is an ideal in a commutative Banach algebra $A$, then its closure $\bar{J}$ is also an ideal.",
+13.18 (a),"Suppose $U$ is an operator in $H$ which is an isometry: $\|U x\| = \|x\|$ for every $x \in \mathscr{D}(U)$: If $x \in \mathscr{D}(U)$ and $y \in \mathscr{D}(U)$, then $(U x, U y)=(x, y)$",Any of the identities listed in Exercise 2 of Chapter 12 proves (a).
+13.18 (b),"Suppose $U$ is an operator in $H$ which is an isometry: $\|U x\| = \|x\|$ for every $x \in \mathscr{D}(U)$: If $\mathscr{R}(I-U)$ is dense in $H$, then $I-U$ is one-to-one","To prove $(b)$, suppose $x \in \mathscr{D}(U)$ and $(I-U) x=0$, that is, $x=U x$. Then
+
+$$
+(x,(I-U) y)=(x, y)-(x, U y)=(U x, U y)-(x, U y)=0
+$$
+
+for every $y \in \mathscr{D}(U)$. Thus $x \perp \mathscr{R}(I-U)$, so that $x=0$ if $\mathscr{R}(I-U)$ is dense in $H$."
+13.18 (c),"Suppose $U$ is an operator in $H$ which is an isometry: $\|U x\| = \|x\|$ for every $x \in \mathscr{D}(U)$: If any one of the three spaces $\mathscr{D}(U), \mathscr{R}(U)$, and $\mathscr{G}(U)$ is closed, so are the other two","The proof of $(c)$ is a consequence of the relations
+
+$$
+\|U x-U y\| = \|x-y\| = \frac{1}{\sqrt{2}}\|\{x, U x\}-\{y, U y\}\|
+$$
+
+which hold for all $x, y \in \mathscr{D}(U)$."
+8.9 (a),Every distribution with compact support lies in some $H^{s}$.,"If $u \in \mathscr{D}^{\prime}\left(R^{n}\right)$ has compact support, (a) of Theorem 7.23 shows that
+
+$$
+|\hat{u}(y)| \leq C\left(1^{\cdot}+|y|\right)^{N} \quad\left(y \in R^{n}\right)
+$$
+
+for some constants $C$ and $N$. Hence $u \in H^{s}$ if $s<-N-n / 2$. This proves part $(a)"
+8.9 (b),"If $-\infty<t<\infty$, the mapping $u \rightarrow v$ given by
+
+$$
+\hat{v}(y)=\left(1+|y|^{2}\right)^{t / 2} \hat{u}(y) \quad\left(y \in R^{n}\right)
+$$
+
+is a linear isometry of $H^{s}$ onto $H^{s-t}$ and is therefore an operator of order $t$ whose inverse has order $-t$.",
+8.9 (c),"If $b \in L^{\infty}\left(R^{n}\right)$, the mapping $u \rightarrow v$ given by $\hat{v}=b \hat{u}$ is an operator of order 0 .",
+8.9 (d),"For every multi-index $\alpha, D_{\alpha}$ is an operator of order $|\alpha|$.","The relation
+
+$$
+\left|\left(D_{\alpha} u\right)^{\wedge}(y)\right|=\left|y^{\alpha}\right||\hat{u}(y)| \leq\left(1+|y|^{2}\right)^{|\alpha| / 2}|
+\hat{u}(y)|
+$$
+
+implies
+
+$$
+\left\|D_{\alpha} u\right\|_{s-|\alpha|} \leq\|u\|_{s}
+$$
+
+so that $(d)$ holds."
+8.9 (e),"If $f \in \mathscr{S}_{n}$, then $u \rightarrow f u$ is an operator of order 0 .","The proof of $(e)$ depends on the inequality
+
+$$
+\left(1+|x+y|^{2}\right)^{s} \leq 2^{|s|}\left(1+|x|^{2}\right)^{s}\left(1+|y|^{2}\right)^{|s|}
+$$
+
+valid for $x \in R^{n}, y \in R^{n},-\infty<s<\infty$. The case $s=1$ of (3) is obvious. From it the case $s=-1$ is obtained by replacing $x$ by $x-y$ and then $y$ by $-y$. The general case of (3) is obtained from these two by raising everything to the power $|s|$. It follows from (3) that
+
+$$
+\int_{R^{n}}|h(x-y)|^{2} d \mu_{s}(x) \leq 2^{|s|}\left(1+|y|^{2}\right)^{|s|} \int_{R^{n}}|h|^{2} d \mu_{s}
+$$
+
+for every measurable function $h$ on $R^{n}$.
+
+Now suppose $u \in H^{s}, f \in \mathscr{S}_{n}, t>|s|+n / 2$. Since $\hat{f} \in \mathscr{S}_{n}, \|f\|_{t}<\infty$. Put $\gamma=\mu_{|s|-t}\left(R^{n}\right)$. Then $\gamma<\infty$. Define $F=|\hat{u}| *|\hat{f}|$. By Theorem 7.19,
+
+$$
+\left|(f u)^{\wedge}\right|=|\hat{u} * \hat{f}| \leq|\hat{u}| *|\hat{f}|=F .
+$$
+
+By the Schwarz inequality,
+
+$$
+|F(x)|^{2} \leq \int_{R^{n}}|\hat{f}(y)|^{2} d \mu_{t}(y) \int_{R^{n}}|\hat{u}(x-y)|^{2} d \mu_{-t}(y)
+$$
+
+for every $x \in R^{n}$. Integrate (6) over $R^{n}$, with respect to $\mu_{s}$. By (4), the result is
+
+$$
+\int_{R^{n}}|F|^{2} d \mu_{s} \leq 2^{|s|} \gamma\|f\|_{t}^{2}\|u\|_{s}^{2}
+$$
+
+It follows from (5) and (7) that
+
+$$
+\|f u\|_{s} \leq\left(2^{|s|} \gamma\right)^{1 / 2}\|f\|_{t}\|u\|_{s} .
+$$
+
+This proves $(e)$."
