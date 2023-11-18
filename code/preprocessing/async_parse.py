@@ -1,5 +1,5 @@
 import os
-from openai import AsyncOpenAI
+from openai import AsyncOpenAI, BadRequestError, APIConnectionError, APIConnectionError, RateLimitError
 import asyncio
 from dotenv import load_dotenv
 from tqdm import tqdm
@@ -7,6 +7,7 @@ import json
 import re
 import csv
 import argparse
+import tiktoken
 # Set your OpenAI API key here
 
 load_dotenv()
@@ -14,6 +15,8 @@ api_key = os.getenv('OPENAI_API_KEY')
 client = AsyncOpenAI()
 
 chunksize = 4096*2
+prompt_tokens = 9102
+
 
 function_schema = {
     "name": "parse_math_text",
@@ -94,9 +97,6 @@ example_output = {"theorems": theorems_e, "definitions": definitions_e, "corolla
 
 example_output_empty = {"theorems": {}, "definitions": {}, "corollaries": {}, "propositions": {}}
 
-example_3 = '10.23 Theorem Suppose $T$ is a $\\mathscr{C}^{\\prime}$-mapping of an open set $E \\subset R^{n}$ into an open set $V \\subset R^{m}, S$ is a $\\mathscr{C}^{\\prime}$-mapping of $V$ into an open set $W \\subset R^{p}$, and $\\omega$ is a $k$-form in $W$, so that $\\omega_{S}$ is a $k$-form in $V$ and both $\\left(\\omega_{S}\\right)_{T}$ and $\\omega_{S T}$ are $k$-forms in $E$, where $S T$ is defined by $(S T)(\\mathbf{x})=S(T(\\mathbf{x}))$. Then\n\n$$\n\\left(\\omega_{S}\\right)_{T}=\\omega_{S T}\n$$\n\nProof If $\\omega$ and $\\lambda$ are forms in $W$, Theorem 10.22 shows that\n\n$$\n\\left((\\omega \\wedge \\lambda)_{S}\\right)_{T}=\\left(\\omega_{S} \\wedge \\lambda_{S}\\right)_{T}=\\left(\\omega_{S}\\right)_{T} \\wedge\\left(\\lambda_{S}\\right)_{T}\n$$\n\nand\n\n$$\n(\\omega \\wedge \\lambda)_{S T}=\\omega_{S T} \\wedge \\lambda_{S T}\n$$\n\nThus if (71) holds for $\\omega$ and for $\\lambda$, it follows that (71) also holds for $\\omega \\wedge \\lambda$. Since every form can be built up from 0 -forms and 1 -forms by addition and multiplication, and since (71) is trivial for 0 -forms, it is enough to prove (71) in the case $\\omega=d z_{q}, q=1, \\ldots, p$. (We denote the points of $E, V, W$ by $\\mathbf{x}, \\mathbf{y}, \\mathbf{z}$, respectively.)\n\nLet $t_{1}, \\ldots, t_{m}$ be the components of $T$, let $s_{1}, \\ldots, s_{p}$ be the components of $S$, and let $r_{1}, \\ldots, r_{p}$ be the components of $S T$. If $\\omega=d z_{q}$, then\n\n$$\n\\omega_{s}=d s_{q}=\\sum_{j}\\left(D_{j} s_{q}\\right)(\\mathbf{y}) d y_{j}\n$$\n\nso that the chain rule implies\n\n$$\n\\begin{aligned}\n\\left(\\omega_{S}\\right)_{T} & =\\sum_{j}\\left(D_{j} s_{q}\\right)(T(\\mathbf{x})) d t_{j} \\\\\n& =\\sum_{j}\\left(D_{j} s_{q}\\right)(T(\\mathbf{x})) \\sum_{i}\\left(D_{i} t_{j}\\right)(\\mathbf{x}) d x_{i} \\\\\n& =\\sum_{i}\\left(D_{i} r_{q}\\right)(\\mathbf{x}) d x_{i}=d r_{q}=\\omega_{S T} .\n\\end{aligned}\n$$'
-
-output_3 = '{"theorems": {"10.23": ["Suppose $T$ is a $\\\\mathscr{C}^{\\\\prime}$-mapping of an open set $E \\\\subset R^{n}$ into an open set $V \\\\subset R^{m}, S$ is a $\\\\mathscr{C}^{\\\\prime}$-mapping of $V$ into an open set $W \\\\subset R^{p}$, and $\\\\omega$ is a $k$-form in $W$, so that $\\\\omega_{S}$ is a $k$-form in $V$ and both $\\\\left(\\\\omega_{S}\\\\right)_{T}$ and $\\\\omega_{S T}$ are $k$-forms in $E$, where $S T$ is defined by $(S T)(\\\\mathbf{x})=S(T(\\\\mathbf{x}))$. Then\\n\\n$$\\n\\\\left(\\\\omega_{S}\\\\right)_{T}=\\\\omega_{S T}\\n$$","If $\\omega$ and $\\lambda$ are forms in $W$, Theorem 10.22 shows that\n\n$$\n\\left((\\omega \\wedge \\lambda)_{S}\\right)_{T}=\\left(\\omega_{S} \\wedge \\lambda_{S}\\right)_{T}=\\left(\\omega_{S}\\right)_{T} \\wedge\\left(\\lambda_{S}\\right)_{T}\n$$\n\nand\n\n$$\n(\\omega \\wedge \\lambda)_{S T}=\\omega_{S T} \\wedge \\lambda_{S T}\n$$\n\nThus if (71) holds for $\\omega$ and for $\\lambda$, it follows that (71) also holds for $\\omega \\wedge \\lambda$. Since every form can be built up from 0 -forms and 1 -forms by addition and multiplication, and since (71) is trivial for 0 -forms, it is enough to prove (71) in the case $\\omega=d z_{q}, q=1, \\ldots, p$. (We denote the points of $E, V, W$ by $\\mathbf{x}, \\mathbf{y}, \\mathbf{z}$, respectively.)\n\nLet $t_{1}, \\ldots, t_{m}$ be the components of $T$, let $s_{1}, \\ldots, s_{p}$ be the components of $S$, and let $r_{1}, \\ldots, r_{p}$ be the components of $S T$. If $\\omega=d z_{q}$, then\n\n$$\n\\omega_{s}=d s_{q}=\\sum_{j}\\left(D_{j} s_{q}\\right)(\\mathbf{y}) d y_{j}\n$$\n\nso that the chain rule implies\n\n$$\n\\begin{aligned}\n\\left(\\omega_{S}\\right)_{T} & =\\sum_{j}\\left(D_{j} s_{q}\\right)(T(\\mathbf{x})) d t_{j} \\\\\n& =\\sum_{j}\\left(D_{j} s_{q}\\right)(T(\\mathbf{x})) \\sum_{i}\\left(D_{i} t_{j}\\right)(\\mathbf{x}) d x_{i} \\\\\n& =\\sum_{i}\\left(D_{i} r_{q}\\right)(\\mathbf{x}) d x_{i}=d r_{q}=\\omega_{S T} .\n\\end{aligned}\n$$" ], "definitions": {}, "corollaries": {}, "propositions": {}}'
 
 with open('example_2.md', 'r') as f:
     example_4 = f.read()
@@ -112,17 +112,63 @@ with open('example_3.md', 'r') as f:
 
 output_6 = {"theorems": {"4.11 (a)": ["For $M$, a closed subspace of a Hilbert space $H$: Every $x \\in H$ has then a unique decomposition\n\n$$\nx=P x+Q x\n$$\n\ninto a sum of $P x \\in M$ and $Q x \\in M^{\\perp}$", "suppose that $x^{\\prime}+y^{\\prime}=x^{\\prime \\prime}+y^{\\prime \\prime}$ for some vectors $x^{\\prime}, x^{\\prime \\prime}$ in $M$ and $y^{\\prime}, y^{\\prime \\prime}$ in $M^{\\perp}$. Then\n\n$$\nx^{\\prime}-x^{\\prime \\prime}=y^{\\prime \\prime}-y^{\\prime}\n$$\n\nSince $x^{\\prime}-x^{\\prime \\prime} \\in M, y^{\\prime \\prime}-y^{\\prime} \\in M^{\\perp}$, and $M \\cap M^{\\perp}=\\{0\\}$ [an immediate consequence of the fact that $(x, x)=0$ implies $x=0]$, we have $x^{\\prime \\prime}=x^{\\prime}, y^{\\prime \\prime}=y^{\\prime}$.\n\nTo prove the existence of the decomposition, note that the set\n\n$$\nx+M=\\{x+y: y \\in M\\}\n$$\n\nis closed and convex. Define $Q x$ to be the element of smallest norm in $x+M$; this exists, by Theorem 4.10. Define $P x=x-Q x$.\n\nSince $Q x \\in x+M$, it is clear that $P x \\in M$. Thus $P$ maps $H$ into $M$.\n\nTo prove that $Q$ maps $H$ into $M^{\\perp}$ we show that $(Q x, y)=0$ for all $y \\in M$. Assume $\\|y\\|=1$, without loss of generality, and put $z=Q x$. The minimizing property of $Q x$ shows that\n\n$$\n(z, z)=\\|z\\|^{2} \\leq\\|z-\\alpha y\\|^{2}=(z-\\alpha y, z-\\alpha y)\n$$\n\nfor every scalar $\\alpha$. This simplifies to\n\n$$\n0 \\leq-\\alpha(y, z)-\\bar{\\alpha}(z, y)+\\alpha \\bar{\\alpha} .\n$$\n\nWith $\\alpha=(z, y)$, this gives $0 \\leq-|(z, y)|^{2}$, so that $(z, y)=0$. Thus $Q x \\in M^{\\perp}$."], "4.11 (b)": ["For $M$, a closed subspace of a Hilbert space $H$, and the existing unique decomposition a unique decomposition \n\n$$\nx=P x+Q x\n$$\n\ninto a sum of $P x \\in M$ and $Q x \\in M^{\\perp}$: $P x$ and $Q x$ are the nearest points to $x$ in $M$ and in $M^{\\perp}$, respectively", "\n\nWe have already seen by $4.11 (a)$ that $P x \\in M$. If $y \\in M$, it follows that\n\n$$\n\\|x-y\\|^{2}=\\|Q x+(P x-y)\\|^{2}=\\|Q x\\|^{2}+\\|P x-y\\|^{2}\n$$\n\nwhich is obviously minimized when $y=P x$.\n\n"], "4.11 (c)": ["The mappings $P: H \\rightarrow M$ and $Q: H \\rightarrow M^{\\perp}$ are linear.\n\n", "If we apply $4.11 (a)$ to $x$, to $y$, and to $\\alpha x+\\beta y$, we obtain\n\n$$\nP(\\alpha x+\\beta y)-\\alpha P x-\\beta P y=\\alpha Q x+\\beta Q y-Q(\\alpha x+\\beta y) .\n$$\n\nThe left side is in $M$, the right side in $M^{\\perp}$. Hence both are 0 , so $P$ and $Q$ are linear."], "4.11 (d)": ["For $M$, a closed subspace of a Hilbert space $H$, and the existing unique decomposition a unique decomposition \n\n$$\nx=P x+Q x\n$$\n\ninto a sum of $P x \\in M$ and $Q x \\in M^{\\perp}$: $\\|x\\|^{2}=\\|P x\\|^{2}+\\|Q x\\|^{2}$", "\n\nSince $P x \\perp Q x,this follows from 4.11 (a)"]} , "definitions": {}, "corollaries": {"4.11": ["For $M$, a closed subspace of a Hilbert space $H$: If $M \\neq H$, then there exists $y \\in H, y \\neq 0$, such that $y \\perp M$.", "take $x \\in H, x \\notin M$, and put $y=Q x$. Since $P x \\in M, x \\neq P x$, hence $y=x-P x \\neq 0$"]}, "propositions": {} }
 
+with open('example_4.md', 'r') as f:
+    example_7 = f.read()
+
+example_3 = '10.23 Theorem Suppose $T$ is a $\\mathscr{C}^{\\prime}$-mapping of an open set $E \\subset R^{n}$ into an open set $V \\subset R^{m}, S$ is a $\\mathscr{C}^{\\prime}$-mapping of $V$ into an open set $W \\subset R^{p}$, and $\\omega$ is a $k$-form in $W$, so that $\\omega_{S}$ is a $k$-form in $V$ and both $\\left(\\omega_{S}\\right)_{T}$ and $\\omega_{S T}$ are $k$-forms in $E$, where $S T$ is defined by $(S T)(\\mathbf{x})=S(T(\\mathbf{x}))$. Then\n\n$$\n\\left(\\omega_{S}\\right)_{T}=\\omega_{S T}\n$$\n\nProof If $\\omega$ and $\\lambda$ are forms in $W$, Theorem 10.22 shows that\n\n$$\n\\left((\\omega \\wedge \\lambda)_{S}\\right)_{T}=\\left(\\omega_{S} \\wedge \\lambda_{S}\\right)_{T}=\\left(\\omega_{S}\\right)_{T} \\wedge\\left(\\lambda_{S}\\right)_{T}\n$$\n\nand\n\n$$\n(\\omega \\wedge \\lambda)_{S T}=\\omega_{S T} \\wedge \\lambda_{S T}\n$$\n\nThus if (71) holds for $\\omega$ and for $\\lambda$, it follows that (71) also holds for $\\omega \\wedge \\lambda$. Since every form can be built up from 0 -forms and 1 -forms by addition and multiplication, and since (71) is trivial for 0 -forms, it is enough to prove (71) in the case $\\omega=d z_{q}, q=1, \\ldots, p$. (We denote the points of $E, V, W$ by $\\mathbf{x}, \\mathbf{y}, \\mathbf{z}$, respectively.)\n\nLet $t_{1}, \\ldots, t_{m}$ be the components of $T$, let $s_{1}, \\ldots, s_{p}$ be the components of $S$, and let $r_{1}, \\ldots, r_{p}$ be the components of $S T$. If $\\omega=d z_{q}$, then\n\n$$\n\\omega_{s}=d s_{q}=\\sum_{j}\\left(D_{j} s_{q}\\right)(\\mathbf{y}) d y_{j}\n$$\n\nso that the chain rule implies\n\n$$\n\\begin{aligned}\n\\left(\\omega_{S}\\right)_{T} & =\\sum_{j}\\left(D_{j} s_{q}\\right)(T(\\mathbf{x})) d t_{j} \\\\\n& =\\sum_{j}\\left(D_{j} s_{q}\\right)(T(\\mathbf{x})) \\sum_{i}\\left(D_{i} t_{j}\\right)(\\mathbf{x}) d x_{i} \\\\\n& =\\sum_{i}\\left(D_{i} r_{q}\\right)(\\mathbf{x}) d x_{i}=d r_{q}=\\omega_{S T} .\n\\end{aligned}\n$$'
+output_3 = {"theorems": {"10.23": ['Suppose $T$ is a $\\mathscr{C}^{\\prime}$-mapping of an open set $E \\subset R^{n}$ into an open set $V \\subset R^{m}, S$ is a $\\mathscr{C}^{\\prime}$-mapping of $V$ into an open set $W \\subset R^{p}$, and $\\omega$ is a $k$-form in $W$, so that $\\omega_{S}$ is a $k$-form in $V$ and both $\\left(\\omega_{S}\\right)_{T}$ and $\\omega_{S T}$ are $k$-forms in $E$, where $S T$ is defined by $(S T)(\\mathbf{x})=S(T(\\mathbf{x}))$. Then\n\n$$\n\\left(\\omega_{S}\\right)_{T}=\\omega_{S T}\n$$\n\n', 'If $\\omega$ and $\\lambda$ are forms in $W$, Theorem 10.22 shows that\n\n$$\n\\left((\\omega \\wedge \\lambda)_{S}\\right)_{T}=\\left(\\omega_{S} \\wedge \\lambda_{S}\\right)_{T}=\\left(\\omega_{S}\\right)_{T} \\wedge\\left(\\lambda_{S}\\right)_{T}\n$$\n\nand\n\n$$\n(\\omega \\wedge \\lambda)_{S T}=\\omega_{S T} \\wedge \\lambda_{S T}\n$$\n\nThus if (71) holds for $\\omega$ and for $\\lambda$, it follows that (71) also holds for $\\omega \\wedge \\lambda$. Since every form can be built up from 0 -forms and 1 -forms by addition and multiplication, and since (71) is trivial for 0 -forms, it is enough to prove (71) in the case $\\omega=d z_{q}, q=1, \\ldots, p$. (We denote the points of $E, V, W$ by $\\mathbf{x}, \\mathbf{y}, \\mathbf{z}$, respectively.)\n\nLet $t_{1}, \\ldots, t_{m}$ be the components of $T$, let $s_{1}, \\ldots, s_{p}$ be the components of $S$, and let $r_{1}, \\ldots, r_{p}$ be the components of $S T$. If $\\omega=d z_{q}$, then\n\n$$\n\\omega_{s}=d s_{q}=\\sum_{j}\\left(D_{j} s_{q}\\right)(\\mathbf{y}) d y_{j}\n$$\n\nso that the chain rule implies\n\n$$\n\\begin{aligned}\n\\left(\\omega_{S}\\right)_{T} & =\\sum_{j}\\left(D_{j} s_{q}\\right)(T(\\mathbf{x})) d t_{j} \\\\\n& =\\sum_{j}\\left(D_{j} s_{q}\\right)(T(\\mathbf{x})) \\sum_{i}\\left(D_{i} t_{j}\\right)(\\mathbf{x}) d x_{i} \\\\\n& =\\sum_{i}\\left(D_{i} r_{q}\\right)(\\mathbf{x}) d x_{i}=d r_{q}=\\omega_{S T} .\n\\end{aligned}\n$$']}, "definitions": {}, "corollaries": {}, "propositions": {}}
+
+
 def create_sample_resopnses(json_input):
     return {"role": "assistant", "content": None, "function_call": {"name": "parse_math_text", "arguments": json_input}}
 
-async def extract_theorems(chapter_text, output_dir, message_prompt = "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:"):
-    global content_example, example_output, example_3, output_3, example_4, output_4, example_5, output_5, example_6, output_6
+incorrect_json_1 = '{"theorems": {"2.42": ["Every bounded infinite subset of $R^{k}$ has a limit point in $R^{k}$.", "Being bounded, the set $E$ in question is a subset of a $k$-cell $I \\subset R^{k}$. By Theorem 2.40, $I$ is compact, and so $E$ has a limit point in $I$, by Theorem 2.37."], "2.43": ["Let $P$ be a nonempty perfect set in $R^{k}$. Then $P$ is uncountable.", "Since $P$ has limit points, $P$ must be infinite. Suppose $P$ is countable, and denote the points of $P$ by $\\mathbf{x}_{1}, \\mathbf{x}_{2}, \\mathbf{x}_{3}, \\ldots$ We shall construct a sequence $\\left\\{V_{n}\\right\\}$ of neighborhoods, as follows.\\n\\nLet $V_{1}$ be any neighborhood of $\\mathbf{x}_{1}$. If $V_{1}$ consists of all $\\mathbf{y} \\in R^{k}$ such that $\\left|\\mathbf{y}-\\mathbf{x}_{1}\\right|<r$, the closure $\\bar{V}_{1}$ of $V_{1}$ is the set of all $\\mathbf{y} \\in R^{k}$ such that $\\left|\\mathbf{y}-\\mathbf{x}_{1}\\right| \\leq \\boldsymbol{r}$.\\n\\nSuppose $V_{"}'
+
+corrected_json_1  = '{"theorems": {"2.42": ["Every bounded infinite subset of $R^{k}$ has a limit point in $R^{k}$.", "Being bounded, the set $E$ in question is a subset of a $k$-cell $I \\\\subset R^{k}$. By Theorem 2.40, $I$ is compact, and so $E$ has a limit point in $I$, by Theorem 2.37."], "2.43": ["Let $P$ be a nonempty perfect set in $R^{k}$. Then $P$ is uncountable.", "Since $P$ has limit points, $P$ must be infinite. Suppose $P$ is countable, and denote the points of $P$ by $\\\\mathbf{x}_{1}, \\\\mathbf{x}_{2}, \\\\mathbf{x}_{3}, \\\\ldots We shall construct a sequence $\\\\left\\\\{V_{n}\\\\right\\\\}$ of neighborhoods, as follows. Let $V_{1}$ be any neighborhood of $\\\\mathbf{x}_{1}$. If $V_{1}$ consists of all $\\\\mathbf{y} \\\\in R^{k}$ such that $\\\\left|\\\\mathbf{y}-\\\\mathbf{x}_{1}\\\\right|<r$, the closure $\\\\bar{V}_{1}$ of $V_{1}$ is the set of all $\\\\mathbf{y} \\\\in R^{k}$ such that $\\\\left|\\\\mathbf{y}-\\\\mathbf{x}_{1}\\\\right| \\\\leq \\\\boldsymbol{r}$. ..."]}, "definitions": {}, "corollaries": {}, "propositions": {}}'
+
+incorrect_json_2 = '{"theorems": {}, "definitions": {"1.4": "Throughout Chap. 1, the set of all rational numbers will be denoted by $Q$." "1.5": "Let $S$ be a set. An order on $S$ is a relation, denoted by <, with the following two properties:\\n\\n(i) If $x \\in S$ and $y \\in S$ then one and only one of the statements is true.\\n\\n$$\\nx<y, \\quad x=y, \\quad y<x\\n$$\\n\\n(ii) If $x, y, z \\in S$, if $x<y$ and $y<z$, then $x<z$.\\n\\nThe statement \\" $x<y$ \\" may be read as \\" $x$ is less than $y$ \\" or \\" $x$ is smaller than $y$ \\" or \\" $x$ precedes $y$ \\". It is often convenient to write $y>x$ in place of $x<y$. The notation $x \\leq y$ indicates that $x<y$ or $x=y$, without specifying which of these two is to hold. In other words, $x \\leq y$ is the negation of $x>y$."}}'
+
+corrected_json_2 ='{"theorems": {}, "definitions": {"1.4": "Throughout Chap. 1, the set of all rational numbers will be denoted by $Q$.", "1.5": "Let $S$ be a set. An order on $S$ is a relation, denoted by <, with the following two properties:\\n\\n(i) If $x \\\\in S$ and $y \\\\in S$ then one and only one of the statements\\n\\nis true.\\n\\n$$\\nx<y, \\\\quad x=y, \\\\quad y<x\\n$$\\n\\n(ii) If $x, y, z \\\\in S$, if $x<y$ and $y<z$, then $x<z$.\\n\\nThe statement \\"$x<y$\\" may be read as \\"$x$ is less than $y$\\" or \\"$x$ is smaller than $y$\\" or \\"$x$ precedes $y$\\".\\n\\nIt is often convenient to write $y>x$ in place of $x<y$.\\n\\nThe notation $x \\\\leq y$ indicates that $x<y$ or $x=y$, without specifying which of these two is to hold. In other words, $x \\\\leq y$ is the negation of $x>y$.", "1.6": "An ordered set is a set $S$ in which an order is defined.\\n\\nFor example, $Q$ is an ordered set if $r<s$ is defined to mean that $s-r$ is a positive rational number.", "1.7": "Suppose $S$ is an ordered set, and $E \\\\subset S$. If there exists a $\\\\beta \\\\in S$ such that $x \\\\leq \\\\beta$ for every $x \\\\in E$, we say that $E$ is bounded above, and call $\\\\beta$ an upper bound of $E$.\\n\\nLower bounds are defined in the same way (with $\\\\geq$ in place of $\\\\leq$ ).", "1.8": "Suppose $S$ is an ordered set, $E \\\\subset S$, and $E$ is bounded above. Suppose there exists an $\\\\alpha \\\\in S$ with the following properties:\\n\\n(i) $\\\\alpha$ is an upper bound of $E$.\\n\\n(ii) If $\\\\gamma<\\\\alpha$ then $\\\\gamma$ is not an upper bound of $E$.\\n\\nThen $\\\\alpha$ is called the least upper bound of $E."}, "corollaries": {}, "propositions": {}}'
+
+async def fix_JSON(json_string, error):
+    global incorrect_json_1, corrected_json_1, incorrect_json_2, corrected_json_2
     while True:
-        try: 
+        try:
             response = await client.chat.completions.create(
-                model="gpt-4-1106-preview",
+                model="gpt-3.5-turbo-1106", #"gpt-4-1106-preview"
                 messages=[
-                {"role": "system", "content": "You are a machine that takes as input chapters from a math text. \
+                {"role": "system", "content": (f"You are a machine that takes as input incorrectly formatted JSON output "
+                "with the error associated with them, and fixes and return the correct JSON output."
+                "You must only return the corrected JSON output and nothing else! The JSON must also be formatted according to {function_schema}."
+                "So if it missing any keys, you must fill them in and give them empty values.")},
+                {"role": "user", "content": f"Return the correct JSON for this: {incorrect_json_1}. Here is the error: JSONDecodeError: Invalid \escape: line 1 column 167 (char 166)"},
+                {"role": "assistant", "content": corrected_json_1},
+                {"role": "user", "content": f"Return the correct JSON for this: {incorrect_json_2}. Here is the error: JSONDecodeError: Expecting ',' delimiter: line 1 column 119 (char 118)"},
+                {"role": "assistant", "content": corrected_json_2},
+                {"role": "user", "content": f" Return the correct JSON for this: {json_string}. Here is the error:{error}"}],
+                temperature=0,
+            )
+            break
+        except (APIConnectionError, APIConnectionError, RateLimitError) as e:
+            await asyncio.sleep(60)
+
+        except Exception as e:
+            exit(1)
+    return response.choices[0].message.content.strip(), response.choices[0].finish_reason
+
+def ensure_max_token_input(chunk: str, ret: str):
+    global chunksize, prompt_tokens
+    """ensures the continution only uses maximum amount of tokens model can fit."""
+    allowed_num_tokens = 128000 - prompt_tokens - 200 # - 200 because we add another prompt if continuing. just overestimate 
+    encoding = tiktoken.get_encoding("cl100k_base")
+    encoding_both = encoding.encode(chunk + ret)
+    start = max(0,len(encoding_both) - allowed_num_tokens)  #20,000 as an overestimate of prompt token usage. 
+    start_chunk = encoding.decode(encoding.encode(chunk)[start:])
+    return start_chunk, ret
+
+async def extract_theorems(chapter_text, cont=None, model_type="gpt-3.5-turbo-1106"):
+    global content_example, example_output, example_4, output_4, example_5, output_5, example_6, output_6, example_7
+    messages_= [{"role": "system", "content": "You are a machine that takes as input chapters from a math text. \
                 You must extract the relevant data from this input to use as arguments to pass into the given function provided.\
                 If the theorem/corollary/definition/proposition has multiple parts, i.e. (a), (b), (c), etc., then \
                  you must parse the main statement and add the necessary information from it to each of the cases, and treat it as its own theorem/corollary/definition/proposition;\
@@ -136,98 +182,113 @@ async def extract_theorems(chapter_text, output_dir, message_prompt = "Parse, ad
                 to the function and nothing else."},
                 {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + content_example},
                 create_sample_resopnses(json.dumps(example_output)),
-                {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_3},
-                create_sample_resopnses(output_3),
+                 {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_3},
+                create_sample_resopnses(json.dumps(output_3)),
                 {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_4},
                 create_sample_resopnses(json.dumps(output_4)),
                 {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_5},
                 create_sample_resopnses(json.dumps(output_5)),
                  {"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + example_6},
-                create_sample_resopnses(json.dumps(output_6)),
-                {"role": "user", "content": message_prompt + chapter_text}],
+                create_sample_resopnses(json.dumps(output_6))]
+    if cont:
+        messages_ += [{"role": "user", "content": "Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:" + chapter_text},
+                create_sample_resopnses(json.dumps(cont)), {"role": "user", "content": "Please continue"}]
+    else:
+        messages_.append({"role": "user", "content": chapter_text})
+
+    while True:
+        try: 
+            response =  await client.chat.completions.create(
+                model=model_type,
+                messages=messages_,
                 functions=[function_schema],
                 function_call={"name": "parse_math_text"},
                 temperature=0,
             )
-            try:
-                ret = json.loads(response.choices[0].message.function_call.arguments.strip())
-            except Exception as e:
-                if response.choices[0].finish_reason == 'length':
-                    ret = await extract_theorems(chapter_text + json.dumps(create_sample_resopnses(json.dumps(ret))), output_dir, "Please continue the response: Parse, add, and extract the relevant data from this input to use as arguments to pass into the given function provided:")
-                else:   
-                    ret = example_output_empty
-                    with open(f"{output_dir}/json_errors.log", "a+") as logf:
-                        logf.write(f'{e=}, stop_reason = {response.choices[0].finish_reason} for text: {chapter_text} \n' + u'\u2500' * 10)
             break
-        except Exception as e:
+        except (APIConnectionError, APIConnectionError, RateLimitError) as e: # handle ratelimit error
             await asyncio.sleep(60)
+        except Exception as e:
+            exit(1)
+    if cont: 
+        ret = cont + response.choices[0].message.function_call.arguments.strip()
+    else:
+        ret = response.choices[0].message.function_call.arguments.strip()
 
-    # keep track of which keys were not found for which text
-    with open(f"{output_dir}/incomplete_dict_errors.log", "a+") as logf:
-        for key,_ in example_output_empty.items():
-            try:
-                ret[key]
-            except:
-                logf.write(f'{key=} not found for text: {chapter_text} \n' + u'\u2500' * 10)
-    return ret
+    return ret, response.choices[0].finish_reason
 
 
 def string_to_dicts(ret_dict):
     # using get with empty dictionary in case gpt fails on output
     return ret_dict.get('theorems',{}), ret_dict.get('definitions', {}), ret_dict.get('corollaries', {}), ret_dict.get('propositions', {})
 
+
 async def extract_correct_theorems(chunk, output_dir):
-    # Await the coroutine and then process its result
-    theorems_result = await extract_theorems(chunk, output_dir)
-    return string_to_dicts(theorems_result)
+    #try getting JSON
+    global example_output_empty
+    count = 0
+    retries = 0
+
+    if '\n\n(a)' in chunk:
+        model = "gpt-4-1106-preview" # gpt3.5-turbo cannot handle this case 
+    else:
+        model = "gpt-3.5-turbo-1106"
+        
+    ret, finish_reason = await extract_theorems(chunk, model_type=model)
+
+    while count < 5:
+        try:
+            ret = json.loads(ret)
+            break
+        except Exception as e:
+            print(ret)
+            error = e
+            if finish_reason == 'length':
+                try:
+                    if retries == 0: 
+                        retries += 1
+                        ret, finish_reason = await extract_theorems(chunk, model="gpt-4-1106-preview")
+                        continue
+                    chunk, ret = ensure_max_token_input(chunk, ret)
+                    ret,finish_reason  = await extract_theorems(chunk, cont = create_sample_resopnses(ret), model="gpt-4-1106-preview")
+                except BadRequestError as e2: 
+                    if e.code == 'context_length_exceeded':
+                        with open(f"{output_dir}/context_length_exceeded.log", "a+") as logf:
+                            logf.write(f'{e2=}, stop_reason = {finish_reason} for text: {chunk} \n' + u'\u2500' * 10)
+                        return example_output_empty
+            elif finish_reason == 'stop': # incorrect JSON output
+                ret, finish_reason = await fix_JSON(ret, f"{e.__class__.__name__}: {e}")
+                count += 1
+
+    if count < 5: 
+        return string_to_dicts(ret)
+    else:
+        with open(f"{output_dir}/json_errors.log", "a+") as logf:
+            logf.write(f'{error=}, stop_reason = {finish_reason} for text: {chunk} \n' + u'\u2500' * 10)
+        return string_to_dicts(example_output_empty)
+
 
 def get_chunks(document_content):
-    global chunksize
     # Pattern to match the start of each relevant section
-    pattern = r"^\d+\.\d+ (Theorem|Definition|Proposition|Corollary)"
+    pattern = r"^\d+\.\d+ (Theorem|Definition|Definitions|Proposition|Corollary)"
 
     # Compile the regex pattern
     compiled_pattern = re.compile(pattern, re.MULTILINE)
 
     # Find all matches in the document content
-    matches = list(compiled_pattern.finditer(document_content))
+    matches = [m.start(0) for m in re.finditer(compiled_pattern, document_content)]
+    
+    chunks = [document_content[start:end].strip() for start, end in zip(matches[:-1], matches[1:])]
+    chunks.append(document_content[matches[-1]:])
+    return chunks[45:46]
+    
 
-    # List to hold each chunk of text
-    chunks = []
-
-    # Function to find the penultimate occurrence of a pattern
-    def find_penultimate(text, pattern):
-        matches = list(re.finditer(pattern, text))
-        if len(matches) > 1:
-            return matches[-2].start()
-        else:
-            return None
-
-    # Iterate through matches and create chunks of text
-    for i in range(len(matches)):
-        start = matches[i].start()
-        end = matches[i + 1].start() if i + 1 < len(matches) else len(document_content)
-
-        # Create a chunk and ensure its length is at most 4096 characters
-        while end - start > chunksize:
-            # Find the penultimate occurrence of any section header within this chunk
-            penultimate_match_start = find_penultimate(document_content[start:end], pattern)
-            if penultimate_match_start is not None:
-                end = start + penultimate_match_start
-            else:
-                # If there is no penultimate occurrence, we must break at the current match
-                break
-
-        # Add the valid chunk to the list
-        chunk = document_content[start:end].strip()
-        chunks.append(chunk)
-        start = end  # Start the next chunk where the last one was cut off
-    # Now `chunks` contains all the segments of the document.
-   
-    return chunks
-
-
-
+def safe_list_get(l, idx, default = "Error, no proof value given."):
+  try:
+    return l[idx]
+  except IndexError:
+    return default
+  
 async def process_md_files(step, folder_path, output_dir):
     global chunksize
 
@@ -270,14 +331,14 @@ async def process_md_files(step, folder_path, output_dir):
         # write to csv ask tasks complete  
         for task in asyncio.as_completed(tasks):
             theorems_temp, definitions_temp, corollaries_temp, propositions_temp = await task
-            for key, value in theorems_temp.items():
-                theorems_writer.writerow({'Theorem': key, 'Statement': value[0], 'Proof': value[1]})
+            for key, value in theorems_temp.items(): 
+                theorems_writer.writerow({'Theorem': key, 'Statement': safe_list_get(value, 0, "No statement given"), 'Proof': safe_list_get(value, 1)})
             for key, value in definitions_temp.items():
                 definitions_writer.writerow({'Definition': key, 'Statement': value})
             for key, value in corollaries_temp.items():
-                corollaries_writer.writerow({'Corollary': key, 'Statement': value[0], 'Proof': value[1]})
+                corollaries_writer.writerow({'Corollary': key, 'Statement': safe_list_get(value, 0, "No statement given"), 'Proof': safe_list_get(value, 1)})
             for key, value in propositions_temp.items():
-                propositions_writer.writerow({'Proposition': key, 'Statement': value[0], 'Proof': value[1]})
+                propositions_writer.writerow({'Proposition': key, 'Statement': safe_list_get(value, 0, "No statement given"), 'Proof': safe_list_get(value, 1)})
 
             pbar.update(1)
 
@@ -286,13 +347,16 @@ async def process_md_files(step, folder_path, output_dir):
     return 
 
 
-async def main(mathllm_folder, book, step):    
+async def main(mathllm_folder, book, step):   
     await process_md_files(step, os.path.join(mathllm_folder, f'raw_data/{book}'), os.path.join(mathllm_folder, f'training_data/{book}'))
     
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-b", "--book",  type=str)
     parser.add_argument("-p", "--path",  type=str)
     parser.add_argument("-s", "--step", type=int)
     args = parser.parse_args()
+
     asyncio.run(main(args.path,args.book, args.step))
+    print('Done')
