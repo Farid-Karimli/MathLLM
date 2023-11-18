@@ -236,7 +236,7 @@ async def extract_correct_theorems(chunk, output_dir, reload = 0):
     retries = 0
     err_flag = 0
 
-    if '(a)' in chunk or reload == 1:
+    if '(a)' in chunk or reload == 1 or get_chunks_2(chunk) > 0:
         model = "gpt-4-1106-preview" # gpt3.5-turbo cannot handle this case 
     else:
         model = "gpt-3.5-turbo-1106"
@@ -274,7 +274,8 @@ async def extract_correct_theorems(chunk, output_dir, reload = 0):
                     or safe_list_get(value3, 1) == err_message_1 or safe_list_get(value4, 1) == err_message_1\
                         or safe_list_get(key1, 0) == err_message_2 or safe_list_get(key2, 0) == err_message_2\
                     or safe_list_get(key3, 0) == err_message_2 or safe_list_get(key4, 0) == err_message_2:
-                return extract_correct_theorems(chunk, output_dir, reload = 1)
+                ret = await extract_correct_theorems(chunk, output_dir, reload = 1)
+                return ret
         reload = 1
     if reload == 1: 
         return string_to_dicts(ret)
@@ -282,6 +283,16 @@ async def extract_correct_theorems(chunk, output_dir, reload = 0):
         with open(f"{output_dir}/json_errors.log", "a+") as logf:
             logf.write(f'{error=}, stop_reason = {finish_reason} for text: {chunk} \n' + u'\u2500' * 10)
         return string_to_dicts(example_output_empty)
+
+def get_chunks_2(document_content):
+    # Pattern to match the start of each relevant section
+    pattern = r"^\d+\.\d+ (Proposition|Corollary)"
+
+    # Compile the regex pattern
+    compiled_pattern = re.compile(pattern, re.MULTILINE)
+
+    # Find all matches in the document content
+    return len([m.start(0) for m in re.finditer(compiled_pattern, document_content)])
 
 
 def get_chunks(document_content):
