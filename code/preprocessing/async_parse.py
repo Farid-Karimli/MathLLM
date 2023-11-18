@@ -223,13 +223,20 @@ def string_to_dicts(ret_dict):
     return ret_dict.get('theorems',{}), ret_dict.get('definitions', {}), ret_dict.get('corollaries', {}), ret_dict.get('propositions', {})
 
 
-async def extract_correct_theorems(chunk, output_dir):
+def safe_list_get(l, idx, default = "Error, no proof value given."):
+  try:
+    return l[idx]
+  except Exception:
+    return default
+
+async def extract_correct_theorems(chunk, output_dir, reload = 0):
     #try getting JSON
     global example_output_empty
     count = 0
     retries = 0
+    err_flag = 0
 
-    if '\n\n(a)' in chunk:
+    if '(a)' in chunk or reload == 1:
         model = "gpt-4-1106-preview" # gpt3.5-turbo cannot handle this case 
     else:
         model = "gpt-3.5-turbo-1106"
@@ -246,10 +253,10 @@ async def extract_correct_theorems(chunk, output_dir):
                 try:
                     if retries == 0: 
                         retries += 1
-                        ret, finish_reason = await extract_theorems(chunk, model="gpt-4-1106-preview")
+                        ret, finish_reason = await extract_theorems(chunk, model_type="gpt-4-1106-preview")
                         continue
                     chunk, ret = ensure_max_token_input(chunk, ret)
-                    ret,finish_reason  = await extract_theorems(chunk, cont = create_sample_resopnses(ret), model="gpt-4-1106-preview")
+                    ret,finish_reason  = await extract_theorems(chunk, cont = create_sample_resopnses(ret), model_type="gpt-4-1106-preview")
                 except BadRequestError as e2: 
                     if e.code == 'context_length_exceeded':
                         with open(f"{output_dir}/context_length_exceeded.log", "a+") as logf:
@@ -258,8 +265,18 @@ async def extract_correct_theorems(chunk, output_dir):
             elif finish_reason == 'stop': # incorrect JSON output
                 ret, finish_reason = await fix_JSON(ret, f"{e.__class__.__name__}: {e}")
                 count += 1
-
-    if count < 5: 
+    if reload == 0: 
+        err_message_1 = "Error, no proof value given."
+        err_message_2 = "No statement given"
+        theorems_temp, definitions_temp, corollaries_temp, propositions_temp =string_to_dicts(ret)
+        for (key1, value1),(key2, value2),(key3, value3), (key4, value4) in zip(theorems_temp.items(),definitions_temp.items(), corollaries_temp.items(), propositions_temp.items()) : 
+            if safe_list_get(value1, 1) == err_message_1 or safe_list_get(value2, 1) == err_message_1\
+                    or safe_list_get(value3, 1) == err_message_1 or safe_list_get(value4, 1) == err_message_1\
+                        or safe_list_get(key1, 0) == err_message_2 or safe_list_get(key2, 0) == err_message_2\
+                    or safe_list_get(key3, 0) == err_message_2 or safe_list_get(key4, 0) == err_message_2:
+                return extract_correct_theorems(chunk, output_dir, reload = 1)
+        reload = 1
+    if reload == 1: 
         return string_to_dicts(ret)
     else:
         with open(f"{output_dir}/json_errors.log", "a+") as logf:
@@ -281,12 +298,6 @@ def get_chunks(document_content):
     chunks.append(document_content[matches[-1]:])
     return chunks
     
-
-def safe_list_get(l, idx, default = "Error, no proof value given."):
-  try:
-    return l[idx]
-  except Exception:
-    return default
   
 async def process_md_files(step, folder_path, output_dir):
     global chunksize
@@ -321,7 +332,7 @@ async def process_md_files(step, folder_path, output_dir):
                 chunks = get_chunks(content)
                 for chunk in chunks:
                     # Create and append the task
-                    task = asyncio.create_task(extract_correct_theorems(chunk, output_dir))
+                    task = asyncio.create_task(extract_correct_theorems(chunk, output_dir, 0))
                     tasks.append(task)
 
         #current = current_process()
