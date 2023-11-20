@@ -23,7 +23,7 @@ raw_data/
     ├── functional_analysis.md
     └── ...
 ```
-The `raw_data` directory contains the LaTeX files of each chapter from the books on Real Analysis and Functional Analysis. These files are used to fine-tune the LLM.
+The `raw_data` directory contains the Markdown files of each book - on Real Analysis and Functional Analysis. These files are used to fine-tune the LLM.
 
 ## Getting Started
 
