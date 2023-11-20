@@ -17,13 +17,10 @@ This project builds upon the work of Yiran Wu, Feiran Jia, et al., who developed
 raw_data/
 │
 ├── real_analysis/
-│   ├── chapter1.tex
-│   ├── chapter2.tex
-│   └── ...
+│   ├── real_analysis.md
 │
 └── functional_analysis/
-    ├── chapter1.tex
-    ├── chapter2.tex
+    ├── functional_analysis.md
     └── ...
 ```
 The `raw_data` directory contains the LaTeX files of each chapter from the books on Real Analysis and Functional Analysis. These files are used to fine-tune the LLM.
