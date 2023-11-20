@@ -1,0 +1,46 @@
+Corollary,Statement,Proof
+3.18,"If $X$ is a normed space, if $E \subset X$, and if
+
+$$
+sup _{x \in E}|\Lambda x|<\infty \quad\left(\Lambda \in X^{*}\right)
+$$
+
+then there exists $\gamma<\infty$ such that
+
+$$\|x\| \leq \gamma \quad(x \in E)
+$$","Normed spaces are locally convex; (6) says that $E$ is weakly bounded, and (7) says that $E$ is originally bounded."
+12.4,"If $M$ is a closed subspace of $H$, then
+
+$$
+\left(M^{\perp}\right)^{\perp}=M
+$$","The inclusion $M \subset\left(M^{\perp}\right)^{\perp}$ is obvious. Since
+
+$$
+M \oplus M^{\perp}=H=M^{\perp} \oplus\left(M^{\perp}\right)^{\perp}
+$$
+
+$M$ cannot be a proper subspace of $\left(M^{\perp}\right)^{\perp}$."
+11.10,Every isomorphism between two semisimple commutative Banach algebras is a homeomorphism.,"In particular, this is true of every automorphism of a semisimple commutative Banach algebra. The topology of such an algebra is therefore completely determined by its algebraic structure."
+6.6,Every differential operator $D^{\alpha}$ is a continuous mapping of $\mathscr{D}(\Omega)$ into $\mathscr{D}(\Omega)$.,"Since $\left\|D^{\alpha} \phi\right\|_{N} \leq\|\phi\|_{N+|\alpha|}$ for $N=0,1,2, \ldots, D^{\alpha}$ is continuous on each $\mathscr{D}_{\boldsymbol{K}}$."
+4.12 (a),$\mathscr{N}\left(T^{*}\right)$ is weak*-closed in $Y^{*}$.,"Recall that $M^{\perp}$ is weak*-closed in $Y^{*}$ for every subspace $M$ of $Y$. In particular, this is true of $\mathscr{R}(T)^{\perp}$. Thus $(a)$ follows from the theorem."
+4.12 (b),$\mathscr{R}(T)$ is dense in $Y$ if and only if $T^{*}$ is one-to-one.,"As to $(b), \mathscr{R}(T)$ is dense in $Y$ if and only if $\mathscr{R}(T)^{\perp}=\{0\}$; in that case, $\mathscr{N}\left(T^{*}\right)=\{0\}$."
+4.12 (c),$T$ is one-to-one if and only if $\mathscr{R}\left(T^{*}\right)$ is weak*-dense in $X^{*}$.,"Likewise, ${ }^{\perp} \mathscr{R}\left(T^{*}\right)=\{0\}$ if and only if $\mathscr{R}\left(T^{*}\right)$ is annihilated by no $x \in X$ other than $x=0$; this says that $\mathscr{R}\left(T^{*}\right)$ is weak*-dense in $X^{*}$.
+
+Note that the Hahn-Banach theorem 3.5 was tacitly used in the proofs of $(b)$ and $(c)$."
+2.12 (a),"If $\Lambda$ is a continuous linear mapping of an $F$-space $X$ onto an $F$-space $Y$, then $\Lambda$ is open.","Statement $(a)$ follows from Theorem 2.11 and Baire's theorem, since $Y$ is now of the second category in itself."
+2.12 (b),"If $\Lambda$ satisfies (a) and is one-to-one, then $\Lambda^{-1}: Y \rightarrow X$ is continuous.",Statement $(b)$ is an immediate consequence of $(a)$
+2.12 (c),"If $X$ and $Y$ are Banach spaces, and if $\Lambda: X \rightarrow Y$ is continuous, linear, one-to-one, and onto, then there exist positive real numbers $a$ and $b$ such that
+
+$$
+a\|x\| \leq\|\Lambda x\| \leq b\|x\|
+$$
+
+for every $x \in X$.",Statement $(c)$ follows from $(b)$
+2.12 (d),"If $\tau_{1} \subset \tau_{2}$ are vector topologies on a vector space $X$ and if both $\left(X, \tau_{1}\right)$ and $\left(X, \tau_{2}\right)$ are $F$-spaces, then $\tau_{1}=\tau_{2}$.","Statement $(d)$ is obtained by applying $(b)$ to the identity mapping of $\left(X, \tau_{2}\right)$ onto $\left(X, \tau_{1}\right)$."
+3.4,If $X$ is a locally convex space then $X^{*}$ separates points on $X$.,"If $x_{1} \in X, x_{2} \in X$, and $x_{1} \neq x_{2}$, apply $(b)$ of Theorem 3.4 with $\boldsymbol{A}=\left\{x_{1}\right\}, \boldsymbol{B}=\left\{x_{2}\right\}$."
+1.14 (a),Every topological vector space has a balanced local base.,
+1.14 (b),Every locally convex space has a balanced convex local base.,
+10.18 (a),"If $A$ is a closed subalgebra of a Banach algebra $B$, and if $A$ contains the unit element of $B$, then $G(A)$ is a union of components of $A \cap G(B)$.","Every member of $A$ that has an inverse in $A$ has the same inverse in $B$. Thus $G(A) \subset G(B)$. Both $G(A)$ and $A \cap G(B)$ are open subsets of $A$. By Lemma 10.16, it is sufficient to prove that $G(B)$ contains no boundary point $y$ of $G(A)$. Any such $y$ is the limit of a sequence $\left\{x_{n}\right\}$ in $G(A)$. By Lemma 10.17, $\left\|x_{n}^{-1}\right\| \rightarrow \infty$. If $y$ were in $G(B)$, the continuity of inversion in $G(B)$ (Theorem 10.12) would force $x_{n}^{-1}$ to converge to $y^{-1}$. In particular $\left\{\left\|x_{n}^{-1}\right\|\right\}$ would be bounded. Hence $y \notin G(B)$, and $(a)$ is proved."
+10.18 (b),"Under the conditions that $A$ is a closed subalgebra of a Banach algebra $B$, and $A$ contains the unit element of $B$, if $x \in A$, then $\sigma_{A}(x)$ is the union of $\sigma_{B}(x)$ and a (possibly empty) collection of bounded components of the complement of $\sigma_{B}(x)$. In particular, the boundary of $\sigma_{A}(x)$ lies in $\sigma_{B}(x)$.","Let $\Omega_{A}$ and $\Omega_{B}$ be the complements of $\sigma_{A}(x)$ and of $\sigma_{B}(x)$, relative to $\mathscr{C}$. The inclusion $\Omega_{A} \subset \Omega_{B}$ is obvious, since $\lambda \in \Omega_{A}$ if and only if $\lambda e-x \in G(A)$. Let $\lambda_{0}$ be a boundary point of $\Omega_{A}$. Then $\lambda_{0} e-x$ is a boundary point of $G(A)$. By $(a), \lambda_{0} e-x \notin G(B)$. Hence $\lambda_{0} \notin \Omega_{B}$. Lemma 10.16 implies now that $\Omega_{A}$ is the union of certain components of $\Omega_{B}$. The other components of $\Omega_{B}$ are therefore subsets of $\sigma_{A}(x)$. This proves $(b)$."
+10.35,"Suppose that $X$ is an infinite-dimensional complex Banach space and that $T \in \mathscr{B}(X)$ is compact, $T \neq 0$. Then every $S \in \mathscr{B}(X)$ which commutes with some nonzero compact operator has an invariant subspace!",
+8.12,"If $L$ satisfies (a) and (b) of Theorem 8.12 and if $v \in C^{\infty}(\Omega)$, then every solution $u$ of (1) belongs to $C^{\infty}(\Omega)$. In particular, every solution of the homogeneous equation $L u=0$ is in $C^{\infty}(\Omega)$.","For if $v \in C^{\infty}(\Omega)$, then $\psi v \in \mathscr{D}\left(R^{n}\right)$ for every $\psi \in \mathscr{D}(\Omega)$; hence $v$ is locally $H^{s}$ for every $s$, and the theorem implies that $u$ is locally $H^{s}$ for every $s$; it follows from Theorems 8.11 and 7.25 that $u \in C^{\infty}(\Omega)$."

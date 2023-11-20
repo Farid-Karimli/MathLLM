@@ -1,0 +1,1512 @@
+Definition,Statement
+1.30,"If $a, b$ are real and $z=a+b i$, then the complex number $\bar{z}=a-b i$ is called the conjugate of $z$. The numbers $a$ and $b$ are the real part and the imaginary part of $z$, respectively.
+
+We shall occasionally write
+
+$$
+a=\operatorname{Re}(z), \quad b=\operatorname{Im}(z)
+$$"
+2.26,"For a metric space $X$ and a subset $E \subset X$: If $E^{
+\prime}$ denotes the set of all limit points of $E$ in $X$, then the closure of $E$ is the set $E=E \cup E^{
+\prime}$."
+1.6,"An ordered set is a set $S$ in which an order is defined.
+
+For example, $Q$ is an ordered set if $r<s$ is defined to mean that $s-r$ is a positive rational number."
+2.31,By an open cover of a set $E$ in a metric space $X$ we mean a collection $\left\{G_{\alpha}\right\}$ of open subsets of $X$ such that $E \subset \bigcup_{\alpha} G_{\alpha}$.
+1.7,"For an ordered set $S$ and a subset $E \subset S$: If there exists a $\beta \in S$ such that $x \leq \beta$ for every $x \in E$, we say that $E$ is bounded above, and call $\beta$ an upper bound of $E$. Lower bounds are defined in the same way (with $\geq$ in place of $\leq$ )."
+3.8,"For a metric space $X$: A sequence $\left\{p_{n}\right\}$ in a metric space $X$ is said to be a Cauchy sequence if for every $\varepsilon>0$ there is an integer $N$ such that $d\left(p_{n}, p_{m}\right)<\varepsilon$ if $n \geq N$ and $m \geq N$."
+1.4,"Throughout Chap. 1, the set of all rational numbers will be denoted by $Q$."
+3.12,A metric space in which every Cauchy sequence converges is said to be complete.
+1.27,"$i=(0,1)$."
+1.24,"A complex number is an ordered pair $(a, b)$ of real numbers. ""Ordered"" means that $(a, b)$ and $(b, a)$ are regarded as distinct if $a \neq b$. Let $x=(a, b), y=(c, d)$ be two complex numbers. We write $x=y$ if and only if $a=c$ and $b=d$. We define
+
+$$
+\begin{aligned}
+x+y & =(a+c, b+d) \\
+x y & =(a c-b d, a d+b c) .
+\end{aligned}
+$$"
+2.45,"For a metric space $X$ and subsets $A$ and $B$ of $X$: Two subsets $A$ and $B$ of a metric space $X$ are said to be separated if both $A \cap \bar{B}$ and $\bar{A} \cap B$ are empty, i.e., if no point of $A$ lies in the closure of $B$ and no point of $B$ lies in the closure of $A$.
+
+A set $E \subset X$ is said to be connected if $E$ is not a union of two nonempty separated sets."
+2.46,"Separated sets are of course disjoint, but disjoint sets need not be separated. For example, the interval $[0,1]$ and the segment $(1,2)$ are not separated, since 1 is a limit point of $(1,2)$. However, the segments $(0,1)$ and $(1,2)$ are separated."
+2.1,"Consider two sets $A$ and $B$, whose elements may be any objects whatsoever, and suppose that with each element $x$ of $A$ there is associated, in some manner, an element of $B$, which we denote by $f(x)$. Then $f$ is said to be a function from $A$ to $B$ (or a mapping of $A$ into $B$ ). The set $A$ is called the domain of $f$ (we also say $f$ is defined on $A$ ), and the elements $f(x)$ are called the values of $f$. The set of all values of $f$ is called the range of $f$."
+1.3 (a),"If $A$ is any set (whose elements may be numbers or any other objects), we write $x \in A$ to indicate that $x$ is a member (or an element) of $A$."
+1.3 (b),"If $x$ is not a member of $A$, we write: $x \notin A$."
+1.3 (c),"The set which contains no element will be called the empty set. If a set has at least one element, it is called nonempty."
+1.3 (d),"If $A$ and $B$ are sets, and if every element of $A$ is an element of $B$, we say that $A$ is a subset of $B$, and write $A \subset B$, or $B \supset A$. If, in addition, there is an element of $B$ which is not in $A$, then $A$ is said to be a proper subset of $B$. Note that $A \subset A$ for every set $A$."
+1.3 (e),"If $A \subset B$ and $B \subset A$, we write $A=B$. Otherwise $A \neq B."
+2.3,"If there exists a 1-1 mapping of $A$ onto $B$, we say that $A$ and $B$ can be put in 1-1 correspondence, or that $A$ and $B$ have the same cardinal number, or, briefly, that $A$ and $B$ are equivalent, and we write $A \sim B$. This relation clearly has the following properties:
+
+It is reflexive: $A \sim A$.
+
+It is symmetric: If $A \sim B$, then $B \sim A$.
+
+It is transitive: If $A \sim B$ and $B \sim C$, then $A \sim C$.
+
+Any relation with these three properties is called an equivalence relation."
+3.38,"Given a sequence $\left\{c_{n}\right\}$ of complex numbers, the series
+
+$$
+\sum_{n=0}^{\infty} c_{n} z^{n}
+$$
+
+is called a power series. The numbers $c_{n}$ are called the coefficients of the series; $z$ is a complex number.
+
+In general, the series will converge or diverge, depending on the choice of $z$. More specifically, with every power series there is associated a circle, the circle of convergence, such that (19) converges if $z$ is in the interior of the circle and diverges if $z$ is in the exterior (to cover all cases, we have to consider the plane as the interior of a circle of infinite radius, and a point as a circle of radius zero). The behavior on the circle of convergence is much more varied and cannot be described so simply."
+3.15,"For a sequence of real numbers $\left\{s_{n}\right\}$: If for every real $M$ there is an integer $N$ such that $n \geq N$ implies $s_{n} \geq M$, we then write
+
+$$
+s_{n} \rightarrow+\infty \text {. }
+$$
+
+Similarly, if for every real $M$ there is an integer $N$ such that $n \geq N$ implies $s_{n} \leq M$, we write
+
+$$
+s_{n} \rightarrow-\infty .
+$$
+
+It should be noted that we now use the symbol $\rightarrow$ (introduced in Definition 3.1) for certain types of divergent sequences, as well as for convergent sequences, but that the definitions of convergence and of limit, given in Definition 3.1 , are in no way changed."
+3.16,"For a sequence of real numbers $\left\{s_{n}\right\}$: Let $E$ be the set of numbers $x$ (in the extended real number system) such that $s_{n_{k}} \rightarrow x$ for some subsequence $\left\{s_{n_{k}}\right\}$. This set $E$ contains all subsequential limits as defined in Definition 3.5, plus possibly the numbers $+\infty,-\infty$.
+
+We now recall Definitions 1.8 and 1.23 and put
+
+$$
+\begin{gathered}
+s^{*}=\sup E, \\
+s_{*}=\inf E .
+\end{gathered}
+$$
+The numbers $s^{*}, s_{*}$ are called the upper and lower limits of $\left\{s_{n}\right\}$; we use the notation
+
+$$
+\limsup _{n \rightarrow \infty} s_{n}=s^{*}, \quad \liminf _{n \rightarrow \infty} s_{n}=s_{*} .
+$$"
+1.17,"An ordered field is a field $F$ which is also an ordered set, such that
+
+(i) $x+y<x+z$ if $x, y, z \in F$ and $y<z$,
+
+(ii) $x y>0$ if $x \in F, y \in F, x>0$, and $y>0$.
+
+If $x>0$, we call $x$ positive; if $x<0, x$ is negative.
+
+For example, $Q$ is an ordered field.
+
+All the familiar rules for working with inequalities apply in every ordered field: Multiplication by positive [negative] quantities preserves [reverses] inequalities, no square is negative, etc. The following proposition lists some of these."
+3.30,"$e=\sum_{n=0}^{\infty} \frac{1}{n !}$.
+
+Here $n !=1 \cdot 2 \cdot 3 \cdots n$ if $n \geq 1$, and $0 !=1$.
+
+Since
+
+$$
+\begin{aligned}
+s_{n} & =1+1+\frac{1}{1 \cdot 2}+\frac{1}{1 \cdot 2 \cdot 3}+\cdots+\frac{1}{1 \cdot 2 \cdots n} \\
+& <1+1+\frac{1}{2}+\frac{1}{2^{2}}+\cdots+\frac{1}{2^{n-1}}<3,
+\end{aligned}
+$$
+
+the series converges, and the definition makes sense. In fact, the series converges very rapidly and allows us to compute $e$ with great accuracy.
+
+It is of interest to note that $e$ can also be defined by means of another limit process; the proof provides a good illustration of operations with limits:"
+3.13 (a),"A sequence $\left\{s_{n}\right\}$ of real numbers is said to be monotonically increasing if $s_{n} \leq s_{n+1}(n=1,2,3, \ldots)$;"
+3.13 (b),"A sequence $\left\{s_{n}\right\}$ of real numbers is said to be monotonically decreasing if $s_{n} \geq s_{n+1}(n=1,2,3, \ldots)$."
+1.10,"An ordered set $S$ is said to have the least-upper-bound property if the following is true:
+
+If $E \subset \mathrm{S}, E$ is not empty, and $E$ is bounded above, then $\sup E$ exists in $S$.
+
+Example 1.9 $(a)$ shows that $Q$ does not have the least-upper-bound property.
+
+We shall now show that there is a close relation between greatest lower bounds and least upper bounds, and that every ordered set with the least-upperbound property also has the greatest-lower-bound property."
+2.2,"For sets $A$ and $B$ and a mapping $f: A \rightarrow B$: If $E \subset A, f(E)$ is defined to be the set of all elements $f(x)$, for $x \in E$. We call $f(E)$ the image of $E$ under $f$. In this notation, $f(A)$ is the range of $f$. If $f(A)=B$, we say that $f$ maps $A$ onto $B. If $E \subset B, f^{-1}(E)$ denotes the set of all $x \in A$ such that $f(x) \in E$. We call $f^{-1}(E)$ the inverse image of $E$ under $f$. If $y \in B, f^{-1}(y)$ is the set of all $x \in A$ such that $f(x)=y$. If, for each $y \in B, f^{-1}(y)$ consists of at most one element of $A$, then $f$ is said to be a 1-1 (one-to-one) mapping of $A$ into $B. This may also be expressed as follows: $f$ is a 1-1 mapping of $A$ into $B$ provided that $f\left(x_{1}\right) \neq f\left(x_{2}\right)$ whenever $x_{1} \neq x_{2}, x_{1} \in A, x_{2} \in A$. (The notation $x_{1} \neq x_{2}$ means that $x_{1}$ and $x_{2}$ are distinct elements; otherwise we write $x_{1}=x_{2}$)."
+1.5,"For a set $S$: An order on $S$ is a relation, denoted by <, with the following two properties:
+
+(i) If $x \in S$ and $y \in S$ then one and only one of the statements
+
+is true.
+
+$$
+x<y, \quad x=y, \quad y<x
+$$
+
+(ii) If $x, y, z \in S$, if $x<y$ and $y<z$, then $x<z$.
+
+The statement "" $x<y$ "" may be read as "" $x$ is less than $y$ "" or "" $x$ is smaller than $y$ "" or "" $x$ precedes $y$ "".
+
+It is often convenient to write $y>x$ in place of $x<y$.
+
+The notation $x \leq y$ indicates that $x<y$ or $x=y$, without specifying which of these two is to hold. In other words, $x \leq y$ is the negation of $x>y$."
+2.32,"A subset $K$ of a metric space $X$ is said to be compact if every open cover of $K$ contains a finite subcover.
+
+More explicitly, the requirement is that if $\left\{G_{\alpha}\right\}$ is an open cover of $K$, then there are finitely many indices $\alpha_{1}, \ldots, \alpha_{n}$ such that
+
+$$
+K \subset G_{\alpha_{1}} \cup \cdots \cup G_{\alpha_{n}} .
+$$
+
+The notion of compactness is of great importance in analysis, especially in connection with continuity (Chap. 4).
+
+It is clear that every finite set is compact. The existence of a large class of infinite compact sets in $R^{k}$ will follow from Theorem 2.41 .
+
+We observed earlier (in Sec. 2.29) that if $E \subset Y \subset X$, then $E$ may be open relative to $Y$ without being open relative to $X$. The property of being open thus depends on the space in which $E$ is embedded. The same is true of the property of being closed.
+
+Compactness, however, behaves better, as we shall now see. To formulate the next theorem, let us say, temporarily, that $K$ is compact relative to $X$ if the requirements of Definition 2.32 are met."
+2.7,"By a sequence, we mean a function $f$ defined on the set $J$ of all positive integers. If $f(n)=x_{n}$, for $n \in J$, it is customary to denote the sequence $f$ by the symbol $\left\{x_{n}\right\}$, or sometimes by $x_{1}, x_{2}, x_{3}, \ldots$. The values of $f$, that is, the elements $x_{n}$, are called the terms of the sequence. If $A$ is a set and if $x_{n} \in A$ for all $n \in J$, then $\left\{x_{n}\right\}$ is said to be a sequence in $A$, or a sequence of elements of $A$.
+
+Note that the terms $x_{1}, x_{2}, x_{3}, \ldots$ of a sequence need not be distinct.
+
+Since every countable set is the range of a 1-1 function defined on $J$, we may regard every countable set as the range of a sequence of distinct terms. Speaking more loosely, we may say that the elements of any countable set can be ""arranged in a sequence.""
+
+Sometimes it is convenient to replace $J$ in this definition by the set of all nonnegative integers, i.e., to start with 0 rather than with 1 ."
+4.1,"For metric spaces $X$ and $Y$, a subset $E \subset X$, and a function $f: E \rightarrow Y$: We write $f(x) \rightarrow q$ as $x \rightarrow p$, or
+
+$$
+\lim _{x \rightarrow p} f(x)=q
+$$
+
+if there is a point $q \in Y$ with the following property: For every $\varepsilon>0$ there exists a $\delta>0$ such that
+
+$$
+d_{Y}(f(x), q)<\varepsilon
+$$
+
+for all points $x \in E$ for which
+
+$$
+0<d_{x}(x, p)<\delta
+$$
+
+The symbols $d_{X}$ and $d_{Y}$ refer to the distances in $X$ and $Y$, respectively.
+
+If $X$ and/or $Y$ are replaced by the real line, the complex plane, or by some euclidean space $R^{k}$, the distances $d_{X}, d_{Y}$ are of course replaced by absolute values, or by norms of differences (see Sec. 2.16).
+
+It should be noted that $p \in X$, but that $p$ need not be a point of $E$ in the above definition. Moreover, even if $p \in E$, we may very well have $f(p) \neq \lim _{x \rightarrow p} f(x)$.
+
+We can recast this definition in terms of limits of sequences:"
+2.15,"A set $X$, whose elements we shall call points, is said to be a metric space if with any two points $p$ and $q$ of $X$ there is associated a real number $d(p, q)$, called the distance from $p$ to $q$, such that
+
+(a) $d(p, q)>0$ if $p \neq q ; d(p, p)=0$;
+
+(b) $d(p, q)=d(q, p)$;
+
+(c) $d(p, q) \leq d(p, r)+d(r, q)$, for any $r \in X$. a metric.
+
+Any function with these three properties is called a distance function, or a metric."
+4.28,"For a real function $f$ on $(a, b)$: $f$ is said to be monotonically increasing on $(a, b)$ if $a<x<y<b$ implies $f(x) \leq f(y)$. If the last inequality is reversed, we obtain the definition of a monotonically decreasing function. The class of monotonic functions consists of both the increasing and the decreasing functions."
+5.7,"For a real function $f$ defined on a metric space $X$: $f$ has a local maximum at a point $p \in X$ if there exists $\delta>0$ such that $f(q) \leq f(p)$ for all $q \in X$ with $d(p, q)<\delta$. Local minima are defined likewise."
+4.13,A mapping $\mathrm{f}$ of a set $E$ into $R^{k}$ is said to be bounded if there is a real number $M$ such that $|\mathrm{f}(x)| \leq M$ for all $x \in E$.
+3.21,"Given a sequence $\left\{a_{n}\right\}$, we use the notation
+
+$$
+\sum_{n=p}^{q} a_{n} \quad(p \leq q)
+$$
+
+to denote the sum $a_{p}+a_{p+1}+\cdots+a_{q}$. With $\left\{a_{n}\right\}$ we associate a sequence $\left\{s_{n}\right\}$, where
+
+$$
+s_{n}=\sum_{k=1}^{n} a_{k}
+$$
+
+For $\left\{s_{n}\right\}$ we also use the symbolic expression
+
+or, more concisely,
+
+$$
+a_{1}+a_{2}+a_{3}+\cdots
+$$
+
+$$
+\sum_{n=1}^{\infty} a_{n}
+$$
+
+The symbol (4) we call an infinite series, or just a series. The numbers $s_{n}$ are called the partial sums of the series. If $\left\{s_{n}\right\}$ converges to $s$, we say that the series converges, and write
+
+$$
+\sum_{n=1}^{\infty} a_{n}=s
+$$
+
+The number $s$ is called the sum of the series; but it should be clearly understood that $s$ is the limit of a sequence of sums, and is not obtained simply by addition.
+
+If $\left\{s_{n}\right\}$ diverges, the series is said to diverge.
+
+Sometimes, for convenience of notation, we shall consider series of the form
+
+$$
+\sum_{n=0}^{\infty} a_{n}
+$$
+
+And frequently, when there is no possible ambiguity, or when the distinction is immaterial, we shall simply write $\Sigma a_{n}$ in place of (4) or (5).
+
+It is clear that every theorem about sequences can be stated in terms of series (putting $a_{1}=s_{1}$, and $a_{n}=s_{n}-s_{n-1}$ for $n>1$ ), and vice versa. But it is nevertheless useful to consider both concepts.
+
+The Cauchy criterion (Theorem 3.11) can be restated in the following form:"
+4.32,"For any real $c$, the set of real numbers $x$ such that $x>c$ is called a neighborhood of $+\infty$ and is written $(c,+\infty)$. Similarly, the set $(-\infty, c)$ is a neighborhood of $-\infty$."
+1.36,"For each positive integer $k$, let $R^{k}$ be the set of all ordered $k$-tuples
+
+$$
+\mathbf{x}=\left(x_{1}, x_{2}, \ldots, x_{k}\right)
+$$
+
+where $x_{1}, \ldots, x_{k}$ are real numbers, called the coordinates of $\mathbf{x}$. The elements of $R^{k}$ are called points, or vectors, especially when $k>1$. We shall denote vectors by boldfaced letters. If $\mathbf{y}=\left(y_{1}, \ldots, y_{k}\right)$ and if $\alpha$ is a real number, put
+
+$$
+\begin{aligned}
+\mathbf{x}+\mathbf{y} & =\left(x_{1}+y_{1}, \ldots, x_{k}+y_{k}\right) \\
+\alpha \mathbf{x} & =\left(\alpha x_{1}, \ldots, \alpha x_{k}\right)
+\end{aligned}
+$$
+
+so that $\mathbf{x}+\mathbf{y} \in R^{k}$ and $\alpha \mathbf{x} \in R^{k}$. This defines addition of vectors, as well as multiplication of a vector by a real number (a scalar). These two operations satisfy the commutative, associative, and distributive laws (the proof is trivial, in view of the analogous laws for the real numbers) and make $R^{k}$ into a vector space over the real field. The zero element of $R^{k}$ (sometimes called the origin or the null vector) is the point 0 , all of whose coordinates are 0 .
+
+We also define the so-called ""inner product"" (or scalar product) of $\mathbf{x}$ and y by
+
+and the norm of $\mathbf{x}$ by
+
+$$
+\mathbf{x} \cdot \mathbf{y}=\sum_{i=1}^{k} x_{i} y_{i}
+$$
+
+$$
+|\mathbf{x}|=(\mathbf{x} \cdot \mathbf{x})^{1 / 2}=\left(\sum_{1}^{k} x_{i}^{2}\right)^{1 / 2}
+$$
+
+The structure now defined (the vector space $R^{k}$ with the above inner product and norm) is called euclidean $k$-space."
+4.25,"For a function $f$ defined on $(a, b)$: Consider any point $x$ such that $a \leq x<b$. We write
+
+$$
+f(x+)=q
+$$
+
+if $f\left(t_{n}\right) \rightarrow q$ as $n \rightarrow \infty$, for all sequences $\left\{t_{n}\right\}$ in $(x, b)$ such that $t_{n} \rightarrow x$. To obtain the definition of $f(x-)$, for $a<x \leq b$, we restrict ourselves to sequences $\left\{t_{n}\right\}$ in $(a, x)$.
+
+It is clear that any point $x$ of $(a, b), \lim _{t \rightarrow x} f(t)$ exists if and only if
+
+$$
+f(x+)=f(x-)=\lim _{t \rightarrow x} f(t)
+$$"
+4.18,"For a mapping $f$ of a metric space $X$ into a metric space $Y$: We say that $f$ is uniformly continuous on $X$ if for every $\varepsilon>0$ there exists $\delta>0$ such that
+
+$$
+d_{Y}(f(p), f(q))<\varepsilon
+$$
+
+for all $p$ and $q$ in $X$ for which $d_{\mathbf{X}}(p, q)<\delta$.
+
+Let us consider the differences between the concepts of continuity and of uniform continuity. First, uniform continuity is a property of a function on a set, whereas continuity can be defined at a single point. To ask whether a given function is uniformly continuous at a certain point is meaningless. Second, if $f$ is continuous on $X$, then it is possible to find, for each $\varepsilon>0$ and for each point $p$ of $X$, a number $\delta>0$ having the property specified in Definition 4.5. This $\delta$ depends on $\varepsilon$ and on $p$. If $f$ is, however, uniformly continuous on $X$, then it is possible, for each $\varepsilon>0$, to find one number $\delta>0$ which will do for all points $p$ of $X$.
+
+Evidently, every uniformly continuous function is continuous. That the two concepts are equivalent on compact sets follows from the next theorem."
+2.4 (a),"For any positive integer $n$, let $J_{n}$ be the set whose elements are the integers $1,2, \ldots, n$; let $J$ be the set consisting of all positive integers. For any set $A$, we say: $A$ is finite if $A \sim J_{n}$ for some $n$ (the empty set is also considered to be finite)."
+2.4 (b),For any set $A$: $A$ is infinite if $A$ is not finite.
+2.4 (c),For any set $A$: $A$ is countable if $A \sim J$.
+2.4 (d),For any set $A$: $A$ is uncountable if $A$ is neither finite nor countable.
+2.4 (e),For any set $A$: $A$ is at most countable if $A$ is finite or countable.
+11.19,"For a real-valued function $s$ defined on $X$: If the range of $s$ is finite, we say that $s$ is a simple function.
+
+Let $E \subset X$, and put
+
+$$
+K_{E}(x)= \begin{cases}1 & (x \in E), \\ 0 & (x \notin E) .\end{cases}
+$$
+
+$K_{E}$ is called the characteristic function of $E$.
+
+Suppose the range of $s$ consists of the distinct numbers $c_{1}, \ldots, c_{n}$. Let
+
+$$
+E_{l}=\left\{x \mid s(x)=c_{i}\right\} \quad(i=1, \ldots, n)
+$$
+
+Then
+
+$$
+s=\sum_{n=1}^{n} c_{i} K_{E_{i}}
+$$
+
+that is, every simple function is a finite linear combination of characteristic functions. It is clear that $s$ is measurable if and only if the sets $E_{1}, \ldots, E_{n}$ are measurable.
+
+It is of interest that every function can be approximated by simple functions:"
+4.5,"For metric spaces $X$ and $Y$, a subset $E \subset X$, a point $p \in E$, and a function $f: E \rightarrow Y$: $f$ is said to be continuous at $p$ if for every $\varepsilon>0$ there exists a $\delta>0$ such that
+
+$$
+d_{Y}(f(x), f(p))<\varepsilon
+$$
+
+for all points $x \in E$ for which $d_{x}(x, p)<\delta$.
+
+If $f$ is continuous at every point of $E$, then $f$ is said to be continuous on $E$.
+
+It should be noted that $f$ has to be defined at the point $p$ in order to be continuous at $p$. If $p$ is an isolated point of $E$, then our definition implies that every function $f$ which has $E$ as its domain of definition is continuous at $p$. For, no matter which $\varepsilon>0$ we choose, we can pick $\delta>0$ so that the only point $x \in E$ for which $d_{x}(x, p)<\delta$ is $x=p$; then
+
+$$
+d_{Y}(f(x), f(p))=0<\varepsilon .$$"
+6.14,"The unit step function $I$ is defined by
+
+$$
+I(x)= \begin{cases}0 & (x \leq 0) \\ 1 & (x>0)\end{cases}
+$$"
+3.48,"Given $\Sigma a_{n}$ and $\Sigma b_{n}$, we put
+
+$$
+c_{n}=\sum_{k=0}^{n} a_{k} b_{n-k} \quad(n=0,1,2, \ldots)
+$$
+
+and call $\Sigma c_{n}$ the product of the two given series.
+
+This definition may be motivated as follows. If we take two power series $\Sigma a_{n} z^{n}$ and $\Sigma b_{n} z^{n}$, multiply them term by term, and collect terms containing the same power of $z$, we get
+
+$$
+\begin{aligned}
+\sum_{n=0}^{\infty} a_{n} z^{n} \cdot \sum_{n=0}^{\infty} b_{n} z^{n} & =\left(a_{0}+a_{1} z+a_{2} z^{2}+\cdots\right)\left(b_{0}+b_{1} z+b_{2} z^{2}+\cdots\right) \\
+& =a_{0} b_{0}+\left(a_{0} b_{1}+a_{1} b_{0}\right) z+\left(a_{0} b_{2}+a_{1} b_{1}+a_{2} b_{0}\right) z^{2}+\cdots \\
+& =c_{0}+c_{1} z+c_{2} z^{2}+\cdots .
+\end{aligned}
+$$
+
+Setting $z=1$, we arrive at the above definition."
+4.3,"For two complex functions $f$ and $g$ defined on $E$:
+
+- $f+g$ assigns to each point $x$ of $E$ the number $f(x)+g(x)$
+- $f-g$ assigns to each point $x$ of $E$ the number $f(x)-g(x)$
+- $f g$ assigns to each point $x$ of $E$ the number $f(x) \cdot g(x)$
+- $f / g$ assigns to each point $x$ of $E$ the number $f(x) / g(x)$, with the understanding that the quotient is defined only at those points $x$ of $E$ at which $g(x) \neq 0$
+- If $f$ assigns to each point $x$ of $E$ the same number $c$, then $f$ is said to be a constant function, or simply a constant, and we write $f=c$
+- If $f$ and $g$ are real functions, and if $f(x) \geq g(x)$ for every $x \in E$, we shall sometimes write $f \geq g$, for brevity.
+
+Similarly, if $\mathbf{f}$ and $\mathbf{g}$ map $E$ into $R^{k}$, we define $\mathbf{f}+\mathbf{g}$ and $\mathbf{f} \cdot \mathbf{g}$ by
+
+$$
+(\mathbf{f}+\mathbf{g})(x)=\mathbf{f}(x)+\mathbf{g}(x), \quad(\mathbf{f} \cdot \mathbf{g})(x)=\mathbf{f}(x) \cdot \mathbf{g}(x)
+$$
+
+and if $\lambda$ is a real number, $(\lambda \mathbf{f})(x)=\lambda \mathbf{f}(x)$."
+6.3,"We say that the partition $P^{*}$ is a refinement of $P$ if $P^{*} \supset P$ (that is, if every point of $P$ is a point of $P^{*}$ ). Given two partitions, $P_{1}$ and $P_{2}$, we say that $P^{*}$ is their common refinement if $P^{*}=P_{1} \cup P_{2}$."
+5.14,"If $f$ has a derivative $f^{
+\prime}$ on an interval, and if $f^{
+\prime}$ is itself differentiable, we denote the derivative of $f^{
+\prime}$ by $f^{
+\prime \prime}$ and call $f^{
+\prime \prime}$ the second derivative of $f$. Continuing in this manner, we obtain functions
+
+$$
+f, f^{
+\prime}, f^{
+\prime \prime}, f^{(3)}, \ldots, f^{(n)}
+$$
+
+each of which is the derivative of the preceding one. $f^{(n)}$ is called the $n$th derivative, or the derivative of order $n$, of $f$.
+
+In order for $f^{(n)}(x)$ to exist at a point $x, f^{(n-1)}(t)$ must exist in a neighborhood of $x$ (or in a one-sided neighborhood, if $x$ is an endpoint of the interval on which $f$ is defined), and $f^{(n-1)}$ must be differentiable at $x$. Since $f^{(n-1)}$ must exist in a neighborhood of $x, $f^{(n-2)}$ must be differentiable in that neighborhood."
+3.52,"Let $\left\{k_{n}\right\}, n=1,2,3, \ldots$, be a sequence in which every positive integer appears once and only once (that is, $\left\{k_{n}\right\}$ is a 1-1 function from $J$ onto $J$, in the notation of Definition 2.2). Putting
+
+$$
+a_{n}^{\prime}=a_{k_{n}} \quad(n=1,2,3, \ldots)
+$$
+
+we say that $\Sigma a_{n}^{\prime}$ is a rearrangement of $\Sigma a_{n}$."
+1.8,"Suppose $S$ is an ordered set, $E \subset S$, and $E$ is bounded above. Suppose there exists an $\alpha \in S$ with the following properties:
+
+(i) $\alpha$ is an upper bound of $E$.
+
+(ii) If $\gamma<\alpha$ then $\gamma$ is not an upper bound of $E$.
+
+Then $\alpha$ is called the least upper bound of $E$ [that there is at most one such $\alpha$ is clear from (ii)] or the supremum of $E$, and we write
+
+$$
+\alpha=\sup E .
+$$
+
+The greatest lower bound, or infimum, of a set $E$ which is bounded below is defined in the same manner: The statement
+
+$$
+\alpha=\inf E
+$$
+
+means that $\alpha$ is a lower bound of $E$ and that no $\beta$ with $\beta>\alpha$ is a lower bound of $E$."
+4.26,"Let $f$ be defined on $(a, b)$. If $f$ is discontinuous at a point $x$, and if $f(x+)$ and $f(x-)$ exist, then $f$ is said to have a discontinuity of the first $k i n d$, or a simple discontinuity, at $x$. Otherwise the discontinuity is said to be of the second kind.
+
+There are two ways in which a function can have a simple discontinuity: either $f(x+) \neq f(x-)$ [in which case the value $f(x)$ is immaterial], or $f(x+)= f(x-) \neq f(x)$."
+7.22,"For a family $\mathscr{F}$ of complex functions $f$ defined on a set $E$ in a metric space $X$: $\mathscr{F}$ is said to be equicontinuous on $E$ if for every $\varepsilon>0$ there exists a $\delta>0$ such that
+
+$$
+|f(x)-f(y)|<\varepsilon
+$$
+
+whenever $d(x, y)<\delta, x \in E, y \in E$, and $f \in \mathscr{F}$. Here $d$ denotes the metric of $X$."
+7.1,"For a sequence of functions $\left\{f_{n}\right\}, n=1,2,3, \ldots$, defined on a set $E$, and the sequence of numbers $\left\{f_{n}(x)\right\}$ converges for every $x \in E$: We can then define a function $f$ by
+
+$$
+f(x)=\lim _{n \rightarrow \infty} f_{n}(x) \quad(x \in E)
+$$
+
+Under these circumstances we say that $\left\{f_{n}\right\}$ converges on $E$ and that $f$ is the limit, or the limit function, of $\left\{f_{n}\right\}$. Sometimes we shall use a more descriptive terminology and shall say that "" $\left\{f_{n}\right\}$ converges to $f$ pointwise on $E$ "" if (1) holds. Similarly, if $\Sigma f_{n}(x)$ converges for every $x \in E$, and if we define
+
+$$
+f(x)=\sum_{n=1}^{\infty} f_{n}(x) \quad(x \in E)
+$$
+
+the function $f$ is called the sum of the series $\Sigma f_{n}$."
+3.1,"A sequence $\left\{p_{n}\right\}$ in a metric space $X$ is said to converge if there is a point $p \in X$ with the following property: For every $\varepsilon>0$ there is an integer $N$ such that $n \geq N$ implies that $d\left(p_{n}, p\right)<\varepsilon$. In this case we also say that $\left\{p_{n}\right\}$ converges to $p$, or that $p$ is the limit of $\left\{p_{n}\right\}$, and we write $p_{n} \rightarrow p$, or
+
+$$
+\lim _{n \rightarrow \infty} p_{n}=p .
+$$
+
+If $\left\{p_{n}\right\}$ does not converge, it is said to diverge.
+
+It might be well to point out that our definition of ""convergent sequence"" depends not only on $\left\{p_{n}\right\}$ but also on $X$; for instance, the sequence $\{1 / n\}$ converges in $R^{1}$ (to 0 ), but fails to converge in the set of all positive real numbers [with $d(x, y)=|x-y|$ ]. In cases of possible ambiguity, we can be more precise and specify ""convergent in $X$ "" rather than ""convergent.""
+
+The range of a sequence may be a finite set, or it may be infinite. The sequence $\left\{p_{n}\right\}$ is said to be bounded if its range is bounded."
+11.21,"Suppose
+
+$$
+s(x)=\sum_{i=1}^{n} c_{i} K_{E_{i}}(x) \quad\left(x \in X, c_{i}>0\right)
+$$
+
+is measurable, and suppose $E \in \mathfrak{M}$. We define
+
+$$
+I_{E}(s)=\sum_{i=1}^{n} c_{i} \mu\left(E \cap E_{i}\right)
+$$
+
+If $f$ is measurable and nonnegative, we define
+
+$$
+\int_{E} f d \mu=\sup I_{E}(s),
+$$
+
+where the sup is taken over all measurable simple functions $s$ such that $0 \leq s \leq f$.
+
+The left member of (53) is called the Lebesgue integral of $f$, with respect to the measure $\mu$, over the set $E$. It should be noted that the integral may have the value $+\infty$.
+
+It is easily verified that
+
+$$
+\int_{E} s d \mu=I_{E}(s)
+$$
+
+for every nonnegative simple measurable function $s$."
+7.7,"We say that a sequence of functions $\left\{f_{n}\right\}, n=1,2,3, \ldots$, converges uniformly on $E$ to a function $f$ if for every $\varepsilon>0$ there is an integer $N$ such that $n \geq N$ implies
+
+$$
+\left|f_{n}(x)-f(x)\right| \leq \varepsilon
+$$
+
+for all $x \in E$.
+
+It is clear that every uniformly convergent sequence is pointwise convergent. Quite explicitly, the difference between the two concepts is this: If $\left\{f_{n}\right\}$ converges pointwise on $E$, then there exists a function $f$ such that, for every $\varepsilon>0$, and for every $x \in E$, there is an integer $N$, depending on $\varepsilon$ and on $x$, such that (12) holds if $n \geq N$; if $\left\{f_{n}\right\}$ converges uniformly on $E$, it is possible, for each $\varepsilon>0$, to find one integer $N$ which will do for all $x \in E$.
+
+We say that the series $\Sigma f_{n}(x)$ converges uniformly on $E$ if the sequence $\left\{s_{n}\right\}$ of partial sums defined by
+
+$$
+\sum_{i=1}^{n} f_{i}(x)=s_{n}(x)
+$$
+
+converges uniformly on $E$.
+
+The Cauchy criterion for uniform convergence is as follows."
+7.30,"Let $\mathscr{A}$ be a family of functions on a set $E$: $\mathscr{A}$ is said to separate points on $E$ if to every pair of distinct points $x_{1}, x_{2} \in E$ there corresponds a function $f \in \mathscr{A}$ such that $f\left(x_{1}\right) \neq f\left(x_{2}\right)$. If to each $x \in E$ there corresponds a function $g \in \mathscr{A}$ such that $g(x) \neq 0$, we say that $\mathscr{A}$ vanishes at no point of $E$. The algebra of all polynomials in one variable clearly has these properties on $R^{1}$. An example of an algebra which does not separate points is the set of all even polynomials, say on $[-1,1]$, since $f(-x)=f(x)$ for every even function $f$."
+7.28,"{'statement': 'A family $\\mathscr{A}$ of complex functions defined on a set $E$ is said to be an algebra if (i) $f+g \\in \\mathscr{A}$, (ii) $f g \\in \\mathscr{A}$, and (iii) $c f \\in \\mathscr{A}$ for all $f \\in \\mathscr{A}, g \\in \\mathscr{A}$ and for all complex constants $c$, that is, if $\\mathscr{A}$ is closed under addition, multiplication, and scalar multiplication. We shall also have to consider algebras of real functions; in this case, (iii) is of course only required to hold for all real $c$. If $\\mathscr{A}$ has the property that $f \\in \\mathscr{A}$ whenever $f_{n} \\in \\mathscr{A}(n=1,2,3, \\ldots)$ and $f_{n} \\rightarrow f$ uniformly on $E$, then $\\mathscr{A}$ is said to be uniformly closed. Let $\\mathscr{B}$ be the set of all functions which are limits of uniformly convergent sequences of members of $\\mathscr{A}$. Then $\\mathscr{B}$ is called the uniform closure of $\\mathscr{A}$. (See Definition 7.14.) For example, the set of all polynomials is an algebra, and the Weierstrass theorem may be stated by saying that the set of continuous functions on $[a, b]$ is the uniform closure of the set of polynomials on $[a, b]$.'}"
+6.1,"For a given interval $[a, b]$ and a bounded real function $f$ defined on $[a, b]$: By a partition $P$ of $[a, b]$ we mean a finite set of points $x_{0}, x_{1}, \ldots, x_{n}$, where
+
+$$
+a=x_{0} \leq x_{1} \leq \cdots \leq x_{n-1} \leq x_{n}=b .
+$$
+
+We write
+
+$$
+\Delta x_{i}=x_{i}-x_{i-1} \quad(i=1, \ldots, n)
+$$
+
+Now suppose $f$ is a bounded real function defined on $[a, b]$. Corresponding to each partition $P$ of $[a, b]$ we put
+
+$$
+\begin{array}{rlrl}
+M_{i} & =\sup f(x) & & \left(x_{i-1} \leq x \leq x_{i}\right), \\
+m_{i} & =\inf f(x) & & \left(x_{i-1} \leq x \leq x_{i}\right), \\
+U(P, f) & =\sum_{i=1}^{n} M_{i} \Delta x_{i}, & \\
+L(P, f) & =\sum_{i=1}^{n} m_{i} \Delta x_{i}, &
+\end{array}
+$$
+
+and finally
+
+$$
+\begin{aligned}
+& \int_{a}^{b} f d x=\inf U(P, f), \\
+& \int_{a}^{b} f d x=\sup L(P, f),
+\end{aligned}
+$$
+
+where the inf and the sup are taken over all partitions $P$ of $[a, b] . The left members of (1) and (2) are called the upper and lower Riemann integrals of $f$ over $[a, b]$, respectively.
+
+If the upper and lower integrals are equal, we say that $f$ is Riemannintegrable on $[a, b]$, we write $f \in \mathscr{R}$ (that is, $\mathscr{R}$ denotes the set of Riemannintegrable functions), and we denote the common value of (1) and (2) by
+
+$$
+\int_{a}^{b} f d x
+$$
+
+or by
+
+$$
+\int_{a}^{b} f(x) d x .
+$$
+
+This is the Riemann integral of $f$ over $[a, b]$. Since $f$ is bounded, there exist two numbers, $m$ and $M$, such that
+
+$$
+m \leq f(x) \leq M \quad(a \leq x \leq b)
+$$
+
+Hence, for every $P$,
+
+$$
+m(b-a) \leq L(P, f) \leq U(P, f) \leq M(b-a)
+$$
+
+so that the numbers $L(P, f)$ and $U(P, f)$ form a bounded set. This shows that the upper and lower integrals are defined for every bounded function $f$. The question of their equality, and hence the question of the integrability of $f$, is a more delicate one. Instead of investigating it separately for the Riemann integral, we shall immediately consider a more general situation."
+7.14,"If $X$ is a metric space, $\mathscr{C}(X)$ will denote the set of all complexvalued, continuous, bounded functions with domain $X$.
+
+[Note that boundedness is redundant if $X$ is compact (Theorem 4.15). Thus $\mathscr{C}(X)$ consists of all complex continuous functions on $X$ if $X$ is compact.]
+
+We associate with each $f \in \mathscr{C}(X)$ its supremum norm
+
+$$
+\|f\|=\sup _{x \in X}|f(x)| .
+$$
+
+Since $f$ is assumed to be bounded, $\|f\|<\infty$. It is obvious that $\|f\|=0$ only if $f(x)=0$ for every $x \in X$, that is, only if $f=0$. If $h=f+g$, then
+
+$$
+|h(x)| \leq|f(x)|+|g(x)| \leq\|f\|+\|g\|
+$$
+
+for all $x \in X$; hence
+
+$$
+\|f+g\| \leq\|f\|+\|g\|
+$$
+
+If we define the distance between $f \in \mathscr{C}(X)$ and $g \in \mathscr{C}(X)$ to be $\|f-g\|$, it follows that Axioms 2.15 for a metric are satisfied.
+
+We have thus made $\mathscr{C}(X)$ into a metric space.
+
+Theorem 7.9 can be rephrased as follows:
+
+$A$ sequence $\left\{f_{n}\right\}$ converges to $f$ with respect to the metric of $\mathscr{C}(X)$ if and only if $f_{n} \rightarrow f$ uniformly on $X$.
+
+Accordingly, closed subsets of $\mathscr{C}(X)$ are sometimes called uniformly closed, the closure of a set $\mathscr{A} \subset \mathscr{C}(X)$ is called its uniform closure, and so on."
+9.22,"For a metric space $X$ with metric $d$, and a mapping $\varphi: X \rightarrow X$: If there is a number $c<1$ such that
+
+$$
+d(\varphi(x), \varphi(y)) \leq c d(x, y)
+$$
+
+for all $x, y \in X$, then $\varphi$ is said to be a contraction of $X$ into $X."
+1.23,"The extended real number system consists of the real field $R$ and two symbols, $+\infty$ and $-\infty$. We preserve the original order in $R$, and define
+
+for every $x \in R$.
+
+$$
+-\infty<x<+\infty
+$$
+
+It is then clear that $+\infty$ is an upper bound of every subset of the extended real number system, and that every nonempty subset has a least upper bound. If, for example, $E$ is a nonempty set of real numbers which is not bounded above in $R$, then $\sup E=+\infty$ in the extended real number system.
+
+Exactly the same remarks apply to lower bounds.
+
+The extended real number system does not form a field, but it is customary to make the following conventions:
+
+(a) If $x$ is real then
+
+$$
+x+\infty=+\infty, \quad x-\infty=-\infty, \quad \frac{x}{+\infty}=\frac{x}{-\infty}=0
+$$
+
+(b) If $x>0$ then $x \cdot(+\infty)=+\infty, x \cdot(-\infty)=-\infty$.
+
+(c) If $x<0$ then $x \cdot(+\infty)=-\infty, x \cdot(-\infty)=+\infty$.
+
+When it is desired to make the distinction between real numbers on the one hand and the symbols $+\infty$ and $-\infty$ on the other quite explicit, the former are called finite."
+7.19,"Let $\left\{f_{n}\right\}$ be a sequence of functions defined on a set $E$:We say that $\left\{f_{n}\right\}$ is pointwise bounded on $E$ if the sequence $\left\{f_{n}(x)\right\}$ is bounded for every $x \in E$, that is, if there exists a finite-valued function $\phi$ defined on $E$ such that
+
+$$
+\left|f_{n}(x)\right|<\phi(x) \quad(x \in E, n=1,2,3, \ldots)
+$$
+
+We say that $\left\{f_{n}\right\}$ is uniformly bounded on $E$ if there exists a number $M$ such that
+
+$$
+\left|f_{n}(x)\right|<M \quad(x \in E, n=1,2,3, \ldots)
+$$
+
+Now if $\left\{f_{n}\right\}$ is pointwise bounded on $E$ and $E_{1}$ is a countable subset of $E$, it is always possible to find a subsequence $\left\{f_{n_{k}}\right\}$ such that $\left\{f_{n_{k}}(x)\right\}$ converges for every $x \in E_{1}$. This can be done by the diagonal process which is used in the proof of Theorem 7.23.
+
+However, even if $\left\{f_{n}\right\}$ is a uniformly bounded sequence of continuous functions on a compact set $E$, there need not exist a subsequence which converges pointwise on $E. In the following example, this would be quite troublesome to prove with the equipment which we have at hand so far, but the proof is quite simple if we appeal to a theorem from Chap. 11."
+7.21,"Let
+
+$$
+f_{n}(x)=\frac{x^{2}}{x^{2}+(1-n x)^{2}} \quad(0 \leq x \leq 1, n=1,2,3, \ldots) .
+$$
+
+Then $\left|f_{n}(x)\right| \leq 1$, so that $\left\{f_{n}\right\}$ is uniformly bounded on $[0,1]$. Also
+
+$$
+\lim _{n \rightarrow \infty} f_{n}(x)=0 \quad(0 \leq x \leq 1)
+$$
+
+but
+
+$$
+f_{n}\left(\frac{1}{n}\right)=1 \quad(n=1,2,3, \ldots)
+$$
+
+so that no subsequence can converge uniformly on $[0,1]$.
+
+The concept which is needed in this connection is that of equicontinuity; it is given in the following definition."
+5.1,"Let $f$ be defined (and real-valued) on $[a, b]$. For any $x \in[a, b]$ form the quotient
+
+$$
+\phi(t)=\frac{f(t)-f(x)}{t-x} \quad(a<t<b, t \neq x)
+$$
+
+and define
+
+$$
+f^{\prime}(x)=\lim _{t \rightarrow x} \phi(t)
+$$
+
+provided this limit exists in accordance with Definition 4.1.
+
+We thus associate with the function $f$ a function $f^{\prime}$ whose domain is the set of points $x$ at which the limit (2) exists; $f^{\prime}$ is called the derivative of $f$.
+
+If $f^{\prime}$ is defined at a point $x$, we say that $f$ is differentiable at $x$. If $f^{\prime}$ is defined at every point of a set $E \subset[a, b]$, we say that $f$ is differentiable on $E$.
+
+It is possible to consider right-hand and left-hand limits in (2); this leads to the definition of right-hand and left-hand derivatives. In particular, at the endpoints $a$ and $b$, the derivative, if it exists, is a right-hand or left-hand derivative, respectively. We shall not, however, discuss one-sided derivatives in any detail.
+
+If $f$ is defined on a segment $(a, b)$ and if $a<x<b$, then $f^{\prime}(x)$ is defined by (1) and (2), as above. But $f^{\prime}(a)$ and $f^{\prime}(b)$ are not defined in this case."
+4.33,"Let $f$ be a real function defined on $E \subset R$. We say that
+
+$$
+f(t) \rightarrow A \text { as } t \rightarrow x
+$$
+
+where $A$ and $x$ are in the extended real number system, if for every neighborhood $U$ of $A$ there is a neighborhood $V$ of $x$ such that $V \cap E$ is not empty, and such that $f(t) \in U$ for all $t \in V \cap E, t \neq x$.
+
+A moment's consideration will show that this coincides with Definition 4.1 when $A$ and $x$ are real."
+9.11,"For an open set $E$ in $R^{n}$, and a mapping $\mathbf{f}$ that maps $E$ into $R^{m}$, and $\mathbf{x} \in E$: If there exists a linear transformation $A$ of $R^{n}$ into $R^{m}$ such that
+
+$$
+\lim _{\mathbf{h} \rightarrow 0} \frac{|\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-A \mathbf{h}|}{|\mathbf{h}|}=0
+$$
+
+then we say that $\mathbf{f}$ is differentiable at $\mathbf{x}$, and we write
+
+$$
+\mathbf{f}^{\prime}(\mathbf{x})=A \text {. }
+$$
+
+If $\mathbf{f}$ is differentiable at every $\mathbf{x} \in E$, we say that $\mathbf{f}$ is differentiable in $E$."
+2.9,"Let $A$ and $\Omega$ be sets, and suppose that with each element $\alpha$ of $A$ there is associated a subset of $\Omega$ which we denote by $E_{\alpha}$.
+
+The set whose elements are the sets $E_{\alpha}$ will be denoted by $\left\{E_{\alpha}\right\}$. Instead of speaking of sets of sets, we shall sometimes speak of a collection of sets, or a family of sets.
+
+The union of the sets $E_{\alpha}$ is defined to be the set $S$ such that $x \in S$ if and only if $x \in E_{\alpha}$ for at least one $\alpha \in A$. We use the notation
+
+$$
+S=\bigcup_{\alpha \in A} E_{\alpha} .
+$$
+
+If $A$ consists of the integers $1,2, \ldots, n$, one usually writes
+
+$$
+S=\bigcup_{m=1}^{n} E_{m}
+$$
+
+or
+
+$$
+S=E_{1} \cup E_{2} \cup \cdots \cup E_{n} .
+$$
+
+If $A$ is the set of all positive integers, the usual notation is
+
+$$
+S=\bigcup_{m=1}^{\infty} E_{m}
+$$
+
+The symbol $\infty$ in (4) merely indicates that the union of a countable collection of sets is taken, and should not be confused with the symbols $+\infty,-\infty$, introduced in Definition 1.23.
+
+The intersection of the sets $E_{\alpha}$ is defined to be the set $P$ such that $x \in P$ if and only if $x \in E_{\alpha}$ for every $\alpha \in A$. We use the notation
+
+$$
+P=\bigcap_{\alpha \in A} E_{\alpha},
+$$
+
+or
+
+$$
+P=\bigcap_{m=1}^{n} E_{m}=E_{1} \cap E_{2} \cap \cdots \cap E_{n}
+$$
+
+or
+
+$$
+P=\bigcap_{m=1}^{\infty} E_{m}
+$$
+
+as for unions. If $A \cap B$ is not empty, we say that $A$ and $B$ intersect; otherwise they are disjoint."
+6.23,"Let $f_{1}, \ldots, f_{k}$ be real functions on $[a, b]$, and let $\mathbf{f}=\left(f_{1}, \ldots, f_{k}\right)$ be the corresponding mapping of $[a, b]$ into $R^{k}$. If $\alpha$ increases monotonically on $[a, b]$, to say that $\mathbf{f} \in \mathscr{R}(\alpha)$ means that $f_{j} \in \mathscr{R}(\alpha)$ for $j=1, \ldots, k$. If this is the case, we define
+
+$$
+\int_{a}^{b} \mathbf{f} d \alpha=\left(\int_{a}^{b} f_{1} d \alpha, \ldots, \int_{a}^{b} f_{k} d \alpha\right)
+$$
+
+In other words, $\int f d \alpha$ is the point in $R^{k}$ whose $j$ th coordinate is $\int f_{j} d \alpha$.
+
+It is clear that parts $(a),(c)$, and $(e)$ of Theorem 6.12 are valid for these vector-valued integrals; we simply apply the earlier results to each coordinate. The same is true of Theorems 6.17, 6.20, and 6.21."
+8.10,"Let $\left\{\phi_{n}\right\}(n=1,2,3, \ldots)$ be a sequence of complex functions on $[a, b]$, such that
+
+$$
+\int_{a}^{b} \phi_{n}(x) \overline{\phi_{m}(x)} d x=0 \quad(n \neq m)
+$$
+
+Then $\left\{\phi_{n}\right\}$ is said to be an orthogonal system of functions on $[a, b]$. If, in addition,
+
+$$
+\int_{a}^{b}\left|\phi_{n}(x)\right|^{2} d x=1
+$$
+
+for all $n,\left\{\phi_{n}\right\}$ is said to be orthonormal.
+
+For example, the functions $(2 \pi)^{-\frac{1}{2}} e^{i n x}$ form an orthonormal system on $[-\pi, \pi]$. So do the real functions
+
+$$
+\frac{1}{\sqrt{2 \pi}}, \frac{\cos x}{\sqrt{\pi}}, \frac{\sin x}{\sqrt{\pi}}, \frac{\cos 2 x}{\sqrt{\pi}}, \frac{\sin 2 x}{\sqrt{\pi}}, \cdots
+$$
+
+If $\left\{\phi_{n}\right\}$ is orthonormal on $[a, b]$ and if
+
+$$
+c_{n}=\int_{a}^{b} f(t) \overline{\phi_{n}(t)} d t \quad(n=1,2,3, \ldots)
+$$
+
+we call $c_{n}$ the $n$th Fourier coefficient of $f$ relative to $\left\{\phi_{n}\right\}$. We write
+
+$$
+f(x) \sim \sum_{1}^{\infty} c_{n} \phi_{n}(x)
+$$
+
+and call this series the Fourier series of $f$ (relative to $\left\{\phi_{n}\right\}$ ).
+
+Note that the symbol $\sim$ used in (67) implies nothing about the convergence of the series; it merely says that the coefficients are given by (66).
+
+The following theorems show that the partial sums of the Fourier series of $f$ have a certain minimum property. We shall assume here and in the rest of this chapter that $f \in \mathscr{R}$, although this hypothesis can be weakened."
+9.26,"If $\mathbf{x}=\left(x_{1}, \ldots, x_{n}\right) \in R^{n}$ and $\mathbf{y}=\left(y_{1}, \ldots, y_{m}\right) \in R^{m}$, let us write $(\mathbf{x}, \mathbf{y})$ for the point (or vector)
+
+$$
+\left(x_{1}, \ldots, x_{n}, y_{1}, \ldots, y_{m}\right) \in R^{n+m}
+$$
+
+In what follows, the first entry in (x,y) or in a similar symbol will always be a vector in $R^{n}$, the second will be a vector in $R^{m}$."
+2.18 (a),"For a metric space X and a point $p \in X$:A neighborhood of $p$ is a set $N_{r}(p)$ consisting of all $q$ such that $d(p, q)<r$, for some $r>0$. The number $r$ is called the radius of $N_{r}(p)$."
+2.18 (b),For a metric space X and a point $p \in X$: A point $p$ is a limit point of the set $E$ if every neighborhood of $p$ contains a point $q \neq p$ such that $q \in E$.
+2.18 (c),"For a metric space X and a point $p \in X$, and $E \subset X$: If $p \in E$ and $p$ is not a limit point of $E$, then $p$ is called an isolated point of $E$."
+2.18 (d),For a metric space X and $E \subset X$: $E$ is closed if every limit point of $E$ is a point of $E$.
+2.18 (e),"For a metric space X and a point $p \in X$, and $E \subset X$: A point $p$ is an interior point of $E$ if there is a neighborhood $N$ of $p$ such that $N \subset E$."
+2.18 (f),For a metric space X and $E \subset X$: $E$ is open if every point of $E$ is an interior point of $E$.
+2.18 (g),"For a metric space X and points $p \in X$, and $E \subset X$: The complement of $E$ (denoted by $E^{c}$ ) is the set of all points $p \in X$ such that $p \notin E$."
+2.18 (h),For a metric space X  $E \subset X$: $E$ is perfect if $E$ is closed and if every point of $E$ is a limit point of $E$.
+2.18 (i),"For a metric space X and $E \subset X$: $E$ is bounded if there is a real number $M$ and a point $q \in X$ such that $d(p, q)<M$ for all $p \in E$."
+2.18 (j),"For a metric space X and $E \subset X$: $E$ is dense in $X$ if every point of $X$ is a limit point of $E$, or a point of $E$ (or both). Let us note that in $R^{1}$ neighborhoods are segments, whereas in $R^{2}$ neighborhoods are interiors of circles."
+9.39,"For a real function $f$ defined in an open set $E \subset R^{n}$, with partial derivatives $D_{1} f, \ldots, D_{n} f$: If the functions $D_{j} f$ are themselves differentiable, then the second-order partial derivatives of $f$ are defined by
+
+$$
+D_{i j} f=D_{i} D_{j} f \quad(i, j=1, \ldots, n)
+$$
+
+If all these functions $D_{i j} f$ are continuous in $E$, we say that $f$ is of class $\mathscr{C}^{\prime \prime}$ in $E$, or that $f \in \mathscr{C}^{\prime \prime}(E)$.
+
+A mapping $\mathbf{f}$ of $E$ into $R^{m}$ is said to be of class $\mathscr{C}^{\prime \prime}$ if each component of $\mathbf{f}$ is of class $\mathscr{C}^{\prime \prime}$.
+
+It can happen that $D_{i j} f \neq D_{j i} f$ at some point, although both derivatives exist (see Exercise 27). However, we shall see below that $D_{i j} f=D_{j i} f$ whenever these derivatives are continuous."
+1.12,"A field is a set $F$ with two operations, called addition and multiplication, which satisfy the following so-called ""field axioms"" (A), (M), and (D):
+
+## (A) Axioms for addition
+
+(A1) If $x \in F$ and $y \in F$, then their sum $x+y$ is in $F$.
+
+(A2) Addition is commutative: $x+y=y+x$ for all $x, y \in F$.
+
+(A3) Addition is associative: $(x+y)+z=x+(y+z)$ for all $x, y, z \in F$.
+
+(A4) $F$ contains an element 0 such that $0+x=x$ for every $x \in F$.
+
+(A5) To every $x \in F$ corresponds an element $-x \in F$ such that
+
+$$
+x+(-x)=0
+$$
+
+(M) Axioms for multiplication
+
+(M1) If $x \in F$ and $y \in F$, then their product $x y$ is in $F$.
+
+(M2) Multiplication is commutative: $x y=y x$ for all $x, y \in F$.
+
+(M3) Multiplication is associative: $(x y) z=x(y z)$ for all $x, y, z \in F$.
+
+(M4) $F$ contains an element $1 \neq 0$ such that $1 x=x$ for every $x \in F$.
+
+(M5) If $x \in F$ and $x \neq 0$ then there exists an element $1 / x \in F$ such that
+
+$$
+x \cdot(1 / x)=1
+$$
+
+## (D) The distributive law
+
+$$
+x(y+z)=x y+x z
+$$
+
+holds for all $x, y, z \in F$."
+11.44,"An orthonormal set $\left\{\phi_{n}\right\}$ is said to be complete if, for $f \in \mathscr{L}^{2}(\mu)$, the equations
+
+$$
+\int_{x} f \bar{\phi}_{n} d \mu=0 \quad(n=1,2,3, \ldots)
+$$
+
+imply that $\|f\|=0$."
+10.10,"For an open set $E$ in $R^{n}$: A $k$-surface in $E$ is a $\mathscr{C}^{\prime}$ mapping $\Phi$ from a compact set $D \subset R^{k}$ into $E$.
+
+$D$ is called the parameter domain of $\Phi$. Points of $D$ will be denoted by $\mathbf{u}=\left(u_{1}, \ldots, u_{k}\right)$.
+
+We shall confine ourselves to the simple situation in which $D$ is either a $k$-cell or the $k$-simplex $Q^{k}$ described in Example 10.4. The reason for this is that we shall have to integrate over $D$, and we have not yet discussed integration over more complicated subsets of $R^{k}$. It will be seen that this restriction on $D$ (which will be tacitly made from now on) entails no significant loss of generality in the resulting theory of differential forms.
+
+We stress that $k$-surfaces in $E$ are defined to be mappings into $E$, not subsets of $E$. This agrees with our earlier definition of curves (Definition 6.26). In fact, 1-surfaces are precisely the same as continuously differentiable curves."
+9.4,"A mapping $A$ of a vector space $X$ into a vector space $Y$ is said to be a linear transformation if
+
+$$
+A\left(\mathbf{x}_{1}+\mathbf{x}_{2}\right)=A \mathbf{x}_{1}+A \mathbf{x}_{2}, \quad A(c \mathbf{x})=c A \mathbf{x}
+$$
+
+for all $\mathbf{x}, \mathbf{x}_{1}, \mathbf{x}_{2} \in X$ and all scalars $c$. Note that one often writes $A \mathbf{x}$ instead of $A(\mathbf{x})$ if $A$ is linear.
+
+Observe that $A 0=0$ if $A$ is linear. Observe also that a linear transformation $A$ of $X$ into $Y$ is completely determined by its action on any basis: If
+$\left\{\mathbf{x}_{1}, \ldots, \mathbf{x}_{n}\right\}$ is a basis of $X$, then every $\mathbf{x} \in X$ has a unique representation of the form
+
+$$
+\mathbf{x}=\sum_{i=1}^{n} c_{i} \mathbf{x}_{i}
+$$
+
+and the linearity of $A$ allows us to compute $A \mathbf{x}$ from the vectors $A \mathbf{x}_{1}, \ldots, A \mathbf{x}_{n}$ and the coordinates $c_{1}, \ldots, c_{n}$ by the formula
+
+$$
+A \mathbf{x}=\sum_{i=1}^{n} c_{i} A \mathbf{x}_{i}
+$$
+
+Linear transformations of $X$ into $X$ are often called linear operators on $X$. If $A$ is a linear operator on $X$ which (i) is one-to-one and (ii) maps $X$ onto $X$, we say that $A$ is invertible. In this case we can define an operator $A^{-1}$ on $X$ by requiring that $A^{-1}(A \mathbf{x})=\mathbf{x}$ for all $\mathbf{x} \in X$. It is trivial to verify that we then also have $A\left(A^{-1} \mathbf{x}\right)=\mathbf{x}$, for all $\mathbf{x} \in X$, and that $A^{-1}$ is linear.
+
+An important fact about linear operators on finite-dimensional vector spaces is that each of the above conditions (i) and (ii) implies the other:"
+11.13,"For a function $f$ defined on the measurable space $X$, with values in the extended real number system: The function $f$ is said to be measurable if the set
+
+$$
+\{x \mid f(x)>a\}
+$$
+
+is measurable for every real $a$."
+11.14,"For a function $f$ defined on the measurable space $X=R^{p}$ and $\mathfrak{M}=\mathfrak{M}(\mu)$ as defined in Definition 11.9: Every continuous $f$ is measurable, since then (42) is an open set."
+3.5,"Given a sequence $\left\{p_{n}\right\}$, consider a sequence $\left\{n_{k}\right\}$ of positive integers, such that $n_{1}<n_{2}<n_{3}<\cdots$. Then the sequence $\left\{p_{n i t}\right\}$ is called a subsequence of $\left\{p_{n}\right\}$. If $\left\{p_{n}\right\}$ converges, its limit is called a subsequential limit of $\left\{p_{n}\right\}$.
+
+It is clear that $\left\{p_{n}\right\}$ converges to $p$ if and only if every subsequence of $\left\{p_{n}\right\}$ converges to $p$. We leave the details of the proof to the reader."
+11.34,"For a measurable space $X$ and a complex function $f \in \mathscr{L}^{2}(\mu)$: We say that a complex function $f \in \mathscr{L}^{2}(\mu)$ on $X$ if $f$ is measurable and if
+
+$$
+\int_{x}|f|^{2} d \mu<+\infty
+$$
+
+If $\mu$ is Lebesgue measure, we say $f \in \mathscr{L}^{2}$. For $f \in \mathscr{L}^{2}(\mu)$ we define
+
+$$
+\|f\|=\left\{\int_{x}|f|^{2} d \mu\right\}^{1 / 2}
+$$
+
+and call $\|f\|$ the $\mathscr{L}^{2}(\mu)$ norm of $f."
+10.1,"Suppose $I^{k}$ is a $k$-cell in $R^{k}$, consisting of all
+
+such that
+
+$$
+\mathbf{x}=\left(x_{1}, \ldots, x_{k}\right)
+$$
+
+$$
+a_{i} \leq x_{i} \leq b_{i} \quad(i=1, \ldots, k)
+$$
+
+$I^{j}$ is the $j$-cell in $R^{j}$ defined by the first $j$ inequalities (1), and $f$ is a real continuous function on $I^{k}$.
+
+Put $f=f_{k}$, and define $f_{k-1}$ on $I^{k-1}$ by
+
+$$
+f_{k-1}\left(x_{1}, \ldots, x_{k-1}\right)=\int_{a_{k}}^{b_{k}} f_{k}\left(x_{1}, \ldots, x_{k-1}, x_{k}\right) d x_{k}
+$$
+
+The uniform continuity of $f_{k}$ on $I^{k}$ shows that $f_{k-1}$ is continuous on $I^{k-1}$. Hence we can repeat this process and obtain functions $f_{j}$, continuous on $I^{j}$, such that $f_{j-1}$ is the integral of $f_{j}$, with respect to $x_{j}$, over $\left[a_{j}, b_{j}\right]$. After $k$ steps we arrive at a number $f_{0}$, which we call the integral of $f$ over $I^{k}$; we write it in the form
+
+$$
+\int_{I^{k}} f(\mathbf{x}) d \mathbf{x} \quad \text { or } \quad \int_{I^{k}} f
+$$
+
+A priori, this definition of the integral depends on the order in which the $k$ integrations are carried out. However, this dependence is only apparent. To prove this, let us introduce the temporary notation $L(f)$ for the integral (2) and $L^{\prime}(f)$ for the result obtained by carrying out the $k$ integrations in some other order."
+11.41,"For $f$ and $f_{n} \in \mathscr{L}^{2}(\mu)(n=1,2,3, \ldots)$: We say that $\left\{f_{n}\right\}$ converges to $f$ in $\mathscr{L}^{2}(\mu)$ if $\left\|f_{n}-f\right\| \rightarrow 0$. We say that $\left\{f_{n}\right\}$ is a Cauchy sequence in $\mathscr{L}^{2}(\mu)$ if for every $\varepsilon>0$ there is an integer $N$ such that $n \geq N, m \geq N$ implies $\left\|f_{n}-f_{m}\right\| \leq \varepsilon$."
+11.1,"A family $\mathscr{R}$ of sets is called a ring if $A \in \mathscr{R}$ and $B \in \mathscr{R}$ implies
+
+$$
+A \cup B \in \mathscr{R}, \quad A-B \in \mathscr{R} .
+$$
+
+Since $A \cap B=A-(A-B)$, we also have $A \cap B \in \mathscr{R}$ if $\mathscr{R}$ is a ring.
+
+A ring $\mathscr{R}$ is called a $\sigma$-ring if
+
+$$
+\bigcup_{n=1}^{\infty} A_{n} \in \mathscr{R}
+$$
+
+whenever $A_{n} \in \mathscr{R}(n=1,2,3, \ldots)$. Since
+
+$$
+\bigcap_{n=1}^{\infty} A_{n}=A_{1}-\bigcup_{n=1}^{\infty}\left(A_{1}-A_{n}\right)
+$$
+
+we also have
+
+$$
+\bigcap_{n=1}^{\infty} A_{n} \in \mathscr{R}
+$$
+
+if $\mathscr{R}$ is a $\sigma$-ring."
+10.6,"A linear operator $B$ on $R^{n}$ that interchanges some pair of members of the standard basis and leaves the others fixed will be called a flip. For example, the flip $B$ on $R^{4}$ that interchanges $\mathbf{e}_{2}$ and $\mathbf{e}_{4}$ has the form
+
+$$
+B\left(x_{1} \mathbf{e}_{1}+x_{2} \mathbf{e}_{2}+x_{3} \mathbf{e}_{3}+x_{4} \mathbf{e}_{4}\right)=x_{1} \mathbf{e}_{1}+x_{2} \mathbf{e}_{4}+x_{3} \mathbf{e}_{3}+x_{4} \mathbf{e}_{2}
+$$
+
+or, equivalently,
+
+$$
+B\left(x_{1} \mathbf{e}_{1}+x_{2} \mathbf{e}_{2}+x_{3} \mathbf{e}_{3}+x_{4} \mathbf{e}_{4}\right)=x_{1} \mathbf{e}_{1}+x_{4} \mathbf{e}_{2}+x_{3} \mathbf{e}_{3}+x_{2} \mathbf{e}_{4}
+$$
+
+Hence $B$ can also be thought of as interchanging two of the coordinates, rather than two basis vectors.
+
+In the proof that follows, we shall use the projections $P_{0}, \ldots, P_{n}$ in $R^{n}$, defined by $P_{0} \mathbf{x}=\mathbf{0}$ and
+
+$$
+P_{m} \mathbf{x}=x_{1} \mathbf{e}_{1}+\cdots+x_{m} \mathbf{e}_{m}
+$$
+
+for $1 \leq m \leq n$. Thus $P_{m}$ is the projection whose range and null space are spanned by $\left\{\mathbf{e}_{1}, \ldots, \mathbf{e}_{m}\right\}$ and $\left\{\mathbf{e}_{m+1}, \ldots, \mathbf{e}_{n}\right\}$, respectively."
+11.9,"For any $A \subset R^{p}, B \subset R^{p}$: $S(A, B) =(A-B) \cup(B-A)$ and $d(A, B) =\mu^{*}(S(A, B))$. We write $A_{n} \rightarrow A$ if
+
+$$
+\lim _{n \rightarrow \infty} d\left(A, A_{n}\right)=0
+$$
+
+If there is a sequence $\left\{A_{n}\right\}$ of elementary sets such that $A_{n} \rightarrow A$, we say that $A$ is finitely $\mu$-measurable and write $A \in \mathfrak{M i}_{F}(\mu)$.
+
+If $A$ is the union of a countable collection of finitely $\mu$-measurable sets, we say that $A$ is $\mu$-measurable and write $A \in \mathfrak{M}(\mu)$.
+
+$S(A, B)$ is the so-called ""symmetric difference"" of $A$ and $B. We shall see that $d(A, B)$ is essentially a distance function."
+10.5,"If $\mathbf{G}$ maps an open set $E \subset R^{n}$ into $R^{n}$, and if there is an integer $m$ and a real function $g$ with domain $E$ such that
+
+$$
+\mathbf{G}(\mathbf{x})=\sum_{i \neq m} x_{i} \mathbf{e}_{i}+g(\mathbf{x}) \mathbf{e}_{m} \quad(\mathbf{x} \in E)
+$$
+
+then we call $\mathbf{G}$ primitive. A primitive mapping is thus one that changes at most one coordinate. Note that (9) can also be written in the form
+
+$$
+\mathbf{G}(\mathbf{x})=\mathbf{x}+\left[g(\mathbf{x})-x_{m}\right] \mathbf{e}_{m} .
+$$
+
+If $g$ is differentiable at some point $\mathbf{a} \in E$, so is $\mathbf{G}$. The matrix $\left[\alpha_{i j}\right]$ of the operator $\mathbf{G}^{\prime}(\mathbf{a})$ has
+
+$$
+\left(D_{1} g\right)(\mathbf{a}), \ldots,\left(D_{m} g\right)(\mathbf{a}), \ldots,\left(D_{n} g\right)(\mathbf{a})
+$$
+
+as its $m$ th row. For $j \neq m$, we have $\alpha_{j j}=1$ and $\alpha_{i j}=0$ if $i \neq j$. The Jacobian of $\mathbf{G}$ at $\mathbf{a}$ is thus given by
+
+$$
+J_{\mathbf{G}}(\mathbf{a})=\operatorname{det}\left[\mathbf{G}^{\prime}(\mathbf{a})\right]=\left(D_{m} g\right)(\mathbf{a}),
+$$
+
+and we see (by Theorem 9.36) that $\mathbf{G}^{\prime}(\mathbf{a})$ is invertible if and only if $\left(D_{m} g\right)(\mathbf{a}) \neq 0$."
+8.9,"A trigonometric polynomial is a finite sum of the form
+
+$$
+f(x)=a_{0}+\sum_{n=1}^{N}\left(a_{n} \cos n x+b_{n} \sin n x\right) \quad(x \text { real })
+$$
+
+where $a_{0}, \ldots, a_{N}, b_{1}, \ldots, b_{N}$ are complex numbers. On account of the identities (46), (59) can also be written in the form
+
+$$
+f(x)=\sum_{-N}^{N} c_{n} e^{i n x} \quad(x \text { real })
+$$
+
+which is more convenient for most purposes. It is clear that every trigonometric polynomial is periodic, with period $2 \pi$.
+
+If $n$ is a nonzero integer, $e^{i n x}$ is the derivative of $e^{i n x} /$ in, which also has period $2 \pi$. Hence
+
+$$
+\frac{1}{2 \pi} \int_{-\pi}^{\pi} e^{i n x} d x= \begin{cases}1 & (\text { if } n=0) \\ 0 & (\text { if } n= \pm 1, \pm 2, \ldots)\end{cases}
+$$
+
+Let us multiply (60) by $e^{-i m x}$, where $m$ is an integer; if we integrate the product, (61) shows that
+
+$$
+c_{m}=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(x) e^{-i m x} d x
+$$
+
+for $|m| \leq N$. If $|m|>N$, the integral in (62) is 0 .
+
+The following observation can be read off from (60) and (62): The trigonometric polynomial $f$, given by (60), is real if and only if $c_{-n}=\overline{c_{n}}$ for $n=0, \ldots, N.
+
+In agreement with (60), we define a trigonometric series to be a series of the form
+
+$$
+\sum_{-\infty}^{\infty} c_{n} e^{i n x} \quad(x \text { real })
+$$
+
+the $N$ th partial sum of (63) is defined to be the right side of (60).
+
+If $f$ is an integrable function on $[-\pi, \pi]$, the numbers $c_{m}$ defined by (62) for all integers $m$ are called the Fourier coefficients of $f$, and the series (63) formed with these coefficients is called the Fourier series of $f.
+
+The natural question which now arises is whether the Fourier series of $f$ converges to $f$, or, more generally, whether $f$ is determined by its Fourier series. That is to say, if we know the Fourier coefficients of a function, can we find the function, and if so, how?
+
+The study of such series, and, in particular, the problem of representing a given function by a trigonometric series, originated in physical problems such as the theory of oscillations and the theory of heat conduction (Fourier's ""Th\'eorie analytique de la chaleur"" was published in 1822). The many difficult: and delicate problems which arose during this study caused a thorough revision and reformulation of the whole theory of functions of a real variable. Among many prominent names, those of Riemann, Cantor, and Lebesgue are intimately connected with this field, which nowadays, with all its generalizations and ramifications, may well be said to occupy a central position in the whole of analysis.
+
+We shall be content to derive some basic theorems which are easily accessible by the methods developed in the preceding chapters. For more thorough investigations, the Lebesgue integral is a natural and indispensable tool.
+
+We shall first study more general systems of functions which share a property analogous to (61)."
+11.4,"Let $R^{p}$ denote $p$-dimensional euclidean space. By an interval in $R^{p}$ we mean the set of points $\mathbf{x}=\left(x_{1}, \ldots, x_{p}\right)$ such that
+
+$$
+a_{i} \leq x_{i} \leq b_{i} \quad(i=1, \ldots, p)
+$$
+
+or the set of points which is characterized by (10) with any or all of the $\leq$ signs replaced by $<$. The possibility that $a_{i}=b_{i}$ for any value of $i$ is not ruled out; in particular, the empty set is included among the intervals.
+
+If $A$ is the union of a finite number of intervals, $A$ is said to be an elementary set.
+
+If $I$ is an interval, we define
+
+$$
+m(I)=\prod_{i=1}^{p}\left(b_{i}-a_{i}\right)
+$$
+
+no matter whether equality is included or excluded in any of the inequalities (10). If $A=I_{1} \cup \cdots \cup I_{n}$, and if these intervals are pairwise disjoint, we set
+
+$$
+m(A)=m\left(I_{1}\right)+\cdots+m\left(I_{n}\right)
+$$
+
+We let $\mathscr{E}$ denote the family of all elementary subsets of $R^{p}$."
+11.5,"A nonnegative additive set function $\phi$ defined on $\mathscr{E}$ is said to be regular if the following is true: To every $A \in \mathscr{E}$ and to every $\varepsilon>0$ there exist sets $F \in \mathscr{E}, G \in \mathscr{E}$ such that $F$ is closed, $G$ is open, $F \subset A \subset G$, and
+
+$$
+\phi(G)-\varepsilon \leq \phi(A) \leq \phi(F)+\varepsilon
+$$"
+11.12,"For a set $X$, not necessarily a subset of a euclidean space, or indeed of any metric space: $X$ is said to be a measure space if there exists a $\sigma$-ring $\mathfrak{M}$ of subsets of $X$ (which are called measurable sets) and a nonnegative countably additive set function $\mu$ (which is called a measure), defined on $\mathfrak{P}$.
+
+If, in addition, $X \in \mathfrak{M}$, then $X$ is said to be a measurable space.
+
+For instance, we can take $X=R^{p}, \mathfrak{M}$ the collection of all Lebesguemeasurable subsets of $R^{p}$, and $\mu$ Lebesgue measure.
+
+Or, let $X$ be the set of all positive integers, $\mathfrak{M}$ the collection of all subsets of $X$, and $\mu(E)$ the number of elements of $E$.
+
+Another example is provided by probability theory, where events may be considered as sets, and the probability of the occurrence of events is an additive (or countably additive) set function.
+
+In the following sections we shall always deal with measurable spaces. It should be emphasized that the integration theory which we shall soon discuss would not become simpler in any respect if we sacrificed the generality we have now attained and restricted ourselves to Lebesgue measure, say, on an interval of the real line. In fact, the essential features of the theory are brought out with much greater clarity in the more general situation, where it is seen that everything depends only on the countable additivity of $\mu$ on a $\sigma$-ring.
+
+It will be convenient to introduce the notation
+
+$$
+\{x \mid P\}
+$$
+
+for the set of all elements $x$ which have the property $P$."
+11.2,"We say that $\phi$ is a set function defined on $\mathscr{R}$ if $\phi$ assigns to every $A \in \mathscr{R}$ a number $\phi(A)$ of the extended real number system. $\phi$ is additive if $A \cap B=0$ implies
+
+$$
+\phi(A \cup B)=\phi(A)+\phi(B)
+$$
+
+and $\phi$ is countably additive if $A_{i} \cap A_{j}=0(i \neq j)$ implies
+
+$$
+\phi\left(\bigcup_{n=1}^{\infty} A_{n}\right)=\sum_{n=1}^{\infty} \phi\left(A_{n}\right)
+$$
+
+We shall always assume that the range of $\phi$ does not contain both $+\infty$ and $-\infty$; for if it did, the right side of (3) could become meaningless. Also, we exclude set functions whose only value is $+\infty$ or $-\infty$.
+
+It is interesting to note that the left side of (4) is independent of the order in which the $A_{n}$ 's are arranged. Hence the rearrangement theorem shows that the right side of (4) converges absolutely if it converges at all; if it does not converge, the partial sums tend to $+\infty$, or to $-\infty$.
+
+If $\phi$ is additive, the following properties are easily verified:
+
+$$
+\begin{aligned}
+\phi(0) & =0 . \\
+\phi\left(A_{1} \cup \cdots \cup A_{n}\right) & =\phi\left(A_{1}\right)+\cdots+\phi\left(A_{n}\right)
+\end{aligned}
+$$
+
+if $A_{i} \cap A_{j}=0$ whenever $i \neq j.
+
+$$
+\phi\left(A_{1} \cup A_{2}\right)+\phi\left(A_{1} \cap A_{2}\right)=\phi\left(A_{1}\right)+\phi\left(A_{2\right) .
+$$
+
+If $\phi(A) \geq 0$ for all $A$, and $A_{1} \subset A_{2}$, then
+
+$$
+\phi\left(A_{1}\right) \leq \phi\left(A_{2}\right)
+$$
+Because of (8), nonnegative additive set functions are often called monotonic.
+
+$$
+\phi(A-B)=\phi(A)-\phi(B)
+$$
+if $B \subset A$, and $|(\phi B)|<+\infty$."
+8.17,"For $0<x<\infty$,
+
+$$
+\Gamma(x)=\int_{0}^{\infty} t^{x-1} e^{-t} d t
+$$
+
+The integral converges for these $x$. (When $x<1$, both 0 and $\infty$ have to be looked at.)"
+6.2,"Let $\alpha$ be a monotonically increasing function on $[a, b]$. For any real function $f$ which is bounded on $[a, b]$ and each partition $P$ of $[a, b]$, define
+
+$$
+\Delta \alpha_{i}=\alpha\left(x_{i}\right)-\alpha\left(x_{i-1}\right)
+$$
+
+with $\Delta \alpha_{i} \geq 0$, and
+
+$$
+\begin{aligned}
+& U(P, f, \alpha)=\sum_{i=1}^{n} M_{i} \Delta \alpha_{i} \\
+& L(P, f, \alpha)=\sum_{i=1}^{n} m_{i} \Delta \alpha_{i}
+\end{aligned}
+$$
+
+where $M_{i}, m_{i}$ are the supremum and infimum of $f$ on the $i$th subinterval, respectively. Then define
+
+$$
+\begin{aligned}
+& \int_{a}^{b} f d \alpha=\inf U(P, f, \alpha) \\
+& \int_{a}^{b} f d \alpha=\sup L(P, f, \alpha)
+\end{aligned}
+$$
+
+If the left members of these definitions are equal, denote their common value by
+
+$$
+\int_{a}^{b} f d \alpha
+$$
+
+or sometimes by
+
+$$
+\int_{a}^{b} f(x) d \alpha(x)
+$$
+
+This is the Riemann-Stieltjes integral of $f$ with respect to $\alpha$, over $[a, b]$. If this integral exists, i.e., if the definitions are equal, say that $f$ is integrable with respect to $\alpha$, in the Riemann sense, and write $f \in \mathscr{R}(\alpha)$."
+10.34,"Let $\omega$ be a $k$-form in an open set $E \subset R^{n}$. If there is a $(k-1)$ form $\lambda$ in $E$ such that $\omega=d \lambda$, then $\omega$ is said to be exact in $E$.
+
+If $\omega$ is of class $\mathscr{C}^{\prime}$ and $d \omega=0$, then $\omega$ is said to be closed.
+
+Theorem $10.20(b)$ shows that every exact form of class $\mathscr{C}^{\prime}$ is closed.
+
+ln certain sets $E$, for example in convex ones, the converse is true; this is the content of Theorem 10.39 (usually known as Poincar\'es lemma) and Theorem 10.40. However, Examples 10.36 and 10.37 will exhibit closed forms that are not exact."
+11.39,"We say that a sequence of complex functions $\left\{\phi_{n}\right\}$ is an orthonormal set of functions on a measurable space $X$ if
+
+$$
+\int_{X} \phi_{n} \phi_{m} d \mu= \begin{cases}0 & (n \neq m) \\ 1 & (n=m)\end{cases}
+$$
+
+In particular, we must have $\phi_{n} \in \mathscr{L}^{2}(\mu)$. If $f \in \mathscr{L}^{2}(\mu)$ and if
+
+$$
+c_{n}=\int_{x} f \bar{\phi}_{n} d \mu \quad(n=1,2,3, \ldots)
+$$
+
+we write
+
+$$
+f \sim \sum_{n=1}^{\infty} c_{n} \phi_{n}
+$$
+as in Definition 8.10."
+10.3,"The support of a (real or complex) function $f$ on $R^{k}$ is the closure of the set of all points $\mathbf{x} \in R^{k}$ at which $f(\mathbf{x}) \neq 0$. If $f$ is a continuous
+function with compact support, let $I^{k}$ be any $k$-cell which contains the support of $f$, and define
+
+$$
+\int_{R^{k}} f=\int_{I^{k}} f .
+$$
+
+The integral so defined is evidently independent of the choice of $I^{k}$, provided only that $I^{k}$ contains the support of $f.
+$$"
+10.4,"Let $Q^{k}$ be the $k$-simplex which consists of all points $\mathbf{x}=$ $\left(x_{1}, \ldots, x_{k}\right)$ in $R^{k}$ for which $x_{1}+\cdots+x_{k} \leq 1$ and $x_{i} \geq 0$ foi $i=1, \ldots, k$. If $k=3$, for example, $Q^{k}$ is a tetrahedron, with vertices at $\mathbf{0}, \mathbf{e}_{1}, \mathbf{e}_{2}, \mathbf{e}_{3}$. If $f \in \mathscr{C}\left(Q^{k}\right)$, extend $f$ to a function on $I^{k}$ by setting $f(\mathbf{x})=0$ off $Q^{k}$, and define
+
+$$
+\int_{Q^{k}} f=\int_{I^{k}} f
+$$
+
+Here $I^{k}$ is the ""unit cube"" defined by
+
+$$
+0 \leq x_{i} \leq 1 \quad(1 \leq i \leq k)
+$$
+
+Since $f$ may be discontinuous on $I^{k}$, the existence of the integral on the right of (4) needs proof. We also wish to show that this integral is independent of the order in which the $k$ single integrations are carried out.
+
+To do this, suppose $0<\delta<1$, put
+
+$$
+\varphi(t)= \begin{cases}1 & (t \leq 1-\delta) \\ \frac{(1-t)}{\delta} & (1-\delta<t \leq 1) \\ 0 & (1<t),\end{cases}
+$$
+
+and define
+
+$$
+F(\mathbf{x})=\varphi\left(x_{1}+\cdots+x_{k}\right) f(\mathbf{x}) \quad\left(\mathbf{x} \in I^{k}\right)
+$$
+
+Then $F \in \mathscr{C}\left(I^{k}\right).
+
+Put $\mathbf{y}=\left(x_{1}, \ldots, x_{k-1}\right), \mathbf{x}=\left(\mathbf{y}, x_{k}\right)$. For each $\mathbf{y} \in I^{k-1}$, the set of all $x_{k}$ such that $F\left(y, x_{k}\right) \neq f\left(y ; x_{k}\right)$ is either empty or is a segment whose length does not exceed $\delta$. Since $0 \leq \varphi \leq 1$, it follows that
+
+$$
+\left|F_{k-1}(\mathbf{y})-f_{k-1}(\mathrm{y})\right| \leq \delta\|f\| \quad\left(\mathrm{y} \in I^{k-1}\right)
+$$
+
+where $\|f\|$ has the same meaning as in the proof of Theorem 10.2, and $F_{k-1}$, $f_{k-1}$ are as in Definition 10.1.
+
+As $\delta \rightarrow 0$, (7) exhibits $f_{k-1}$ as a uniform limit of a sequence of continuous functions. Thus $f_{k-1} \in \mathscr{C}\left(I^{k-1}\right)$, and the further integrations present no problem. This proves the existence of the integral (4). Moreover, (7) shows that
+
+$$
+\left|\int_{I^{k}} F(\mathbf{x}) d \mathbf{x}-\int_{I^{k}} f(\mathbf{x}) d \mathbf{x}\right| \leq \delta\|f\|
+$$
+
+Note that (8) is true, regardless of the order in which the $k$ single integrations are carried out. Since $F \in \mathscr{C}\left(I^{k}\right), \int F$ is unaffected by any change in this order. Hence (8) shows that the same is true of $\int f.
+$$"
+6.26,"A continuous mapping $\gamma$ of an interval $[a, b]$ into $R^{k}$ is called a curve in $R^{k}$. To emphasize the parameter interval $[a, b]$, we may also say that $\gamma$ is a curve on $[a, b]$. If $\gamma$ is one-to-one, $\gamma$ is called an arc. If $\gamma(a)=\gamma(b), \gamma$ is said to be a closed curve.
+
+It should be noted that we define a curve to be a mapping, not a point set. Of course, with each curve $\gamma$ in $R^{k}$ there is associated a subset of $R^{k}$, namely the range of $\gamma$, but different curves may have the same range.
+
+We associate to each partition $P=\left\{x_{0}, \ldots, x_{n}\right\}$ of $[a, b]$ and to each curve $\gamma$ on $[a, b]$ the number
+
+$$
+\Lambda(P, \gamma)=\sum_{i=1}^{n}\left|\gamma\left(x_{i}\right)-\gamma\left(x_{i-1}\right)\right|
+$$
+
+The $i$ th term in this sum is the distance (in $R^{k}$ ) between the points $\gamma\left(x_{i-1}\right)$ and $\gamma\left(x_{i}\right)$. Hence $\Lambda(P, \gamma)$ is the length of a polygonal path with vertices at $\gamma\left(x_{0}\right)$, $\gamma\left(x_{1}\right), \ldots, $\gamma\left(x_{n}\right)$, in this order. As our partition becomes finer and finer, this polygon approaches the range of $\gamma$ more and more closely. This makes it seem reasonable to define the length of $\gamma$ as
+
+$$
+\Lambda(\gamma)=\sup \Lambda(P, \gamma)
+$$
+
+where the supremum is taken over all partitions of $[a, b]$.
+
+If $\Lambda(\gamma)<\infty$, we say that $\gamma$ is rectifiable.
+
+In certain cases, $\Lambda(\gamma)$ is given by a Riemann integral. We shall prove this for continuously differentiable curves, i.e., for curves $\gamma$ whose derivative $\gamma^{\prime}$ is continuous."
+10.26,"['Affine simplexes A mapping $\\mathrm{f}$ that carries a vector space $X$ into a vector space $Y$ is said to be affine if $\\mathbf{f}-\\mathbf{f}(\\mathbf{0})$ is linear. In other words, the requirement is that\n\n$$\\mathbf{f}(\\mathbf{x})=\\mathbf{f}(\\mathbf{0})+A \\mathbf{x}$$\n\nfor some $A \\in L(X, Y)$.\n\nAn affine mapping of $R^{k}$ into $R^{n}$ is thus determined if we know $\\mathbf{f}(\\mathbf{0})$ and $\\mathbf{f}\\left(\\mathbf{e}_{i}\\right)$ for $1 \\leq i \\leq k$; as usual, $\\left\\{\\mathbf{e}_{1}, \\ldots, \\mathbf{e}_{k}\\right\\}$ is the standard basis of $R^{k}$.\n\nWe define the standard simplex $Q^{k}$ to be the set of all $\\mathbf{u} \\in R^{k}$ of the form\n\n$$\\mathbf{u}=\\sum_{i=1}^{k} \\alpha_{i} \\mathbf{e}_{i}$$\n\nsuch that $\\alpha_{i} \\geq 0$ for $i=1, \\ldots, k$ and $\\Sigma \\alpha_{i} \\leq 1$.\n\nAssume now that $\\mathbf{p}_{0}, \\mathbf{p}_{1}, \\ldots, \\mathbf{p}_{k}$ are points of $R^{n}$. The oriented affine $k$-simplex\n\n$$\\sigma=\\left[\\mathbf{p}_{0}, \\mathbf{p}_{1}, \\ldots, \\mathbf{p}_{k}\\right]$$\n\nis defined to be the $k$-surface in $R^{n}$ with parameter domain $Q^{k}$ which is given by the affine mapping\n\n$$\\sigma\\left(\\alpha_{1} \\mathbf{e}_{1}+\\cdots+\\alpha_{k} \\mathbf{e}_{k}\\right)=\\mathbf{p}_{0}+\\sum_{i=1}^{k} \\alpha_{i}\\left(\\mathbf{p}_{i}-\\mathbf{p}_{0}\\right)$$\n\nNote that $\\sigma$ is characterized by\n\n$$\\sigma(\\mathbf{0})=\\mathbf{p}_{0}, \\quad \\sigma\\left(\\mathbf{e}_{i}\\right)=\\mathbf{p}_{i} \\quad(\\text { for } 1 \\leq i \\leq k)$$\n\nand that\n\n$$\\sigma(\\mathbf{u})=\\mathbf{p}_{0}+A \\mathbf{u} \\quad\\left(\\mathbf{u} \\in Q^{k}\\right)$$\n\nwhere $A \\in L\\left(R^{k}, R^{n}\\right)$ and $A \\mathbf{e}_{i}=\\mathbf{p}_{i}-\\mathbf{p}_{0}$ for $1 \\leq i \\leq k.\n\nWe call $\\sigma$ oriented to emphasize that the ordering of the vertices $\\mathbf{p}_{0}, \\ldots, \\mathbf{p}_{k}$ is taken into account. If\n\n$$\\bar{\\sigma}=\\left[p_{i_{0}}, p_{i_{1}}, \\ldots, p_{i_{k}}\\right]$$\n\nwhere $\\left\\{i_{0}, i_{1}, \\ldots, i_{k}\\right\\}$ is a permutation of the ordered set $\\{0,1, \\ldots, k\\}$, we adopt the notation\n\n$$\\bar{\\sigma}=s\\left(i_{0}, i_{1}, \\ldots, i_{k}\\right) \\sigma$$\n\nwhere $s$ is the function defined in Definition 9.33. Thus $\\bar{\\sigma}= \\pm \\sigma$, depending on whether $s=1$ or $s=-1$. Strictly speaking, having adopted (75) and (76) as the definition of $\\sigma$, we should not write $\\bar{\\sigma}=\\sigma$ unless $i_{0}=0, \\ldots, i_{k}=k$, even if $s\\left(i_{0}, \\ldots, i_{k}\\right)=1$; what we have here is an equivalence relation, not an equality. However, for our purposes the notation is justified by Theorem 10.27.\n\nIf $\\bar{\\sigma}=\\varepsilon \\sigma$ (using the above convention) and if $\\varepsilon=1$, we say that $\\bar{\\sigma}$ and $\\sigma$ have the same orientation; if $\\varepsilon=-1, \\bar{\\sigma}$ and $\\sigma$ are said to have opposite orientations. Note that we have not defined what we mean by the ""orientation of a simplex."" What we have defined is a relation between pairs of simplexes having the same set of vertices, the relation being that of ""having the same orientation.""\n\nThere is, however, one situation where the orientation of a simplex can be defined in a natural way. This happens when $n=k$ and when the vectors $\\mathbf{p}_{i}-\\mathbf{p}_{0}(1 \\leq i \\leq k)$ are independent. In that case, the linear transformation $A$ that appears in (78) is invertible, and its determinant (which is the same as the Jacobian of $\\sigma$ ) is not 0 . Then $\\sigma$ is said to be positively (or negatively) oriented if $\\operatorname{det} A$ is positive (or negative). In particular, the simplex $\\left[\\mathbf{0}, \\mathbf{e}_{1}, \\ldots, \\mathbf{e}_{k}\\right]$ in $R^{k}$, given by the identity mapping, has positive orientation.\n\nSo far we have assumed that $k \\geq 1$. An oriented 0-simplex is defined to be a point with a sign attached. We write $\\sigma=+\\mathbf{p}_{0}$ or $\\sigma=-\\mathbf{p}_{0}$. If $\\sigma=\\varepsilon \\mathbf{p}_{0}$ $(\\varepsilon= \\pm 1)$ and if $f$ is a 0 -form (i.e., a real function), we define\n\n$$\\int_{\\sigma} f=\\varepsilon f\\left(p_{0}\\right)$$']"
+5.16,"Definition 5.1 applies without any change to complex functions $f$ defined on $[a, b]$, and Theorems 5.2 and 5.3 , as well as their proofs, remain valid. If $f_{1}$ and $f_{2}$ are the real and imaginary parts of $f$, that is, if
+
+$$
+f(t)=f_{1}(t)+i f_{2}(t)
+$$
+
+for $a \leq t \leq b$, where $f_{1}(t)$ and $f_{2}(t)$ are real, then we clearly have
+
+$$
+f^{\prime}(x)=f_{1}^{\prime}(x)+i f_{2}^{\prime}(x)
+$$
+
+also, $f$ is differentiable at $x$ if and only if both $f_{1}$ and $f_{2}$ are differentiable at $x$.
+
+Passing to vector-valued functions in general, i.e., to functions $\mathbf{f}$ which map $[a, b]$ into some $R^{k}$, we may still apply Definition 5.1 to define $f^{\prime}(x)$. The term $\phi(t)$ in (1) is now, for each $t$, a point in $R^{k}$, and the limit in (2) is taken with respect to the norm of $R^{k}$. In other words, $f^{\prime}(x)$ is that point of $R^{k}$ (if there is one) for which
+
+$$
+\lim _{t \rightarrow x}\left|\frac{\mathbf{f}(t)-\mathbf{f}(x)}{t-x}-\mathbf{f}^{\prime}(x)\right|=0,
+$$
+
+and $\mathbf{f}^{\prime}$ is again a function with values in $R^{k}$.
+
+If $f_{1}, \ldots, f_{k}$ are the components of $f$, as defined in Theorem 4.10, then
+
+$$
+\mathbf{f}^{\prime}=\left(f_{1}^{\prime}, \ldots, f_{k}^{\prime}\right)
+$$
+
+and $\mathbf{f}$ is differentiable at a point $x$ if and only if each of the functions $f_{1}, \ldots, f_{k}$ is differentiable at $x$.
+
+Theorem 5.2 is true in this context as well, and so is Theorem 5.3(a) and (b), if $f g$ is replaced by the inner product $\mathbf{f} \cdot \mathbf{g}$ (see Definition 4.3)."
+9.30,"Suppose $X$ and $Y$ are vector spaces, and $A \in L(X, Y)$, as in Definition 9.6. The null space of $A, \mathcal{N}(A)$, is the set of all $\mathbf{x} \in X$ at which $A \mathbf{x}=\mathbf{0}$. It is clear that $\mathcal{N}(A)$ is a vector space in $X$.
+
+Likewise, the range of $A, \mathscr{R}(A)$, is a vector space in $Y$.
+
+The rank of $A$ is defined to be the dimension of $\mathscr{R}(A)$.
+
+For example, the invertible elements of $L\left(R^{n}\right)$ are precisely those whose rank is $n$. This follows from Theorem 9.5.
+
+If $A \in L(X, Y)$ and $A$ has rank 0 , then $A \mathbf{x}=\mathbf{0}$ for all $x \in A$, hence. $\mathcal{N}(A)=X$. In this connection, see Exercise 25."
+9.31,"Let $X$ be a vector space. An operator $P \in L(X)$ is said to be a projection in $X$ if $P^{2}=P$.
+
+More explicitly, the requirement is that $P(P \mathbf{x})=P \mathbf{x}$ for every $\mathbf{x} \in X$. In other words, $P$ fixes every vector in its range $\mathscr{R}(P)$."
+3.9,"Let $E$ be a nonempty subset of a metric space $X$, and let $S$ be the set of all real numbers of the form $d(p, q)$, with $p \in E$ and $q \in E$. The sup of $S$ is called the diameter of $E$.
+
+If $\left\{p_{n}\right\}$ is a sequence in $X$ and if $E_{N}$ consists of the points $p_{N}, p_{N+1}, p_{N+2}, \ldots$, it is clear from the two preceding definitions that $\left\{p_{n}\right\}$ is a Cauchy sequence if and only if
+
+$$
+\lim _{N \rightarrow \infty} \operatorname{diam} E_{N}=0 \text {. }
+$$"
+1.32,"If $z$ is a complex number, its absolute value $|z|$ is the nonnegative square root of $z \bar{z}$; that is, $|z|=(z \bar{z})^{1 / 2}$.
+
+The existence (and uniqueness) of $|z|$ follows from Theorem 1.21 and part $(d)$ of Theorem 1.31.
+
+Note that when $x$ is real, then $\bar{x}=x$, hence $|x|=\sqrt{x^{2}}$. Thus $|x|=x$ if $x \geq 0,|x|=-x$ if $x<0$."
+9.6 (a),"Let $L(X, Y)$ be the set of all linear transformations of the vector space $X$ into the vector space $Y$. Instead of $L(X, X)$, we shall simply write $L(X)$. If $A_{1}, A_{2} \in L(X, Y)$ and if $c_{1}, c_{2}$ are scalars, define $c_{1} A_{1}+c_{2} A_{2}$ by
+
+$$
+\left(c_{1} A_{1}+c_{2} A_{2}\right) \mathbf{x}=c_{1} A_{1} \mathbf{x}+c_{2} A_{2} \mathbf{x} \quad(\mathbf{x} \in X)
+$$
+
+It is then clear that $c_{1} A_{1}+c_{2} A_{2} \in L(X, Y)$."
+9.6 (b),"If $X, Y, Z$ are vector spaces, and if $A \in L(X, Y)$ and $B \in L(Y, Z)$, we define their product $B A$ to be the composition of $A$ and $B$ :
+
+$$
+(B A) \mathbf{x}=B(A \mathbf{x}) \quad(\mathbf{x} \in X)
+$$
+
+Then $B A \in L(X, Z)$.
+
+Note that $B A$ need not be the same as $A B$, even if $X=Y=Z$."
+9.6 (c),"For $A \in L\left(R^{n}, R^{m}\right)$, define the norm $\|A\|$ of $A$ to be the sup of all numbers $|A \mathbf{x}|$, where $\mathbf{x}$ ranges over all vectors in $R^{n}$ with $|\mathbf{x}| \leq 1$. Observe that the inequality
+
+$$
+|A \mathbf{x}| \leq\|A\||\mathbf{x}|
+$$
+
+holds for all $\mathbf{x} \in R^{n}$. Also, if $\lambda$ is such that $|A \mathbf{x}| \leq \lambda|\mathbf{x}|$ for all $\mathbf{x} \in R^{n}$, then $\|A\| \leq \lambda$."
+11.22,"Let $f$ be measurable, and consider the two integrals
+
+$$
+\int_{E} f^{+} d \mu, \quad \int_{E} f^{-} d \mu
+$$
+
+where $f^{+}$and $f^{-}$are defined as in (47).
+
+If at least one of the integrals (55) is finite, we define
+
+$$
+\int_{E} f d \mu=\int_{E} f^{+} d \mu-\int_{E} f^{-} d \mu
+$$
+
+If both integrals in (55) are finite, then (56) is finite, and we say that $f$ is integrable (or summable) on $E$ in the Lebesgue sense, with respect to $\mu$; we write $f \in \mathscr{L}(\mu)$ on $E$. If $\mu=m$, the usual notation is: $f \in \mathscr{L}$ on $E$.
+
+This terminology may be a little confusing: If (56) is $+\infty$ or $-\infty$, then the integral of $f$ over $E$ is defined, although $f$ is not integrable in the above sense of the word; $f$ is integrable on $E$ only if its integral over $E$ is finite.
+
+We shall be mainly interested in integrable functions, although in some cases it is desirable to deal with the more general situation."
+10.11,"Suppose $E$ is an open set in $R^{n}$. A differential form of order $k \geq 1$ in $E$ (briefly, a $k$-form in $E$ ) is a function $\omega$, symbolically represented by the sum
+
+$$
+\omega=\sum a_{i_{1}} \cdots i_{k}(\mathbf{x}) d x_{i_{1}} \wedge \cdots \wedge d x_{i_{k}}
+$$
+
+(the indices $i_{1}, \ldots, i_{k}$ range independently from 1 to $n$ ), which assigns to each $k$-surface $\Phi$ in $E$ a number $\omega(\Phi)=\int_{\Phi} \omega$, according to the rule
+
+$$
+\int_{\Phi} \omega=\int_{D} \sum a_{i_{1}} \cdots_{i_{k}}(\Phi(\mathbf{u})) \frac{\partial\left(x_{i_{1}}, \ldots, x_{i_{k}}\right)}{\partial\left(u_{1}, \ldots, u_{k}\right)} d \mathbf{u}
+$$
+
+where $D$ is the parameter domain of $\Phi$.
+
+The functions $a_{i_{1}} \cdots_{i_{k}}$ are assumed to be real and continuous in $E$. If $\phi_{1}, \ldots, \phi_{n}$ are the components of $\Phi$, the Jacobian in (35) is the one determined by the mapping
+
+$$
+\left(u_{1}, \ldots, u_{k}\right) \rightarrow\left(\phi_{i_{1}}(\mathbf{u}), \ldots, \phi_{i_{k}}(\mathrm{u})\right)
+$$
+
+Note that the right side of (35) is an integral over $D$, as defined in Definition 10.1 (or Example 10.4) and that (35) is the definition of the symbol $\int_{\Phi} \omega$.
+
+A $k$-form $\omega$ is said to be of class $\mathscr{C}^{\prime}$ or $\mathscr{C}^{\prime \prime}$ if the functions $a_{i_{1}} \cdots i_{k}$ in (34) are all of class $\mathscr{C}^{\prime}$ or $\mathscr{C}^{\prime \prime}$.
+
+A 0 -form in $E$ is defined to be a continuous function in $E$."
+9.38,"If $f$ maps an open set $E \subset R^{n}$ into $R^{n}$, and if $f$ is differentiable at a point $\mathbf{x} \in E$, the determinant of the linear operator $\mathbf{f}^{\prime}(\mathbf{x})$ is called the Jacobian of $\mathbf{f}$ at $\mathbf{x}$. In symbols,
+
+$$
+J_{\mathbf{f}}(\mathbf{x})=\operatorname{det} \mathbf{f}^{\prime}(\mathbf{x})
+$$
+
+We shall also use the notation
+
+$$
+\frac{\partial\left(y_{1}, \ldots, y_{n}\right)}{\partial\left(x_{1}, \ldots, x_{n}\right)}
+$$
+
+for $J_{\mathbf{f}}(\mathbf{x})$, if $\left(y_{1}, \ldots, y_{n}\right)=\mathbf{f}\left(x_{1}, \ldots, x_{n}\right)$."
+11.7,"Let $\mu$ be additive, regular, nonnegative, and finite on $\mathscr{E}$. Consider countable coverings of any set $E \subset R^{p}$ by open elementary sets $A_{n}$ :
+
+$$
+E \subset \bigcup_{n=1}^{\infty} A_{n}
+$$
+
+Define
+
+$$
+\mu^{*}(E)=\inf \sum_{n=1}^{\infty} \mu\left(A_{n}\right)
+$$
+
+the inf being taken over all countable coverings of $E$ by open elementary sets. $\mu^{*}(E)$ is called the outer measure of $E$, corresponding to $\mu$.
+
+It is clear that $\mu^{*}(E) \geq 0$ for all $E$ and that
+
+$$
+\mu^{*}\left(E_{1}\right) \leq \mu^{*}\left(E_{2}\right)
+$$
+
+if $E_{1} \subset E_{2}$."
+9.33,"If $(j_{1}, \ldots, j_{n})$ is an ordered $n$-tuple of integers, define
+
+$$
+s(j_{1}, \ldots, j_{n})=\prod_{p<q} \operatorname{sgn}(j_{q}-j_{p})
+$$
+
+where $\operatorname{sgn} x=1$ if $x>0, \operatorname{sgn} x=-1$ if $x<0, \operatorname{sgn} x=0$ if $x=0$. Then $s(j_{1}, \ldots, j_{n})=1,-1$, or 0 , and it changes sign if any two of the $j$ 's are interchanged.
+
+Let $[A]$ be the matrix of a linear operator $A$ on $R^{n}$, relative to the standard basis $\{\mathbf{e}_{1}, \ldots, \mathbf{e}_{n}\}$, with entries $a(i, j)$ in the $i$ th row and $j$ th column. The determinant of $[A]$ is defined to be the number
+
+$$
+\operatorname{det}[A]=\sum s(j_{1}, \ldots, j_{n}) a(1, j_{1}) a(2, j_{2}) \cdots a(n, j_{n})
+$$
+
+The sum in (83) extends over all ordered $n$-tuples of integers $(j_{1}, \ldots, j_{n})$ with $1 \leq j_{r} \leq n$.
+
+The column vectors $\mathbf{x}_{j}$ of $[A]$ are
+
+$$
+\mathbf{x}_{j}=\sum_{i=1}^{n} a(i, j) \mathbf{e}_{i} \quad(1 \leq j \leq n)
+$$
+
+It will be convenient to think of $\operatorname{det}[A]$ as a function of the column vectors of $[A]$. If we write
+
+$$
+\operatorname{det}(\mathbf{x}_{1}, \ldots, \mathbf{x}_{n})=\operatorname{det}[A]
+$$
+
+det is now a real function on the set of all ordered $n$-tuples of vectors in $R^{n}$."

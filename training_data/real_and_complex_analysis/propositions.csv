@@ -1,0 +1,338 @@
+Proposition,Statement,Proof
+10.17,"Morera's Theorem Suppose $f$ is a continuous complex function in an open set $\Omega$ such that
+
+$$
+\int_{\partial \Delta} f(z) d z=0
+$$
+
+for every closed triangle $\Delta \subset \Omega$. Then $f \in H(\Omega)$.","Let $V$ be a convex open set in $\Omega$. As in the proof of Theorem 10.14, we can construct $F \in H(V)$ such that $F^{\prime}=f$. Since derivatives of holomorphic functions are holomorphic (Theorem 10.16), we have $f \in H(V)$, for every convex open $V \subset \Omega$, hence $f \in H(\Omega)"
+9.8,"If $f \in L^{1}$, then
+
+$$
+\left(f * h_{\lambda}\right)(x)=\int_{-\infty}^{\infty} H(\lambda t) \hat{f}(t) e^{i x t} d m(t)
+$$","This is a simple application of Fubini's theorem.
+
+$$
+\begin{aligned}
+\left(f * h_{\lambda}\right)(x) & =\int_{-\infty}^{\infty} f(x-y) d m(y) \int_{-\infty}^{\infty} H(\lambda t) e^{i t y} d m(t) \\
+& =\int_{-\infty}^{\infty} H(\lambda t) d m(t) \int_{-\infty}^{\infty} f(x-y) e^{i t y} d m(y) \\
+& =\int_{-\infty}^{\infty} H(\lambda t) d m(t) \int_{-\infty}^{\infty} f(y) e^{i t(x-y)} d m(y) \\
+& =\int_{-\infty}^{\infty} H(\lambda t) \hat{f}(t) e^{i t x} d m(t) .
+\end{aligned}
+$$"
+6.5,"If $\mu$ and $\lambda$ are complex measures on the same $\sigma$-algebra $\mathfrak{M}$, we define $\mu+\lambda$ and $c \mu$ by
+
+$$
+\begin{aligned}
+(\mu+\lambda)(E) & =\mu(E)+\lambda(E) \\
+(c \mu)(E) & =c \mu(E)
+\end{aligned}
+$$
+
+for any scalar $c$, in the usual manner. It is then trivial to verify that $\mu+\lambda$ and $c \mu$ are complex measures. The collection of all complex measures on $\mathfrak{M}$ is thus a vector space. If we put
+
+$$
+\|\mu\|=|\mu|(X)
+$$
+
+it is easy to verify that all axioms of a normed linear space are satisfied.","Error, no proof value given."
+6.6,"Let us now specialize and consider a real measure $\mu$ on a $\sigma$-algebra $\mathfrak{M}$. (Such measures are frequently called signed measures.) Define $|\mu|$ as before, and define
+
+$$
+\mu^{+}=\frac{1}{2}(|\mu|+\mu), \quad \mu^{-}=\frac{1}{2}(|\mu|-\mu)
+$$
+
+Then both $\mu^{+}$and $\mu^{-}$are positive measures on $\mathfrak{M}$, and they are bounded, by Theorem 6.4. Also,
+
+$$
+\mu=\mu^{+}-\mu^{-}, \quad|\mu|=\mu^{+}+\mu^{-} .
+$$
+
+The measures $\mu^{+}$and $\mu^{-}$are called the positive and negative variations of $\mu$, respectively. This representation of $\mu$ as the difference of the positive measures $\mu^{+}$ and $\mu^{-}$is known as the Jordan decomposition of $\mu$. Among all representations of $\mu$ as a difference of two positive measures, the Jordan decomposition has a certain minimum property which will be established as a corollary to Theorem 6.14 .","Error, no proof value given."
+5.11,"A Convergence Problem Is it true for every $f \in C(T)$ that the Fourier series of $f$ converges to $f(x)$ at every point $x$ ?
+
+Let us recall that the $n$th partial sum of the Fourier series of $f$ at the point $x$ is given by
+
+$$
+s_{n}(f ; x)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(t) D_{n}(x-t) d t \quad(n=0,1,2, \ldots)
+$$
+
+where
+
+$$
+D_{n}(t)=\sum_{k=-n}^{n} e^{i k t}
+$$
+
+This follows directly from formulas 4.26(1) and 4.26(3).
+
+The problem is to determine whether
+
+$$
+\lim _{n \rightarrow \infty} s_{n}(f ; x)=f(x)
+$$
+
+for every $f \in C(T)$ and for every real $x$. We observed in Sec. 4.26 that the partial sums do converge to $f$ in the $L^{2}$-norm, and Theorem 3.12 implies therefore that each $f \in L^{2}(T)$ [hence also each $f \in C(T)$ ] is the pointwise limit a.e. of some subsequence of the full sequence of the partial sums. But this does not answer the present question.
+
+We shall see that the Banach-Steinhaus theorem answers the question negatively. Put
+
+$$
+s^{*}(f ; x)=\sup _{n}\left|s_{n}(f ; x)\right| .
+$$
+
+To begin with, take $x=0$, and define
+
+$$
+\Lambda_{n} f=s_{n}(f ; 0) \quad(f \in C(T) ; n=1,2,3, \ldots)
+$$
+
+We know that $C(T)$ is a Banach space, relative to the supremum norm $\|f\|_{\infty}$. It follows from (1) that each $\Lambda_{n}$ is a bounded linear functional on $C(T)$, of norm
+
+$$
+\left\|\Lambda_{n}\right\| \leq \frac{1}{2 \pi} \int_{-\pi}^{\pi}\left|D_{n}(t)\right| d t=\left\|D_{n}\right\|_{1}
+$$
+
+We claim that
+
+$$
+\left\|\Lambda_{n}\right\| \rightarrow \infty \quad \text { as } n \rightarrow \infty
+$$
+
+This will be proved by showing that equality holds in (6) and that
+
+$$
+\left\|D_{n}\right\|_{1} \rightarrow \infty \quad \text { as } n \rightarrow \infty \text {. }
+$$
+Multiply (2) by $e^{i t / 2}$ and by $e^{-i t / 2}$ and subtract one of the resulting two equations from the other, to obtain
+
+$$
+D_{n}(t)=\frac{\sin \left(n+\frac{1}{2}\right) t}{\sin (t / 2)}
+$$
+Since $|\sin x| \leq|x|$ for all real $x$, (9) shows that
+
+$$
+\begin{aligned}
+\left\|D_{n}\right\|_{1} & >\frac{2}{\pi} \int_{0}^{\pi}\left|\sin \left(n+\frac{1}{2}\right) t\right| \frac{d t}{t}=\frac{2}{\pi} \int_{0}^{(n+1 / 2) \pi}|\sin t| \frac{d t}{t} \\
+& >\frac{2}{\pi} \sum_{k=1}^{n} \frac{1}{k \pi} \int_{(k-1) \pi}^{k \pi}|\sin t| d t=\frac{4}{\pi^{2}} \sum_{k=1}^{n} \frac{1}{k} \rightarrow \infty,
+\end{aligned}
+$$
+which proves (8).
+
+Next, fix $n$, and put $g(t)=1$ if $D_{n}(t) \geq 0, g(t)=-1$ if $D_{n}(t)<0$. There exist $f_{j} \in C(T)$ such that $-1 \leq f_{j} \leq 1$ and $f_{j}(t) \rightarrow g(t)$ for every $t$, as $j \rightarrow \infty$. By the dominated convergence theorem,
+
+$$
+\lim _{j \rightarrow \infty} \Lambda_{n}\left(f_{j}\right)=\lim _{j \rightarrow \infty} \frac{1}{2 \pi} \int_{-\pi}^{\pi} f_{j}(-t) D_{n}(t) d t=\frac{1}{2 \pi} \int_{-\pi}^{\pi} g(-t) D_{n}(t) d t=\left\|D_{n}\right\|_{1} .
+$$
+Thus equality holds in (6), and we have proved (7).
+
+Since (7) holds, the Banach-Steinhaus theorem asserts now that $s^{*}(f ; 0)=\infty$ for every $f$ in some dense $G_{\delta}$-set in $C(T)$.
+
+We chose $x=0$ just for convenience. It is clear that the same result holds for every other $x$ :
+
+To each real number $x$ there corresponds a set $E_{x} \subset C(T)$ which is a dense $G_{\delta}$ in $C(T)$, such that $s^{*}(f ; x)=\infty$ for every $f \in E_{x}$.
+
+In particular, the Fourier series of each $f \in E_{x}$ diverges at $x$, and we have a negative answer to our question. (Exercise 22 shows the answer is positive if mere continuity is replaced by a somewhat stronger smoothness assumption.)
+
+It is interesting to observe that the above result can be strengthened by another application of Baire's theorem. Let us take countably many points $x_{i}$, and let $E$ be the intersection of the corresponding sets
+
+$$
+E_{x_{i}} \subset C(T)
+$$
+By Baire's theorem, $E$ is a dense $G_{\delta}$ in $C(T)$. Every $f \in E$ has
+
+$$
+s^{*}\left(f ; x_{i}\right)=\infty
+$$
+at every point $x_{i}$.
+
+For each $f, s^{*}(f ; x)$ is a lower semicontinuous function of $x$, since (4) exhibits it as the supremum of a collection of continuous functions. Hence $\left\{x: s^{*}(f ; x)=\infty\right\}$ is a $G_{\delta}$ in $R^{1}$, for each $f$. If the above points $x_{i}$ are taken so that their union is dense in $(-\pi, \pi)$, we obtain the following result:","Error, no proof value given."
+1.15,"If $f=g-h, g \geq 0$, and $h \geq 0$, then $f^{+} \leq g$ and $f^{-} \leq h$.","$f \leq g$ and $0 \leq g$ clearly implies $\max \{f, 0\} \leq g$."
+16.10,"Suppose that $D_{0} \cap D_{1} \cap D_{2} \neq \varnothing,\left(D_{0}, f_{0}\right) \sim\left(D_{1}, f_{1}\right)$, and $\left(D_{1}, f_{1}\right) \sim\left(D_{2}, f_{2}\right)$. Then $\left(D_{0}, f_{0}\right) \sim\left(D_{2}, f_{2}\right)$.","By assumption, $f_{0}=f_{1}$ in $D_{0} \cap D_{1}$ and $f_{1}=f_{2}$ in $D_{1} \cap D_{2}$. Hence $f_{0}=f_{2}$ in the nonempty open set $D_{0} \cap D_{1} \cap D_{2}$. Since $f_{0}$ and $f_{2}$ are holomorphic in $D_{0} \cap D_{2}$ and $D_{0} \cap D_{2}$ is connected, it follows that $f_{0}=f_{2}$ in $D_{0} \cap D_{2}$."
+1.24 (a),"For measurable functions and sets: If $0 \leq f \leq g$, then $\int_{E} f d \mu \leq \int_{E} g d \mu$.",
+1.24 (b),"For measurable functions and sets: If $A \subset B$ and $f \geq 0$, then $\int_{A} f d \mu \leq \int_{B} f d \mu$.",
+1.24 (c),"For measurable functions and sets, $f \geq 0$ and $c$ is a constant, $0 \leq c<\infty$: $\int_{E} c f d \mu=c \int_{E} f d \mu$.",
+1.24 (d),"For measurable functions and sets: If $f(x)=0$ for all $x \in E$, then $\int_{E} f d \mu=0$, even if $\mu(E)=\infty$.",
+1.24 (e),"For measurable functions and sets: If $\mu(E)=0$, then $\int_{E} f d \mu=0$, even if $f(x)=\infty$ for every $x \in E$.",
+1.24 (f),"For measurable functions and sets, $f \geq 0$: $\int_{E} f d \mu=\int_{X} \chi_{E} f d \mu$.","This last result shows that we could have restricted our definition of integration to integrals over all of $X$, without losing any generality. If we wanted to integrate over subsets, we could then use $(f)$ as the definition. It is purely a matter of taste which definition is preferred.
+
+One may also remark here that every measurable subset $E$ of a measure space $X$ is again a measure space, in a perfectly natural way: The new measurable sets are simply those measurable subsets of $X$ which lie in $E$, and the measure is unchanged, except that its domain is restricted. This shows again that as soon as we have integration defined over every measure space, we automatically have it defined over every measurable subset of every measure space."
+6.8 (a),"Suppose, $\mu, \lambda, \lambda_{1}$, and $\lambda_{2}$ are measures on a $\sigma$-algebra $\mathfrak{M}$, and $\mu$ is positive: If $\lambda$ is concentrated on $A$, so is $|\lambda|$","If $E \cap A=\varnothing$ and $\left\{E_{j}\right\}$ is any partition of $E$, then $\lambda\left(E_{j}\right)=0$ for all $j$. Hence $|\lambda|(E)=0$."
+6.8 (b),"Suppose, $\mu, \lambda, \lambda_{1}$, and $\lambda_{2}$ are measures on a $\sigma$-algebra $\mathfrak{M}$, and $\mu$ is positive: If $\lambda_{1} \perp \lambda_{2}$, then $\left|\lambda_{1}\right| \perp \left|\lambda_{2}\right|$",This follows immediately from 6.8 (a).
+6.8 (c),"Suppose, $\mu, \lambda, \lambda_{1}$, and $\lambda_{2}$ are measures on a $\sigma$-algebra $\mathfrak{M}$, and $\mu$ is positive: If $\lambda_{1} \perp \mu$ and $\lambda_{2} \perp \mu$, then $\lambda_{1}+\lambda_{2} \perp \mu$","There are disjoint sets $A_{1}$ and $B_{1}$ such that $\lambda_{1}$ is concentrated on $A_{1}$ and $\mu$ on $B_{1}$, and there are disjoint sets $A_{2}$ and $B_{2}$ such that $\lambda_{2}$ is concentrated on $A_{2}$ and $\mu$ on $B_{2}$. Hence $\lambda_{1}+\lambda_{2}$ is concentrated on $A=A_{1} \cup$ $A_{2}, \mu$ is concentrated on $B=B_{1} \cap B_{2}$, and $A \cap B=\varnothing$."
+6.8 (d),"Suppose, $\mu, \lambda, \lambda_{1}$, and $\lambda_{2}$ are measures on a $\sigma$-algebra $\mathfrak{M}$, and $\mu$ is positive: If $\lambda_{1} \ll \mu$ and $\lambda_{2} \ll \mu$, then $\lambda_{1}+\lambda_{2} \ll \mu$",This is obvious.
+6.8 (e),"Suppose, $\mu, \lambda, \lambda_{1}$, and $\lambda_{2}$ are measures on a $\sigma$-algebra $\mathfrak{M}$, and $\mu$ is positive: If $\lambda \ll \mu$, then $|\lambda| \ll \mu$","Suppose $\mu(E)=0$, and $\left\{E_{j}\right\}$ is a partition of $E$. Then $\mu\left(E_{j}\right)=0$; and since $\lambda \ll \mu, \lambda\left(E_{j}\right)=0$ for all $j$, hence $\sum\left|\lambda\left(E_{j}\right)\right|=0$. This implies $|\lambda|(E)=0$."
+6.8 (f),"Suppose, $\mu, \lambda, \lambda_{1}$, and $\lambda_{2}$ are measures on a $\sigma$-algebra $\mathfrak{M}$, and $\mu$ is positive: If $\lambda_{1} \ll \mu$ and $\lambda_{2} \perp \mu$, then $\lambda_{1} \perp \lambda_{2}$","Since $\lambda_{2} \perp \mu$, there is a set $A$ with $\mu(A)=0$ on which $\lambda_{2}$ is concentrated. Since $\lambda_{1} \ll \mu, \lambda_{1}(E)=0$ for every $E \subset A$. So $\lambda_{1}$ is concentrated on the complement of $A$."
+6.8 (g),"Suppose, $\mu, \lambda, \lambda_{1}$, and $\lambda_{2}$ are measures on a $\sigma$-algebra $\mathfrak{M}$, and $\mu$ is positive: If $\lambda \ll \mu$ and $\lambda \perp \mu$, then $\lambda=0$","By 6.8 (f), the hypothesis of 6.8 (g) implies, that $\lambda \perp \lambda$, and this clearly forces $\lambda=0$."
+1.25,"Let $s$ and $t$ be nonnegative measurable simple functions on $X$. For $E \in \mathfrak{M}$, define
+
+$$
+\varphi(E)=\int_{E} s d \mu
+$$
+
+Then $\varphi$ is a measure on $\mathfrak{M}$. Also
+
+$$
+\int_{X}(s+t) d \mu=\int_{X} s d \mu+\int_{X} t d \mu
+$$
+
+","If $s$ is as in Definition 1.23, and if $E_{1}, E_{2}, \ldots$ are disjoint members of $\mathfrak{M}$ whose union is $E$, the countable additivity of $\mu$ shows that
+
+$$
+\begin{aligned}
+\varphi(E) & =\sum_{i=1}^{n} \alpha_{i} \mu\left(A_{i} \cap E\right)=\sum_{i=1}^{n} \alpha_{i} \sum_{r=1}^{\infty} \mu\left(A_{i} \cap E_{r}\right) \\
+& =\sum_{r=1}^{\infty} \sum_{i=1}^{n} \alpha_{i} \mu\left(A_{i} \cap E_{r}\right)=\sum_{r=1}^{\infty} \varphi\left(E_{r}\right) .
+\end{aligned}
+$$
+
+Also, $\varphi(\varnothing)=0$, so that $\varphi$ is not identically $\infty$.
+
+Next, let $s$ be as before, let $\beta_{1}, \ldots, \beta_{m}$ be the distinct values of $t$, and let $B_{j}=\left\{x: t(x)=\beta_{j}\right\}$. If $E_{i j}=A_{i} \cap B_{j}$, then
+
+and
+
+$$
+\begin{gathered}
+\int_{E_{i j}}(s+t) d \mu=\left(\alpha_{i}+\beta_{j}\right) \mu\left(E_{i j}\right) \\
+\int_{E_{i j}} s d \mu+\int_{E_{i j}} t d \mu=\alpha_{i} \mu\left(E_{i j}\right)+\beta_{j} \mu\left(E_{i j}\right)
+\end{gathered}
+$$
+
+Thus (2) holds with $E_{i j}$ in place of $X$. Since $X$ is the disjoint union of the sets $E_{i j}(1 \leq i \leq n, 1 \leq j \leq m)$, the first half of our proposition implies that (2) holds."
+1.26,"Lebesgue's Monotone Convergence Theorem: Let $\left\{f_{n}\right\}$ be a sequence of measurable functions on $X$, and suppose that
+
+(a) $0 \leq f_{1}(x) \leq f_{2}(x) \leq \cdots \leq \infty$ for every $x \in X$,
+
+(b) $f_{n}(x) \rightarrow f(x)$ as $n \rightarrow \infty$, for every $x \in X$.
+
+Then $f$ is measurable, and
+
+$$
+\int_{X} f_{n} d \mu \rightarrow \int_{X} f d \mu \quad \text { as } n \rightarrow \infty
+$$","Since $\int f_{n} \leq \int f_{n+1}$, there exists an $\alpha \in[0, \infty]$ such that
+
+$$
+\int_{X} f_{n} d \mu \rightarrow \alpha \quad \text { as } n \rightarrow \infty
+$$
+
+By Theorem 1.14, $f$ is measurable. Since $f_{n} \leq f$, we have $\int f_{n} \leq \int f$ for every $n$, so (1) implies
+
+$$
+\alpha \leq \int_{x} f d \mu
+$$
+
+Let $s$ be any simple measurable function such that $0 \leq s \leq f$, let $c$ be a constant, $0<c<1$, and define
+
+$$
+E_{n}=\left\{x: f_{n}(x) \geq c s(x)\right\} \quad(n=1,2,3, \ldots)
+$$
+
+Each $E_{n}$ is measurable, $E_{1} \subset E_{2} \subset E_{3} \subset \cdots$, and $X=\bigcup E_{n}$. To see this equality, consider some $x \in X$. If $f(x)=0$, then $x \in E_{1}$; if $f(x)>0$, then $c s(x)<f(x)$, since $c<1$; hence $x \in E_{n}$ for some $n$. Also
+
+$$
+\int_{X} f_{n} d \mu \geq \int_{E_{n}} f_{n} d \mu \geq c \int_{E_{n}} s d \mu \quad(n=1,2,3, \ldots)
+$$
+
+Let $n \rightarrow \infty$, applying Proposition 1.25 and Theorem $1.19(d)$ to the last integral in (4). The result is
+
+$$
+\alpha \geq c \int_{X} s d \mu
+$$
+
+Since (5) holds for every $c<1$, we have
+
+$$
+\alpha \geq \int_{X} s d \mu
+$$
+
+for every simple measurable $s$ satisfying $0 \leq s \leq f$, so that
+
+$$
+\alpha \geq \int_{X} f d \mu
+$$
+
+The theorem follows from (1), (2), and (7)."
+5.17 (a),"Let $V$ be a complex vector space and $u$ is the real part of a complex-linear functional $f$ on $V$, then
+
+$$
+f(x)=u(x)-i u(i x) \quad(x \in V) .$$
+
+","If $\alpha$ and $\beta$ are real numbers and $z=\alpha+i \beta$, the real part of $i z$ is $-\beta$. This gives the identity
+
+$$
+z=\operatorname{Re} z-i \operatorname{Re}(i z)
+$$
+
+for all complex numbers $z$. Since
+
+$$
+\operatorname{Re}(i f(x))=\operatorname{Re} f(i x)=u(i x)
+$$
+
+(1) follows from (2) with $z=f(x)$."
+5.17 (b),"Let $V$ be a complex vector space and $u$ is a real-linear functional on $V$ and if $f$ is defined by (1), then $f$ is a complex-linear functional on $V$.","Under the hypotheses $(b)$, it is clear that $f(x+y)=f(x)+f(y)$ and that $f(\alpha x)=\alpha f(x)$ for all real $\alpha$. But we also have
+
+$$
+f(i x)=u(i x)-i u(-x)=u(i x)+i u(x)=i f(x)
+$$
+
+which proves that $f$ is complex-linear."
+5.17 (c),"Let $V$ be a normed linear space and $f$ and $u$ are related as in (1), then $\|f\|=\|u\|$.","Since $|u(x)| \leq|f(x)|$, we have $\|u\| \leq\|f\|$. On the other hand, to every $x \in V$ there corresponds a complex number $\alpha,|\alpha|=1$, so that $\alpha f(x)=|f(x)|$. Then
+
+$$
+|f(x)|=f(\alpha x)=u(\alpha x) \leq\|u\| \cdot\|\alpha x\|=\|u\| \cdot\|x\|,
+$$
+
+which proves that $\|f\| \leq\|u\|$."
+5.18,"We first assume that $X$ is a real normed linear space and, consequently, that $f$ is a real-linear bounded functional on $M$. If $\|f\|=0$, the desired extension is $F=0$. Omitting this case, there is no loss of generality in assuming that $\|f\|=1$.","Choose $x_{0} \in X, x_{0} \notin M$, and let $M_{1}$ be the vector space spanned by $M$ and $x_{0}$. Then $M_{1}$ consists of all vectors of the form $x+\lambda x_{0}$, where $x \in M$ and $\lambda$ is a real scalar. If we define $f_{1}\left(x+\lambda x_{0}\right)=f(x)+\lambda \alpha$, where $\alpha$ is any fixed real number, it is trivial to verify that an extension of $f$ to a linear functional on $M_{1}$ is obtained. The problem is to choose $\alpha$ so that the extended functional still has norm 1 . This will be the case provided that
+
+$$
+|f(x)+\lambda \alpha| \leq\left\|x+\lambda x_{0}\right\| \quad(x \in M, \lambda \text { real }) .
+$$
+
+Replace $x$ by $-\lambda x$ and divide both sides of (1) by $|\lambda|$. The requirement is then that
+
+$$
+|f(x)-\alpha| \leq\left\|x-x_{0}\right\| \quad(x \in M)
+$$
+
+i.e., that $A_{x} \leq \alpha \leq B_{x}$ for all $x \in M$, where
+
+$$
+A_{x}=f(x)-\left\|x-x_{0}\right\| \quad \text { and } \quad B_{x}=f(x)+\left\|x-x_{0}\right\| \text {. }
+$$
+
+There exists such an $\alpha$ if and only if all the intervals $\left[A_{x}, B_{x}\right]$ have a common point, i.e., if and only if
+
+$$
+A_{x} \leq B_{y}
+$$
+
+for all $x$ and $y \in M$. But
+
+$$
+f(x)-f(y)=f(x-y) \leq\|x-y\| \leq\left\|x-x_{0}\right\|+\left\|y-x_{0}\right\|,
+$$
+
+and so (4) follows from (3).
+
+We have now proved that there exists a norm-preserving extension $f_{1}$ of $f$ on $M_{1}$.
+
+Let $\mathscr{P}$ be the collection of all ordered pairs $\left(M^{\prime}, f^{\prime}\right)$, where $M^{\prime}$ is a subspace of $X$ which contains $M$ and where $f^{\prime}$ is a real-linear extension of $f$ to $M^{\prime}$, with $\left\|f^{\prime}\right\|=1$. Partially order $\mathscr{P}$ by declaring $\left(M^{\prime}, f^{\prime}\right) \leq\left(M^{\prime \prime}, f^{\prime \prime}\right)$ to mean that $M^{\prime} \subset M^{\prime \prime}$ and $f^{\prime \prime}(x)=f^{\prime}(x)$ for all $x \in M^{\prime}$. The axioms of a partial order
+are clearly satisfied, $\mathscr{P}$ is not empty since it contains $(M, f)$, and so the Hausdorff maximality theorem asserts the existence of a maximal totally ordered subcollection $\Omega$ of $\mathscr{P}$.
+
+Let $\Phi$ be the collection of all $M^{\prime}$ such that $\left(M^{\prime}, f^{\prime}\right) \in \Omega$. Then $\Phi$ is totally ordered, by set inclusion, and therefore the union $\tilde{M}$ of all members of $\Phi$ is a subspace of $X$. (Note that in general the union of two subspaces is not a subspace. An example is two planes through the origin in $R^{3}$.) If $x \in \tilde{M}$, then $x \in M^{\prime}$ for some $M^{\prime} \in \Phi$; define $F(x)=f^{\prime}(x)$, where $f^{\prime}$ is the function which occurs in the pair $\left(M^{\prime}, f^{\prime}\right) \in \Omega$. Our definition of the partial order in $\Omega$ shows that it is immaterial which $M^{\prime} \in \Phi$ we choose to define $F(x)$, as long as $M^{\prime}$ contains $x$.
+
+It is now easy to check that $F$ is a linear functional on $\tilde{M}$, with $\|F\|=1$. If $\tilde{M}$ were a proper subspace $X$, the first part of the proof would give us a further extension of $F$, and this would contradict the maximality of $\Omega$. Thus $\tilde{M}=X$, and the proof is complete for the case of real scalars.
+
+If now $f$ is a complex-linear functional on the subspace $M$ of the complex normed linear space $X$, let $u$ be the real part of $f$, use the real Hahn-Banach theorem to extend $u$ to a real-linear functional $U$ on $X$, with $\|U\|=\|u\|$, and define
+
+$$
+F(x)=U(x)-i U(i x) \quad(x \in X) .
+$$
+
+By Proposition 5.17, $F$ is a complex-linear extension of $f$, and
+
+$$
+\|F\|=\|U\|=\|u\|=\|f\| .
+$$
+
+This completes the proof."

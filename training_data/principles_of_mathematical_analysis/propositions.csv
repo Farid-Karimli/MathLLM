@@ -1,0 +1,73 @@
+Proposition,Statement,Proof
+1.15 (a),Given the axioms for multiplication: If $x \neq 0$ and $x y=x z$ then $y=z$.,
+1.15 (b),Given the axioms for multiplication: If $x \neq 0$ and $x y=x$ then $y=1$.,
+1.15 (c),Given the axioms for multiplication: If $x \neq 0$ and $x y=1$ then $y=1 / x$.,
+1.15 (d),Given the axioms for multiplication: If $x \neq 0$ then $1 /(1 / x)=x$.,
+1.14 (a),The axioms for addition imply: If $x+y=x+z$ then $y=z$.,"If $x+y=x+z$, the axioms (A) give
+
+$$
+\begin{aligned}
+y=0+y & =(-x+x)+y=-x+(x+y) \\
+& =-x+(x+z)=(-x+x)+z=0+z=z
+\end{aligned}
+$$
+
+This proves $(a)$."
+1.14 (b),The axioms for addition imply: If $x+y=x$ then $y=0$.,Take $z=0$ in $(a)$ to obtain $(b)$.
+1.14 (c),The axioms for addition imply: If $x+y=0$ then $y=-x$.,Take $z=-x$ in $(a)$ to obtain $(c)$.
+1.14 (d),The axioms for addition imply: $-(-x)=x$.,"Since $-x+x=0,(c)$ (with $-x$ in place of $x$ ) gives $(d)$."
+1.18 (a),"In every ordered field: If $x>0$ then $-x<0$, and vice versa.","If $x>0$ then $0=-x+x>-x+0$, so that $-x<0$. If $x<0$ then $0=-x+x<-x+0$, so that $-x>0$. This proves $(a)$."
+1.18 (b),In every ordered field: If $x>0$ and $y<z$ then $x y<x z$.,"Since $z>y$, we have $z-y>y-y=0$, hence $x(z-y)>0$, and therefore
+
+$$
+x z=x(z-y)+x y>0+x y=x y .
+$$"
+1.18 (c),In every ordered field: If $x<0$ and $y<z$ then $x y>x z$.,"By $(a),(b)$, and Proposition 1.16(c),
+
+$$
+-[x(z-y)]=(-x)(z-y)>0
+$$
+
+so that $x(z-y)<0$, hence $x z<x y$."
+1.18 (d),"In every ordered field: If $x \neq 0$ then $x^{2}>0$. In particular, $1>0$.","If $x>0$, part (ii) of Definition 1.17 gives $x^{2}>0$. If $x<0$, then $-x>0$, hence $(-x)^{2}>0$. But $x^{2}=(-x)^{2}$, by Proposition $1.16(d)$. Since $1=1^{2}, 1>0$."
+1.18 (e),In every ordered field: If $0<x<y$ then $0<1 / y<1 / x$.,"If $y>0$ and $v \leq 0$, then $y v \leq 0$. But $y \cdot(1 / y)=1>0$. Hence $1 / y>0$. Likewise, $1 / x>0$. If we multiply both sides of the inequality $x<y$ by the positive quantity $(1 / x)(1 / y)$, we obtain $1 / y<1 / x$."
+1.16 (a),The field axioms imply the following statement for any $x \in F$: $0 x=0$.,"$0 x+0 x=(0+0) x=0 x$. Hence $1.14(b)$ implies that $0 x=0$, and (a) holds."
+1.16 (b),"The field axioms imply the following statement for any $x, y \in F$: If $x \neq 0$ and $y \neq 0$ then $x y \neq 0$.","Next, assume $x \neq 0, y \neq 0$, but $x y=0$. Then (a) gives
+
+$$
+1=\left(\frac{1}{y}\right)\left(\frac{1}{x}\right) x y=\left(\frac{1}{y}\right)\left(\frac{1}{x}\right) 0=0
+$$
+
+a contradiction. Thus $(b)$ holds."
+1.16 (c),"The field axioms imply the following statement for any $x, y \in F$: $(-x) y=-(x y)=x(-y)$.","The first equality in $(c)$ comes from
+
+$$
+(-x) y+x y=(-x+x) y=0 y=0
+$$
+
+combined with $1.14(c)$; the other half of $(c)$ is proved in the same way."
+1.16 (d),"The field axioms imply the following statement for any $x, y \in F$: $(-x)(-y)=x y$.","$$
+(-x)(-y)=-[x(-y)]=-[-(x y)]=x y
+$$
+
+by $(c)$ and $1.14(d)$."
+9.31 (a),"If $P$ is a projection in $X$, then every $\mathbf{x} \in X$ has a unique representation of the form
+
+$$
+\mathbf{x}=\mathbf{x}_{1}+\mathbf{x}_{2}
+$$
+
+where $\mathbf{x}_{1} \in \mathscr{R}(P), \mathbf{x}_{2} \in \mathscr{N}(P)$","To obtain the representation, put $\mathbf{x}_{1}=P \mathbf{x}, \mathbf{x}_{2}=\mathbf{x}-\mathbf{x}_{1}$. Then $P \mathrm{x}_{2}=P \mathrm{x}-P \mathbf{x}_{1}=P \mathrm{x}-P^{2} \mathbf{x}=0$. As regards the uniqueness, apply $P$ to the equation $\mathbf{x}=\mathbf{x}_{1}+\mathbf{x}_{2}$. Since $\mathbf{x}_{1} \in \mathscr{R}(P), P \mathbf{x}_{1}=\mathbf{x}_{1} ;$ since $P \mathbf{x}_{2}=0$, it follows that $\mathbf{x}_{1}=P \mathbf{x}$."
+9.31 (b),"If $X$ is a finite-dimensional vector space and if $X_{1}$ is a vector space in $X$, then there is a projection $P$ in $X$ with $\mathscr{R}(P)=X_{1}$","If $X_{1}$ contains only $\mathbf{0}$, this is trivial: put $P \mathbf{x}=\mathbf{0}$ for all $\mathbf{x} \in X$.
+
+Assume $\operatorname{dim} X_{1}=k>0$. By Theorem 9.3, $X$ has then a basis $\left\{\mathbf{u}_{1}, \ldots, \mathbf{u}_{n}\right\}$ such that $\left\{\mathbf{u}_{1}, \ldots, \mathbf{u}_{k}\right\}$ is a basis of $X_{1}$. Define
+
+$$
+P\left(c_{1} \mathbf{u}_{1}+\cdots+c_{n} \mathbf{u}_{n}\right)=c_{1} \mathbf{u}_{1}+\cdots+c_{k} \mathbf{u}_{k}
+$$
+
+for arbitrary scalars $c_{1}, \ldots, c_{n}$.
+
+Then $P \mathbf{x}=\mathbf{x}$ for every $\mathbf{x} \in X_{1}$, and $X_{1}=\mathscr{R}(P)$.
+
+Note that $\left\{\mathbf{u}_{k+1}, \ldots, \mathbf{u}_{n}\right\}$ is a basis of $\mathcal{N}(P)$. Note also that there are infinitely many projections in $X$, with range $X_{1}$, if $0<\operatorname{dim} X_{1}<\operatorname{dim} X$."

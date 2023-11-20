@@ -1,0 +1,92 @@
+Corollary,Statement,Proof
+2.4,"If $A \subset B$ and if $B$ has compact closure, so does $A$.","Error, no proof value given."
+9.14,"If $f \in L^{2}$ and $\hat{f} \in L^{1}$, then
+
+$$
+f(x)=\int_{-\infty}^{\infty} \hat{f}(t) e^{i x t} d m(t) \quad \text { a.e. }
+$$",This is corollary of Theorem $9.13(d)$.
+2.5 (a),Compact subsets of Hausdorff spaces are closed.,
+2.5 (b),"If $F$ is closed and $K$ is compact in a Hausdorff space, then $F \cap K$ is compact.",Corollary $(b)$ follows from $(a)$ and Theorem 2.4.
+10.16,"If $f \in H(\Omega)$, then $f^{\prime} \in H(\Omega)$.","Error, no proof value given."
+6.14,"If $\mu=\lambda_{1}-\lambda_{2}$, where $\lambda_{1}$ and $\lambda_{2}$ are positive measures, then $\lambda_{1} \geq \mu^{+}$ and $\lambda_{2} \geq \mu^{-}$.
+
+This is the minimum property of the Jordan decomposition which was mentioned in Sec. 6.6.","Since $\mu \leq \lambda_{1}$, we have
+
+$$
+\mu^{+}(E)=\mu(E \cap A) \leq \lambda_{1}(E \cap A) \leq \lambda_{1}(E)
+$$"
+10.6,"If $f$ is representable by power series in $\Omega$, then $f \in H(\Omega)$ and $f^{\prime}$ is also representable by power series in $\Omega$, and $f$ has derivatives of all orders, that each derivative is representable by power series in $\Omega$, and that
+
+$$
+f^{(k)}(z)=\sum_{n=k}^{\infty} n(n-1) \cdots(n-k+1) c_{n}(z-a)^{n-k}
+$$
+
+if (1) holds. Hence (1) implies that
+
+$$
+k ! c_{k}=f^{(k)}(a) \quad(k=0,1,2, \ldots)
+$$
+
+so that for each $a \in \Omega$ there is a unique sequence $\left\{c_{n}\right\}$ for which (1) holds.",
+1.14 (a),The limit of every pointwise convergent sequence of complex measurable functions is measurable.,
+1.14 (b),"If $f$ and $g$ are measurable (with range in $[-\infty, \infty])$, then so are $\max \{f, g\}$ and $\min \{f, g\}$. In particular, this is true of the functions
+
+$$
+f^{+}=\max \{f, 0\} \quad \text { and } \quad f^{-}=-\min \{f, 0\} \text {. }
+$$",
+2.17,"Suppose $X$ is a locally compact, $\sigma$-compact Hausdorff space. If $\mathfrak{M}$ and $\mu$ are as described in the statement of Theorem 2.14: As a corollary of (c) we see that every $E \in \mathfrak{M}$ is the union of an $F_{\sigma}$ and a set of measure 0 .",
+1.9 (a),"Let $X$ be a measurable space: If $f=u+i v$, where $u$ and $v$ are real measurable functions on $X$, then $f$ is a complex measurable function on $X$.","This follows from Theorem 1.8, with $\Phi(z)=z$."
+1.9 (b),"Let $X$ be a measurable space: If $f=u+i v$ is a complex measurable function on $X$, then $u, v$, and $|f|$ are real measurable functions on $X$.","This follows from Theorem 1.7, with $g(z)=\operatorname{Re}(z), \operatorname{Im}(z)$, and $|z|$."
+1.9 (c),"Let $X$ be a measurable space: If $f$ and $g$ are complex measurable functions on $X$, then so are $f+g$ and $f g$.","For real $f$ and $g$ this follows from Theorem 1.8, with
+
+$$
+\Phi(s, t)=s+t
+$$
+
+and $\Phi(s, t)=s t$. The complex case then follows from $(a)$ and $(b)$."
+1.9 (d),"Let $X$ be a measurable space and $E$ is a measurable set in $X$: If
+
+$$
+\chi_{E}(x)= \begin{cases}1 & \text { if } x \in E \\ 0 & \text { if } x \notin E\end{cases}
+$$
+
+then $\chi_{E}$ is a measurable function.",This is obvious. We call $\chi_{E}$ the characteristic function of the set $E$. The letter $\chi$ will be reserved for characteristic functions throughout this book.
+1.9 (e),Let $X$ be a measurable space and $f$ is a complex measurable function on $X$: There is a complex measurable function $\alpha$ on $X$ such that $|\alpha|=1$ and $f=\alpha|f|$.,"Let $E=\{x: f(x)=0\}$, let $Y$ be the complex plane with the origin removed, define $\varphi(z)=z /|z|$ for $z \in Y$, and put
+
+$$
+\alpha(x)=\varphi\left(f(x)+\chi_{E}(x)\right) \quad(x \in X)
+$$
+
+If $x \in E, \alpha(x)=1$; if $x \notin E, \alpha(x)=f(x) /|f(x)|$. Since $\varphi$ is continuous on $Y$ and since $E$ is measurable (why?), the measurability of $\alpha$ follows from $(c),(d)$, and Theorem 1.7."
+10.28,"Under the same hypothesis as Theorem 10.28, $f_{j}^{(n)} \rightarrow f^{(n)}$ uniformly, as $j \rightarrow \infty$, on every compact set $K \subset \Omega$, and for every positive integer $n$.","Compare this with the situation on the real line, where sequences of infinitely differentiable functions can converge uniformly to nowhere differentiable functions!"
+10.24,"Under the same hypotheses as Theorem 10.24,
+
+$$
+|f(a)| \geq \min _{\theta}\left|f\left(a+r e^{i \theta}\right)\right|
+$$
+
+if $f$ has no zero in $D(a ; r)$.","If $f\left(a+r e^{i \theta}\right)=0$ for some $\theta$ then (2) is obvious. In the other case, there is a region $\Omega_{0}$ that contains $\bar{D}(a ; r)$ and in which $f$ has no zero; hence (1) can be applied to $1 / f$, and (2) follows."
+4.11,"Let $M$ be a closed subspace of a Hilbert space $H$, and for every $x \in H$ with the unique decomposition
+
+$$
+x=P x+Q x
+$$
+
+into a sum of $P x \in M$ and $Q x \in M^{\perp}$: If $M \neq H$, then there exists $y \in H, y \neq 0$, such that $y \perp M","take $x \in H, x \notin M$, and put $y=Q x$. Since $P x \in M, x \neq P x$, hence $y=x-P x \neq 0$"
+12.8,"Under the hypotheses of the theorem, $\log M$ is a convex function on $(a, b)$.",
+10.18,"If $f$ and $g$ are holomorphic functions in a region $\Omega$ and if $f(z)=g(z)$ for all $z$ in some set which has a limit point in $\Omega$, then $f(z)=g(z)$ for all $z \in \Omega$.","In other words, a holomorphic function in a region $\Omega$ is determined by its values on any set which has a limit point in $\Omega$. This is an important uniqueness theorem."
+18.4,"$G$ is an open set, and the mapping $x \rightarrow x^{-1}$ is a homeomorphism of $G$ onto $G$.
+
+For if $x \in G$ and $\|h\| \rightarrow 0$, (1) implies that $\left\|(x+h)^{-1}-x^{-1}\right\| \rightarrow 0$. Thus $x \rightarrow x^{-1}$ is continuous; it clearly maps $G$ onto $G$, and since it is its own inverse, it is a homeomorphism.",
+18.4 (2),"The mapping $x \rightarrow x^{-1}$ is differentiable. Its differential at any $x \in G$ is the linear operator which takes $h \in A$ to $-x^{-1} h x^{-1}$.
+
+This can also be read off from (1). Note that the notion of the differential of a transformation makes sense in any normed linear space, not just in $R^{k}$, as in Definition 7.22. If $A$ is commutative, the above differential takes $h$ to $-x^{-2} h$, which agrees with the fact that the derivative of the holomorphic function $z^{-1}$ is $-z^{-2}$.",
+18.4 (3),"For every $x \in A, \sigma(x)$ is compact, and $|\lambda| \leq\|x\|$ if $\lambda \in \sigma(x)$.
+
+For if $|\lambda|>\|x\|$, then $e-\lambda^{-1} x \in G$, by Theorem 18.3, and the same is true of $x-\lambda e=-\lambda\left(e-\lambda^{-1} x\right)$; hence $\lambda \notin \sigma(x)$. To prove that $\sigma(x)$ is closed, observe (a) $\lambda \in \sigma(x)$ if and only if $x-\lambda e \notin G$; (b) the complement of $G$ is a closed subset of $A$, by Corollary 1 ; and $(c)$ the mapping $\lambda \rightarrow x-\lambda e$ is a continuous mapping of the complex plane into $A$.",
+5.6,"In a complete metric space, the intersection of any countable collection of dense $G_{\delta}$ 's is again a dense $G_{\delta}$.","This follows from the theorem, since every $G_{\delta}$ is the intersection of a countable collection of open sets, and since the union of countably many countable sets is countable."
+5.7,"Call a set $E \subset X$ nowhere dense if its closure $\bar{E}$ contains no nonempty open subset of $X$. Any countable union of nowhere dense sets is called a set of the first category; all other subsets of $X$ are of the second category (Baire's terminology). Theorem 5.6 is equivalent to the statement that no complete metric space is of the first category. To see this, just take complements in the statement of Theorem 5.6.","Error, no proof value given."
+15.23,"If $f \in H^{\infty}$ (or even if $\left.f \in N\right)$, if $\alpha_{1}, \alpha_{2}, \alpha_{3}, \ldots$ are the zeros of $f$ in $U$, and if $\Sigma\left(1-\left|\alpha_{n}\right|\right)=\infty$, then $f(z)=0$ for all $z \in U$.","Error, no proof value given."
+14.13,"Under the same hypothesis, $\left|\alpha_{1}\right| \leq 1$.
+
+That this is in fact best possible is shown by $F(z)=(1 / z)+\alpha z,|\alpha|=1$, which is one-to-one in $U$.","Error, no proof value given."

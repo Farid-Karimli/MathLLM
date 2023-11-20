@@ -1,0 +1,813 @@
+Definition,Statement
+1.40,"For a subspace $N$ of a vector space $X$: Let $	au_{N}$ be the collection of all sets $E \subset X / N$ for which $
+\pi^{-1}(E) \in \tau$. Then $
+\tau_{N}$ turns out to be a topology on $X / N$, called the quotient topology. Some of its properties are listed in the next theorem. Recall that an open mapping is one that maps open sets to open sets."
+6.7,A linear functional on $\mathscr{D}(\Omega)$ which is continuous (with respect to the topology $\tau$ described in Definition 6.3) is called a distribution in $\Omega$. The space of all distributions in $\Omega$ is denoted by $\mathscr{D}^{\prime}(\Omega)$.
+6.22,"For a distribution $\
+\Lambda \in \mathscr{D}^{\prime}(\Omega)$: If $\omega$ is an open subset of $\Omega$ and if $\Lambda \phi=0$ for every $\phi \in \mathscr{D}(\omega)$, we say that $\Lambda$ vanishes in $\omega$. Let $W$ be the union of all open $\omega \subset \Omega$ in which $\Lambda$ vanishes. The complement of $W$ (relative to $\Omega$ ) is the support of $\Lambda$."
+4.16,"For Banach spaces $X$ and $Y$ and the open unit ball $U$ in $X$: A linear map $T: X \rightarrow Y$ is said to be compact if the closure of $T(U)$ is compact in $Y. It is clear that $T$ is then bounded. Thus $T \in \mathscr{B}(X, Y)$.
+
+Since $Y$ is a complete metric space, the subsets of $Y$ whose closure is compact are precisely the totally bounded ones. Thus $T \in \mathscr{B}(X, Y)$ is compact if and only if $T(U)$ is totally bounded. Also, $T$ is compact if and only if every bounded sequence $\left\{x_{n}\right\}$ in $X$ contains a subsequence $\left\{x_{n_{i}}\right\}$ such that $\left\{T x_{n_{i}}\right\}$ converges to a point of $Y$.
+
+Many of the operators that arise in the study of integral equations are compact. This accounts for their importance from the standpoint of applications. They are in some respects as similar to linear operators on finitedimensional spaces as one has any right to expect from operators on infinite-dimensional spaces. As we shall see, these similarities show up particularly strongly in their spectral properties."
+6.31,"The term approximate identity on $R^{n}$ will denote a sequence of functions $h_{j}$ of the form
+
+$$
+h_{j}(x)=j^{n} h(j x) \quad(j=1,2,3, \ldots)
+$$
+
+where $h \in \mathscr{D}\left(R^{n}\right), h \geq 0$, and $\int_{R^{n}} h(x) d x=1$."
+2.16,"For vector spaces $X, Y, Z$ and a mapping $B: X \times Y \rightarrow Z$: $B$ is said to be bilinear if every $B_{x}$ and every $B^{y}$ are linear.
+
+If $X, Y, Z$ are topological vector spaces and if every $B_{x}$ and every $B^{y}$ is continuous, then $B$ is said to be separately continuous. If $B$ is continuous (relative to the product topology of $X \times Y$ ) then $B$ is obviously separately continuous. In certain situations, the converse can be proved with the aid of the Banach-Steinhaus theorem."
+6.34,"For $u \in \mathscr{D}^{\prime}$ with compact support: $u$ extends in a unique fashion to a continuous linear functional on $C^{\infty}$. One can therefore define the convolution of $u$ and any $\phi \in C^{\infty}$ by the same formula as before, namely,
+
+$$
+(u * \phi)(x)=u\left(\tau_{x} \tilde{\phi}\right) \quad\left(x \in R^{n}\right)
+$$"
+7.18,"If $u \in \mathscr{S}_{n}^{\prime}$ and $\phi \in \mathscr{S}_{n}$, then
+
+$$
+(u * \phi)(x)=u\left(\tau_{x} \not\right) \quad\left(x \in R^{n}\right)
+$$
+
+Note that this is well defined, since $\tau_{x} \not{\phi} \in \mathscr{S}_{n}$ for every $x \in R^{n}$."
+8.10,For an open set $\Omega$ in $R^{n}$: A distribution $u \in \mathscr{D}^{\prime}(\Omega)$ is said to be locally $H^{s}$ if there corresponds to each point $x \in \Omega$ a distribution $v \in H^{s}$ such that $u=v$ in some neighborhood $\omega$ of $x$. (See Section 6.19.)
+1.33 (a),A seminorm on a vector space $X$ is a real-valued function $p$ on $X$ such that $p(x+y) \leq p(x)+p(y)$ for all $x$ and $y$ in $X$. This property is called subadditivity.
+1.33 (b),A seminorm on a vector space $X$ is a real-valued function $p$ on $X$ such that $p(\alpha x)=|\alpha| p(x)$ for all $x$ in $X$ and all scalars $\alpha$.
+10.10,"['For a Banach algebra $A$: If $x \\in A$, the spectrum $\\sigma(x)$ of $x$ is the set of all complex numbers $\\lambda$ such that $\\lambda e-x$ is not invertible. The complement of $\\sigma(x)$ is the resolvent set of $x$; it consists of all $\\lambda \\in \\mathbb{C}$ for which $(\\lambda e-x)^{-1}$ exists.\n\nThe spectral radius of $x$ is the number\n\n$$\n\\rho(x)=\\sup \\{|\\lambda|: \\lambda \\in \\sigma(x)\\}\n$$\n\nIt is the radius of the smallest closed circular disc in $\\mathcal{C}$, with center at 0 , which contains $\\sigma(x)$. Of course, (1) makes no sense if $\\sigma(x)$ is empty. But this never happens, as we shall see.']"
+10.5,"For a complex algebra $A$ and a linear functional $\phi$ on $A$ which is not identically 0: If
+
+$$
+\phi(x y)=\phi(x) \phi(y)
+$$
+
+for all $x \in A$ and $y \in A$, then $\phi$ is called a complex homomorphism on $A.
+
+(The exclusion of $\phi \equiv 0$ is, of course, just a matter of convenience.)
+
+An element $x \in A$ is said to be invertible if it has an inverse in $A$, that is, if there exists an element $x^{-1} \in A$ such that
+
+$$
+x^{-1} x=x x^{-1}=e,
+$$
+
+where $e$ is the unit element of $A$.
+
+Note that no $x \in A$ has more than one inverse, for if $y x=e=x z$ then
+
+$$
+y=y e=y(x z)=(y x) z=e z=z
+$$"
+5.12,"A topological group is a group $G$ in which a topology is defined that makes the group operations continuous. The most concise way to express this requirement is to postulate the continuity of the mapping $\phi: G \times G \rightarrow G$ defined by
+
+$$
+\phi(x, y)=x y^{-1}
+$$
+
+For each $a \in G$, the mappings $x \rightarrow a x$ and $x \rightarrow x a$ are homeomorphisms of $G$ onto $G; so is $x \rightarrow x^{-1}$. The topology of $G$ is therefore completely determined by any local base at the identity element $e$.
+
+If we require (as we shall from now on) that every point of $G$ is a closed set, then the analogues of Theorems 1.10 to 1.12 hold (with exactly the same
+proofs, except for changes in notation); in particular, the Hausdorff separation axiom holds.
+
+If $f$ is any function with domain $G$, its left translates $L_{s} f$ and its right translates $R_{s} f$ are defined, for every $s \in G$, by
+
+$$
+\left(L_{s} f\right)(x)=f(s x), \quad\left(R_{s} f\right)(x)=f(x s) \quad(x \in G)
+$$
+
+A complex function $f$ on $G$ is said to be uniformly continuous if to every $\varepsilon>0$ corresponds a neighborhood $V$ of $e$ in $G$ such that
+
+$$
+|f(t)-f(s)|<\varepsilon
+$$
+
+whenever $s \in G, t \in G$, and $s^{-1} t \in V$.
+
+A topological group $G$ whose topology is compact is called a compact group; in this case, $C(G)$ is, as usual, the Banach space of all complex continuous functions on $G$, with the supremum norm."
+11.24,"For an algebra $A$ with an involution: If $x \in A$ and $x x^{*}=x^{*} x$, then $x$ is said to be normal. A set $S \subset A$ is said to be normal if $S$ commutes and if $x^{*} \in S$ whenever $x \in S."
+7.24,"A complex measurable function $f$, defined in an open set $\Omega \subset R^{n}$, is said to be locally $L^{2}$ in $\Omega$ if $\int_{K}|f|^{2} d m_{n}<\infty$ for every compact $K \subset \Omega$.
+
+Similarly, a distribution $u \in \mathscr{D}^{\prime}(\Omega)$ is locally $L^{2}$ if there is a function $g$, locally $L^{2}$ in $\Omega$, such that $u(\phi)=\int_{\Omega} g \phi d m_{n}$ for every $\phi \in \mathscr{D}(\Omega)$. To say that a function $f$ has a distribution derivative $D^{\alpha} f$ which is locally $L^{2}$ refers to the distribution $D^{\alpha} f$ and means, explicitly, that there is a function $g$, locally $L^{2}$, such that
+
+$$
+\int_{\Omega} g \phi d m_{n}=(-1)^{|\alpha|} \int_{\Omega} f D^{\alpha} \phi d m_{n}
+$$
+
+for every $\phi \in \mathscr{D}(\Omega)$. A priori, this says nothing about the existence of $D^{\alpha} f$ in the classical sense, in terms of limits of quotients.
+
+On the other hand, the class $C^{(p)}(\Omega)$ consists, for each nonnegative integer $p$, of those complex functions $f$ in $\Omega$ whose derivatives $D^{\alpha} f$ exist in the classical sense, for each multi-index $\alpha$ with $|\alpha| \leq p$, and are continuous functions in $\Omega$.
+
+We shall write $D_{i}^{k}$ for the differential operator $\left(\partial / \partial x_{i}\right)^{k}$."
+11.27,"In a Banach algebra with involution, the statement "" $x \geq 0$ "" means that $x=x^{*}$ and that $\sigma(x) \subset[0, \infty)$."
+11.14,"A mapping $x \rightarrow x^{*}$ of a complex (not necessarily commutative) algebra $A$ into $A$ is called an involution on $A$ if it has the following four properties, for all $x \in A, y \in A$, and $\lambda \in \mathscr{C}$ :
+
+$$
+\begin{aligned}
+(x+y)^{*} & =x^{*}+y^{*} . \\
+(\lambda x)^{*} & =\bar{\lambda} x^{*} . \\
+(x y)^{*} & =y^{*} x^{*} . \\
+x^{* *} & =x .
+\end{aligned}
+$$
+
+In other words, an involution is a conjugate-linear antiautomorphism of period 2 .
+
+Any $x \in A$ for which $x^{*}=x$ is called hermitian, or self-adjoint.
+
+For example, $f \rightarrow \bar{f}$ is an involution on $C(X)$. The one that we will be most concerned with later is the passage from an operator on a Hilbert space to its adjoint."
+6.29,"In the rest of this chapter, we shall write $\mathscr{D}$ and $\mathscr{D ^ { \prime }}$ in place of $\mathscr{D}\left(R^{n}\right)$ and $\mathscr{D}^{\prime}\left(R^{n}\right)$. If $u$ is a function in $R^{n}$, and $x \in R^{n}, \tau_{x} u$ and $\check{u}$ are the functions defined by
+
+$$
+\left(\tau_{x} u\right)(y)=u(y-x), \quad \check{u}(y)=u(-y) \quad\left(y \in R^{n}\right)
+$$
+
+Note that
+
+$$
+\left(\tau_{x} \check{u}\right)(y)=\check{u}(y-x)=u(x-y)
+$$
+
+If $u$ and $v$ are complex functions in $R^{n}$, their convolution $u * v$ is defined by
+
+$$
+(u * v)(x)=\int_{R^{n}} u(y) v(x-y) d y
+$$
+
+provided that the integral exists for all (or at least for almost all) $x \in R^{n}$, in the Lebesgue sense. Because of (2),
+
+$$
+(u * v)(x)=\int_{R^{n}} u(y)\left(\tau_{x} \check{v}\right)(y) d y
+$$
+
+This makes it natural to define
+
+$$
+(u * \phi)(x)=u\left(\tau_{x} \check{\phi}\right) \quad\left(u \in \mathscr{D}^{\prime}, \phi \in \mathscr{D}, x \in R^{n}\right)
+$$
+
+for if $u$ is a locally integrable function, (5) agrees with (4). Note that $u * \phi$ is a function.
+
+The relation $\int\left(\tau_{x} u\right) \cdot v=\int u \cdot\left(\tau_{-x} v\right)$, valid for functions $u$ and $v$, makes it natural to define the translate $\tau_{x} u$ of $u \in \mathscr{D}^{\prime}$ by
+
+$$
+\left(\tau_{x} u\right)(\phi)=u\left(\tau_{-x} \phi\right) \quad\left(\phi \in \mathscr{D}, x \in R^{n}\right)
+$$
+
+Then, for each $x \in R^{n}, \tau_{x} u \in \mathscr{D}^{\prime}$; we leave the verification of the appropriate continuity requirement as an exercise."
+11.17,"A Banach algebra $A$ with an involution $x \rightarrow x^{*}$ that satisfies
+
+$$
+\left\|x x^{*}\right\|=\|x\|^{2}
+$$
+
+for every $x \in A$ is called a $B^{*}$-algebra.
+
+Note that $\|x\|^{2}=\left\|x x^{*}\right\| \leq\|x\|\left\|x^{*}\right\|$ implies $\|x\| \leq\left\|x^{*}\right\$, hence also
+
+$$
+\left\|x^{*}\right\| \leq\left\|x^{* *}\right\|=\|x\| .
+$$
+
+Thus
+
+$$
+\left\|x^{*}\right\|=\|x\]
+$$
+
+in every $B^{*}$-algebra. It also follows that
+
+$$
+\left\|x x^{*}\right\|=\|x\|\left\|x^{*}\right\ \text {. }
+$$
+
+Conversely, (2) and (3) obviously imply (1)."
+11.30,"A positive functional is a linear functional $F$ on a Banach algebra $A$ with an involution, that satisfies
+
+$$
+F\left(x x^{*}\right) \geq 0
+$$
+
+for every $x \in A$. Note that $A$ is not assumed to be commutative and that continuity of $F$ is not postulated. (The meaning of the term ""positive"" depends of course on the particular involution that is under consideration.)"
+11.8,"Let $\Delta$ be the set of all complex homomorphisms of a commutative Banach algebra $A$. The formula
+
+$$
+\hat{x}(h)=h(x) \quad(h \in \Delta)
+$$
+
+assigns to each $x \in A$ a function $\hat{x}: \Delta \rightarrow \mathscr{C}$; we call $\hat{x}$ the Gelfand transform of $x$.
+
+Let $\hat{A}$ be the set of all $\hat{x}$, for $x \in A$. The Gelfand topology of $\Delta$ is the weak topology induced by $\hat{A}$, that is, the weakest topology that makes every $\hat{x}$ continuous. Then obviously $\hat{A} \subset C(\Delta)$, the algebra of all complex continuous functions on $\Delta$.
+
+Since there is a one-to-one correspondence between the maximal ideals of $A$ and the members of $\Delta$ (Theorem 11.5), $\Delta$, equipped with its Gelfand topology, is usually called the maximal ideal space of $A$.
+
+The term ""Gelfand transform"" is also applied to the mapping $x \rightarrow \hat{x}$ of $A$ onto $\hat{A}$.
+
+The radical of $A$, denoted by $\operatorname{rad} A$, is the intersection of all maximal ideals of $A$. If $\operatorname{rad} A=\{0\}, A$ is called semisimple."
+13.14,"A symmetric operator $T$ in $H$ is said to be maximally symmetric if $T$ has no proper symmetric extension, i.e., if the assumptions
+
+$$
+T \subset S, \quad S \text { symmetric }
+$$
+
+imply that $S=T$. "
+3.30 (a),"For $\Omega$, an open set in $\varnothing$ and $X$, a complex topological vector space: A function $f: \Omega \rightarrow X$ is said to be weakly holomorphic in $\Omega$ if $\Lambda f$ is holomorphic in the ordinary sense for every $\Lambda \in X^{*}$."
+3.30 (b),"For $\Omega$, an open set in $\varnothing$ and $X$, a complex topological vector space: A function $f: \Omega \rightarrow X$ is said to be strongly holomorphic in $\Omega$ if
+
+$$
+\lim _{w \rightarrow z} \frac{f(w)-f(z)}{w-z}
+$$
+
+exists (in the topology of $X$ ) for every $z \in \Omega$.
+
+Note that the above quotient is the product of the scalar $(w-z)^{-1}$ and the vector $f(w)-f(z)$ in $X$.
+
+The continuity of the functionals $\Lambda$ that occur in $(a)$ makes it obvious that every strongly holomorphic function is weakly holomorphic. The converse is true when $X$ is a Fr\'echet space, but it is far from obvious. (Recall that weakly convergent sequences may very well fail to converge originally.) The Cauchy theorem will play an important role in this proof, as will Theorem 3.18."
+13.26,"The resolvent set of a linear operator $T$ in $H$ is the set of all $\lambda \in \mathscr{C}$ such that $T-\lambda I$ is a one-to-one mapping of $\mathscr{D}(T)$ onto $H$ whose inverse belongs to $\mathscr{B}(H)$.
+
+In other words, $T-\lambda I$ should have an inverse $S \in \mathscr{B}(H)$, which satisfies
+
+$$
+S(T-\lambda I) \subset(T-\lambda I) S=I .
+$$
+
+For instance, Theorem 13.13 states that -1 lies in the resolvent set of $T^{*} T$ if $T$ is densely defined and closed.
+
+The spectrum $\sigma(T)$ of $T$ is the complement of the resolvent set of $T$, just as for bounded operators."
+12.42,"['The term ""ergodic"" comes from statistical mechanics, where it is applied to systems in which ""time average = space average"" holds for certain quantities. To see a simple mathematical example, let $\\mu$ be a probability measure on some $\\sigma$-algebra $\\mathscr{M}$ in a set $\\Omega$, let $\\psi$ map $\\Omega$ into $\\Omega$, and define its iterates by $\\psi^{1}=\\psi, \\psi^{n}=\\psi \\circ \\psi^{n-1}(n=2,3,4, \\ldots)$. If we think of time as discrete, the ""time average"" of a function $f$ on $\\Omega$, relative to the transformation $\\psi$, is\n\n$$\n\\lim _{n \\rightarrow \\infty} \\frac{1}{n}\\left(f+f \\circ \\psi+\\cdots+f \\circ \\psi^{n-1}\\right)\n$$\n\nwhen this limit exists in some sense.\n\nThe ""space average"" of an $f \\in L^{1}(\\mu)$ is simply $\\int_{\\Omega} f d \\mu$.\n\nWe will be concerned with measure-preserving one-to-one maps $\\psi$ of $\\Omega$ onto $\\Omega$. This means that $\\psi(E)$ and $\\psi^{-1}(E)$ are in $\\mathscr{M}$ for every $E \\in \\mathscr{M}$ and that their measure is $\\mu(E)$. It is then clear that\n\n$$\n\\int_{\\Omega}(f \\circ \\psi) d \\mu=\\int_{\\Omega} f d \\mu\n$$\n\nfor every $f \\in L^{1}(\\mu)$.\n\nIf, moreover, $\\psi(E)=E \\in \\mathscr{M}$ occurs only when $\\mu(E)=0$ or $\\mu(E)=1$, then $\\psi$ is said to be ergodic. In that case it is clear that every measurable function $g$ for which $g \\circ \\psi=g$ a.e. $[\\mu]$ is constant a.e. $[\\mu]$.']"
+10.1,"A complex algebra is a vector space $A$ over the complex field $\mathscr{C}$ in which a multiplication is defined that satisfies
+
+$$
+\begin{gathered}
+x(y z)=(x y) z \
+(x+y) z=x z+y z, \quad x(y+z)=x y+x z
+\end{gathered}
+$$
+
+and
+
+$$
+\alpha(x y)=(\alpha x) y=x(\alpha y)
+$$
+
+for all $x, y$, and $z$ in $A$ and for all scalars $\alpha$.
+
+If, in addition, $A$ is a Banach space with respect to a norm that satisfies the multiplicative inequality
+
+$$
+\|x y\| \leq\|x\|\|y\| \quad(x \in A, y \in A)
+$$
+
+and if $A$ contains a unit element $e$ such that
+
+$$
+x e=e x=x \quad(x \in A)
+$$
+
+and
+
+$$
+\|e\|=1
+$$
+
+then $A$ is called a Banach algebra.
+
+Note that we have not required that $A$ be commutative, i.e., that
+$x y=y x$ for all $x$ and $y$ in $A$, and we shall not do so except when explicitly stated.
+
+It is clear that there is at most one $e \in A$ that satisfies (5), for if $e^{\prime}$ also satisfies (5), then $e^{\prime}=e^{\prime} e=e$.
+
+The presence of a unit is very often omitted from the definition of a Banach algebra. However, when there is a unit it makes sense to talk about inverses, so that the spectrum of an element of $A$ can be defined in a more natural way than is otherwise possible. This leads to a more intuitive development of the basic theory. Moreover, the resulting loss of generality is small, because many naturally occurring Banach algebras have a unit, and because the others can be supplied with one in the following canonical fashion.
+
+Suppose $A$ satisfies conditions (1) to (4), but $A$ has no unit element. Let $A_{1}$ consist of all ordered pairs $(x, \alpha)$, where $x \in A$ and $\alpha \in \mathscr{C}$. Define the vector space operations in $A_{1}$ componentwise, define multiplication in $A_{1}$ by
+
+$$
+(x, \alpha)(y, \beta)=(x y+\alpha y+\beta x, \alpha \beta)
+$$
+
+and define
+
+$$
+\|(x, \alpha)\|=\|x\|+|\alpha|, \quad e=(0,1)
+$$
+
+Then $A_{1}$ satisfies properties (1) to (6), and the mapping $x \rightarrow(x, 0)$ is an isometric isomorphism of $A$ onto a subspace of $A_{1}$ (in fact, onto a closed two-sided ideal of $\left.A_{1}\right)$ whose codimension is 1 . If $x$ is identified with $(x, 0)$, then $A_{1}$ is simply $A$ plus the one-dimensional vector space generated by $e$. See Examples $10.3(d)$ and $11.13(e)$.
+
+The inequality (4) makes multiplication a continuous operation in $A$. This means that if $x_{n} \rightarrow x$ and $y_{n} \rightarrow y$ then $x_{n} y_{n} \rightarrow x y$, which follows from the identity
+
+$$
+x_{n} y_{n}-x y=\left(x_{n}-x\right) y_{n}+x\left(y_{n}-y\right)
+$$
+
+In particular, multiplication is left-continuous and right-continuous:
+
+$$
+x_{n} y \rightarrow x y \quad \text { and } \quad x y_{n} \rightarrow x y
+$$
+
+if $x_{n} \rightarrow x$ and $y_{n} \rightarrow y$.
+
+It is interesting that (4) can be replaced by the (apparently) weaker requirement (10) and that (6) can be dropped without enlarging the class of algebras under consideration."
+1.31,"Suppose $X$ and $Y$ are topological vector spaces and $\Lambda: X \rightarrow Y$ is linear. $\Lambda$ is said to be bounded if $\Lambda$ maps bounded sets into bounded sets, i.e., if $\Lambda(E)$ is a bounded subset of $Y$ for every bounded set $E \subset X$. This definition conflicts with the usual notion of a bounded function as being one whose range is a bounded set. In that sense, no linear function (other than 0 ) could ever be bounded. Thus when bounded linear mappings (or transformations) are discussed, it is to be understood that the definition is in terms of bounded sets, as above."
+7.11,"If $i: \mathscr{D}\left(R^{n}\right) \rightarrow \mathscr{S}_{n}$ is the identity mapping, if $L$ is a continuous linear functional on $\mathscr{S}_{n}$, and if
+
+$$
+u_{L}=L \circ i$$
+
+then the continuity of $i$ (Theorem 7.10) shows that $u_{L} \in \mathscr{D}^{\prime}\left(R^{n}\right)$; the denseness of $\mathscr{D}\left(R^{n}\right)$ in $\mathscr{S}_{n}$ shows that two distinct $L$ 's cannot give rise to the same $u$. Thus (1) describes a vector space isomorphism between the dual space $\mathscr{S}_{n}^{\prime}$ of $\mathscr{S}_{n}$, on the one hand, and a certain space of distribution on the other. The distributions that arise in this way are called tempered:
+
+The tempered distributions are precisely those $u \in \mathscr{D}^{\prime}\left(R^{n}\right)$ that have continuous extensions to $\mathscr{S}_{n}$."
+13.1,"Let $H$ be a Hilbert space. By an operator in $H$ we shall now mean a linear mapping $T$ whose domain $\mathscr{D}(T)$ is a subspace of $H$ and whose range $\mathscr{R}(T)$ lies in $H.
+
+It is not assumed that $T$ is bounded or continuous. Of course, if $T$ is continuous [relative to the norm topology that $\mathscr{D}(T)$ inherits from $H$ ] then $T$ has a continuous extension to the closure of $\mathscr{D}(T)$, hence to $H$, since $\overline{\mathscr{D}(T)}$ is complemented in $H$. In that case, $T$ is the restriction to $\mathscr{D}(T)$ of some member of $\mathscr{B}(H)$.
+
+The graph $\mathscr{G}(T)$ of an operator $T$ in $H$ is the subspace of $H \times H$ that consists of the ordered pairs $\{x, T x\}$, where $x$ ranges over $\mathscr{D}(T)$. Obviously, $S$ is an extension of $T$ [that is, $\mathscr{D}(T) \subset \mathscr{D}(S)$ and $S x=T x$ for $x \in \mathscr{D}(T)]$ if and only if $\mathscr{G}(T) \subset \mathscr{G}(S)$. This inclusion will often be written in the simpler form
+
+$$
+T \subset S .
+$$
+A closed operator in $H$ is one whose graph is a closed subspace of $H \times H$. By the closed graph theorem, $T \in \mathscr{B}(H)$ if and only if $\mathscr{D}(T)=H$ and $T$ is closed.
+
+We wish to associate a Hilbert space adjoint $T^{*}$ to $T$. Its domain $\mathscr{D}\left(T^{*}\right)$ is to consist of all $y \in H$ for which the linear functional
+
+$$
+x \rightarrow(T x, y)
+$$
+
+is continuous on $\mathscr{D}(T)$. If $y \in \mathscr{D}\left(T^{*}\right)$, then the Hahn-Banach theorem extends the functional (2) to a continuous linear functional on $H$, and therefore there exists an element $T^{*} y \in H$ that satisfies
+
+$$
+(T x, y)=\left(x, T^{*} y\right) \quad[x \in \mathscr{D}(T)]
+$$
+
+Obviously, $T^{*} y$ will be uniquely determined by (3) if and only if $\mathscr{D}(T)$ is dense in $H$, that is, if and only if $T$ is densely defined. The only operators $T$ that will be given an adjoint $T^{*}$ are therefore the densely defined ones. Routine verifications show then that $T^{*}$ is also an operator in $H$, that is, that $\mathscr{D}\left(T^{*}\right)$ is a subspace of $H$ and that $T^{*}$ is linear.
+
+Note that if $T \in \mathscr{B}(H)$, then the definition of $T^{*}$ given here coincides with that given in Section 12.9. In particular, $\mathscr{D}\left(T^{*}\right)=H$ and $T^{*} \in \mathscr{B}(H)$.
+
+Ordinary algebraic operations with unbounded operators must be handled with care; the domains have to be watched. Here are the natural definitions for the domains of sums and products:
+
+$$
+\begin{gathered}
+\mathscr{D}(S+T)=\mathscr{D}(S) \cap \mathscr{D}(T) \\
+\mathscr{D}(S T)=\{x \in \mathscr{D}(T): T x \in \mathscr{D}(S)\}
+\end{gathered}
+$$
+
+The usual associative laws
+
+$$
+(R+S)+T=R+(S+T), \quad(R S) T=R(S T)
+$$
+
+then hold. As regards the distributive laws, one of them, namely, $(R+S) T=R T+S T$, holds in its usual form, but the other one may only hold in the form
+
+$$
+T(R+S) \supset T R+T S
+$$
+
+since it can happen that $(R+S) x \in \mathscr{D}(T)$, even though one of $R x$ or $S x$ is not in $\mathscr{D}(T)$. Scalar multiplication is defined as follows: If $\alpha=0$, then $\mathscr{D}(\alpha T)=H$ and $\alpha T=0$. If $\alpha \neq 0$, then $\mathscr{D}(\alpha T)=\mathscr{D}(T)$ and $(\alpha T) x=\alpha(T x)$ for $x \in \mathscr{D}(T)$."
+2.1,"Let $S$ be a topological space. A set $E \subset S$ is said to be nowhere dense if its closure $\bar{E}$ has an empty interior. The sets of the first category in $S$ are those that are countable unions of nowhere dense sets. Any subset of $S$ that is not of the first category is said to be of the second category in $S$.
+
+This terminology (due to Baire) is admittedly rather bland and unsuggestive. Meager and nonmeager have been used instead in some texts. But ""category arguments"" are so entrenched in the mathematical literature and are so well known that it seems pointless to insist on a change.
+
+Here are some obvious properties of category that will be freely used in the sequel:
+(a) If $A \subset B$ and $B$ is of the first category in $S$, so is $A$.
+
+(b) Any countable union of sets of the first category is of the first category.
+
+(c) Any closed set $E \subset S$ whose interior is empty is of the first category in $S$.
+
+(d) If $h$ is a homeomorphism of $S$ onto $S$ and if $E \subset S$, then $E$ and $h(E)$ have the same category in $S$."
+4.20,"Suppose $M$ is a closed subspace of a topological vector space $X$. If there exists a closed subspace $N$ of $X$ such that
+
+$$
+X=M+N \quad \text { and } \quad M \cap N=\{0\}
+$$
+
+then $M$ is said to be complemented in $X$. In this case, $X$ is said to be the direct sum of $M$ and $N$, and the notation
+
+$$
+X=M \oplus N
+$$
+
+is sometimes used."
+13.3,"An operator $T$ in $H$ is said to be symmetric if
+
+$$
+(T x, y)=(x, T y)
+$$
+
+whenever $x \in \mathscr{D}(T)$ and $y \in \mathscr{D}(T)$. The densely defined symmetric operators are thus exactly those that satisfy
+
+$$
+T \subset T^{*}
+$$
+
+If $T=T^{*}$, then $T$ is said to be self-adjoint.
+
+These two properties evidently coincide when $T \in \mathscr{B}(H)$. In general, they do not.
+
+Moreover, if $\mathscr{D}(T)$ is dense and $(T x, y)=(x, S y)$ for all $x \in \mathscr{D}(T)$ and $y \in \mathscr{D}(S)$, then $S \subset T^{*}$."
+13.4,"Let $H=L^{2}=L^{2}([0,1])$, relative to Lebesgue measure. We define operators $T_{1}, T_{2}$, and $T_{3}$ in $L^{2}$. Their domains are as follows:
+
+$\mathscr{D}\left(T_{1}\right)$ consists of all absolutely continuous functions $f$ on $[0,1]$ with derivative $f^{\prime} \in L^{2}$.
+
+$$
+\begin{aligned}
+& \mathscr{D}\left(T_{2}\right)=\mathscr{D}\left(T_{1}\right) \cap\{f: f(0)=f(1)\} \\
+& \mathscr{D}\left(T_{3}\right)=\mathscr{D}\left(T_{1}\right) \cap\{f: f(0)=f(1)=0\}
+\end{aligned}
+$$
+
+These are dense in $L^{2}$. Define
+
+$$
+T_{k} f=i f^{\prime} \quad \text { for } f \in \mathscr{D}\left(T_{k}\right), k=1,2,3 .
+$$
+
+We claim that
+
+$$
+T_{1}^{*}=T_{3}, \quad T_{2}^{*}=T_{2}, \quad T_{3}^{*}=T_{1}
+$$
+
+Since $T_{3} \subset T_{2} \subset T_{1}$, it follows that $T_{2}$ is a self-adjoint extension of the symmetric (but not self-adjoint) operator $T_{3}$ and that the extension $T_{1}$ of $T_{2}$ is not symmetric.
+
+Let us prove (2). Note that
+
+$$
+\left(T_{k} f, g\right)=\int_{0}^{1}\left(i f^{\prime}\right) \bar{g}=\int_{0}^{1} \overline{f\left(i g^{\prime}\right)}=\left(f, T_{m} g\right)
+$$
+
+when $f \in \mathscr{D}\left(T_{k}\right), g \in \mathscr{D}\left(T_{m}\right)$, and $m+k=4$, since then $f(1) \bar{g}(1)=f(0) \bar{g}(0)$. It follows that $T_{m} \subset T_{k}^{*}$, or
+
+$$
+T_{1} \subset T_{3}^{*}, \quad T_{2} \subset T_{2}^{*}, \quad T_{3} \subset T_{1}^{*}
+$$
+
+Suppose now that $g \in \mathscr{D}\left(T_{k}^{*}\right)$ and $\phi=T_{k}^{*} g$. Put $\Phi(x)=\int_{0}^{x} \phi$. Then, for $f \in \mathscr{D}\left(T_{k}\right)$,
+
+$$
+\int_{0}^{1} i f^{\prime} \bar{g}=\left(T_{k} f, g\right)=(f, \phi)=f(1) \overline{\Phi(1)}-\int_{0}^{1} f^{\prime} \bar{\Phi}
+$$
+
+When $k=1$ or 2 , then $\mathscr{D}\left(T_{k}\right)$ contains nonzero constants, so that (5) implies $\Phi(1)=0$. When $k=3$, then $f(1)=0$. It follows, in all cases, that
+
+$$
+i g-\Phi \in \mathscr{R}\left(T_{k}\right)^{\perp}
+$$
+
+Since $\mathscr{R}\left(T_{1}\right)=L^{2}$, ig $=\Phi$ if $k=1$, and since $\Phi(1)=0$ in that case, $g \in \mathscr{D}\left(T_{3}\right)$. Thus $T_{1}^{*} \subset T_{3}$.
+
+If $k=2$ or 3 , then $\mathscr{R}\left(T_{k}\right)$ consists of all $u \in L^{2}$ such that $\int_{0}^{1} u=0$. Thus
+
+$$
+\mathscr{R}\left(T_{2}\right)=\mathscr{R}\left(T_{3}\right)=Y^{\perp}
+$$
+
+where $Y$ is the one-dimensional subspace of $L^{2}$ that contains the constants. Hence (6) implies that $i g-\Phi$ is constant. Thus $g$ is absolutely continuous and $g^{\prime} \in L^{2}$, that is, $g \in \mathscr{D}\left(T_{1}\right)$. Thus $T_{3}^{*} \subset T_{2}$.
+
+If $k=2$, then $\Phi(1)=0$, hence $g(0)=g(1)$, and $g \in \mathscr{D}\left(T_{2}\right)$. Thus $T_{2}^{*} \subset T_{2}$.
+
+This completes the proof.
+
+Before we turn to a more detailed study of the relations between symmetric operators and self-adjoint ones, we insert another example."
+13.5,"Let $H=L^{2}$, as in Example 13.4, define $D f=f^{\prime}$ for $f \in \mathscr{D}\left(T_{2}\right)$, say (the exact domain is now not very important), and define $(M f)(t)=t f(t)$. Then $(D M-M D) f=f$, or
+
+$$
+D M-M D=I,
+$$
+
+where $I$ denotes the identity operator on the domain of $D$.
+
+The identity operator appears thus as a commutator of two operators, of which only one is bounded. The question whether the identity is the
+commutator of two bounded operators on $H$ arose in quantum mechanics. The answer is negative, not just in $\mathscr{B}(H)$, but in every Banach algebra."
+10.26,"['Suppose $A$ is a Banach algebra, $\\Omega$ is an open set in $\\mathscr{C}$, and $H(\\Omega)$ is the algebra of all complex holomorphic functions in $\\Omega$. By Theorem 10.20,\n\n$$\nA_{\\Omega}=\\{x \\in A: \\sigma(x) \\subset \\Omega\\}\n$$\n\nis an open subset of $A$.\n\nWe define $\\tilde{H}\\left(A_{\\Omega}\\right)$ to be the set of all $A$-valued functions $\\tilde{f}$, with domain $A_{\\Omega}$, that arise from an $f \\in H(\\Omega)$ by the formula\n\n$$\n\\tilde{f}(x)=\\frac{1}{2 \\pi i} \\int_{\\Gamma} f(\\lambda)(\\lambda e-x)^{-1} d \\lambda,\n$$\n\nwhere $\\Gamma$ is any contour that surrounds $\\sigma(x)$ in $\\Omega$.', 'Since $\\Gamma$ stays away from $\\sigma(x)$ and since inversion is continuous in $A$, the integrand is continuous in (2), so that the integral exists and defines $\\tilde{f}(x)$ as an element of $A$.\n\n(b) The integrand is actually a holomorphic $A$-valued function in the complement of $\\sigma(x)$. (This was observed in the proof of Theorem 10.13. See\n\nExercise 3.) The Cauchy theorem 3.31 implies therefore that $\\tilde{f}(x)$ is independent of the choice of $\\Gamma$, provided only that $\\Gamma$ surrounds $\\sigma(x)$ in $\\Omega$.\n\n(c) If $x=\\alpha e$ and $\\alpha \\in \\Omega$, (2) becomes\n\n$$\n\\tilde{f}(\\alpha e)=f(\\alpha) e\n$$\n\nNote that $\\alpha e \\in A_{\\Omega}$ if and only if $\\alpha \\in \\Omega$. If we identity $\\lambda \\in \\mathbb{C}$ with $\\lambda e \\in A$, every $f \\in H(\\Omega)$ may be regarded as mapping a certain subset of $A_{\\Omega}$ (namely, the intersection of $A_{\\Omega}$ with the one-dimensional subspace of $A$ generated by $e$ ) into $A$, and then (3) shows that $\\tilde{f}$ may be regarded as an extension of $f$.\n\nIn most treatments of this topic, $f(x)$ is written in place of our $\\tilde{f}(x)$. The notation $\\tilde{f}$ is used here because it avoids certain ambiguities that might cause misunderstandings.\n\n(d) If $S$ is any set and $A$ is any algebra, the collection of all $A$-valued functions on $S$ is an algebra, if scalar multiplication, addition, and multiplication are defined pointwise. For instance, if $u$ and $v$ map $S$ into $A$, then\n\n$$\n(u v)(s)=u(s) v(s) \\quad(s \\in S)\n$$\n\nThis will be applied to $A$-valued functions defined in $A_{\\Omega}$.']"
+1.16,"['When $X$ and $Y$ are vector spaces over the same scalar field. A mapping $\\Lambda: X \\rightarrow Y$ is said to be linear if\n\n$$\n\\Lambda(\\alpha x+\\beta y)=\\alpha \\Lambda x+\\beta \\Lambda y\n$$\n\nfor all $x$ and $y$ in $X$ and all scalars $\\alpha$ and $\\beta$. Note that one often writes $\\Lambda x$, rather than $\\Lambda(x)$, when $\\Lambda$ is linear.\n\nLinear mappings of $X$ into its scalar field are called linear functionals.\n\nFor example, the multiplication operators $M_{\\alpha}$ of Section 1.7 are linear, but the translation operators $T_{a}$ are not, except when $a=0$.\n\nHere are some properties of linear mappings $\\Lambda: X \\rightarrow Y$ whose proofs are so easy that we omit them; it is assumed that $A \\subset X$ and $B \\subset Y$ :\n\n(a) $\\Lambda 0=0$.\n\n(b) If $A$ is a subspace (or a convex set, or a balanced set) the same is true of $\\Lambda(A)$.\n\n(c) If $B$ is a subspace (or a convex set, or a balanced set) the same is true of $\\Lambda^{-1}(B)$.\n(d) In particular, the set\n\n$$\n\\Lambda^{-1}(\\{0\\})=\\{x \\in X: \\Lambda x=0\\}=\\mathcal{N}(\\Lambda)\n$$\n\nis a subspace of $X$, called the null space of $\\Lambda$.']"
+4.17 (a),"Suppose $X$ is a Banach space. Then $\mathscr{B}(X)$ [which is an abbreviation for $\mathscr{B}(X, Y)]$ is not merely a Banach space (see Theorem 4.1) but also an algebra: If $S \in \mathscr{B}(X)$ and $T \in \mathscr{B}(X)$, one defines $S T \in \mathscr{B}(X)$ by
+
+$$
+(S T)(x)=S(T(x)) \quad(x \in X)
+$$
+
+The inequality
+
+$$
+\|S T\| \leq\|S\|\|T\|
+$$
+
+is trivial to verify.
+
+In particular, powers of $T \in \mathscr{B}(X)$ can be defined: $T^{0}=I$, the identity mapping on $X$, given by $I x=x$, and $T^{n}=T T^{n-1}$, for $n=1,2,3, \ldots$"
+4.17 (b),"An operator $T \in \mathscr{B}(X)$ is said to be invertible if there exists $S \in \mathscr{B}(X)$ such that
+
+$$
+S T=I=T S .
+$$
+
+In this case, we write $S=T^{-1}$. By the open mapping theorem, this happens if and only if $\mathscr{N}(T)=\{0\}$ and $\mathscr{R}(T)=X$."
+4.17 (c),"The spectrum $\sigma(T)$ of an operator $T \in \mathscr{B}(X)$ is the set of all scalars $\lambda$ such that $T-\lambda I$ is not invertible. Thus $\lambda \in \sigma(T)$ if and only if at least one of the following two statements is true:
+
+(i) The range of $T-\lambda I$ is not all of $X$.
+
+(ii) $T-\lambda I$ is not one-to-one.
+
+If (ii) holds, $\lambda$ is said to be an eigenvalue of $T$; the corresponding eigenspace is $\mathscr{N}(T-\lambda I)$; each $x \in $\mathscr{N}(T-\lambda I)$ (except $x=0$ ) is an eigenvector of $T$; it satisfies the equation
+
+$$
+T x=\lambda x
+$$"
+3.22,"Let $K$ be a subset of a vector space $X$. A nonempty set $S \subset K$ is called an extreme set of $K$ if no point of $S$ is an internal point of any line interval whose end points are in $K$, except when both end points are in $S$. Analytically, the condition can be expressed as follows: If $x \in K, y \in K, 0<t<1$, and
+
+$$
+(1-t) x+t y \in S
+$$
+
+then $x \in S$ and $y \in S$.
+
+The extreme points of $K$ are the extreme sets that consist of just one point.
+
+The set of all extreme points of $K$ will be denoted by $E(K)$."
+5.6,"['Let $C(S)$ be the familiar sup-normed Banach space of all continuous complex functions on the compact Hausdorff space $S$. A subspace $A$ of $C(S)$ is an algebra if $f g \\in A$ whenever $f \\in A$ and $g \\in A$. A set $E \\subset S$ is said to be $A$-antisymmetric if every $f \\in A$ which is real on $E$ is constant on $E$; in other words, the algebra $A_{E}$ which consists of the restrictions $\\left.f\\right|_{E}$ of the functions $f \\in A$ to $E$ contains no nonconstant real functions.\n\nFor example, if $S$ is a compact set in $\\mathscr{C}$ and if $A$ consists of all $f \\in C(S)$ that are holomorphic in the interior of $S$, then every component of the interior of $S$ is $A$-antisymmetric.\n\nSuppose $A \\subset C(S), p \\in S, q \\in S$, and write $p \\sim q$ provided that there is an $A$-antisymmetric set $E$ which contains both $p$ and $q$. It is easily verified that this defines an equivalence relation in $S$ and that each equivalence class is a closed set. These equivalence classes are the maximal $\\boldsymbol{A}$-antisymmetric sets.']"
+3.1,"The dual space of a topological vector space $X$ is the vector space $X^{*}$ whose elements are the continuous linear functionals on $X$. Note that addition and scalar multiplication are defined in $X^{*}$ by
+
+$$
+\left(\Lambda_{1}+\Lambda_{2}\right) x=\Lambda_{1} x+\Lambda_{2} x, \quad(\alpha \Lambda) x=\alpha \cdot \Lambda x
+$$
+
+It is clear that these operations do indeed make $X^{*}$ into a vector space.
+
+It will be necessary to use the obvious fact that every complex vector space is also a real vector space, and it will be convenient to use the following (temporary) terminology: An additive functional $\Lambda$ on a complex vector space $X$ is called real-linear (complex-linear) if $\Lambda(\alpha x)=\alpha \Lambda x$ for every $x \in X$ and for every real (complex) scalar $\alpha$. Our standing rule that any statement about vector spaces in which no scalar field is mentioned applies to both cases is unaffected by this temporary terminology and is still in force.
+
+If $u$ is the real part of a complex-linear functional $f$ on $X$, then $u$ is real-linear and
+
+$$
+f(x)=u(x)-i u(i x) \quad(x \in X)
+$$
+
+because $z=\operatorname{Re} z-i \operatorname{Re}(i z)$ for every $z \in \mathscr{C}$.
+
+Conversely, if $u: X \rightarrow R$ is real-linear on a complex vector space $X$ and if $f$ is defined by (1), a straightforward computation shows that $f$ is complex-linear.
+
+Suppose now that $X$ is a complex topological vector space. The above facts imply that a complex-linear functional on $X$ is in $X^{*}$ if and only if its real part is continuous, and that every continuous real-linear $u: X \rightarrow R$ is the real part of a unique $f \in X^{*}$."
+1.25 (a),"Suppose $d$ is a metric on a set $X$. A sequence $\left\{x_{n}\right\}$ in $X$ is a Cauchy sequence if to every $\varepsilon>0$ there corresponds an integer $N$ such that $d\left(x_{m}, x_{n}\right)<\varepsilon$ whenever $m>N$ and $n>N$. If every Cauchy sequence in $X$ converges to a point of $X$, then $d$ is said to be a complete metric on $X$."
+1.25 (b),"Let $\tau$ be the topology of a topological vector space $X$. The notion of Cauchy sequence can be defined in this setting without reference to any metric: Fix a local base $\mathscr{B}$ for $\tau$. A sequence $\left\{x_{n}\right\}$ in $X$ is then said to be a Cauchy sequence if to every $V \in \mathscr{B}$ corresponds an $N$ such that $x_{n}-x_{m} \in V$ if $n>N$ and $m>N$.
+
+It is clear that different local bases for the same $\tau$ give rise to the same class of Cauchy sequences."
+1.25 (c),"Suppose now that $X$ is a topological vector space whose topology $\tau$ is compatible with an invariant metric $d$. Let us temporarily use the terms $d$-Cauchy sequence and $\tau$-Cauchy sequence for the concepts defined in $(a)$ and $(b)$, respectively. Since
+
+$$
+d\left(x_{n}, x_{m}\right)=d\left(x_{n}-x_{m}, 0\right)
+$$
+
+and since the $d$-balls centered at the origin form a local base for $\tau$, we conclude:
+
+A sequence $\left\{x_{n}\right\}$ in $X$ is a d-Cauchy sequence if and only if is a $\tau$-Cauchy sequence.
+
+Consequently, any two invariant metrics on $X$ that are compatible with $\tau$ have the same Cauchy sequences. They clearly also have the same convergent sequences (namely, the $\tau$-convergent ones). These remarks prove the following fact:
+
+If $d_{1}$ and $d_{2}$ are invariant metrics on a vector space $X$ which induce the same topology on $X$, then
+
+(a) $d_{1}$ and $d_{2}$ have the same Cauchy sequences, and
+
+(b) $d_{1}$ is complete if and only if $d_{2}$ is complete.
+
+Invariance is needed in the hypothesis (Exercise 12)."
+3.19 (a),"If $X$ is a vector space and $E \subset X$, the convex hull of $E$ will be denoted by $c o(E)$. Recall that $c o(E)$ is the intersection of all convex subsets of $X$ which contain $E$. Equivalently, $c o(E)$ is the set of all finite convex combinations of members of $E$."
+3.19 (b),"If $X$ is a topological vector space and $E \subset X$, the closed convex hull of $E$, written $\overline{c o}(E)$, is the closure of $c o(E)$."
+3.19 (c),"A subset $E$ of a metric space $X$ is said to be totally bounded if $E$ lies in the union of finitely many open balls of radius $\varepsilon$, for every $\varepsilon>0$."
+3.19 (d),A set $E$ in a topological vector space $X$ is said to be totally bounded if to every neighborhood $V$ of 0 in $X$ corresponds a finite set $F$ such that $E \subset F+V$.
+12.11 (a),An operator $T \in \mathscr{B}(H)$ is normal if $T T^{*}=T^{*} T$.
+12.11 (b),An operator $T \in \mathscr{B}(H)$ is self-adjoint (or hermitian) if $T^{*}=T$.
+12.11 (c),"An operator $T \in \mathscr{B}(H)$ is unitary if $T^{*} T=I=T T^{*}$, where $I$ is the identity operator on $H$."
+12.11 (d),An operator $T \in \mathscr{B}(H)$ is a projection if $T^{2}=T$.
+12.1 (a),"In an inner product space (or unitary space) $H$: To each ordered pair of vectors $x$ and $y$ in $H$ is associated a complex number $(x, y)$, called the inner product or scalar product of $x$ and $y$, such that $(y, x)=\overline{(x, y)}$. (The bar denotes complex conjugation.)"
+12.1 (b),"In an inner product space $H$: $(x+y, z)=(x, z)+(y, z)$ for all $x, y, z \in H$."
+12.1 (c),"In an inner product space $H$: $(\alpha x, y)=\alpha(x, y)$ if $x \in H, y \in H, \alpha \in \mathbb{C}$."
+12.1 (d),"In an inner product space $H$: $(x, x) \geq 0$ for all $x \in H$."
+12.1 (e),"In an inner product space $H$: $(x, x)=0$ only if $x=0$."
+3.26,"Suppose $\mu$ is a measure on a measure space $Q, X$ is a topological vector space on which $X^{*}$ separates points, and $f$ is a function from $Q$ into $X$ such that the scalar functions $\Lambda f$ are integrable with respect to $\mu$, for every $\Lambda \in X^{*}$; note that $\Lambda f$ is defined by
+
+$$
+(\Lambda f)(q)=\Lambda(f(q)) \quad(q \in Q)
+$$
+
+If there exists a vector $y \in X$ such that
+
+$$
+\Lambda y=\int_{Q}(\Lambda f) d \mu
+$$
+
+for every $\Lambda \in X^{*}$, then we define
+
+$$
+\int_{Q} f d \mu=y
+$$
+
+It is clear that there is at most one such $y$, because $X^{*}$ separates points on $X$. Thus there is no uniqueness problem.
+
+Existence will be proved only in the rather special case (sufficient for many applications) in which $Q$ is compact and $f$ is continuous. In that case, $f(Q)$ is compact, and the only other requirement that will be imposed is that the closed convex hull of $f(Q)$ should be compact. By Theorem 3.20, this additional requirement is automatically satisfied when $X$ is a Fréchet space.
+
+Recall that a Borel measure on a compact (or locally compact) Hausdorff space $Q$ is a measure defined on the $\sigma$-algebra of all Borel sets in $Q$; this is the smallest $\sigma$-algebra that contains all open subsets of $Q$. A probability measure is a positive measure of total mass 1 ."
+12.17,"['Let $\\mathfrak{M}$ be a $\\sigma$-algebra in a set $\\Omega$, and let $H$ be a Hilbert space. A resolution of the identity (on $\\mathfrak{M}$) is a mapping\n\n$$\nE: \\mathfrak{M} \\rightarrow \\mathscr{B}(H)\n$$\n\nwith the following properties:\n(a) $E(\\varnothing)=0, E(\\Omega)=I$.\n\n(b) Each $E(\\omega)$ is a self-adjoint projection.\n\n(c) $E\\left(\\omega^{\\prime} \\cap \\omega^{\\prime \\prime}\\right)=E\\left(\\omega^{\\prime}\\right) E\\left(\\omega^{\\prime \\prime}\\right)$.\n\n(d) If $\\omega^{\\prime} \\cap \\omega^{\\prime \\prime}=\\varnothing$, then $E\\left(\\omega^{\\prime} \\cup \\omega^{\\prime \\prime}\\right)=E\\left(\\omega^{\\prime}\\right)+E\\left(\\omega^{\\prime \\prime}\\right)$.\n\n(e) For every $x \\in H$ and $y \\in H$, the set function $E_{x, y}$ defined by\n\n$$\nE_{x, y}(\\omega)=(E(\\omega) x, y)\n$$\n\nis a complex measure on $\\mathfrak{M}$.\n\nWhen $\\mathfrak{M}$ is the $\\sigma$-algebra of all Borel sets on a compact or locally compact Hausdorff space, it is customary to add another requirement to $(e)$: Each $E_{x, y}$ should be a regular Borel measure. (This is automatically satisfied on compact metric spaces, for instance. See [23].)']"
+6.36,"If $u \in \mathscr{D}^{\prime}, v \in \mathscr{D}^{\prime}$, and at least one of these two distributions has compact support, define
+
+$$
+L \phi=u *(v * \phi) \quad(\phi \in \mathscr{D})
+$$
+
+For if $v$ has compact support, then $v * \phi \in \mathscr{D}$, and $L \phi \in C^{\infty}$; if $u$ has compact support, then again $L \phi \in C^{\infty}$, since $v * \phi \in C^{\infty}$. Also, $\tau_{x} L=L \tau_{x}$, for all $x \in R^{n}$. These assertions follow from Theorems 6.30 and 6.35.
+
+The functional $\phi \rightarrow(L \phi)(0)$ is in fact a distribution. To see this, suppose $\phi_{i} \rightarrow 0$ in $\mathscr{D}$. By $(a)$ of Theorem 6.33,v* $\phi_{i} \rightarrow 0$ in $C^{\infty}$; if, in addition, $v$ has compact support then $v * \mathscr{\phi}_{i} \rightarrow 0$ in $\mathscr{D}$. It follows, in either case, that $\left(L \phi_{i}\right)(0) \rightarrow 0$.
+
+The proof of $(b)$ of Theorem 6.33 now shows that this distribution, which we shall denote by $u * v$, is related to $L$ by the formula
+
+$$
+L \phi=(u * v) * \phi \quad(\phi \in \mathscr{D})
+$$
+
+In other words, $u * v \in \mathscr{D}^{\prime}$ is characterized by
+
+$$
+(u * v) * \phi=u *(v * \phi) \quad(\phi \in \mathscr{D})
+$$"
+11.1,"A subset $J$ of a commutative complex algebra $A$ is said to be an ideal if
+
+(a) $J$ is a subspace of $A$ (in the vector space sense), and
+
+(b) $x y \in J$ whenever $x \in A$ and $y \in J$.
+
+If $J \neq A, J$ is a proper ideal. Maximal ideals are proper ideals which are not contained in any larger proper ideal."
+7.20,"If $\Omega$ is an open set in $\mathbb{C}^{n}$, and if $f$ is a continuous complex function in $\Omega$, then $f$ is said to be holomorphic in $\Omega$ if it is holomorphic in each variable separately. This means that if $\left(a_{1}, \ldots, a_{n}\right) \in \Omega$ and if
+
+$$
+g_{i}(\lambda)=f\left(a_{1}, \ldots, a_{i-1}, a_{i}+\lambda, a_{i+1}, \ldots, a_{n}\right)
+$$
+
+each of the functions $g_{1}, \ldots, g_{n}$ is to be holomorphic in some neighborhood of 0 in $\mathscr{C}$. A function that is holomorphic in all of $\mathscr{C}^{n}$ is said to be entire.
+
+Points of $\mathbb{C}^{n}$ will be denoted by $z=\left(z_{1}, \ldots, z_{n}\right)$, where $z_{k} \in \mathscr{C}$. If $z_{k}=$ $x_{k}+i y_{k}, x=\left(x_{1}, \ldots, x_{n}\right), y=\left(y_{1}, \ldots, y_{n}\right)$, then we write $z=x+i y$. The vectors
+
+$$
+x=\operatorname{Re} z \quad \text { and } \quad y=\operatorname{Im} z
+$$
+
+are the real and imaginary parts of $z$, respectively; $R^{n}$ will be thought of as the set of all $z \in \mathbb{C}^{n}$ with $\operatorname{Im} z=0$. The notations
+
+$$
+\begin{aligned}
+|z| & =\left(\left|z_{1}\right|^{2}+\cdots+\left|z_{n}\right|^{2}\right)^{1 / 2} \\
+|\operatorname{Im} z| & =\left(y_{1}^{2}+\cdots+y_{n}^{2}\right)^{1 / 2} \\
+z^{\alpha} & =z_{1}^{\alpha_{1}} \cdots z_{n}^{\alpha_{n}} \\
+z \cdot t & =z_{1} t_{1}+\cdots+z_{n} t_{n} \\
+e_{z}(t) & =\exp (i z \cdot t)
+\end{aligned}
+$$
+
+will be used for any multi-index $\alpha$ and any $t \in R^{n}$."
+13.34 (a),"Let $X$ be a Banach space, and suppose that to every $t \in[0, \infty)$ is associated an operator $Q(t) \in \mathscr{B}(X)$, in such a way that $Q(0)=I$."
+13.34 (b),"Let $X$ be a Banach space, and suppose that to every $t \in[0, \infty)$ is associated an operator $Q(t) \in \mathscr{B}(X)$, in such a way that $Q(s+t)=Q(s) Q(t)$ for all $s \geq 0$ and $t \geq 0$."
+13.34 (c),"Let $X$ be a Banach space, and suppose that to every $t \in[0, \infty)$ is associated an operator $Q(t) \in \mathscr{B}(X)$, in such a way that $\lim _{t \rightarrow 0}\|Q(t) x-x\|=0$ for every $x \in X$."
+13.34,"If $(a)$ and $(b)$ hold, $\{Q(t)\}$ is called a semigroup (or, more precisely, a one-parameter semigroup). Such semigroups have exponential representations, provided that the mapping $t \rightarrow Q(t)$ satisfies some continuity assumption. The one that is chosen here, namely $(c)$, is easy to work with.
+
+Motivated by the fact that every continuous complex function that satisfies $f(s+t)=f(s) f(t)$ has the form $f(t)=\exp (A t)$, and that $f$ is determined by the number $A=f^{\prime}(0)$, we associate with $\{Q(t)\}$ the operators $A_{\varepsilon}$, by
+
+$$
+A_{\varepsilon} x=\frac{1}{\varepsilon}[Q(\varepsilon) x-x] \quad(x \in X, \varepsilon>0)
+$$
+
+and define
+
+$$
+A x=\lim _{\varepsilon \rightarrow 0} A_{\varepsilon} x
+$$
+
+for all $x \in \mathscr{D}(A)$, that is, for all $x$ for which the limit (2) exists in the norm topology of $X$.
+
+It is clear that $\mathscr{D}(A)$ is a subspace of $X$ and that $A$ is thus a linear operator in $X$.
+
+This operator, which is essentially $Q^{\prime}(0)$, is called the infinitesimal generator of the semigroup $\{Q(t)\}$."
+9.6,"A function $\phi \in L^{\infty}\left(R^{n}\right)$ is said to be slowly oscillating if to every $\varepsilon>0$ correspond an $A<\infty$ and a $\delta>0$ such that
+
+$$
+|\phi(x)-\phi(y)|<\varepsilon \quad \text { if }|x|>A,|y|>A,|x-y|<\delta \text {. }
+$$
+
+If $n=1$, one can also define what it means for $\phi$ to be slowly oscillating at $+\infty$ : the requirement (1) is replaced by
+
+$$
+|\phi(x)-\phi(y)|<\varepsilon \quad \text { if } x>A, y>A,|x-y|<\delta \text {. }
+$$
+
+The same definition can of course be made at $-\infty$.
+
+Note that every uniformly continuous bounded function is slowly oscillating but that some slowly oscillating functions are not continuous."
+13.17,"The mapping
+
+$$
+t \rightarrow \frac{t-i}{t+i}
+$$
+
+sets up a one-to-one correspondence between the real line and the unit circle (minus the point 1). The symbolic calculus studied in Chapter 12 shows therefore that every self-adjoint $T \in \mathscr{B}(H)$ gives rise to a unitary
+operator
+
+$$
+U=(T-i I)(T+i I)^{-1}
+$$
+
+and that every unitary $U$ whose spectrum does not contain the point 1 is obtained in this way.
+
+This relation $T \leftrightarrow U$ will now be extended to a one-to-one correspondence between symmetric operators, on the one hand, and isometries, on the other.
+
+Let $T$ be a symmetric operator in $H$. Theorem 13.16 shows that
+
+$$
+\|T x+i x\|^{2}=\|x\|^{2}+\|T x\|^{2}=\|T x-i x\|^{2} \quad(x \in \mathscr{D}(T))
+$$
+
+Hence there is an isometry $U$, with
+
+$$
+\mathscr{D}(U)=\mathscr{R}(T+i I), \quad \mathscr{R}(U)=\mathscr{R}(T-i I)
+$$
+
+defined by
+
+$$
+U(T x+i x)=T x-i x \quad(x \in \mathscr{D}(T))
+$$
+
+Since $(T+i I)^{-1}$ maps $\mathscr{D}(U)$ onto $\mathscr{D}(T), U$ can also be written in the form
+
+$$
+U=(T-i I)(T+i I)^{-1}
+$$
+
+This operator $U$ is called the Cayley transform of $T$. Its main features are summarized in Theorem 13.19. It will lead to an easy proof of the spectral theorem for self-adjoint (not necessarily bounded) operators."
+7.14,"For $u \in \mathscr{S}_{n}^{\prime}$, define
+
+$$
+\hat{u}(\phi)=u(\hat{\phi}) \quad\left(\phi \in \mathscr{S}_{n}\right) .
+$$
+
+Since $\phi \rightarrow \hat{\phi}$ is a continuous linear mapping of $\mathscr{S}_{n}$ into $\mathscr{S}_{n}[(d)$ of Theorem 7.4], and since $u$ is continuous on $\mathscr{S}_{n}$, it follows that $\hat{u} \in \mathscr{S}_{n}^{\prime}$."
+7.3,"Rapidly decreasing functions are those $f \in C^{\infty}\left(R^{n}\right)$ for which
+
+$$
+\sup _{\left|\alpha\right| \leq N} \sup _{x \in R^{n}}\left(1+\left|x\right|^{2}\right)^{N}\left|\left(D_{\alpha} f\right)(x)\right|<\infty
+$$
+
+for $N=0,1,2, \ldots$ (Recall that $\left|x\right|^{2}=\sum x_{i}^{2}$.) In other words, the requirement is that $\boldsymbol{P} \cdot D_{\alpha} f$ is a bounded function on $\boldsymbol{R}^{n}$, for every polynomial $\boldsymbol{P}$ and for every multi-index $\alpha$. Since this is true with $\left(1+\left|x\right|^{2}\right)^{N} P(x)$ in place of $P(x)$, it follows that every $P \cdot D_{\alpha} f$ lies in $L^{1}\left(R^{n}\right)$.
+
+These functions form a vector space, denoted by $\mathscr{S}_{n}$, in which the countable collection of norms (1) defines a locally convex topology, as described in Theorem 1.37.
+
+It is clear that $\mathscr{D}\left(R^{n}\right) \subset \mathscr{S}_{n}$."
+8.7,"Suppose $\Omega$ is open in $R^{n}, N$ is a positive integer, $f_{\alpha} \in C^{\infty}(\Omega)$ for every multi-index $\alpha$ with $|\alpha| \leq N$, and at least one $f_{\alpha}$ with $|\alpha|=N$ is not identically 0. These data determine a linear differential operator
+
+$$
+L=\sum_{|\alpha| \leq N} f_{\alpha} D_{\alpha}
+$$
+
+which acts on distributions $u \in \mathscr{D}^{\prime}(\Omega)$ by
+
+$$
+L u=\sum_{|\alpha| \leq N} f_{\alpha} D_{\alpha} u
+$$
+
+The order of $L$ is $N$. The operator
+
+$$
+\sum_{|\alpha|=N} f_{\alpha} D_{\alpha}
+$$
+
+is the principal part of $L$. The characteristic polynomial of $L$ is
+
+$$
+p(x, y)=\sum_{|\alpha|=N} f_{\alpha}(x) y^{\alpha} \quad\left(x \in \Omega, y \in R^{n}\right)
+$$
+
+This is a homogeneous polynomial of degree $N$ in the variables $y=$ $\left(y_{1}, \ldots, y_{n}\right)$, with coefficients in $C^{\infty}(\Omega)$.
+
+The operator $L$ is said to be elliptic if $p(x, y) \neq 0$ for every $x \in \Omega$ and for every $y \in R^{n}$, except, of course, for $y=0$. Note that ellipticity is defined in terms of the principal part of $L$; the lower-order terms that appear in (1) play no role."
+8.8,"Associate to each real number $s$ a positive measure $\mu_{s}$ on $R^{n}$ by setting
+
+$$
+d \mu_{s}(y)=\left(1+|y|^{2}\right)^{s} d m_{n}(y)
+$$
+
+If $f \in L^{2}\left(\mu_{s}\right)$, that is, if $\int|f|^{2} d \mu_{s}<\infty$, then $f$ is a tempered distribution [Example (c) of Section 7.12]; hence $f$ is the Fourier transform of a tempered distribution $u$. The vector space of all $u$ so obtained will be denoted by $H^{s}$; equipped with the norm
+
+$$
+\|u\|_{s}=\left(\int_{R^{n}}|\hat{u}|^{2} d \mu_{s}\right)^{1 / 2}
+$$
+
+$H^{s}$ is clearly isometrically isomorphic to $L^{2}\left(\mu_{s}\right)$.
+
+These spaces $H^{s}$ are called Sobolev spaces. The dimension $n$ will be fixed throughout, and no reference to it will be made in the notation.
+
+By the Plancherel theorem, $H^{0}=L^{2}$.
+
+It is obvious that $H^{s} \subset H^{t}$ if $t<s$. The union $X$ of all spaces $H^{s}$ is therefore a vector space. A linear operator $\Lambda: X \rightarrow X$ is said to have order $t$ if the restriction of $\Lambda$ to each $H^{s}$ is a continuous mapping of $H^{s}$ into $H^{s-t}$; note that $t$ need not be an integer and that every operator of order $t$ also has order $t^{\prime}$ if $t^{\prime}>t$."
+11.21,"['If $S$ is a subset of a Banach algebra $A$, the centralizer of $S$ is the set\n\n$$\n\\Gamma(S)=\\{x \\in A: x s=s x \\text { for every } s \\in S\\} .\n$$\n\nWe say that $S$ commutes if any two elements of $S$ commute with each other. We shall use the following simple properties of centralizers.\n(a) $\\Gamma(S)$ is a closed subalgebra of $A$.\n\n(b) $S \\subset \\Gamma(\\Gamma(S))$.\n\n(c) If $S$ commutes, then $\\Gamma(\\Gamma(S))$ commutes.\n\nIndeed, if $x$ and $y$ commute with every $s \\in S$, so do $\\lambda x, x+y$, and $x y$; since multiplication is continuous in $A, \\Gamma(S)$ is closed. This proves $(a)$. Since every $s \\in S$ commutes with every $x \\in \\Gamma(S),(b)$ holds. If $S$ commutes, then $S \\subset \\Gamma(S)$, hence $\\Gamma(S) \\supset \\Gamma(\\Gamma(S)$ ), which proves $(c)$, since $\\Gamma(E)$ obviously commutes whenever $\\Gamma(E) \\subset E$.', '11.21 (a)']"
+11.21 (b),"['If $S$ is a subset of a Banach algebra $A$, the centralizer of $S$ is the set\n\n$$\n\\Gamma(S)=\\{x \\in A: x s=s x \\text { for every } s \\in S\\} .\n$$\n\nWe say that $S$ commutes if any two elements of $S$ commute with each other. We shall use the following simple properties of centralizers.\n\n$S \\subset \\Gamma(\\Gamma(S))$.\n\n', 'Since every $s \\in S$ commutes with every $x \\in \\Gamma(S),(b)$ holds.']"
+11.21 (c),"['If $S$ is a subset of a Banach algebra $A$, the centralizer of $S$ is the set\n\n$$\n\\Gamma(S)=\\{x \\in A: x s=s x \\text { for every } s \\in S\\} .\n$$\n\nWe say that $S$ commutes if any two elements of $S$ commute with each other. We shall use the following simple properties of centralizers.\n\nIf $S$ commutes, then $\\Gamma(\\Gamma(S))$ commutes.\n\n', 'If $S$ commutes, then $S \\subset \\Gamma(S)$, hence $\\Gamma(S) \\supset \\Gamma(\\Gamma(S)$ ), which proves $(c)$, since $\\Gamma(E)$ obviously commutes whenever $\\Gamma(E) \\subset E$.']"
