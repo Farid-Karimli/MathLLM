@@ -1,0 +1,318 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{MathLLM - Fall 23 Exam Results}
+\author{Farid Karimli}
+\date{November 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Question 1}
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item (RA) Show that if $f:[0,1] \rightarrow \mathbb{R}$ is continuously differentiable with $f(0)=$ $f(1)=0$ then
+\end{enumerate}
+
+$$
+\int_{0}^{1} f^{\prime}(x)^{2} d x \geq \pi^{2} \int_{0}^{1} f(x)^{2} d x
+$$
+
+with equality if and only if $f$ is a multiple of $x \mapsto \sin (\pi x)$.
+
+\subsection{Playground GPT}
+
+This problem is related to the Rayleigh quotient and the eigenvalue problem for the Sturm-Liouville differential operator. The inequality provided is an instance of the Rayleigh-Ritz inequality for the first non-zero eigenvalue of the problem. Let's proceed to prove this inequality:
+
+Let $f : [0, 1] \to \mathbb{R}$ be continuously differentiable with $f(0) = f(1) = 0$. We want to show that $$ \int_{0}^{1} f'(x)^2 , dx \geq \pi^2 \int_{0}^{1} f(x)^2 , dx. $$ Let's consider the Fourier sine series for $f(x)$, which represents $f$ as an infinite sum of sine functions thanks to the boundary conditions $f(0) = f(1) = 0$. The function $f(x)$ can be expanded in a sine series because it satisfies Dirichlet boundary conditions:
+
+$$ f(x) = \sum_{n=1}^\infty a_n \sin(n \pi x), $$ where $$ a_n = 2 \int_{0}^{1} f(x) \sin(n \pi x) , dx. $$
+
+Taking the derivative, we get: $$ f'(x) = \sum_{n=1}^\infty a_n n \pi \cos(n \pi x). $$
+
+Now we will compute the integrals of $f(x)^2$ and $f'(x)^2$:
+
+For $f(x)^2$: $$ \int_{0}^{1} f(x)^2 , dx = \int_{0}^{1} \left(\sum_{n=1}^\infty a_n \sin(n \pi x)\right)^2 , dx = \sum_{n=1}^\infty \frac{a_n^2}{2}, $$
+
+since the cross terms $\int_{0}^{1} \sin(n \pi x)\sin(m \pi x) , dx$ vanish for $m \neq n$ due to orthogonality of the sine functions on $[0,1]$ when multiplied by an integer multiple of $\pi$.
+
+For $f'(x)^2$: $$ \int_{0}^{1} f'(x)^2 , dx = \int_{0}^{1} \left(\sum_{n=1}^\infty a_n n \pi \cos(n \pi x)\right)^2 , dx = \sum_{n=1}^\infty \frac{a_n^2 n^2 \pi^2}{2}, $$
+
+for the same reason as above concerning the orthogonality of the cosine functions.
+
+Notice that since $n \geq 1$, we have $n^2 \geq 1$, and therefore $n^2 \pi^2 \geq \pi^2$. Thus, we have: $$ \sum_{n=1}^\infty \frac{a_n^2 n^2 \pi^2}{2} \geq \sum_{n=1}^\infty \frac{a_n^2 \pi^2}{2}, $$ which implies the desired inequality: $$ \int_{0}^{1} f'(x)^2 , dx \geq \pi^2 \int_{0}^{1} f(x)^2 , dx. $$
+
+Equality holds if and only if all of the coefficients $a_n$ for $n > 1$ are zero, which means $f(x)$ is a multiple of $\sin(\pi x)$. This is because the sine function with $n = 1$ is the eigenfunction corresponding to the first non-zero eigenvalue $\pi^2$ of this Sturm-Liouville problem. Thus, if all higher-order terms are zero, $f(x) = a_1 \sin(\pi x)$, which gives us the case of equality.
+
+This completes the proof.
+
+\subsection{GPT-4 with hits from GPT-3.5}
+
+To solve the given problem, we need to show that for a continuously differentiable function \( f : [0,1] \rightarrow \mathbb{R} \) with \( f(0) = f(1) = 0 \), the inequality
+$$
+\int_{0}^{1} f'(x)^{2} dx \geq \pi^{2} \int_{0}^{1} f(x)^{2} dx
+$$
+holds, with equality if and only if \( f \) is a multiple of \( x \mapsto \sin(\pi x) \).
+
+### Solution Approach
+
+1. **Use of Fourier Series:** Consider the Fourier sine series of \( f(x) \). Since \( f \) is continuously differentiable and satisfies the boundary conditions \( f(0) = f(1) = 0 \), it can be represented as a sum of sine functions:
+   $$
+   f(x) = \sum_{n=1}^{\infty} b_n \sin(n\pi x),
+   $$
+   where
+   $$
+   b_n = 2 \int_{0}^{1} f(x) \sin(n\pi x) dx.
+   $$
+
+2. **Differentiating \( f \):** The derivative of \( f \) can be written as
+   $$
+   f'(x) = \sum_{n=1}^{\infty} b_n n\pi \cos(n\pi x).
+   $$
+
+3. **Applying Parseval's Theorem:** Using Parseval's theorem on both \( f \) and \( f' \), we get
+   $$
+   \int_{0}^{1} f(x)^2 dx = \frac{1}{2} \sum_{n=1}^{\infty} b_n^2
+   $$
+   and
+   $$
+   \int_{0}^{1} f'(x)^2 dx = \frac{1}{2} \sum_{n=1}^{\infty} (b_n n\pi)^2.
+   $$
+
+4. **Comparing Integrals:** We compare these integrals:
+   $$
+   \int_{0}^{1} f'(x)^2 dx = \frac{\pi^2}{2} \sum_{n=1}^{\infty} n^2 b_n^2 \geq \frac{\pi^2}{2} \sum_{n=1}^{\infty} b_n^2 = \pi^2 \int_{0}^{1} f(x)^2 dx.
+   $$
+   The inequality follows from \( n^2 \geq 1 \) for all \( n \geq 1 \).
+
+5. **Equality Condition:** Equality holds if and only if all terms for \( n > 1 \) in the series are zero, which implies that \( f(x) \) is a multiple of \( \sin(\pi x) \).
+
+Contextualization with Theorems from the File
+
+The attached file discusses various concepts in measure theory and real analysis, such as properties of Lp spaces, orthogonality, and the behavior of continuous functions on compact spaces. While these concepts do not directly provide a step-by-step solution to the problem, they offer a deeper understanding of the foundational principles used in the solution, particularly those related to integrals, series, and function spaces. Understanding these principles is crucial for comprehending the underlying reasons why certain mathematical operations are valid and how they lead to the conclusion of the problem.
+
+\subsection{Solution by Harvard}
+
+Solution Expand $f$ in a Fourier sine series
+
+$$
+f(x)=\sum_{n=1}^{\infty} a_{n} \sin (n \pi x)
+$$
+
+Then by Parseval
+
+$$
+\int_{0}^{1}(f(x))^{2} d x=\frac{1}{2} \sum_{n=1}^{\infty} a_{n}^{2}
+$$
+
+For the other integral, we have $f^{\prime}(x)=\pi \sum_{n=1}^{\infty} n a_{n} \cos (n \pi x)$ (converging at least in $L^{2}$ ) so, again by Parseval,
+
+$$
+\int_{0}^{1}\left(f^{\prime}(x)\right)^{2} d x=\frac{\pi^{2}}{2} \sum_{n=1}^{\infty} n^{2} a_{n}^{2}
+$$
+
+The desired inequality follows because $n^{2} a_{n}^{2} \geq a_{n}^{2}$ with equality if and only if $n=1$ or $a_{n}=0$.
+
+Remarks: This is Wirtinger's inequality, whose applications include a proof of the isoperimetric inequality for plane curves. The Fourier sine expansion is a natural tool because the ratio $\int_{0}^{1}\left(f^{\prime}(x)\right)^{2} d x / \int_{0}^{1}\left(f^{\prime}(x)\right)^{2} d x$ is a Rayleigh quotient for the operator $D: f \mapsto f^{\prime}$, as the Fourier sine series expands $f$ with
+respect to an orthogonal eigenbasis for $D$. There is also an elementary but trickier proof by integration by parts, starting by writing $f(x)=g(x) \sin (\pi x)$ for some continuous $g:[0,1] \rightarrow \mathbb{R}$ that is differentiable on $(0,1)$, and eventually proving
+
+$$
+\int_{0}^{1}(g(x) \sin (\pi x))^{\prime 2} d x \geq \int_{0}^{1}(g(x) \sin (\pi x))^{2} d x
+$$
+
+with equality if and only if $g^{\prime}(x)=0$ for all $x$.
+
+\section{Question 2}
+
+\begin{enumerate}
+
+  \item (RA) A bounded operator $T: \mathcal{H} \rightarrow \mathcal{H}$ on a Hilbert space $\mathcal{H}$ is said to be compact if for any sequence $\left\{x_{n}\right\}_{n=1}^{\infty}$ in $\mathcal{H}$ such that $\sup _{n}\left\|x_{n}\right\|<\infty$, the sequence $\left\{T x_{n}\right\}_{n=1}^{\infty}$ contains a convergent subsequence.
+
+  \item Suppose that $T: \mathcal{H} \rightarrow \mathcal{H}$ is a compact operator. Show that for any $\sigma \in \mathbb{C} \backslash\{0\}$, the eigenspace $\{\psi \in \mathcal{H}: T \psi=\sigma \psi\}$ is finite-dimensional.
+
+  \item Show that if $T: \mathcal{H} \rightarrow \mathcal{H}$ is compact and $S: \mathcal{H} \rightarrow \mathcal{H}$ is bounded, then $T \circ S$ is compact.
+
+  \item Suppose that $T: \mathcal{H} \rightarrow \mathcal{H}$ is compact and invertible. Show that $\mathcal{H}$ is finite-dimensional.
+
+  Let $X \subset \mathbb{P}^{n}$ be an irreducible variety of dimension $k$. Let $\mathbb{G}(r, n)$ be the Grassmannian of $r$-planes in $\mathbb{P}^{n}$, and let
+
+\end{enumerate}
+
+$$
+\Phi:=\{\Lambda \in \mathbb{G}(r, n) \mid \Lambda \cap X \neq \emptyset\}
+$$
+
+Assuming that $r+k<n$, show that $\Phi$ is a closed, irreducible subvariety of the Grassmannian $\mathbb{G}(r, n)$. What is its codimension in $\mathbb{G}(r, n)$ ?
+
+
+\subsection{Playground GPT}
+
+Given a compact operator ( T: \mathcal{H} \rightarrow \mathcal{H} ), we need to show that for any ( \sigma \in \mathbb{C} \setminus{0} ), the eigenspace ( {\psi \in \mathcal{H}: T \psi=\sigma \psi} ) is finite-dimensional.
+
+Proof:
+Suppose towards a contradiction that the eigenspace ( E_\sigma ) corresponding to ( \sigma ) is infinite-dimensional. Then there exists a sequence ( { x_n } ) of unit vectors in ( E_\sigma ) (since eigenspaces are subspaces and hence they contain infinitely many unit vectors if they are infinite-dimensional) such that no subsequence of ( { x_n } ) converges. Since each ( x_n ) is an eigenvector corresponding to ( \sigma ), we have ( T x_n = \sigma x_n ).
+
+By the compactness of ( T ), ( { T x_n } ) should have a convergent subsequence. However, because ( \sigma \neq 0 ) and ( T x_n = \sigma x_n ), the sequence ( { T x_n } ) is just ( \sigma ) times the sequence ( { x_n } ), and hence cannot have a convergent subsequence since ( { x_n } ) was chosen not to have one. This contradiction means our initial assumption that ( E_\sigma ) is infinite-dimensional must be wrong.
+
+Therefore, we must conclude that for a compact operator ( T ), for any non-zero ( \sigma ), the eigenspace associated with ( \sigma ) must be finite-dimensional.
+
+3.2 Compactness of Composition ( T \circ S )
+Given two operators ( T: \mathcal{H} \rightarrow \mathcal{H} ) (compact) and ( S: \mathcal{H} \rightarrow \mathcal{H} ) (bounded), we need to show that their composition ( T \circ S ) is also compact.
+
+Proof:
+Let ( { y_n } ) be a bounded sequence in ( \mathcal{H} ). Since ( S ) is bounded, the sequence ( { S y_n } ) is also bounded. Because ( T ) is compact, there exists a convergent subsequence ( { T S y_{n_k} } ) of ( { T S y_n } ). Hence, ( T \circ S ) is compact because any bounded sequence ( { y_n } ) in ( \mathcal{H} ) gives rise to a convergent subsequence ( { T S y_{n_k} } ).
+
+3.3 Compact Invertible Operators on Infinite-Dimensional Spaces
+We want to show that if an operator ( T: \mathcal{H} \rightarrow \mathcal{H} ) is compact and invertible, then ( \mathcal{H} ) is finite-dimensional.
+
+Proof:
+Suppose that ( \mathcal{H} ) is infinite-dimensional and ( T ) is compact and invertible. We can consider the sequence ( { T^{-1}e_n } ) where ( { e_n } ) is an orthonormal basis of ( \mathcal{H} ). Since ( T ) is compact, the sequence ( { Te_n } ) contains a convergent subsequence. However, since ( T^{-1} ) is bounded (as ( T ) is invertible), the sequence ( { T^{-1}e_n } ) is not norm bounded, which contradicts the compactness of ( T ) since ( T(T^{-1}e_n) = e_n ) would be a bounded sequence and hence should have a convergent subsequence, which it can't because ( { e_n } ) is orthonormal.
+
+Therefore ( \mathcal{H} ) must be finite-dimensional if ( T ) is a compact and invertible operator.
+
+3.4 Irreducibility and Codimension of ( \Phi ) in the Grassmannian ( \mathbb{G}(r, n) )
+Given an irreducible variety ( X \subset \mathbb{P}^{n} ) of dimension ( k ) and ( \mathbb{G}(r, n) ), this problem requires advanced algebraic geometry knowledge, which is beyond the typical scope of real and functional analysis.
+
+Proof Outline:
+Proof of these properties in algebraic geometry involves using tools such as dimension theory, incidence correspondence, and the irreducibility of certain projective space bundles. However, this would require a significant amount of algebraic geometry concepts that are not typically covered in real analysis, functional analysis, or complex analysis. If you are interested in a proof using algebraic geometry, that would be a separate and rather complex endeavor that involves specific theorems from that field.
+
+Regarding the co-dimension of ( \Phi ) in ( \mathbb{G}(r, n) ), it is typically calculated by considering the expected dimension of the intersection ( \Lambda \cap X ) and using dimension theory to conclude. However, without specific information about the variety ( X ), the proof may involve different cases or additional assumptions. In general, the problem should be addressed within the framework of algebraic geometry, using its language and tools.
+
+If you want to proceed with a detailed proof of question 3.4, I would recommend consulting a specialized text in algebraic geometry or an expert in that field, as it goes beyond the introductory material in real and functional analysis.
+
+\subsection{GPT-4 with hits from GPT-3.5}
+
+To solve the given problem, let's address each part separately, utilizing the concepts from the attached file where relevant.
+
+### Part 1: Eigenspace of a Compact Operator is Finite-Dimensional
+
+For a compact operator \( T: \mathcal{H} \rightarrow \mathcal{H} \) and a non-zero scalar \( \sigma \in \mathbb{C} \), we need to show that the eigenspace \( \{\psi \in \mathcal{H}: T \psi = \sigma \psi\} \) is finite-dimensional.
+
+1. **Contradiction Approach:** Assume that the eigenspace is infinite-dimensional. Then, there exists an infinite sequence of orthonormal vectors \( \{\psi_n\} \) in this space (by the Gram-Schmidt process and the fact that infinite-dimensional Hilbert spaces have an orthonormal basis).
+
+2. **Compactness of \( T \):** Since \( T \) is compact, the sequence \( \{T \psi_n\} \) must have a convergent subsequence. However, since \( T \psi_n = \sigma \psi_n \), the sequence \( \{T \psi_n\} \) is also orthonormal and thus cannot have a convergent subsequence (as the elements are at least distance \( \sqrt{2} \) apart in norm). This contradiction implies that our assumption is wrong, and the eigenspace must be finite-dimensional.
+
+### Part 2: Composition of Compact and Bounded Operators
+
+Given a compact operator \( T \) and a bounded operator \( S \), we must show that \( T \circ S \) is compact.
+
+1. **Sequential Characterization of Compactness:** Let \( \{x_n\} \) be a bounded sequence in \( \mathcal{H} \). Since \( S \) is bounded, \( \{Sx_n\} \) is also bounded.
+
+2. **Applying Compactness of \( T \):** Since \( T \) is compact, the sequence \( \{TSx_n\} = \{T \circ S(x_n)\} \) has a convergent subsequence. This is the definition of the compactness of \( T \circ S \).
+
+### Part 3: Compact and Invertible Operator Implies Finite-Dimensional Space
+
+For a compact and invertible operator \( T: \mathcal{H} \rightarrow \mathcal{H} \), we need to show that \( \mathcal{H} \) is finite-dimensional.
+
+1. **Contradiction Approach:** Assume \( \mathcal{H} \) is infinite-dimensional. Then, there exists an orthonormal sequence \( \{x_n\} \) in \( \mathcal{H} \).
+
+2. **Using Compactness:** Since \( T \) is compact, \( \{Tx_n\} \) has a convergent subsequence. However, as \( T \) is also invertible, \( \{Tx_n\} \) remains orthonormal, which contradicts the existence of a convergent subsequence (as noted earlier).
+
+### Part 4: Grassmannian and Irreducible Variety
+
+For the algebraic geometry part, we need to show that \( \Phi \) is a closed, irreducible subvariety of the Grassmannian \( \mathbb{G}(r, n) \) and find its codimension.
+
+1. **Closedness:** The Grassmannian \( \mathbb{G}(r, n) \) is a compact space (in the Zariski topology). The set \( \Phi \) can be seen as the image under a continuous map from a larger space that includes \( X \) and \( \mathbb{G}(r, n) \). The continuity and compactness imply that \( \Phi \) is closed.
+
+2. **Irreducibility:** Since \( X \) is an irreducible variety, any continuous image of \( X \) (like \( \Phi \)) in \( \mathbb{G}(r, n) \) is also irreducible.
+
+3. **Codimension:** The codimension of \( \Phi \) in \( \mathbb{G}(r, n) \) is typically \( (n - r - k) \), based on the dimension theory in algebraic geometry.
+
+### Utilizing Concepts from the Attached File
+
+The attached file contains various theorems and concepts from measure theory and functional analysis, such as the Radon-Nikodym theorem, the Lebesgue Convergence theorem, and properties of sigma-algebras. These concepts, while not directly applicable to the solution of the problem, provide foundational knowledge in understanding the behavior of operators, measures, and spaces, which is crucial in advanced mathematical contexts like the ones posed in this problem. The file's content thus serves as a background and context to better grasp the underlying principles used in these solutions.
+
+
+\subsubsection{Solution by Harvard}
+
+\section*{Solution:}
+\begin{enumerate}
+  \item Suppose the eigenspace for $\sigma \neq 0$ were infinite-dimensional. Let $\psi_{i}$ be an orthonormal basis for it. Since they all have norm 1, we know that $\left\{T x_{n}\right\}_{n}$ has a convergent subsequence. But $T x_{n}=\sigma x_{n}$, and since $x_{n}$ are orthonormal, we have
+\end{enumerate}
+
+$$
+\left\|T x_{n}-T x_{m}\right\|^{2}=|\sigma|^{2}\left\|x_{n}-x_{m}\right\|^{2}=2|\sigma|^{2}
+$$
+
+Since $\sigma \neq 0$, this means that $\left\{T x_{n}\right\}_{n}$ cannot have a convergent subsequence (all elements in this sequence are the same non-zero distance from each other). This contradicts compactness of $T$.
+
+
+
+\section{Question 3}
+
+ \item (RA) Suppose $\left\{f_{n}\right\}$ are measurable functions on the unit interval $[0,1] \subset \mathbb{R}$ such that $\left\{f_{n}\right\}$ converges to 0 almost everywhere, and for some $p \geq 1$, we have $\sup _{n}\left\|f_{n}\right\|_{L^{p}([0,1])}<\infty$. Show that $\left\{f_{n}\right\}$ converges to 0 in $L^{q}([0,1])$ for all $1 \leq q<p$.
+
+
+\subsection{Playground GPT}
+
+Proof:
+Convergence in Measure: The assumption that ({f_n}) converges to 0 almost everywhere combined with the uniform bound in (L^p) implies that ({f_n}) converges in measure to 0.
+
+Uniform Integrability: From the uniform bound of ({f_n}) in (L^p), we infer that the sequence is uniformly integrable. This is because for any (\epsilon > 0), there exists a (\delta > 0) such that for any measurable set (E \subset [0,1]) with measure (m(E) < \delta), we have [\int_{E} |f_n|^p , dx < \epsilon,] for all (n). This follows from the Chebyshev inequality and the uniform bound on the (L^p) norms.
+
+Vitali's Convergence Theorem: Given a sequence of functions that is uniformly integrable and converges in measure, Vitali's convergence theorem allows us to conclude that this sequence converges in (L^1) if it is also uniformly absolutely continuous.
+
+Interpolation Inequality (Riesz-Thorin Theorem): The Riesz-Thorin interpolation theorem states that the (L^q) norm can be interpolated between the (L^p) and (L^1) norms as follows: [|f_n|{L^q} \leq |f_n|{L^p}^{\theta} |f_n|_{L^1}^{1-\theta}] for (1 \leq q \leq p) and (\theta) such that (\frac{1}{q} = \frac{\theta}{p} + 1 - \theta).
+
+Conclusion with (L^q) Convergence: Since ({f_n}) is uniformly integrable and converges to 0 almost everywhere, by the Riesz-Thorin theorem and the convergence in (L^1) implied by Vitali's theorem, we conclude that ({f_n}) converges to 0 in (L^q) for all (1 \leq q < p).
+
+Applying these results, it's established that the sequence ({f_n}) converges to 0 in (L^q([0,1])) for all (1 \leq q < p).
+
+\subsubsection{GPT-4 with hits from GPT-3.5}
+
+To solve this problem, we'll use concepts from measure theory and functional analysis, particularly related to \(L^p\) spaces. The goal is to show that if a sequence of measurable functions \(\{f_n\}\) converges to 0 almost everywhere on \([0,1]\) and is uniformly bounded in \(L^p([0,1])\) norm for some \(p \geq 1\), then \(\{f_n\}\) converges to 0 in \(L^q([0,1])\) for all \(1 \leq q < p\).
+
+### Solution Approach
+
+1. **Uniform Boundedness in \(L^p\):** By hypothesis, there exists \(M > 0\) such that \(\|f_n\|_{L^p} \leq M\) for all \(n\).
+
+2. **Almost Everywhere Convergence:** Since \(f_n \to 0\) almost everywhere, for any \(\epsilon > 0\), there exists \(N\) such that for all \(n \geq N\), \(|f_n(x)| < \epsilon\) for almost every \(x \in [0,1]\).
+
+3. **Estimating \(L^q\) Norm:** For \(1 \leq q < p\), by Hölder's inequality, we have
+   $$
+   \|f_n\|_{L^q}^q = \int_0^1 |f_n(x)|^q dx \leq \left(\int_0^1 |f_n(x)|^p dx\right)^{\frac{q}{p}} \left(\int_0^1 1 dx\right)^{1-\frac{q}{p}}.
+   $$
+   This can be further bounded by
+   $$
+   \|f_n\|_{L^q}^q \leq M^q \cdot 1^{1-\frac{q}{p}} = M^q.
+   $$
+
+4. **Convergence to 0 in \(L^q\):** As \(n \to \infty\), \(|f_n(x)| \to 0\) almost everywhere, implying that \(\|f_n\|_{L^q} \to 0\).
+
+### Application of Theorems from the File
+
+The attached file discusses several advanced concepts in measure theory and functional analysis. These concepts, like bounded sequences in function spaces and convergence theorems, provide a theoretical foundation for understanding the behavior of function sequences in various \(L^p\) spaces. Although the file's content does not directly solve the problem, it offers a context for understanding why certain mathematical techniques, like the use of Hölder's inequality and the properties of \(L^p\) spaces, are applicable and valid in this scenario.
+
+\subsection{Solution by Harvard}
+
+Syllabus topics: $L^{p}$ spaces
+
+Solution: Fix any $\varepsilon>0$. Set $\mathcal{E}_{\varepsilon, n}:=\left\{x \in[0,1]:\left|f_{n}(x)\right| \geq \varepsilon\right\}$. We first have
+
+$$
+\begin{aligned}
+\int_{0}^{1}\left|f_{n}(x)\right|{ }^{q} d x & =\int_{\mathcal{E}_{\varepsilon, n}}\left|f_{n}(x)\right|^{q} d x+\int_{\mathcal{E}_{\varepsilon, n}^{C}}\left|f_{n}(x)\right|^{q} d x \\
+& \leq \int_{\mathcal{E}_{\varepsilon, n}}\left|f_{n}(x)\right|^{q} d x+\varepsilon^{q} .
+\end{aligned}
+$$
+
+By Hölder,
+
+$$
+\int_{\mathcal{E}_{\varepsilon, n}}\left|f_{n}(x)\right|^{q} d x \leq\left(\int_{\mathcal{E}_{\varepsilon, n}}\left|f_{n}(x)\right|^{p} d x\right)^{\frac{q}{p}}\left(\mu\left(\mathcal{E}_{\varepsilon, n}\right)\right)^{\alpha(p, q)}
+$$
+
+By assumption, the first factor on the RHS is bounded uniformly in $n$ and $\mu\left(\mathcal{E}_{\varepsilon, n}\right) \rightarrow 0$ as $n \rightarrow \infty$. Thus,
+
+$$
+\limsup _{n \rightarrow \infty} \int_{0}^{1}\left|f_{n}(x)\right|^{q} d x \leq \varepsilon^{q}
+$$
+
+Since $\varepsilon>0$ is arbitrary, this means the limsup on the left-hand side is 0 .
+
+
+
+
+\end{document}
