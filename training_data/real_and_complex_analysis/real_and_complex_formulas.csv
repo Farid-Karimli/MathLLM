@@ -1,0 +1,1036 @@
+Chapter,Type,Type#,Formula#,Path,latex
+10,10.1,Definition,2,real_and_complex/10.1 Definition_10_2.jpg,$D^{\prime}(a ; r)=\{z: 0<|z-a|<r\}$
+17,17.11,Theorem,2,real_and_complex/17.11 Theorem_17_2.jpg,"$\left(N_{\alpha} f\right)^{p} \leq\left(N_{\alpha} h\right)^{2}$,"
+4,4.14,Theorem,5,real_and_complex/4.14 Theorem_4_5.jpg,$\sum_{\alpha \in F}|\hat{x}(\alpha)|^{2} \leq\|x\|^{2}$
+20,20.5,Theorem,20,real_and_complex/20.5 Theorem_20_20.jpg,"$F(z)=\frac{1}{\pi} \iint(\bar{\partial} \Phi)(\zeta) R(\zeta, z) d \xi d \eta \quad(z \in \Omega)$"
+19,19.9,Theorem,3,real_and_complex/19.9 Theorem_19_3.jpg,$f(x)=\sum_{n=0}^{\infty} \frac{\left(D^{n} f\right)(a)}{n !}(x-a)^{n}$
+10,10.21,Theorem,4,real_and_complex/10.21 Theorem_10_4.jpg,$h(z)=\sum_{n=0}^{\infty} b_{n}(z-a)^{n} \quad(z \in D)$
+20,20.2,Lemma,7,real_and_complex/20.2 Lemma_20_7.jpg,$|a| \geq \frac{r}{4}$.
+10,10.10,Theorem,3,real_and_complex/10.10 Theorem_10_3.jpg,$\varphi(t)=\exp \left\{\int_{\alpha}^{t} \frac{\gamma^{\prime}(s)}{\gamma(s)-z} d s\right\} \quad(\alpha \leq t \leq \beta)$.
+2,2.13,Theorem,15,real_and_complex/2.13 Theorem_2_15.jpg,"$B_{n}=\left(A_{n} \cap K\right)-\left(B_{1} \cup \cdots \cup B_{n-1}\right) \quad(n=2,3,4, \ldots)$"
+19,19.1,Definition,1,real_and_complex/19.1 Definition_19_1.jpg,$f(z)=\int_{0}^{\infty} F(t) e^{i t z} d t \quad\left(z \in \Pi^{+}\right)$
+1,1.28,Fatou’s,1,real_and_complex/1.28 Fatou’s Lemma_1_1.jpg,$\int_{X}\left(\underset{n \rightarrow \infty}{\liminf f_{n}}\right) d \mu \leq \liminf _{n \rightarrow \infty} \int_{X} f_{n} d \mu$.
+10,10.39,Lemma,1,real_and_complex/10.39 Lemma_10_1.jpg,$\left|\gamma_{1}(s)-\gamma_{0}(s)\right|<\left|\alpha-\gamma_{0}(s)\right| \quad(0 \leq s \leq 1)$
+11,11.30,Theorem,1,real_and_complex/11.30 Theorem_11_1.jpg,$\sup _{0<r<1}\left\|u_{r}\right\|_{p}=M<\infty$
+5,5.21,Remark,1,real_and_complex/5.21 Remark_5_1.jpg,$\|f\|_{K}=\|f\|_{H} \quad(f \in A)$.
+18,18.4,Theorem,2,real_and_complex/18.4 Theorem_18_2.jpg,$(x+h)^{-1}=\left(e+x^{-1} h\right)^{-1} x^{-1}$
+6,6.19,Theorem,7,real_and_complex/6.19 Theorem_6_7.jpg,"$\int_{X}|g| d \lambda \geq \sup \left\{|\Phi(f)|: f \in C_{0}(X),\|f\| \leq 1\right\}=1$."
+10,10.35,Cauchy’s,10,real_and_complex/10.35 Cauchy’s Theorem_10_10.jpg,$h_{1}(z)=\frac{1}{2 \pi i} \int_{\Gamma} \frac{f(w)}{w-z} d w \quad\left(z \in \Omega_{1}\right)$
+7,7.15,Theorem,6,real_and_complex/7.15 Theorem_7_6.jpg,$f_{n+1}(x)=f_{n}(x) \quad\left(x \notin E_{n}\right)$
+20,20.3,Lemma,3,real_and_complex/20.3 Lemma_20_3.jpg,"$(\bar{\partial} f)(\zeta)=\frac{1}{2} e^{i \theta}\left[\frac{\partial}{\partial r}+\frac{i}{r} \frac{\partial}{\partial \theta}\right] \varphi(r, \theta)$."
+6,6.10,The,10,real_and_complex/6.10 The Theorem_6_10.jpg,"$\lambda_{a}(E)=\lambda(A \cap E), \quad \lambda_{s}(E)=\lambda(B \cap E)$,"
+5,5.9,The,2,real_and_complex/5.9 The Open Mapping Theorem_5_2.jpg,"$\Lambda x_{i}^{\prime} \rightarrow y_{0}, \quad \Lambda x_{i}^{\prime \prime} \rightarrow y_{0}+y \quad(i \rightarrow \infty)$"
+10,10.42,The,2,real_and_complex/10.42 The Residue Theorem_10_2.jpg,$\frac{1}{2 \pi i} \int_{\Gamma} f(z) d z=\sum_{a \in A} \operatorname{Res}(f ; a) \operatorname{Ind}_{\Gamma}(a)$.
+1,1.38,Theorem,4,real_and_complex/1.38 Theorem_1_4.jpg,$\int_{s} \varphi d \mu<\infty$.
+19,19.11,Theorem,16,real_and_complex/19.11 Theorem_19_16.jpg,$\left|1-\frac{\sin \lambda_{n} z}{\lambda_{n} z}\right| \leq B \lambda_{n}|z| \quad\left(|z| \leq \frac{1}{\lambda_{n}}\right)$
+15,15.9,Theorem,0,real_and_complex/15.9 Theorem_15_0.jpg,$\sum_{n=1}^{\infty}\left(\frac{r}{r_{n}}\right)^{1+p_{n}}<\infty$
+6,6.10,The,6,real_and_complex/6.10 The Theorem_6_6.jpg,$\int_{X} f d \lambda=\int_{X} f g d \varphi$
+13,13.11,Theorem,1,real_and_complex/13.11 Theorem_13_1.jpg,$F(z)=\int_{\Gamma(z)} f(\zeta) d \zeta \quad(z \in \Omega)$
+8,8.14,Theorem,6,real_and_complex/8.14 Theorem_8_6.jpg,"$\varphi(x, y)=x-y, \quad \psi(x, y)=y$"
+6,6.16,Theorem,5,real_and_complex/6.16 Theorem_6_5.jpg,$\Phi\left(\chi_{E}\right)=\int_{E} g d \mu=\int_{X} \chi_{E} g d \mu$
+16,16.9,Definition,2,real_and_complex/16.9 Definition_16_2.jpg,"$\gamma\left(\left[s_{i}, s_{i+1}\right]\right) \subset D_{i} \quad(i=0, \ldots, n-1)$"
+6,6.11,Theorem,1,real_and_complex/6.11 Theorem_6_1.jpg,"$A_{n}=\bigcup_{i=n}^{\infty} E_{i}, \quad A=\bigcap_{n=1}^{\infty} A_{n}$."
+6,6.16,Theorem,10,real_and_complex/6.16 Theorem_6_10.jpg,$\Psi(F)=\int_{X} F G d \tilde{\mu} \quad\left(F \in L^{P}(\tilde{\mu})\right)$
+6,6.16,Theorem,11,real_and_complex/6.16 Theorem_6_11.jpg,$\int_{X}|g|^{q} d \mu=\int_{X}|G|^{q} d \tilde{\mu}=\|\Psi\|^{q}=\|\Phi\|^{q}$
+4,4.14,(thus,1,real_and_complex/4.14 (thus obtaining Theorem_4_1.jpg,$\sum_{\alpha \in A} \varphi(\alpha)$
+6,6.16,Theorem,4,real_and_complex/6.16 Theorem_6_4.jpg,$\left\|\chi_{E}-\chi_{A_{k}}\right\|_{p}=\left[\mu\left(E-A_{k}\right)\right]^{1 / p} \rightarrow 0 \quad(k \rightarrow \infty)$
+6,6.10,The,7,real_and_complex/6.10 The Theorem_6_7.jpg,$0 \leq \frac{1}{\varphi(E)} \int_{E} g d \varphi=\frac{\lambda(E)}{\varphi(E)} \leq 1$.
+15,15.9,Theorem,1,real_and_complex/15.9 Theorem_15_1.jpg,"Condition  is always satisfied if $p_{n}=n-1$, for instance."
+1,1.35,Definition,1,real_and_complex/1.35 Definition_1_1.jpg,"$\mu(\{x: f(x) \neq g(x)\})=0$,"
+5,5.9,The,3,real_and_complex/5.9 The Open Mapping Theorem_5_3.jpg,$\|x\| \leq \delta^{-1}\|y\| \quad$ and $\quad\|y-\Lambda x\|<\epsilon$.
+10,10.42,The,3,real_and_complex/10.42 The Residue Theorem_10_3.jpg,$\int_{\Gamma} g(z) d z=0$
+8,8.8,Theorem,1,real_and_complex/8.8 Theorem_8_1.jpg,"$\varphi(x)=\int_{Y} f_{x} d \lambda, \quad \psi(y)=\int_{X} f^{y} d \mu \quad(x \in X, y \in Y)$"
+6,6.10,The,11,real_and_complex/6.10 The Theorem_6_11.jpg,$\int_{E}\left(1-g^{n+1}\right) d \lambda=\int_{E} g\left(1+g+\cdots+g^{n}\right) w d \mu$
+19,19.2,Theorem,1,real_and_complex/19.2 Theorem_19_1.jpg,$\sup _{0<y<\infty} \frac{1}{2 \pi} \int_{-\infty}^{\infty}|f(x+i y)|^{2} d x=C<\infty$
+3,3.11,Theorem,6,real_and_complex/3.11 Theorem_3_6.jpg,$\int_{X}\left|f-f_{m}\right|^{p} d \mu \leq \liminf _{i \rightarrow \infty} \int_{X}\left|f_{n_{i}}-f_{m}\right|^{p} d \mu \leq \epsilon^{p}$.
+20,20.3,Lemma,2,real_and_complex/20.3 Lemma_20_2.jpg,$f(z)=-\frac{1}{\pi} \iint_{R^{2}} \frac{(\bar{\partial} f)(\zeta)}{\zeta-z} d \xi d \eta \quad(\zeta=\xi+i \eta)$
+12,12.12,The,69,real_and_complex/12.12 The Hausdorff-Young Theorem_12_69.jpg,$(\partial \bar{\partial})(f g)=f \cdot(\partial \bar{\partial} g)+(\partial f) \cdot(\bar{\partial} g)+(\bar{\partial} f) \cdot(\partial g)+(\partial \bar{\partial} f) \cdot g$.
+7,7.15,Theorem,7,real_and_complex/7.15 Theorem_7_7.jpg,$\left|f_{n}(x)-f_{n+1}(x)\right| \leq \int_{I}\left|g_{n}-g_{n+1}\right|<2^{-n+1} \quad\left(x \in E_{n}\right)$
+10,10.35,Cauchy’s,11,real_and_complex/10.35 Cauchy’s Theorem_10_11.jpg,$\lim _{|z| \rightarrow \infty} \varphi(z)=\lim _{|z| \rightarrow \infty} h_{1}(z)=0$
+17,17.5,Theorem,4,real_and_complex/17.5 Theorem_17_4.jpg,$\left\|f_{r}\right\|_{0}=\exp \int_{T} \log ^{+}\left|f_{r}\right| d \sigma$
+6,6.19,Theorem,6,real_and_complex/6.19 Theorem_6_6.jpg,$\Phi(f)=\int_{X} f g d \lambda \quad\left(f \in C_{c}(X)\right)$
+10,10.40,Theorem,1,real_and_complex/10.40 Theorem_10_1.jpg,$\operatorname{Ind}_{\Gamma_{1}}(\alpha)=\operatorname{Ind}_{\Gamma_{0}}(\alpha)$
+1,1.29,Theorem,2,real_and_complex/1.29 Theorem_1_2.jpg,$\int_{X} g d \varphi=\int_{X} g f d \mu$
+18,18.4,Theorem,3,real_and_complex/18.4 Theorem_18_3.jpg,"$(x+h)^{-1}-x^{-1}+x^{-1} h x^{-1}=\left[\left(e+x^{-1} h\right)^{-1}-e+x^{-1} h\right] x^{-1}$,"
+8,8.15,Definition,1,real_and_complex/8.15 Definition_8_1.jpg,$\mu\{f>t\}=\mu(\{x \in X: f(x)>t\})$
+10,10.2,Definition,1,real_and_complex/10.2 Definition_10_1.jpg,$\lim _{z \rightarrow z_{0}} \frac{f(z)-f\left(z_{0}\right)}{z-z_{0}}$
+2,2.13,Theorem,14,real_and_complex/2.13 Theorem_2_14.jpg,$\mu(A-B) \leq \epsilon+\mu\left(K_{1}-V_{2}\right)+\epsilon$
+9,9.3,Remark,2,real_and_complex/9.3 Remark_9_2.jpg,$f(x)=\sum_{-\infty}^{\infty} c_{n} e^{i n x}$
+10,10.10,Theorem,2,real_and_complex/10.10 Theorem_10_2.jpg,$\operatorname{Ind}_{\gamma}(z)=\frac{1}{2 \pi i} \int_{\alpha}^{\beta} \frac{\gamma^{\prime}(s)}{\gamma(s)-z} d s$.
+20,20.2,Lemma,6,real_and_complex/20.2 Lemma_20_6.jpg,$b=\frac{1}{2 \pi i} \int_{\Gamma} z g(z) d z$
+20,20.5,Theorem,21,real_and_complex/20.5 Theorem_20_21.jpg,$\left|f\left(z_{2}\right)-f\left(z_{1}\right)\right|$
+19,19.9,Theorem,2,real_and_complex/19.9 Theorem_19_2.jpg,"$\left\|D^{n} f\right\|_{\infty} \leq \beta B^{n} n ! \quad(n=0,1,2, \ldots)$"
+4,4.14,Theorem,4,real_and_complex/4.14 Theorem_4_4.jpg,$\left\|x-s_{F}(x)\right\|<\|x-s\|$
+10,10.1,Definition,3,real_and_complex/10.1 Definition_10_3.jpg,$\bar{A} \cap B=\varnothing=A \cap \bar{B}$.
+2,2.25,The,1,real_and_complex/2.25 The Vitali-Carathéodory Theorem_2_1.jpg,$\int_{X}(v-u) d \mu<\epsilon$.
+7,7.20,Theorem,1,real_and_complex/7.20 Theorem_7_1.jpg,$f(x)-f(a)=\int_{a}^{x} f^{\prime}(t) d t \quad(a \leq x \leq b)$
+15,15.24,Theorem,1,real_and_complex/15.24 Theorem_15_1.jpg,$\lim _{r \rightarrow 1} \frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|B\left(r e^{i \theta}\right)\right| d \theta=0$.
+15,15.24,Theorem,3,real_and_complex/15.24 Theorem_15_3.jpg,$\log \left|B_{N}\right| \leq \lim _{r \rightarrow 1} \frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|B\left(r e^{i \theta}\right)\right| d \theta \leq \frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|B^{*}\left(e^{i \theta}\right)\right| d \theta \leq 0$
+17,17.11,Theorem,1,real_and_complex/17.11 Theorem_17_1.jpg,$f=B h^{2 / p}$
+2,2.25,The,3,real_and_complex/2.25 The Vitali-Carathéodory Theorem_2_3.jpg,$\int_{X} f d \mu=\sum_{i=1}^{\infty} c_{i} \mu\left(E_{i}\right)$
+7,7.20,Theorem,3,real_and_complex/7.20 Theorem_7_3.jpg,$f=f_{1}-f_{2}$
+10,10.1,Definition,1,real_and_complex/10.1 Definition_10_1.jpg,$D(a ; r)=\{z:|z-a|<r\}$
+4,4.14,Theorem,6,real_and_complex/4.14 Theorem_4_6.jpg,$\|x-s\|^{2}=\left\|\left(x-s_{F}\right)+\left(s_{F}-s\right)\right\|^{2}=\left\|x-s_{F}\right\|^{2}+\left\|s_{F}-s\right\|^{2}$
+15,15.15,Theorem,4,real_and_complex/15.15 Theorem_15_4.jpg,$1=h g_{n}+f \varphi$
+20,20.5,Theorem,23,real_and_complex/20.5 Theorem_20_23.jpg,$2 \pi \int_{0}^{4 \delta}\left(\frac{50}{\delta}+\frac{1}{\rho}\right) \rho d \rho=808 \pi \delta$
+20,20.2,Lemma,4,real_and_complex/20.2 Lemma_20_4.jpg,$F(w)=\frac{a}{w}+\sum_{n=0}^{\infty} c_{n} w^{n} \quad(w \in U)$
+10,10.39,Lemma,2,real_and_complex/10.39 Lemma_10_2.jpg,$\frac{\gamma^{\prime}}{\gamma}=\frac{\gamma_{1}^{\prime}}{\gamma_{1}-\alpha}-\frac{\gamma_{0}^{\prime}}{\gamma_{0}-\alpha}$
+10,10.2,Definition,3,real_and_complex/10.2 Definition_10_3.jpg,$g(w)-g\left(w_{0}\right)=\left[g^{\prime}\left(w_{0}\right)+\eta(w)\right]\left(w-w_{0}\right)$
+1,1.28,Fatou’s,2,real_and_complex/1.28 Fatou’s Lemma_1_2.jpg,"$g_{k}(x)=\inf _{i \geq k} f_{i}(x) \quad(k=1,2,3, \ldots ; x \in X)$"
+2,2.13,Theorem,16,real_and_complex/2.13 Theorem_2_16.jpg,$\Lambda f \leq \int_{x} f d \mu$
+11,11.30,Theorem,2,real_and_complex/11.30 Theorem_11_2.jpg,$\Lambda_{r} g=\int_{T} g u_{r} d \sigma \quad(0 \leq r<1)$
+10,10.40,Theorem,3,real_and_complex/10.40 Theorem_10_3.jpg,"$|\alpha-H(s, t)|>2 \epsilon \quad$ if $\quad(s, t) \in I^{2}$"
+9,9.6,Theorem,2,real_and_complex/9.6 Theorem_9_2.jpg,$\left|\hat{f}\left(t_{n}\right)-\hat{f}(t)\right| \leq \int_{-\infty}^{\infty}|f(x)|\left|e^{-i t_{n} x}-e^{-i t x}\right| d m(x)$
+5,5.21,Remark,2,real_and_complex/5.21 Remark_5_2.jpg,$\|f\|_{E}=\sup \{|f(x)|: x \in E\}$
+6,6.19,Theorem,4,real_and_complex/6.19 Theorem_6_4.jpg,$|\Phi(f)| \leq \Lambda(|f|) \leq\|f\| \quad\left(f \in C_{c}(X)\right)$
+14,14.13,Theorem,9,real_and_complex/14.13 Theorem_14_9.jpg,$\sum_{n=1}^{N} n\left|\alpha_{n}\right|^{2}\left(1-r^{2 n}\right) \leq 1+\eta r$
+10,10.6,Theorem,2,real_and_complex/10.6 Theorem_10_2.jpg,$f^{\prime}(z)=\sum_{n=1}^{\infty} n c_{n}(z-a)^{n-1}$
+3,3.11,Theorem,4,real_and_complex/3.11 Theorem_3_4.jpg,"$f_{n_{1}}+\sum_{i=1}^{k-1}\left(f_{n_{i+1}}-f_{n_{i}}\right)=f_{n_{k}}$,"
+7,7.15,Theorem,5,real_and_complex/7.15 Theorem_7_5.jpg,$\int_{I} g_{n}(t) d t=\int_{I} g_{n+1}(t) d t=2^{-n}$
+9,9.10,Theorem,2,real_and_complex/9.10 Theorem_9_2.jpg,$\left(f * h_{\lambda}\right)(x)-f(x)=\int_{-\infty}^{\infty}[f(x-y)-f(x)] h_{\lambda}(y) d m(y)$
+8,8.8,Theorem,3,real_and_complex/8.8 Theorem_8_3.jpg,$\varphi^{*}(x)=\int_{Y}|f|_{x} d \lambda$ and $\int_{X} \varphi^{*} d \mu<\infty$
+19,19.2,Theorem,3,real_and_complex/19.2 Theorem_19_3.jpg,$\int_{0}^{\infty}|F(t)|^{2} d t=C$.
+17,17.25,Lemma,1,real_and_complex/17.25 Lemma_17_1.jpg,$1 \leq \beta(\cos \varphi)^{p}-\alpha \cos p \varphi \quad\left(-\frac{\pi}{2} \leq \varphi \leq \frac{\pi}{2}\right)$
+19,19.11,Theorem,15,real_and_complex/19.11 Theorem_19_15.jpg,$\left|1-\frac{\sin z}{z}\right| \leq B|z| \quad(|z| \leq 1)$
+10,10.42,The,1,real_and_complex/10.42 The Residue Theorem_10_1.jpg,$\operatorname{Ind}_{\Gamma}(\alpha)=0 \quad$ for all $\quad \alpha \notin \Omega$
+5,5.9,The,1,real_and_complex/5.9 The Open Mapping Theorem_5_1.jpg,$\Lambda(U) \supset \delta V$
+13,13.11,Theorem,2,real_and_complex/13.11 Theorem_13_2.jpg,"$\frac{F(z)-F(a)}{z-a}=\frac{1}{z-a} \int_{[a, z]} f(\zeta) d \zeta$"
+6,6.10,The,5,real_and_complex/6.10 The Theorem_6_5.jpg,$f \rightarrow \int_{X} f d \lambda$
+6,6.16,Theorem,6,real_and_complex/6.16 Theorem_6_6.jpg,$\Phi(f)=\int_{X} f g d \mu$
+4,4.14,(thus,3,real_and_complex/4.14 (thus obtaining Theorem_4_3.jpg,"$(\varphi, \psi)=\sum_{\alpha \in A} \varphi(\alpha) \overline{\psi(\alpha)}$"
+16,16.9,Definition,1,real_and_complex/16.9 Definition_16_1.jpg,"$\left(f_{0}, D_{0}\right) \sim\left(f_{1}, D_{1}\right)$"
+2,2.1,Definition,4,real_and_complex/2.1 Definition_2_4.jpg,$\Lambda f=\int_{I} f d \mu \quad(f \in C)$.
+8,8.14,Theorem,5,real_and_complex/8.14 Theorem_8_5.jpg,"$F(x, y)=f(x-y) g(y)$"
+6,6.19,Theorem,14,real_and_complex/6.19 Theorem_6_14.jpg,$\Lambda(u+i v)=\Lambda u+i \Lambda v$
+6,6.16,Theorem,12,real_and_complex/6.16 Theorem_6_12.jpg,$\Phi(f)=\Psi\left(w^{-1 / p} f\right)=\int_{X} w^{-1 / p} f G d \tilde{\mu}=\int_{X} f g d \mu$
+9,9.9,Theorem,1,real_and_complex/9.9 Theorem_9_1.jpg,$\lim _{\lambda \rightarrow 0}\left(g * h_{\lambda}\right)(x)=g(x)$
+8,8.14,Theorem,4,real_and_complex/8.14 Theorem_8_4.jpg,$\|f\|_{1}=\int_{-\infty}^{\infty}|f(x)| d x$.
+4,4.14,(thus,2,real_and_complex/4.14 (thus obtaining Theorem_4_2.jpg,$\sum_{\alpha \in A}|\varphi(\alpha)|^{2}<\infty$.
+6,6.16,Theorem,7,real_and_complex/6.16 Theorem_6_7.jpg,"$\int_{X} \chi_{E_{n}}|g|^{q} d \mu \leq\|\Phi\|^{q} \quad(n=1,2,3, \ldots)$"
+7,7.8,or,2,real_and_complex/7.8 or Theorem_7_2.jpg,$\epsilon<\frac{m(E \cap I)}{m(I)}<1-\epsilon$
+6,6.10,The,4,real_and_complex/6.10 The Theorem_6_4.jpg,$\int_{X} f d \varphi=\int_{X} f d \lambda+\int_{X} f w d \mu$
+15,15.9,Theorem,2,real_and_complex/15.9 Theorem_15_2.jpg,$P(z)=\prod_{n=1}^{\infty} E_{p_{n}}\left(\frac{z}{z_{n}}\right)$
+1,1.35,Definition,2,real_and_complex/1.35 Definition_1_2.jpg,$\int_{E} f d \mu=\int_{E} g d \mu$.
+19,19.11,Theorem,14,real_and_complex/19.11 Theorem_19_14.jpg,"$\left|x^{k} f(x)\right| \leq M_{k}\left(\frac{\sin x}{x}\right)^{2} \quad(x$ real, $k=0,1,2, \ldots)$"
+19,19.2,Theorem,2,real_and_complex/19.2 Theorem_19_2.jpg,$f(z)=\int_{0}^{\infty} F(t) e^{i t z} d t \quad\left(z \in \Pi^{+}\right)$
+9,9.10,Theorem,3,real_and_complex/9.10 Theorem_9_3.jpg,$\left|\left(f * h_{\lambda}\right)(x)-f(x)\right|^{p} \leq \int_{-\infty}^{\infty}|f(x-y)-f(x)|^{p} h_{\lambda}(y) d m(y)$.
+8,8.8,Theorem,2,real_and_complex/8.8 Theorem_8_2.jpg,$\int_{X} \varphi d \mu=\int_{X \times Y} f d(\mu \times \lambda)=\int_{Y} \psi d \lambda$.
+7,7.15,Theorem,4,real_and_complex/7.15 Theorem_7_4.jpg,"$g_{n}=\delta_{n}^{-1} \chi_{E_{n}} \quad$ and $\quad f_{n}(x)=\int_{0}^{x} g_{n}(t) d t \quad(n=0,1,2, \ldots)$"
+3,3.11,Theorem,5,real_and_complex/3.11 Theorem_3_5.jpg,$f(x)=\lim _{i \rightarrow \infty} f_{n_{i}}(x) \quad$ a.e.
+2,2.12,Urysohn’s,5,real_and_complex/2.12 Urysohn’s Lemma_2_5.jpg,"$f=\sup _{r} f_{r}, \quad g=\inf _{s} g_{s}$."
+14,14.13,Theorem,8,real_and_complex/14.13 Theorem_14_8.jpg,$=\pi\left\{r^{-2}-1+\sum_{1}^{\infty} n\left|\alpha_{n}\right|^{2}\left(1-r^{2 n}\right)\right\}$.
+10,10.35,Cauchy’s,12,real_and_complex/10.35 Cauchy’s Theorem_10_12.jpg,$\frac{1}{2 \pi i} \int_{\Gamma} f(z) d z=\frac{1}{2 \pi i} \int_{\Gamma} \frac{F(z)}{z-a} d z=F(a) \cdot \operatorname{Ind}_{\Gamma}(a)=0$
+14,14.20,Remark,1,real_and_complex/14.20 Remark_14_1.jpg,"$A(r, R)=\{z: r<|z|<R\}$"
+20,20.4,Tietze’s,4,real_and_complex/20.4 Tietze’s Extension Theorem_20_4.jpg,"$\left|f-f_{1}-\cdots-f_{n}\right| \leq\left(\frac{2}{3}\right)^{n}$ on $K, \quad\left|f_{n}\right| \leq \frac{1}{3} \cdot\left(\frac{2}{3}\right)^{n-1}$ on $X$."
+6,6.19,Theorem,5,real_and_complex/6.19 Theorem_6_5.jpg,$|\Phi(f)| \leq \Lambda(|f|)=\int_{X}|f| d \lambda=\|f\|_{1} \quad\left(f \in C_{c}(X)\right)$.
+9,9.6,Theorem,3,real_and_complex/9.6 Theorem_9_3.jpg,$h_{\lambda}(x)=\sqrt{\frac{2}{\pi}} \frac{\lambda}{\lambda^{2}+x^{2}}$
+5,5.21,Remark,3,real_and_complex/5.21 Remark_5_3.jpg,$|f(x)| \leq\|f\|_{H}$.
+1,1.29,Theorem,1,real_and_complex/1.29 Theorem_1_1.jpg,$\varphi(E)=\int_{E} f d \mu \quad(E \in \mathfrak{M})$
+10,10.40,Theorem,2,real_and_complex/10.40 Theorem_10_2.jpg,"$H(s, 0)=\Gamma_{0}(s), \quad H(s, 1)=\Gamma_{1}(s), \quad H(0, t)=H(1, t)$"
+4,4.23,Definition,8,real_and_complex/4.23 Definition_4_8.jpg,"$\left(u_{n}, u_{m}\right)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} e^{i(n-m) t} d t=\left\{\begin{array}{ll}1 & \text { if } n=m \\ 0 & \text { if } n \neq m\end{array}\right.$"
+11,11.30,Theorem,3,real_and_complex/11.30 Theorem_11_3.jpg,$\lim _{j \rightarrow \infty} \int_{T} g u_{r_{j}} d \sigma=\int_{T} g d \mu$
+8,8.15,Definition,2,real_and_complex/8.15 Definition_8_2.jpg,$\int_{X} f d \mu=\int_{0}^{\infty} \mu\{f>t\} d t$
+2,2.13,Theorem,17,real_and_complex/2.13 Theorem_2_17.jpg,$y_{0}<a<y_{1}<\cdots<y_{n}=b$.
+1,1.18,Definition,1,real_and_complex/1.18 Definition_1_1.jpg,$\mu\left(\bigcup_{i=1}^{\infty} A_{i}\right)=\sum_{i=1}^{\infty} \mu\left(A_{i}\right)$
+1,1.28,Fatou’s,3,real_and_complex/1.28 Fatou’s Lemma_1_3.jpg,"$\int_{X} g_{k} d \mu \leq \int_{X} f_{k} d \mu \quad(k=1,2,3, \ldots)$"
+10,10.2,Definition,2,real_and_complex/10.2 Definition_10_2.jpg,"$\left|\frac{f(z)-f\left(z_{0}\right)}{z-z_{0}}-f^{\prime}\left(z_{0}\right)\right|<\epsilon \quad$ for all $z \in D^{\prime}\left(z_{0} ; \delta\right)$.
+$$"
+19,19.1,Definition,3,real_and_complex/19.1 Definition_19_3.jpg,$\frac{1}{2 \pi} \int_{-\infty}^{\infty}|f(x+i y)|^{2} d x=\int_{0}^{\infty}|F(t)|^{2} e^{-2 t y} d t \leq \int_{0}^{\infty}|F(t)|^{2} d t$
+20,20.2,Lemma,5,real_and_complex/20.2 Lemma_20_5.jpg,$g(z)=\frac{1}{a} F^{-1}(z) \quad(z \in \Omega)$
+10,10.10,Theorem,1,real_and_complex/10.10 Theorem_10_1.jpg,$\operatorname{Ind}_{\nu}(z)=\frac{1}{2 \pi i} \int_{\gamma} \frac{d \zeta}{\zeta-z} \quad(z \in \Omega)$
+19,19.9,Theorem,1,real_and_complex/19.9 Theorem_19_1.jpg,"$\left|\left(D^{n} f\right)(x)\right| \leq \beta \delta^{-n} n ! \quad(n=0,1,2, \ldots)$"
+20,20.5,Theorem,22,real_and_complex/20.5 Theorem_20_22.jpg,"$|F(z)-\Phi(z)|<\frac{2 \omega(\delta)}{\pi \delta} \iint\left|R(\zeta, z)-\frac{1}{z-\zeta}\right| d \xi d \eta \quad(z \in \Omega)$"
+20,20.2,Lemma,14,real_and_complex/20.2 Lemma_20_14.jpg,"$|\varphi(z)|<8 r^{3}|Q(\zeta, z)|+4 r^{2}<1,000 r^{2}$"
+7,7.20,Theorem,2,real_and_complex/7.20 Theorem_7_2.jpg,"$f_{1}=\frac{1}{2}(F+f), \quad f_{2}=\frac{1}{2}(F-f)$,"
+2,2.25,The,2,real_and_complex/2.25 The Vitali-Carathéodory Theorem_2_2.jpg,$f(x)=\sum_{i=1}^{\infty} c_{i} \chi_{E_{i}}(x) \quad(x \in X)$
+11,17.18,and,2,real_and_complex/17.18 and Sec. 17.19.) PROOF By Theorem_11_2.jpg,$F(z)=\prod_{k=1}^{n} f\left(\alpha^{k} z\right) \quad(z \in U)$
+15,15.24,Theorem,2,real_and_complex/15.24 Theorem_15_2.jpg,$B_{N}(z)=\prod_{n=N}^{\infty} \frac{\alpha_{n}-z}{1-\bar{\alpha}_{n} z} \cdot \frac{\left|\alpha_{n}\right|}{\alpha_{n}}$
+20,20.2,Lemma,10,real_and_complex/20.2 Lemma_20_10.jpg,$|Q| \leq \frac{4}{r}+5 r\left(\frac{16}{r^{2}}\right)<\frac{100}{r}$
+3,3.5,Theorem,8,real_and_complex/3.5 Theorem_3_8.jpg,$(f+g)^{p}=f \cdot(f+g)^{p-1}+g \cdot(f+g)^{p-1}$
+4,4.14,Theorem,3,real_and_complex/4.14 Theorem_4_3.jpg,$s_{F}(x)=\sum_{\alpha \in F} \hat{x}(\alpha) u_{\alpha}$
+15,15.15,Theorem,1,real_and_complex/15.15 Theorem_15_1.jpg,$m(\varphi ; \alpha)=\min \left\{m\left(g_{i} ; \alpha\right): 1 \leq i \leq n-1\right\} \quad(\alpha \in \Omega)$
+10,10.1,Definition,4,real_and_complex/10.1 Definition_10_4.jpg,"$E \subset V \cup W, \quad E \cap V \neq \varnothing, \quad E \cap W \neq \varnothing, \quad E \cap V \cap W=\varnothing$"
+17,17.11,Theorem,4,real_and_complex/17.11 Theorem_17_4.jpg,"$f_{r}(z)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} P\left(z, e^{i t}\right) f_{r}\left(e^{i t}\right) d t$."
+2,2.25,The,6,real_and_complex/2.25 The Vitali-Carathéodory Theorem_2_6.jpg,$\sum_{N+1}^{\infty} c_{i} \mu\left(E_{i}\right)<\frac{\epsilon}{2}$
+10,10.10,Theorem,5,real_and_complex/10.10 Theorem_10_5.jpg,$\varphi(t)=\frac{\gamma(t)-z}{\gamma(\alpha)-z} \quad(\alpha \leq t \leq \beta)$.
+20,20.2,Lemma,1,real_and_complex/20.2 Lemma_20_1.jpg,"$Q(\zeta, z)=g(z)+(\zeta-b) g^{2}(z)$"
+19,19.9,Theorem,5,real_and_complex/19.9 Theorem_19_5.jpg,$n \beta B^{n}\left|\int_{a}^{x}(x-t)^{n-1} d t\right|=\beta|B(x-a)|^{n}$.
+10,10.21,Theorem,2,real_and_complex/10.21 Theorem_10_2.jpg,$g(z)=(z-a)^{m} g_{1}(z) \quad(z \in D)$
+11,11.30,Theorem,7,real_and_complex/11.30 Theorem_11_7.jpg,$\int_{T}\left|u_{r}\right| d \sigma=\int_{T} u_{r} d \sigma=u \quad(0 \leq r<1)$
+3,3.8,Theorem,2,real_and_complex/3.8 Theorem_3_2.jpg,$|f(x) g(x)| \leq\|f\|_{\infty}|g(x)|$
+2,2.13,Theorem,13,real_and_complex/2.13 Theorem_2_13.jpg,$\mu(E) \leq \sum_{i=1}^{N} \mu\left(E_{i}\right)+\epsilon$
+18,18.20,Theorem,8,real_and_complex/18.20 Theorem_18_8.jpg,$h(f)=f\left(e^{i \alpha}\right) \quad(f \in A)$.
+6,6.19,Theorem,1,real_and_complex/6.19 Theorem_6_1.jpg,$\Phi f=\int_{X} f d \mu$
+10,10.40,Theorem,6,real_and_complex/10.40 Theorem_10_6.jpg,"$\left|\gamma_{k}(s)-H(s, k / n)\right|<\epsilon \quad(k=0, \ldots, n ; 0 \leq s \leq 1)$"
+1,1.29,Theorem,5,real_and_complex/1.29 Theorem_1_5.jpg,$\varphi(E)=\sum_{j=1}^{\infty} \varphi\left(E_{j}\right)$
+5,5.21,Remark,7,real_and_complex/5.21 Remark_5_7.jpg,$\Lambda f=\frac{1}{2} \Lambda(1+g)=\frac{1}{2}(1+\alpha) \geq 0$
+10,10.6,Theorem,7,real_and_complex/10.6 Theorem_10_7.jpg,$f^{(k)}(z)=\sum_{n=k}^{\infty} n(n-1) \cdots(n-k+1) c_{n}(z-a)^{n-k}$
+12,12.1,Definition,1,real_and_complex/12.1 Definition_12_1.jpg,$|f(z)| \leq\|f\|_{\partial \Omega}$
+10,10.30,Theorem,22,real_and_complex/10.30 Theorem_10_22.jpg,$\left|\varphi\left(z_{1}\right)-\varphi\left(z_{2}\right)\right| \geq \frac{1}{2}\left|\varphi^{\prime}\left(z_{0}\right)\right|\left|z_{1}-z_{2}\right|$
+2,2.12,Urysohn’s,1,real_and_complex/2.12 Urysohn’s Lemma_2_1.jpg,$K \prec f \prec V$.
+17,17.5,Theorem,3,real_and_complex/17.5 Theorem_17_3.jpg,"$\left\|f_{r}\right\|_{\infty}=\sup _{\theta}\left|f\left(r e^{i \theta}\right)\right|$,"
+8,8.8,Theorem,6,real_and_complex/8.8 Theorem_8_6.jpg,"$\int_{X} \varphi_{n} d \mu=\int_{X \times Y} s_{n} d(\mu \times \lambda) \quad(n=1,2,3, \ldots)$."
+19,19.2,Theorem,6,real_and_complex/19.2 Theorem_19_6.jpg,$|\Phi(\beta)|^{2}=\left|\int_{I} f(\beta+i u) e^{-i t(\beta+i u)} d u\right|^{2} \leq \int_{I}|f(\beta+i u)|^{2} d u \int_{I} e^{2 t u} d u$.
+3,3.11,Theorem,1,real_and_complex/3.11 Theorem_3_1.jpg,"$\left\|f_{n_{i+1}}-f_{n_{i}}\right\|_{p}<2^{-i} \quad(i=1,2,3, \ldots)$"
+20,20.3,Lemma,5,real_and_complex/20.3 Lemma_20_5.jpg,"$-\frac{1}{2 \pi} \int_{0}^{2 \pi} d \theta \int_{\epsilon}^{\infty} \frac{\partial \varphi}{\partial r} d r=\frac{1}{2 \pi} \int_{0}^{2 \pi} \varphi(\epsilon, \theta) d \theta$"
+7,7.15,Theorem,0,real_and_complex/7.15 Theorem_7_0.jpg,"(a) Put $f(x)=x^{2} \sin \left(x^{-2}\right)$ if $x \neq 0, f=0$. Then $f$ is differentiable at every"
+9,9.15,Remark,9,real_and_complex/9.15 Remark_9_9.jpg,$\varphi^{2} \cdot g=\varphi \cdot P g=P^{2} g=P g=\varphi \cdot g$
+6,6.7,Definition,2,real_and_complex/6.7 Definition_6_2.jpg,$\lambda_{1} \perp \lambda_{2}$.
+1,1.38,Theorem,2,real_and_complex/1.38 Theorem_1_2.jpg,$f(x)=\sum_{n=1}^{\infty} f_{n}(x)$
+15,15.6,Theorem,1,real_and_complex/15.6 Theorem_15_1.jpg,$\sum_{n=1}^{\infty}\left|1-f_{n}(z)\right|$
+5,5.9,The,4,real_and_complex/5.9 The Open Mapping Theorem_5_4.jpg,$\left\|y-\Lambda x_{1}\right\|<\frac{1}{2} \delta \epsilon$.
+10,10.42,The,4,real_and_complex/10.42 The Residue Theorem_10_4.jpg,$\operatorname{Ind}_{\Gamma}(\alpha)=0 \quad$ for all $\quad \alpha \notin \Omega$
+3,3.1,Definition,1,real_and_complex/3.1 Definition_3_1.jpg,$\varphi((1-\lambda) x+\lambda y) \leq(1-\lambda) \varphi(x)+\lambda \varphi(y)$
+6,6.16,Theorem,3,real_and_complex/6.16 Theorem_6_3.jpg,$\|\Phi\| \leq\|g\|_{q}$.
+6,6.19,Theorem,11,real_and_complex/6.19 Theorem_6_11.jpg,"$\Lambda f \leq\left|\Phi\left(h_{1}\right)\right|+\epsilon, \quad \Lambda g \leq\left|\Phi\left(h_{2}\right)\right|+\epsilon$"
+2,2.1,Definition,1,real_and_complex/2.1 Definition_2_1.jpg,"$\alpha(x+y)=\alpha x+\alpha y,(\alpha+\beta) x=\alpha x+\beta x$"
+8,8.14,Theorem,0,real_and_complex/8.14 Theorem_8_0.jpg,$\|f\|_{1}=\int_{-\infty}^{\infty}|f(x)| d x$
+5,5.25,Theorem,2,real_and_complex/5.25 Theorem_5_2.jpg,$f(z)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} \frac{1-r^{2}}{1-2 r \cos (\theta-t)+r^{2}} f\left(e^{i t}\right) d t \quad\left(z=r e^{i \theta}\right)$
+6,6.19,Theorem,10,real_and_complex/6.19 Theorem_6_10.jpg,$\Lambda(f+g)=\Lambda f+\Lambda g \quad\left(f\right.$ and $\left.g \in C_{c}^{+}(X)\right)$
+8,8.14,Theorem,1,real_and_complex/8.14 Theorem_8_1.jpg,$\int_{-\infty}^{\infty}|f(x-y) g(y)| d y<\infty$
+6,6.16,Theorem,2,real_and_complex/6.16 Theorem_6_2.jpg,$\|\Phi\|=\|g\|_{q}$.
+16,16.14,Theorem,2,real_and_complex/16.14 Theorem_16_2.jpg,"$H(s, 0)=\Gamma(s), \quad H(s, 1)=c \in X, \quad H(0, t)=H(2 \pi, t)$"
+5,5.9,The,5,real_and_complex/5.9 The Open Mapping Theorem_5_5.jpg,$\left\|y-\Lambda x_{1}-\cdots-\Lambda x_{n}\right\|<2^{-n} \delta \epsilon$.
+19,19.11,Theorem,11,real_and_complex/19.11 Theorem_19_11.jpg,"$\lambda_{n}=\frac{M_{n-1}}{M_{n}} \quad(n=1,2,3, \ldots)$"
+1,1.38,Theorem,3,real_and_complex/1.38 Theorem_1_3.jpg,$\int_{X} f d \mu=\sum_{n=1}^{\infty} \int_{X} f_{n} d \mu$.
+6,6.10,The,1,real_and_complex/6.10 The Theorem_6_1.jpg,"$\lambda=\lambda_{a}+\lambda_{s}, \quad \lambda_{a} \ll \mu, \quad \lambda_{s} \perp \mu$."
+9,9.15,Remark,8,real_and_complex/9.15 Remark_9_8.jpg,$P f=\varphi \cdot f \quad\left(f \in L^{2}\right)$.
+7,7.15,Theorem,1,real_and_complex/7.15 Theorem_7_1.jpg,$f(x)-f(a)=\int_{a}^{x} f^{\prime}(t) d t \quad(a \leq x \leq b)$.
+20,20.3,Lemma,4,real_and_complex/20.3 Lemma_20_4.jpg,$-\frac{1}{2 \pi} \int_{\epsilon}^{\infty} \int_{0}^{2 \pi}\left(\frac{\partial \varphi}{\partial r}+\frac{i}{r} \frac{\partial \varphi}{\partial \theta}\right) d \theta d r$
+8,8.8,Theorem,7,real_and_complex/8.8 Theorem_8_7.jpg,$f_{x}=\left(f^{+}\right)_{x}-\left(f^{-}\right)_{x}$
+17,17.15,Theorem,1,real_and_complex/17.15 Theorem_17_1.jpg,$M(z)=c B(z) \exp \left\{-\int_{-\pi}^{\pi} \frac{e^{i t}+z}{e^{i t}-z} d \mu(t)\right\} \quad(z \in U)$
+20,20.4,Tietze’s,1,real_and_complex/20.4 Tietze’s Extension Theorem_20_1.jpg,"$K^{+}=\left\{x \in K: f(x) \geq \frac{1}{3}\right\}, \quad K^{-}=\left\{x \in K: f(x) \leq-\frac{1}{3}\right\}$"
+17,17.5,Theorem,2,real_and_complex/17.5 Theorem_17_2.jpg,$\left\|f_{r}\right\|_{p}=\left\{\int_{T}\left|f_{r}\right|^{p} d \sigma\right\}^{1 / p} \quad(0<p<\infty)$
+7,7.8,Theorem,2,real_and_complex/7.8 Theorem_7_2.jpg,"$f(x)=\lim _{r \rightarrow 0} \frac{1}{m\left(B_{r}\right)} \int_{B(x, r)} f d m=\lim _{r \rightarrow 0} \frac{\mu(B(x, r))}{m(B(x, r))}$."
+10,10.6,Theorem,6,real_and_complex/10.6 Theorem_10_6.jpg,$\left|\frac{f(z)-f(w)}{z-w}-g(w)\right| \leq|z-w| \sum_{n=2}^{\infty} n^{2}\left|c_{n}\right| \rho^{n-2}$
+5,5.21,Remark,6,real_and_complex/5.21 Remark_5_6.jpg,$(\beta+r)^{2} \leq|\alpha+i(\beta+r)|^{2}=|\Lambda(g+i r)|^{2} \leq 1+r^{2}$
+1,1.29,Theorem,4,real_and_complex/1.29 Theorem_1_4.jpg,"$\varphi(E)=\int_{X} \chi_{E} f d \mu, \quad \varphi\left(E_{j}\right)=\int_{X} \chi_{E_{j}} f d \mu$."
+10,10.40,Theorem,7,real_and_complex/10.40 Theorem_10_7.jpg,"$\left|\gamma_{0}(s)-\Gamma_{0}(s)\right|<\epsilon, \quad\left|\gamma_{n}(s)-\Gamma_{1}(s)\right|<\epsilon$."
+2,2.13,Theorem,12,real_and_complex/2.13 Theorem_2_12.jpg,$\mu(E) \geq \mu\left(K_{n}\right)=\sum_{i=1}^{n} \mu\left(H_{i}\right)>\sum_{i=1}^{n} \mu\left(E_{i}\right)-\epsilon$
+9,9.3,Remark,4,real_and_complex/9.3 Remark_9_4.jpg,$g(x)=\sum_{-\infty}^{\infty} c_{n} e^{i n x}$
+19,19.1,Definition,6,real_and_complex/19.1 Definition_19_6.jpg,$|f(z)| \leq C e^{A|z|}$
+11,11.30,Theorem,6,real_and_complex/11.30 Theorem_11_6.jpg,$\int_{T} f d \mu=0$
+10,10.21,Theorem,3,real_and_complex/10.21 Theorem_10_3.jpg,$f(z)-w=(z-a)^{-m} h(z) \quad\left(z \in D^{\prime}\right)$.
+20,20.2,Lemma,0,real_and_complex/20.2 Lemma_20_0.jpg,$\lambda_{2}(\zeta)=\frac{1}{2 \pi i} \int_{\Gamma_{0}}(z-\zeta) g(z) d z=b-\zeta$
+10,10.10,Theorem,4,real_and_complex/10.10 Theorem_10_4.jpg,$\frac{\varphi^{\prime}(t)}{\varphi(t)}=\frac{\gamma^{\prime}(t)}{\gamma(t)-z}$
+4,4.14,Theorem,2,real_and_complex/4.14 Theorem_4_2.jpg,$\|y\|^{2}=\sum_{\alpha \in F}|\varphi(\alpha)|^{2}$.
+3,3.5,Theorem,9,real_and_complex/3.5 Theorem_3_9.jpg,$\int f \cdot(f+g)^{p-1} \leq\left\{\int f^{p}\right\}^{1 / p}\left\{\int(f+g)^{(p-1) q}\right\}^{1 / q}$.
+15,15.15,Theorem,2,real_and_complex/15.15 Theorem_15_2.jpg,"$\left[g_{1}, \ldots, g_{n-1}, g_{n}\right]=\left[\varphi, g_{n}\right]$"
+20,20.2,Lemma,13,real_and_complex/20.2 Lemma_20_13.jpg,"$\varphi(z)=\left[Q(\zeta, z)-\frac{1}{z-\zeta}\right](z-\zeta)^{3}$"
+2,2.25,The,5,real_and_complex/2.25 The Vitali-Carathéodory Theorem_2_5.jpg,"$v=\sum_{i=1}^{\infty} c_{i} \chi_{V_{i}}, \quad u=\sum_{i=1}^{N} c_{i} \chi_{K_{i}}$"
+20,20.2,Lemma,2,real_and_complex/20.2 Lemma_20_2.jpg,"$|Q(\zeta, z)|<\frac{100}{r}$"
+20,20.5,Theorem,19,real_and_complex/20.5 Theorem_20_19.jpg,"$R(\zeta, z)=Q_{j}(\zeta, z) \quad\left(\zeta \in X_{j}, z \in \Omega\right)$"
+20,20.5,Theorem,25,real_and_complex/20.5 Theorem_20_25.jpg,"$|F(z)-\Phi(z)|<6,000 \omega(\delta) \quad(z \in \Omega)$."
+10,10.21,Theorem,1,real_and_complex/10.21 Theorem_10_1.jpg,$g(z)=\frac{1}{f(z)-w} \quad\left(z \in D^{\prime}\right)$
+11,11.30,Theorem,4,real_and_complex/11.30 Theorem_11_4.jpg,"$g\left(e^{i t}\right)=P\left(z, e^{i t}\right)$"
+9,9.3,Remark,6,real_and_complex/9.3 Remark_9_6.jpg,$f(x)=\int_{-\infty}^{\infty} \hat{f}(t) e^{i t x} d m(t)$
+2,2.13,Theorem,10,real_and_complex/2.13 Theorem_2_10.jpg,$\mu\left(K_{1} \cup K_{2}\right)=\mu\left(K_{1}\right)+\mu\left(K_{2}\right)$
+3,3.8,Theorem,1,real_and_complex/3.8 Theorem_3_1.jpg,$\|f g\|_{1} \leq\|f\|_{p}\|g\|_{q}$.
+19,19.1,Definition,4,real_and_complex/19.1 Definition_19_4.jpg,$f(z)=\int_{-A}^{A} F(t) e^{i t z} d t$
+6,6.19,Theorem,2,real_and_complex/6.19 Theorem_6_2.jpg,$\|\Phi\|=|\mu|(X)$.
+9,9.6,Theorem,4,real_and_complex/9.6 Theorem_9_4.jpg,$2 \hat{f}(t)=\int_{-\infty}^{\infty}\left\{f(x)-f\left(x-\frac{\pi}{t}\right)\right\} e^{-i t x} d m(x)$
+1,1.29,Theorem,6,real_and_complex/1.29 Theorem_1_6.jpg,$d \varphi=f d \mu$.
+5,5.21,Remark,4,real_and_complex/5.21 Remark_5_4.jpg,$\Lambda f=f(x) \quad(f \in M)$
+10,10.40,Theorem,5,real_and_complex/10.40 Theorem_10_5.jpg,"$\gamma_{k}(s)=H\left(\frac{i}{n}, \frac{k}{n}\right)(n s+1-i)+H\left(\frac{i-1}{n}, \frac{k}{n}\right)(i-n s)$"
+2,2.12,Urysohn’s,2,real_and_complex/2.12 Urysohn’s Lemma_2_2.jpg,$K \subset V_{1} \subset \bar{V}_{1} \subset V_{0} \subset \bar{V}_{0} \subset V$.
+12,12.1,Definition,2,real_and_complex/12.1 Definition_12_2.jpg,"$|f(z)| \leq\left\|f^{*}\right\|_{\infty} \quad\left(z \in U, f \in H^{\infty}(U)\right)$."
+10,10.6,Theorem,4,real_and_complex/10.6 Theorem_10_4.jpg,$(z-w) \sum_{k=1}^{n-1} k w^{k-1} z^{n-k-1}$
+14,14.22,Theorem,8,real_and_complex/14.22 Theorem_14_8.jpg,$f(\theta)=\sum_{k=-n}^{n} a_{k} e^{i k \theta}$
+20,20.4,Tietze’s,3,real_and_complex/20.4 Tietze’s Extension Theorem_20_3.jpg,"$\left|f-f_{1}-f_{2}\right| \leq\left(\frac{2}{3}\right)^{2}$ on $K, \quad\left|f_{2}\right| \leq \frac{1}{3} \cdot \frac{2}{3}$ on $X$."
+19,19.2,Theorem,5,real_and_complex/19.2 Theorem_19_5.jpg,$\int_{\Gamma_{\alpha}} f(z) e^{-i t z} d z=0$
+9,9.10,Theorem,4,real_and_complex/9.10 Theorem_9_4.jpg,$\left\|f * h_{\lambda}-f\right\|_{p}^{p} \leq \int_{-\infty}^{\infty}\left\|f_{y}-f\right\|_{p}^{p} h_{\lambda}(y) d m(y)$
+8,8.8,Theorem,5,real_and_complex/8.8 Theorem_8_5.jpg,"$\int_{X} d \mu(x) \int_{Y}|f(x, y)| d \lambda(y)<\infty$"
+7,7.15,Theorem,3,real_and_complex/7.15 Theorem_7_3.jpg,"$\mu\left(W_{j, N}\right)<3^{k} N / j$"
+6,6.7,Definition,1,real_and_complex/6.7 Definition_6_1.jpg,$\lambda \ll \mu$
+3,3.11,Theorem,2,real_and_complex/3.11 Theorem_3_2.jpg,"$g_{k}=\sum_{i=1}^{k}\left|f_{n_{i+1}}-f_{n_{i}}\right|, \quad g=\sum_{i=1}^{\infty}\left|f_{n_{i+1}}-f_{n_{i}}\right|$"
+6,6.10,The,3,real_and_complex/6.10 The Theorem_6_3.jpg,"$\lambda_{a}^{\prime}-\lambda_{a}=\lambda_{s}-\lambda_{s}^{\prime}$,"
+5,5.9,The,7,real_and_complex/5.9 The Open Mapping Theorem_5_7.jpg,$\Lambda((1+\epsilon) U) \supset \delta V$
+15,15.6,Theorem,2,real_and_complex/15.6 Theorem_15_2.jpg,$\sum_{n=1}^{\infty}\left|1-f_{n}(z)\right|$
+1,1.38,Theorem,1,real_and_complex/1.38 Theorem_1_1.jpg,$\sum_{n=1}^{\infty} \int_{X}\left|f_{n}\right| d \mu<\infty$
+2,2.1,Definition,2,real_and_complex/2.1 Definition_2_2.jpg,$\Lambda(\alpha x+\beta y)=\alpha \Lambda x+\beta \Lambda y$
+5,5.25,Theorem,1,real_and_complex/5.25 Theorem_5_1.jpg,$\sup _{z \in U}|f(z)|=\sup _{z \in T}|f(z)|$
+8,8.14,Theorem,3,real_and_complex/8.14 Theorem_8_3.jpg,$\|h\|_{1} \leq\|f\|_{1}\|g\|_{1}$
+6,6.19,Theorem,12,real_and_complex/6.19 Theorem_6_12.jpg,"$h_{1}(x)=\frac{f(x)+g(x)}{f(x)}, \quad h_{2}(x)=\frac{}{f(x)+g(x)} \quad(x \in V)$"
+6,6.16,Theorem,1,real_and_complex/6.16 Theorem_6_1.jpg,$\Phi(f)=\int_{X} f g d \mu \quad\left(f \in L^{p}(\mu)\right)$
+8,8.14,Theorem,2,real_and_complex/8.14 Theorem_8_2.jpg,$h(x)=\int_{-\infty}^{\infty} f(x-y) g(y) d y$.
+2,2.1,Definition,3,real_and_complex/2.1 Definition_2_3.jpg,$\Lambda f=\int_{0}^{1} f(x) d x \quad(f \in C)$
+6,6.19,Theorem,13,real_and_complex/6.19 Theorem_6_13.jpg,"$\Lambda f=\Lambda f^{+}-\Lambda f^{-} \quad\left(f \in C_{c}(X), f\right.$ real $)$"
+16,16.14,Theorem,1,real_and_complex/16.14 Theorem_16_1.jpg,$\Gamma(s)=\left\{\begin{array}{ll}\Gamma_{0}(s) & (0 \leq s \leq \pi) \\ \Gamma_{1}(2 \pi-s) & (\pi \leq s \leq 2 \pi)\end{array}\right.$
+15,15.6,Theorem,3,real_and_complex/15.6 Theorem_15_3.jpg,$m(f ; z)=\sum_{n=1}^{\infty} m\left(f_{n} ; z\right) \quad(z \in \Omega)$
+19,19.11,Theorem,12,real_and_complex/19.11 Theorem_19_12.jpg,$\left(a_{n} \lambda_{n}\right)^{n} \leq M_{n} \cdot \lambda_{1} \lambda_{2} \cdots \lambda_{n}=1$.
+5,5.9,The,6,real_and_complex/5.9 The Open Mapping Theorem_5_6.jpg,"$\left\|x_{n+1}\right\|<2^{-n} \epsilon \quad(n=1,2,3, \ldots)$"
+6,6.10,The,2,real_and_complex/6.10 The Theorem_6_2.jpg,$\lambda_{a}(E)=\int_{E} h d \mu$
+3,3.11,Theorem,3,real_and_complex/3.11 Theorem_3_3.jpg,$f_{n_{1}}(x)+\sum_{i=1}^{\infty}\left(f_{n_{i+1}}(x)-f_{n_{i}}(x)\right)$
+7,7.15,Theorem,2,real_and_complex/7.15 Theorem_7_2.jpg,"$\mu\left(B\left(x, r_{i}\right)\right)<N m\left(B\left(x, r_{i}\right)\right)$."
+8,8.8,Theorem,4,real_and_complex/8.8 Theorem_8_4.jpg,"$\int_{X} d \mu(x) \int_{Y} f(x, y) d \lambda(y)=\int_{Y} d \lambda(y) \int_{X} f(x, y) d \mu(x)$."
+19,19.2,Theorem,4,real_and_complex/19.2 Theorem_19_4.jpg,$F(t)=e^{t y} \cdot \frac{1}{2 \pi} \int_{-\infty}^{\infty} f(x+i y) e^{-i t x} d x=\frac{1}{2 \pi} \int f(z) e^{-i t z} d z$
+17,17.5,Theorem,1,real_and_complex/17.5 Theorem_17_1.jpg,$m(r)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} u\left(r e^{i \theta}\right) d \theta \quad(0 \leq r<1)$.
+20,20.4,Tietze’s,2,real_and_complex/20.4 Tietze’s Extension Theorem_20_2.jpg,"$\left|f-f_{1}\right| \leq \frac{2}{3}$ on $K, \quad\left|f_{1}\right| \leq \frac{1}{3}$ on $X$."
+2,2.12,Urysohn’s,3,real_and_complex/2.12 Urysohn’s Lemma_2_3.jpg,$s>r$ implies $\bar{V}_{s} \subset V_{r}$.
+10,10.6,Theorem,5,real_and_complex/10.6 Theorem_10_5.jpg,$\frac{n(n-1)}{2} \rho^{n-2}$
+7,7.8,Theorem,1,real_and_complex/7.8 Theorem_7_1.jpg,$\mu(E)=\int_{E}(D \mu) d m$
+10,10.40,Theorem,4,real_and_complex/10.40 Theorem_10_4.jpg,"$\left|H(s, t)-H\left(s^{\prime}, t^{\prime}\right)\right|<\epsilon \quad$ if $\quad\left|s-s^{\prime}\right|+\left|t-t^{\prime}\right| \leq 1 / n$."
+9,9.6,Theorem,5,real_and_complex/9.6 Theorem_9_5.jpg,"$2|\hat{f}(t)| \leq\left\|f-f_{\pi / t}\right\|_{1}$,"
+5,5.21,Remark,5,real_and_complex/5.21 Remark_5_5.jpg,"$\Lambda 1=1, \quad\|\Lambda\|=1$"
+6,6.19,Theorem,3,real_and_complex/6.19 Theorem_6_3.jpg,$|\mu|(X)=\int_{X}\left(\bar{h}-f_{n}\right) h d|\mu| \leq \int_{X}\left|\bar{h}-f_{n}\right| d|\mu|$
+10,10.2,Definition,4,real_and_complex/10.2 Definition_10_4.jpg,$\frac{h(z)-h\left(z_{0}\right)}{z-z_{0}}=\left[g^{\prime}\left(f\left(z_{0}\right)\right)+\eta(f(z))\right]\left[f^{\prime}\left(z_{0}\right)+\epsilon(z)\right]$
+19,19.1,Definition,5,real_and_complex/19.1 Definition_19_5.jpg,$|f(z)| \leq \int_{-A}^{A}|F(t)| e^{-t y} d t \leq e^{A|y|} \int_{-A}^{A}|F(t)| d t$.
+9,9.3,Remark,7,real_and_complex/9.3 Remark_9_7.jpg,$\int_{-\infty}^{\infty} e^{i(t-s) x} d x$
+2,2.13,Theorem,11,real_and_complex/2.13 Theorem_2_11.jpg,"$\mu\left(H_{i}\right)>\mu\left(E_{i}\right)-2^{-i} \epsilon \quad(i=1,2,3, \ldots)$"
+11,11.30,Theorem,5,real_and_complex/11.30 Theorem_11_5.jpg,$\int_{T} u_{r} d \mu=\int_{T} v_{r} f d \sigma \quad(0 \leq r<1)$.
+20,20.5,Theorem,24,real_and_complex/20.5 Theorem_20_24.jpg,"$2 \pi \int_{4 \delta}^{\infty} \frac{4,000 \delta^{2}}{\rho^{3}} \rho d \rho=2,000 \pi \delta$"
+20,20.2,Lemma,3,real_and_complex/20.2 Lemma_20_3.jpg,"$\left|Q(\zeta, z)-\frac{1}{z-\zeta}\right|<\frac{1,000 r^{2}}{|z-\zeta|^{3}}$"
+20,20.5,Theorem,18,real_and_complex/20.5 Theorem_20_18.jpg,"$Q_{j}(\zeta, z)=g_{j}(z)+\left(\zeta-b_{j}\right) g_{j}^{2}(z)$"
+2,2.25,The,4,real_and_complex/2.25 The Vitali-Carathéodory Theorem_2_4.jpg,"$c_{i} \mu\left(V_{i}-K_{i}\right)<2^{-i-1} \epsilon \quad(i=1,2,3, \ldots)$"
+17,17.11,Theorem,6,real_and_complex/17.11 Theorem_17_6.jpg,"and
+\[
+f(z)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} P\left(z, e^{i t}\right) f^{*}\left(e^{i t}\right) d t .
+\]"
+20,20.2,Lemma,12,real_and_complex/20.2 Lemma_20_12.jpg,$\lambda_{2}(\zeta)=\frac{1}{2 \pi i} \int_{\Gamma_{0}}(z-\zeta) g(z) d z=b-\zeta$
+15,15.15,Theorem,3,real_and_complex/15.15 Theorem_15_3.jpg,$m\left(1-h g_{n} ; \alpha\right) \geq m(\varphi ; \alpha) \quad(\alpha \in \Omega)$
+4,4.14,Theorem,1,real_and_complex/4.14 Theorem_4_1.jpg,$y=\sum_{\alpha \in F} \varphi(\alpha) u_{\alpha}$
+10,10.30,Theorem,3,real_and_complex/10.30 Theorem_10_3.jpg,$\left|\varphi\left(a+r e^{i \theta}\right)-\varphi(a)\right|>2 c \quad(-\pi \leq \theta \leq \pi)$
+9,9.6,Theorem,1,real_and_complex/9.6 Theorem _9_1.jpg,$\|\hat{f}\|_{\infty} \leq\|f\|_{1}$.
+10,10.11,Theorem,2,real_and_complex/10.11 Theorem_10_2.jpg,$\operatorname{Ind}_{\gamma}(z)=\left\{\begin{array}{ll}1 & \text { if }|z-a|<r \\ 0 & \text { if }|z-a|>r\end{array}\right.$
+9,9.21,Theorem,11,real_and_complex/9.21 Theorem_9_11.jpg,$\beta(x)=e^{-i t x}$.
+5,5.17,Proposition,1,real_and_complex/5.17 Proposition_5_1.jpg,$f(x)=u(x)-i u(i x) \quad(x \in V)$
+18,18.13,Theorem,2,real_and_complex/18.13 Theorem_18_2.jpg,"$\varphi(x)+\varphi(y)=\varphi(x+y), \quad \lambda \varphi(x)=\varphi(\lambda x)$"
+7,7.13,Theorem,4,real_and_complex/7.13 Theorem_7_4.jpg,$(\bar{D} \mu)(x)=\left(\bar{D} \mu_{2}\right)(x) \leq\left(M \mu_{2}\right)(x)$
+18,18.5,Theorem,3,real_and_complex/18.5 Theorem_18_3.jpg,$\frac{(x-\mu e)^{-1}-(x-\lambda e)^{-1}}{\mu-\lambda} \rightarrow(x-\lambda e)^{-2}$
+10,10.35,Cauchy’s,8,real_and_complex/10.35 Cauchy’s Theorem_10_8.jpg,$h(z)=0$.
+1,1.34,Lebesgue’s,4,real_and_complex/1.34 Lebesgue’s Dominated Convergence Theorem_1_4.jpg,$\lim _{n \rightarrow \infty} \int_{X} f_{n} d \mu=\int_{X} f d \mu$.
+16,16.16,Remark,3,real_and_complex/16.16 Remark_16_3.jpg,$\operatorname{Ind}_{\Gamma}(w)=\frac{1}{2 \pi i} \int_{\Gamma} g^{\prime}(z) d z=0$
+3,3.7,Definition,2,real_and_complex/3.7 Definition_3_2.jpg,"$g^{-1}((\beta, \infty])=\bigcup_{n=1}^{\infty} g^{-1}\left(\left(\beta+\frac{1}{n}, \infty\right]\right)$"
+2,2.13,Theorem,2,real_and_complex/2.13 Theorem_2_2.jpg,
+5,5.8,The,2,real_and_complex/5.8 The Banach-Steinhaus Theorem_5_2.jpg,$\sup _{\alpha \in A}\left\|\Lambda_{\alpha} x\right\|=\infty$
+7,7.21,Theorem,6,real_and_complex/7.21 Theorem_7_6.jpg,$f(b)-f(a) \leq \int_{a}^{b} f^{\prime}(t) d t$
+16,14.19,(and,3,real_and_complex/14.19 (and Remark_16_3.jpg,"$h(-1+i y)=h(1+i y)=h(\tau(-1+i y)) \quad(0<y<\infty)$,"
+7,7.2,Definition,5,real_and_complex/7.2 Definition_7_5.jpg,"$\mu(B(x, r))=\operatorname{tm}(B(x, r))$"
+19,19.3,Theorem,1,real_and_complex/19.3 Theorem_19_1.jpg,$|f(z)| \leq C e^{A|z|}$
+13,13.6,Theorem,4,real_and_complex/13.6 Theorem_13_4.jpg,$h(z)=\int_{K} \frac{d \mu(\zeta)}{\zeta-z} \quad\left(z \in S^{2}-K\right)$
+17,17.21,Beurling’s,2,real_and_complex/17.21 Beurling’s Theorem_17_2.jpg,$\|f\|_{2}=\left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi}\left|f^{*}\left(e^{i \theta}\right)\right|^{2} d \theta\right\}^{1 / 2}$.
+8,8.6,Theorem,4,real_and_complex/8.6 Theorem_8_4.jpg,"$\int_{X} d \mu(x) \int_{Y} \chi_{Q}(x, y) d \lambda(y)=\int_{Y} d \lambda(y) \int_{X} \chi_{Q}(x, y) d \mu(x)$."
+18,18.18,Theorem,1,real_and_complex/18.18 Theorem_18_1.jpg,$\left|f_{1}(z)\right|+\cdots+\left|f_{n}(z)\right|>0$
+16,16.19,Theorem,9,real_and_complex/16.19 Theorem_16_9.jpg,"$|2 z-4 n+1| \geq 1, \quad|2 z-4 n-1| \geq 1 \quad(n=0, \pm 1, \pm 2, \ldots)$"
+1,1.13,Definition,6,real_and_complex/1.13 Definition_1_6.jpg,$\left(\sup _{n} f_{n}\right)(x)=\sup _{n}\left(f_{n}(x)\right)$
+15,15.10,Theorem,2,real_and_complex/15.10 Theorem_15_2.jpg,"$P_{\alpha}(z)=\sum_{j=1}^{1+m(\alpha)} c_{j, \alpha}(z-\alpha)^{-j}$"
+14,14.1,Definition,5,real_and_complex/14.1 Definition_14_5.jpg,$\varphi(z)=\frac{(b-c)(z-a)}{(b-a)(z-c)}$
+20,20.5,Theorem,7,real_and_complex/20.5 Theorem_20_7.jpg,$A(z)=a(|z|)$
+5,3.10,Theorem,7,real_and_complex/3.10 Theorem_5_7.jpg,$\left\|\Lambda_{n}\right\| \rightarrow \infty \quad$ as $n \rightarrow \infty$
+11,11.14,Theorem,5,real_and_complex/11.14 Theorem_11_5.jpg,$f_{t}(z)=f_{s}(z) \quad\left(z \in D_{t} \cap D_{s}\right)$.
+16,16.6,Theorem,2,real_and_complex/16.6 Theorem_16_2.jpg,$f(z)=\sum_{k=1}^{\infty} c_{k} z^{p_{k}}$
+12,12.4,Theorem,2,real_and_complex/12.4 Theorem_12_2.jpg,$\varphi_{-\alpha}\left(\varphi_{\alpha}(z)\right)=z$
+12,12.4,Theorem,3,real_and_complex/12.4 Theorem_12_3.jpg,$\left|\frac{e^{i t}-\alpha}{1-\bar{\alpha} e^{i t}}\right|=\frac{\left|e^{i t}-\alpha\right|}{\left|e^{-i t}-\bar{\alpha}\right|}=1$
+13,13.10,Theorem,1,real_and_complex/13.10 Theorem_13_1.jpg,"$Q_{n}(z)=\sum_{\alpha \in A_{n}} P_{\alpha}(z) \quad(n=1,2,3, \ldots)$"
+16,16.6,Theorem,3,real_and_complex/16.6 Theorem_16_3.jpg,"$f^{(k)}(z)=\sum_{n=k}^{\infty} n(n-1) \cdots(n-k+1) a_{n} \eta_{n} z^{n-k}$,"
+5,3.10,Theorem,6,real_and_complex/3.10 Theorem_5_6.jpg,$\left\|\Lambda_{n}\right\| \leq \frac{1}{2 \pi} \int_{-\pi}^{\pi}\left|D_{n}(t)\right| d t=\left\|D_{n}\right\|_{1}$.
+11,11.14,Theorem,4,real_and_complex/11.14 Theorem_11_4.jpg,$f_{t}(\bar{z})=\overline{f_{t}(z)} \quad\left(z \in D_{t}\right)$
+14,14.1,Definition,4,real_and_complex/14.1 Definition_14_4.jpg,$\lim _{r \rightarrow 0} e^{-i \theta} A\left[f\left(r e^{i \theta}\right)\right]=\frac{\alpha+\beta e^{-2 i \theta}}{\left|\alpha+\beta e^{-2 i \theta}\right|}$
+20,20.5,Theorem,6,real_and_complex/20.5 Theorem_20_6.jpg,$a(r)=\frac{3}{\pi \delta^{2}}\left(1-\frac{r^{2}}{\delta^{2}}\right)^{2} \quad(0 \leq r \leq \delta)$
+4,4.25,Theorem,8,real_and_complex/4.25 Theorem_4_8.jpg,$\left\|f-s_{N}\right\|_{2}^{2}=\sum_{|n|>N}|\hat{f}(n)|^{2}$.
+12,12.10,Lindelof’s,1,real_and_complex/12.10 Lindelof’s Theorem_12_1.jpg,$\lim _{t \rightarrow 1} g(\Gamma(t))=L$
+10,10.7,Theorem,1,real_and_complex/10.7 Theorem_10_1.jpg,$f(z)=\int_{X} \frac{d \mu(\zeta)}{\varphi(\zeta)-z} \quad(z \in \Omega)$
+15,15.10,Theorem,3,real_and_complex/15.10 Theorem_15_3.jpg,"$g(z) P_{\alpha}(z)=w_{0, \alpha}+w_{1, \alpha}(z-\alpha)+\cdots+w_{m(\alpha), \alpha}(z-\alpha)^{m(\alpha)}+\cdots$"
+13,13.9,Theorem,2,real_and_complex/13.9 Theorem_13_2.jpg,"$\left|R_{n}(z)-f(z)\right|<\frac{1}{n} \quad(z \in K, n \geq N)$"
+1,1.13,Definition,7,real_and_complex/1.13 Definition_1_7.jpg,
+8,8.6,Theorem,5,real_and_complex/8.6 Theorem_8_5.jpg,$\lambda\left(Q_{x}\right)=\lambda(B) \chi_{A}(x)$ and $\mu\left(Q^{y}\right)=\mu(A) \chi_{B}(y)$
+16,14.19,(and,2,real_and_complex/14.19 (and Remark_16_2.jpg,$h(-x+i y)=\overline{h(x+i y)}$
+7,7.2,Definition,4,real_and_complex/7.2 Definition_7_4.jpg,$(M \mu)(x)=\sup _{0<r<\infty}\left(Q_{r} \mu\right)(x)$
+5,5.8,The,3,real_and_complex/5.8 The Banach-Steinhaus Theorem_5_3.jpg,$\varphi(x)=\sup _{\alpha \in A}\left\|\Lambda_{\alpha} x\right\| \quad(x \in X)$
+10,10.33,Theorem,8,real_and_complex/10.33 Theorem_10_8.jpg,$\operatorname{Ind}_{\Gamma}(\alpha)=\sum_{i=1}^{n} \operatorname{Ind}_{\gamma_{i}}(\alpha)$
+2,2.13,Theorem,3,real_and_complex/2.13 Theorem_2_3.jpg,$h_{1}+h_{2}+\cdots+h_{n}=1-\left(1-g_{1}\right)\left(1-g_{2}\right) \cdots\left(1-g_{n}\right)$
+16,16.4,Remark,2,real_and_complex/16.4 Remark_16_2.jpg,$f\left(z^{2}\right)=f(z)-z$
+16,16.11,Theorem,1,real_and_complex/16.11 Theorem_16_1.jpg,"$\gamma\left(\left[s_{i}, s_{i+1}\right]\right) \subset A_{i}, \quad \gamma\left(\left[\sigma_{j}, \sigma_{j+1}\right]\right) \subset B_{j} \quad(0 \leq i \leq m, 0 \leq j \leq n)$."
+16,16.16,Remark,2,real_and_complex/16.16 Remark_16_2.jpg,$g_{\beta}(z)=\int_{\Gamma_{z}}(\zeta-w)^{-1} d \zeta+f(\alpha) \quad\left(z \in D_{\beta}\right)$
+10,10.35,Cauchy’s,9,real_and_complex/10.35 Cauchy’s Theorem_10_9.jpg,"$\int_{\partial \Delta} h(z) d z=\frac{1}{2 \pi i} \int_{\Gamma}\left(\int_{\partial \Delta} g(z, w) d z\right) d w$."
+1,1.34,Lebesgue’s,5,real_and_complex/1.34 Lebesgue’s Dominated Convergence Theorem_1_5.jpg,$\limsup _{n \rightarrow \infty} \int_{X}\left|f_{n}-f\right| d \mu \leq 0$
+7,7.4,Theorem,8,real_and_complex/7.4 Theorem_7_8.jpg,"$\{T f>2 y\} \subset \bigcap_{n=1}^{\infty} E(y, n)$."
+18,18.5,Theorem,2,real_and_complex/18.5 Theorem_18_2.jpg,$\left\|(x-\mu e)^{-1}-(x-\lambda e)^{-1}+(\lambda-\mu)(x-\lambda e)^{-2}\right\| \leq C|\mu-\lambda|^{2}$
+18,18.13,Theorem,3,real_and_complex/18.13 Theorem_18_3.jpg,"$\varphi(x)+\varphi(y)=\varphi\left(x^{\prime}\right)+\varphi\left(y^{\prime}\right), \quad \lambda \varphi(x)=\lambda \varphi\left(x^{\prime}\right)$"
+7,7.13,Theorem,5,real_and_complex/7.13 Theorem_7_5.jpg,$\{\bar{D} \mu>\lambda\} \subset K \cup\left\{M \mu_{2}>\lambda\right\}$
+17,17.10,Theorem,2,real_and_complex/17.10 Theorem_17_2.jpg,$f=g h$
+9,9.21,Theorem,10,real_and_complex/9.21 Theorem_9_10.jpg,$\beta(x)=e^{A x}$.
+10,10.30,Theorem,2,real_and_complex/10.30 Theorem_10_2.jpg,$\varphi^{\prime}(z) \neq 0 \quad(z \in V)$.
+18,18.13,Theorem,1,real_and_complex/18.13 Theorem_18_1.jpg,$\varphi(x)=x+J=\{x+y: y \in J\}$.
+5,5.17,Proposition,2,real_and_complex/5.17 Proposition_5_2.jpg,$z=\operatorname{Re} z-i \operatorname{Re}(i z)$
+15,15.26,Theorem,8,real_and_complex/15.26 Theorem_15_8.jpg,$f(z)=\int_{0}^{1} t^{z}\left\{\frac{1}{2 \pi} \int_{-\infty}^{\infty} f(-1+i s) e^{-i s \log t} d s\right\} d t$.
+7,7.24,Theorem,9,real_and_complex/7.24 Theorem_7_9.jpg,"$m(T(B(0, r)))<\epsilon r^{k} \quad(0<r<\delta)$."
+2,2.13,Theorem,1,real_and_complex/2.13 Theorem_2_1.jpg,$h_{1}(x)+\cdots+h_{n}(x)=1 \quad(x \in K)$.
+3,3.7,Definition,1,real_and_complex/3.7 Definition_3_1.jpg,"$\mu\left(g^{-1}((\alpha, \infty])\right)=0$"
+1,1.27,Theorem,4,real_and_complex/1.27 Theorem_1_4.jpg,$\int_{X} g_{N} d \mu=\sum_{n=1}^{N} \int_{X} f_{n} d \mu$.
+4,4.12,Theorem,4,real_and_complex/4.12 Theorem_4_4.jpg,"$L x=(L x)(z, z)=(L z)(x, z)$"
+5,5.8,The,1,real_and_complex/5.8 The Banach-Steinhaus Theorem_5_1.jpg,$\left\|\Lambda_{\alpha}\right\| \leq M$
+7,7.21,Theorem,5,real_and_complex/7.21 Theorem_7_5.jpg,$f(b)-f(a) \leq \int_{a}^{b} g(t) d t<\int_{a}^{b} f^{\prime}(t) d t+\epsilon$
+7,7.2,Definition,6,real_and_complex/7.2 Definition_7_6.jpg,$(r+\delta)^{k}<r^{k} t / \lambda$
+19,19.3,Theorem,2,real_and_complex/19.3 Theorem_19_2.jpg,$\int_{-\infty}^{\infty}|f(x)|^{2} d x<\infty$.
+18,18.18,Theorem,2,real_and_complex/18.18 Theorem_18_2.jpg,$\sum_{i=1}^{n} f_{i}(z) g_{i}(z)=1 \quad(z \in \bar{U})$
+8,8.6,Theorem,7,real_and_complex/8.6 Theorem_8_7.jpg,"$Q_{m n}=Q \cap\left(X_{n} \times Y_{m}\right) \quad(m, n=1,2,3, \ldots)$"
+17,17.21,Beurling’s,1,real_and_complex/17.21 Beurling’s Theorem_17_1.jpg,$\varphi H^{2}=\left\{\varphi f: f \in H^{2}\right\}$
+13,13.6,Theorem,7,real_and_complex/13.6 Theorem_13_7.jpg,$h(z)=0 \quad\left(z \in S^{2}-K\right)$
+1,1.13,Definition,5,real_and_complex/1.13 Definition_1_5.jpg,$\limsup _{n \rightarrow \infty} a_{n}=\lim _{n \rightarrow \infty} \inf a_{n}=\lim _{n \rightarrow \infty} a_{n}$.
+15,15.10,Theorem,1,real_and_complex/15.10 Theorem_15_1.jpg,$f(z)=e^{g(z)} \prod_{n=1}^{\infty} E_{p_{n}}\left(\frac{z}{z_{n}}\right)$.
+12,12.10,Lindelof’s,3,real_and_complex/12.10 Lindelof’s Theorem_12_3.jpg,$h(z)=g(z) \overline{g(\bar{z})} g(2 r-z) \overline{g(2 r-\bar{z})}$.
+3,3.9,Theorem,1,real_and_complex/3.9 Theorem_3_1.jpg,$\|f+g\|_{p} \leq\|f\|_{p}+\|g\|_{p}$.
+19,19.1,Definitino,2,real_and_complex/19.1 Definitino_19_2.jpg,$f(x+i y)=\int_{0}^{\infty} F(t) e^{-t y} e^{i t x} d t$
+11,11.14,Theorem,6,real_and_complex/11.14 Theorem_11_6.jpg,$F(z)=\left\{\begin{array}{ll}f_{t}(z) & \text { for } z \in D_{t}\end{array}\right.$
+5,3.10,Theorem,4,real_and_complex/3.10 Theorem_5_4.jpg,$s^{*}(f ; x)=\sup _{n}\left|s_{n}(f ; x)\right|$
+12,12.4,Theorem,1,real_and_complex/12.4 Theorem_12_1.jpg,"$\varphi_{\alpha}^{\prime}=1-|\alpha|^{2}, \quad \varphi_{\alpha}^{\prime}(\alpha)=\frac{1}{1-|\alpha|^{2}}$"
+16,16.6,Theorem,1,real_and_complex/16.6 Theorem_16_1.jpg,"$p_{k+1}>\left(1+\frac{1}{\lambda}\right) p_{k} \quad(k=1,2,3, \ldots)$"
+13,13.10,Theorem,2,real_and_complex/13.10 Theorem_13_2.jpg,$\left|R_{n}(z)-Q_{n}(z)\right|<2^{-n} \quad\left(z \in K_{n-1}\right)$.
+20,20.5,Theorem,5,real_and_complex/20.5 Theorem_20_5.jpg,(s) $\quad(u !+\xi=\xi) \quad u p \mathfrak{q} p \frac{z-\xi}{(\xi)(\Phi \underline{\varrho})} \iint \frac{u}{\mathrm{I}}-=(z) \Phi$
+11,11.14,Theorem,7,real_and_complex/11.14 Theorem_11_7.jpg,$f(\bar{z})=\sum_{n=0}^{\infty} c_{n}(\bar{z}-\bar{a})^{n}$.
+5,3.10,Theorem,5,real_and_complex/3.10 Theorem_5_5.jpg,"$\Lambda_{n} f=s_{n}(f ; 0) \quad(f \in C(T) ; n=1,2,3, \ldots)$"
+17,17.26,Theorem,8,real_and_complex/17.26 Theorem_17_8.jpg,$\left\{\int_{T}\left|(\psi h)_{r}\right|^{p} d \sigma\right\}^{1 / p} \leq A_{q}\left\{\int_{T}|h|^{p} d \sigma\right\}^{1 / p} \quad(0 \leq r<1)$.
+12,12.10,Lindelof’s,2,real_and_complex/12.10 Lindelof’s Theorem_12_2.jpg,$|g(\Gamma(t))|<\epsilon \quad$ and $\quad \operatorname{Re} \Gamma(t)>r_{0}>\frac{1}{2}$
+13,13.9,Theorem,1,real_and_complex/13.9 Theorem_13_1.jpg,$\left|R_{n}(z)-f(z)\right|<\frac{1}{n} \quad\left(z \in K_{n}\right)$.
+1,1.13,Definition,4,real_and_complex/1.13 Definition_1_4.jpg,$\liminf _{n \rightarrow \infty} a_{n}=-\limsup _{n \rightarrow \infty}\left(-a_{n}\right)$
+10,10.7,Theorem,2,real_and_complex/10.7 Theorem_10_2.jpg,$\int_{\gamma_{1}} f(z) d z=\int_{\gamma} f(z) d z$
+13,13.6,Theorem,6,real_and_complex/13.6 Theorem_13_6.jpg,"$\frac{1}{\zeta-z}=-\lim _{N \rightarrow \infty} \sum_{n=0}^{N} z^{-n-1} \zeta^{n} \quad(\zeta \in K,|z|>r)$"
+8,8.6,Theorem,6,real_and_complex/8.6 Theorem_8_6.jpg,"$\varphi_{i}(x) \rightarrow \varphi(x), \quad \psi_{i}(y) \rightarrow \psi(y) \quad(i \rightarrow \infty)$"
+19,19.3,Theorem,3,real_and_complex/19.3 Theorem_19_3.jpg,$f(z)=\int_{-A}^{A} F(t) e^{i t z} d t$
+7,7.21,Theorem,4,real_and_complex/7.21 Theorem_7_4.jpg,$g(t)>f^{\prime}(x)$ and $\frac{f(t)-f(x)}{t-x}<f^{\prime}(x)+\eta$
+7,7.24,Theorem,15,real_and_complex/7.24 Theorem_7_15.jpg,$\int_{\alpha}^{\beta} f(t) d t=\int_{a}^{b} f(\varphi(x)) \varphi^{\prime}(x) d x$
+7,7.24,Theorem,8,real_and_complex/7.24 Theorem_7_8.jpg,$|T(x)-A x| \leq \eta|x|$.
+16,16.11,Theorem,2,real_and_complex/16.11 Theorem_16_2.jpg,$\gamma\left(s_{i}\right) \in A_{i-1} \cap A_{i} \cap B_{j}$.
+16,16.16,Remark,1,real_and_complex/16.16 Remark_16_1.jpg,"$\Gamma_{z}=\gamma \dot{+}[\beta, z] \quad\left(z \in D_{\beta}\right)$"
+16,16.4,Remark,1,real_and_complex/16.4 Remark_16_1.jpg,$f(z)=\sum_{n=0}^{\infty} z^{2^{n}}=z+z^{2}+z^{4}+z^{8}+\cdots \quad(z \in U)$
+5,5.17,Proposition,3,real_and_complex/5.17 Proposition_5_3.jpg,$\operatorname{Re}(i f(x))=\operatorname{Re} f(i x)=u(i x)$
+19,19.11,Theorem,9,real_and_complex/19.11 Theorem_19_9.jpg,$\log q(x) \geq \log \frac{x^{n}}{M_{n}} \geq \log e^{n}=n$
+7,7.13,Theorem,6,real_and_complex/7.13 Theorem_7_6.jpg,$m\{\bar{D} \mu>\lambda\} \leq 3^{k} \lambda^{-1}\left\|\mu_{2}\right\|<3^{k} \lambda^{-1} \epsilon$.
+17,17.10,Theorem,1,real_and_complex/17.10 Theorem_17_1.jpg,$f=B \cdot h^{2 / p}$.
+10,10.30,Theorem,1,real_and_complex/10.30 Theorem_10_1.jpg,$\left|\varphi\left(z_{1}\right)-\varphi\left(z_{2}\right)\right| \geq \frac{1}{2}\left|\varphi^{\prime}\left(z_{0}\right)\right|\left|z_{1}-z_{2}\right|$
+19,19.7,Theorem,3,real_and_complex/19.7 Theorem_19_3.jpg,"$\left\|D^{n}(f g)\right\|_{\infty} \leq \beta_{f} \beta_{g}\left(B_{f}+B_{g}\right)^{n} M_{n} \quad(n=0,1,2, \ldots)$"
+18,18.13,Theorem,4,real_and_complex/18.13 Theorem_18_4.jpg,$x^{\prime} y^{\prime}-x y=\left(x^{\prime}-x\right) y^{\prime}+x\left(y^{\prime}-y\right)$
+7,7.13,Theorem,2,real_and_complex/7.13 Theorem_7_2.jpg,"$(D \mu)(x)=0 \quad$ a.e. $[m]$,"
+18,18.9,Theorem,8,real_and_complex/18.9 Theorem_18_8.jpg,"$\left\|x^{n}\right\|^{1 / n} \leq|\lambda|[C(\lambda)]^{1 / n} \quad(n=1,2,3, \ldots)$"
+1,1.34,Lebesgue’s,2,real_and_complex/1.34 Lebesgue’s Dominated Convergence Theorem_1_2.jpg,"$\left|f_{n}(x)\right| \leq g(x) \quad(n=1,2,3, \ldots ; x \in X)$"
+18,18.5,Theorem,5,real_and_complex/18.5 Theorem_18_5.jpg,"$\lambda f(\lambda)=\Phi\left[\lambda(x-\lambda e)^{-1}\right]=\Phi\left[\left(\frac{x}{\lambda}-e\right)^{-1}\right] \rightarrow \Phi(-e)$,"
+19,19.2,Theorem,18,real_and_complex/19.2 Theorem_19_18.jpg,$f_{y}(x)=\int_{-\infty}^{\infty} \hat{f}_{y}(t) e^{i t x} d t$
+1,1.27,Theorem,1,real_and_complex/1.27 Theorem_1_1.jpg,$f(x)=\sum_{n=1}^{\infty} f_{n}(x) \quad(x \in X)$
+2,2.13,Theorem,4,real_and_complex/2.13 Theorem_2_4.jpg,$\mu\left(\bigcup_{i=1}^{\infty} E_{i}\right) \leq \sum_{i=1}^{\infty} \mu\left(E_{i}\right)$.
+8,8.8,applies,1,real_and_complex/8.8 applies to g. Lemma_8_1.jpg,$\int_{X} \lambda\left(Q_{x}\right) d \mu(x)=0$
+12,12.8,Theorem,9,real_and_complex/12.8 Theorem_12_9.jpg,"$|g(a+i y)|=M(a), \quad|g(b+i y)|=M(b)$"
+16,14.19,(and,5,real_and_complex/14.19 (and Remark_16_5.jpg,"$\lambda(z)=h\left(\varphi^{-1}(z)\right) \quad(z \in \varphi(Q), \varphi \in \Gamma)$"
+7,7.2,Definition,3,real_and_complex/7.2 Definition_7_3.jpg,$(D \mu)(x)=\lim _{r \rightarrow 0}\left(Q_{r} \mu\right)(x)$
+19,19.3,Theorem,7,real_and_complex/19.3 Theorem_19_7.jpg,$\Phi_{\alpha}(w)=\int_{\Gamma_{\alpha}} f(z) e^{-w z} d z=e^{i \alpha} \int_{0}^{\infty} f\left(s e^{i \alpha}\right) \exp \left(-w s e^{i \alpha}\right) d s$
+4,4.12,Theorem,1,real_and_complex/4.12 Theorem_4_1.jpg,"$L x=(x, y) \quad(x \in H)$."
+5,5.8,The,4,real_and_complex/5.8 The Banach-Steinhaus Theorem_5_4.jpg,"$V_{n}=\{x: \varphi(x)>n\} \quad(n=1,2,3, \ldots)$"
+10,10.7,Theorem,6,real_and_complex/10.7 Theorem_10_6.jpg,"$\left|c_{n}\right| \leq \frac{|\mu|(X)}{r^{n+1}} \quad(n=0,1,2, \ldots)$"
+15,15.10,Theorem,4,real_and_complex/15.10 Theorem_15_4.jpg,$g(z)=b_{1} z^{m+1}+b_{2} z^{m+2}+\cdots$
+9,9.11,The,2,real_and_complex/9.11 The Inversion Theorem_9_2.jpg,$\left(f * h_{\lambda}\right)(x)=\int_{-\infty}^{\infty} H(\lambda t) \hat{f}(t) e^{i x t} d m(t)$.
+8,8.6,Theorem,2,real_and_complex/8.6 Theorem_8_2.jpg,"$\int_{X} \varphi d \mu=\int_{Y} \psi d \lambda$,"
+13,13.6,Theorem,2,real_and_complex/13.6 Theorem_13_2.jpg,$\int_{K} R d \mu=0$
+15,15.21,Theorem,3,real_and_complex/15.21 Theorem_15_3.jpg,$\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|f\left(r e^{i \theta}\right)\right| d \theta$
+17,17.21,Beurling’s,4,real_and_complex/17.21 Beurling’s Theorem_17_4.jpg,"$\frac{1}{2 \pi} \int_{-\pi}^{\pi}\left|\varphi^{*}\left(e^{i \theta}\right)\right|^{2} e^{-i n \theta} d \theta=0 \quad(n=1,2,3, \ldots)$"
+12,12.10,Lindelof’s,6,real_and_complex/12.10 Lindelof’s Theorem_12_6.jpg,$h_{c}(z)=h(z)(1-z)^{c}(2 r-1-z)^{c}$
+12,12.4,Theorem,4,real_and_complex/12.4 Theorem_12_4.jpg,$f(z)=\varphi_{-\beta}\left(\lambda \varphi_{\alpha}(z)\right) \quad(z \in U)$
+1,1.23,Definition,2,real_and_complex/1.23 Definition_1_2.jpg,$\int_{E} s d \mu=\sum_{i=1}^{n} \alpha_{i} \mu\left(A_{i} \cap E\right)$.
+9,9.13,Theorem,9,real_and_complex/9.13 Theorem_9_9.jpg,$\left(h_{\lambda} * \bar{w}\right)(\alpha)=\int_{-\infty}^{\infty} h_{\lambda}(\alpha-t) \bar{w}(t) d m(t)=0$
+5,3.10,Theorem,1,real_and_complex/3.10 Theorem_5_1.jpg,$\|\Lambda x\| \geq \delta\|x\| \quad(x \in X)$
+11,11.14,Theorem,3,real_and_complex/11.14 Theorem_11_3.jpg,$F(\bar{z})=\overline{F(z)} \quad\left(z \in \Omega^{+} \cup L \cup{\Omega^{-}}\right.$.
+14,14.1,Definition,3,real_and_complex/14.1 Definition_14_3.jpg,$f(z)=\alpha z+\beta \bar{z}+|z| \eta(z)$
+20,20.5,Theorem,1,real_and_complex/20.5 Theorem_20_1.jpg,$\lim _{\delta \rightarrow 0} \omega(\delta)=0$
+14,14.1,Definition,2,real_and_complex/14.1 Definition_14_2.jpg,$\lim _{r \rightarrow 0} e^{-i \theta} A\left[f\left(z_{0}+r e^{i \theta}\right)-f\left(z_{0}\right)\right] \quad(r>0)$
+20,20.5,Theorem,0,real_and_complex/20.5 Theorem_20_0.jpg,$(\bar{\partial} \Phi)(z)=\iint(\bar{\partial} A)(z-\zeta) f(\zeta) d \xi d \eta$
+11,11.14,Theorem,2,real_and_complex/11.14 Theorem_11_2.jpg,$\lim _{n \rightarrow \infty} v\left(z_{n}\right)=0$
+9,9.13,Theorem,8,real_and_complex/9.13 Theorem_9_8.jpg,$h_{\lambda}(\alpha-t)=\int_{-\infty}^{\infty} e^{i \alpha x} H(\lambda x) e^{-i x t} d m(x)$
+1,1.23,Definition,3,real_and_complex/1.23 Definition_1_3.jpg,$\int_{E} f d \mu=\sup \int_{E} s d \mu$
+3,3.4,Definition,1,real_and_complex/3.4 Definition_3_1.jpg,"$\frac{1}{p}+\frac{1}{q}=1$,"
+13,13.6,Theorem,3,real_and_complex/13.6 Theorem_13_3.jpg,$\int_{K} f d \mu=0$
+15,15.21,Theorem,2,real_and_complex/15.21 Theorem_15_2.jpg,"$B(z)=z^{k} \prod_{n=1}^{\infty} \frac{\alpha_{n}-z}{1-\bar{\alpha}_{n} z} \frac{\left|\alpha_{n}\right|}{\alpha_{n}} \quad(z \in U)$,"
+8,8.6,Theorem,3,real_and_complex/8.6 Theorem_8_3.jpg,"$\lambda\left(Q_{x}\right)=\int_{Y} \chi_{Q}(x, y) d \lambda(y) \quad(x \in X)$"
+9,9.11,The,3,real_and_complex/9.11 The Inversion Theorem_9_3.jpg,$\lim _{n \rightarrow \infty}\left(f * h_{\lambda_{n}}\right)(x)=f(x)$ a.e.
+15,15.10,Theorem,5,real_and_complex/15.10 Theorem_15_5.jpg,"$\left|1-E_{n}\left(\frac{\alpha_{n}-\beta_{n}}{z-\beta_{n}}\right)\right| \leq\left(\frac{1}{2}\right)^{n+1} \quad(z \in K, n \geq N)$"
+1,1.13,Definition,1,real_and_complex/1.13 Definition_1_1.jpg,"$b_{k}=\sup \left\{a_{k}, a_{k+1}, a_{k+2}, \ldots\right\} \quad(k=1,2,3, \ldots)$"
+7,7.21,Theorem,1,real_and_complex/7.21 Theorem_7_1.jpg,$f(x)-f(a)=\int_{a}^{x} f^{\prime}(t) d t \quad(a \leq x \leq b)$.
+5,5.8,The,5,real_and_complex/5.8 The Banach-Steinhaus Theorem_5_5.jpg,$\left\|\Lambda_{\alpha}\left(x_{0}+x\right)\right\| \leq N$
+7,7.24,Theorem,10,real_and_complex/7.24 Theorem_7_10.jpg,$\int_{Y} \chi_{A} d m=m(T(E \cap X))=\int_{X}\left(\chi_{A} \circ T\right)\left|J_{T}\right| d m$.
+7,7.1,Theorem,2,real_and_complex/7.1 Theorem_7_2.jpg,$\left|\frac{\mu(I)}{m(I)}-A\right|<\epsilon$
+16,14.19,(and,4,real_and_complex/14.19 (and Remark_16_4.jpg,$h\left(-\frac{1}{2}+\frac{1}{2} e^{i \theta}\right)=h\left(\frac{1}{2}+\frac{1}{2} e^{i(\pi-\theta)}\right)=h\left(\sigma\left(-\frac{1}{2}+\frac{1}{2} e^{i \theta}\right)\right) \quad(0<\theta<\pi)$
+19,19.3,Theorem,6,real_and_complex/19.3 Theorem_19_6.jpg,$\Pi_{\alpha}=\left\{w: \operatorname{Re}\left(w e^{i \alpha}\right)>A\right\}$
+12,12.8,Theorem,8,real_and_complex/12.8 Theorem_12_8.jpg,$M^{w}=\exp (w \log M)$
+2,2.13,Theorem,5,real_and_complex/2.13 Theorem_2_5.jpg,$\mu\left(V_{1} \cup V_{2}\right) \leq \mu\left(V_{1}\right)+\mu\left(V_{2}\right)$
+19,19.2,Theorem,19,real_and_complex/19.2 Theorem_19_19.jpg,$f(z)=\int_{0}^{\infty} F(t) e^{-y t} e^{i t x} d t=\int_{0}^{\infty} F(t) e^{i t z} d t \quad\left(z \in \Pi^{+}\right)$.
+16,16.2,Theorem,1,real_and_complex/16.2 Theorem_16_1.jpg,$f(z)=\sum_{n=0}^{\infty} a_{n} z^{n} \quad(z \in U)$
+18,18.5,Theorem,4,real_and_complex/18.5 Theorem_18_4.jpg,$\frac{f(\mu)-f(\lambda)}{\mu-\lambda} \rightarrow \Phi\left[(x-\lambda e)^{-2}\right]$.
+1,1.34,Lebesgue’s,3,real_and_complex/1.34 Lebesgue’s Dominated Convergence Theorem_1_3.jpg,$\lim _{n \rightarrow \infty} \int_{X}\left|f_{n}-f\right| d \mu=0$
+18,18.9,Theorem,9,real_and_complex/18.9 Theorem_18_9.jpg,$\lim _{n \rightarrow \infty} \sup \left\|x^{n}\right\|^{1 / n} \leq \rho(x)$.
+18,18.13,Theorem,5,real_and_complex/18.13 Theorem_18_5.jpg,"$\varphi(x) \varphi(y)=\varphi(x y) \quad(x$ and $y \in A)$.
+"
+7,7.13,Theorem,3,real_and_complex/7.13 Theorem_7_3.jpg,$(\bar{D} \mu)(x)=\lim _{n \rightarrow \infty}\left[\sup _{0<r<1 / n}\left(Q_{r} \mu\right)(x)\right] \quad\left(x \in R^{k}\right)$
+10,10.30,Theorem,4,real_and_complex/10.30 Theorem_10_4.jpg,$\min _{\theta}\left|\lambda-\varphi\left(a+r e^{i \theta}\right)\right|>c$.
+19,19.7,Theorem,2,real_and_complex/19.7 Theorem_19_2.jpg,$\left|D^{n}(f g)\right| \leq \beta_{f} \beta_{g} \sum_{j=0}^{n}\left(\begin{array}{l}n \\ j\end{array}\right) B_{f}^{j} B_{g}^{n-j} M_{j} M_{n-j}$
+5,5.17,Proposition,4,real_and_complex/5.17 Proposition_5_4.jpg,$f(i x)=u(i x)-i u(-x)=u(i x)+i u(x)=i f(x)$
+7,7.13,Theorem,1,real_and_complex/7.13 Theorem_7_1.jpg,$\lim _{i \rightarrow \infty} \frac{\mu\left(E_{i}(x)\right)}{m\left(E_{i}(x)\right)}=0 \quad$ a.e. $[m]$.
+9,9.21,Theorem,8,real_and_complex/9.21 Theorem_9_8.jpg,$c \beta(x)=\int_{0}^{\delta} \beta(y) \beta(x) d y=\int_{0}^{\delta} \beta(y+x) d y=\int_{x}^{x+\delta} \beta(y) d y$.
+1,1.34,Lebesgue’s,1,real_and_complex/1.34 Lebesgue’s Dominated Convergence Theorem_1_1.jpg,$f(x)=\lim _{n \rightarrow \infty} f_{n}(x)$
+2,2.13,Theorem,7,real_and_complex/2.13 Theorem_2_7.jpg,$\mu(K)=\inf \{\Lambda f: K \prec f\}$.
+19,19.3,Theorem,4,real_and_complex/19.3 Theorem_19_4.jpg,"$\lim _{\epsilon \rightarrow 0} \int_{-\infty}^{\infty} f_{\epsilon}(x) e^{-i t x} d x=0 \quad(t$ real, $|t|>A)$"
+7,7.21,Theorem,3,real_and_complex/7.21 Theorem_7_3.jpg,$F_{\eta}(x)=\int_{a}^{x} g(t) d t-f(x)+f(a)+\eta(x-a) \quad(a \leq x \leq b)$.
+4,4.12,Theorem,2,real_and_complex/4.12 Theorem_4_2.jpg,$M=\{x: L x=0\}$.
+1,1.13,Definition,3,real_and_complex/1.13 Definition_1_3.jpg,$\beta=\limsup _{n \rightarrow \infty} a_{n}$.
+15,15.10,Theorem,7,real_and_complex/15.10 Theorem_15_7.jpg,$g(z) P(z)=w_{0}+w_{1} z+\cdots+w_{m} z^{m}+\cdots$.
+10,10.7,Theorem,5,real_and_complex/10.7 Theorem_10_5.jpg,"$c_{n}=\int_{X} \frac{d \mu(\zeta)}{(\varphi(\zeta)-a)^{n+1}} \quad(n=0,1,2, \ldots)$"
+13,13.6,Theorem,1,real_and_complex/13.6 Theorem_13_1.jpg,$|f(z)-R(z)|<\epsilon$
+8,8.6,Theorem,1,real_and_complex/8.6 Theorem_8_1.jpg,"$\varphi(x)=\lambda\left(Q_{x}\right), \quad \psi(y)=\mu\left(Q^{y}\right)$"
+17,17.17,Theorem,8,real_and_complex/17.17 Theorem_17_8.jpg,$P\left[\log ^{-}\left|f^{*}\right|\right] \leq \liminf _{R \rightarrow 1} P\left[\log ^{-}\left|f_{R}\right|\right]=P\left[\log ^{+}\left|f^{*}\right|\right]-\log |f|$
+12,12.10,Lindelof’s,5,real_and_complex/12.10 Lindelof’s Theorem_12_5.jpg,$|h(z)|<\epsilon \quad$ if $\quad z \in \Omega \cap E$.
+1,1.23,Definition,1,real_and_complex/1.23 Definition_1_1.jpg,$s=\sum_{i=1}^{n} \alpha_{i} \chi_{A_{i}}$
+20,20.5,Theorem,2,real_and_complex/20.5 Theorem_20_2.jpg,"$|f(z)-P(z)|<10,000 \omega(\delta) \quad(z \in K)$"
+5,3.10,Theorem,2,real_and_complex/3.10 Theorem_5_2.jpg,"where
+\[
+D_{n}(t)=\sum_{k=-n}^{n} e^{i k t}
+\]"
+11,11.14,Theorem,1,real_and_complex/11.14 Theorem_11_1.jpg,$\Omega^{-}=\left\{z: \bar{z} \in \Omega^{+}\right\}$.
+5,3.10,Theorem,3,real_and_complex/3.10 Theorem_5_3.jpg,$\lim _{n \rightarrow \infty} s_{n}(f ; x)=f(x)$
+14,14.1,Definition,1,real_and_complex/14.1 Definition_14_1.jpg,$A[z]=\frac{z}{|z|}$
+12,12.10,Lindelof’s,4,real_and_complex/12.10 Lindelof’s Theorem_12_4.jpg,$|h(r)|<\epsilon$.
+17,17.21,Beurling’s,6,real_and_complex/17.21 Beurling’s Theorem_17_6.jpg,"$\frac{1}{2 \pi} \int_{-\pi}^{\pi} h^{*}\left(e^{i \theta}\right) \overline{\varphi^{*}\left(e^{i \theta}\right)} e^{-i n \theta} d \theta=0 \quad(n=-1,-2,-3, \ldots)$"
+15,15.21,Theorem,1,real_and_complex/15.21 Theorem_15_1.jpg,$\sum_{n=1}^{\infty}\left(1-\left|\alpha_{n}\right|\right)<\infty$
+13,13.6,Theorem,0,real_and_complex/13.6 Theorem_13_0.jpg,"By Theorem 10.7 (with $X=K, \varphi(\zeta)=\zeta), h \in H\left(S^{2}-K\right)$."
+15,15.10,Theorem,6,real_and_complex/15.10 Theorem_15_6.jpg,$g(z) P(z)=\left(c_{m+1}+c_{m} z+\cdots+c_{1} z^{m}\right) \quad\left(b_{1}+b_{2} z+b_{3} z^{2}+\cdots\right)$.
+1,1.13,Definition,2,real_and_complex/1.13 Definition_1_2.jpg,"$\beta=\inf \left\{b_{1}, b_{2}, b_{3}, \ldots\right\}$"
+10,10.7,Theorem,4,real_and_complex/10.7 Theorem_10_4.jpg,$f(z)=\sum_{0}^{\infty} c_{n}(z-a)^{n} \quad(z \in D(a ; r))$
+3,3.3,Theorem,8,real_and_complex/3.3 Theorem_3_8.jpg,$y_{1}^{\alpha_{1}} y_{2}^{\alpha_{2}} \cdots y_{n}^{\alpha_{n}} \leq \alpha_{1} y_{1}+\alpha_{2} y_{2}+\cdots+\alpha_{n} y_{n}$
+4,4.12,Theorem,3,real_and_complex/4.12 Theorem_4_3.jpg,$u=(L x) z-(L z) x$
+7,7.21,Theorem,2,real_and_complex/7.21 Theorem_7_2.jpg,$\int_{a}^{b} g(t) d t<\int_{a}^{b} f^{\prime}(t) d t+\epsilon$.
+5,5.8,The,6,real_and_complex/5.8 The Banach-Steinhaus Theorem_5_6.jpg,$\left\|\Lambda_{\alpha} x\right\| \leq\left\|\Lambda_{\alpha}\left(x_{0}+x\right)\right\|+\left\|\Lambda_{\alpha} x_{0}\right\| \leq 2 N$
+15,15.4,Theorem,8,real_and_complex/15.4 Theorem_15_8.jpg,$|f(s)| \geq(1-2 \epsilon)\left|p_{N_{0}}(s)\right| \quad(s \in S)$
+19,19.3,Theorem,5,real_and_complex/19.3 Theorem_19_5.jpg,$\Gamma_{\alpha}(s)=s e^{i \alpha} \quad(0 \leq s<\infty)$
+7,7.2,Definition,1,real_and_complex/7.2 Definition_7_1.jpg,"$B(x, r)=\left\{y \in R^{k}:|y-x|<r\right\}$"
+7,7.1,Theorem,1,real_and_complex/7.1 Theorem_7_1.jpg,"$f(x)=\mu((-\infty, x)) \quad\left(x \in R^{1}\right)$."
+2,2.13,Theorem,6,real_and_complex/2.13 Theorem_2_6.jpg,$\Lambda g=\Lambda\left(h_{1} g\right)+\Lambda\left(h_{2} g\right) \leq \mu\left(V_{1}\right)+\mu\left(V_{2}\right)$
+16,16.2,Theorem,2,real_and_complex/16.2 Theorem_16_2.jpg,"$h(z)=\left\{\begin{array}{ll}f(z) & (z \in U), \\ g_{i}(z) & \left(z \in D_{i}\right)\end{array}\right.$"
+1,1.27,Theorem,3,real_and_complex/1.27 Theorem_1_3.jpg,$\int_{X}\left(f_{1}+f_{2}\right) d \mu=\int_{X} f_{1} d \mu+\int_{X} f_{2} d \mu$.
+9,9.21,Theorem,9,real_and_complex/9.21 Theorem_9_9.jpg,"$\beta^{\prime}(x)=A \beta(x), \quad A=\beta^{\prime}$."
+18,18.13,Theorem,6,real_and_complex/18.13 Theorem_18_6.jpg,"$I=\{a x+y: a \in A, y \in J\}$."
+5,5.17,Proposition,5,real_and_complex/5.17 Proposition_5_5.jpg,"$|f(x)|=f(\alpha x)=u(\alpha x) \leq\|u\| \cdot\|\alpha x\|=\|u\| \cdot\|x\|$,"
+3,3.17,Theorem,1,real_and_complex/3.17 Theorem_3_1.jpg,$\|f\|=\sup _{x \in X}|f(x)|$.
+19,19.7,Theorem,1,real_and_complex/19.7 Theorem_19_1.jpg,$D^{n}(f g)=\sum_{j=0}^{n}\left(\begin{array}{l}n \\ j\end{array}\right)\left(D^{j} f\right) \cdot\left(D^{n-j} g\right)$
+7,7.17,Definition,2,real_and_complex/7.17 Definition_7_2.jpg,$\sum_{i=1}^{n}\left(\beta_{i}-\alpha_{i}\right)<\delta$
+11,11.2,Theorem,1,real_and_complex/11.2 Theorem_11_1.jpg,$(\bar{\partial} f)(z)=0$
+11,11.22,Theorem,5,real_and_complex/11.22 Theorem_11_5.jpg,$c_{\alpha}\left(N_{\alpha} u_{0}\right)\left(e^{i \theta}\right) \leq\left(M \mu_{0}\right)\left(e^{i \theta}\right) \leq \epsilon$
+9,9.2,Theorem,2,real_and_complex/9.2 Theorem_9_2.jpg,$\hat{f}^{\prime}(t)=-i \int_{-\infty}^{\infty} x f(x) e^{-i x t} d m(x)$
+19,19.11,Theorem,2,real_and_complex/19.11 Theorem_19_2.jpg,$f(z)=\int_{0}^{A} F(t) e^{i t z} d t$
+8,8.18,Theorem,3,real_and_complex/8.18 Theorem_8_3.jpg,$g_{t}(x)=\left\{\begin{array}{ll}f(x) & \text { if } f(x)>c t \\ 0 & \text { if } f(x) \leq c t\end{array}\right.$
+18,18.9,Theorem,7,real_and_complex/18.9 Theorem_18_7.jpg,"$\left\|\lambda^{-n} x^{n}\right\| \leq C(\lambda) \quad(n=1,2,3, \ldots)$"
+15,15.26,Theorem,2,real_and_complex/15.26 Theorem_15_2.jpg,"$\int_{I} t^{k} d \mu(t)=0 \quad(k=1,2,3, \ldots)$"
+7,7.24,Theorem,3,real_and_complex/7.24 Theorem_7_3.jpg,"$\lim _{r \rightarrow 0} \frac{m(F(B(0, r)))}{m(B(0, r))}=1$"
+15,15.18,Theorem,2,real_and_complex/15.18 Theorem_15_2.jpg,$g(z)=f(z) \prod_{n=1}^{m} \frac{r^{2}-\bar{\alpha}_{n} z}{r\left(\alpha_{n}-z\right)} \prod_{n=m+1}^{N} \frac{\alpha_{n}}{\alpha_{n}-z}$
+9,9.21,Theorem,4,real_and_complex/9.21 Theorem_9_4.jpg,$\varphi(f) \varphi(g)=\varphi(f) \int_{-\infty}^{\infty} g(y) \beta(y) d m(y)$
+1,1.26,Lebesgue’s,3,real_and_complex/1.26 Lebesgue’s Monotone Convergence Theorem_1_3.jpg,"$E_{n}=\left\{x: f_{n}(x) \geq c s(x)\right\} \quad(n=1,2,3, \ldots)$"
+10,10.35,Cauchy’s,1,real_and_complex/10.35 Cauchy’s Theorem_10_1.jpg,$\operatorname{Ind}_{\Gamma}(\alpha)=0 \quad$ for every $\alpha$ not in $\Omega$
+17,17.8,Remark,3,real_and_complex/17.8 Remark_17_3.jpg,$\|f+g\|_{p} \leq\|f\|_{p}+\|g\|_{p}$.
+19,19.3,Theorem,11,real_and_complex/19.3 Theorem_19_11.jpg,"$\gamma=\frac{\alpha+\beta}{2}, \quad \eta=\cos \frac{\beta-\alpha}{2}>0$."
+15,15.17,Lemma,2,real_and_complex/15.17 Lemma_15_2.jpg,$\Gamma(t)=e^{i t} \quad(\delta \leq t \leq 2 \pi-\delta)$
+19,19.2,Theorem,17,real_and_complex/19.2 Theorem_19_17.jpg,$\int_{0}^{\infty}|F(t)|^{2} d t \leq C$.
+7,7.19,Theorem,3,real_and_complex/7.19 Theorem_7_3.jpg,$F(y) \geq|f(y)-f(x)|+\sum_{i=1}^{N}\left|f\left(t_{i}\right)-f\left(t_{i-1}\right)\right|$
+12,12.8,Theorem,6,real_and_complex/12.8 Theorem_12_6.jpg,$\left|f(z) h_{\epsilon}(z)\right| \leq \frac{B}{\epsilon|y|} \quad(z=x+i y \in \bar{\Omega})$.
+15,15.4,Theorem,5,real_and_complex/15.4 Theorem_15_5.jpg,$q_{M}-p_{N}=p_{N}\left\{\prod\left(1+u_{n_{k}}\right)-1\right\}$.
+19,19.3,Theorem,8,real_and_complex/19.3 Theorem_19_8.jpg,$\Phi_{0}(w)=\int_{0}^{\infty} f(x) e^{-w x} d x \quad(\operatorname{Re} w>0)$
+3,3.3,Theorem,5,real_and_complex/3.3 Theorem_3_5.jpg,$\exp \left\{\frac{1}{n}\left(x_{1}+\cdots+x_{n}\right)\right\} \leq \frac{1}{n}\left(e^{x_{1}}+\cdots+e^{x_{n}}\right)$
+16,16.5,Theorem,1,real_and_complex/16.5 Theorem_16_1.jpg,"$\lambda q_{k}>(\lambda+1) p_{k} \quad(k=1,2,3, \ldots)$"
+2,2.24,Lusin’s,2,real_and_complex/2.24 Lusin’s Theorem_2_2.jpg,$\sup _{x \in X}|g(x)| \leq \sup _{x \in X}|f(x)|$.
+11,11.9,Theorem,2,real_and_complex/11.9 Theorem_11_2.jpg,$g(z)=h(z)+\epsilon|z|^{2} \quad(z \in \bar{U})$.
+14,14.12,Theorem,2,real_and_complex/14.12 Theorem_14_2.jpg,$g(z)=z h\left(z^{2}\right) \quad(z \in U)$.
+12,12.12,The,4,real_and_complex/12.12 The Hausdorff-Young Theorem_12_4.jpg,"$b_{n}=B_{n}^{1 / p} \beta_{n}, \quad\left|\beta_{n}\right|=1, \quad \sum_{n=1}^{N} B_{n}=1$"
+14,14.6,Theorem,3,real_and_complex/14.6 Theorem_14_3.jpg,$\left|f\left(z^{\prime}\right)-f\left(z^{\prime \prime}\right)\right|<\frac{M\left(K_{n+1}\right)}{\delta_{n}}\left|z^{\prime}-z^{\prime \prime}\right|$
+17,17.26,Theorem,3,real_and_complex/17.26 Theorem_17_3.jpg,$\int_{T}\left|f_{r}\right|^{p} d \sigma \leq \beta \int_{T}\left(u_{r}\right)^{p} d \sigma-\alpha \int_{T}\left|f_{r}\right|^{p} \cos \left(p \varphi_{r}\right) d \sigma$
+17,17.18,Theorem,3,real_and_complex/17.18 Theorem_17_3.jpg,$f(z)=c B(z) \exp \left\{\int_{T} \frac{e^{i t}+z}{e^{i t}-z} d \mu(t)\right\}$
+9,9.13,Theorem,6,real_and_complex/9.13 Theorem_9_6.jpg,$\lim _{\lambda \rightarrow 0}\left(g * h_{\lambda}\right)=g=\|f\|_{2}^{2}$
+11,11.20,with,6,real_and_complex/11.20 with Exercise 19. 11.20 Theorem_11_6.jpg,$\mu\left(I_{j}\right) \leq(M \mu) \sigma\left(I_{j}\right)$
+4,4.25,Theorem,1,real_and_complex/4.25 Theorem_4_1.jpg,$\hat{f}(n)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(t) e^{-i n t} d t \quad(n \in Z)$
+11,11.20,with,7,real_and_complex/11.20 with Exercise 19. 11.20 Theorem_11_7.jpg,$=M \int_{T} K d \sigma \leq M \int_{T} P_{r} d \sigma=M$
+9,9.13,Theorem,7,real_and_complex/9.13 Theorem_9_7.jpg,$\lim _{\lambda \rightarrow 0} \int_{-\infty}^{\infty} H(\lambda t) \hat{g}(t) d m(t)=\int_{-\infty}^{\infty}|\hat{f}(t)|^{2} d m(t)$
+17,17.26,Theorem,2,real_and_complex/17.26 Theorem_17_2.jpg,$\int_{T}\left|(\psi h)_{r}\right|^{p} d \sigma \leq A_{p}^{p} \int_{T}|h|^{p} d \sigma \cdot(0 \leq r<1)$
+17,17.18,Theorem,2,real_and_complex/17.18 Theorem_17_2.jpg,$\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|g\left(r e^{i \theta}\right)\right| d \theta=\log |g|$
+14,14.6,Theorem,2,real_and_complex/14.6 Theorem_14_2.jpg,$f\left(z^{\prime}\right)-f\left(z^{\prime \prime}\right)=\frac{z^{\prime}-z^{\prime \prime}}{2 \pi i} \int_{\gamma} \frac{f(\zeta)}{\left(\zeta-z^{\prime}\right)\left(\zeta-z^{\prime \prime}\right)} d \zeta$
+17,17.17,Theorem,5,real_and_complex/17.17 Theorem_17_5.jpg,$|f(z)| \leq\left|Q_{f}(z)\right| \quad(z \in U)$
+13,13.5,Theorem,6,real_and_complex/13.5 Theorem_13_6.jpg,$\operatorname{Ind}_{\Gamma}(\alpha)=\left\{\begin{array}{ll}1 & \text { if } \alpha \text { is in the interior of some } Q_{r} \\ 0 & \text { if } \alpha \text { lies in no } Q_{r}\end{array}\right.$
+12,12.12,The,5,real_and_complex/12.12 The Hausdorff-Young Theorem_12_5.jpg,$\sum_{n=1}^{N} b_{n} \hat{f}(n)=\sum_{n=1}^{N} B_{n}^{1 / p} \beta_{n} \int_{X} F^{1 / p} \varphi \bar{\psi}_{n} d \mu$
+2,2.24,Lusin’s,3,real_and_complex/2.24 Lusin’s Theorem_2_3.jpg,$f(x)=\sum_{n=1}^{\infty} t_{n}(x) \quad(x \in X)$.
+3,3.3,Theorem,4,real_and_complex/3.3 Theorem_3_4.jpg,$\exp \left\{\int_{\Omega} f d \mu\right\} \leq \int_{\Omega} e^{f} d \mu$.
+19,19.3,Theorem,9,real_and_complex/19.3 Theorem_19_9.jpg,$\Phi_{\pi}(w)=-\int_{-\infty}^{0} f(x) e^{-w x} d x \quad(\operatorname{Re} w<0)$
+15,15.4,Theorem,4,real_and_complex/15.4 Theorem_15_4.jpg,"$\{1,2, \ldots, N\} \subset\left\{n_{1}, n_{2}, \ldots, n_{M}\right\}$"
+12,12.8,Theorem,7,real_and_complex/12.8 Theorem_12_7.jpg,$g(z)=M(a)^{(b-z) /(b-a)} M(b)^{(z-a) /(b-a)}$
+15,15.27,Remark,2,real_and_complex/15.27 Remark_15_2.jpg,$\left|a_{n}\right| \leq\left(\frac{e \lambda}{n}\right)^{n / \lambda}$
+7,7.19,Theorem,2,real_and_complex/7.19 Theorem_7_2.jpg,$a=t_{0}<t_{1}<\cdots<t_{N}=x$
+10,10.33,Theorem,1,real_and_complex/10.33 Theorem_10_1.jpg,$\tilde{\gamma}_{i}(f)=\int_{\gamma_{i}} f(z) d z$
+19,19.3,Theorem,10,real_and_complex/19.3 Theorem_19_10.jpg,$\int_{-\infty}^{\infty} f_{\epsilon}(x) e^{-i t x} d x=\Phi_{0}(\epsilon+i t)-\Phi_{\pi}(-\epsilon+i t) \quad(t$ real $)$
+19,19.2,Theorem,16,real_and_complex/19.2 Theorem_19_16.jpg,$\int_{-\infty}^{\infty} e^{-2 t y}|F(t)|^{2} d t=\int_{-\infty}^{\infty}\left|\hat{f}_{y}(t)\right|^{2} d t=\frac{1}{2 \pi} \int_{-\infty}^{\infty}\left|f_{y}(x)\right|^{2} d x \leq C$.
+15,15.17,Lemma,3,real_and_complex/15.17 Lemma_15_3.jpg,$\frac{1}{2 \pi} \int_{\delta}^{2 \pi-\delta} \log \left|1-e^{i \theta}\right| d \theta=\operatorname{Re}\left[\frac{1}{2 \pi i} \int_{\Gamma} h(z) \frac{d z}{z}\right]=\operatorname{Re}\left[\frac{1}{2 \pi i} \int_{\gamma} h(z) \frac{d z}{z}\right]$.
+10,10.13,Cauchy’s,1,real_and_complex/10.13 Cauchy’s Theorem_10_1.jpg,$\int_{\partial \Delta} f(z) d z=0$.
+7,7.4,Theorem,1,real_and_complex/7.4 Theorem_7_1.jpg,"then
+\[
+m\{M \mu>\lambda\} \leq 3^{k} \lambda^{-1}\|\mu\| .
+\]"
+17,17.8,Remark,2,real_and_complex/17.8 Remark_17_2.jpg,$\left\|(f+g)_{r}\right\|_{p}=\left\|f_{r}+g_{r}\right\|_{p} \leq\left\|f_{r}\right\|_{p}+\left\|g_{r}\right\|_{p}$
+9,9.21,Theorem,5,real_and_complex/9.21 Theorem_9_5.jpg,$\varphi(f) \beta(y)=\varphi\left(f_{y}\right)$
+1,1.26,Lebesgue’s,2,real_and_complex/1.26 Lebesgue’s Monotone Convergence Theorem_1_2.jpg,$\alpha \leq \int_{X} f d \mu$
+17,17.13,Theorem,1,real_and_complex/17.13 Theorem_17_1.jpg,$\int_{T} e^{-i n t} d \mu(t)=0$
+7,7.24,Theorem,2,real_and_complex/7.24 Theorem_7_2.jpg,$F(x)=A^{-1} T(x) \quad(x \in V)$.
+15,15.26,Theorem,3,real_and_complex/15.26 Theorem_15_3.jpg,$f(z)=\int_{I} t^{z} d \mu(t)$
+15,15.18,Theorem,3,real_and_complex/15.18 Theorem_15_3.jpg,$\log |g|=\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|g\left(r e^{i \theta}\right)\right| d \theta$
+18,18.9,Theorem,6,real_and_complex/18.9 Theorem_18_6.jpg,
+8,8.18,Theorem,2,real_and_complex/8.18 Theorem_8_2.jpg,$f=g_{t}+h_{t}$
+19,19.11,Theorem,3,real_and_complex/19.11 Theorem_19_3.jpg,$g(w)=f\left(\frac{i-i w}{1+w}\right)$.
+11,11.22,Theorem,4,real_and_complex/11.22 Theorem_11_4.jpg,$\lim _{j \rightarrow \infty} u_{1}\left(z_{j}\right)=0$
+11,11.2,Theorem,2,real_and_complex/11.2 Theorem_11_2.jpg,$f^{\prime}(z)=(\partial f)(z) \quad(z \in \Omega)$.
+6,6.2,Theorem,4,real_and_complex/6.2 Theorem_6_4.jpg,$=\sum_{i} \sum_{j}\left|\mu\left(A_{j} \cap E_{i}\right)\right| \leq \sum_{i}|\mu|\left(E_{i}\right)$.
+7,7.17,Definition,1,real_and_complex/7.17 Definition_7_1.jpg,$\sum_{i=1}^{n}\left|f\left(\beta_{i}\right)-f\left(\alpha_{i}\right)\right|<\epsilon$
+11,11.22,Theorem,6,real_and_complex/11.22 Theorem_11_6.jpg,$\limsup _{j \rightarrow \infty} u_{0}\left(z_{j}\right) \leq \epsilon / c_{\alpha}$.
+9,9.2,Theorem,1,real_and_complex/9.2 Theorem_9_1.jpg,"$\frac{\hat{f}(s)-\hat{f}(t)}{s-t}=\int_{-\infty}^{\infty} f(x) e^{-i x t} \varphi(x, s-t) d m(x) \quad(s \neq t)$"
+19,19.11,Theorem,1,real_and_complex/19.11 Theorem_19_1.jpg,"$\left\|D^{n} F\right\|_{\infty} \leq 2^{-n} M_{n} \quad(n=0,1,2, \ldots)$"
+18,18.9,Theorem,4,real_and_complex/18.9 Theorem_18_4.jpg,$(\lambda e-x) \sum_{n=0}^{\infty} \lambda^{-n-1} x^{n}=e$
+15,15.18,Theorem,1,real_and_complex/15.18 Theorem_15_1.jpg,$|f| \prod_{n=1}^{N} \frac{r}{\left|\alpha_{n}\right|}=\exp \left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|f\left(r e^{i \theta}\right)\right| d \theta\right\}$
+15,15.26,Theorem,1,real_and_complex/15.26 Theorem_15_1.jpg,"$\int_{I} t^{\lambda_{n}} d \mu(t)=0 \quad(n=1,2,3, \ldots)$"
+17,17.13,Theorem,3,real_and_complex/17.13 Theorem_17_3.jpg,"$P\left(z, e^{i t}\right)=\sum_{-\infty}^{\infty} r^{|n|} e^{i n \theta} e^{-i n t}$"
+4,4.17,Theorem,1,real_and_complex/4.17 Theorem_4_1.jpg,$\sum_{\alpha \in A}|\hat{x}(\alpha)|^{2} \leq\|x\|^{2}$
+7,7.4,Theorem,3,real_and_complex/7.4 Theorem_7_3.jpg,$\lambda \cdot m\{|f|>\lambda\}$
+10,10.18,Tbeorem,4,real_and_complex/10.18 Tbeorem_10_4.jpg,$g(z)=\left\{\begin{array}{ll}(z-a)^{-m} f(z) & (z \in \Omega-\{a\}) \\ c_{m} & (z=a) .\end{array}\right.$
+10,10.13,Cauchy’s,3,real_and_complex/10.13 Cauchy’s Theorem_10_3.jpg,$J=\sum_{j=1}^{4} \int_{\partial \Delta^{\prime}} f(z) d z$
+10,10.35,Cauchy’s,2,real_and_complex/10.35 Cauchy’s Theorem_10_2.jpg,$f(z) \cdot \operatorname{Ind}_{\Gamma}(z)=\frac{1}{2 \pi i} \int_{\Gamma} \frac{f(w)}{w-z} d w \quad$ for $z \in \Omega-\Gamma^{*}$
+9,9.21,Theorem,7,real_and_complex/9.21 Theorem_9_7.jpg,$\int_{0}^{\delta} \beta(y) d y=c \neq 0$.
+15,15.17,Lemma,1,real_and_complex/15.17 Lemma_15_1.jpg,"$\operatorname{Re} h(z)=\log |1-z|, \quad|\operatorname{Im} h(z)|<\frac{\pi}{2} \quad(z \in \Omega)$"
+19,19.2,Theorem,14,real_and_complex/19.2 Theorem_19_14.jpg,$F(t)=e^{t} \hat{f}_{1}(t)$
+19,19.3,Theorem,12,real_and_complex/19.3 Theorem_19_12.jpg,$\operatorname{Re}\left(w e^{i \alpha}\right)=\eta|w|=\operatorname{Re}\left(w e^{i \beta}\right)$
+10,10.33,Theorem,3,real_and_complex/10.33 Theorem_10_3.jpg,$\Gamma=\gamma_{1} \dot{+} \cdots \dot{+} \gamma_{n}$
+15,15.4,Theorem,6,real_and_complex/15.4 Theorem_15_6.jpg,$\left|q_{M}-p_{N}\right| \leq\left|p_{N}\right|\left(e^{\epsilon}-1\right) \leq 2\left|p_{N}\right| \epsilon \leq 2 C \epsilon$
+12,12.8,Theorem,5,real_and_complex/12.8 Theorem_12_5.jpg,$\left|f(z) h_{\epsilon}(z)\right| \leq 1 \quad(z \in \partial \Omega)$.
+2,2.24,Lusin’s,1,real_and_complex/2.24 Lusin’s Theorem_2_1.jpg,$\mu(\{x: f(x) \neq g(x)\})<\epsilon$.
+11,11.9,Theorem,1,real_and_complex/11.9 Theorem_11_1.jpg,$f(z)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} \frac{e^{i t}+z}{e^{i t}-z} u\left(e^{i t}\right) d t \quad(z \in U)$
+3,3.3,Theorem,6,real_and_complex/3.3 Theorem_3_6.jpg,$\left(y_{1} y_{2} \cdots y_{n}\right)^{1 / n} \leq \frac{1}{n}\left(y_{1}+y_{2}+\cdots+y_{n}\right)$.
+14,14.12,Theorem,1,real_and_complex/14.12 Theorem_14_1.jpg,$g^{2}(z)=f\left(z^{2}\right) \quad(z \in U)$.
+12,12.12,The,7,real_and_complex/12.12 The Hausdorff-Young Theorem_12_7.jpg,$c_{n}(y)=\int_{X} F^{1 / 2} F^{i y} \varphi \bar{\psi}_{n} d \mu$.
+16,16.19,Theorem,3,real_and_complex/16.19 Theorem_16_3.jpg,$Q \cap \varphi(Q)=\varnothing$
+17,17.17,Theorem,7,real_and_complex/17.17 Theorem_17_7.jpg,$\log \left|f_{R}(z)\right|=P\left[\log ^{+}\left|f_{R}\right|\right](z)-P\left[\log ^{-}\left|f_{R}\right|\right](z)$
+9,9.13,Theorem,5,real_and_complex/9.13 Theorem_9_5.jpg,$\left(g * h_{\lambda}\right)=\int_{-\infty}^{\infty} H(\lambda t) \hat{g}(t) d m(t)$
+11,11.20,with,5,real_and_complex/11.20 with Exercise 19. 11.20 Theorem_11_5.jpg,$K=\sum_{j=1}^{n}\left(h_{j}-h_{j+1}\right) \chi_{j}$
+4,4.25,Theorem,3,real_and_complex/4.25 Theorem_4_3.jpg,"$s_{N}(t)=\sum_{-N}^{N} \hat{f}(n) e^{i n t} \quad(N=0,1,2, \ldots)$"
+11,11.20,with,4,real_and_complex/11.20 with Exercise 19. 11.20 Theorem_11_4.jpg,$\int_{T} P_{r}(t) d \mu\left(e^{i t}\right) \leq(M \mu) \quad(0 \leq r \leq 1)$.
+4,4.25,Theorem,2,real_and_complex/4.25 Theorem_4_2.jpg,$\sum_{-\infty}^{\infty} \hat{f}(n) e^{i n t}$
+9,9.13,Theorem,4,real_and_complex/9.13 Theorem_9_4.jpg,$|g(x)| \leq\left\|f_{-x}\right\|_{2}\|f\|_{2}=\|f\|_{2}^{2}$
+14,14.6,Theorem,1,real_and_complex/14.6 Theorem_14_1.jpg,$D\left(z ; 2 \delta_{n}\right) \subset K_{n+1} \quad\left(z \in K_{n}\right)$.
+17,17.18,Theorem,1,real_and_complex/17.18 Theorem_17_1.jpg,$|\log | g||=2 \log ^{+}|g|-\log |g|$
+17,17.26,Theorem,1,real_and_complex/17.26 Theorem_17_1.jpg,$\|\psi h\|_{p} \leq A_{p}\|h\|_{p}$
+13,13.5,Theorem,5,real_and_complex/13.5 Theorem_13_5.jpg,$\operatorname{Ind}_{\Gamma}(\alpha)=\sum_{r=1}^{m} \operatorname{Ind}_{\partial Q_{r}}(\alpha)$
+17,17.17,Theorem,6,real_and_complex/17.17 Theorem_17_6.jpg,"$\log |f| \leq P\left[\log \left|f^{*}\right|\right]$,"
+17,17.21,Beurling’s,9,real_and_complex/17.21 Beurling’s Theorem_17_9.jpg,"$\frac{1}{2 \pi} \int_{-\pi}^{\pi} h^{*}\left(e^{i \theta}\right) \overline{\varphi^{*}\left(e^{i \theta}\right)} e^{-i n \theta} d \theta=0 \quad(n=0,1,2, \ldots)$"
+12,12.12,The,6,real_and_complex/12.12 The Hausdorff-Young Theorem_12_6.jpg,$\Phi(z)=\sum_{n=1}^{N} B_{n}^{z} \beta_{n} \int_{X} F^{z} \varphi \bar{\psi}_{n} d \mu$
+16,16.19,Theorem,2,real_and_complex/16.19 Theorem_16_2.jpg,$\operatorname{Im} \varphi(z)=\frac{\operatorname{Im} z}{|c z+d|^{2}}$
+16,16.5,Theorem,3,real_and_complex/16.5 Theorem_16_3.jpg,$\varphi(w)=\frac{1}{2}\left(w^{\lambda}+w^{\lambda+1}\right)$
+3,3.3,Theorem,7,real_and_complex/3.3 Theorem_3_7.jpg,$\exp \left\{\int_{\Omega} \log g d \mu\right\} \leq \int_{\Omega} g d \mu$
+12,12.8,Theorem,4,real_and_complex/12.8 Theorem_12_4.jpg,$h_{\epsilon}(z)=\frac{1}{1+\epsilon(z-a)} \quad(z \in \bar{\Omega})$
+15,15.4,Theorem,7,real_and_complex/15.4 Theorem_15_7.jpg,$\left|p_{M}-p_{N_{0}}\right| \leq 2\left|p_{N_{0}}\right| \epsilon \quad\left(M>N_{0}\right)$
+2,2.13,Theorem,9,real_and_complex/2.13 Theorem_2_9.jpg,$\mu(E)=\sum_{i=1}^{\infty} \mu\left(E_{i}\right)$
+19,19.2,Theorem,15,real_and_complex/19.2 Theorem_19_15.jpg,$F(t)=e^{t y} \hat{f}_{y}(t)$
+10,10.33,Theorem,2,real_and_complex/10.33 Theorem_10_2.jpg,$\tilde{\Gamma}=\tilde{\gamma}_{1}+\cdots+\tilde{\gamma}_{n}$.
+19,19.3,Theorem,13,real_and_complex/19.3 Theorem_19_13.jpg,$\int_{\Gamma} f(z) e^{-w z} d z$
+10,10.14,Cauchy’s,6,real_and_complex/10.14 Cauchy’s Theorem_10_6.jpg,"$\frac{F(z)-F\left(z_{0}\right)}{z-z_{0}}-f\left(z_{0}\right)=\frac{1}{z-z_{0}} \int_{\left[z z_{0}, z\right]}\left[f(\xi)-f\left(z_{0}\right)\right] d \xi$"
+6,6.17,Remark,4,real_and_complex/6.17 Remark_6_4.jpg,$f \rightarrow \int_{X} f d \mu$
+10,10.35,Cauchy’s,3,real_and_complex/10.35 Cauchy’s Theorem_10_3.jpg,$\int_{\Gamma} f(z) d z=0$
+1,1.26,Lebesgue’s,1,real_and_complex/1.26 Lebesgue’s Monotone Convergence Theorem_1_1.jpg,$\int_{X} f_{n} d \mu \rightarrow \alpha \quad$ as $n \rightarrow \infty$.
+9,9.21,Theorem,6,real_and_complex/9.21 Theorem_9_6.jpg,$\beta(x+y)=\beta(x) \beta(y) \quad\left(x\right.$ and $\left.y \in R^{1}\right)$.
+10,10.13,Cauchy’s,2,real_and_complex/10.13 Cauchy’s Theorem_10_2.jpg,"$\left\{a, c^{\prime}, b^{\prime}\right\}, \quad\left\{b, a^{\prime}, c^{\prime}\right\}, \quad\left\{c, b^{\prime}, a^{\prime}\right\}, \quad\left\{a^{\prime}, b^{\prime}, c^{\prime}\right\}$"
+10,10.18,Tbeorem,5,real_and_complex/10.18 Tbeorem_10_5.jpg,$g(z)=\sum_{k=0}^{\infty} c_{m+k}(z-a)^{k} \quad(z \in D(a ; r))$
+7,7.4,Theorem,2,real_and_complex/7.4 Theorem_7_2.jpg,$m\left(\left\{x \in R^{k}:(M \mu)(x)>\lambda\right\}\right)$.
+17,17.8,Remark,1,real_and_complex/17.8 Remark_17_1.jpg,$\|f\|_{p}=\lim _{r \rightarrow 1}\left\|f_{r}\right\|_{p}$.
+15,15.18,Theorem,0,real_and_complex/15.18 Theorem_15_0.jpg,$\log |g|=\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|g\left(r e^{i \theta}\right)\right| d \theta$
+17,17.13,Theorem,2,real_and_complex/17.13 Theorem_17_2.jpg,$\left\|f_{r}\right\|_{1} \leq\|\mu\| \quad(0 \leq r<1)$.
+7,7.24,Theorem,1,real_and_complex/7.24 Theorem_7_1.jpg,"$\lim _{r \rightarrow 0} \frac{m(T(B(x, r)))}{m(B(x, r))}=\Delta\left(T^{\prime}(x)\right)$"
+18,18.9,Theorem,5,real_and_complex/18.9 Theorem_18_5.jpg,$f(\lambda)=-\sum_{n=0}^{\infty} \Phi\left(x^{n}\right) \lambda^{-n-1}$
+11,11.22,Theorem,7,real_and_complex/11.22 Theorem_11_7.jpg,$\lim _{j \rightarrow \infty} u\left(z_{j}\right)=0$
+8,8.7,Definition,1,real_and_complex/8.7 Definition_8_1.jpg,$(\mu \times \lambda)(Q)=\int_{X} \lambda\left(Q_{x}\right) d \mu(x)=\int_{Y} \mu\left(Q^{y}\right) d \lambda(y)$.
+11,11.2,Theorem,3,real_and_complex/11.2 Theorem_11_3.jpg,$\Delta f=4 \partial \bar{\partial} f$
+6,6.2,Theorem,5,real_and_complex/6.2 Theorem_6_5.jpg,$|\mu|(E) \leq \sum_{i}|\mu|\left(E_{i}\right)$.
+5,5.13,Theorem,3,real_and_complex/5.13 Theorem_5_3.jpg,$\|\varphi\|_{\infty}=\sup \{|\varphi(n)|: n \in Z\}$.
+11,11.22,Theorem,3,real_and_complex/11.22 Theorem_11_3.jpg,"$u_{1}\left(z_{j}\right)=\int_{T-I_{0}} P\left(z_{j}, e^{i t}\right) d \mu\left(e^{i t}\right)$"
+1,1.17,Theorem,2,real_and_complex/1.17 Theorem_1_2.jpg,$t-\delta_{n}<\varphi_{n}(t) \leq t \quad$ if $0 \leq t \leq n$
+6,6.2,Theorem,1,real_and_complex/6.2 Theorem_6_1.jpg,"$\sum_{j}\left|\mu\left(A_{i j}\right)\right|>t_{i} \quad(i=1,2,3, \ldots)$"
+18,18.9,Theorem,1,real_and_complex/18.9 Theorem_18_1.jpg,$\lim _{n \rightarrow \infty}\left\|x^{n}\right\|^{1 / n}=\rho(x)$
+5,5.6,Baire’s,3,real_and_complex/5.6 Baire’s Theorem_5_3.jpg,"$\bar{S}\left(x_{n}, r_{n}\right) \subset V_{n} \cap S\left(x_{n-1}, r_{n-1}\right) \quad$ and $\quad 0<r_{n}<\frac{1}{n}$"
+8,8.18,Theorem,5,real_and_complex/8.18 Theorem_8_5.jpg,$\left(M g_{t}\right)(x)>(1-c) t$
+19,19.11,Theorem,4,real_and_complex/19.11 Theorem_19_4.jpg,$\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|g\left(e^{i \theta}\right)\right| d \theta>-\infty$.
+7,7.4,Theorem,6,real_and_complex/7.4 Theorem_7_6.jpg,$\{T f>2 y\} \subset\{M h>y\} \cup\{|h|>y\}$.
+10,10.13,Cauchy’s,6,real_and_complex/10.13 Cauchy’s Theorem_10_6.jpg,$\int_{\partial \Delta_{n}} f(z) d z=\int_{\partial \Delta_{n}}\left[f(z)-f\left(z_{0}\right)-f^{\prime}\left(z_{0}\right)\left(z-z_{0}\right)\right] d z$
+9,9.21,Theorem,2,real_and_complex/9.21 Theorem_9_2.jpg,$x+y=x y$.
+10,10.35,Cauchy’s,7,real_and_complex/10.35 Cauchy’s Theorem_10_7.jpg,"$h(z)=\frac{1}{2 \pi i} \int_{\Gamma} g(z, w) d w \quad(z \in \Omega)$"
+7,7.24,Theorem,5,real_and_complex/7.24 Theorem_7_5.jpg,$|F(x)-x|<\epsilon|x|$.
+15,15.26,Theorem,4,real_and_complex/15.26 Theorem_15_4.jpg,$g(z)=f\left(\frac{1+z}{1-z}\right) \quad(z \in U)$.
+15,15.18,Theorem,4,real_and_complex/15.18 Theorem_15_4.jpg,$|g|=|f| \prod_{n=1}^{m} \frac{r}{\left|\alpha_{n}\right|}$.
+7,7.19,Theorem,5,real_and_complex/7.19 Theorem_7_5.jpg,$F(\beta)-F(\alpha)=\sup \sum_{1}^{n}\left|f\left(t_{i}\right)-f\left(t_{i-1}\right)\right|$
+10,10.14,Cauchy’s,2,real_and_complex/10.14 Cauchy’s Theorem_10_2.jpg,"$F(z)=\int_{[a, z]} f(\xi) d \xi \quad(z \in \Omega)$"
+10,10.33,Theorem,6,real_and_complex/10.33 Theorem_10_6.jpg,$\Gamma^{*}=\gamma_{1}^{*} \cup \cdots \cup \gamma_{n}^{*}$.
+1,1.25,Proposition,2,real_and_complex/1.25 Proposition_1_2.jpg,$\int_{X}(s+t) d \mu=\int_{X} s d \mu+\int_{X} t d \mu$.
+19,19.2,Theorem,11,real_and_complex/19.2 Theorem_19_11.jpg,"$g_{j}(y, t)=\frac{1}{2 \pi} \int_{-\alpha_{j}}^{\alpha_{j}} f(x+i y) e^{-i t x} d x$"
+3,3.3,Theorem,3,real_and_complex/3.3 Theorem_3_3.jpg,$\varphi(f(x))-\varphi(t)-\beta(f(x)-t) \geq 0$
+15,15.4,Theorem,3,real_and_complex/15.4 Theorem_15_3.jpg,$\sum_{n=N_{0}}^{\infty}\left|u_{n}(s)\right|<\epsilon \quad(s \in S)$.
+3,3.15,Remark,1,real_and_complex/3.15 Remark_3_1.jpg,$\|f\|_{\infty}=\sup _{x \in R^{k}}|f(x)|$.
+12,12.12,The,10,real_and_complex/12.12 The Hausdorff-Young Theorem_12_10.jpg,$|\Phi(1+i y)| \leq M \quad(-\infty<y<\infty)$
+16,16.19,Theorem,6,real_and_complex/16.19 Theorem_16_6.jpg,$\operatorname{Im} \varphi(w) \leq \operatorname{Im} \varphi_{0}(w) \quad(\varphi \in \Gamma)$
+12,12.12,The,2,real_and_complex/12.12 The Hausdorff-Young Theorem_12_2.jpg,$\left|\sum_{n=1}^{N} b_{n} \hat{f}(n)\right| \leq M^{(2-p) / p}$
+17,17.26,Theorem,5,real_and_complex/17.26 Theorem_17_5.jpg,$\|\psi h\|_{p} \leq \beta^{1 / p}\|h\|_{p}$
+17,17.18,Theorem,5,real_and_complex/17.18 Theorem_17_5.jpg,$\log |f|=1>0=\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|f^{*}\left(e^{i t}\right)\right| d t$
+17,17.17,Theorem,2,real_and_complex/17.17 Theorem_17_2.jpg,$f=M_{f} Q_{f}$
+13,13.5,Theorem,1,real_and_complex/13.5 Theorem_13_1.jpg,$f(z)=\frac{1}{2 \pi i} \int_{\Gamma} \frac{f(\zeta)}{\zeta-z} d \zeta$
+4,4.25,Theorem,6,real_and_complex/4.25 Theorem_4_6.jpg,$\sum_{n=-\infty}^{\infty} \hat{f}(n) \overline{\hat{g}(n)}=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(t) \overline{g(t)} d t$
+15,15.2,Definition,1,real_and_complex/15.2 Definition_15_1.jpg,$p_{n}=\left(1+u_{1}\right)\left(1+u_{2}\right) \cdots\left(1+u_{n}\right)$
+5,3.10,Theorem,8,real_and_complex/3.10 Theorem_5_8.jpg,$\left\|D_{n}\right\|_{1} \rightarrow \infty \quad$ as $n \rightarrow \infty$
+10,10.37,Theorem,2,real_and_complex/10.37 Theorem_10_2.jpg,$\operatorname{Ind}_{f}(z)=0 \quad$ if $z \in D_{+}$.
+9,9.13,Theorem,1,real_and_complex/9.13 Theorem_9_1.jpg,$\|\hat{f}\|_{2}=\|f\|_{2} \quad\left(f \in L^{1} \cap L^{2}\right)$
+4,4.25,Theorem,7,real_and_complex/4.25 Theorem_4_7.jpg,$\lim _{N \rightarrow \infty}\left\|f-s_{N}\right\|_{2}=0$
+20,20.5,Theorem,9,real_and_complex/20.5 Theorem_20_9.jpg,"$\iint \bar{\partial} A=0$,"
+11,11.20,with,1,real_and_complex/11.20 with Exercise 19. 11.20 Theorem_11_1.jpg,$c_{\alpha}\left(N_{\alpha} u\right)\left(e^{i \theta}\right) \leq\left(M_{\mathrm{rad}} u\right)\left(e^{i \theta}\right) \leq(M \mu)\left(e^{i \theta}\right)$
+17,17.17,Theorem,3,real_and_complex/17.17 Theorem_17_3.jpg,$\log |f| \leq \frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|f^{*}\left(e^{i t}\right)\right| d t$.
+17,17.26,Theorem,4,real_and_complex/17.26 Theorem_17_4.jpg,$\int_{T}\left|f_{r}\right|^{p} d \sigma \leq \beta \int_{T} h^{p} d \sigma \quad(0 \leq r<1)$
+17,17.18,Theorem,4,real_and_complex/17.18 Theorem_17_4.jpg,$f(z)=\exp \left\{\frac{1+z}{1-z}\right\}$
+1,1.13,Definition,8,real_and_complex/1.13 Definition_1_8.jpg,"$f(x)=\lim _{n \rightarrow \infty} f_{n}(x)$,"
+16,16.19,Theorem,7,real_and_complex/16.19 Theorem_16_7.jpg,$\operatorname{Im} \varphi(z) \leq \operatorname{Im} z \quad(\varphi \in \Gamma)$
+12,12.12,The,3,real_and_complex/12.12 The Hausdorff-Young Theorem_12_3.jpg,"$f=F^{1 / p} \varphi, \quad|\varphi|=1, \quad \int_{X} F d \mu=1$"
+6,6.12,Theorem,1,real_and_complex/6.12 Theorem_6_1.jpg,$d \mu=h d|\mu|$.
+10,10.33,Theorem,10,real_and_complex/10.33 Theorem_10_10.jpg,$\int_{\Gamma} f(z) d z=\int_{\Gamma_{1}} f(z) d z+\int_{\Gamma_{2}} f(z) d z$
+12,12.12,The,11,real_and_complex/12.12 The Hausdorff-Young Theorem_12_11.jpg,"$|\Phi(x+i y)| \leq M^{2 x-1} \quad\left(\frac{1}{2} \leq x \leq 1,-\infty<y<\infty\right)$."
+3,3.6,Definition,2,real_and_complex/3.6 Definition_3_2.jpg,$\|f\|_{p}<\infty$
+12,12.8,Theorem,1,real_and_complex/12.8 Theorem_12_1.jpg,"$\Omega=\{x+i y: a<x<b\}, \quad \bar{\Omega}=\{x+i y: a \leq x \leq b\}$"
+15,15.4,Theorem,2,real_and_complex/15.4 Theorem_15_2.jpg,$f(s)=\prod_{k=1}^{\infty}\left(1+u_{n_{k}}(s)\right) \quad(s \in S)$
+11,11.29,Theorem,1,real_and_complex/11.29 Theorem_11_1.jpg,$\Lambda x=\lim _{i \rightarrow \infty} \Lambda_{n_{i}} x$
+16,16.5,Theorem,6,real_and_complex/16.5 Theorem_16_6.jpg,$F(w)=\sum_{n=0}^{\infty} a_{n}[\varphi(w)]^{n} \quad(|w|<1)$
+3,3.3,Theorem,2,real_and_complex/3.3 Theorem_3_2.jpg,$\varphi(s) \geq \varphi(t)+\beta(s-t) \quad(a<s<b)$
+2,2.24,Lusin’s,5,real_and_complex/2.24 Lusin’s Theorem_2_5.jpg,$f(x)=\lim _{n \rightarrow \infty} g_{n}(x) \quad$ a.e.
+10,10.33,Theorem,7,real_and_complex/10.33 Theorem_10_7.jpg,$\operatorname{Ind}_{\Gamma}(\alpha)=\frac{1}{2 \pi i} \int_{\Gamma} \frac{d z}{z-\alpha}$
+19,19.2,Theorem,10,real_and_complex/19.2 Theorem_19_10.jpg,"$\Phi\left(\alpha_{j}\right) \rightarrow 0, \quad \Phi\left(-\alpha_{j}\right) \rightarrow 0 \quad$ as $j \rightarrow \infty$"
+6,6.17,Remark,1,real_and_complex/6.17 Remark_6_1.jpg,$\int f d \mu=\int f h d|\mu|$
+7,7.19,Theorem,4,real_and_complex/7.19 Theorem_7_4.jpg,$F(y) \geq f(y)-f(x)+F(x) \quad$ and $\quad F(y) \geq f(x)-f(y)+F(x)$
+10,10.14,Cauchy’s,3,real_and_complex/10.14 Cauchy’s Theorem_10_3.jpg,"$\frac{F(z)-F\left(z_{0}\right)}{z-z_{0}}-f\left(z_{0}\right)=\frac{1}{z-z_{0}} \int_{\left[z z_{0}, z\right]}\left[f(\xi)-f\left(z_{0}\right)\right] d \xi$"
+15,15.26,Theorem,5,real_and_complex/15.26 Theorem_15_5.jpg,$f(z)=\frac{z}{(2+z)^{3}} \prod_{n=1}^{\infty} \frac{\lambda_{n}-z}{2+\lambda_{n}+z}$.
+7,7.24,Theorem,4,real_and_complex/7.24 Theorem_7_4.jpg,$m(T(B))=m(A(F(B)))=\Delta(A) m(F(B))$
+15,15.18,Theorem,5,real_and_complex/15.18 Theorem_15_5.jpg,$\log \left|g\left(r e^{i \theta}\right)\right|=\log \left|f\left(r e^{i \theta}\right)\right|-\sum_{n=m+1}^{N} \log \left|1-e^{i\left(\theta-\theta_{n}\right)}\right|$
+4,4.10,Theorem,1,real_and_complex/4.10 Theorem_4_1.jpg,$\|x+y\|^{2}+\|x-y\|^{2}=2\|x\|^{2}+2\|y\|^{2} \quad(x$ and $y \in H)$.
+9,9.21,Theorem,3,real_and_complex/9.21 Theorem_9_3.jpg,$=\int_{-\infty}^{\infty} g(y) \varphi\left(f_{y}\right) d m(y)$.
+10,10.35,Cauchy’s,6,real_and_complex/10.35 Cauchy’s Theorem_10_6.jpg,"$g(z, w)=\left\{\begin{array}{ll}\frac{\text { if } w \neq z}{w-z} & \end{array}\right.$"
+1,1.26,Lebesgue’s,4,real_and_complex/1.26 Lebesgue’s Monotone Convergence Theorem_1_4.jpg,"$\int_{X} f_{n} d \mu \geq \int_{E_{n}} f_{n} d \mu \geq c \int_{E_{n}} s d \mu \quad(n=1,2,3, \ldots)$"
+10,10.13,Cauchy’s,7,real_and_complex/10.13 Cauchy’s Theorem_10_7.jpg,$\left|\int_{\partial \Delta_{n}} f(z) d z\right| \leq \epsilon\left(2^{-n} L\right)^{2}$
+9,9.13,Theorem,12,real_and_complex/9.13 Theorem_9_12.jpg,$\left\|\hat{f}-\varphi_{A}\right\|_{2}=\left\|\left(f-k_{A} f\right)^{\hat{}}\right\|_{2} \rightarrow 0$
+7,7.4,Theorem,7,real_and_complex/7.4 Theorem_7_7.jpg,"$m(E(y, n)) \leq\left(3^{k}+1\right) /(y n)$."
+17,17.8,Remark,4,real_and_complex/17.8 Remark_17_4.jpg,$\left\|\left(f-f_{m}\right)_{r}\right\|_{p}=\lim _{n \rightarrow \infty}\left\|\left(f_{n}-f_{m}\right)_{r}\right\|_{p} \leq \epsilon$.
+19,19.11,Theorem,5,real_and_complex/19.11 Theorem_19_5.jpg,$\frac{1}{\pi} \int_{-\infty}^{\infty} \log |f(x)| \frac{d x}{1+x^{2}}>-\infty$
+8,8.18,Theorem,4,real_and_complex/8.18 Theorem_8_4.jpg,$M f \leq M g_{t}+M h_{t} \leq M g_{t}+c t$
+9,9.5,Theorem,1,real_and_complex/9.5 Theorem_9_1.jpg,$f_{y}(x)=f(x-y) \quad\left(x \in R^{1}\right)$.
+5,5.6,Baire’s,2,real_and_complex/5.6 Baire’s Theorem_5_2.jpg,"$\bar{S}\left(x_{1}, r_{1}\right) \subset W \cap V_{1} \quad$ and $\quad 0<r_{1}<1$"
+1,1.31,Definition,1,real_and_complex/1.31 Definition_1_1.jpg,$\int_{E} f d \mu=\int_{E} u^{+} d \mu-\int_{E} u^{-} d \mu+i \int_{E} v^{+} d \mu-i \int_{E} v^{-} d \mu$
+11,11.2,Theorem,6,real_and_complex/11.2 Theorem_11_6.jpg,"$P\left(z, e^{i t}\right)=\frac{1-|z|^{2}}{\left|e^{i t}-z\right|^{2}}$"
+1,1.17,Theorem,3,real_and_complex/1.17 Theorem_1_3.jpg,$s_{n}=\varphi_{n} \circ f$
+11,11.22,Theorem,2,real_and_complex/11.22 Theorem_11_2.jpg,$\mu(I)<\epsilon \sigma(I)$
+5,5.13,Theorem,2,real_and_complex/5.13 Theorem_5_2.jpg,$|\hat{f}(n)|=\left|\frac{1}{2 \pi} \int_{-\pi}^{\pi}\{f(t)-P(t)\} e^{-i n t} d t\right| \leq\|f-P\|_{1}<2 \epsilon$
+17,17.14,Definition,1,real_and_complex/17.14 Definition_17_1.jpg,$Q(z)=c \exp \left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi} \frac{e^{i t}+z}{e^{i t}-z} \log \varphi\left(e^{i t}\right) d t\right\}$
+1,1.17,Theorem,1,real_and_complex/1.17 Theorem_1_1.jpg,$\varphi_{n}(t)=\left\{\begin{array}{ll}k_{n}(t) \delta_{n} & \text { if } 0 \leq t<n \\ n & \text { if } n \leq t \leq \infty\end{array}\right.$
+11,11.2,Theorem,4,real_and_complex/11.2 Theorem_11_4.jpg,$P_{r}(t)<P_{r}(\delta) \quad(0<\delta<|t| \leq \pi)$
+6,6.2,Theorem,2,real_and_complex/6.2 Theorem_6_2.jpg,"$\sum_{i} t_{i} \leq \sum_{i, j}\left|\mu\left(A_{i j}\right)\right| \leq|\mu|(E)$."
+18,18.9,Theorem,2,real_and_complex/18.9 Theorem_18_2.jpg,$\left(x^{n}-\lambda^{n} e\right)=(x-\lambda e)\left(x^{n-1}+\lambda x^{n-2}+\cdots+\lambda^{n-1} e\right)$
+19,19.11,Theorem,7,real_and_complex/19.11 Theorem_19_7.jpg,"$\left|x^{n} f(x)\right| \leq 2^{-n} A M_{n} \quad(x$ real, $n=0,1,2, \ldots)$"
+8,8.18,Theorem,6,real_and_complex/8.18 Theorem_8_6.jpg,$\|M f\|_{p} \leq C_{p}\|f\|_{p}$
+10,10.35,Cauchy’s,4,real_and_complex/10.35 Cauchy’s Theorem_10_4.jpg,"$\operatorname{Ind}_{\Gamma_{0}}(\alpha)=\operatorname{Ind}_{\Gamma_{1}}(\alpha) \quad$ for every $\alpha$ not in $\Omega$,"
+9,9.21,Theorem,1,real_and_complex/9.21 Theorem_9_1.jpg,$s_{n}=-x-x^{2}-\cdots-x^{n}$
+4,4.10,Theorem,3,real_and_complex/4.10 Theorem_4_3.jpg,$\|x-y\|^{2} \leq 2\|x\|^{2}+2\|y\|^{2}-4 \delta^{2} \quad(x$ and $y \in E)$.
+9,9.13,Theorem,10,real_and_complex/9.13 Theorem_9_10.jpg,$\int_{-\infty}^{\infty} f(x) \overline{g(x)} d m(x)=\int_{-\infty}^{\infty} \hat{f}(t) \overline{\hat{g}(t)} d m(t)$
+7,7.4,Theorem,5,real_and_complex/7.4 Theorem_7_5.jpg,$m\{M f>\lambda\} \leq 3^{k} \lambda^{-1}\|f\|_{1}$.
+10,10.13,Cauchy’s,5,real_and_complex/10.13 Cauchy’s Theorem_10_5.jpg,$\left|f(z)-f\left(z_{0}\right)-f^{\prime}\left(z_{0}\right)\left(z-z_{0}\right)\right| \leq \epsilon\left|z-z_{0}\right|$
+7,7.24,Theorem,6,real_and_complex/7.24 Theorem_7_6.jpg,"$B(0,(1-\epsilon) r) \subset F(B(0, r)) \subset B(0,(1+\epsilon) r)$"
+15,15.26,Theorem,7,real_and_complex/15.26 Theorem_15_7.jpg,$\frac{1}{1+z-i s}=\int_{0}^{1} t^{z-i s} d t \quad(\operatorname{Re} z>-1)$
+1,1.25,Proposition,1,real_and_complex/1.25 Proposition_1_1.jpg,$\varphi(E)=\int_{E} s d \mu$
+19,19.2,Theorem,12,real_and_complex/19.2 Theorem_19_12.jpg,"$\lim _{j \rightarrow \infty}\left[e^{t y} g_{j}(y, t)-e^{t} g_{j}(1, t)\right]=0 \quad(-\infty<t<\infty)$."
+19,19.3,Theorem,14,real_and_complex/19.3 Theorem_19_14.jpg,$\operatorname{Re}(-w z)=-|w| r \cos (t-\gamma) \leq-|w| r \eta$
+10,10.33,Theorem,5,real_and_complex/10.33 Theorem_10_5.jpg,$\int_{\Gamma} f(z) d z=\sum_{i=1}^{n} \int_{\gamma_{i}} f(z) d z \quad(f \in C(K))$.
+10,10.14,Cauchy’s,1,real_and_complex/10.14 Cauchy’s Theorem_10_1.jpg,$\int_{\gamma} f(z) d z=0$
+7,7.19,Theorem,6,real_and_complex/7.19 Theorem_7_6.jpg,$\sum_{j}\left(F\left(\beta_{j}\right)-F\left(\alpha_{j}\right)\right) \leq \epsilon$
+6,6.17,Remark,3,real_and_complex/6.17 Remark_6_3.jpg,"$\int_{X} f d(\mu+\lambda)=\int_{X} f d \mu+\int_{X} f d \lambda$,"
+16,16.5,Theorem,4,real_and_complex/16.5 Theorem_16_4.jpg,$F(w)=\sum_{m=0}^{\infty} b_{m} w^{m}$
+3,3.15,Remark,2,real_and_complex/3.15 Remark_3_2.jpg,$\int_{-\infty}^{\infty}|f(t)-g(t)| d t$
+12,12.8,Theorem,3,real_and_complex/12.8 Theorem_12_3.jpg,$M(x)^{b-a} \leq M(a)^{b-x} M(b)^{x-a} \quad(a<x<b)$
+12,12.12,The,13,real_and_complex/12.12 The Hausdorff-Young Theorem_12_13.jpg,$\left\{\sum_{n=1}^{N}|\hat{f}(n)|^{q}\right\}^{1 / q} \leq M^{(2-p) / p}\|f\|_{p}$
+12,12.12,The,1,real_and_complex/12.12 The Hausdorff-Young Theorem_12_1.jpg,$\|\hat{f}\|_{q} \leq M^{(2-p) / p}\|f\|_{p}$
+17,17.7,Definition,1,real_and_complex/17.7 Definition_17_1.jpg,$\|f\|_{p}=\sup \left\{\left\|f_{r}\right\|_{p}: 0 \leq r<1\right\}$.
+17,17.18,Theorem,6,real_and_complex/17.18 Theorem_17_6.jpg,"$(f, g)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f^{*}\left(e^{i \theta}\right) \overline{g^{*}\left(e^{i \theta}\right)} d \theta$"
+17,17.26,Theorem,6,real_and_complex/17.26 Theorem_17_6.jpg,$\int_{T}(\psi h)_{r} \tilde{w} d \sigma=\int_{T}(\psi w)_{r} \tilde{h} d \sigma \quad(0 \leq r<1)$.
+13,13.5,Theorem,2,real_and_complex/13.5 Theorem_13_2.jpg,"$\gamma_{r k}=\left[a_{r}+i^{k} b, a_{r}+i^{k+1} b\right]$"
+17,17.17,Theorem,1,real_and_complex/17.17 Theorem_17_1.jpg,$Q_{f}(z)=\exp \left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi} \frac{e^{i t}+z}{e^{i t}-z} \log \left|f^{*}\left(e^{i t}\right)\right| d t\right\}$
+15,15.2,Definition,2,real_and_complex/15.2 Definition_15_2.jpg,$p=\prod_{n=1}^{\infty}\left(1+u_{n}\right)$
+11,11.20,with,3,real_and_complex/11.20 with Exercise 19. 11.20 Theorem_11_3.jpg,$c_{\alpha}\left|e^{i t}-r\right|^{2} \leq\left|e^{i t}-z\right|^{2}$
+4,4.25,Theorem,5,real_and_complex/4.25 Theorem_4_5.jpg,$c_{n}=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(t) e^{-i n t} d t \quad(n \in Z)$
+9,9.13,Theorem,3,real_and_complex/9.13 Theorem_9_3.jpg,"$g(x)=\left(f_{-x}, f\right)$,"
+10,10.37,Theorem,1,real_and_complex/10.37 Theorem_10_1.jpg,$\operatorname{Ind}_{g}(w)=0 \quad$ if $w \in D_{-}$.
+11,11.20,with,2,real_and_complex/11.20 with Exercise 19. 11.20 Theorem_11_2.jpg,"$c_{\alpha} P\left(z, e^{i t}\right) \leq P\left(|z|, e^{i t}\right)$"
+4,4.25,Theorem,4,real_and_complex/4.25 Theorem_4_4.jpg,$\sum_{n=-\infty}^{\infty}\left|c_{n}\right|^{2}<\infty$
+11,11.14,Theorem,8,real_and_complex/11.14 Theorem_11_8.jpg,$F(z)=\sum_{n=0}^{\infty} \bar{c}_{n}(z-a)^{n} \quad(z \in D(a ; r))$.
+13,13.5,Theorem,3,real_and_complex/13.5 Theorem_13_3.jpg,"$\partial Q_{r}=\gamma_{r 1}+\gamma_{r 2} \dot{+} \gamma_{r 3} \dot{+} \gamma_{r 4} \quad(r=1, \ldots, m)$."
+17,17.18,Theorem,7,real_and_complex/17.18 Theorem_17_7.jpg,"$(S f)(z)=z f(z) \quad\left(f \in H^{2}, z \in U\right)$."
+17,17.26,Theorem,7,real_and_complex/17.26 Theorem_17_7.jpg,$\left|\int_{T}(\psi h)_{r} \tilde{w} d \sigma\right| \leq A_{q}\|w\|_{q}\|h\|_{p}$.
+12,12.12,The,0,real_and_complex/12.12 The Hausdorff-Young Theorem_12_0.jpg,$(\partial \bar{\partial})(f g)=f \cdot(\partial \bar{\partial} g)+(\partial f) \cdot(\bar{\partial} g)+(\bar{\partial} f) \cdot(\partial g)+(\partial \bar{\partial} f) \cdot g$.
+16,16.19,Theorem,4,real_and_complex/16.19 Theorem_16_4.jpg,$\operatorname{Im} z=\operatorname{Im} \varphi^{-1}(\varphi(z)) \leq \operatorname{Im} \varphi(z)$
+3,3.6,Definition,1,real_and_complex/3.6 Definition_3_1.jpg,$\|f\|_{p}=\left\{\int_{X}|f|^{p} d \mu\right\}^{1 / p}$
+12,12.12,The,12,real_and_complex/12.12 The Hausdorff-Young Theorem_12_12.jpg,"$\left\{\sum_{n=1}^{N}|\hat{f}(n)|^{q}\right\}^{1 / q}=\sup \left|\sum_{n=1}^{N} b_{n} \hat{f}(n)\right|$,"
+15,15.4,Theorem,1,real_and_complex/15.4 Theorem_15_1.jpg,$f(s)=\prod_{n=1}^{\infty}\left(1+u_{n}(s)\right)$
+3,3.3,Theorem,1,real_and_complex/3.3 Theorem_3_1.jpg,$\varphi\left(\int_{\Omega} f d \mu\right) \leq \int_{\Omega}(\varphi \circ f) d \mu$.
+6,6.17,Remark,2,real_and_complex/6.17 Remark_6_2.jpg,$\int_{X} \chi_{E} d(\mu+\lambda)=(\mu+\lambda)(E)=\mu(E)+\lambda(E)=\int_{X} \chi_{E} d \mu+\int_{X} \chi_{E} d \lambda$
+19,19.2,Theorem,13,real_and_complex/19.2 Theorem_19_13.jpg,"$\lim _{j \rightarrow \infty} \int_{-\infty}^{\infty}\left|\hat{f}_{y}(t)-g_{j}(y, t)\right|^{2} d t=0$"
+10,10.33,Theorem,4,real_and_complex/10.33 Theorem_10_4.jpg,$\int_{\Gamma} f(z) d z=\tilde{\Gamma}(f)$.
+4,4.4,Definition,1,real_and_complex/4.4 Definition_4_1.jpg,"$\|x-z\| \leq\|x-y\|+\|y-z\| \quad(x, y, z \in H)$."
+15,15.26,Theorem,6,real_and_complex/15.26 Theorem_15_6.jpg,$f(z)=-\frac{1}{2 \pi} \int_{-\infty}^{\infty} \frac{f(-1+i s)}{-1+i s-z} d s \quad(\operatorname{Re} z>-1)$.
+17,17.13,Theorem,4,real_and_complex/17.13 Theorem_17_4.jpg,$f(z)=\sum_{0}^{\infty} \hat{\mu}(n) z^{n} \quad(z \in U)$
+7,7.24,Theorem,7,real_and_complex/7.24 Theorem_7_7.jpg,"$(1-\epsilon)^{k} \leq \frac{m(F(B(0, r)))}{m(B(0, r))} \leq(1+\epsilon)^{k}$"
+10,10.13,Cauchy’s,4,real_and_complex/10.13 Cauchy’s Theorem_10_4.jpg,"$|J| \leq 4^{n}\left|\int_{\partial \Delta_{n}} f(z) d z\right| \quad(n=1,2,3, \ldots)$"
+10,10.18,Tbeorem,3,real_and_complex/10.18 Tbeorem_10_3.jpg,$f(z)=\sum_{n=0}^{\infty} c_{n}(z-a)^{n} \quad(z \in D(a ; r))$
+7,7.4,Theorem,4,real_and_complex/7.4 Theorem_7_4.jpg,"$(M f)(x)=\sup _{0<r<\infty} \frac{1}{m\left(B_{r}\right)} \int_{B(x, r)}|f| d m$."
+9,9.13,Theorem,11,real_and_complex/9.13 Theorem_9_11.jpg,$\varphi_{A}=\left(k_{A} f\right)^{\hat{\rho}}$
+10,10.35,Cauchy’s,5,real_and_complex/10.35 Cauchy’s Theorem_10_5.jpg,$\int_{\Gamma_{0}} f(z) d z=\int_{\Gamma_{1}} f(z) d z$
+4,4.10,Theorem,2,real_and_complex/4.10 Theorem_4_2.jpg,$\frac{1}{4}\|x-y\|^{2}=\frac{1}{2}\|x\|^{2}+\frac{1}{2}\|y\|^{2}-\left\|\frac{x+y}{2}\right\|^{2}$.
+19,19.11,Theorem,6,real_and_complex/19.11 Theorem_19_6.jpg,$f(z)=(i z)^{-n} \int_{0}^{A}\left(D^{n} F\right)(t) e^{i t z} d t \quad(z \neq 0)$
+18,18.9,Theorem,3,real_and_complex/18.9 Theorem_18_3.jpg,$\rho(x) \leq \lim _{n \rightarrow \infty} \inf \left\|x^{n}\right\|^{1 / n}$.
+5,5.6,Baire’s,1,real_and_complex/5.6 Baire’s Theorem_5_1.jpg,"$S(x, r)=\{y \in X: \rho(x, y)<r\}$"
+9,9.5,Theorem,2,real_and_complex/9.5 Theorem_9_2.jpg,$y \rightarrow f_{y}$
+11,11.2,Theorem,5,real_and_complex/11.2 Theorem_11_5.jpg,$\lim _{r \rightarrow 1} P_{r}(\delta)=0 \quad(0<\delta \leq \pi)$
+1,1.31,Definition,2,real_and_complex/1.31 Definition_1_2.jpg,$\int_{E} f d \mu=\int_{E} f^{+} d \mu-\int_{E} f^{-} d \mu$
+6,6.2,Theorem,3,real_and_complex/6.2 Theorem_6_3.jpg,$\sum_{i}|\mu|\left(E_{i}\right) \leq|\mu|(E)$.
+16,16.12,Definition,1,real_and_complex/16.12 Definition_16_1.jpg,"$\gamma_{t}(s)=\varphi(s, t) \quad(s \in I, t \in I)$"
+11,11.22,Theorem,1,real_and_complex/11.22 Theorem_11_1.jpg,$\lim \mu(I) / \sigma(I)=0$
+5,5.13,Theorem,1,real_and_complex/5.13 Theorem_5_1.jpg,$\hat{f}(n)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(t) e^{-i n t} d t \quad(n \in Z)$
+4,4.13,Definition,1,real_and_complex/4.13 Definition_4_1.jpg,"$\left(u_{\alpha}, u_{\beta}\right)=\left\{\begin{array}{ll}1 & \text { if } \alpha=\beta \\ 0 & \text { if } \alpha \neq \beta\end{array}\right.$"
+3,3.10,Remark,1,real_and_complex/3.10 Remark_3_1.jpg,$\|\alpha f\|_{p}=|\alpha|\|f\|_{p}$.
+10,10.43,Theorem,3,real_and_complex/10.43 Theorem_10_3.jpg,$\frac{1}{\pi} \varphi_{A}(s)=\frac{1}{2 \pi} \int_{-\pi}^{0} \exp \left(i s A e^{i \theta}\right) d \theta$
+3,3.5,Theorem,7,real_and_complex/3.5 Theorem_3_7.jpg,$\int_{X} F G d \mu \leq p^{-1}+q^{-1}=1$
+18,18.1,Definition,1,real_and_complex/18.1 Definition_18_1.jpg,"$x(y z)=(x y) z, \quad(x+y) z=x z+y z, \quad x(y+z)=x y+x z$"
+16,16.13,Theorem,2,real_and_complex/16.13 Theorem_16_2.jpg,"$\left|\gamma_{t}(s)-\gamma_{u}(s)\right|<\epsilon \quad$ if $s \in I, u \in I,|u-t|<\delta$"
+2,2.17,Theorem,1,real_and_complex/2.17 Theorem_2_1.jpg,"$\mu\left(V_{n}-\left(K_{n} \cap E\right)\right)<\frac{\epsilon}{2^{n+1}} \quad(n=1,2,3, \ldots)$"
+20,20.5,Theorem,15,real_and_complex/20.5 Theorem_20_15.jpg,$=2 \pi f(z) \int_{0}^{\delta} a(r) r d r=f(z) \iint A=f(z)$
+5,5.18,Proof,1,real_and_complex/5.18 Proof of Theorem_5_1.jpg,"$|f(x)+\lambda \alpha| \leq\left\|x+\lambda x_{0}\right\| \quad(x \in M, \lambda$ real $)$."
+1,1.25,and,6,real_and_complex/1.25 and Theorem_1_6.jpg,$\alpha \geq \int_{x} s d \mu$
+10,10.32,Theorem,1,real_and_complex/10.32 Theorem_10_1.jpg,$f(z)-w_{0}=\left(z-z_{0}\right)^{m} g(z) \quad(z \in \Omega)$
+4,4.23,Definition,3,real_and_complex/4.23 Definition_4_3.jpg,"$\|f\|_{\infty}=\sup _{t}|f(t)|$,"
+11,11.1,Definition,2,real_and_complex/11.1 Definition_11_2.jpg,$f(z)=\frac{\alpha-i \beta}{2} z+\frac{\alpha+i \beta}{2} \bar{z}+\eta(z) z$
+18,18.20,Theorem,7,real_and_complex/18.20 Theorem_18_7.jpg,$\hat{g}(-n)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} g\left(e^{i \theta}\right) e^{i n \theta} d \theta=h\left(g f_{0}^{n}\right)=h(g) h\left(f_{0}^{n}\right)=0$
+15,15.19,Theorem,3,real_and_complex/15.19 Theorem_15_3.jpg,$\mu_{r}(f) \leq \mu_{s}(f) \quad$ if $\quad 0<r<s<1$
+10,10.40,Theorem,9,real_and_complex/10.40 Theorem_10_9.jpg,"$\left|\gamma_{k-1}(s)-\gamma_{k}(s)\right|<\epsilon \quad(k=1, \ldots, n ; 0 \leq s \leq 1)$"
+5,5.21,Remark,8,real_and_complex/5.21 Remark_5_8.jpg,$f(z)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f\left(e^{i t}\right) P_{r}(\theta-t) d t \quad(f \in A)$.
+10,10.6,Theorem,8,real_and_complex/10.6 Theorem_10_8.jpg,"$k ! c_{k}=f^{(k)}(a) \quad(k=0,1,2, \ldots)$"
+14,14.13,Theorem,3,real_and_complex/14.13 Theorem_14_3.jpg,$F(z)=\frac{1}{z}+\alpha_{1} z+\varphi(z) \quad(z \in U)$
+18,18.3,Theorem,5,real_and_complex/18.3 Theorem_18_5.jpg,$\left\|\sum_{n=2}^{\infty}(-1)^{n} x^{n}\right\| \leq \sum_{n=2}^{\infty}\left\|x^{n}\right\| \leq \sum_{n=2}^{\infty}\|x\|^{n}=\frac{\|x\|^{2}}{1-\|x\|}$.
+14,14.22,Theorem,4,real_and_complex/14.22 Theorem_14_4.jpg,$u(z)=2 \log |f(z)|-2 \alpha \log |z| \quad\left(z \in A_{1}\right)$.
+12,12.9,Theorem,7,real_and_complex/12.9 Theorem_12_7.jpg,$\left|f(z) h_{\epsilon}(z)\right| \leq \exp \left\{A e^{\alpha|x|}-\epsilon \delta\left(e^{\beta x}+e^{-\beta x}\right)\right\} \quad(z \in \bar{\Omega})$
+19,19.2,Theorem,9,real_and_complex/19.2 Theorem_19_9.jpg,$\Lambda\left(\alpha_{j}\right)+\Lambda\left(-\alpha_{j}\right) \rightarrow 0 \quad(j \rightarrow \infty)$
+11,11.8,Theorem,3,real_and_complex/11.8 Theorem_11_3.jpg,$\|H g\|_{\bar{U}}=\|g\|_{T} \quad(g \in C(T))$
+9,9.15,Remark,6,real_and_complex/9.15 Remark_9_6.jpg,$f \cdot P g=g \cdot P f \quad\left(f\right.$ and $\left.g \in L^{2}\right)$
+12,12.6,Theorem,0,real_and_complex/12.6 Theorem_12_0.jpg,$g^{\prime} f^{\prime}(\alpha)=1$.
+19,19.11,Theorem,23,real_and_complex/19.11 Theorem_19_23.jpg,$\left(D^{k} F\right)(t)=\frac{1}{2 \pi} \int_{-\infty}^{\infty}(-i x)^{k} f(x) e^{-i t x} d x$
+5,5.2,Definition,1,real_and_complex/5.2 Definition_5_1.jpg,"$\|\Lambda\|=\sup \{\|\Lambda x\|: x \in X,\|x\| \leq 1\}$."
+7,7.18,Theorem,4,real_and_complex/7.18 Theorem_7_4.jpg,"$\mu(E)=m(g(E)) \quad(E \subset I, E \in \mathfrak{M})$"
+19,19.11,Theorem,22,real_and_complex/19.11 Theorem_19_22.jpg,$F(t)=\frac{1}{2 \pi} \int_{-\infty}^{\infty} f(x) e^{-i t x} d x \quad(t$ real $)$
+11,11.8,Theorem,2,real_and_complex/11.8 Theorem_11_2.jpg,"$\left|P[g]\left(r e^{i \theta}\right)\right| \leq\|g\|_{T} \quad(0 \leq r<1)$,"
+12,12.6,Theorem,1,real_and_complex/12.6 Theorem_12_1.jpg,$f(z)=\lambda \varphi_{\alpha}(z) \quad(z \in U)$
+11,11.16,Theorem,6,real_and_complex/11.16 Theorem_11_6.jpg,$\left\|u_{r}-f\right\|_{p} \leq 2 \epsilon+\left\|v_{r}-g\right\|_{p}$
+12,12.9,Theorem,6,real_and_complex/12.9 Theorem_12_6.jpg,$\left|h_{\epsilon}(z)\right| \leq \exp \left\{-\epsilon \delta\left(e^{\beta x}+e^{-\beta x}\right)\right\}<1 \quad(z \in \bar{\Omega})$.
+14,14.22,Theorem,5,real_and_complex/14.22 Theorem_14_5.jpg,$\partial(2 \log |f|)=\partial(\log (\overline{f f}))=f^{\prime} / f$
+18,18.3,Theorem,4,real_and_complex/18.3 Theorem_18_4.jpg,$(e+x) s_{N}=e+(-1)^{N} x^{N+1}=s_{N}(e+x)$
+14,14.13,Theorem,2,real_and_complex/14.13 Theorem_14_2.jpg,$\sum_{n=1}^{\infty} n\left|\alpha_{n}\right|^{2} \leq 1$
+5,5.21,Remark,9,real_and_complex/5.21 Remark_5_9.jpg,$f(x)=\int_{H} f d \mu_{x} \quad(f \in A)$
+10,10.40,Theorem,8,real_and_complex/10.40 Theorem_10_8.jpg,"$\left|\alpha-\gamma_{k}(s)\right|>\epsilon \quad(k=0, \ldots, n ; 0 \leq s \leq 1)$"
+15,15.19,Theorem,2,real_and_complex/15.19 Theorem_15_2.jpg,$n(r) \log 2 \leq \log M(2 r)$
+18,18.20,Theorem,6,real_and_complex/18.20 Theorem_18_6.jpg,"$\left|\lambda^{n}\right|=\left|h\left(f_{0}^{n}\right)\right| \leq\left\|f_{0}^{n}\right\|=1 \quad(n=0, \pm 1, \pm 2, \ldots)$"
+9,9.18,Definition,1,real_and_complex/9.18 Definition_9_1.jpg,$\|x y\| \leq\|x\|\|y\| \quad(x$ and $y \in A)$
+11,11.1,Definition,3,real_and_complex/11.1 Definition_11_3.jpg,"$\partial=\frac{1}{2}\left(\frac{\partial}{\partial x}-i \frac{\partial}{\partial y}\right), \quad \bar{\partial}=\frac{1}{2}\left(\frac{\partial}{\partial x}+i \frac{\partial}{\partial y}\right)$"
+4,4.23,Definition,2,real_and_complex/4.23 Definition_4_2.jpg,$\|f\|_{p}=\left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi}|f(t)|^{p} d t\right\}^{1 / p}$
+1,1.25,and,7,real_and_complex/1.25 and Theorem_1_7.jpg,$\alpha \geq \int_{X} f d \mu$
+20,20.5,Theorem,14,real_and_complex/20.5 Theorem_20_14.jpg,$\Phi(z)=f(z) \quad(z \in G)$
+6,6.13,Theorem,1,real_and_complex/6.13 Theorem_6_1.jpg,$\lambda(E)=\int_{E} g d \mu \quad(E \in \mathfrak{M})$.
+14,14.18,Theorem,1,real_and_complex/14.18 Theorem_14_1.jpg,"$\lim _{r \rightarrow 1} g\left(r e^{i t}\right)=\beta \quad($ a.e. on $J)$,"
+3,3.5,Theorem,6,real_and_complex/3.5 Theorem_3_6.jpg,$F(x) G(x) \leq p^{-1} F(x)^{p}+q^{-1} G(x)^{q}$
+10,10.43,Theorem,2,real_and_complex/10.43 Theorem_10_2.jpg,"$|f(z)-g(z)|<|f(z)| \quad$ for all $z \in \gamma^{*}$
+"
+4,4.13,Definition,2,real_and_complex/4.13 Definition_4_2.jpg,"$\hat{x}(\alpha)=\left(x, u_{\alpha}\right) \quad(\alpha \in A)$."
+3,3.10,Remark,2,real_and_complex/3.10 Remark_3_2.jpg,$\|f-h\|_{p} \leq\|f-g\|_{p}+\|g-h\|_{p}$.
+10,10.43,Theorem,0,real_and_complex/10.43 Theorem_10_0.jpg,$N_{f}=\frac{1}{2 \pi i} \int_{\gamma} \frac{f^{\prime}(z)}{f(z)} d z=\operatorname{Ind}_{\Gamma}$
+3,3.5,Theorem,4,real_and_complex/3.5 Theorem_3_4.jpg,$\int_{X} F^{p} d \mu=\int_{X} G^{q} d \mu=1$
+18,18.1,Definition,2,real_and_complex/18.1 Definition_18_2.jpg,$\alpha(x y)=x(\alpha y)=(\alpha x) y$
+16,16.13,Theorem,1,real_and_complex/16.13 Theorem_16_1.jpg,"$E_{i}=\gamma_{t}\left(\left[s_{i}, s_{i+1}\right]\right) \subset A_{i} \quad(i=0,1, \ldots, n-1)$"
+2,2.17,Theorem,2,real_and_complex/2.17 Theorem_2_2.jpg,$\lambda(V)=\lim _{n \rightarrow \infty} \int_{X} g_{n} d \lambda=\lim _{n \rightarrow \infty} \int_{X} g_{n} d \mu=\mu(V)$.
+20,20.5,Theorem,16,real_and_complex/20.5 Theorem_20_16.jpg,"$\left|Q_{f}(\zeta, z)\right|<\frac{50}{\delta}$"
+15,15.3,Lemma,3,real_and_complex/15.3 Lemma_15_3.jpg,$\left|p_{N}-1\right| \leq p_{N}^{*}-1$
+6,6.13,Theorem,3,real_and_complex/6.13 Theorem_6_3.jpg,"$\frac{1}{2}(1+h)=\left\{\begin{array}{ll}h & \text { on } A, \\ 0 & \text { on } B,\end{array}\right.$"
+8,8.16,Theorem,4,real_and_complex/8.16 Theorem_8_4.jpg,"$\int_{0}^{\infty} \mu\left(E^{t}\right) \varphi^{\prime}(t) d t=\int_{X} d \mu(x) \int_{0}^{\infty} \chi_{E}(x, t) \varphi^{\prime}(t) d t$"
+10,10.22,Theorem,4,real_and_complex/10.22 Theorem_10_4.jpg,"$c_{n} r^{n}=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f\left(a+r e^{i \theta}\right) e^{-i n \theta} d \theta \quad(n=0,1,2, \ldots)$"
+1,1.25,and,5,real_and_complex/1.25 and Theorem_1_5.jpg,$\alpha \geq c \int_{X} s d \mu$
+5,5.18,Proof,2,real_and_complex/5.18 Proof of Theorem_5_2.jpg,$|f(x)-\alpha| \leq\left\|x-x_{0}\right\| \quad(x \in M)$
+11,11.1,Definition,1,real_and_complex/11.1 Definition_11_1.jpg,$f(z)=\alpha x+\beta y+\eta(z) z \quad(z=x+i y)$
+9,9.18,Definition,3,real_and_complex/9.18 Definition_9_3.jpg,$(\alpha x) y=x(\alpha y)=\alpha(x y)$
+7,7.22,Definition,2,real_and_complex/7.22 Definition_7_2.jpg,$T^{\prime}(x)=A$.
+3,3.14,Theorem,1,real_and_complex/3.14 Theorem_3_1.jpg,$\|g-s\|_{p} \leq 2 \epsilon^{1 / p}\|s\|_{\infty}$.
+18,18.20,Theorem,4,real_and_complex/18.20 Theorem_18_4.jpg,"$h\left(f_{0}^{n}\right)=\left[h\left(f_{0}\right)\right]^{n}=0 \quad(n=1,2,3, \ldots)$"
+2,2.22,Theorem,4,real_and_complex/2.22 Theorem_2_4.jpg,$S_{1} \cup\left(S_{2}-e_{2}\right)=Q$
+9,9.1,Definition,5,real_and_complex/9.1 Definition_9_5.jpg,$\varphi(s+t)=\varphi(s) \varphi(t)$
+14,14.22,Theorem,7,real_and_complex/14.22 Theorem_14_7.jpg,$\frac{f^{\prime}(z)}{f(z)}=\frac{\alpha}{z} \quad\left(z \in A_{1}\right)$.
+12,12.9,Theorem,4,real_and_complex/12.9 Theorem_12_4.jpg,$h_{\epsilon}(z)=\exp \left\{-\epsilon\left(e^{\beta z}+e^{-\beta z}\right)\right\}$.
+12,12.6,Theorem,3,real_and_complex/12.6 Theorem_12_3.jpg,"$\left|f^{\prime}(\alpha)\right| \leq \frac{1}{1-|\alpha|^{2}}, \quad\left|g^{\prime}\right| \leq 1-|\alpha|^{2}$"
+9,9.15,Remark,5,real_and_complex/9.15 Remark_9_5.jpg,$f \cdot P g=(P f) \cdot(P g) \quad\left(f\right.$ and $\left.g \in L^{2}\right)$
+19,19.11,Theorem,20,real_and_complex/19.11 Theorem_19_20.jpg,$\leq\left(\frac{\sin x}{x}\right)^{2}\left(\lambda_{1} \cdots \lambda_{k}\right)^{-1}=M_{k}\left(\frac{\sin x}{x}\right)^{2}$
+5,5.9,The,8,real_and_complex/5.9 The Open Mapping Theorem_5_8.jpg,"$\Lambda(U) \supset(1+\epsilon)^{-1} \delta V$,"
+1,1.24,and,4,real_and_complex/1.24 and Theorem_1_4.jpg,$h^{+}+f^{-}+g^{-}=f^{+}+g^{+}+h^{-}$.
+15,15.23,Theorem,4,real_and_complex/15.23 Theorem_15_4.jpg,$\prod_{n=1}^{k}\left|\alpha_{n}\right| \geq C^{-1}|f| r^{k}$
+7,7.18,Theorem,6,real_and_complex/7.18 Theorem_7_6.jpg,$f(x)-f(a)=\int_{a}^{x}[h(t)-1] d t \quad(\alpha \leq x \leq b)$.
+5,5.2,Definition,3,real_and_complex/5.2 Definition_5_3.jpg,$\|\Lambda x\| \leq\|\Lambda\|\|x\|$
+5,5.2,Definition,2,real_and_complex/5.2 Definition_5_2.jpg,$\|\Lambda(\alpha x)\|=\|\alpha \Lambda x\|=|\alpha|\|\Lambda x\|$.
+19,19.11,Theorem,21,real_and_complex/19.11 Theorem_19_21.jpg,"$\frac{1}{\pi} \int_{-\infty}^{\infty}\left|x^{k} f(x)\right| d x \leq M_{k} \quad(k=0,1,2, \ldots)$"
+10,10.26,Theorem,1,real_and_complex/10.26 Theorem_10_1.jpg,"$\left|f^{(n)}(a)\right| \leq \frac{n ! M}{R^{n}} \quad(n=1,2,3, \ldots)$"
+12,12.6,Theorem,2,real_and_complex/12.6 Theorem_12_2.jpg,$g^{\prime} f^{\prime}(\alpha)=1$.
+9,9.15,Remark,4,real_and_complex/9.15 Remark_9_4.jpg,$(f-P f) \cdot \overline{P g}$
+12,12.9,Theorem,5,real_and_complex/12.9 Theorem_12_5.jpg,$\operatorname{Re}\left[e^{\beta z}+e^{-\beta z}\right]=\left(e^{\beta x}+e^{-\beta x}\right) \cos \beta y \geq \delta\left(e^{\beta x}+e^{-\beta x}\right)$
+11,11.16,Theorem,5,real_and_complex/11.16 Theorem_11_5.jpg,$u_{r}-f=\left(u_{r}-v_{r}\right)+\left(v_{r}-g\right)+(g-f)$.
+1,1.32,Theorem,1,real_and_complex/1.32 Theorem_1_1.jpg,$\int_{X}(\alpha f+\beta g) d \mu=\alpha \int_{X} f d \mu+\beta \int_{X} g d \mu$.
+14,14.22,Theorem,6,real_and_complex/14.22 Theorem_14_6.jpg,$(\partial u)(z)=\frac{f^{\prime}(z)}{f(z)}-\frac{\alpha}{z} \quad\left(z \in A_{1}\right)$
+9,9.1,Definition,4,real_and_complex/9.1 Definition_9_4.jpg,$\hat{f}(t)=\int_{-\infty}^{\infty} f(x) e^{-i x t} d m(x) \quad\left(t \in R^{1}\right)$
+15,15.19,Theorem,1,real_and_complex/15.19 Theorem_15_1.jpg,$M(r)=\sup _{\theta}\left|f\left(r e^{i \theta}\right)\right| \quad(0<r<\infty)$
+7,7.10,Theorem,1,real_and_complex/7.10 Theorem_7_1.jpg,$f(x)=\lim _{i \rightarrow \infty} \frac{1}{m\left(E_{i}(x)\right)} \int_{E_{i}(x)} f d m$
+9,9.18,Definition,2,real_and_complex/9.18 Definition_9_2.jpg,"$x(y+z)=x y+x z, \quad(y+z) x=y x+z x \quad(x, y$, and $z \in A)$,"
+7,7.22,Definition,3,real_and_complex/7.22 Definition_7_3.jpg,$m(A(E))=\Delta(A) m(E)$
+5,5.18,Proof,3,real_and_complex/5.18 Proof of Theorem_5_3.jpg,$A_{x}=f(x)-\left\|x-x_{0}\right\| \quad$ and $\quad B_{x}=f(x)+\left\|x-x_{0}\right\|$.
+4,4.23,Definition,1,real_and_complex/4.23 Definition_4_1.jpg,$f(t)=F\left(e^{i t}\right)$
+8,8.16,Theorem,5,real_and_complex/8.16 Theorem_8_5.jpg,$\int_{0}^{f(x)} \varphi^{\prime}(t) d t=\varphi(f(x))$
+6,6.13,Theorem,2,real_and_complex/6.13 Theorem_6_2.jpg,$|\lambda|(E)=\int_{E}|g| d \mu \quad(E \in \mathfrak{M})$
+15,15.3,Lemma,2,real_and_complex/15.3 Lemma_15_2.jpg,$p_{N}^{*} \leq \exp \left(\left|u_{1}\right|+\cdots+\left|u_{N}\right|\right)$
+20,20.5,Theorem,17,real_and_complex/20.5 Theorem_20_17.jpg,"$\left|Q_{j}(\zeta, z)-\frac{1}{z-\zeta}\right|<\frac{4,000 \delta^{2}}{|z-\zeta|^{3}}$"
+2,2.17,Theorem,3,real_and_complex/2.17 Theorem_2_3.jpg,$E+x=\{y+x: y \in E\}$.
+8,8.11,Theorem,1,real_and_complex/8.11 Theorem_8_1.jpg,$\mathscr{B}_{k} \subset \mathfrak{M}_{\boldsymbol{r}} \times \mathfrak{M}_{s} \subset \mathfrak{M}_{\boldsymbol{k}}$
+18,18.1,Definition,3,real_and_complex/18.1 Definition_18_3.jpg,$\|x y\| \leq\|x\|\|y\| \quad(x$ and $y \in A)$
+14,14.18,Theorem,2,real_and_complex/14.18 Theorem_14_2.jpg,"$\lim _{t \rightarrow 1} g\left(\Gamma_{i}(t)\right)=\beta_{i} \quad(i=1,2)$"
+11,11.12,Definition,1,real_and_complex/11.12 Definition_11_1.jpg,"$u(z)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} u\left(z+r_{n} e^{i t}\right) d t \quad(n=1,2,3, \ldots)$"
+3,3.5,Theorem,5,real_and_complex/3.5 Theorem_3_5.jpg,$e^{s / p+t / q} \leq p^{-1} e^{s}+q^{-1} e^{t}$
+10,10.43,Theorem,1,real_and_complex/10.43 Theorem_10_1.jpg,$N_{f}=\frac{1}{2 \pi i} \int_{\gamma} \frac{f^{\prime}(z)}{f(z)} d z=\operatorname{Ind}_{\Gamma}$
+18,18.1,Definition,7,real_and_complex/18.1 Definition_18_7.jpg,$x^{-1} x=x x^{-1}=e$
+10,10.43,Theorem,5,real_and_complex/10.43 Theorem_10_5.jpg,$\left|\exp \left(i s A e^{i \theta}\right)\right|=\exp (-A s \sin \theta)$
+3,3.5,Theorem,1,real_and_complex/3.5 Theorem_3_1.jpg,$\int_{X} f g d \mu \leq\left\{\int_{X} f^{p} d \mu\right\}^{1 / p}\left\{\int_{X} g^{q} d \mu\right\}^{1 / q}$
+11,11.23,Theorem,2,real_and_complex/11.23 Theorem_11_2.jpg,$\mu(E)=\int_{E}|f| d \sigma$
+8,8.16,Theorem,1,real_and_complex/8.16 Theorem_8_1.jpg,$\int_{X}(\varphi \circ f) d \mu=\int_{0}^{\infty} \mu\{f>t\} \varphi^{\prime}(t) d t$.
+2,2.10,Theorem,3,real_and_complex/2.10 Theorem_2_3.jpg,$K \prec f \prec V$
+12,12.2,Theorem,2,real_and_complex/12.2 Theorem_12_2.jpg,$\left|f^{\prime}\right| \leq 1$
+20,20.2,Lemma,8,real_and_complex/20.2 Lemma_20_8.jpg,$|g(z)|<\frac{4}{r} \quad(z \in \Omega)$
+20,20.5,Theorem,13,real_and_complex/20.5 Theorem_20_13.jpg,$=\iint[f(z-\zeta)-f(z)](\bar{\partial} A)(\zeta) d \xi d \eta$
+10,10.41,Definition,1,real_and_complex/10.41 Definition_10_1.jpg,$Q(z)=\sum_{k=1}^{m} c_{k}(z-a)^{-k}$
+4,4.23,Definition,5,real_and_complex/4.23 Definition_4_5.jpg,$f(t)=\sum_{n=-N}^{N} c_{n} e^{i n t}$
+10,10.22,Theorem,1,real_and_complex/10.22 Theorem_10_1.jpg,$f(z)=\sum_{n=0}^{\infty} c_{n}(z-a)^{n} \quad(z \in D(a ; R))$
+4,4.1,Definition,2,real_and_complex/4.1 Definition_4_2.jpg,$A-2 B r+C r^{2} \geq 0$
+6,6.19,Theorem,8,real_and_complex/6.19 Theorem_6_8.jpg,"$|\mu|(X)=\lambda(X)=1=\|\Phi\|$,"
+15,15.19,Theorem,5,real_and_complex/15.19 Theorem_15_5.jpg,"$\mu_{r}(f) \leq \mu^{*}(f) \quad$ if $\quad 0<r<1$.
+"
+18,18.20,Theorem,1,real_and_complex/18.20 Theorem_18_1.jpg,"$P_{n}\left(e^{i \theta}\right)=\sum_{k=0}^{m(n)} a_{n, k} e^{i k \theta} \quad(n=0, \ldots, N)$"
+14,14.22,Theorem,2,real_and_complex/14.22 Theorem_14_2.jpg,"$A(1,1+\epsilon) \cap f^{-1}(K)=\varnothing$"
+18,18.3,Theorem,3,real_and_complex/18.3 Theorem_18_3.jpg,$s_{N}=e-x+x^{2}-\cdots+(-1)^{N} x^{N}$
+2,2.22,Theorem,1,real_and_complex/2.22 Theorem_2_1.jpg,$T e_{j}=\sum_{i=1}^{k} \alpha_{i j} e_{i} \quad(1 \leq j \leq k)$
+14,14.13,Theorem,5,real_and_complex/14.13 Theorem_14_5.jpg,$u=A \cos \theta+\operatorname{Re} \varphi \quad$ and $\quad v=-B \sin \theta+\operatorname{Im} \varphi$
+11,11.8,Theorem,5,real_and_complex/11.8 Theorem_11_5.jpg,$(H g)\left(r e^{i \theta}\right)=\sum_{n=-N}^{N} c_{n} r^{|n|} e^{i n \theta}$
+11,11.16,Theorem,1,real_and_complex/11.16 Theorem_11_1.jpg,$\left\|u_{r}\right\|_{p} \leq\|f\|_{p} \quad(0 \leq r<1)$
+12,12.9,Theorem,1,real_and_complex/12.9 Theorem_12_1.jpg,"$\Omega=\left\{x+i y:|y|<\frac{\pi}{2}\right\}, \quad \bar{\Omega}=\left\{x+i y:|y| \leq \frac{\pi}{2}\right\}$"
+19,19.11,Theorem,19,real_and_complex/19.11 Theorem_19_19.jpg,"$|f(z)| \leq e^{A|z|}, \quad$ with $A=2+\sum_{n=1}^{\infty} \lambda_{n}$."
+6,6.10,The,9,real_and_complex/6.10 The Theorem_6_9.jpg,"$A=\{x: 0 \leq g(x)<1\}, \quad B=\{x: g(x)=1\}$"
+13,13.1,Definition,1,real_and_complex/13.1 Definition_13_1.jpg,"$\varphi\left(r e^{i \theta}\right)=\left(\frac{2 r \cos \theta}{r^{2}+1}, \frac{2 r \sin \theta}{r^{2}+1}, \frac{r^{2}-1}{r^{2}+1}\right)$"
+15,15.23,Theorem,1,real_and_complex/15.23 Theorem_15_1.jpg,$\sum_{n=1}^{\infty}\left(1-\left|\alpha_{n}\right|\right)<\infty$
+7,7.18,Theorem,3,real_and_complex/7.18 Theorem_7_3.jpg,$g(x)=x+f(x) \quad(a \leq x \leq b)$.
+7,7.18,Theorem,2,real_and_complex/7.18 Theorem_7_2.jpg,$\sum_{i}\left(f\left(\beta_{i}\right)-f\left(\alpha_{i}\right)\right) \leq \epsilon$
+8,8.14,Theorem,8,real_and_complex/8.14 Theorem_8_8.jpg,"since
+\[
+\int_{-\infty}^{\infty}|f(x-y)| d x=\|f\|_{1}
+\]"
+6,6.10,The,8,real_and_complex/6.10 The Theorem_6_8.jpg,$\int_{X}(1-g) f d \lambda=\int_{X} f g w d \mu$.
+19,19.11,Theorem,18,real_and_complex/19.11 Theorem_19_18.jpg,$\frac{\sin z}{z}=\frac{1}{2} \int_{-1}^{1} e^{i t z} d t$
+10,10.24,The,2,real_and_complex/10.24 The Maximum Modulus Theorem_10_2.jpg,$|f(a)| \geq \min _{\theta}\left|f\left(a+r e^{i \theta}\right)\right|$
+8,8.1,Definition,1,real_and_complex/8.1 Definition_8_1.jpg,"$A=\bigcup_{i=1}^{\infty} A_{i}, \quad B=\bigcap_{i=1}^{\infty} B_{i}$,"
+7,7.23,Lemma,1,real_and_complex/7.23 Lemma_7_1.jpg,$|F(x)-x|<\epsilon$
+9,9.15,Remark,1,real_and_complex/9.15 Remark_9_1.jpg,$f-P f \perp P g \quad\left(f\right.$ and $\left.g \in L^{2}\right)$
+11,11.8,Theorem,4,real_and_complex/11.8 Theorem_11_4.jpg,$g\left(e^{i \theta}\right)=\sum_{n=-N}^{N} c_{n} e^{i n \theta}$
+9,9.1,Definition,1,real_and_complex/9.1 Definition_9_1.jpg,$\int_{-\infty}^{\infty} f(x) d m(x)=\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} f(x) d x$
+14,14.13,Theorem,4,real_and_complex/14.13 Theorem_14_4.jpg,"$A=\frac{1}{r}+\alpha_{1} r, \quad B=\frac{1}{r}-\alpha_{1} r$."
+18,18.3,Theorem,2,real_and_complex/18.3 Theorem_18_2.jpg,$\left\|(e+x)^{-1}-e+x\right\| \leq \frac{\|x\|^{2}}{1-\|x\|}$
+14,14.22,Theorem,3,real_and_complex/14.22 Theorem_14_3.jpg,$\alpha=\frac{\log R_{2}}{\log R_{1}}$
+6,6.19,Theorem,9,real_and_complex/6.19 Theorem_6_9.jpg,"$\Lambda f=\sup \left\{|\Phi(h)|: h \in C_{c}(X),|h| \leq f\right\}$"
+15,15.19,Theorem,4,real_and_complex/15.19 Theorem_15_4.jpg,$\mu_{r}(f) \rightarrow \log |f| \quad$ as $\quad r \rightarrow 0$
+17,17.23,Theorem,1,real_and_complex/17.23 Theorem_17_1.jpg,$Y=M_{f} H^{2}$
+3,3.13,Theorem,1,real_and_complex/3.13 Theorem_3_1.jpg,$\mu(\{x: s(x) \neq 0\})<\infty$.
+5,5.18,Proof,6,real_and_complex/5.18 Proof of Theorem_5_6.jpg,$F(x)=U(x)-i U(i x) \quad(x \in X)$
+4,4.23,Definition,4,real_and_complex/4.23 Definition_4_4.jpg,$f(t)=a_{0}+\sum_{n=1}^{N}\left(a_{n} \cos n t+b_{n} \sin n t\right) \quad\left(t \in R^{1}\right)$
+7,7.22,Definition,6,real_and_complex/7.22 Definition_7_6.jpg,$\Delta\left(T^{\prime}(x)\right)=\left|J_{T}(x)\right|$.
+20,20.2,Lemma,9,real_and_complex/20.2 Lemma_20_9.jpg,"\[
+|b|<4 r \text {. }
+\]
+"
+20,20.5,Theorem,12,real_and_complex/20.5 Theorem_20_12.jpg,$\Phi(z)-f(z)=\iint[f(z-\zeta)-f(z)] A(\zeta) d \xi d \eta$
+2,2.17,Theorem,6,real_and_complex/2.17 Theorem_2_6.jpg,"$Q(a ; \delta)=\left\{x: \alpha_{i} \leq \xi_{i}<\alpha_{i}+\delta, 1 \leq i \leq k\right\}$"
+11,11.23,Theorem,3,real_and_complex/11.23 Theorem_11_3.jpg,$|P[f]| \leq P[|f|]=P[d \mu]$.
+2,2.10,Theorem,2,real_and_complex/2.10 Theorem_2_2.jpg,$f \prec V$
+14,14.10,Definition,2,real_and_complex/14.10 Definition_14_2.jpg,$f(z)=z+\sum_{n=2}^{\infty} a_{n} z^{n} \quad(z \in U)$
+10,10.43,Theorem,4,real_and_complex/10.43 Theorem_10_4.jpg,$\operatorname{Res}(\varphi ; a)=m(a)$
+18,18.1,Definition,6,real_and_complex/18.1 Definition_18_6.jpg,"\[
+\|e\|=1
+\]
+"
+18,18.1,Definition,4,real_and_complex/18.1 Definition_18_4.jpg,$x_{n} y_{n}-x y=\left(x_{n}-x\right) y_{n}+x\left(y_{n}-y\right)$.
+3,3.5,Theorem,2,real_and_complex/3.5 Theorem_3_2.jpg,$\left\{\int_{X}(f+g)^{p} d \mu\right\}^{1 / p} \leq\left\{\int_{X} f^{p} d \mu\right\}^{1 / p}+\left\{\int_{X} g^{p} d \mu\right\}^{1 / p}$.
+12,12.2,Theorem,1,real_and_complex/12.2 Theorem_12_1.jpg,$|f(z)| \leq|z| \quad(z \in U)$
+8,8.16,Theorem,2,real_and_complex/8.16 Theorem_8_2.jpg,"$E^{t}=\{x \in X:(x, t) \in E\} \quad(0 \leq t<\infty)$"
+11,11.23,Theorem,1,real_and_complex/11.23 Theorem_11_1.jpg,$\lim \frac{1}{\sigma(I)} \int_{I}|f| d \sigma=0$
+2,2.17,Theorem,4,real_and_complex/2.17 Theorem_2_4.jpg,"$W=\left\{x: \alpha_{i}<\xi_{i}<\beta_{i}, 1 \leq i \leq k\right\}$"
+20,20.5,Theorem,10,real_and_complex/20.5 Theorem_20_10.jpg,$\iint|\bar{\partial} A|=\frac{24}{15 \delta}<\frac{2}{\delta}$.
+10,10.41,Definition,2,real_and_complex/10.41 Definition_10_2.jpg,$c_{1}=\operatorname{Res}(f ; a)$.
+7,7.22,Definition,4,real_and_complex/7.22 Definition_7_4.jpg,$A^{\prime}(x)=A \quad\left(x \in R^{k}\right)$
+2,2.13,Theorem,19,real_and_complex/2.13 Theorem_2_19.jpg,"$\mu\left(V_{i}\right)<\mu\left(E_{i}\right)+\frac{\epsilon}{n} \quad(i=1, \ldots, n)$"
+10,10.22,Theorem,2,real_and_complex/10.22 Theorem_10_2.jpg,$\sum_{n=0}^{\infty}\left|c_{n}\right|^{2} r^{2 n}=\frac{1}{2 \pi} \int_{-\pi}^{\pi}\left|f\left(a+r e^{i \theta}\right)\right|^{2} d \theta$
+5,5.18,Proof,4,real_and_complex/5.18 Proof of Theorem_5_4.jpg,$A_{x} \leq B_{y}$
+4,4.23,Definition,6,real_and_complex/4.23 Definition_4_6.jpg,$u_{n}(t)=e^{i n t} \quad(n \in Z)$
+18,18.20,Theorem,2,real_and_complex/18.20 Theorem_18_2.jpg,$\left|f\left(e^{i \theta}\right)-\sum_{n=0}^{N} P_{n}\left(e^{i \theta}\right) g^{n}\left(e^{i \theta}\right)\right|<\epsilon \quad\left(e^{i \theta} \in T\right)$
+15,15.19,Theorem,6,real_and_complex/15.19 Theorem_15_6.jpg,$\lim _{r \rightarrow \infty} \frac{\log n(r)}{\log r}=k$
+4,4.1,Definition,1,real_and_complex/4.1 Definition_4_1.jpg,"$(x-r \alpha y, x-r \alpha y)=(x, x)-r \alpha(y, x)-r \bar{\alpha}(x, y)+r^{2}(y, y)$."
+14,14.22,Theorem,1,real_and_complex/14.22 Theorem_14_1.jpg,"$A_{1}=A\left(1, R_{1}\right), \quad A_{2}=A\left(1, R_{2}\right)$"
+10,10.2,Definition,20,real_and_complex/10.2 Definition_10_20.jpg,$h^{\prime}\left(z_{0}\right)=g^{\prime}\left(f\left(z_{0}\right)\right) f^{\prime}\left(z_{0}\right) \quad\left(z_{0} \in \Omega\right)$.
+2,2.22,Theorem,2,real_and_complex/2.22 Theorem_2_2.jpg,$\Delta(T)=|\operatorname{det} T|$.
+14,14.13,Theorem,6,real_and_complex/14.13 Theorem_14_6.jpg,$\frac{u^{2}}{A^{2}}+\frac{v^{2}}{B^{2}}<1+\eta r^{3} \quad\left(z=r e^{i \theta}\right)$
+9,9.1,Definition,3,real_and_complex/9.1 Definition_9_3.jpg,$(f * g)(x)=\int_{-\infty}^{\infty} f(x-y) g(y) d m(y) \quad\left(x \in R^{1}\right)$
+5,5.15,Theorem,2,real_and_complex/5.15 Theorem_5_2.jpg,$\|\hat{f}\|_{\infty} \geq \delta\|f\|_{1}$
+12,12.6,Theorem,5,real_and_complex/12.6 Theorem_12_5.jpg,$|f(z)|<1+|z|^{1 / 2}$
+11,11.8,Theorem,6,real_and_complex/11.8 Theorem_11_6.jpg,$\left\|H g_{k}-H f\right\|_{\bar{U}}=\left\|H\left(g_{k}-f\right)\right\|_{\bar{U}} \rightarrow 0$
+9,9.15,Remark,3,real_and_complex/9.15 Remark_9_3.jpg,"$\int_{-\infty}^{\infty}(f-P f) \cdot \overline{P g} \cdot e_{-\alpha} d m=0 \quad\left(f\right.$ and $\left.g \in L^{2}, \alpha \in R^{1}\right)$"
+7,7.23,Lemma,3,real_and_complex/7.23 Lemma_7_3.jpg,$x \cdot(a-F(x))=x \cdot a+x \cdot(x-F(x))-1<|a|+\epsilon-1<0$.
+12,12.9,Theorem,2,real_and_complex/12.9 Theorem_12_2.jpg,$|f(z)|<\exp \{A \exp (\alpha|x|)\} \quad(z=x+i y \in \Omega)$
+11,11.16,Theorem,2,real_and_complex/11.16 Theorem_11_2.jpg,$\lim _{r \rightarrow 1}\left\|u_{r}-f\right\|_{p}=0$
+1,1.24,and,2,real_and_complex/1.24 and Theorem_1_2.jpg,$\int_{X}(f+g) d \mu=\int_{X} f d \mu+\int_{X} g d \mu$
+6,6.16,Theorem,9,real_and_complex/6.16 Theorem_6_9.jpg,$\Psi(F)=\Phi\left(w^{1 / p} F\right)$
+15,15.23,Theorem,2,real_and_complex/15.23 Theorem_15_2.jpg,$|f| \prod_{n=1}^{n(r)} \frac{r}{\left|\alpha_{n}\right|}=\exp \left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|f\left(r e^{i \theta}\right)\right| d \theta\right\}$
+16,16.14,Theorem,8,real_and_complex/16.14 Theorem_16_8.jpg,$\gamma_{1}(\theta)=\Phi\left(e^{-i \theta}\right)=\Phi\left(e^{i(2 \pi-\theta)}\right)=\Gamma(2 \pi-\theta)=\Gamma_{1}(\theta) \quad(0 \leq \theta \leq \pi)$
+7,7.18,Theorem,1,real_and_complex/7.18 Theorem_7_1.jpg,$f(x)-f(a)=\int_{a}^{x} f^{\prime}(t) d t \quad(\alpha \leq x \leq b)$
+15,15.23,Theorem,3,real_and_complex/15.23 Theorem_15_3.jpg,$|f| \prod_{n=1}^{k} \frac{r}{\left|\alpha_{n}\right|} \leq \exp \left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log ^{+}\left|f\left(r e^{i \theta}\right)\right| d \theta\right\}$.
+5,5.2,Definition,4,real_and_complex/5.2 Definition_5_4.jpg,$\{x \in X:\|x\| \leq 1\}$
+6,6.16,Theorem,8,real_and_complex/6.16 Theorem_6_8.jpg,$F \rightarrow w^{1 / p} F$
+10,10.24,The,1,real_and_complex/10.24 The Maximum Modulus Theorem_10_1.jpg,$|f(a)| \leq \max _{\theta}\left|f\left(a+r e^{i \theta}\right)\right|$.
+1,1.24,and,3,real_and_complex/1.24 and Theorem_1_3.jpg,"$\int_{X}(\alpha f) d \mu=\alpha \int_{X} f d \mu$,"
+11,11.16,Theorem,3,real_and_complex/11.16 Theorem_11_3.jpg,$(M \mu)\left(e^{i \theta}\right)=\sup \frac{|\mu|(I)}{\sigma(I)}$
+12,12.9,Theorem,3,real_and_complex/12.9 Theorem_12_3.jpg,$\left|f\left(x \pm \frac{\pi i}{2}\right)\right| \leq 1 \quad(-\infty<x<\infty)$.
+8,8.1,Definition,2,real_and_complex/8.1 Definition_8_2.jpg,"$E_{x}=\{y:(x, y) \in E\}, \quad E^{y}=\{x:(x, y) \in E\}$"
+12,12.6,Theorem,4,real_and_complex/12.6 Theorem_12_4.jpg,$f\left(x \pm \frac{\pi i}{2}\right)=\exp \left( \pm i e^{x}\right)$
+9,9.15,Remark,2,real_and_complex/9.15 Remark_9_2.jpg,"$f-P f \perp(P g) e_{\alpha} \quad\left(f\right.$ and $\left.g \in L^{2}, \alpha \in R^{1}\right)$."
+18,18.3,Theorem,1,real_and_complex/18.3 Theorem_18_1.jpg,$(e+x)^{-1}=\sum_{n=0}^{\infty}(-1)^{n} x^{n}$
+14,14.13,Theorem,7,real_and_complex/14.13 Theorem_14_7.jpg,$\pi A B\left(1+\eta r^{3}\right)=\pi\left(\frac{1}{r}+\alpha_{1} r\right)\left(\frac{1}{r}-\alpha_{1} r\right)\left(1+\eta r^{3}\right) \leq \frac{\pi}{r^{2}}\left(1+\eta r^{3}\right)$
+2,2.22,Theorem,3,real_and_complex/2.22 Theorem_2_3.jpg,"$\xi_{1} \leq \xi_{2}<\xi_{1}+1, \quad 0 \leq \xi_{i}<1 \quad$ if $\quad i \neq 2$"
+5,5.15,Theorem,3,real_and_complex/5.15 Theorem_5_3.jpg,$\left\|\hat{D}_{n}\right\|_{\infty} \geq \delta\left\|D_{n}\right\|_{1}$
+9,9.1,Definition,2,real_and_complex/9.1 Definition_9_2.jpg,$\|f\|_{p}=\left\{\int_{-\infty}^{\infty}|f(x)|^{p} d m(x)\right\}^{1 / p} \quad(1 \leq p<\infty)$
+14,14.22,Theorem,0,real_and_complex/14.22 Theorem_14_0.jpg,$\alpha=\frac{1}{2 \pi i} \int_{y} \frac{f^{\prime}(z)}{f(z)} d z=\operatorname{Ind}_{\Gamma}$.
+18,18.20,Theorem,3,real_and_complex/18.20 Theorem_18_3.jpg,$\sum_{n=0}^{N} P_{n} g^{n}$
+17,17.23,Theorem,2,real_and_complex/17.23 Theorem_17_2.jpg,$M_{f} Q_{f}=\varphi M_{h} Q_{h}$
+4,4.23,Definition,7,real_and_complex/4.23 Definition_4_7.jpg,$Q_{k}(t) \leq Q_{k}(\delta) \leq \frac{\pi(k+1)}{2}\left(\frac{1+\cos \delta}{2}\right)^{k} \quad(0<\delta \leq|t| \leq \pi)$
+10,10.22,Theorem,3,real_and_complex/10.22 Theorem_10_3.jpg,$f\left(a+r e^{i \theta}\right)=\sum_{n=0}^{\infty} c_{n} r^{n} e^{i n \theta}$
+5,5.18,Proof,5,real_and_complex/5.18 Proof of Theorem_5_5.jpg,"$f(x)-f(y)=f(x-y) \leq\|x-y\| \leq\left\|x-x_{0}\right\|+\left\|y-x_{0}\right\|$,"
+2,2.13,Theorem,18,real_and_complex/2.13 Theorem_2_18.jpg,"$E_{i}=\left\{x: y_{i-1}<f(x) \leq y_{i}\right\} \cap K \quad(i=1, \ldots, n)$"
+7,7.22,Definition,5,real_and_complex/7.22 Definition_7_5.jpg,$\frac{m(T(E))}{m(E)} \sim \Delta\left(T^{\prime}(x)\right)$
+10,10.41,Definition,3,real_and_complex/10.41 Definition_10_3.jpg,$\frac{1}{2 \pi i} \int_{\Gamma} Q(z) d z=c_{1} \operatorname{Ind}_{\Gamma}(a)=\operatorname{Res}(Q ; a) \operatorname{Ind}_{\Gamma}(a)$.
+20,20.5,Theorem,11,real_and_complex/20.5 Theorem_20_11.jpg,$\Phi(z)=\iint f(z-\zeta) A(\zeta) d \xi d \eta=\iint A(z-\zeta) f(\zeta) d \xi d \eta$
+2,2.17,Theorem,5,real_and_complex/2.17 Theorem_2_5.jpg,$\operatorname{vol}(W)=\prod_{i=1}^{k}\left(\beta_{i}-\alpha_{i}\right)$
+2,2.10,Theorem,1,real_and_complex/2.10 Theorem_2_1.jpg,$K \prec f$
+8,8.16,Theorem,3,real_and_complex/8.16 Theorem_8_3.jpg,"$\mu\left(E^{t}\right)=\int_{X} \chi_{E}(x, t) d \mu(x)$"
+3,3.5,Theorem,3,real_and_complex/3.5 Theorem_3_3.jpg,"$F=\frac{f}{A}, \quad G=\frac{g}{B}$."
+10,10.43,Theorem,7,real_and_complex/10.43 Theorem_10_7.jpg,$\lim _{A \rightarrow \infty} \int_{-A}^{A} \frac{\sin x}{x} e^{i t x} d x=\left\{\begin{array}{ll}\pi & \text { if }-1<t<1 \\ 0 & \text { if }|t|>1 .\end{array}\right.$
+14,14.10,Definition,1,real_and_complex/14.10 Definition_14_1.jpg,"$f=0, \quad f^{\prime}=1$"
+18,18.1,Definition,5,real_and_complex/18.1 Definition_18_5.jpg,$x e=e x=x \quad(x \in A)$.
