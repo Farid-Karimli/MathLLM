@@ -1,0 +1,2364 @@
+Chapter,Type,Type#,Formula#,Path,latex
+3,3.24,Theorem,1,functional/3.24 Theorem_3_1.jpg,"
+\[
+(p+\bar{V}) \cap K=\varnothing
+\]"
+2,2.9,Theorem,7,functional/2.9 Theorem_2_7.jpg,"
+\[
+\sum_{n=1}^{m} \Lambda x_{n}=\sum_{n=1}^{m}\left(y_{n}-y_{n+1}\right)=y_{1}-y_{m+1} \text {, }
+\]"
+10,10.1,Definition,2,functional/10.1 Definition_10_2.jpg," $\quad(x+y) z=x z+y z, \quad x(y+z)=x y+x z$,"
+9,9.6,Definition,13,functional/9.6 Definition_9_13.jpg,"
+\[
+\lim _{x \rightarrow \infty}(K * \phi)(x)=(1+\lambda) a=a \int_{-\infty}^{\infty} K(y) d y
+\]"
+10,10.31,Theorem,2,functional/10.31 Theorem_10_2.jpg,"
+\[
+\tilde{f}(x)=Q(x) .
+\]"
+13,13.38,Theorem,9,functional/13.38 Theorem_13_9.jpg,"
+\[
+\mathscr{D}(B)=\left\{x \in H: \int_{\Delta}|b|^{2} d E_{x, x}<\infty\right\} .
+\]"
+1,1.24,Theorem,9,functional/1.24 Theorem_1_9.jpg,"$$
+\[
+B_{\delta}=\{x: f(x)<\delta\}=\bigcup_{r<\delta} A(r)
+\]"
+13,13.32,Theorem,27,functional/13.32 Theorem_13_27.jpg,"$$
+\[
+E(\omega)=Q E(\omega)=Q E^{\prime}(\omega) \quad \text { if } \omega \subset \tilde{\omega} .
+\]"
+12,12.25,Theorem,1,functional/12.25 Theorem_12_1.jpg,"
+\[
+\left|\left(T x_{0}, x_{0}\right)\right|>\|T\|-\varepsilon
+\]"
+13,13.19,Theorem,8,functional/13.19 Theorem_13_8.jpg,"
+\[
+[\mathscr{R}(I-U)]^{\perp}=\mathscr{N}(I-U)=\{0\}
+\]"
+7,7.245,Theorem,6,functional/7.245 Theorem_7_6.jpg," $\quad(1+|y|)^{2 r}<(2 n+2)^{r}\left(1+y_{1}^{2 r}+\cdots+y_{n}^{2 r}\right)$,"
+13,13.24,Theorem,2,functional/13.24 Theorem_13_2.jpg,"$$
+\[
+\|\Psi(f) x\|^{2}=\int_{\Omega}|f|^{2} d E_{x, x} \quad\left(x \in \mathscr{D}_{f}\right)
+\]"
+1,1.42,Theorem,4,functional/1.42 Theorem_1_4.jpg, $|f(x)| \leq M_{n} \quad$ if $f \in E$ and $x \in K_{n}$.
+3,3.20,and,3,functional/3.20 and (b) of Theorem_3_3.jpg,"
+\[
+\phi: C(Q)^{*} \rightarrow X
+\]"
+10,10.9,Theorem,6,functional/10.9 Theorem_10_6.jpg,"
+\[
+\phi\left(x^{2}\right)=[\phi(x)]^{2} \quad(x \in A) .
+\]"
+9,9.15,Theorem,13,functional/9.15 Theorem_9_13.jpg,"
+\[
+\left|h_{n}(x)\right| \leq\|\phi\| \cdot\left\|\mu_{s}\right\|^{n} \quad(-\infty<x<\infty),
+\]"
+13,13.8,Theorem,2,functional/13.8 Theorem_13_2.jpg,"
+\[
+\{y, z\} \in \mathscr{G}\left(T^{*}\right) .
+\]"
+6,1.27,and,8,functional/1.27 and part (b) of Theorem_6_8.jpg,"
+\[
+\sum_{\beta \leq \alpha}(-1)^{|\beta|} c_{\alpha \beta} D^{\beta}\left(\phi D^{\alpha-\beta} f\right)=(-1)^{|\alpha|} f D^{\alpha} \phi
+\]"
+12,12.10,Theorem,2,functional/12.10 Theorem_12_2.jpg,"$$ $\left(x, T^{*} y\right)=0$ for every $x \in H$."
+10,10.35,Theorem,6,functional/10.35 Theorem_10_6.jpg,"
+\[
+\mu=\max \left\{\left\|S_{1}\right\|, \ldots,\left\|S_{n}\right\|\right\} .
+\]"
+12,12.21,Theorem,5,functional/12.21 Theorem_12_5.jpg,"
+\[
+\Psi(s)=\sum_{i=1}^{n} \alpha_{i} E\left(\omega_{i}\right)
+\]"
+13,13.23,and,14,functional/13.23 and Theorem_13_14.jpg,"$$
+\[
+\int_{\Omega}\left|f_{n}\right|^{2} d E_{z, z}=\int_{\Omega}\left|\phi_{n}\right|^{2} d E_{v, v} \leq E_{v, v}(\Omega)
+\]"
+13,13.11,Theorem,1,functional/13.11 Theorem_13_1.jpg, $\mathscr{G}\left(T^{-1}\right)=V \mathscr{G}(-T) \quad$ and $\quad V \mathscr{G}\left(T^{-1}\right)=\mathscr{G}(-T)$
+12,12.5,Theorem,3,functional/12.5 Theorem_12_3.jpg,"
+\[
+(\Lambda x) z-(\Lambda z) x \in \mathscr{N}(\Lambda) \quad(x \in H)
+\]"
+12,12.40,Theorem,1,functional/12.40 Theorem_12_1.jpg,"
+\[
+T_{u}\left(x^{*}\right)=T_{u}(x)^{*} \quad(x \in A),
+\]"
+11,11.2,Proposition,2,functional/11.2 Proposition_11_2.jpg,"
+\[
+\pi(x) \pi(y)=\pi(x y) \quad(x \in A, y \in A) .
+\]"
+11,11.2,Proposition,3,functional/11.2 Proposition_11_3.jpg,"
+\[
+\left\|x_{i}+y_{i}\right\| \leq\left\|\pi\left(x_{i}\right)\right\|+\delta \quad(i=1,2)
+\]"
+6,6.35,Theorem,1,functional/6.35 Theorem_6_1.jpg,"
+\[
+(u *(\phi * \psi))=\left(u *\left(\phi_{0} * \psi\right)\right) .
+\]"
+12,12.5,Theorem,2,functional/12.5 Theorem_12_2.jpg,"$$
+\[
+\|y\|^{2}=(y, y)=\Lambda y \leq\|\Lambda\|\|y\|,
+\]"
+13,13.30,Theorem,1,functional/13.30 Theorem_13_1.jpg,"
+\[
+(A x, y)=\int_{-\infty}^{\infty} t d E_{x, y}(t) \quad(x \in \mathscr{D}(A), y \in H) .
+\]"
+13,13.23,and,15,functional/13.23 and Theorem_13_15.jpg,"
+\[
+\Psi(g) \Psi(f) \subset \Psi(f) \Psi(g)
+\]"
+12,12.21,Theorem,4,functional/12.21 Theorem_12_4.jpg,"
+\[
+\Psi(\bar{f})=\Psi(f)^{*} \quad\left(f \in L^{\infty}(E)\right)
+\]"
+12,12.10,Theorem,3,functional/12.10 Theorem_12_3.jpg," $(T x, y)=0$ for every $x \in H$."
+10,10.35,Theorem,7,functional/10.35 Theorem_10_7.jpg,"
+\[
+x_{N}=S_{i_{N}} T \cdots S_{i_{1}} T x_{0}=S_{i_{N}} \cdots S_{i_{1}} T^{N} x_{0}
+\]"
+13,13.8,Theorem,3,functional/13.8 Theorem_13_3.jpg," $\quad(T x, y)=(x, z) \quad$ for every $x \in \mathscr{D}(T)$."
+9,9.15,Theorem,12,functional/9.15 Theorem_9_12.jpg,"$$
+\[
+\left\|\left(\mu^{n}\right)_{s}\right\| \leq\left\|\left(\mu_{s}\right)^{n}\right\| \leq\left\|\mu_{s}\right\|^{n}
+\]"
+10,10.9,Theorem,7,functional/10.9 Theorem_10_7.jpg,"
+\[
+\phi(x y+y x)=2 \phi(x) \phi(y) \quad(x \in A, y \in A) .
+\]"
+3,3.20,and,2,functional/3.20 and (b) of Theorem_3_2.jpg,"$$
+\[
+\mu(E)=\sup \{\mu(K): K \subset E\}=\inf \{\mu(G): E \subset G\}
+\]"
+3,3.26,Definition,1,functional/3.26 Definition_3_1.jpg,"
+\[
+(\Lambda f)(q)=\Lambda(f(q)) \quad(q \in Q) .
+\]"
+1,1.42,Theorem,5,functional/1.42 Theorem_1_5.jpg,"
+\[
+V_{N}=\left\{f \in C^{\infty}(\Omega): p_{N}(f)<\frac{1}{N}\right\} \quad(N=1,2,3, \ldots)
+\]"
+12,12.44,Theorem,4,functional/12.44 Theorem_12_4.jpg,"
+\[
+\lim _{n \rightarrow \infty}\left\|y-A_{n} x\right\|=0
+\]"
+13,13.34,Definition,2,functional/13.34 Definition_13_2.jpg,"
+\[
+A x=\lim _{\varepsilon \rightarrow 0} A_{\varepsilon} x
+\]"
+11,11.20,Theorem,6,functional/11.20 Theorem_11_6.jpg, $x=u^{2}-v^{2}+2 i u v$.
+3,3.20,and,10,functional/3.20 and (b) of Theorem_3_10.jpg,"
+\[
+\int_{Q} \Lambda_{i} d \mu=\Lambda_{i}\left(\int_{Q} x d \mu(x)\right)=\Lambda_{i} \phi(\mu)
+\]"
+10,10.24,Lemma,1,functional/10.24 Lemma_10_1.jpg," $\quad \frac{1}{2 \pi i} \int_{\Gamma}(\alpha-\lambda)^{n}(\lambda e-x)^{-1} d \lambda=(\alpha e-x)^{n} \quad(n=0, \pm 1, \pm 2, \ldots)$."
+7,7.245,Theorem,7,functional/7.245 Theorem_7_7.jpg,"
+\[
+\int_{R^{n}}(1+|y|)^{2 r}|\hat{F}(y)|^{2} d m_{n}(y)<\infty
+\]"
+13,13.24,Theorem,3,functional/13.24 Theorem_13_3.jpg, $\quad \Psi(f) \Psi(g) \subset \Psi(f g) \quad$ and $\quad \mathscr{D}(\Psi(f) \Psi(g))=\mathscr{D}_{g} \cap \mathscr{D}_{f g}$
+13,13.19,Theorem,9,functional/13.19 Theorem_13_9.jpg, $\quad\left(T^{*}+i I\right) y=(T+i I) y_{0}=\left(T^{*}+i I\right) y_{0}$.
+10,10.26,(d).,2,functional/10.26 (d). 10.28 Theorem_10_2.jpg,"
+\[
+(x-\alpha e) \tilde{h}(x)=\tilde{f}(x)=\tilde{h}(x)(x-\alpha e),
+\]"
+1,1.24,Theorem,8,functional/1.24 Theorem_1_8.jpg," $f(x+y) \leq f(x)+f(y) \quad(x \in X, y \in X)$."
+13,13.38,Theorem,8,functional/13.38 Theorem_13_8.jpg,"
+\[
+b(p)=\lim _{n \rightarrow \infty} a_{2-n}(p)
+\]"
+10,10.31,Theorem,3,functional/10.31 Theorem_10_3.jpg,"
+\[
+P(\sigma(x))=\sigma(P(x))=\sigma=\{0\} .
+\]"
+9,9.6,Definition,12,functional/9.6 Definition_9_12.jpg,"
+\[
+(\phi * k)(x)=e^{-x} \int_{0}^{x} H(y) d y=a x+b-a+\varepsilon_{2}(x),
+\]"
+10,10.1,Definition,3,functional/10.1 Definition_10_3.jpg,"
+\[
+\alpha(x y)=(\alpha x) y=x(\alpha y)
+\]"
+2,2.9,Theorem,6,functional/2.9 Theorem_2_6.jpg,"
+\[
+z-x_{0}=p^{-1}\left(x-x_{0}\right) \in V,
+\]"
+2,2.9,Theorem,4,functional/2.9 Theorem_2_4.jpg,"
+\[
+K \subset x_{0}+p V .
+\]"
+10,10.1,Definition,1,functional/10.1 Definition_10_1.jpg,"
+\[
+x(y z)=(x y) z,
+\]"
+3,3.24,Theorem,2,functional/3.24 Theorem_3_2.jpg,"$$
+\[
+A_{i}=\overline{c o}\left(K \cap\left(x_{i}+V\right)\right) \quad(1 \leq i \leq n)
+\]"
+9,9.6,Definition,10,functional/9.6 Definition_9_10.jpg,"
+\[
+|F(x)-J(x)|<2 \log (x+2) .
+\]"
+13,13.32,Theorem,18,functional/13.32 Theorem_13_18.jpg," $\sum_{i=1}^{\infty} \int|\lambda|^{2} d E_{x_{i}, x_{i}}^{i}(\lambda)=\sum_{i=1}^{\infty}\left\|N P_{i} x_{i}\right\|^{2}=\sum_{i=1}^{\infty}\left\|P_{i} N x\right\|^{2}=\|N x\|^{2}$."
+10,10.31,Theorem,1,functional/10.31 Theorem_10_1.jpg,"$$
+\[
+f(\lambda)-Q(\lambda)=P(\lambda) g(\lambda) \quad(\lambda \in \Omega)
+\]"
+13,13.32,Theorem,24,functional/13.32 Theorem_13_24.jpg,"$$
+\[
+E(\omega)=E^{T}(\phi(\omega))
+\]"
+13,13.32,Theorem,30,functional/13.32 Theorem_13_30.jpg,"
+\[
+S E(\omega)=E(\omega) S
+\]"
+13,13.24,Theorem,1,functional/13.24 Theorem_13_1.jpg," $\quad(\Psi(f) x, y)=\int_{\Omega} f d E_{x, y} \quad\left(x \in \mathscr{D}_{f}, y \in H\right)$"
+7,7.245,Theorem,5,functional/7.245 Theorem_7_5.jpg,"$$
+\[
+\int_{R^{n}} y_{i}^{2 r}|\hat{F}(y)|^{2} d m_{n}(y)<\infty \quad(1 \leq i \leq n)
+\]"
+10,10.24,Lemma,3,functional/10.24 Lemma_10_3.jpg,"
+\[
+(\alpha e-x)^{-1} \cdot \frac{1}{2 \pi i} \int_{\Gamma}(\alpha-\lambda)^{n+1}(\lambda e-x)^{-1} d \lambda
+\]"
+11,11.20,Theorem,4,functional/11.20 Theorem_11_4.jpg,"
+\[
+y=\lim _{n \rightarrow \infty} y_{n},
+\]"
+2,2.9,Theorem,10,functional/2.9 Theorem_2_10.jpg,"$$
+\[
+f(E)=\Lambda\left(\pi^{-1}(E)\right)
+\]"
+3,3.26,Definition,3,functional/3.26 Definition_3_3.jpg,"
+\[
+\int_{Q} f d \mu=y
+\]"
+1,1.42,Theorem,7,functional/1.42 Theorem_1_7.jpg,"
+\[
+m_{n}=\frac{2^{n}}{\delta_{1} \cdots \delta_{n}} \quad(n=1,2,3, \ldots)
+\]"
+10,10.9,Theorem,5,functional/10.9 Theorem_10_5.jpg, $a^{2} \in N \quad$ if $a \in N$.
+9,9.15,Theorem,10,functional/9.15 Theorem_9_10.jpg,"$$
+\[
+\phi=f+f * \mu+\cdots+f * \mu^{n-1}+\phi * \mu^{n}
+\]"
+12,12.10,Theorem,1,functional/12.10 Theorem_12_1.jpg,"
+\[
+T^{*} y=0 .
+\]"
+10,10.25,Theorem,3,functional/10.25 Theorem_10_3.jpg,"
+\[
+R(x)=\frac{1}{2 \pi i} \int_{\Gamma} R(\lambda)(\lambda e-x)^{-1} d \lambda
+\]"
+12,12.21,Theorem,6,functional/12.21 Theorem_12_6.jpg,"
+\[
+\Psi(s)^{*}=\sum_{i=1}^{n} \bar{\alpha}_{i} E\left(\omega_{i}\right)=\Psi(\bar{s})
+\]"
+3,3.1,Definition,4,functional/3.1 Definition_3_4.jpg,"
+\[
+f_{1}\left(x+t x_{1}\right)=f(x)+t \alpha \quad(x \in M, t \in R) .
+\]"
+13,13.23,and,17,functional/13.23 and Theorem_13_17.jpg,"
+\[
+E(\omega) \Psi(f) x=\Psi(f) E(\omega) x=\Psi(f) x .
+\]"
+13,13.11,Theorem,2,functional/13.11 Theorem_13_2.jpg,"$$
+\[
+H \times H=V \mathscr{G}\left(T^{-1}\right) \oplus \mathscr{G}\left(\left(T^{-1}\right)^{*}\right)
+\]"
+8,8.5,Theorem,9,functional/8.5 Theorem_8_9.jpg,"
+\[
+\psi=P(D) \phi
+\]"
+6,6.35,Theorem,3,functional/6.35 Theorem_6_3.jpg,"
+\[
+((u * \psi) * \phi)=\left((u * \psi) * \phi_{0}\right.
+\]"
+12,12.40,Theorem,2,functional/12.40 Theorem_12_2.jpg,"$$
+\[
+\left\|T_{u}(x)\right\| \leq\|x\| \quad(x \in A),
+\]"
+11,11.2,Proposition,1,functional/11.2 Proposition_11_1.jpg,"
+\[
+x^{\prime} y^{\prime}-x y=\left(x^{\prime}-x\right) y^{\prime}+x\left(y^{\prime}-y\right)
+\]"
+12,12.40,Theorem,3,functional/12.40 Theorem_12_3.jpg,"
+\[
+F(e)=1 \quad \text { and } \quad F\left(u^{*} u\right)=\|u\|^{2}
+\]"
+6,6.35,Theorem,2,functional/6.35 Theorem_6_2.jpg,"
+\[
+((u * \phi) * \psi)=\left(\left(u * \phi_{0}\right) * \psi\right) .
+\]"
+8,8.5,Theorem,8,functional/8.5 Theorem_8_8.jpg,"
+\[
+C^{2}=\int_{R^{n}}\left(1+|t|^{2}\right)^{-2 n} d m_{n}(t)<\infty
+\]"
+13,13.11,Theorem,3,functional/13.11 Theorem_13_3.jpg, $\quad H \times H=V \mathscr{G}(-T) \oplus \mathscr{G}(-T)=\mathscr{G}\left(T^{-1}\right) \oplus V \mathscr{G}\left(T^{-1}\right)$.
+13,13.23,and,16,functional/13.23 and Theorem_13_16.jpg,"
+\[
+E(\omega) \Psi(f) \subset \Psi(f) E(\omega) .
+\]"
+13,13.30,Theorem,2,functional/13.30 Theorem_13_2.jpg,"$$
+\[
+(U x, y)=\int_{\Omega} \lambda d E_{x, y}^{\prime}(\lambda) \quad(x \in H, y \in H) .
+\]"
+12,12.21,Theorem,7,functional/12.21 Theorem_12_7.jpg,"
+\[
+\Psi(s) \Psi(t)=\Psi(s t)
+\]"
+10,10.35,Theorem,4,functional/10.35 Theorem_10_4.jpg,"
+\[
+S(\Gamma(y)) \subset \Gamma(y)
+\]"
+10,10.25,Theorem,2,functional/10.25 Theorem_10_2.jpg,"$$
+\[
+R(x)=P(x)+\sum_{m, k} c_{m, k}\left(x-\alpha_{m} e\right)^{-k}
+\]"
+9,9.15,Theorem,11,functional/9.15 Theorem_9_11.jpg,"$$
+\[
+g_{n}=\phi *\left(\mu^{n}\right)_{a}, \quad h_{n}=\phi *\left(\mu^{n}\right)_{s}
+\]"
+10,10.9,Theorem,4,functional/10.9 Theorem_10_4.jpg, $a b \in N \quad$ if $a \in N$ and $b \in N$.
+13,13.34,Definition,1,functional/13.34 Definition_13_1.jpg,"
+\[
+A_{\varepsilon} x=\frac{1}{\varepsilon}[Q(\varepsilon) x-x] \quad(x \in X, \varepsilon>0)
+\]"
+1,1.42,Theorem,6,functional/1.42 Theorem_1_6.jpg,"
+\[
+\phi\left(x_{1}, \ldots, x_{n}\right)=1-g\left(x_{1}^{2}+\cdots+x_{n}^{2}\right) .
+\]"
+3,3.26,Definition,2,functional/3.26 Definition_3_2.jpg,"
+\[
+\Lambda y=\int_{Q}(\Lambda f) d \mu
+\]"
+11,11.20,Theorem,5,functional/11.20 Theorem_11_5.jpg,"
+\[
+[\pi(a)]^{*}=\pi\left(a^{*}\right) \quad(a \in A)
+\]"
+10,10.24,Lemma,2,functional/10.24 Lemma_10_2.jpg,"$$
+\[
+(\alpha e-x)^{-1} \cdot \frac{1}{2 \pi i} \int_{\Gamma}(\alpha-\lambda)^{n} d \lambda=0
+\]"
+7,7.245,Theorem,4,functional/7.245 Theorem_7_4.jpg,"
+\[
+\int_{R^{n}}|\hat{F}|^{2} d m_{n}<\infty
+\]"
+10,10.26,(d).,1,functional/10.26 (d). 10.28 Theorem_10_1.jpg,"
+\[
+(\lambda-\alpha) h(\lambda)=f(\lambda) \quad(\lambda \in \Omega)
+\]"
+13,13.32,Theorem,25,functional/13.32 Theorem_13_25.jpg,"$$
+\[
+N Q=\int f d E
+\]"
+13,13.32,Theorem,19,functional/13.32 Theorem_13_19.jpg,"
+\[
+\mathscr{D}(N) \subset \mathscr{D}(M)
+\]"
+9,9.6,Definition,11,functional/9.6 Definition_9_11.jpg, $\quad(h * u)(x)=(h * v * \mu)(x)=(H * v)(x)=\int_{0}^{x} H(y) d y$.
+3,3.24,Theorem,3,functional/3.24 Theorem_3_3.jpg, $\overline{c o}(K) \subset \overline{c o}\left(A_{1} \cup \cdots \cup A_{n}\right)=\operatorname{co}\left(A_{1} \cup \cdots \cup A_{n}\right)$.
+2,2.9,Theorem,5,functional/2.9 Theorem_2_5.jpg,"
+\[
+z=\left(1-p^{-1}\right) x_{0}+p^{-1} x
+\]"
+2,2.9,Theorem,1,functional/2.9 Theorem_2_1.jpg,"
+\[
+E=\bigcap_{\Lambda \in \Gamma} \Lambda^{-1}(\bar{U}) .
+\]"
+10,10.1,Definition,4,functional/10.1 Definition_10_4.jpg,"
+\[
+\|x y\| \leq\|x\|\|y\| \quad(x \in A, y \in A)
+\]"
+10,10.26,Definition,1,functional/10.26 Definition_10_1.jpg,"
+\[
+A_{\boldsymbol{\Omega}}=\{x \in A: \sigma(x) \subset \Omega\}
+\]"
+13,13.32,Theorem,21,functional/13.32 Theorem_13_21.jpg," $\quad\left\{Q_{i} x, Q_{i} N x\right\} \in \mathscr{G}(M) \quad[x \in \mathscr{D}(N), i=1,2,3, \ldots]$."
+10,10.31,Theorem,4,functional/10.31 Theorem_10_4.jpg,"
+\[
+f^{-1}(\alpha) \cap \sigma(T) \neq \varnothing
+\]"
+11,11.20,Theorem,1,functional/11.20 Theorem_11_1.jpg,"
+\[
+y=\tilde{f}(x),
+\]"
+8,8.5,Theorem,11,functional/8.5 Theorem_8_11.jpg,"$$
+\[
+|\hat{\phi}(t)| \leq A r^{-N} \int_{T^{n}}|\hat{\psi}(t+r w)| d \sigma_{n}(w) \quad\left(t \in R^{n}\right)
+\]"
+10,10.24,Lemma,6,functional/10.24 Lemma_10_6.jpg,"
+\[
+\operatorname{Ind}_{\Gamma_{r}}(\zeta)=1=\operatorname{Ind}_{\Gamma}(\zeta)
+\]"
+13,13.24,Theorem,4,functional/13.24 Theorem_13_4.jpg,"
+\[
+\Psi(f)^{*}=\Psi(\bar{f})
+\]"
+3,3.20,and,5,functional/3.20 and (b) of Theorem_3_5.jpg,"$$
+\[
+\sum_{i=1}^{n} c_{i} \Lambda_{i} f(q)<\sum_{i=1}^{n} c_{i} t_{i} \quad(q \in Q)
+\]"
+1,1.42,Theorem,2,functional/1.42 Theorem_1_2.jpg,"
+\[
+V_{n}=\left\{f \in C(\Omega): p_{n}(f)<\frac{1}{n}\right\} \quad(n=1,2,3, \ldots)
+\]"
+12,12.44,Theorem,3,functional/12.44 Theorem_12_3.jpg," $\quad\left\|y-A_{n} x\right\|^{2}=\left\|b(U) x-a_{n}(U) x\right\|^{2}=\int_{\sigma(U)}\left|b-a_{n}\right|^{2} d E_{x, x}$."
+13,13.8,Theorem,4,functional/13.8 Theorem_13_4.jpg," $\quad(\{-T x, x\},\{y, z\})=0 \quad$ for every $x \in \mathscr{D}(T)$."
+2,2.6,Theorem,3,functional/2.6 Theorem_2_3.jpg, $\|\Lambda x\| \leq M\|x\| \quad$ if $x \in X$ and $\Lambda \in \Gamma$.
+11,11.28,Theorem,12,functional/11.28 Theorem_11_12.jpg, $\quad|F(x)| \leq\left|\Phi\left(x_{1}\right)\right|+\left|\Phi\left(x_{2}\right)\right| \leq\left\|x_{1}\right\|+\left\|x_{2}\right\| \leq \gamma\|x\|$.
+11,11.28,Theorem,8,functional/11.28 Theorem_11_8.jpg,"
+\[
+w^{*} w=2 u^{2}+2 v^{2}-w w^{*}=2 u^{2}+2 v^{2}-z^{2} x .
+\]"
+12,12.21,Theorem,3,functional/12.21 Theorem_12_3.jpg,"
+\[
+\|\Psi(f) x\|^{2}=\int_{\Omega}|f|^{2} d E_{x, x} \quad\left(x \in H, f \in L^{\infty}(E)\right)
+\]"
+12,12.10,Theorem,4,functional/12.10 Theorem_12_4.jpg,"
+\[
+y \in \mathscr{R}(T)^{\perp} .
+\]"
+13,13.30,Theorem,6,functional/13.30 Theorem_13_6.jpg,"
+\[
+A(I-U)=i(I+U),
+\]"
+3,3.1,Definition,1,functional/3.1 Definition_3_1.jpg,"
+\[
+f(x)=u(x)-i u(i x) \quad(x \in X)
+\]"
+13,13.23,and,12,functional/13.23 and Theorem_13_12.jpg,"$$
+\[
+\Psi\left(f_{n}\right)=\Psi(f) \Psi\left(\phi_{n}\right)
+\]"
+3,3.30,Definition,11,functional/3.30 Definition_3_11.jpg,"$$
+\[
+g(z)=\frac{1}{2 \pi} \int_{-\pi}^{\pi}\left[2 r e^{i \theta}\left(2 r e^{i \theta}-z\right)\right]^{-1} f\left(2 r e^{i \theta}\right) d \theta
+\]"
+12,12.40,Theorem,7,functional/12.40 Theorem_12_7.jpg,"
+\[
+F\left(b^{*} a\right)=F\left(a^{*} b\right)=0,
+\]"
+11,11.2,Proposition,4,functional/11.2 Proposition_11_4.jpg," $\quad\left\|\pi\left(x_{1} x_{2}\right)\right\| \leq\left\|\left(x_{1}+y_{1}\right)\left(x_{2}+y_{2}\right)\right\| \leq\left\|x_{1}+y_{1}\right\|\left\|x_{2}+y_{2}\right\|$,"
+3,3.32,The,2,functional/3.32 The Krein-Milman Theorem_3_2.jpg,"
+\[
+\overline{c o}(E(K)) \subset K
+\]"
+11,11.2,Proposition,5,functional/11.2 Proposition_11_5.jpg,"
+\[
+\left\|\pi\left(x_{1}\right) \pi\left(x_{2}\right)\right\| \leq\left\|\pi\left(x_{1}\right)\right\|\left\|\pi\left(x_{2}\right)\right\| .
+\]"
+12,12.40,Theorem,6,functional/12.40 Theorem_12_6.jpg,"
+\[
+\left(a^{\prime}, b^{\prime}\right)=F\left(b^{*} a\right)
+\]"
+13,13.23,and,13,functional/13.23 and Theorem_13_13.jpg,"
+\[
+\Psi\left(\phi_{n}\right) v=\Psi\left(\bar{f}_{n}\right) z \quad(n=1,2,3, \ldots)
+\]"
+13,13.30,Theorem,7,functional/13.30 Theorem_13_7.jpg," $\quad(A x, y)=\int_{\Omega} f d E_{x, y}^{\prime} \quad[x \in \mathscr{D}(A), y \in H]$."
+12,12.22,applies,3,functional/12.22 applies to A. By Theorem_12_3.jpg,"
+\[
+\|f(T)\| \leq \sup \{|f(\lambda)|: \lambda \in \sigma(T)\}
+\]"
+10,10.35,Theorem,1,functional/10.35 Theorem_10_1.jpg,"
+\[
+S(M) \subset M
+\]"
+12,12.21,Theorem,2,functional/12.21 Theorem_12_2.jpg,"
+\[
+\Psi(f)=\int_{\Omega} f d E
+\]"
+11,11.28,Theorem,9,functional/11.28 Theorem_11_9.jpg, $\quad\left|F\left(u_{n}\right)\right|^{2} \leq F\left(u_{n}^{2}\right) \leq F\left(u_{n}^{2}+v_{n}^{2}\right) \leq\left\|u_{n}^{2}+v_{n}^{2}\right\| \rightarrow 0$.
+10,10.9,Theorem,1,functional/10.9 Theorem_10_1.jpg," $\phi(x y)=\phi(x) \phi(y) \quad(x \in A, y \in A)$."
+2,2.6,Theorem,2,functional/2.6 Theorem_2_2.jpg,$$ $\|\Lambda x\| \leq M \quad$ if $\|x\| \leq 1$ and $\Lambda \in \Gamma$.
+6,6.26,Theorem,8,functional/6.26 Theorem_6_8.jpg,"
+\[
+\left|\Lambda_{1} \psi\right| \leq C \int_{K}|\psi(x)| d x \quad(\psi \in Y)
+\]"
+13,13.8,Theorem,5,functional/13.8 Theorem_13_5.jpg,"$$
+\[
+\{y, z\} \in[V \mathscr{G}(T)]^{\perp} \quad \quad / / /
+\]"
+1,1.42,Theorem,3,functional/1.42 Theorem_1_3.jpg,"
+\[
+|\alpha|=\alpha_{1}+\cdots+\alpha_{n} .
+\]"
+12,12.44,Theorem,2,functional/12.44 Theorem_12_2.jpg,"
+\[
+a_{n}(\lambda)=\frac{1}{n}\left(1+\lambda+\cdots+\lambda^{n-1}\right)
+\]"
+3,3.20,and,4,functional/3.20 and (b) of Theorem_3_4.jpg,"
+\[
+\sum_{i=1}^{n} c_{i} u_{i}<\sum_{i=1}^{n} c_{i} t_{i}
+\]"
+7,7.245,Theorem,1,functional/7.245 Theorem_7_1.jpg,"
+\[
+r>p+\frac{n}{2}
+\]"
+8,8.5,Theorem,10,functional/8.5 Theorem_8_10.jpg,"
+\[
+u(P(D) \phi)=\phi \quad\left(\phi \in \mathscr{D}\left(R^{n}\right)\right)
+\]"
+10,10.5,Definition,2,functional/10.5 Definition_10_2.jpg,"$$
+\[
+x^{-1} x=x x^{-1}=e
+\]"
+13,13.32,Theorem,20,functional/13.32 Theorem_13_20.jpg," $\quad P_{i} N x=N P_{i} x=M P_{i} x \quad[x \in \mathscr{D}(N), i=1,2,3, \ldots]$"
+3,3.24,Theorem,6,functional/3.24 Theorem_3_6.jpg,"
+\[
+p \in A_{i} \subset x_{i}+\bar{V} \subset K+\bar{V},
+\]"
+10,10.1,Definition,5,functional/10.1 Definition_10_5.jpg,"
+\[
+x e=e x=x \quad(x \in A)
+\]"
+10,10.26,Definition,2,functional/10.26 Definition_10_2.jpg,"$$
+\[
+\tilde{f}(x)=\frac{1}{2 \pi i} \int_{\Gamma} f(\lambda)(\lambda e-x)^{-1} d \lambda
+\]"
+3,3.24,Theorem,4,functional/3.24 Theorem_3_4.jpg,"
+\[
+\overline{\operatorname{co}}(K)=\operatorname{co}\left(A_{1} \cup \cdots \cup A_{n}\right)
+\]"
+2,2.9,Theorem,2,functional/2.9 Theorem_2_2.jpg,"
+\[
+K=\bigcup_{n=1}^{\infty}(K \cap n E)
+\]"
+10,10.1,Definition,7,functional/10.1 Definition_10_7.jpg,"
+\[
+(x, \alpha)(y, \beta)=(x y+\alpha y+\beta x, \alpha \beta),
+\]"
+13,13.32,Theorem,22,functional/13.32 Theorem_13_22.jpg,"
+\[
+T=N\left(I+\sqrt{N^{*} N}\right)^{-1},
+\]"
+8,8.5,Theorem,12,functional/8.5 Theorem_8_12.jpg,"$$
+\[
+|\phi| \leq A r^{-N}\|P(D) \phi\| \quad\left(\phi \in \mathscr{D}\left(R^{n}\right)\right) .
+\]"
+11,11.20,Theorem,2,functional/11.20 Theorem_11_2.jpg,"
+\[
+2 Q_{n}(\lambda)=P_{n}(\lambda)+\overline{P_{n}(\bar{\lambda})}
+\]"
+13,13.24,Theorem,7,functional/13.24 Theorem_13_7.jpg," $\quad\left\|\Psi(f) x-\Psi\left(f_{n}\right) x\right\|^{2} \leq \int_{\Omega}\left|f-f_{n}\right|^{2} d E_{x, x} \rightarrow 0 \quad$ as $n \rightarrow \infty$,"
+10,10.24,Lemma,5,functional/10.24 Lemma_10_5.jpg,"
+\[
+\frac{1}{2 \pi i} \int_{\Gamma}(\lambda e-x)^{-1} d \lambda=e .
+\]"
+7,7.245,Theorem,3,functional/7.245 Theorem_7_3.jpg, $\quad D_{i}^{r} F=\sum_{s=0}^{r}\left(\begin{array}{l}r \\ s\end{array}\right)\left(D_{i}^{r-s} \psi\right)\left(D_{i}^{s} f\right)=\sum_{s=0}^{r}\left(\begin{array}{l}r \\ s\end{array}\right)\left(D_{i}^{r-s} \psi\right) g_{i s}$.
+1,1.42,Theorem,1,functional/1.42 Theorem_1_1.jpg,"$$
+\[
+p_{n}(f)=\sup \left\{|f(x)|: x \in K_{n}\right\},
+\]"
+3,3.20,and,6,functional/3.20 and (b) of Theorem_3_6.jpg,"
+\[
+\Lambda_{i} y=m_{i}=\int_{Q}\left(\Lambda_{i} f\right) d \mu \quad(1 \leq i \leq n)
+\]"
+9,9.15,Theorem,8,functional/9.15 Theorem_9_8.jpg,"
+\[
+\int_{-\infty}^{\infty} K(x) e^{-i x t} d x=\left\{\begin{array}{ll}
+\hat{\sigma}(t) / i t & \text { if } t \neq 0 \\
+M & \text { if } t=0
+\end{array}\right.
+\]"
+10,10.9,Theorem,3,functional/10.9 Theorem_10_3.jpg,"
+\[
+\phi(x y)=\phi(a b)+\phi(x) \phi(y) .
+\]"
+6,6.4,Theorem,9,functional/6.4 Theorem_6_9.jpg,"
+\[
+\alpha \phi-\alpha_{0} \phi_{0} \in W
+\]"
+11,11.28,Theorem,11,functional/11.28 Theorem_11_11.jpg,"$$
+\[
+F(x)=F(u)+i F(v)=\Phi\left(x_{1}\right)+i \Phi\left(x_{2}\right),
+\]"
+10,10.35,Theorem,3,functional/10.35 Theorem_10_3.jpg,"
+\[
+\Gamma(y)=\{S y: S \in \Gamma\} .
+\]"
+13,13.11,Theorem,4,functional/13.11 Theorem_13_4.jpg,"
+\[
+\mathscr{G}\left(\left(T^{-1}\right)^{*}\right)=\left[V \mathscr{G}\left(T^{-1}\right)\right]^{\perp}=\mathscr{G}\left(T^{-1}\right)
+\]"
+3,3.1,Definition,2,functional/3.1 Definition_3_2.jpg,"$$
+\[
+f(x)-\alpha \leq p\left(x-x_{1}\right) \quad(x \in M)
+\]"
+13,13.23,and,11,functional/13.23 and Theorem_13_11.jpg,"
+\[
+\Psi(\bar{f}) \subset \Psi(f)^{*}
+\]"
+13,13.30,Theorem,5,functional/13.30 Theorem_13_5.jpg,"
+\[
+\Psi(f)(I-U)=i(I+U) .
+\]"
+12,12.40,Theorem,4,functional/12.40 Theorem_12_4.jpg,"
+\[
+Y=\{y \in A: F(x y)=0 \text { for every } x \in A\} .
+\]"
+12,12.40,Theorem,5,functional/12.40 Theorem_12_5.jpg,"
+\[
+x^{\prime}=x+Y \quad(x \in A) .
+\]"
+13,13.30,Theorem,4,functional/13.30 Theorem_13_4.jpg," $(\Psi(f) x, y)=\int_{\Omega} f d E_{x, y}^{\prime} \quad\left(x \in \mathscr{D}_{f}, y \in H\right)$."
+13,13.23,and,10,functional/13.23 and Theorem_13_10.jpg,$\mathscr{D}(\Psi(f) \Psi(g))=\mathscr{D}_{g} \cap \mathscr{D}_{f g}$
+3,3.1,Definition,3,functional/3.1 Definition_3_3.jpg,"
+\[
+f(y)+\alpha \leq p\left(y+x_{1}\right) \quad(y \in M) .
+\]"
+10,10.35,Theorem,2,functional/10.35 Theorem_10_2.jpg,"
+\[
+\Gamma=\{S \in \mathscr{B}(X): S T=T S\}
+\]"
+12,12.21,Theorem,1,functional/12.21 Theorem_12_1.jpg," $\quad(\Psi(f) x, y)=\int_{\Omega} f d E_{x, y} \quad\left(x, y \in H, f \in L^{\infty}(E)\right)$."
+11,11.28,Theorem,10,functional/11.28 Theorem_11_10.jpg," $\quad x=x_{1}+i x_{2}, \quad x_{1} \in \bar{H}, \quad x_{2} \in \bar{H}, \quad\left\|x_{1}\right\|+\left\|x_{2}\right\| \leq \gamma\|x\|$."
+6,6.4,Theorem,8,functional/6.4 Theorem_6_8.jpg,"
+\[
+\alpha \phi-\alpha_{0} \phi_{0}=\alpha\left(\phi-\phi_{0}\right)+\left(\alpha-\alpha_{0}\right) \phi_{0}
+\]"
+10,10.9,Theorem,2,functional/10.9 Theorem_10_2.jpg,"$$
+\[
+x=a+\phi(x) e, \quad y+b+\phi(y) e,
+\]"
+2,2.6,Theorem,1,functional/2.6 Theorem_2_1.jpg, $\sup _{\Lambda \in \Gamma}\|\Lambda x\|<\infty \quad$ for every $x \in X$.
+9,9.15,Theorem,9,functional/9.15 Theorem_9_9.jpg, $\quad \int_{r}^{s} f(x) d x=(K * \phi)(s)-(K * \phi)(r) \quad(-\infty<r<s<\infty)$
+3,3.20,and,7,functional/3.20 and (b) of Theorem_3_7.jpg,"
+\[
+E=\left\{\mu: \int_{Q} 1 d \mu=1\right\}
+\]"
+12,12.44,Theorem,1,functional/12.44 Theorem_12_1.jpg,"
+\[
+A_{n} x=\frac{1}{n}\left(x+U x+\cdots+U^{n-1} x\right)
+\]"
+13,13.24,Theorem,6,functional/13.24 Theorem_13_6.jpg,"
+\[
+\|\Psi(f) x\|^{2} \leq \int_{\Omega}|f|^{2} d E_{x, x} \quad\left(x \in \mathscr{D}_{f}\right)
+\]"
+7,7.245,Theorem,2,functional/7.245 Theorem_7_2.jpg, $\quad \int_{\Omega} g_{i k} \phi d m_{n}=(-1)^{k} \int_{\Omega} f D_{i}^{k} \phi d m_{n} \quad[\phi \in \mathscr{D}(\Omega)]$
+10,10.24,Lemma,4,functional/10.24 Lemma_10_4.jpg," $\quad(\alpha e-x) y_{n}=y_{n+1} \quad(n=0, \pm 1, \pm 2, \ldots)$."
+11,11.20,Theorem,3,functional/11.20 Theorem_11_3.jpg,"
+\[
+y_{n}=Q_{n}(x) \quad(n=1,2,3, \ldots)
+\]"
+10,10.5,Definition,1,functional/10.5 Definition_10_1.jpg,"
+\[
+\phi(x y)=\phi(x) \phi(y)
+\]"
+8,8.5,Theorem,13,functional/8.5 Theorem_8_13.jpg,"
+\[
+|u(\psi)| \leq A r^{-N}\|\psi\| \quad\left(\psi \in \mathscr{D}\left(R^{n}\right)\right) .
+\]"
+6,6.30,Theorem,8,functional/6.30 Theorem_6_8.jpg,"
+\[
+(u *(\phi * \psi))=((u * \phi) * \psi .
+\]"
+10,10.31,Theorem,6,functional/10.31 Theorem_10_6.jpg,"
+\[
+\tilde{f}(x)=Q(x)+P(x) \tilde{g}(x),
+\]"
+13,13.32,Theorem,23,functional/13.32 Theorem_13_23.jpg,"
+\[
+T=\int \phi d E,
+\]"
+10,10.1,Definition,6,functional/10.1 Definition_10_6.jpg,"
+\[
+\|e\|=1,
+\]"
+2,2.9,Theorem,3,functional/2.9 Theorem_2_3.jpg,"
+\[
+K \cap\left(x_{0}+V\right) \subset n E,
+\]"
+3,3.24,Theorem,5,functional/3.24 Theorem_3_5.jpg,"$$
+\[
+p=t_{1} y_{1}+\left(1-t_{1}\right) \frac{t_{2} y_{2}+\cdots+t_{N} y_{N}}{t_{2}+\cdots+t_{N}}
+\]"
+10,10.26,Definition,3,functional/10.26 Definition_10_3.jpg,"
+\[
+\tilde{f}(\alpha e)=f(\alpha) e
+\]"
+6,6.1,Definition,1,functional/6.1 Definition_6_1.jpg,"$$
+\[
+\int f^{\prime} \phi=-\int f \phi^{\prime} \quad(\phi \in \mathscr{D}) .
+\]"
+9,9.6,Definition,70,functional/9.6 Definition_9_70.jpg, $\quad \int_{-\infty}^{\infty} K(x) e^{-i t x} d x=\left(2-e^{-i t}-e^{-i \lambda t}\right) \frac{\zeta(1+i t)}{1+i t}$
+3,3.10,Theorem,1,functional/3.10 Theorem_3_1.jpg,"$$
+\[
+V=\left\{x:\left|\Lambda_{i} x\right|<r_{i} \text { for } 1 \leq i \leq n\right\}
+\]"
+8,8.9,Theorem,6,functional/8.9 Theorem_8_6.jpg, $\quad|F(x)|^{2} \leq \int_{R^{n}}|\hat{f}(y)|^{2} d \mu_{t}(y) \int_{R^{n}}|\hat{u}(x-y)|^{2} d \mu_{-t}(y)$
+13,13.35,Theorem,18,functional/13.35 Theorem_13_18.jpg,"$$
+\[
+R(\lambda) A x=\int_{0}^{\infty} e^{-\lambda t} \frac{d}{d t} Q(t) x d t=-x+\lambda R(\lambda) x
+\]"
+1,1.39,Theorem,2,functional/1.39 Theorem_1_2.jpg,"
+\[
+\{x:\|x\|<r\}=r U
+\]"
+11,11.11,Lemma,12,functional/11.11 Lemma_11_12.jpg,"$$
+\[
+\int_{\Delta}\left|\hat{f}_{n}-\hat{f}\right|^{2} d \mu=\int_{0}^{1}\left|f_{n}-f\right|^{2} d m \rightarrow 0
+\]"
+3,3.30,Definition,4,functional/3.30 Definition_3_4.jpg,"
+\[
+\Delta_{r}=\{z \in \mathbb{C}:|z| \leq r\} .
+\]"
+13,13.35,Theorem,5,functional/13.35 Theorem_13_5.jpg,"$$
+\[
+A_{\varepsilon} M_{t} x=A_{t} M_{\varepsilon} x \quad(\varepsilon>0, t>0, x \in X) .
+\]"
+10,10.12,Theorem,8,functional/10.12 Theorem_10_8.jpg,"
+\[
+M(r)=\max _{\theta}\left\|f\left(r e^{i \theta}\right)\right\| \quad(r>\rho(x))
+\]"
+3,3.18,Theorem,7,functional/3.18 Theorem_3_7.jpg,"
+\[
+\|x\| \leq \gamma \quad(x \in E) .
+\]"
+9,9.2,Lemma,5,functional/9.2 Lemma_9_5.jpg,"$$
+\[
+\left|\lambda^{-n} g\left(\lambda^{-1} x\right)-\lambda^{-n} g\left(\lambda^{-1}(x-y)\right)\right| .
+\]"
+13,13.38,Theorem,11,functional/13.38 Theorem_13_11.jpg,"
+\[
+\int_{\Delta}\left|a_{2 \varepsilon}-a_{\varepsilon}\right| d E_{x, x} \leq \frac{\varepsilon}{2} C_{x} \quad(0<\delta \leq 1)
+\]"
+10,10.12,Theorem,12,functional/10.12 Theorem_10_12.jpg,"
+\[
+\lambda^{n} e-x^{n}=(\lambda e-x)\left(\lambda^{n-1} e+\cdots+x^{n-1}\right)
+\]"
+6,6.25,Theorem,1,functional/6.25 Theorem_6_1.jpg,"
+\[
+\Lambda=\sum_{|\alpha| \leq N} c_{\alpha} D^{\alpha} \delta_{p}
+\]"
+7,7.4,and,2,functional/7.4 and from Theorem_7_2.jpg,"
+\[
+\hat{\mathbf{1}}(\phi)=1(\hat{\phi})=\int_{R^{n}} \hat{\phi} d m_{n}=\phi=\delta(\phi)
+\]"
+9,9.6,Definition,4,functional/9.6 Definition_9_4.jpg,"
+\[
+\lim _{|x| \rightarrow \infty}(f * \psi)(x)=0
+\]"
+6,6.29,Definition,4,functional/6.29 Definition_6_4.jpg,"
+\[
+(u * v)(x)=\int_{R^{n}} u(y)\left(\tau_{x} \check{v}\right)(y) d y
+\]"
+6,6.29,Definition,5,functional/6.29 Definition_6_5.jpg," $\quad(u * \phi)(x)=u\left(\tau_{x} \varnothing\right) \quad\left(u \in \mathscr{D}^{\prime}, \phi \in \mathscr{D}, x \in R^{n}\right)$,"
+9,9.6,Definition,5,functional/9.6 Definition_9_5.jpg,"
+\[
+\left\|f * \psi-f_{i} * \psi\right\|_{\infty} \leq\left\|f-f_{i}\right\|_{1}\|\psi\|_{\infty},
+\]"
+7,7.4,and,3,functional/7.4 and from Theorem_7_3.jpg,"
+\[
+\hat{\delta}(\phi)=\delta(\hat{\phi})=\hat{\phi}=\int_{R^{n}} \phi d m_{n}=1(\phi)
+\]"
+12,12.41,Theorem,1,functional/12.41 Theorem_12_1.jpg,"
+\[
+\sum_{u}\left\|\pi_{u}(v)\right\|^{2}<\infty
+\]"
+10,10.12,Theorem,13,functional/10.12 Theorem_10_13.jpg,"
+\[
+\rho(x) \leq \inf _{n \geq 1}\left\|x^{n}\right\|^{1 / n}
+\]"
+13,13.38,Theorem,10,functional/13.38 Theorem_13_10.jpg,"
+\[
+\int_{\Delta}\left|a_{\varepsilon}\right|^{2} d E_{x, x}=\left\|A_{\varepsilon} x\right\|^{2} \leq C_{x} \quad(0<\varepsilon \leq 1)
+\]"
+9,9.2,Lemma,4,functional/9.2 Lemma_9_4.jpg,"
+\[
+h_{\lambda}(x)=\int_{R^{n}} f(y)\left[e^{-i t \cdot y} g_{\lambda}(x)-g_{\lambda}(x-y)\right] d m_{n}(y)
+\]"
+3,3.18,Theorem,6,functional/3.18 Theorem_3_6.jpg,"
+\[
+\sup _{x \in E}|\Lambda x|<\infty \quad\left(\Lambda \in X^{*}\right)
+\]"
+13,13.23,and,3,functional/13.23 and Theorem_13_3.jpg," and hence (b).
+se now that $x \in \mathscr{D}_{r}$ and $y \in \mathscr{D}_{\bar{r}}=\mathscr{D}_{r}$. It follows from "
+10,10.12,Theorem,9,functional/10.12 Theorem_10_9.jpg,"$$
+\[
+\left\|x^{n}\right\| \leq r^{n+1} M(r),
+\]"
+13,13.35,Theorem,4,functional/13.35 Theorem_13_4.jpg,"
+\[
+M_{t} x=\frac{1}{t} \int_{0}^{t} Q(s) x d s \quad(x \in X, t>0)
+\]"
+6,6.17,Theorem,2,functional/6.17 Theorem_6_2.jpg,"$$
+\[
+D^{\alpha} \Lambda_{i} \rightarrow D^{\alpha} \Lambda \text { in } \mathscr{D}^{\prime}(\Omega),
+\]"
+13,13.35,Theorem,19,functional/13.35 Theorem_13_19.jpg,"
+\[
+R(\lambda)(\lambda I-A) x=x \quad(x \in \mathscr{D}(A)) .
+\]"
+8,8.9,Theorem,7,functional/8.9 Theorem_8_7.jpg,"
+\[
+\int_{R^{n}}|F|^{2} d \mu_{s} \leq 2^{|s|} \gamma\|f\|_{t}^{2}\|u\|_{s}^{2}
+\]"
+6,6.1,Definition,2,functional/6.1 Definition_6_2.jpg,"$$
+\[
+\int f^{(k)} \phi=(-1)^{k} \int f \phi^{(k)} \quad(\phi \in \mathscr{D}, k=1,2,3, \ldots)
+\]"
+8,8.9,Theorem,5,functional/8.9 Theorem_8_5.jpg,"
+\[
+\left|(f u)^{\wedge}\right|=|\hat{u} * \hat{f}| \leq|\hat{u}| *|\hat{f}|=F .
+\]"
+3,3.30,Definition,7,functional/3.30 Definition_3_7.jpg,"
+\[
+\left\{\frac{f(z)-f}{z}: 0<|z| \leq r\right\}
+\]"
+1,1.39,Theorem,1,functional/1.39 Theorem_1_1.jpg,"
+\[
+\|x\|=\mu(x) \quad(x \in X)
+\]"
+11,11.11,Lemma,11,functional/11.11 Lemma_11_11.jpg,"
+\[
+\mu\left(E^{0}\right)=\mu(E)=\mu(\bar{E}) .
+\]"
+3,3.20,Theorem,8,functional/3.20 Theorem_3_8.jpg,"
+\[
+\left(a_{1}, \ldots, a_{k+1}\right) \rightarrow\left(\sum_{1}^{k+1} a_{i} x_{i}, \sum_{1}^{k+1} a_{i}\right)
+\]"
+13,13.35,Theorem,6,functional/13.35 Theorem_13_6.jpg,"
+\[
+A M_{t} x=A_{t} x \quad(x \in X) .
+\]"
+12,12.38,Theorem,8,functional/12.38 Theorem_12_8.jpg,"
+\[
+S T=M_{\lambda}=T S .
+\]"
+13,13.32,Theorem,8,functional/13.32 Theorem_13_8.jpg,"
+\[
+\mathscr{R}\left(P_{i}\right) \subset \mathscr{D}(N) \quad(i=1,2,3, \ldots)
+\]"
+3,3.18,Theorem,4,functional/3.18 Theorem_3_4.jpg,"
+\[
+|\Lambda x| \leq \gamma \quad(x \in E, \Lambda \in K) .
+\]"
+9,9.2,Lemma,6,functional/9.2 Lemma_9_6.jpg, $\quad\left\|h_{\lambda}\right\|_{1} \leq \int_{R^{n}}|f(y)| d m_{n}(y) \int_{R^{n}}\left|g(\xi)-g\left(\xi-\lambda^{-1} y\right)\right| d m_{n}(\xi)$
+13,13.38,Theorem,12,functional/13.38 Theorem_13_12.jpg,"$$
+\[
+\sum_{n=1}^{\infty}\left|a_{2-n+1}-a_{2-n}\right|<\infty \quad \text { a.e. }\left[E_{x, x}\right]
+\]"
+10,10.12,Theorem,11,functional/10.12 Theorem_10_11.jpg,"
+\[
+\underset{n \rightarrow \infty}{\lim \sup }\left\|x^{n}\right\|^{1 / n} \leq \rho(x)
+\]"
+6,6.25,Theorem,2,functional/6.25 Theorem_6_2.jpg,"
+\[
+\delta_{p}(\phi)=\phi(p) .
+\]"
+12,12.41,Theorem,3,functional/12.41 Theorem_12_3.jpg,"
+\[
+\pi_{u}(S v)=S_{u} \pi_{u}(v)
+\]"
+7,7.7,The,7,functional/7.7 The Inversion Theorem_7_7.jpg,"$$
+\[
+\int_{R^{n}} f_{0} \hat{g} d m_{n}=\int_{R^{n}} f \hat{g} d m_{n} \quad\left(g \in \mathscr{S}_{n}\right)
+\]"
+7,7.4,and,1,functional/7.4 and from Theorem_7_1.jpg,"$$
+\[
+1(\phi)=\int_{R^{n}} 1 \phi d m_{n}=\int_{R^{n}} \phi d m_{n}
+\]"
+9,9.6,Definition,7,functional/9.6 Definition_9_7.jpg,"
+\[
+\lim _{|x| \rightarrow \infty}(f * \phi)(x)=a
+\]"
+9,9.6,Definition,6,functional/9.6 Definition_9_6.jpg,"
+\[
+\left(\left(\tau_{y} f\right) * \psi\right)(x)=\left(\tau_{y}(f * \psi)\right)(x)=(f * \psi)(x-y),
+\]"
+6,6.29,Definition,6,functional/6.29 Definition_6_6.jpg,"
+\[
+\left(\tau_{x} u\right)(\phi)=u\left(\tau_{-x} \phi\right) \quad\left(\phi \in \mathscr{D}, x \in R^{n}\right)
+\]"
+7,7.7,The,6,functional/7.7 The Inversion Theorem_7_6.jpg,"
+\[
+\Phi^{2} g=\check{g}
+\]"
+12,12.41,Theorem,2,functional/12.41 Theorem_12_2.jpg,"
+\[
+\left(v^{\prime}, v^{\prime \prime}\right)=\sum_{u}\left(\pi_{u}\left(v^{\prime}\right), \pi_{u}\left(v^{\prime \prime}\right)\right) \quad\left(v^{\prime}, v^{\prime \prime} \in H\right)
+\]"
+6,6.25,Theorem,3,functional/6.25 Theorem_6_3.jpg, $\left(D^{\alpha} \phi\right)=0 \quad$ for all $\alpha$ with $|\alpha| \leq N$.
+10,10.12,Theorem,10,functional/10.12 Theorem_10_10.jpg,"
+\[
+\lim _{n \rightarrow \infty} \sup \left\|x^{n}\right\|^{1 / n} \leq r \quad(r>\rho(x))
+\]"
+13,13.38,Theorem,13,functional/13.38 Theorem_13_13.jpg,"
+\[
+\int_{\Delta}|b|^{2} d E_{x, x} \leq C_{x}
+\]"
+3,3.18,Theorem,5,functional/3.18 Theorem_3_5.jpg,"
+\[
+E \subset t \bar{V} \subset t U \quad(t>\gamma)
+\]"
+13,13.32,Theorem,9,functional/13.32 Theorem_13_9.jpg,"
+\[
+\left(N P_{i}\right)^{*} \subset\left(P_{i} N\right)^{*}=N^{*} P_{i}
+\]"
+7,7.19,Theorem,8,functional/7.19 Theorem_7_8.jpg,"
+\[
+((u * \phi) * \psi)=(u *(\phi * \psi)) \text {. }
+\]"
+12,12.38,Theorem,9,functional/12.38 Theorem_12_9.jpg,"$$
+\[
+\left(M_{\lambda} g\right)(z)=(z-\lambda) g(z) \quad(z \in D, g \in H)
+\]"
+13,13.35,Theorem,7,functional/13.35 Theorem_13_7.jpg,"
+\[
+A_{t} x=M_{t} y .
+\]"
+11,11.7,illustrate,4,"functional/11.7 illustrate this point. 11.5, Theorem_11_4.jpg","
+\[
+h(P)=P(y),
+\]"
+11,11.11,Lemma,10,functional/11.11 Lemma_11_10.jpg,"
+\[
+\int_{\Delta} \hat{f} d \mu=\int_{0}^{1} f d m
+\]"
+3,3.30,Definition,6,functional/3.30 Definition_3_6.jpg,"
+\[
+\left|z^{-1} \Lambda[f(z)-f]\right| \leq r^{-1} M(\Lambda) .
+\]"
+8,8.9,Theorem,4,functional/8.9 Theorem_8_4.jpg, $\quad \int_{R^{n}}|h(x-y)|^{2} d \mu_{s}(x) \leq 2^{|s|}\left(1+|y|^{2}\right)^{|s|} \int_{R^{n}}|h|^{2} d \mu_{s}$
+13,13.36,Theorem,9,functional/13.36 Theorem_13_9.jpg,"
+\[
+T(t, \varepsilon)=\exp (t A S(\varepsilon))
+\]"
+7,7.23,Theorem,8,functional/7.23 Theorem_7_8.jpg,"
+\[
+f(z)=u\left(\phi_{z}\right) .
+\]"
+13,13.35,Theorem,3,functional/13.35 Theorem_13_3.jpg,"
+\[
+\|Q(t)\|=\left\|Q(t / n)^{n}\right\| \leq C^{n} \leq C^{1+t / \delta},
+\]"
+13,13.38,Theorem,17,functional/13.38 Theorem_13_17.jpg,"$$
+\[
+Q(t)=e^{t B} \quad(0 \leq t<\infty)
+\]"
+3,3.18,Theorem,1,functional/3.18 Theorem_3_1.jpg, $K=\left\{\Lambda \in X^{*}:|\Lambda x| \leq 1\right.$ for all $\left.x \in V\right\}$.
+9,9.2,Lemma,3,functional/9.2 Lemma_9_3.jpg,"
+\[
+h_{\lambda}(x)=\hat{f}(t) g_{\lambda}(x)-\left(f * g_{\lambda}\right)(x)
+\]"
+13,13.6,Theorem,2,functional/13.6 Theorem_13_2.jpg,"$$
+\[
+\|\{a, b\}\|^{2}=\|a\|^{2}+\|b\|^{2} .
+\]"
+6,6.25,Theorem,7,functional/6.25 Theorem_6_7.jpg," $\quad\left|\left(\operatorname{grad} D^{\beta} \phi\right)(x)\right| \leq n \cdot \eta n^{N-i}|x|^{N-i} \quad(x \in K)$,"
+12,12.41,Theorem,6,functional/12.41 Theorem_12_6.jpg,"
+\[
+\left\|T_{u}(x)\right\| \leq\|x\|=\left\|T_{x}(x)\right\|,
+\]"
+1,1.40,Definition,2,functional/1.40 Definition_1_2.jpg," $\quad \pi(x)+\pi(y)=\pi\left(x^{\prime}\right)+\pi\left(y^{\prime}\right), \quad \alpha \pi\left(x^{\prime}\right)=\alpha \pi(x)$."
+6,6.29,Definition,2,functional/6.29 Definition_6_2.jpg,"
+\[
+\left(\tau_{x} \check{u}\right)(y)=\check{u}(y-x)=u(x-y) .
+\]"
+7,7.4,and,4,functional/7.4 and from Theorem_7_4.jpg, $\hat{1}=\delta \quad$ and $\quad \hat{\delta}=1$
+9,9.6,Definition,2,functional/9.6 Definition_9_2.jpg," $\quad|\phi(x)-\phi(y)|<\varepsilon \quad$ if $x>A, y>A,|x-y|<\delta$."
+9,9.6,Definition,3,functional/9.6 Definition_9_3.jpg,"
+\[
+\lim _{|x| \rightarrow \infty} \phi(x)=a
+\]"
+7,7.4,and,5,functional/7.4 and from Theorem_7_5.jpg, $\quad(P(D) \delta)^{\wedge}=P \quad$ and $\quad \hat{P}=P(-D) \delta$.
+6,6.29,Definition,3,functional/6.29 Definition_6_3.jpg,"
+\[
+(u * v)(x)=\int_{R^{n}} u(y) v(x-y) d y
+\]"
+12,12.41,Theorem,7,functional/12.41 Theorem_12_7.jpg,"
+\[
+\|T(x)\|=\sup _{u}\left\|T_{u}(x)\right\|=\|x\| .
+\]"
+6,6.25,Theorem,6,functional/6.25 Theorem_6_6.jpg," $\operatorname{grad} D^{\beta} \phi=\left(D_{1} D^{\beta} \phi, \ldots, D_{n} D^{\beta} \phi\right)$"
+13,13.6,Theorem,3,functional/13.6 Theorem_13_3.jpg,"
+\[
+V\{a, b\}=\{-b, a\} \quad(a \in H, b \in H)
+\]"
+9,9.2,Lemma,2,functional/9.2 Lemma_9_2.jpg,"
+\[
+g_{\lambda}(x)=e^{i t \cdot x} \lambda^{-n} g(x / \lambda) \quad\left(x \in R^{n}\right)
+\]"
+13,13.38,Theorem,16,functional/13.38 Theorem_13_16.jpg,$Q(t) x=e^{t B} x \quad[x \in \mathscr{D}(A)]$.
+13,13.35,Theorem,2,functional/13.35 Theorem_13_2.jpg,"
+\[
+Q(s+t)=Q(s) Q(t)
+\]"
+11,11.7,illustrate,1,"functional/11.7 illustrate this point. 11.5, Theorem_11_1.jpg","
+\[
+J=\{a x+y: a \in A, y \in M\} .
+\]"
+7,7.23,Theorem,9,functional/7.23 Theorem_7_9.jpg,"
+\[
+|f(z)| \leq \gamma_{0}\left\|\phi_{z}\right\|_{N} .
+\]"
+3,3.30,Definition,3,functional/3.30 Definition_3_3.jpg,"
+\[
+\int_{\Gamma_{1}} f(\zeta) d \zeta=\int_{\Gamma_{2}} f(\zeta) d \zeta
+\]"
+8,8.9,Theorem,1,functional/8.9 Theorem_8_1.jpg,"
+\[
+|\hat{u}(y)| \leq C\left(1^{*}+|y|\right)^{N} \quad\left(y \in R^{n}\right)
+\]"
+13,13.36,Theorem,8,functional/13.36 Theorem_13_8.jpg,"
+\[
+\lim _{\varepsilon \rightarrow 0} S(\varepsilon) x=x
+\]"
+8,8.9,Theorem,3,functional/8.9 Theorem_8_3.jpg,"
+\[
+\left(1+|x+y|^{2}\right)^{s} \leq 2^{|s|}\left(1+|x|^{2}\right)^{s}\left(1+|y|^{2}\right)^{|s|},
+\]"
+3,3.30,Definition,1,functional/3.30 Definition_3_1.jpg, to  exist. ordinary holo-
+11,11.11,Lemma,8,functional/11.11 Lemma_11_8.jpg,"
+\[
+b(x+y)=b(x) b(y) \quad\left(x, y \in R^{n}\right) .
+\]"
+12,12.16,Theorem,8,functional/12.16 Theorem_12_8.jpg,"
+\[
+\left\|\exp \left(M^{*}\right) T \exp \left(-N^{*}\right)\right\| \leq\|T\| .
+\]"
+11,11.7,illustrate,3,"functional/11.7 illustrate this point. 11.5, Theorem_11_3.jpg","
+\[
+h\left(g_{r}\right)=\exp \left(i y_{r}\right)=g_{r}(y) \quad(1 \leq r \leq n),
+\]"
+13,13.38,Theorem,14,functional/13.38 Theorem_13_14.jpg,"$$
+\[
+\operatorname{Re} b(p) \leq \gamma \quad(p \in \Delta)
+\]"
+13,13.6,Theorem,1,functional/13.6 Theorem_13_1.jpg,"
+\[
+x^{n} y-y x^{n}=n x^{n-1} \neq 0
+\]"
+3,3.18,Theorem,2,functional/3.18 Theorem_3_2.jpg,$$ $\bar{V}=\{x \in X:|\Lambda x| \leq 1 \quad$ for all $\Lambda \in K\}$
+6,6.25,Theorem,4,functional/6.25 Theorem_6_4.jpg,"
+\[
+\left|D^{\alpha} \phi\right| \leq \eta \text { in } K, \quad \text { if }|\alpha|=N .
+\]"
+12,12.41,Theorem,5,functional/12.41 Theorem_12_5.jpg,"
+\[
+\pi_{u}(T(x) v)=T_{u}(x)\left(\pi_{u}(v)\right)
+\]"
+1,1.40,Definition,1,functional/1.40 Definition_1_1.jpg,"
+\[
+\pi(x)+\pi(y)=\pi(x+y), \quad \alpha \pi(x)=\pi(\alpha x) .
+\]"
+9,9.6,Definition,1,functional/9.6 Definition_9_1.jpg," $\quad|\phi(x)-\phi(y)|<\varepsilon \quad$ if $|x|>A,|y|>A,|x-y|<\delta$."
+6,6.29,Definition,1,functional/6.29 Definition_6_1.jpg," $\quad\left(\tau_{x} u\right)(y)=u(y-x), \quad \check{u}(y)=u(-y) \quad\left(y \in R^{n}\right)$."
+7,7.4,and,6,functional/7.4 and from Theorem_7_6.jpg,"
+\[
+\check{u}(\phi)=u(\varnothing) \quad\left(\phi \in \mathscr{S}_{n}\right) .
+\]"
+12,12.41,Theorem,4,functional/12.41 Theorem_12_4.jpg,"
+\[
+\|S\|=\sup _{u}\left\|S_{u}\right\| .
+\]"
+9,9.2,Lemma,1,functional/9.2 Lemma_9_1.jpg,"
+\[
+\hat{h}(s)=\hat{f}(t)-\hat{f}(s)
+\]"
+3,3.18,Theorem,3,functional/3.18 Theorem_3_3.jpg,"
+\[
+|\Lambda x| \leq \gamma(\Lambda) \quad(x \in E) .
+\]"
+13,13.38,Theorem,15,functional/13.38 Theorem_13_15.jpg," $\left\|\exp \left(t A_{\varepsilon}\right) x-\exp (t B) x\right\|^{2}=\int_{\Delta}\left|\exp \left(t a_{\varepsilon}\right)-\exp (t b)\right|^{2} d E_{x, x}$"
+8,8.4,Theorem,8,functional/8.4 Theorem_8_8.jpg,"
+\[
+P(D)\left(\tau_{x} u\right)=\tau_{x} v \quad\left(x \in R^{n}\right)
+\]"
+11,11.7,illustrate,2,"functional/11.7 illustrate this point. 11.5, Theorem_11_2.jpg","
+\[
+\frac{1}{f(x)}=\sum b_{m} e^{i m \cdot x} \quad \text { with } \quad \sum\left|b_{m}\right|<\infty \text {. }
+\]"
+13,13.35,Theorem,1,functional/13.35 Theorem_13_1.jpg,"
+\[
+\|Q(t) x-x\| \rightarrow 0 \quad \text { as } t \rightarrow 0 .
+\]"
+12,12.16,Theorem,9,functional/12.16 Theorem_12_9.jpg, $\quad f(\lambda)=\exp \left(\lambda M^{*}\right) T \exp \left(-\lambda N^{*}\right) \quad(\lambda \in \mathscr{C})$.
+11,11.11,Lemma,9,functional/11.11 Lemma_11_9.jpg,"$$
+\[
+b(x)=e^{-i x \cdot t} \quad\left(x \in R^{n}\right)
+\]"
+8,8.9,Theorem,2,functional/8.9 Theorem_8_2.jpg,"
+\[
+\left\|D_{\alpha} u\right\|_{s-|\alpha|} \leq\|u\|_{s}
+\]"
+12,12.34,Theorem,2,functional/12.34 Theorem_12_2.jpg," $\quad\left(P^{2} x, x\right)=(P x, P x)=\|P x\|^{2} \quad(x \in H)$."
+8,8.7,Definition,3,functional/8.7 Definition_8_3.jpg,"
+\[
+\sum_{|\alpha|=N} f_{\alpha} D_{\alpha}
+\]"
+13,13.36,Theorem,6,functional/13.36 Theorem_13_6.jpg," $\quad\left\|S(\varepsilon)^{m}\right\| \leq C(1-\varepsilon \gamma)^{-m} \quad\left(0<\varepsilon<\varepsilon_{0}, m=1,2,3, \ldots\right)$,"
+6,6.20,Theorem,4,functional/6.20 Theorem_6_4.jpg, $\psi_{1}(x)+\cdots+\psi_{m}(x)=1 \quad$ if $x \in V_{1} \cup \cdots \cup V_{m}$.
+13,13.17,Definition,6,functional/13.17 Definition_13_6.jpg,"
+\[
+U=(T-i I)(T+i I)^{-1}
+\]"
+3,3.20,Theorem,2,functional/3.20 Theorem_3_2.jpg,"
+\[
+\alpha f(s, a)+\beta f(t, b)=f(u, c)
+\]"
+11,11.11,Lemma,4,functional/11.11 Lemma_11_4.jpg,"
+\[
+\|\hat{x}\|_{\infty}=\rho(x) \geq r\|x\| \quad(x \in A) .
+\]"
+7,7.23,Theorem,7,functional/7.23 Theorem_7_7.jpg, $\quad \phi_{z}(t)=e^{-i z \cdot t} h(|t||z|-r|z|) \quad\left(t \in R^{n}\right)$.
+11,11.8,Definition,1,functional/11.8 Definition_11_1.jpg,"
+\[
+\hat{x}(h)=h(x) \quad(h \in \Delta)
+\]"
+6,6.36,Definition,6,functional/6.36 Definition_6_6.jpg, $\quad((u * v) * w) * \phi=(u * v) *(w * \phi)=u *(v *(w * \phi))$
+13,13.35,Theorem,11,functional/13.35 Theorem_13_11.jpg,"
+\[
+\varphi^{\prime}(s)=\left\{\exp \left((t-s) A_{\varepsilon}\right)\right\} Q(s)\left(A x-A_{\varepsilon} x\right) .
+\]"
+12,12.28,Theorem,4,functional/12.28 Theorem_12_4.jpg,"
+\[
+f_{n}(T) f(T)=E\left(\omega_{n}\right) \quad(n=1,2,3, \ldots) .
+\]"
+12,12.16,Theorem,4,functional/12.16 Theorem_12_4.jpg, $\quad\left\|\exp \left(S-S^{*}\right)\right\|=1 \quad$ for every $S \in \mathscr{B}(H)$.
+12,12.38,Theorem,2,functional/12.38 Theorem_12_2.jpg,"
+\[
+\int_{D}|f|^{2} d m_{2}<\infty
+\]"
+7,7.23,Theorem,10,functional/7.23 Theorem_7_10.jpg,"
+\[
+\left|e^{-i z \cdot t}\right|=e^{y \cdot t} \leq e^{2+r|\operatorname{Im} z|}
+\]"
+7,7.19,Theorem,3,functional/7.19 Theorem_7_3.jpg," $\quad p_{N}\left(\tau_{x} f\right) \leq 2^{N}\left(1+|x|^{2}\right)^{N} p_{N}(f) \quad\left(x \in R^{n}, f \in \mathscr{S}_{n}\right)$."
+10,10.12,Theorem,1,functional/10.12 Theorem_10_1.jpg,"
+\[
+\rho(x)=\lim _{n \rightarrow \infty}\left\|x^{n}\right\|^{1 / n}=\inf _{n \geq 1}\left\|x^{n}\right\|^{1 / n}
+\]"
+12,12.8,Theorem,6,functional/12.8 Theorem_12_6.jpg,"
+\[
+T^{* *}=T \text {. }
+\]"
+13,13.32,Theorem,2,functional/13.32 Theorem_13_2.jpg,"
+\[
+\left\|y_{i}-x\right\| \rightarrow 0 \text { as } i \rightarrow \infty
+\]"
+11,11.18,Theorem,1,functional/11.18 Theorem_11_1.jpg,"$$
+\[
+h\left(x^{*}\right)=\overline{h(x)} \quad(x \in A, h \in \Delta)
+\]"
+12,12.7,Theorem,1,functional/12.7 Theorem_12_1.jpg,"
+\[
+(T x, y)+(T y, x)=0 \quad(x \in H, y \in H) .
+\]"
+10,10.8,Lemma,2,functional/10.8 Lemma_10_2.jpg,"
+\[
+|g(\lambda)| \leq|2 r-g(\lambda)| \quad(|\lambda| \leq r)
+\]"
+13,13.38,Theorem,18,functional/13.38 Theorem_13_18.jpg,"$$
+\[
+A_{\varepsilon} x-B x=\left(\frac{e^{\varepsilon B}-I}{\varepsilon}-B\right) x
+\]"
+12,12.21,Theorem,12,functional/12.21 Theorem_12_12.jpg,"
+\[
+\|\Psi(s) x\| \leq\|s\|_{\infty}\|x\|,
+\]"
+6,6.25,Theorem,8,functional/6.25 Theorem_6_8.jpg,"
+\[
+\psi_{r}(x)=\psi\left(\frac{x}{r}\right) \quad\left(r>0, x \in R^{n}\right)
+\]"
+13,13.19,Theorem,14,functional/13.19 Theorem_13_14.jpg," $\quad 2 i V z=S x-i x, \quad 2 i z=S x+i x \quad[z \in \mathscr{D}(V)]$,"
+9,9.13,Theorem,6,functional/9.13 Theorem_9_6.jpg,"
+\[
+\mu=\mu_{a}+\mu_{s},
+\]"
+10,10.19,Theorem,2,functional/10.19 Theorem_10_2.jpg,"$$
+\[
+\left\|y_{n}\right\|\left\|y_{n}^{-1}\right\| \leq M\|e\| \quad(n=1,2,3, \ldots) .
+\]"
+10,10.9,Theorem,14,functional/10.9 Theorem_10_14.jpg,"
+\[
+f(\lambda)=\phi(E(\lambda)) \quad(\lambda \in \mathscr{C}) .
+\]"
+10,10.9,Theorem,15,functional/10.9 Theorem_10_15.jpg,"
+\[
+E(\lambda) E(-\lambda)=E=e \quad(\lambda \in \mathbb{C})
+\]"
+10,10.19,Theorem,3,functional/10.19 Theorem_10_3.jpg,"
+\[
+f(\zeta)=\frac{1}{2 \pi i} \int_{\Gamma}(\lambda-\zeta)^{-1} f(\lambda) d \lambda
+\]"
+10,10.27,Theorem,3,functional/10.27 Theorem_10_3.jpg,"
+\[
+\tilde{h}(x)=\tilde{f}(x) \tilde{g}(x) \quad\left(x \in A_{\Omega}\right)
+\]"
+8,8.3,Lemma,6,functional/8.3 Lemma_8_6.jpg,"
+\[
+r^{N}\left|P_{N}(w)\right||f(z)| \leq \frac{1}{2 \pi} \int_{-\pi}^{\pi}\left|(f P)\left(z+r e^{i \theta} w\right)\right| d \theta
+\]"
+13,13.19,Theorem,15,functional/13.19 Theorem_13_15.jpg,"
+\[
+V(S x+i x)=S x-i x \quad[x \in \mathscr{D}(S)]
+\]"
+12,12.21,Theorem,13,functional/12.21 Theorem_12_13.jpg,"$\Psi(s) x=\alpha_{j} E\left(\omega_{j}\right) x=\alpha_{j} x$,"
+13,13.38,Theorem,19,functional/13.38 Theorem_13_19.jpg,"$$
+\[
+\left\|A_{\varepsilon} x-B x\right\|^{2}=\int_{\Delta}\left|\frac{e^{\varepsilon b}-1}{\varepsilon}-b\right|^{2} d E_{x, x} .
+\]"
+10,10.8,Lemma,3,functional/10.8 Lemma_10_3.jpg,"
+\[
+h_{r}(\lambda)=\frac{r^{2} g(\lambda)}{\lambda^{2}[2 r-g(\lambda)]}
+\]"
+13,13.32,Theorem,3,functional/13.32 Theorem_13_3.jpg,"
+\[
+\left\|N y_{i}-N x\right\| \rightarrow 0 \text { as } i \rightarrow \infty .
+\]"
+12,12.8,Theorem,7,functional/12.8 Theorem_12_7.jpg,"
+\[
+\left\|T^{*} T\right\|=\|T\|^{2}
+\]"
+7,7.19,Theorem,2,functional/7.19 Theorem_7_2.jpg," $\quad 1+|x+y|^{2} \leq 2\left(1+|x|^{2}\right)\left(1+|y|^{2}\right) \quad\left(x, y \in R^{n}\right)$"
+12,12.28,Theorem,5,functional/12.28 Theorem_12_5.jpg,"
+\[
+\mathscr{N}(f(T)) \subset \mathscr{R}\left(E\left(\omega_{0}\right)\right)
+\]"
+7,7.23,Theorem,11,functional/7.23 Theorem_7_11.jpg,"
+\[
+|f(x)| \leq \gamma(1+|x|)^{N} \quad\left(x \in R^{n}\right) .
+\]"
+12,12.38,Theorem,3,functional/12.38 Theorem_12_3.jpg,"
+\[
+(f, g)=\int_{D} f \bar{g} d m_{2}
+\]"
+12,12.16,Theorem,5,functional/12.16 Theorem_12_5.jpg,"
+\[
+\exp (M) T=T \exp (N),
+\]"
+7,7.23,Theorem,6,functional/7.23 Theorem_7_6.jpg,"
+\[
+F=\int_{\Gamma} e_{-a-\lambda b} d \lambda
+\]"
+13,13.35,Theorem,10,functional/13.35 Theorem_13_10.jpg, $\varphi(s)=\left\{\exp \left((t-s) A_{\varepsilon}\right)\right\} Q(s) x \quad(0 \leq s \leq t)$.
+11,11.11,Lemma,5,functional/11.11 Lemma_11_5.jpg,"
+\[
+|P(w)| \leq\left\|P\left(x_{1}, \ldots, x_{n}\right)\right\|
+\]"
+3,3.20,Theorem,3,functional/3.20 Theorem_3_3.jpg,"
+\[
+c_{i}=\frac{\alpha s_{i} a_{i}+\beta t_{i} b_{i}}{\alpha s_{i}+\beta t_{i}} \in A_{i} \quad(1 \leq i \leq n)
+\]"
+13,13.36,Theorem,7,functional/13.36 Theorem_13_7.jpg,"
+\[
+(I-\varepsilon A) S(\varepsilon) x=x=S(\varepsilon)(I-\varepsilon A) x
+\]"
+1,1.10,Theorem,1,functional/1.10 Theorem_1_1.jpg,"$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]"
+8,8.7,Definition,2,functional/8.7 Definition_8_2.jpg,"
+\[
+L u=\sum_{|\alpha| \leq N} f_{\alpha} D_{\alpha} u
+\]"
+13,13.17,Definition,5,functional/13.17 Definition_13_5.jpg,"
+\[
+U(T x+i x)=T x-i x \quad(x \in \mathscr{D}(T))
+\]"
+3,3.20,Theorem,1,functional/3.20 Theorem_3_1.jpg,"
+\[
+f(s, a)=s_{1} a_{1}+\cdots+s_{n} a_{n}
+\]"
+7,7.3,Definition,1,functional/7.3 Definition_7_1.jpg,"$$
+\[
+\sup _{|\alpha| \leq N} \sup _{x \in R^{n}}\left(1+|x|^{2}\right)^{N}\left|\left(D_{\alpha} f\right)(x)\right|<\infty
+\]"
+13,13.35,Theorem,12,functional/13.35 Theorem_13_12.jpg,"$$
+\[
+\left\|\varphi^{\prime}(s)\right\| \leq K(t)\left\|A x-A_{\varepsilon} x\right\|
+\]"
+6,6.36,Definition,5,functional/6.36 Definition_6_5.jpg, $\quad(u *(v * w)) * \phi=u *((v * w) * \phi)=u *(v *(w * \phi))$.
+7,7.23,Theorem,4,functional/7.23 Theorem_7_4.jpg,"
+\[
+\hat{u}(x)=u\left(e_{-x}\right) \quad\left(x \in R^{n}\right) .
+\]"
+11,11.11,Lemma,7,functional/11.11 Lemma_11_7.jpg,"
+\[
+h_{\infty}(f+\alpha \delta)=\alpha
+\]"
+12,12.38,Theorem,1,functional/12.38 Theorem_12_1.jpg,"
+\[
+\Omega=\left\{\alpha \in \mathbb{C}: \alpha^{2} \in D\right\}
+\]"
+12,12.16,Theorem,7,functional/12.16 Theorem_12_7.jpg,"
+\[
+\exp \left(M^{*}\right) T \exp \left(-N^{*}\right)=U_{1} T U_{2}
+\]"
+13,13.23,and,8,functional/13.23 and Theorem_13_8.jpg," $\Psi(f) \Psi(g) x=\Psi(f g) x \quad\left(x \in \mathscr{D}_{g}, f \in L^{\infty}\right)$."
+10,10.12,Theorem,2,functional/10.12 Theorem_10_2.jpg,"
+\[
+\rho(x) \leq\|x\|
+\]"
+13,13.32,Theorem,1,functional/13.32 Theorem_13_1.jpg,"
+\[
+\|N y\|=\left\|N^{*} y\right\| \quad \text { if } y \in \mathscr{D}\left(N^{*} N\right) .
+\]"
+12,12.8,Theorem,5,functional/12.8 Theorem_12_5.jpg,"
+\[
+(S T)^{*}=T^{*} S^{*} \text {. }
+\]"
+12,12.7,Theorem,2,functional/12.7 Theorem_12_2.jpg," $\quad-i(T x, y)+i(T y, x)=0 \quad(x \in H, y \in H)$."
+11,11.18,Theorem,2,functional/11.18 Theorem_11_2.jpg,"
+\[
+\left(x^{*}\right)^{\wedge}=\overline{\hat{x}} \quad(x \in A) .
+\]"
+12,12.21,Theorem,11,functional/12.21 Theorem_12_11.jpg," $\|\Psi(s) x\|^{2}=\left(\Psi(s)^{*} \Psi(s) x, x\right)=\left(\Psi\left(|s|^{2}\right) x, x\right)=\int_{\Omega}|s|^{2} d E_{x, x}$"
+10,10.8,Lemma,1,functional/10.8 Lemma_10_1.jpg,"
+\[
+0<|f(\lambda)| \leq e^{|\lambda|} \quad(\lambda \in \mathscr{C})
+\]"
+10,10.27,Theorem,1,functional/10.27 Theorem_10_1.jpg, $\quad \tilde{f}(x)=\lim _{n \rightarrow \infty} \tilde{f}_{n}(x) \quad\left(x \in A_{\Omega}\right)$.
+9,9.13,Theorem,5,functional/9.13 Theorem_9_5.jpg,"$$
+\[
+\int_{R^{n}} f(x+y) d \mu(x)=0
+\]"
+10,10.19,Theorem,1,functional/10.19 Theorem_10_1.jpg," $\quad\|x\|\|y\| \leq M\|x y\| \quad(x \in A, y \in A)$,"
+9,9.13,Theorem,4,functional/9.13 Theorem_9_4.jpg,"
+\[
+\|\mu * \lambda\| \leq\|\mu\|\|\lambda\|,
+\]"
+8,8.3,Lemma,5,functional/8.3 Lemma_8_5.jpg," $\quad F(\lambda)=f(z+r \lambda w), \quad Q(\lambda)=P(z+r \lambda w) \quad(\lambda \in \mathscr{C})$."
+12,12.21,Theorem,10,functional/12.21 Theorem_12_10.jpg,"
+\[
+\Psi(s)^{*} \Psi(s)=\Psi(\bar{s}) \Psi(s)=\Psi(\bar{s} s)=\Psi\left(|s|^{2}\right)
+\]"
+11,11.18,Theorem,3,functional/11.18 Theorem_11_3.jpg,"
+\[
+\alpha^{2}+\beta^{2}+2 \beta t \leq\|u\|^{2} \quad(-\infty<t<\infty) .
+\]"
+12,12.7,Theorem,3,functional/12.7 Theorem_12_3.jpg,"
+\[
+(T x, y)=0 \quad(x \in H, y \in H) .
+\]"
+12,12.8,Theorem,4,functional/12.8 Theorem_12_4.jpg,"
+\[
+(\alpha T)^{*}=\bar{\alpha} T^{*} .
+\]"
+10,10.12,Theorem,3,functional/10.12 Theorem_10_3.jpg,"
+\[
+f(\lambda)=(\lambda e-x)^{-1} \quad(\lambda \in \Omega) .
+\]"
+13,13.23,and,9,functional/13.23 and Theorem_13_9.jpg," $\quad \int_{\Omega}|f|^{2} d E_{y, y}=\int_{\Omega}|f g|^{2} d E_{x, x} \quad\left(x \in \mathscr{D}_{g}, f \in L^{\infty}\right)$."
+7,7.23,Theorem,12,functional/7.23 Theorem_7_12.jpg,"
+\[
+f_{\varepsilon}(z)=f(z) \hat{h}_{\varepsilon}(z) \quad\left(z \in \mathbb{C}^{n}\right)
+\]"
+12,12.16,Theorem,6,functional/12.16 Theorem_12_6.jpg,"
+\[
+T=\exp (-M) T \exp (N)
+\]"
+7,7.19,Theorem,1,functional/7.19 Theorem_7_1.jpg,"
+\[
+\left(\frac{\tau_{-\varepsilon w}-\tau_{0}}{\varepsilon}\right)(u * \phi)=u *\left(\frac{\tau_{-\varepsilon w}-\tau_{0}}{\varepsilon}\right) \phi
+\]"
+11,11.11,Lemma,6,functional/11.11 Lemma_11_6.jpg,"
+\[
+h_{t}(f+\alpha \delta)=\hat{f}(t)+\alpha
+\]"
+13,13.35,Theorem,13,functional/13.35 Theorem_13_13.jpg,"
+\[
+\left\|Q(t) x-\left\{\exp \left(t A_{\varepsilon}\right)\right\} x\right\| \leq t K(t)\left\|A x-A_{\varepsilon} x\right\|,
+\]"
+6,6.36,Definition,4,functional/6.36 Definition_6_4.jpg,"
+\[
+(u * v)(\phi)=u\left((v * \varnothing)^{\vee}\right) .
+\]"
+11,11.8,Definition,3,functional/11.8 Definition_11_3.jpg,"
+\[
+W=\left\{\Lambda \in A^{*}:\left|\Lambda z_{i}-\Lambda_{0} z_{i}\right|<\varepsilon \text { for } 1 \leq i \leq 4\right\},
+\]"
+7,7.23,Theorem,5,functional/7.23 Theorem_7_5.jpg,"$$
+\[
+g(\lambda)=f(a+\lambda b)=u\left(e_{-a-\lambda b}\right) \quad(\lambda \in \mathbb{C})
+\]"
+7,7.17,Lemma,4,functional/7.17 Lemma_7_4.jpg, $\quad P \cdot D^{\alpha}\left(\psi_{\varepsilon} \hat{\phi}\right)=\sum_{\beta \leq \alpha} c_{\alpha \beta} P \cdot\left(D^{\alpha-\beta} \hat{\phi}\right) \cdot\left(D^{\beta} \psi_{\varepsilon}\right)$.
+13,13.17,Definition,4,functional/13.17 Definition_13_4.jpg," $\quad \mathscr{D}(U)=\mathscr{R}(T+i I), \quad \mathscr{R}(U)=\mathscr{R}(T-i I)$,"
+13,13.36,Theorem,4,functional/13.36 Theorem_13_4.jpg,"$$
+\[
+R(\lambda)^{m} x=\frac{1}{(m-1) !} \int_{0}^{\infty} t^{m-1} e^{-\lambda t} Q(t) x d t
+\]"
+8,8.7,Definition,1,functional/8.7 Definition_8_1.jpg,"
+\[
+L=\sum_{|\alpha| \leq N} f_{\alpha} D_{\alpha}
+\]"
+6,6.20,Theorem,2,functional/6.20 Theorem_6_2.jpg,"$$
+\[
+\psi_{i+1}=\left(1-\phi_{1}\right) \cdots\left(1-\phi_{i}\right) \phi_{i+1} \quad(i \geq 1) .
+\]"
+8,8.7,Definition,5,functional/8.7 Definition_8_5.jpg,"$$
+\[
+\Delta=\frac{\partial^{2}}{\partial x_{1}^{2}}+\cdots+\frac{\partial^{2}}{\partial x_{n}^{2}}
+\]"
+8,8.9,Theorem,9,functional/8.9 Theorem_8_9.jpg,"$$
+\[
+\left(\sum_{|\alpha|=N} f_{\alpha} D_{\alpha} w\right)^{\wedge}=p \hat{w}=(r-q) \hat{w}=(R w-Q w)^{\wedge}
+\]"
+7,7.23,Theorem,1,functional/7.23 Theorem_7_1.jpg,"
+\[
+f(z)=u\left(e_{-z}\right) \quad\left(z \in \mathbb{C}^{n}\right)
+\]"
+13,13.35,Theorem,17,functional/13.35 Theorem_13_17.jpg,$R(\lambda) A_{\varepsilon} x=\int_{0}^{\infty} e^{-\lambda t} Q(t) A_{\varepsilon} x d t$
+11,11.11,Lemma,2,functional/11.11 Lemma_11_2.jpg,"
+\[
+\left\|x^{2}\right\| \geq\left\|\hat{x}^{2}\right\|_{\infty}=\|\hat{x}\|_{\infty}^{2} \geq s^{2}\|x\|^{2}
+\]"
+3,3.20,Theorem,4,functional/3.20 Theorem_3_4.jpg,"
+\[
+c o(E) \subset c o(F)+V .
+\]"
+10,10.12,Theorem,7,functional/10.12 Theorem_10_7.jpg,"
+\[
+x^{n}=\frac{1}{2 \pi i} \int_{\Gamma_{r}} \lambda^{n} f(\lambda) d \lambda \quad(r>\|x\|, n=0,1,2, \ldots)
+\]"
+7,7.19,Theorem,5,functional/7.19 Theorem_7_5.jpg,"$$
+\[
+|(u * \phi)(x)|=\left|u\left(\tau_{x} \varnothing\right)\right| \leq 2^{N} C p_{N}(\phi)\left(1+|x|^{2}\right)^{N},
+\]"
+12,12.28,Theorem,2,functional/12.28 Theorem_12_2.jpg,"
+\[
+\mathscr{R}\left(E\left(\omega_{0}\right)\right) \subset \mathscr{N}(f(T))
+\]"
+7,7.7,and,3,functional/7.7 and (c) of Theorem_7_3.jpg,"
+\[
+\hat{u}(\phi)=u(\hat{\phi}) \quad\left(\phi \in \mathscr{S}_{n}, u \in \mathscr{S}_{n}^{\prime}\right)
+\]"
+12,12.38,Theorem,4,functional/12.38 Theorem_12_4.jpg,"
+\[
+(M f)(z)=z f(z) \quad(f \in H, z \in D) .
+\]"
+12,12.16,Theorem,2,functional/12.16 Theorem_12_2.jpg,"
+\[
+Q=\exp (V)=\sum_{n=0}^{\infty}\left(\frac{1}{n !}\right) V^{n}
+\]"
+13,13.32,Theorem,4,functional/13.32 Theorem_13_4.jpg,"
+\[
+\left\|N^{*} y_{i}-z\right\| \rightarrow 0 \text { as } i \rightarrow \infty
+\]"
+12,12.21,Theorem,14,functional/12.21 Theorem_12_14.jpg,"
+\[
+\|\Psi(s)\|=\|s\|_{\infty} .
+\]"
+10,10.8,Lemma,4,functional/10.8 Lemma_10_4.jpg,"
+\[
+\left|h_{r}(\lambda)\right| \leq 1 \quad(|\lambda| \leq r)
+\]"
+13,13.19,Theorem,12,functional/13.19 Theorem_13_12.jpg,"$$
+\[
+S x=i(z+V z) \quad \text { if } x=z-V z .
+\]"
+10,10.9,Theorem,12,functional/10.9 Theorem_10_12.jpg,"
+\[
+f(\lambda)=\sum_{n=0}^{\infty} \frac{\phi\left(a^{n}\right)}{n !} \lambda^{n} \quad(\lambda \in \mathscr{C})
+\]"
+10,10.9,Theorem,13,functional/10.9 Theorem_10_13.jpg,"
+\[
+E(\lambda)=\sum_{n=0}^{\infty} \frac{\lambda^{n}}{n !} a^{n}
+\]"
+9,9.13,Theorem,1,functional/9.13 Theorem_9_1.jpg,"$$
+\[
+\phi(x)-(\phi * \mu)(x)=0
+\]"
+13,13.19,Theorem,13,functional/13.19 Theorem_13_13.jpg," $(S x, y)=i(z+V z, u-V u)=i(V z, u)-i(z, V u)$"
+12,12.21,Theorem,15,functional/12.21 Theorem_12_15.jpg,"
+\[
+\|\Psi(f)\|=\|f\|_{\infty} \quad\left(f \in L^{\infty}(E)\right) .
+\]"
+12,12.8,Theorem,1,functional/12.8 Theorem_12_1.jpg,"$$
+\[
+M=\sup \{|f(x, y)|:\|x\|=\|y\|=1\}<\infty,
+\]"
+13,13.32,Theorem,5,functional/13.32 Theorem_13_5.jpg,"
+\[
+\left\|N^{*} x\right\|=\|z\|=\lim \left\|N^{*} y_{i}\right\|=\lim \left\|N y_{i}\right\|=\|N x\| .
+\]"
+1,1.18,Theorem,1,functional/1.18 Theorem_1_1.jpg,"
+\[
+(x+V) \cap \mathscr{N}(\Lambda)=\varnothing
+\]"
+7,7.7,and,2,functional/7.7 and (c) of Theorem_7_2.jpg,"$$
+\[
+V=\left\{u \in \mathscr{S}_{n}^{\prime}:\left|u\left(\hat{\phi}_{i}\right)\right|<1 \quad \text { for } \quad 1 \leq i \leq k\right\}
+\]"
+12,12.28,Theorem,3,functional/12.28 Theorem_12_3.jpg,"
+\[
+f_{n}(\lambda)=\left\{\begin{array}{ll}
+1 / f(\lambda) & \text { on } \omega_{n}, \\
+0 & \text { elsewhere on } \sigma(T) .
+\end{array}\right.
+\]"
+12,12.16,Theorem,3,functional/12.16 Theorem_12_3.jpg,"
+\[
+Q^{*}=\exp \left(V^{*}\right)=\exp (-V)=Q^{-1}
+\]"
+12,12.38,Theorem,5,functional/12.38 Theorem_12_5.jpg,"$$
+\[
+\sum_{n=0}^{\infty}(n+1)^{-1}\left|a_{n}\right|^{2} \delta^{2 n+2}=\frac{1}{\pi} \int_{\Delta}|f|^{2} d m_{2}
+\]"
+7,7.19,Theorem,4,functional/7.19 Theorem_7_4.jpg,"
+\[
+|u(f)| \leq C p_{N}(f) \quad\left(f \in \mathscr{S}_{n}\right) ;
+\]"
+10,10.12,Theorem,6,functional/10.12 Theorem_10_6.jpg,"
+\[
+f(\lambda)=\sum_{n=0}^{\infty} \lambda^{-n-1} x^{n}=\lambda^{-1} e+\lambda^{-2} x+\cdots
+\]"
+3,3.20,Theorem,5,functional/3.20 Theorem_3_5.jpg,"$$
+\[
+c o(E) \subset F_{1}+V+V \subset F_{1}+U .
+\]"
+7,7.17,Lemma,1,functional/7.17 Lemma_7_1.jpg,"
+\[
+\phi_{\varepsilon}(x)=\frac{\phi(x+\varepsilon w)-\phi(x)}{\varepsilon} \quad\left(x \in R^{n}, \varepsilon>0\right)
+\]"
+11,11.11,Lemma,3,functional/11.11 Lemma_11_3.jpg,"
+\[
+\left\|x^{m}\right\| \geq r^{m-1}\|x\|^{m} \quad\left(m=2^{n}, n=1,2,3, \ldots\right) .
+\]"
+3,3.27,Theorem,1,functional/3.27 Theorem_3_1.jpg,"
+\[
+y=\int_{Q} f d \mu
+\]"
+6,6.36,Definition,1,functional/6.36 Definition_6_1.jpg,"
+\[
+L \phi=u *(v * \phi) \quad(\phi \in \mathscr{D}) .
+\]"
+13,13.35,Theorem,16,functional/13.35 Theorem_13_16.jpg,"$$
+\[
+(\lambda I-A) R(\lambda) x=x \quad(x \in X) .
+\]"
+8,8.9,Theorem,8,functional/8.9 Theorem_8_8.jpg,"
+\[
+\|f u\|_{s} \leq\left(2^{|s|} \gamma\right)^{1 / 2}\|f\|_{t}\|u\|_{s} .
+\]"
+13,13.36,Theorem,1,functional/13.36 Theorem_13_1.jpg,"
+\[
+A_{\varepsilon}=\left(M_{t}\right)^{-1} A_{t} M_{\varepsilon} .
+\]"
+8,8.7,Definition,4,functional/8.7 Definition_8_4.jpg,"
+\[
+p(x, y)=\sum_{|\alpha|=N} f_{\alpha}(x) y^{\alpha} \quad\left(x \in \Omega, y \in R^{n}\right)
+\]"
+6,6.20,Theorem,3,functional/6.20 Theorem_6_3.jpg,"
+\[
+\psi_{1}+\cdots+\psi_{i}=1-\left(1-\phi_{1}\right) \cdots\left(1-\phi_{i}\right)
+\]"
+6,6.20,Theorem,1,functional/6.20 Theorem_6_1.jpg,"
+\[
+\psi_{1}(x)+\cdots+\psi_{m}(x)=1
+\]"
+13,13.17,Definition,3,functional/13.17 Definition_13_3.jpg, $\quad\|T x+i x\|^{2}=\|x\|^{2}+\|T x\|^{2}=\|T x-i x\|^{2} \quad(x \in \mathscr{D}(T))$.
+13,13.36,Theorem,3,functional/13.36 Theorem_13_3.jpg, $\quad \lim _{\varepsilon \rightarrow 0}\left\|\exp \left(t A_{\varepsilon}\right)-\exp (t A)\right\|=0 \quad(0 \leq t<\infty)$.
+3,3.27,Theorem,3,functional/3.27 Theorem_3_3.jpg,"
+\[
+m_{i}=\int_{Q}\left(\Lambda_{i} f\right) d \mu \quad(1 \leq i \leq n)
+\]"
+11,11.11,Lemma,1,functional/11.11 Lemma_11_1.jpg," $\quad r=\inf \frac{\left\|x^{2}\right\|}{\|x\|^{2}}, \quad s=\inf \frac{\|\hat{x}\|_{\infty}}{\|x\|} \quad(x \in A, x \neq 0)$,"
+3,3.30,Definition,8,functional/3.30 Definition_3_8.jpg,"
+\[
+f(z)-f \in z t V \quad(0<|z| \leq r) .
+\]"
+11,11.8,Definition,4,functional/11.8 Definition_11_4.jpg,"
+\[
+\left|1-\Lambda_{0} e\right|=\left|h(e)-\Lambda_{0} e\right|<\varepsilon,
+\]"
+13,13.35,Theorem,14,functional/13.35 Theorem_13_14.jpg, $\quad\|R(\lambda)\| \leq C \int_{0}^{\infty} e^{(\gamma-\operatorname{Re} \lambda) t} d t=\frac{C}{\operatorname{Re}(\lambda-\gamma)}<\infty$
+6,6.36,Definition,3,functional/6.36 Definition_6_3.jpg,"
+\[
+(u * v) * \phi=u *(v * \phi) \quad(\phi \in \mathscr{D}) .
+\]"
+7,7.23,Theorem,2,functional/7.23 Theorem_7_2.jpg,"$$
+\[
+|f(z)| \leq \gamma(1+|z|)^{N} e^{r|\operatorname{Im} z|} \quad\left(z \in \mathbb{C}^{n}\right) .
+\]"
+13,13.14,Definition,1,functional/13.14 Definition_13_1.jpg," $T \subset S, \quad S$ symmetric"
+3,3.20,Theorem,7,functional/3.20 Theorem_3_7.jpg,"
+\[
+\left(t, x_{1}, \ldots, x_{n+1}\right) \rightarrow t_{1} x_{1}+\cdots+t_{n+1} x_{n+1} .
+\]"
+7,7.17,Lemma,3,functional/7.17 Lemma_7_3.jpg," $\quad \psi_{\varepsilon}(y)=\frac{\exp \left(i \varepsilon y_{1}\right)-1}{\varepsilon}-i y_{1} \quad\left(y \in R^{n}, \varepsilon>0\right)$."
+10,10.12,Theorem,4,functional/10.12 Theorem_10_4.jpg," $\quad\left\|f(\mu)-f(\lambda)+(\mu-\lambda) f^{2}(\lambda)\right\| \leq 2\|f(\lambda)\|^{3} \cdot \mu-\left.\lambda\right|^{2}$,"
+13,13.35,Theorem,9,functional/13.35 Theorem_13_9.jpg, $\quad\left\|\exp \left(t A_{\varepsilon}\right)\right\| \leq C \exp \left\{\frac{t}{\varepsilon}\left(e^{t \varepsilon \gamma}-1\right)\right\}<C \exp \left(t e^{\gamma t}\right)$
+12,12.16,Theorem,1,functional/12.16 Theorem_12_1.jpg,"$I \in \mathscr{B}(H), M$ ana $N$ are normal, and
+
+\[
+M T=T N .
+\]"
+12,12.38,Theorem,7,functional/12.38 Theorem_12_7.jpg," $\quad M_{\lambda}=M-\lambda I, \quad S=Q-\alpha I, \quad T=Q+\alpha I$,"
+7,7.19,Theorem,6,functional/7.19 Theorem_7_6.jpg,"
+\[
+(u * \phi)^{\wedge}(\hat{\psi})=(\hat{\phi} \hat{u})(\hat{\psi}) .
+\]"
+12,12.8,Theorem,3,functional/12.8 Theorem_12_3.jpg,"
+\[
+(T+S)^{*}=T^{*}+S^{*}
+\]"
+13,13.32,Theorem,7,functional/13.32 Theorem_13_7.jpg,"
+\[
+\mathscr{D}(M)=\mathscr{D}\left(M^{*}\right) \subset \mathscr{D}\left(N^{*}\right)=\mathscr{D}(N) \subset \mathscr{D}(M)
+\]"
+6,6.25,Theorem,10,functional/6.25 Theorem_6_10.jpg,"
+\[
+\left\|\psi_{r} \phi\right\|_{N} \leq \eta C\|\psi\|_{N}
+\]"
+13,13.19,Theorem,11,functional/13.19 Theorem_13_11.jpg,"
+\[
+x=z-V z .
+\]"
+7,7.7,The,8,functional/7.7 The Inversion Theorem_7_8.jpg,"
+\[
+\int_{R^{n}}\left(f_{0}-f\right) \phi d m_{n}=0
+\]"
+9,9.6,Definition,8,functional/9.6 Definition_9_8.jpg, $\quad \phi(x)-(f * \phi)(x)=\int_{|y|<\delta}[\phi(x)-\phi(x-y)] f(y) d m_{n}(y)$.
+9,9.13,Theorem,3,functional/9.13 Theorem_9_3.jpg,"
+\[
+\phi * \sigma=0 .
+\]"
+10,10.9,Theorem,11,functional/10.9 Theorem_10_11.jpg,"$$
+\[
+\|\lambda e-x\| \geq|\lambda|=|\phi(\lambda e-x)| \quad(x \in N, \lambda \in \mathscr{C}) .
+\]"
+9,9.6,Definition,9,functional/9.6 Definition_9_9.jpg,"
+\[
+|\phi(x)-(f * \phi)(x)|<\varepsilon .
+\]"
+10,10.9,Theorem,10,functional/10.9 Theorem_10_10.jpg," $x y-y z \in N \quad$ if $x \in N, y \in A$."
+9,9.13,Theorem,2,functional/9.13 Theorem_9_2.jpg,"$$
+\[
+\hat{\mu}(t)=\int_{-\infty}^{\infty} e^{-i x t} d \mu(x)
+\]"
+13,13.19,Theorem,10,functional/13.19 Theorem_13_10.jpg," $\quad\left((T-i I) x, y_{1}\right)=\left(x,\left(T^{*}+i I\right) y_{1}\right)=(x, 0)=0$."
+12,12.21,Theorem,16,functional/12.21 Theorem_12_16.jpg,"
+\[
+\|f\|_{\infty}^{2}=\sup \left\{\int_{\Omega}|f|^{2} d E_{x, x}:\|x\| \leq 1\right\}
+\]"
+7,7.245,Theorem,10,functional/7.245 Theorem_7_10.jpg,"
+\[
+F_{\omega} \in C^{(p)}\left(R^{n}\right)
+\]"
+6,6.25,Theorem,11,functional/6.25 Theorem_6_11.jpg,"$$
+\[
+\left(D^{\alpha} \delta_{0}\right) \phi=(-1)^{|\alpha|} \delta_{0}\left(D^{\alpha} \phi\right)=(-1)^{|\alpha|}\left(D^{\alpha} \phi\right)
+\]"
+13,13.38,Theorem,20,functional/13.38 Theorem_13_20.jpg,"
+\[
+\lim _{\varepsilon \rightarrow 0}\left\|A_{\varepsilon} x-B x\right\|^{2}=0 \quad \text { if } x \in \mathscr{D}(B)
+\]"
+13,13.32,Theorem,6,functional/13.32 Theorem_13_6.jpg,"
+\[
+\mathscr{D}\left(N^{*}\right) \subset \mathscr{D}\left(N^{* *}\right)=\mathscr{D}(N) .
+\]"
+12,12.8,Theorem,2,functional/12.8 Theorem_12_2.jpg,"
+\[
+f(x, y)=(x, S y) \quad(x \in H, y \in H) .
+\]"
+7,7.19,Theorem,7,functional/7.19 Theorem_7_7.jpg,"
+\[
+(u * \phi)(\psi)=u\left((\phi * \psi)^{\vee}\right),
+\]"
+12,12.38,Theorem,6,functional/12.38 Theorem_12_6.jpg,"
+\[
+|f(z)| \leq \pi^{-1 / 2} \delta^{-1}\|f\| \quad(z \in K, f \in H),
+\]"
+12,12.16,Theorem,0,functional/12.16 Theorem_12_0.jpg,"nded entire $\mathscr{B}(H)$-valued function. By Liouville's theorem 3.32, $=T$, for every $\lambda \in \mathscr{C}$. Hence  becomes"
+7,7.7,and,1,functional/7.7 and (c) of Theorem_7_1.jpg, $\quad\left\{u \in \mathscr{S}_{n}^{\prime}:\left|u\left(\phi_{i}\right)\right|<1\right.$ for $\left.1 \leq i \leq k\right\} \subset W$.
+13,13.35,Theorem,8,functional/13.35 Theorem_13_8.jpg,"
+\[
+A \int_{0}^{t} Q(s) x d s=Q(t) x-x
+\]"
+7,7.17,Lemma,2,functional/7.17 Lemma_7_2.jpg,"
+\[
+\psi_{\varepsilon} \hat{\phi} \rightarrow 0 \text { in } \mathscr{S}_{n}, \quad \text { as } \varepsilon \rightarrow 0
+\]"
+3,3.20,Theorem,6,functional/3.20 Theorem_3_6.jpg,"
+\[
+x=t_{1} x_{1}+\cdots+t_{n+1} x_{n+1}
+\]"
+13,13.35,Theorem,15,functional/13.35 Theorem_13_15.jpg,"$$
+\[
+A_{\varepsilon} R(\lambda) x=\frac{e^{\lambda \varepsilon-1}}{\varepsilon} R(\lambda) x-\frac{1}{\varepsilon} e^{\lambda \varepsilon} \int_{0}^{\varepsilon} e^{-\lambda t} Q(t) x d t
+\]"
+6,6.36,Definition,2,functional/6.36 Definition_6_2.jpg,"
+\[
+L \phi=(u * v) * \phi \quad(\phi \in \mathscr{D}) .
+\]"
+11,11.8,Definition,5,functional/11.8 Definition_11_5.jpg,"
+\[
+\left|\Lambda_{0}(x y)-\Lambda_{0} x \Lambda_{0} y\right|<\left(1+\|x\|+\left|\Lambda_{0} y\right|\right) \varepsilon .
+\]"
+7,7.23,Theorem,3,functional/7.23 Theorem_7_3.jpg,"
+\[
+\hat{u}=(\psi u)^{\wedge}=\hat{u} * \hat{\psi}
+\]"
+3,3.27,Theorem,2,functional/3.27 Theorem_3_2.jpg,"
+\[
+\Lambda y=\int_{Q}(\Lambda f) d \mu
+\]"
+3,3.30,Definition,9,functional/3.30 Definition_3_9.jpg,"
+\[
+y=\frac{1}{2 \pi i} \int_{\Gamma} \zeta^{-2} f(\zeta) d \zeta
+\]"
+13,13.36,Theorem,2,functional/13.36 Theorem_13_2.jpg, $\quad\left\|A_{\varepsilon}-A\right\| \leq\left\|\left(M_{t}\right)^{-1} A_{t}\right\|\left\|M_{\varepsilon}-I\right\| \rightarrow 0 \quad$ as $\varepsilon \rightarrow 0$.
+13,13.17,Definition,2,functional/13.17 Definition_13_2.jpg,"
+\[
+U=(T-i I)(T+i I)^{-1}
+\]"
+12,12.40,Theorem,11,functional/12.40 Theorem_12_11.jpg,"$$
+\[
+\|T(x)\| \leq\|x\| \quad(x \in A) .
+\]"
+13,13.19,Theorem,1,functional/13.19 Theorem_13_1.jpg,"$$ $z=T x+i x, \quad U z=T x-i x$"
+2,2.17,Theorem,1,functional/2.17 Theorem_2_1.jpg,"
+\[
+B\left(x_{n}, y_{n}\right) \rightarrow B\left(x_{0}, y_{0}\right) \text { in } Z
+\]"
+13,13.32,Theorem,12,functional/13.32 Theorem_13_12.jpg," $\quad E^{i}(\omega) P_{i} x=P_{i} E^{i}(\omega) x \in \mathscr{R}\left(P_{i}\right) \quad(x \in H, i=1,2,3, \ldots)$"
+12,12.2,Theorem,4,functional/12.2 Theorem_12_4.jpg, $0 \leq\|\lambda x+y\|^{2}=|\lambda|^{2}\|x\|^{2}+2 \operatorname{Re}(\alpha \lambda)+\|y\|^{2}$.
+12,12.39,Theorem,3,functional/12.39 Theorem_12_3.jpg,"
+\[
+f(e)=1, \quad f\left(z z^{*}\right)=\|z\|^{2},
+\]"
+9,9.15,Theorem,4,functional/9.15 Theorem_9_4.jpg, $\phi(x)-(\phi * \mu)(x)=f(x) \quad(-\infty<x<\infty)$.
+6,6.26,Theorem,6,functional/6.26 Theorem_6_6.jpg,"
+\[
+|\Lambda \phi| \leq \int_{K}\left|\left(T^{N+1} \phi\right)(x)\right| d x \quad\left(\phi \in \mathscr{D}_{K}\right)
+\]"
+6,6.4,Theorem,5,functional/6.4 Theorem_6_5.jpg," $\quad \sup \left\{\|\phi\|_{N}: \phi \in E\right\}<\infty \quad(N=0,1,2, \ldots)$."
+6,6.21,Theorem,2,functional/6.21 Theorem_6_2.jpg,"
+\[
+\Lambda=\Lambda_{\omega} \text { in } \omega
+\]"
+7,7.11,Definition,7,functional/7.11 Definition_7_7.jpg,"
+\[
+|\Lambda f| \leq C^{1 / p}\left\{\int_{R^{n}}\left|\left(1+|x|^{2}\right)^{N} f(x)\right|^{q} d m_{n}(x)\right\}^{1 / q}
+\]"
+11,11.28,Theorem,7,functional/11.28 Theorem_11_7.jpg,"
+\[
+w w^{*}=z y y^{*} z^{*}=z x z=z^{2} x
+\]"
+13,13.12,Theorem,2,functional/13.12 Theorem_13_2.jpg,"
+\[
+\left(\{0, z\},\left\{-T^{*} y, y\right\}\right)=0
+\]"
+6,1.27,and,1,functional/1.27 and part (b) of Theorem_6_1.jpg,"
+\[
+|\alpha|=\alpha_{1}+\cdots+\alpha_{n},
+\]"
+13,13.1,Definition,7,functional/13.1 Definition_13_7.jpg,"
+\[
+T(R+S) \supset T R+T S,
+\]"
+7,7.22,Theorem,1,functional/7.22 Theorem_7_1.jpg,"$$
+\[
+f(z)=\int_{R^{n}} \phi(t) e^{-i z \cdot t} d m_{n}(t) \quad\left(z \in \mathbb{C}^{n}\right)
+\]"
+9,9.7,(see,14,functional/9.7 (see also Remark_9_14.jpg,"
+\[
+\lim _{x \rightarrow \infty}(f * \phi)(x)=a \int_{-\infty}^{\infty} f(y) d y
+\]"
+12,12.40,Theorem,8,functional/12.40 Theorem_12_8.jpg,"
+\[
+\left(a^{\prime}, a^{\prime}\right)=F\left(a^{*} a\right) \geq 0
+\]"
+8,8.5,Theorem,3,functional/8.5 Theorem_8_3.jpg,"
+\[
+\lim _{j \rightarrow \infty}\left\|\psi_{j}\right\|=0 \quad \text { if } \psi_{j} \rightarrow 0 \text { in } \mathscr{D}\left(R^{n}\right)
+\]"
+8,8.5,Theorem,2,functional/8.5 Theorem_8_2.jpg,"$$
+\[
+\|\psi\|=\int_{T^{n}} d \sigma_{n}(w) \int_{R^{n}}|\hat{\psi}(t+r w)| d m_{n}(t)
+\]"
+12,12.40,Theorem,9,functional/12.40 Theorem_12_9.jpg,"
+\[
+T(x) a^{\prime}=(x a)^{\prime} .
+\]"
+9,9.7,(see,15,functional/9.7 (see also Remark_9_15.jpg,"
+\[
+e^{-\varepsilon}\left(f_{1} * \phi\right)(x) \leq \phi(x) \leq e^{\varepsilon}\left(f_{2} * \phi\right)(x) .
+\]"
+13,13.30,Theorem,8,functional/13.30 Theorem_13_8.jpg,"
+\[
+E(f(\omega))=E^{\prime}(\omega)
+\]"
+13,13.1,Definition,6,functional/13.1 Definition_13_6.jpg,"
+\[
+(R+S)+T=R+(S+T), \quad(R S) T=R(S T)
+\]"
+12,12.6,Theorem,1,functional/12.6 Theorem_12_1.jpg,"$$
+\[
+\left\|x_{n}+\cdots+x_{m}\right\|^{2}=\left\|x_{n}\right\|^{2}+\cdots+\left\|x_{m}\right\|^{2}
+\]"
+13,13.12,Theorem,3,functional/13.12 Theorem_13_3.jpg,"
+\[
+H \times H=V \mathscr{G}\left(T^{*}\right) \oplus \mathscr{G}\left(T^{* *}\right)
+\]"
+11,11.19,Theorem,1,functional/11.19 Theorem_11_1.jpg,"
+\[
+(\Psi f)^{\wedge}=f \circ \hat{x}
+\]"
+11,11.28,Theorem,6,functional/11.28 Theorem_11_6.jpg,"
+\[
+z y=w=u+i v,
+\]"
+7,7.11,Definition,6,functional/7.11 Definition_7_6.jpg,"
+\[
+\Lambda f=\int_{R^{n}} f g d m_{n}
+\]"
+6,6.4,Theorem,4,functional/6.4 Theorem_6_4.jpg," $\phi-\phi_{i}+\delta_{i} W_{i} \subset\left(1-\delta_{i}\right) W_{i}+\delta_{i} W_{i}=W_{i}$,"
+6,6.26,Theorem,7,functional/6.26 Theorem_6_7.jpg,"
+\[
+\Lambda_{1} T^{N+1} \phi=\Lambda \phi \quad\left(\phi \in \mathscr{D}_{K}\right)
+\]"
+9,9.15,Theorem,5,functional/9.15 Theorem_9_5.jpg," $\quad \phi(\infty)=\lim _{x \rightarrow \infty} \phi(x), \quad \phi(-\infty)=\lim _{x \rightarrow-\infty} \phi(x)$"
+13,13.36,Theorem,16,functional/13.36 Theorem_13_16.jpg,"$$
+\[
+(\lambda I-A)^{-1} x=\int_{0}^{\infty} e^{-\lambda t} Q(t) x d t
+\]"
+12,12.39,Theorem,2,functional/12.39 Theorem_12_2.jpg,"
+\[
+\hat{x}_{0}(h)=\left\|\hat{x}_{0}\right\|_{\infty}=\left\|x_{0}\right\|=\|z\|^{2} .
+\]"
+13,13.38,Theorem,1,functional/13.38 Theorem_13_1.jpg,"
+\[
+\lim _{t \rightarrow 0}\|Q(t) x-x\|=0 \quad(x \in H)
+\]"
+6,6.30,Theorem,4,functional/6.30 Theorem_6_4.jpg,"
+\[
+\lim _{r \rightarrow 0}\left(u *\left(\eta_{r} \phi\right)\right)(x)=\left(u *\left(D_{e} \phi\right)\right)(x)
+\]"
+12,12.2,Theorem,5,functional/12.2 Theorem_12_5.jpg,"$$
+\[
+0 \leq\|\lambda x+y\|^{2}=\|y\|^{2}-\frac{|\alpha|^{2}}{\|x\|^{2}}
+\]"
+13,13.32,Theorem,13,functional/13.32 Theorem_13_13.jpg," $\quad \sum_{i=1}^{\infty}\left\|E^{i}(\omega) P_{i} x\right\|^{2} \leq \sum_{i=1}^{\infty}\left\|P_{i} x\right\|^{2}=\|x\|^{2}$,"
+8,8.9,Theorem,12,functional/8.9 Theorem_8_12.jpg,"
+\[
+R(\phi u) \in H^{t-N+1}
+\]"
+1,1.24,Theorem,1,functional/1.24 Theorem_1_1.jpg," $V_{n+1}+V_{n+1}+V_{n+1}+V_{n+1} \subset V_{n} \quad(n+1,2,3, \ldots)$;"
+12,12.40,Theorem,10,functional/12.40 Theorem_12_10.jpg,"$$
+\[
+T\left(x_{1}\right) T\left(x_{2}\right)=T\left(x_{1} x_{2}\right) \quad\left(x_{1} \in A, x_{2} \in A\right)
+\]"
+12,12.40,Theorem,12,functional/12.40 Theorem_12_12.jpg," $\left\|T(x) a^{\prime}\right\|^{2}=\left((x a)^{\prime},(x a)^{\prime}\right)=F\left(a^{*} x^{*} x a\right)$."
+7,7.6,Lemma,5,functional/7.6 Lemma_7_5.jpg,"$$
+\[
+\hat{\phi}_{n}(t)=\hat{\phi}_{1}\left(t_{1}\right) \cdots \hat{\phi}_{1}\left(t_{n}\right) \quad\left(t \in R^{n}\right)
+\]"
+10,10.1,Definition,8,functional/10.1 Definition_10_8.jpg,"
+\[
+\|(x, \alpha)\|=\|x\|+|\alpha|, \quad e=(0,1)
+\]"
+1,1.42,Theorem,11,functional/1.42 Theorem_1_11.jpg,"
+\[
+\left|D^{r} f_{n}-D^{r} f_{n-1}\right| \leq m_{r+1} \delta_{n} \quad(n \geq r+2)
+\]"
+8,8.9,Theorem,10,functional/8.9 Theorem_8_10.jpg,"
+\[
+(R-Q+S)(\phi u)=L(\phi u) .
+\]"
+13,13.19,Theorem,2,functional/13.19 Theorem_13_2.jpg,"$$
+\[
+(I-U) z=2 i x, \quad(I+U) z=2 T x
+\]"
+1,1.24,Theorem,3,functional/1.24 Theorem_1_3.jpg,"
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]"
+13,13.38,Theorem,3,functional/13.38 Theorem_13_3.jpg,"
+\[
+Q(t)=e^{i t S} \quad(0 \leq t<\infty)
+\]"
+13,13.32,Theorem,11,functional/13.32 Theorem_13_11.jpg,"
+\[
+\left\|N P_{i} x\right\|=\left\|N^{*} P_{i} x\right\|=\left\|\left(N P_{i}\right)^{*} x\right\| \quad(x \in H) .
+\]"
+6,6.30,Theorem,6,functional/6.30 Theorem_6_6.jpg,"
+\[
+(\phi * \psi)^{\vee}(t)=\int_{R^{n}} \bar{\psi}(s)\left(\tau_{s} \zeta\right)(t) d s
+\]"
+13,13.36,Theorem,14,functional/13.36 Theorem_13_14.jpg,"
+\[
+(\lambda I-\tilde{A})^{-1} x=\int_{0}^{\infty} e^{-\lambda t} Q(t) x d t \quad(\lambda>\gamma)
+\]"
+3,3.20,and,9,functional/3.20 and (b) of Theorem_3_9.jpg, $\quad V=\left\{\mu \in C(Q)^{*}:\left|\int_{Q} \Lambda_{i} d \mu\right|<r_{i}\right.$ for $\left.1 \leq i \leq n\right\}$
+9,9.15,Theorem,7,functional/9.15 Theorem_9_7.jpg," $\quad K(x)=\sigma((-\infty, x))=\left\{\begin{array}{ll}-\mu((-\infty, x)) & \text { if } x \leq 0 \\ \mu([x, \infty)) & \text { if } x>0\end{array}\right.$"
+1,1.35,Theorem,4,functional/1.35 Theorem_1_4.jpg," $\quad V\left(p_{i}, \delta_{i}\right)=\left\{x: p_{i}(x)<\delta_{i}<1\right\} \quad(1 \leq i \leq k)$."
+6,6.21,Theorem,1,functional/6.21 Theorem_6_1.jpg, implies $\Lambda_{\omega_{i}}\left(\psi_{i} \phi\right)=\Lambda_{\omega}\left(\psi_{i} \phi\right)$. Hence
+11,11.14,Definition,4,functional/11.14 Definition_11_4.jpg,"
+\[
+x^{* *}=x .
+\]"
+6,6.4,Theorem,6,functional/6.4 Theorem_6_6.jpg,"
+\[
+W=\left\{\phi \in \mathscr{D}(\Omega):\|\phi\|_{0}<\left\|\phi_{1}-\phi_{2}\right\|_{0}\right\},
+\]"
+11,11.28,Theorem,4,functional/11.28 Theorem_11_4.jpg,"
+\[
+\sigma(\gamma e-w) \subset[-\gamma, \gamma]
+\]"
+7,7.11,Definition,4,functional/7.11 Definition_7_4.jpg,"
+\[
+\varepsilon_{i}=\sup _{x \in R^{n}}\left(1+|x|^{2}\right)^{k}\left|f_{i}(x)\right| \rightarrow 0
+\]"
+6,1.27,and,2,functional/1.27 and part (b) of Theorem_6_2.jpg,"$$
+\[
+D^{\alpha}=D_{1}^{\alpha} \cdots D_{n}^{\alpha_{n}}, \quad \text { where } D_{j}=\frac{\partial}{\partial x_{j}}
+\]"
+12,12.6,Theorem,3,functional/12.6 Theorem_12_3.jpg, $\quad\left\|\Lambda_{n}\right\|=\left\|x_{1}+\cdots+x_{n}\right\|=\left\{\left\|x_{1}\right\|^{2}+\cdots+\left\|x_{n}\right\|^{2}\right\}^{1 / 2}$.
+13,13.12,Theorem,1,functional/13.12 Theorem_13_1.jpg,"
+\[
+H \times H=\mathscr{G}(T) \oplus V \mathscr{G}\left(T^{*}\right)
+\]"
+13,13.1,Definition,4,functional/13.1 Definition_13_4.jpg,"
+\[
+\mathscr{D}(S+T)=\mathscr{D}(S) \cap \mathscr{D}(T),
+\]"
+10,10.35,Theorem,11,functional/10.35 Theorem_10_11.jpg,"$$
+\[
+T(S x)=S(T x)=S(\lambda x)=\lambda S x,
+\]"
+8,8.5,Theorem,1,functional/8.5 Theorem_8_1.jpg,"$$
+\[
+|E(\psi)| \leq A r^{-N} \int_{T^{n}} d \sigma_{n}(w) \int_{R^{n}}|\hat{\psi}(t+r w)| d m_{n}(t)
+\]"
+7,7.22,Theorem,3,functional/7.22 Theorem_7_3.jpg,"
+\[
+\left|z^{\alpha}\right||f(z)| \leq\left\|D_{\alpha} \phi\right\|_{1} e^{r|\operatorname{Im} z|},
+\]"
+13,13.1,Definition,5,functional/13.1 Definition_13_5.jpg,"$$
+\[
+\mathscr{D}(S T)=\{x \in \mathscr{D}(T): T x \in \mathscr{D}(S)\} .
+\]"
+10,10.35,Theorem,10,functional/10.35 Theorem_10_10.jpg,"
+\[
+M_{\lambda}=\{x \in X: T x=\lambda x\}
+\]"
+11,11.19,Theorem,2,functional/11.19 Theorem_11_2.jpg,"
+\[
+\Psi \bar{f}=(\Psi f)^{*}
+\]"
+13,13.12,Theorem,0,functional/13.12 Theorem_13_0.jpg,"(b) If $T^{\prime}$ is the restriction of $T$ to $\mathscr{D}\left(T^{*} T\right)$, then $\mathscr{G}\left(T^{\prime}\right)$ is dense in $\mathscr{G}(T)$."
+12,12.6,Theorem,2,functional/12.6 Theorem_12_2.jpg,"$$
+\[
+\Lambda_{n} y=\sum_{i=1}^{n}\left(y, x_{i}\right) \quad(y \in H, n=1,2,3, \ldots)
+\]"
+6,1.27,and,3,functional/1.27 and part (b) of Theorem_6_3.jpg," $\beta \leq \alpha$ means $\beta_{i} \leq \alpha_{i}$ for $1 \leq i \leq n$,"
+7,7.11,Definition,5,functional/7.11 Definition_7_5.jpg, $\quad \int_{R^{n}}\left|\left(1+|x|^{2}\right)^{-N} g(x)\right|^{p} d m_{n}(x)=C<\infty$.
+8,8.1,Definition,4,functional/8.1 Definition_8_4.jpg,"
+\[
+P(D)(E * v)=(P(D) E) * v=\delta * v=v
+\]"
+6,6.4,Theorem,7,functional/6.4 Theorem_6_7.jpg,"
+\[
+\left(\psi_{1}+\frac{1}{2} W\right)+\left(\psi_{2}+\frac{1}{2} W\right)=\left(\psi_{1}+\psi_{2}\right)+W
+\]"
+6,6.26,Theorem,4,functional/6.26 Theorem_6_4.jpg, $\quad\|\psi\|_{N} \leq \max _{x \in Q}\left|\left(T^{N} \psi\right)(x)\right| \leq \int_{Q}\left|\left(T^{N+1} \psi\right)(x)\right| d x$
+3,3.13,Theorem,4,functional/3.13 Theorem_3_4.jpg, $W_{2}=\left\{f \in P:\left|f\left(x_{i}\right)-\Lambda_{0} x_{i}\right|<\delta\right.$ for $\left.1 \leq i \leq n\right\}$.
+9,9.15,Theorem,6,functional/9.15 Theorem_9_6.jpg,"
+\[
+\phi(\infty)-\phi(-\infty)=\frac{1}{M} \int_{-\infty}^{\infty} f(y) d y
+\]"
+13,13.36,Theorem,15,functional/13.36 Theorem_13_15.jpg,"$$
+\[
+(\lambda I-A S(\varepsilon))^{-1} x=\int_{0}^{\infty} e^{-\lambda t} T(t, \varepsilon) x d t
+\]"
+3,3.20,and,8,functional/3.20 and (b) of Theorem_3_8.jpg,"
+\[
+W=\left\{y \in X:\left|\Lambda_{i} y\right|<r_{i} \quad \text { for } 1 \leq i \leq n\right\},
+\]"
+12,12.39,Theorem,1,functional/12.39 Theorem_12_1.jpg, $\quad F(e)=1 \quad$ and $\quad F\left(z z^{*}\right)=\|z\|^{2}$.
+13,13.32,Theorem,10,functional/13.32 Theorem_13_10.jpg,"
+\[
+\left(N P_{i}\right)^{*}=N^{*} P_{i},
+\]"
+6,6.30,Theorem,7,functional/6.30 Theorem_6_7.jpg,"
+\[
+(\phi * \psi)^{\vee}=\int_{K_{2}} \Psi(s) \tau_{s} \grave{\phi} d s
+\]"
+13,13.38,Theorem,2,functional/13.38 Theorem_13_2.jpg,"$$
+\[
+Q(t)=e^{t A} \quad(0 \leq t<\infty) .
+\]"
+1,1.24,Theorem,2,functional/1.24 Theorem_1_2.jpg,"
+\[
+r=\sum_{n=1}^{\infty} c_{n}(r) 2^{-n}
+\]"
+13,13.19,Theorem,3,functional/13.19 Theorem_13_3.jpg,"
+\[
+d E_{x, v}=\bar{f} d E_{x, z} \quad(x \in H, z \in H) .
+\]"
+8,8.9,Theorem,11,functional/8.9 Theorem_8_11.jpg,"
+\[
+(Q-S)(\phi u) \in H^{t-N+1}
+\]"
+1,1.42,Theorem,10,functional/1.42 Theorem_1_10.jpg,"$$
+\[
+\left|D^{r} f_{n}\right| \leq m_{r} \quad(n \geq r)
+\]"
+10,10.1,Definition,9,functional/10.1 Definition_10_9.jpg,"
+\[
+x_{n} y_{n}-x y=\left(x_{n}-x\right) y_{n}+x\left(y_{n}-y\right) .
+\]"
+7,7.6,Lemma,4,functional/7.6 Lemma_7_4.jpg,"$$
+\[
+\phi_{n}(x)=\phi_{1}\left(x_{1}\right) \cdots \phi_{1}\left(x_{n}\right) \quad\left(x \in R^{n}\right)
+\]"
+12,12.40,Theorem,13,functional/12.40 Theorem_12_13.jpg,"
+\[
+G\left(x^{*} x\right) \leq G(e)\|x\|^{2},
+\]"
+2,2.9,Theorem,8,functional/2.9 Theorem_2_8.jpg,"
+\[
+f(x+N)=\Lambda x \quad(x \in X) .
+\]"
+6,6.30,Theorem,3,functional/6.30 Theorem_6_3.jpg,"
+\[
+\eta_{r}(u * \phi)=u *\left(\eta_{r} \phi\right) .
+\]"
+13,13.32,Theorem,14,functional/13.32 Theorem_13_14.jpg,"
+\[
+E(\omega)=\sum_{i=1}^{\infty} E^{i}(\omega) P_{i}
+\]"
+12,12.2,Theorem,2,functional/12.2 Theorem_12_2.jpg,"$$
+\[
+\|x+y\| \leq\|x\|+\|y\| .
+\]"
+13,13.19,Theorem,7,functional/13.19 Theorem_13_7.jpg,"
+\[
+\mathscr{R}(U)=\mathscr{R}(T-i I)=H .
+\]"
+1,1.24,Theorem,6,functional/1.24 Theorem_1_6.jpg,"
+\[
+A(r)+A(s) \subset A(r+s) \quad(r \in D, s \in D) .
+\]"
+13,13.32,Theorem,28,functional/13.32 Theorem_13_28.jpg, $(Q S Q)(N Q)=Q S N Q \subset Q N S Q \subset(N Q)(Q S Q)$.
+12,12.36,Theorem,2,functional/12.36 Theorem_12_2.jpg,"
+\[
+M=U N U^{-1} .
+\]"
+7,7.245,Theorem,9,functional/7.245 Theorem_7_9.jpg,"$$
+\[
+F_{\omega}(x)=\int_{R^{n}} \hat{F}(y) e^{i x \cdot y} d m_{n}(y) \quad\left(x \in R^{n}\right)
+\]"
+9,9.15,Theorem,2,functional/9.15 Theorem_9_2.jpg,"
+\[
+\int_{-\infty}^{\infty}|x| d \mu(x)<\infty
+\]"
+13,13.36,Theorem,11,functional/13.36 Theorem_13_11.jpg,"
+\[
+T(t, \varepsilon)=e^{-t / \varepsilon} \sum_{m=0}^{\infty} \frac{t^{m}}{m ! \varepsilon^{m}} S(\varepsilon)^{m}
+\]"
+10,10.9,Theorem,9,functional/10.9 Theorem_10_9.jpg,"$$
+\[
+(x y-y x)^{2}+(x y+y x)^{2}=2[x(y x y)+(y x y) x] .
+\]"
+6,6.21,Theorem,4,functional/6.21 Theorem_6_4.jpg,"
+\[
+\Lambda \phi_{j}=\sum_{i=1}^{m} \Lambda_{\omega_{i}}\left(\psi_{i} \phi_{j}\right) \quad(j=1,2,3, \ldots)
+\]"
+11,11.14,Definition,1,functional/11.14 Definition_11_1.jpg,"
+\[
+(x+y)^{*}=x^{*}+y^{*} \text {. }
+\]"
+6,6.4,Theorem,3,functional/6.4 Theorem_6_3.jpg,"
+\[
+\phi-\phi_{i} \in\left(1-\delta_{i}\right) W_{i}
+\]"
+1,1.35,Theorem,1,functional/1.35 Theorem_1_1.jpg,"
+\[
+U \supset V\left(p_{1}, n_{1}\right) \cap \cdots \cap V\left(p_{m}, n_{m}\right)
+\]"
+6,1.27,and,7,functional/1.27 and part (b) of Theorem_6_7.jpg,"
+\[
+x^{\alpha}=x_{1}^{\alpha_{1}} \cdots x_{n}^{\alpha_{n}} .
+\]"
+10,10.35,Theorem,9,functional/10.35 Theorem_10_9.jpg,"
+\[
+\rho(T)=\lim _{N \rightarrow \infty}\left\|T^{N}\right\|^{1 / N} \geq \frac{1}{\mu}>0
+\]"
+13,13.12,Theorem,4,functional/13.12 Theorem_13_4.jpg,"
+\[
+\mathscr{G}\left(T^{* *}\right)=\left[V \mathscr{G}\left(T^{*}\right)\right]^{\perp}=\mathscr{G}(T)
+\]"
+11,11.28,Theorem,1,functional/11.28 Theorem_11_1.jpg,"
+\[
+\sigma(z)=\hat{z}(\Delta) \quad(z \in B) .
+\]"
+7,7.11,Definition,1,functional/7.11 Definition_7_1.jpg,"
+\[
+u_{L}=L \circ i
+\]"
+11,11.17,Definition,3,functional/11.17 Definition_11_3.jpg,"
+\[
+\left\|x x^{*}\right\|=\|x\|\left\|x^{*}\right\| .
+\]"
+7,7.22,Theorem,7,functional/7.22 Theorem_7_7.jpg," $\quad|\phi(t)| \leq \gamma_{N} e^{(r-|t|) \lambda} \int_{R^{n}}(1+|x|)^{-N} d m_{n}(x)$,"
+13,13.1,Definition,1,functional/13.1 Definition_13_1.jpg,"
+\[
+T \subset S .
+\]"
+8,8.5,Theorem,5,functional/8.5 Theorem_8_5.jpg,"
+\[
+\left\|D^{\alpha}\left(e_{-r w} \psi_{j}\right)\right\|_{\infty} \leq C(K, \alpha) \max _{\beta \leq \alpha}\left\|D^{\beta} \psi_{j}\right\|_{\infty} .
+\]"
+8,8.5,Theorem,4,functional/8.5 Theorem_8_4.jpg,"
+\[
+\|\psi\|=\int_{T^{n}} d \sigma_{n}(w) \int_{R^{n}}\left|\left(e_{-r w} \psi\right)^{\wedge}\right| d m_{n}
+\]"
+7,7.22,Theorem,6,functional/7.22 Theorem_7_6.jpg,"
+\[
+\phi(t)=\int_{R^{n}} f(x+i y) e^{i t \cdot(x+i y)} d m_{n}(x)
+\]"
+11,11.17,Definition,2,functional/11.17 Definition_11_2.jpg,"
+\[
+\left\|x^{*}\right\|=\|x\|
+\]"
+8,8.1,Definition,1,functional/8.1 Definition_8_1.jpg,"
+\[
+P(D) u=v
+\]"
+13,13.12,Theorem,5,functional/13.12 Theorem_13_5.jpg,"
+\[
+h=B h+T^{*} C h=B h+T^{*} T B h=Q B h
+\]"
+10,10.35,Theorem,8,functional/10.35 Theorem_10_8.jpg," $\quad \frac{1}{2}\left\|x_{0}\right\| \leq\left\|x_{N}\right\| \leq \mu^{N}\left\|T^{N}\right\|\left\|x_{0}\right\| \quad(N=1,2,3, \ldots)$,"
+6,1.27,and,6,functional/1.27 and part (b) of Theorem_6_6.jpg,"
+\[
+|x|=(x \cdot x)^{1 / 2}=\left(x_{1}^{2}+\cdots+x_{n}^{2}\right)^{1 / 2} \text {. }
+\]"
+6,6.26,Theorem,1,functional/6.26 Theorem_6_1.jpg,"$$
+\[
+\Lambda \phi=(-1)^{|\alpha|} \int_{\Omega} f(x)\left(D^{\alpha} \phi\right)(x) d x
+\]"
+6,6.4,Theorem,2,functional/6.4 Theorem_6_2.jpg,"$$
+\[
+\phi \in \phi_{i}+W_{i} \subset V_{i} \quad(i=1,2) .
+\]"
+6,6.21,Theorem,5,functional/6.21 Theorem_6_5.jpg,"$$
+\[
+\psi_{i} \phi \in \mathscr{D}\left(\omega_{i} \cap \omega\right) \quad(i=1,2,3, \ldots)
+\]"
+10,10.9,Theorem,8,functional/10.9 Theorem_10_8.jpg," $x y+y x \in N \quad$ if $x \in N, y \in A$."
+13,13.36,Theorem,10,functional/13.36 Theorem_13_10.jpg,"$$
+\[
+\|T(t, \varepsilon)\| \leq C \exp \left\{\frac{\gamma t}{1-\varepsilon \gamma}\right\} \quad\left(0<\varepsilon<\varepsilon_{0}, t>0\right)
+\]"
+9,9.15,Theorem,3,functional/9.15 Theorem_9_3.jpg,"
+\[
+M=\int_{-\infty}^{\infty} x d \mu(x) \neq 0
+\]"
+3,3.13,Theorem,1,functional/3.13 Theorem_3_1.jpg,"
+\[
+|\Lambda x| \leq \gamma(x) \quad(x \in X, \Lambda \in K) .
+\]"
+12,12.39,Theorem,4,functional/12.39 Theorem_12_4.jpg,"
+\[
+\varphi(\hat{x})=F(x) \quad\left(x \in A_{1}\right) .
+\]"
+7,7.245,Theorem,8,functional/7.245 Theorem_7_8.jpg,"
+\[
+\int_{R^{n}}(1+|y|)^{p}|\hat{F}(y)| d m_{n}(y)<\infty
+\]"
+1,1.24,Theorem,7,functional/1.24 Theorem_1_7.jpg, $A(r) \subset A(r)+A(t-r) \subset A(t) \quad$ if $\quad r<t$.
+13,13.32,Theorem,29,functional/13.32 Theorem_13_29.jpg,"$$
+\[
+Q_{n} S E(\omega)=E(\omega) S Q_{n} \quad(n=1,2,3, \ldots)
+\]"
+13,13.19,Theorem,6,functional/13.19 Theorem_13_6.jpg,"
+\[
+\mathscr{D}(U)=\mathscr{R}(T+i I)=H
+\]"
+6,6.30,Theorem,2,functional/6.30 Theorem_6_2.jpg,"
+\[
+\eta_{r}=r^{-1}\left(\tau_{0}-\tau_{r e}\right) \quad(r>0)
+\]"
+12,12.2,Theorem,3,functional/12.2 Theorem_12_3.jpg, $\quad\|y\| \leq\|\lambda x+y\| \quad$ for every $\lambda \in \mathbb{C}$
+13,13.32,Theorem,15,functional/13.32 Theorem_13_15.jpg,"$$
+\[
+(M x, y)=\int \lambda d E_{x, y}(\lambda) \quad(x \in \mathscr{D}(M), y \in H)
+\]"
+13,13.38,Theorem,7,functional/13.38 Theorem_13_7.jpg,"
+\[
+a_{2 \varepsilon}-a_{\varepsilon}=\frac{\varepsilon}{2}\left(a_{\varepsilon}\right)^{2}
+\]"
+2,2.9,Theorem,9,functional/2.9 Theorem_2_9.jpg,"
+\[
+f^{-1}(V)=\pi\left(\Lambda^{-1}(V)\right)
+\]"
+7,7.6,Lemma,3,functional/7.6 Lemma_7_3.jpg,"
+\[
+y^{\prime}+x y=0,
+\]"
+12,12.40,Theorem,14,functional/12.40 Theorem_12_14.jpg," $\left\|T(x) a^{\prime}\right\|^{2}=G\left(x^{*} x\right) \leq F\left(a^{*} a\right)\|x\|^{2}=\left\|a^{\prime}\right\|^{2}\|x\|^{2}$,"
+13,13.32,Theorem,17,functional/13.32 Theorem_13_17.jpg," $\quad E_{x, x}(\omega)=\|E(\omega) x\|^{2}=\sum_{i=1}^{\infty}\left\|E^{i}(\omega) P_{i} x\right\|^{2}=\sum_{i=1}^{\infty} E_{x_{i}, x_{i}}^{i}(\omega)$,"
+12,12.2,Theorem,1,functional/12.2 Theorem_12_1.jpg,"
+\[
+|(x, y)| \leq\|x\|\|y\|
+\]"
+13,13.38,Theorem,5,functional/13.38 Theorem_13_5.jpg,"$$
+\[
+\|Q(t) x-x\|^{2}=\int_{\sigma(A)}\left|e^{t \lambda}-1\right|^{2} d E_{x, x}^{A}(\lambda) \rightarrow 0
+\]"
+13,13.19,Theorem,4,functional/13.19 Theorem_13_4.jpg,"
+\[
+\mathscr{R}\left(I+T^{2}\right)=H
+\]"
+1,1.24,Theorem,5,functional/1.24 Theorem_1_5.jpg,"
+\[
+d(x, y)=f(x-y) \quad(x \in X, y \in X) .
+\]"
+12,12.36,Theorem,1,functional/12.36 Theorem_12_1.jpg,"
+\[
+M=T N T^{-1} .
+\]"
+3,3.13,Theorem,3,functional/3.13 Theorem_3_3.jpg, $\quad W_{1}=\left\{\Lambda \in X^{*}:\left|\Lambda x_{i}-\Lambda_{0} x_{i}\right|<\delta\right.$ for $\left.1 \leq i \leq n\right\}$
+12,12.16,Theorem,10,functional/12.16 Theorem_12_10.jpg, $\exp \left(\lambda M^{*}\right) T=T \exp \left(\lambda N^{*}\right) \quad(\lambda \in \mathscr{C})$
+9,9.15,Theorem,1,functional/9.15 Theorem_9_1.jpg,"
+\[
+\mu_{a} \neq 0
+\]"
+13,13.36,Theorem,12,functional/13.36 Theorem_13_12.jpg," $T(t, \varepsilon) x-T(t, \delta) x=\int_{0}^{t} T(u, \varepsilon) T(t-u, \delta)(S(\varepsilon)-S(\delta)) A x d u$"
+1,1.42,Theorem,8,functional/1.42 Theorem_1_8.jpg,"
+\[
+f_{n}(x)=\frac{1}{\delta_{n}} \int_{x-\delta_{n}}^{x} f_{n-1}(t) d t \quad(n=1,2,3, \ldots)
+\]"
+11,11.14,Definition,2,functional/11.14 Definition_11_2.jpg,"
+\[
+(\lambda x)^{*}=\bar{\lambda} x^{*} .
+\]"
+1,1.35,Theorem,2,functional/1.35 Theorem_1_2.jpg,"
+\[
+V=V\left(p_{1}, 2 n_{1}\right) \cap \cdots \cap V\left(p_{m}, 2 n_{m}\right) .
+\]"
+6,6.26,Theorem,3,functional/6.26 Theorem_6_3.jpg,"
+\[
+\psi(y)=\int_{Q(y)}(T \psi)(x) d x \quad\left(\psi \in \mathscr{D}_{Q}\right)
+\]"
+6,1.27,and,4,functional/1.27 and part (b) of Theorem_6_4.jpg,"
+\[
+\alpha \pm \beta=\left(\alpha_{1} \pm \beta_{1}, \ldots, \alpha_{n} \pm \beta_{n}\right) .
+\]"
+7,7.11,Definition,2,functional/7.11 Definition_7_2.jpg,"$$
+\[
+\int_{R^{n}}\left(1+|x|^{2}\right)^{-k} d \mu(x)<\infty
+\]"
+11,11.7,Theorem,1,functional/11.7 Theorem_11_1.jpg,"
+\[
+f_{1}(z) \phi_{1}(z)+\cdots+f_{k}(z) \phi_{k}(z)=1 \quad\left(z \in \bar{U}^{n}\right) .
+\]"
+8,8.1,Definition,3,functional/8.1 Definition_8_3.jpg,"
+\[
+u=E * v
+\]"
+12,12.21,Theorem,9,functional/12.21 Theorem_12_9.jpg," $\quad(\Psi(s) x, y)=\sum_{i=1}^{n} \alpha_{i}\left(E\left(\omega_{i}\right) x, y\right)=\sum_{i=1}^{n} \alpha_{i} E_{x, y}\left(\omega_{i}\right)=\int_{\Omega} s d E_{x, y}$."
+11,11.28,Theorem,2,functional/11.28 Theorem_11_2.jpg,"
+\[
+\sigma(\alpha e-u) \subset[0, \alpha]
+\]"
+7,7.22,Theorem,4,functional/7.22 Theorem_7_4.jpg,"
+\[
+\phi(t)=\int_{R^{n}} f(x) e^{i t \cdot x} d m_{n}(x) \quad\left(t \in R^{n}\right)
+\]"
+13,13.23,and,18,functional/13.23 and Theorem_13_18.jpg,"
+\[
+\Psi(f)+\Psi(g) \subset \Psi(f+g) .
+\]"
+13,13.1,Definition,2,functional/13.1 Definition_13_2.jpg,"
+\[
+x \rightarrow(T x, y)
+\]"
+8,8.5,Theorem,6,functional/8.5 Theorem_8_6.jpg,"
+\[
+\left\|(I-\Delta)^{n}\left(e_{-r w} \psi_{j}\right)\right\|_{2}<\varepsilon \quad\left(j>j_{0}, w \in T^{n}\right)
+\]"
+8,8.5,Theorem,7,functional/8.5 Theorem_8_7.jpg,"
+\[
+\int_{R^{n}}\left|\left(1+|t|^{2}\right)^{n} \hat{\psi}_{j}(t+r w)\right|^{2} d m_{n}(t)<\varepsilon^{2}
+\]"
+13,13.1,Definition,3,functional/13.1 Definition_13_3.jpg,"
+\[
+(T x, y)=\left(x, T^{*} y\right) \quad[x \in \mathscr{D}(T)] .
+\]"
+7,7.22,Theorem,5,functional/7.22 Theorem_7_5.jpg," $\int_{-\infty}^{\infty} f\left(\xi+i \eta, z_{2}, \ldots, z_{n}\right) \exp \left\{i\left[t_{1}(\xi+i \eta)+t_{2} z_{2}+\cdots+t_{n} z_{n}\right]\right\} d \xi$"
+11,11.17,Definition,1,functional/11.17 Definition_11_1.jpg,"
+\[
+\left\|x x^{*}\right\|=\|x\|^{2}
+\]"
+11,11.28,Theorem,3,functional/11.28 Theorem_11_3.jpg,"
+\[
+\|\gamma e-w\| \leq y .
+\]"
+12,12.21,Theorem,8,functional/12.21 Theorem_12_8.jpg,"
+\[
+\Psi(\alpha s+\beta t)=\alpha \Psi(s)+\beta \Psi(t)
+\]"
+7,7.11,Definition,3,functional/7.11 Definition_7_3.jpg,"
+\[
+\Lambda f=\int_{R^{n}} f d \mu
+\]"
+8,8.1,Definition,2,functional/8.1 Definition_8_2.jpg,"
+\[
+P(D) E=\delta \text {. }
+\]"
+6,1.27,and,5,functional/1.27 and part (b) of Theorem_6_5.jpg,"$$
+\[
+x \cdot y=x_{1} y_{1}+\cdots+x_{n} y_{n},
+\]"
+13,13.12,Theorem,6,functional/13.12 Theorem_13_6.jpg,"
+\[
+(B h, h)=(B Q x, Q x)=(x, Q x) \geq 0,
+\]"
+1,1.35,Theorem,3,functional/1.35 Theorem_1_3.jpg,"
+\[
+\left\{x: p_{i}(x)<\frac{r}{c_{i}-r}\right\}
+\]"
+6,6.26,Theorem,2,functional/6.26 Theorem_6_2.jpg,"$$
+\[
+|\psi| \leq \max _{x \in Q}\left|\left(D_{i} \psi\right)(x)\right| \quad\left(\psi \in \mathscr{D}_{Q}\right)
+\]"
+6,6.4,Theorem,1,functional/6.4 Theorem_6_1.jpg,"
+\[
+\phi+W \subset V_{1} \cap V_{2}
+\]"
+11,11.14,Definition,3,functional/11.14 Definition_11_3.jpg,"
+\[
+(x y)^{*}=y^{*} x^{*} .
+\]"
+13,13.36,Theorem,13,functional/13.36 Theorem_13_13.jpg,"
+\[
+Q(t) x=\lim _{\varepsilon \rightarrow 0} T(t, \varepsilon) x
+\]"
+3,3.13,Theorem,2,functional/3.13 Theorem_3_2.jpg,"
+\[
+|f(x)| \leq \gamma(x) \quad(x \in X) .
+\]"
+10,10.1,Definition,10,functional/10.1 Definition_10_10.jpg,"
+\[
+x_{n} y \rightarrow x y \quad \text { and } \quad x y_{n} \rightarrow x y
+\]"
+1,1.24,Theorem,4,functional/1.24 Theorem_1_4.jpg, $f(x)=\inf \{r: x \in A(r)\} \quad(x \in X)$
+13,13.19,Theorem,5,functional/13.19 Theorem_13_5.jpg,"
+\[
+(T+i I)(T-i I)=I+T^{2}=(T-i I)(T+i I)
+\]"
+13,13.38,Theorem,4,functional/13.38 Theorem_13_4.jpg,"
+\[
+e^{t A}=\int_{\sigma(A)} e^{t \lambda} d E^{A}(\lambda) \quad(0 \leq t<\infty)
+\]"
+13,13.32,Theorem,16,functional/13.32 Theorem_13_16.jpg,"$\mathscr{D}(M)=\left\{x \in H: \int|\lambda|^{2} d E_{x, x}(\lambda)<\infty\right\}$."
+6,6.30,Theorem,1,functional/6.30 Theorem_6_1.jpg,"
+\[
+\tau_{x}\left(\left(D^{\alpha} \phi\right)^{\vee}\right)=(-1)^{|\alpha|} D^{\alpha}\left(\tau_{x} \varnothing\right)
+\]"
+12,12.40,Theorem,15,functional/12.40 Theorem_12_15.jpg,"
+\[
+\|u\|^{2}=F\left(u^{*} u\right)=\left\|T(u) e^{\prime}\right\|^{2} \leq\|T(u)\|^{2}
+\]"
+7,7.6,Lemma,2,functional/7.6 Lemma_7_2.jpg,"
+\[
+\phi_{n}=\int_{R^{n}} \hat{\phi}_{n} d m_{n} .
+\]"
