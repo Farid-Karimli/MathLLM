@@ -1,0 +1,1036 @@
+Type,Formula#,Type#,latex
+1.13,6,Definition,$\left(\sup _{n} f_{n}\right)(x)=\sup _{n}\left(f_{n}(x)\right)$
+1.13,7,Definition,
+1.13,5,Definition,$\limsup _{n \rightarrow \infty} a_{n}=\lim _{n \rightarrow \infty} \inf a_{n}=\lim _{n \rightarrow \infty} a_{n}$.
+1.13,4,Definition,$\liminf _{n \rightarrow \infty} a_{n}=-\limsup _{n \rightarrow \infty}\left(-a_{n}\right)$
+1.13,1,Definition,"$b_{k}=\sup \left\{a_{k}, a_{k+1}, a_{k+2}, \ldots\right\} \quad(k=1,2,3, \ldots)$"
+1.13,3,Definition,$\beta=\limsup _{n \rightarrow \infty} a_{n}$.
+1.13,2,Definition,"$\beta=\inf \left\{b_{1}, b_{2}, b_{3}, \ldots\right\}$"
+1.13,8,Definition,"$f(x)=\lim _{n \rightarrow \infty} f_{n}(x)$,"
+1.17,2,Theorem,$t-\delta_{n}<\varphi_{n}(t) \leq t \quad$ if $0 \leq t \leq n$
+1.17,3,Theorem,$s_{n}=\varphi_{n} \circ f$
+1.17,1,Theorem,$\varphi_{n}(t)=\left\{\begin{array}{ll}k_{n}(t) \delta_{n} & \text { if } 0 \leq t<n \\ n & \text { if } n \leq t \leq \infty\end{array}\right.$
+1.18,1,Definition,$\mu\left(\bigcup_{i=1}^{\infty} A_{i}\right)=\sum_{i=1}^{\infty} \mu\left(A_{i}\right)$
+1.23,2,Definition,$\int_{E} s d \mu=\sum_{i=1}^{n} \alpha_{i} \mu\left(A_{i} \cap E\right)$.
+1.23,3,Definition,$\int_{E} f d \mu=\sup \int_{E} s d \mu$
+1.23,1,Definition,$s=\sum_{i=1}^{n} \alpha_{i} \chi_{A_{i}}$
+1.24,4,Theorem,$h^{+}+f^{-}+g^{-}=f^{+}+g^{+}+h^{-}$.
+1.24,2,Theorem,$\int_{X}(f+g) d \mu=\int_{X} f d \mu+\int_{X} g d \mu$
+1.24,3,Theorem,"$\int_{X}(\alpha f) d \mu=\alpha \int_{X} f d \mu$,"
+1.25,2,Proposition,$\int_{X}(s+t) d \mu=\int_{X} s d \mu+\int_{X} t d \mu$.
+1.25,1,Proposition,$\varphi(E)=\int_{E} s d \mu$
+1.25,6,Theorem,$\alpha \geq \int_{x} s d \mu$
+1.25,7,Theorem,$\alpha \geq \int_{X} f d \mu$
+1.25,5,Theorem,$\alpha \geq c \int_{X} s d \mu$
+1.26,3,Theorem,"$E_{n}=\left\{x: f_{n}(x) \geq c s(x)\right\} \quad(n=1,2,3, \ldots)$"
+1.26,2,Theorem,$\alpha \leq \int_{X} f d \mu$
+1.26,1,Theorem,$\int_{X} f_{n} d \mu \rightarrow \alpha \quad$ as $n \rightarrow \infty$.
+1.26,4,Theorem,"$\int_{X} f_{n} d \mu \geq \int_{E_{n}} f_{n} d \mu \geq c \int_{E_{n}} s d \mu \quad(n=1,2,3, \ldots)$"
+1.27,4,Theorem,$\int_{X} g_{N} d \mu=\sum_{n=1}^{N} \int_{X} f_{n} d \mu$.
+1.27,1,Theorem,$f(x)=\sum_{n=1}^{\infty} f_{n}(x) \quad(x \in X)$
+1.27,3,Theorem,$\int_{X}\left(f_{1}+f_{2}\right) d \mu=\int_{X} f_{1} d \mu+\int_{X} f_{2} d \mu$.
+1.28,1,Lemma,$\int_{X}\left(\underset{n \rightarrow \infty}{\liminf f_{n}}\right) d \mu \leq \liminf _{n \rightarrow \infty} \int_{X} f_{n} d \mu$.
+1.28,2,Lemma,"$g_{k}(x)=\inf _{i \geq k} f_{i}(x) \quad(k=1,2,3, \ldots ; x \in X)$"
+1.28,3,Lemma,"$\int_{X} g_{k} d \mu \leq \int_{X} f_{k} d \mu \quad(k=1,2,3, \ldots)$"
+1.29,2,Theorem,$\int_{X} g d \varphi=\int_{X} g f d \mu$
+1.29,1,Theorem,$\varphi(E)=\int_{E} f d \mu \quad(E \in \mathfrak{M})$
+1.29,5,Theorem,$\varphi(E)=\sum_{j=1}^{\infty} \varphi\left(E_{j}\right)$
+1.29,4,Theorem,"$\varphi(E)=\int_{X} \chi_{E} f d \mu, \quad \varphi\left(E_{j}\right)=\int_{X} \chi_{E_{j}} f d \mu$."
+1.29,6,Theorem,$d \varphi=f d \mu$.
+1.31,1,Definition,$\int_{E} f d \mu=\int_{E} u^{+} d \mu-\int_{E} u^{-} d \mu+i \int_{E} v^{+} d \mu-i \int_{E} v^{-} d \mu$
+1.31,2,Definition,$\int_{E} f d \mu=\int_{E} f^{+} d \mu-\int_{E} f^{-} d \mu$
+1.32,1,Theorem,$\int_{X}(\alpha f+\beta g) d \mu=\alpha \int_{X} f d \mu+\beta \int_{X} g d \mu$.
+1.34,4,Theorem,$\lim _{n \rightarrow \infty} \int_{X} f_{n} d \mu=\int_{X} f d \mu$.
+1.34,5,Theorem,$\limsup _{n \rightarrow \infty} \int_{X}\left|f_{n}-f\right| d \mu \leq 0$
+1.34,2,Theorem,"$\left|f_{n}(x)\right| \leq g(x) \quad(n=1,2,3, \ldots ; x \in X)$"
+1.34,3,Theorem,$\lim _{n \rightarrow \infty} \int_{X}\left|f_{n}-f\right| d \mu=0$
+1.34,1,Theorem,$f(x)=\lim _{n \rightarrow \infty} f_{n}(x)$
+1.35,1,Definition,"$\mu(\{x: f(x) \neq g(x)\})=0$,"
+1.35,2,Definition,$\int_{E} f d \mu=\int_{E} g d \mu$.
+1.38,4,Theorem,$\int_{s} \varphi d \mu<\infty$.
+1.38,2,Theorem,$f(x)=\sum_{n=1}^{\infty} f_{n}(x)$
+1.38,3,Theorem,$\int_{X} f d \mu=\sum_{n=1}^{\infty} \int_{X} f_{n} d \mu$.
+1.38,1,Theorem,$\sum_{n=1}^{\infty} \int_{X}\left|f_{n}\right| d \mu<\infty$
+2.1,4,Definition,$\Lambda f=\int_{I} f d \mu \quad(f \in C)$.
+2.1,1,Definition,"$\alpha(x+y)=\alpha x+\alpha y,(\alpha+\beta) x=\alpha x+\beta x$"
+2.1,2,Definition,$\Lambda(\alpha x+\beta y)=\alpha \Lambda x+\beta \Lambda y$
+2.1,3,Definition,$\Lambda f=\int_{0}^{1} f(x) d x \quad(f \in C)$
+2.1,3,Theorem,$K \prec f \prec V$
+2.1,2,Theorem,$f \prec V$
+2.1,1,Theorem,$K \prec f$
+2.12,5,Lemma,"$f=\sup _{r} f_{r}, \quad g=\inf _{s} g_{s}$."
+2.12,1,Lemma,$K \prec f \prec V$.
+2.12,2,Lemma,$K \subset V_{1} \subset \bar{V}_{1} \subset V_{0} \subset \bar{V}_{0} \subset V$.
+2.12,3,Lemma,$s>r$ implies $\bar{V}_{s} \subset V_{r}$.
+2.13,15,Theorem,"$B_{n}=\left(A_{n} \cap K\right)-\left(B_{1} \cup \cdots \cup B_{n-1}\right) \quad(n=2,3,4, \ldots)$"
+2.13,14,Theorem,$\mu(A-B) \leq \epsilon+\mu\left(K_{1}-V_{2}\right)+\epsilon$
+2.13,16,Theorem,$\Lambda f \leq \int_{x} f d \mu$
+2.13,17,Theorem,$y_{0}<a<y_{1}<\cdots<y_{n}=b$.
+2.13,13,Theorem,$\mu(E) \leq \sum_{i=1}^{N} \mu\left(E_{i}\right)+\epsilon$
+2.13,12,Theorem,$\mu(E) \geq \mu\left(K_{n}\right)=\sum_{i=1}^{n} \mu\left(H_{i}\right)>\sum_{i=1}^{n} \mu\left(E_{i}\right)-\epsilon$
+2.13,10,Theorem,$\mu\left(K_{1} \cup K_{2}\right)=\mu\left(K_{1}\right)+\mu\left(K_{2}\right)$
+2.13,11,Theorem,"$\mu\left(H_{i}\right)>\mu\left(E_{i}\right)-2^{-i} \epsilon \quad(i=1,2,3, \ldots)$"
+2.13,2,Theorem,
+2.13,3,Theorem,$h_{1}+h_{2}+\cdots+h_{n}=1-\left(1-g_{1}\right)\left(1-g_{2}\right) \cdots\left(1-g_{n}\right)$
+2.13,1,Theorem,$h_{1}(x)+\cdots+h_{n}(x)=1 \quad(x \in K)$.
+2.13,4,Theorem,$\mu\left(\bigcup_{i=1}^{\infty} E_{i}\right) \leq \sum_{i=1}^{\infty} \mu\left(E_{i}\right)$.
+2.13,5,Theorem,$\mu\left(V_{1} \cup V_{2}\right) \leq \mu\left(V_{1}\right)+\mu\left(V_{2}\right)$
+2.13,7,Theorem,$\mu(K)=\inf \{\Lambda f: K \prec f\}$.
+2.13,6,Theorem,$\Lambda g=\Lambda\left(h_{1} g\right)+\Lambda\left(h_{2} g\right) \leq \mu\left(V_{1}\right)+\mu\left(V_{2}\right)$
+2.13,9,Theorem,$\mu(E)=\sum_{i=1}^{\infty} \mu\left(E_{i}\right)$
+2.13,19,Theorem,"$\mu\left(V_{i}\right)<\mu\left(E_{i}\right)+\frac{\epsilon}{n} \quad(i=1, \ldots, n)$"
+2.13,18,Theorem,"$E_{i}=\left\{x: y_{i-1}<f(x) \leq y_{i}\right\} \cap K \quad(i=1, \ldots, n)$"
+2.17,1,Theorem,"$\mu\left(V_{n}-\left(K_{n} \cap E\right)\right)<\frac{\epsilon}{2^{n+1}} \quad(n=1,2,3, \ldots)$"
+2.17,2,Theorem,$\lambda(V)=\lim _{n \rightarrow \infty} \int_{X} g_{n} d \lambda=\lim _{n \rightarrow \infty} \int_{X} g_{n} d \mu=\mu(V)$.
+2.17,3,Theorem,$E+x=\{y+x: y \in E\}$.
+2.17,6,Theorem,"$Q(a ; \delta)=\left\{x: \alpha_{i} \leq \xi_{i}<\alpha_{i}+\delta, 1 \leq i \leq k\right\}$"
+2.17,4,Theorem,"$W=\left\{x: \alpha_{i}<\xi_{i}<\beta_{i}, 1 \leq i \leq k\right\}$"
+2.17,5,Theorem,$\operatorname{vol}(W)=\prod_{i=1}^{k}\left(\beta_{i}-\alpha_{i}\right)$
+2.22,4,Theorem,$S_{1} \cup\left(S_{2}-e_{2}\right)=Q$
+2.22,1,Theorem,$T e_{j}=\sum_{i=1}^{k} \alpha_{i j} e_{i} \quad(1 \leq j \leq k)$
+2.22,2,Theorem,$\Delta(T)=|\operatorname{det} T|$.
+2.22,3,Theorem,"$\xi_{1} \leq \xi_{2}<\xi_{1}+1, \quad 0 \leq \xi_{i}<1 \quad$ if $\quad i \neq 2$"
+2.24,2,Theorem,$\sup _{x \in X}|g(x)| \leq \sup _{x \in X}|f(x)|$.
+2.24,3,Theorem,$f(x)=\sum_{n=1}^{\infty} t_{n}(x) \quad(x \in X)$.
+2.24,1,Theorem,$\mu(\{x: f(x) \neq g(x)\})<\epsilon$.
+2.24,5,Theorem,$f(x)=\lim _{n \rightarrow \infty} g_{n}(x) \quad$ a.e.
+2.25,1,Theorem,$\int_{X}(v-u) d \mu<\epsilon$.
+2.25,3,Theorem,$\int_{X} f d \mu=\sum_{i=1}^{\infty} c_{i} \mu\left(E_{i}\right)$
+2.25,2,Theorem,$f(x)=\sum_{i=1}^{\infty} c_{i} \chi_{E_{i}}(x) \quad(x \in X)$
+2.25,6,Theorem,$\sum_{N+1}^{\infty} c_{i} \mu\left(E_{i}\right)<\frac{\epsilon}{2}$
+2.25,5,Theorem,"$v=\sum_{i=1}^{\infty} c_{i} \chi_{V_{i}}, \quad u=\sum_{i=1}^{N} c_{i} \chi_{K_{i}}$"
+2.25,4,Theorem,"$c_{i} \mu\left(V_{i}-K_{i}\right)<2^{-i-1} \epsilon \quad(i=1,2,3, \ldots)$"
+3.1,1,Definition,$\varphi((1-\lambda) x+\lambda y) \leq(1-\lambda) \varphi(x)+\lambda \varphi(y)$
+3.1,7,Theorem,$\left\|\Lambda_{n}\right\| \rightarrow \infty \quad$ as $n \rightarrow \infty$
+3.1,6,Theorem,$\left\|\Lambda_{n}\right\| \leq \frac{1}{2 \pi} \int_{-\pi}^{\pi}\left|D_{n}(t)\right| d t=\left\|D_{n}\right\|_{1}$.
+3.1,4,Theorem,$s^{*}(f ; x)=\sup _{n}\left|s_{n}(f ; x)\right|$
+3.1,5,Theorem,"$\Lambda_{n} f=s_{n}(f ; 0) \quad(f \in C(T) ; n=1,2,3, \ldots)$"
+3.1,1,Theorem,$\|\Lambda x\| \geq \delta\|x\| \quad(x \in X)$
+3.1,2,Theorem,"where
+\[
+D_{n}(t)=\sum_{k=-n}^{n} e^{i k t}
+\]"
+3.1,3,Theorem,$\lim _{n \rightarrow \infty} s_{n}(f ; x)=f(x)$
+3.1,8,Theorem,$\left\|D_{n}\right\|_{1} \rightarrow \infty \quad$ as $n \rightarrow \infty$
+3.1,1,Remark,$\|\alpha f\|_{p}=|\alpha|\|f\|_{p}$.
+3.1,2,Remark,$\|f-h\|_{p} \leq\|f-g\|_{p}+\|g-h\|_{p}$.
+3.11,6,Theorem,$\int_{X}\left|f-f_{m}\right|^{p} d \mu \leq \liminf _{i \rightarrow \infty} \int_{X}\left|f_{n_{i}}-f_{m}\right|^{p} d \mu \leq \epsilon^{p}$.
+3.11,4,Theorem,"$f_{n_{1}}+\sum_{i=1}^{k-1}\left(f_{n_{i+1}}-f_{n_{i}}\right)=f_{n_{k}}$,"
+3.11,5,Theorem,$f(x)=\lim _{i \rightarrow \infty} f_{n_{i}}(x) \quad$ a.e.
+3.11,1,Theorem,"$\left\|f_{n_{i+1}}-f_{n_{i}}\right\|_{p}<2^{-i} \quad(i=1,2,3, \ldots)$"
+3.11,2,Theorem,"$g_{k}=\sum_{i=1}^{k}\left|f_{n_{i+1}}-f_{n_{i}}\right|, \quad g=\sum_{i=1}^{\infty}\left|f_{n_{i+1}}-f_{n_{i}}\right|$"
+3.11,3,Theorem,$f_{n_{1}}(x)+\sum_{i=1}^{\infty}\left(f_{n_{i+1}}(x)-f_{n_{i}}(x)\right)$
+3.13,1,Theorem,$\mu(\{x: s(x) \neq 0\})<\infty$.
+3.14,1,Theorem,$\|g-s\|_{p} \leq 2 \epsilon^{1 / p}\|s\|_{\infty}$.
+3.15,1,Remark,$\|f\|_{\infty}=\sup _{x \in R^{k}}|f(x)|$.
+3.15,2,Remark,$\int_{-\infty}^{\infty}|f(t)-g(t)| d t$
+3.17,1,Theorem,$\|f\|=\sup _{x \in X}|f(x)|$.
+3.3,8,Theorem,$y_{1}^{\alpha_{1}} y_{2}^{\alpha_{2}} \cdots y_{n}^{\alpha_{n}} \leq \alpha_{1} y_{1}+\alpha_{2} y_{2}+\cdots+\alpha_{n} y_{n}$
+3.3,5,Theorem,$\exp \left\{\frac{1}{n}\left(x_{1}+\cdots+x_{n}\right)\right\} \leq \frac{1}{n}\left(e^{x_{1}}+\cdots+e^{x_{n}}\right)$
+3.3,4,Theorem,$\exp \left\{\int_{\Omega} f d \mu\right\} \leq \int_{\Omega} e^{f} d \mu$.
+3.3,6,Theorem,$\left(y_{1} y_{2} \cdots y_{n}\right)^{1 / n} \leq \frac{1}{n}\left(y_{1}+y_{2}+\cdots+y_{n}\right)$.
+3.3,7,Theorem,$\exp \left\{\int_{\Omega} \log g d \mu\right\} \leq \int_{\Omega} g d \mu$
+3.3,3,Theorem,$\varphi(f(x))-\varphi(t)-\beta(f(x)-t) \geq 0$
+3.3,2,Theorem,$\varphi(s) \geq \varphi(t)+\beta(s-t) \quad(a<s<b)$
+3.3,1,Theorem,$\varphi\left(\int_{\Omega} f d \mu\right) \leq \int_{\Omega}(\varphi \circ f) d \mu$.
+3.4,1,Definition,"$\frac{1}{p}+\frac{1}{q}=1$,"
+3.5,8,Theorem,$(f+g)^{p}=f \cdot(f+g)^{p-1}+g \cdot(f+g)^{p-1}$
+3.5,9,Theorem,$\int f \cdot(f+g)^{p-1} \leq\left\{\int f^{p}\right\}^{1 / p}\left\{\int(f+g)^{(p-1) q}\right\}^{1 / q}$.
+3.5,7,Theorem,$\int_{X} F G d \mu \leq p^{-1}+q^{-1}=1$
+3.5,6,Theorem,$F(x) G(x) \leq p^{-1} F(x)^{p}+q^{-1} G(x)^{q}$
+3.5,4,Theorem,$\int_{X} F^{p} d \mu=\int_{X} G^{q} d \mu=1$
+3.5,5,Theorem,$e^{s / p+t / q} \leq p^{-1} e^{s}+q^{-1} e^{t}$
+3.5,1,Theorem,$\int_{X} f g d \mu \leq\left\{\int_{X} f^{p} d \mu\right\}^{1 / p}\left\{\int_{X} g^{q} d \mu\right\}^{1 / q}$
+3.5,2,Theorem,$\left\{\int_{X}(f+g)^{p} d \mu\right\}^{1 / p} \leq\left\{\int_{X} f^{p} d \mu\right\}^{1 / p}+\left\{\int_{X} g^{p} d \mu\right\}^{1 / p}$.
+3.5,3,Theorem,"$F=\frac{f}{A}, \quad G=\frac{g}{B}$."
+3.6,2,Definition,$\|f\|_{p}<\infty$
+3.6,1,Definition,$\|f\|_{p}=\left\{\int_{X}|f|^{p} d \mu\right\}^{1 / p}$
+3.7,2,Definition,"$g^{-1}((\beta, \infty])=\bigcup_{n=1}^{\infty} g^{-1}\left(\left(\beta+\frac{1}{n}, \infty\right]\right)$"
+3.7,1,Definition,"$\mu\left(g^{-1}((\alpha, \infty])\right)=0$"
+3.8,2,Theorem,$|f(x) g(x)| \leq\|f\|_{\infty}|g(x)|$
+3.8,1,Theorem,$\|f g\|_{1} \leq\|f\|_{p}\|g\|_{q}$.
+3.9,1,Theorem,$\|f+g\|_{p} \leq\|f\|_{p}+\|g\|_{p}$.
+4.1,1,Theorem,$\|x+y\|^{2}+\|x-y\|^{2}=2\|x\|^{2}+2\|y\|^{2} \quad(x$ and $y \in H)$.
+4.1,3,Theorem,$\|x-y\|^{2} \leq 2\|x\|^{2}+2\|y\|^{2}-4 \delta^{2} \quad(x$ and $y \in E)$.
+4.1,2,Theorem,$\frac{1}{4}\|x-y\|^{2}=\frac{1}{2}\|x\|^{2}+\frac{1}{2}\|y\|^{2}-\left\|\frac{x+y}{2}\right\|^{2}$.
+4.1,2,Definition,$A-2 B r+C r^{2} \geq 0$
+4.1,1,Definition,"$(x-r \alpha y, x-r \alpha y)=(x, x)-r \alpha(y, x)-r \bar{\alpha}(x, y)+r^{2}(y, y)$."
+4.12,4,Theorem,"$L x=(L x)(z, z)=(L z)(x, z)$"
+4.12,1,Theorem,"$L x=(x, y) \quad(x \in H)$."
+4.12,2,Theorem,$M=\{x: L x=0\}$.
+4.12,3,Theorem,$u=(L x) z-(L z) x$
+4.13,1,Definition,"$\left(u_{\alpha}, u_{\beta}\right)=\left\{\begin{array}{ll}1 & \text { if } \alpha=\beta \\ 0 & \text { if } \alpha \neq \beta\end{array}\right.$"
+4.13,2,Definition,"$\hat{x}(\alpha)=\left(x, u_{\alpha}\right) \quad(\alpha \in A)$."
+4.14,5,Theorem,$\sum_{\alpha \in F}|\hat{x}(\alpha)|^{2} \leq\|x\|^{2}$
+4.14,1,Theorem,$\sum_{\alpha \in A} \varphi(\alpha)$
+4.14,4,Theorem,$\left\|x-s_{F}(x)\right\|<\|x-s\|$
+4.14,6,Theorem,$\|x-s\|^{2}=\left\|\left(x-s_{F}\right)+\left(s_{F}-s\right)\right\|^{2}=\left\|x-s_{F}\right\|^{2}+\left\|s_{F}-s\right\|^{2}$
+4.14,3,Theorem,"$(\varphi, \psi)=\sum_{\alpha \in A} \varphi(\alpha) \overline{\psi(\alpha)}$"
+4.14,2,Theorem,$\sum_{\alpha \in A}|\varphi(\alpha)|^{2}<\infty$.
+4.14,3,Theorem,$s_{F}(x)=\sum_{\alpha \in F} \hat{x}(\alpha) u_{\alpha}$
+4.14,2,Theorem,$\|y\|^{2}=\sum_{\alpha \in F}|\varphi(\alpha)|^{2}$.
+4.14,1,Theorem,$y=\sum_{\alpha \in F} \varphi(\alpha) u_{\alpha}$
+4.17,1,Theorem,$\sum_{\alpha \in A}|\hat{x}(\alpha)|^{2} \leq\|x\|^{2}$
+4.23,8,Definition,"$\left(u_{n}, u_{m}\right)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} e^{i(n-m) t} d t=\left\{\begin{array}{ll}1 & \text { if } n=m \\ 0 & \text { if } n \neq m\end{array}\right.$"
+4.23,3,Definition,"$\|f\|_{\infty}=\sup _{t}|f(t)|$,"
+4.23,2,Definition,$\|f\|_{p}=\left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi}|f(t)|^{p} d t\right\}^{1 / p}$
+4.23,1,Definition,$f(t)=F\left(e^{i t}\right)$
+4.23,5,Definition,$f(t)=\sum_{n=-N}^{N} c_{n} e^{i n t}$
+4.23,4,Definition,$f(t)=a_{0}+\sum_{n=1}^{N}\left(a_{n} \cos n t+b_{n} \sin n t\right) \quad\left(t \in R^{1}\right)$
+4.23,6,Definition,$u_{n}(t)=e^{i n t} \quad(n \in Z)$
+4.23,7,Definition,$Q_{k}(t) \leq Q_{k}(\delta) \leq \frac{\pi(k+1)}{2}\left(\frac{1+\cos \delta}{2}\right)^{k} \quad(0<\delta \leq|t| \leq \pi)$
+4.25,8,Theorem,$\left\|f-s_{N}\right\|_{2}^{2}=\sum_{|n|>N}|\hat{f}(n)|^{2}$.
+4.25,1,Theorem,$\hat{f}(n)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(t) e^{-i n t} d t \quad(n \in Z)$
+4.25,3,Theorem,"$s_{N}(t)=\sum_{-N}^{N} \hat{f}(n) e^{i n t} \quad(N=0,1,2, \ldots)$"
+4.25,2,Theorem,$\sum_{-\infty}^{\infty} \hat{f}(n) e^{i n t}$
+4.25,6,Theorem,$\sum_{n=-\infty}^{\infty} \hat{f}(n) \overline{\hat{g}(n)}=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(t) \overline{g(t)} d t$
+4.25,7,Theorem,$\lim _{N \rightarrow \infty}\left\|f-s_{N}\right\|_{2}=0$
+4.25,5,Theorem,$c_{n}=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(t) e^{-i n t} d t \quad(n \in Z)$
+4.25,4,Theorem,$\sum_{n=-\infty}^{\infty}\left|c_{n}\right|^{2}<\infty$
+4.4,1,Definition,"$\|x-z\| \leq\|x-y\|+\|y-z\| \quad(x, y, z \in H)$."
+5.13,3,Theorem,$\|\varphi\|_{\infty}=\sup \{|\varphi(n)|: n \in Z\}$.
+5.13,2,Theorem,$|\hat{f}(n)|=\left|\frac{1}{2 \pi} \int_{-\pi}^{\pi}\{f(t)-P(t)\} e^{-i n t} d t\right| \leq\|f-P\|_{1}<2 \epsilon$
+5.13,1,Theorem,$\hat{f}(n)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(t) e^{-i n t} d t \quad(n \in Z)$
+5.15,2,Theorem,$\|\hat{f}\|_{\infty} \geq \delta\|f\|_{1}$
+5.15,3,Theorem,$\left\|\hat{D}_{n}\right\|_{\infty} \geq \delta\left\|D_{n}\right\|_{1}$
+5.17,1,Proposition,$f(x)=u(x)-i u(i x) \quad(x \in V)$
+5.17,2,Proposition,$z=\operatorname{Re} z-i \operatorname{Re}(i z)$
+5.17,3,Proposition,$\operatorname{Re}(i f(x))=\operatorname{Re} f(i x)=u(i x)$
+5.17,4,Proposition,$f(i x)=u(i x)-i u(-x)=u(i x)+i u(x)=i f(x)$
+5.17,5,Proposition,"$|f(x)|=f(\alpha x)=u(\alpha x) \leq\|u\| \cdot\|\alpha x\|=\|u\| \cdot\|x\|$,"
+5.18,1,Theorem,"$|f(x)+\lambda \alpha| \leq\left\|x+\lambda x_{0}\right\| \quad(x \in M, \lambda$ real $)$."
+5.18,2,Theorem,$|f(x)-\alpha| \leq\left\|x-x_{0}\right\| \quad(x \in M)$
+5.18,3,Theorem,$A_{x}=f(x)-\left\|x-x_{0}\right\| \quad$ and $\quad B_{x}=f(x)+\left\|x-x_{0}\right\|$.
+5.18,6,Theorem,$F(x)=U(x)-i U(i x) \quad(x \in X)$
+5.18,4,Theorem,$A_{x} \leq B_{y}$
+5.18,5,Theorem,"$f(x)-f(y)=f(x-y) \leq\|x-y\| \leq\left\|x-x_{0}\right\|+\left\|y-x_{0}\right\|$,"
+5.2,1,Definition,"$\|\Lambda\|=\sup \{\|\Lambda x\|: x \in X,\|x\| \leq 1\}$."
+5.2,3,Definition,$\|\Lambda x\| \leq\|\Lambda\|\|x\|$
+5.2,2,Definition,$\|\Lambda(\alpha x)\|=\|\alpha \Lambda x\|=|\alpha|\|\Lambda x\|$.
+5.2,4,Definition,$\{x \in X:\|x\| \leq 1\}$
+5.21,1,Remark,$\|f\|_{K}=\|f\|_{H} \quad(f \in A)$.
+5.21,2,Remark,$\|f\|_{E}=\sup \{|f(x)|: x \in E\}$
+5.21,3,Remark,$|f(x)| \leq\|f\|_{H}$.
+5.21,7,Remark,$\Lambda f=\frac{1}{2} \Lambda(1+g)=\frac{1}{2}(1+\alpha) \geq 0$
+5.21,6,Remark,$(\beta+r)^{2} \leq|\alpha+i(\beta+r)|^{2}=|\Lambda(g+i r)|^{2} \leq 1+r^{2}$
+5.21,4,Remark,$\Lambda f=f(x) \quad(f \in M)$
+5.21,5,Remark,"$\Lambda 1=1, \quad\|\Lambda\|=1$"
+5.21,8,Remark,$f(z)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f\left(e^{i t}\right) P_{r}(\theta-t) d t \quad(f \in A)$.
+5.21,9,Remark,$f(x)=\int_{H} f d \mu_{x} \quad(f \in A)$
+5.25,2,Theorem,$f(z)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} \frac{1-r^{2}}{1-2 r \cos (\theta-t)+r^{2}} f\left(e^{i t}\right) d t \quad\left(z=r e^{i \theta}\right)$
+5.25,1,Theorem,$\sup _{z \in U}|f(z)|=\sup _{z \in T}|f(z)|$
+5.6,3,Theorem,"$\bar{S}\left(x_{n}, r_{n}\right) \subset V_{n} \cap S\left(x_{n-1}, r_{n-1}\right) \quad$ and $\quad 0<r_{n}<\frac{1}{n}$"
+5.6,2,Theorem,"$\bar{S}\left(x_{1}, r_{1}\right) \subset W \cap V_{1} \quad$ and $\quad 0<r_{1}<1$"
+5.6,1,Theorem,"$S(x, r)=\{y \in X: \rho(x, y)<r\}$"
+5.8,2,Theorem,$\sup _{\alpha \in A}\left\|\Lambda_{\alpha} x\right\|=\infty$
+5.8,3,Theorem,$\varphi(x)=\sup _{\alpha \in A}\left\|\Lambda_{\alpha} x\right\| \quad(x \in X)$
+5.8,1,Theorem,$\left\|\Lambda_{\alpha}\right\| \leq M$
+5.8,4,Theorem,"$V_{n}=\{x: \varphi(x)>n\} \quad(n=1,2,3, \ldots)$"
+5.8,5,Theorem,$\left\|\Lambda_{\alpha}\left(x_{0}+x\right)\right\| \leq N$
+5.8,6,Theorem,$\left\|\Lambda_{\alpha} x\right\| \leq\left\|\Lambda_{\alpha}\left(x_{0}+x\right)\right\|+\left\|\Lambda_{\alpha} x_{0}\right\| \leq 2 N$
+5.9,2,Theorem,"$\Lambda x_{i}^{\prime} \rightarrow y_{0}, \quad \Lambda x_{i}^{\prime \prime} \rightarrow y_{0}+y \quad(i \rightarrow \infty)$"
+5.9,3,Theorem,$\|x\| \leq \delta^{-1}\|y\| \quad$ and $\quad\|y-\Lambda x\|<\epsilon$.
+5.9,1,Theorem,$\Lambda(U) \supset \delta V$
+5.9,4,Theorem,$\left\|y-\Lambda x_{1}\right\|<\frac{1}{2} \delta \epsilon$.
+5.9,5,Theorem,$\left\|y-\Lambda x_{1}-\cdots-\Lambda x_{n}\right\|<2^{-n} \delta \epsilon$.
+5.9,7,Theorem,$\Lambda((1+\epsilon) U) \supset \delta V$
+5.9,6,Theorem,"$\left\|x_{n+1}\right\|<2^{-n} \epsilon \quad(n=1,2,3, \ldots)$"
+5.9,8,Theorem,"$\Lambda(U) \supset(1+\epsilon)^{-1} \delta V$,"
+6.1,10,Theorem,"$\lambda_{a}(E)=\lambda(A \cap E), \quad \lambda_{s}(E)=\lambda(B \cap E)$,"
+6.1,6,Theorem,$\int_{X} f d \lambda=\int_{X} f g d \varphi$
+6.1,7,Theorem,$0 \leq \frac{1}{\varphi(E)} \int_{E} g d \varphi=\frac{\lambda(E)}{\varphi(E)} \leq 1$.
+6.1,11,Theorem,$\int_{E}\left(1-g^{n+1}\right) d \lambda=\int_{E} g\left(1+g+\cdots+g^{n}\right) w d \mu$
+6.1,5,Theorem,$f \rightarrow \int_{X} f d \lambda$
+6.1,4,Theorem,$\int_{X} f d \varphi=\int_{X} f d \lambda+\int_{X} f w d \mu$
+6.1,1,Theorem,"$\lambda=\lambda_{a}+\lambda_{s}, \quad \lambda_{a} \ll \mu, \quad \lambda_{s} \perp \mu$."
+6.1,3,Theorem,"$\lambda_{a}^{\prime}-\lambda_{a}=\lambda_{s}-\lambda_{s}^{\prime}$,"
+6.1,2,Theorem,$\lambda_{a}(E)=\int_{E} h d \mu$
+6.1,9,Theorem,"$A=\{x: 0 \leq g(x)<1\}, \quad B=\{x: g(x)=1\}$"
+6.1,8,Theorem,$\int_{X}(1-g) f d \lambda=\int_{X} f g w d \mu$.
+6.11,1,Theorem,"$A_{n}=\bigcup_{i=n}^{\infty} E_{i}, \quad A=\bigcap_{n=1}^{\infty} A_{n}$."
+6.12,1,Theorem,$d \mu=h d|\mu|$.
+6.13,1,Theorem,$\lambda(E)=\int_{E} g d \mu \quad(E \in \mathfrak{M})$.
+6.13,3,Theorem,"$\frac{1}{2}(1+h)=\left\{\begin{array}{ll}h & \text { on } A, \\ 0 & \text { on } B,\end{array}\right.$"
+6.13,2,Theorem,$|\lambda|(E)=\int_{E}|g| d \mu \quad(E \in \mathfrak{M})$
+6.16,5,Theorem,$\Phi\left(\chi_{E}\right)=\int_{E} g d \mu=\int_{X} \chi_{E} g d \mu$
+6.16,10,Theorem,$\Psi(F)=\int_{X} F G d \tilde{\mu} \quad\left(F \in L^{P}(\tilde{\mu})\right)$
+6.16,11,Theorem,$\int_{X}|g|^{q} d \mu=\int_{X}|G|^{q} d \tilde{\mu}=\|\Psi\|^{q}=\|\Phi\|^{q}$
+6.16,4,Theorem,$\left\|\chi_{E}-\chi_{A_{k}}\right\|_{p}=\left[\mu\left(E-A_{k}\right)\right]^{1 / p} \rightarrow 0 \quad(k \rightarrow \infty)$
+6.16,6,Theorem,$\Phi(f)=\int_{X} f g d \mu$
+6.16,12,Theorem,$\Phi(f)=\Psi\left(w^{-1 / p} f\right)=\int_{X} w^{-1 / p} f G d \tilde{\mu}=\int_{X} f g d \mu$
+6.16,7,Theorem,"$\int_{X} \chi_{E_{n}}|g|^{q} d \mu \leq\|\Phi\|^{q} \quad(n=1,2,3, \ldots)$"
+6.16,3,Theorem,$\|\Phi\| \leq\|g\|_{q}$.
+6.16,2,Theorem,$\|\Phi\|=\|g\|_{q}$.
+6.16,1,Theorem,$\Phi(f)=\int_{X} f g d \mu \quad\left(f \in L^{p}(\mu)\right)$
+6.16,9,Theorem,$\Psi(F)=\Phi\left(w^{1 / p} F\right)$
+6.16,8,Theorem,$F \rightarrow w^{1 / p} F$
+6.17,4,Remark,$f \rightarrow \int_{X} f d \mu$
+6.17,1,Remark,$\int f d \mu=\int f h d|\mu|$
+6.17,3,Remark,"$\int_{X} f d(\mu+\lambda)=\int_{X} f d \mu+\int_{X} f d \lambda$,"
+6.17,2,Remark,$\int_{X} \chi_{E} d(\mu+\lambda)=(\mu+\lambda)(E)=\mu(E)+\lambda(E)=\int_{X} \chi_{E} d \mu+\int_{X} \chi_{E} d \lambda$
+6.19,7,Theorem,"$\int_{X}|g| d \lambda \geq \sup \left\{|\Phi(f)|: f \in C_{0}(X),\|f\| \leq 1\right\}=1$."
+6.19,6,Theorem,$\Phi(f)=\int_{X} f g d \lambda \quad\left(f \in C_{c}(X)\right)$
+6.19,4,Theorem,$|\Phi(f)| \leq \Lambda(|f|) \leq\|f\| \quad\left(f \in C_{c}(X)\right)$
+6.19,14,Theorem,$\Lambda(u+i v)=\Lambda u+i \Lambda v$
+6.19,5,Theorem,$|\Phi(f)| \leq \Lambda(|f|)=\int_{X}|f| d \lambda=\|f\|_{1} \quad\left(f \in C_{c}(X)\right)$.
+6.19,1,Theorem,$\Phi f=\int_{X} f d \mu$
+6.19,11,Theorem,"$\Lambda f \leq\left|\Phi\left(h_{1}\right)\right|+\epsilon, \quad \Lambda g \leq\left|\Phi\left(h_{2}\right)\right|+\epsilon$"
+6.19,10,Theorem,$\Lambda(f+g)=\Lambda f+\Lambda g \quad\left(f\right.$ and $\left.g \in C_{c}^{+}(X)\right)$
+6.19,2,Theorem,$\|\Phi\|=|\mu|(X)$.
+6.19,12,Theorem,"$h_{1}(x)=\frac{f(x)+g(x)}{f(x)}, \quad h_{2}(x)=\frac{}{f(x)+g(x)} \quad(x \in V)$"
+6.19,13,Theorem,"$\Lambda f=\Lambda f^{+}-\Lambda f^{-} \quad\left(f \in C_{c}(X), f\right.$ real $)$"
+6.19,3,Theorem,$|\mu|(X)=\int_{X}\left(\bar{h}-f_{n}\right) h d|\mu| \leq \int_{X}\left|\bar{h}-f_{n}\right| d|\mu|$
+6.19,8,Theorem,"$|\mu|(X)=\lambda(X)=1=\|\Phi\|$,"
+6.19,9,Theorem,"$\Lambda f=\sup \left\{|\Phi(h)|: h \in C_{c}(X),|h| \leq f\right\}$"
+6.2,4,Theorem,$=\sum_{i} \sum_{j}\left|\mu\left(A_{j} \cap E_{i}\right)\right| \leq \sum_{i}|\mu|\left(E_{i}\right)$.
+6.2,5,Theorem,$|\mu|(E) \leq \sum_{i}|\mu|\left(E_{i}\right)$.
+6.2,1,Theorem,"$\sum_{j}\left|\mu\left(A_{i j}\right)\right|>t_{i} \quad(i=1,2,3, \ldots)$"
+6.2,2,Theorem,"$\sum_{i} t_{i} \leq \sum_{i, j}\left|\mu\left(A_{i j}\right)\right| \leq|\mu|(E)$."
+6.2,3,Theorem,$\sum_{i}|\mu|\left(E_{i}\right) \leq|\mu|(E)$.
+6.7,2,Definition,$\lambda_{1} \perp \lambda_{2}$.
+6.7,1,Definition,$\lambda \ll \mu$
+7.1,2,Theorem,$\left|\frac{\mu(I)}{m(I)}-A\right|<\epsilon$
+7.1,1,Theorem,"$f(x)=\mu((-\infty, x)) \quad\left(x \in R^{1}\right)$."
+7.1,1,Theorem,$f(x)=\lim _{i \rightarrow \infty} \frac{1}{m\left(E_{i}(x)\right)} \int_{E_{i}(x)} f d m$
+7.13,4,Theorem,$(\bar{D} \mu)(x)=\left(\bar{D} \mu_{2}\right)(x) \leq\left(M \mu_{2}\right)(x)$
+7.13,5,Theorem,$\{\bar{D} \mu>\lambda\} \subset K \cup\left\{M \mu_{2}>\lambda\right\}$
+7.13,6,Theorem,$m\{\bar{D} \mu>\lambda\} \leq 3^{k} \lambda^{-1}\left\|\mu_{2}\right\|<3^{k} \lambda^{-1} \epsilon$.
+7.13,2,Theorem,"$(D \mu)(x)=0 \quad$ a.e. $[m]$,"
+7.13,3,Theorem,$(\bar{D} \mu)(x)=\lim _{n \rightarrow \infty}\left[\sup _{0<r<1 / n}\left(Q_{r} \mu\right)(x)\right] \quad\left(x \in R^{k}\right)$
+7.13,1,Theorem,$\lim _{i \rightarrow \infty} \frac{\mu\left(E_{i}(x)\right)}{m\left(E_{i}(x)\right)}=0 \quad$ a.e. $[m]$.
+7.15,6,Theorem,$f_{n+1}(x)=f_{n}(x) \quad\left(x \notin E_{n}\right)$
+7.15,7,Theorem,$\left|f_{n}(x)-f_{n+1}(x)\right| \leq \int_{I}\left|g_{n}-g_{n+1}\right|<2^{-n+1} \quad\left(x \in E_{n}\right)$
+7.15,5,Theorem,$\int_{I} g_{n}(t) d t=\int_{I} g_{n+1}(t) d t=2^{-n}$
+7.15,4,Theorem,"$g_{n}=\delta_{n}^{-1} \chi_{E_{n}} \quad$ and $\quad f_{n}(x)=\int_{0}^{x} g_{n}(t) d t \quad(n=0,1,2, \ldots)$"
+7.15,0,Theorem,"(a) Put $f(x)=x^{2} \sin \left(x^{-2}\right)$ if $x \neq 0, f=0$. Then $f$ is differentiable at every"
+7.15,1,Theorem,$f(x)-f(a)=\int_{a}^{x} f^{\prime}(t) d t \quad(a \leq x \leq b)$.
+7.15,3,Theorem,"$\mu\left(W_{j, N}\right)<3^{k} N / j$"
+7.15,2,Theorem,"$\mu\left(B\left(x, r_{i}\right)\right)<N m\left(B\left(x, r_{i}\right)\right)$."
+7.17,2,Definition,$\sum_{i=1}^{n}\left(\beta_{i}-\alpha_{i}\right)<\delta$
+7.17,1,Definition,$\sum_{i=1}^{n}\left|f\left(\beta_{i}\right)-f\left(\alpha_{i}\right)\right|<\epsilon$
+7.18,4,Theorem,"$\mu(E)=m(g(E)) \quad(E \subset I, E \in \mathfrak{M})$"
+7.18,6,Theorem,$f(x)-f(a)=\int_{a}^{x}[h(t)-1] d t \quad(\alpha \leq x \leq b)$.
+7.18,3,Theorem,$g(x)=x+f(x) \quad(a \leq x \leq b)$.
+7.18,2,Theorem,$\sum_{i}\left(f\left(\beta_{i}\right)-f\left(\alpha_{i}\right)\right) \leq \epsilon$
+7.18,1,Theorem,$f(x)-f(a)=\int_{a}^{x} f^{\prime}(t) d t \quad(\alpha \leq x \leq b)$
+7.19,3,Theorem,$F(y) \geq|f(y)-f(x)|+\sum_{i=1}^{N}\left|f\left(t_{i}\right)-f\left(t_{i-1}\right)\right|$
+7.19,2,Theorem,$a=t_{0}<t_{1}<\cdots<t_{N}=x$
+7.19,5,Theorem,$F(\beta)-F(\alpha)=\sup \sum_{1}^{n}\left|f\left(t_{i}\right)-f\left(t_{i-1}\right)\right|$
+7.19,4,Theorem,$F(y) \geq f(y)-f(x)+F(x) \quad$ and $\quad F(y) \geq f(x)-f(y)+F(x)$
+7.19,6,Theorem,$\sum_{j}\left(F\left(\beta_{j}\right)-F\left(\alpha_{j}\right)\right) \leq \epsilon$
+7.2,1,Theorem,$f(x)-f(a)=\int_{a}^{x} f^{\prime}(t) d t \quad(a \leq x \leq b)$
+7.2,3,Theorem,$f=f_{1}-f_{2}$
+7.2,2,Theorem,"$f_{1}=\frac{1}{2}(F+f), \quad f_{2}=\frac{1}{2}(F-f)$,"
+7.2,5,Definition,"$\mu(B(x, r))=\operatorname{tm}(B(x, r))$"
+7.2,4,Definition,$(M \mu)(x)=\sup _{0<r<\infty}\left(Q_{r} \mu\right)(x)$
+7.2,6,Definition,$(r+\delta)^{k}<r^{k} t / \lambda$
+7.2,3,Definition,$(D \mu)(x)=\lim _{r \rightarrow 0}\left(Q_{r} \mu\right)(x)$
+7.2,1,Definition,"$B(x, r)=\left\{y \in R^{k}:|y-x|<r\right\}$"
+7.21,6,Theorem,$f(b)-f(a) \leq \int_{a}^{b} f^{\prime}(t) d t$
+7.21,5,Theorem,$f(b)-f(a) \leq \int_{a}^{b} g(t) d t<\int_{a}^{b} f^{\prime}(t) d t+\epsilon$
+7.21,4,Theorem,$g(t)>f^{\prime}(x)$ and $\frac{f(t)-f(x)}{t-x}<f^{\prime}(x)+\eta$
+7.21,1,Theorem,$f(x)-f(a)=\int_{a}^{x} f^{\prime}(t) d t \quad(a \leq x \leq b)$.
+7.21,3,Theorem,$F_{\eta}(x)=\int_{a}^{x} g(t) d t-f(x)+f(a)+\eta(x-a) \quad(a \leq x \leq b)$.
+7.21,2,Theorem,$\int_{a}^{b} g(t) d t<\int_{a}^{b} f^{\prime}(t) d t+\epsilon$.
+7.22,2,Definition,$T^{\prime}(x)=A$.
+7.22,3,Definition,$m(A(E))=\Delta(A) m(E)$
+7.22,6,Definition,$\Delta\left(T^{\prime}(x)\right)=\left|J_{T}(x)\right|$.
+7.22,4,Definition,$A^{\prime}(x)=A \quad\left(x \in R^{k}\right)$
+7.22,5,Definition,$\frac{m(T(E))}{m(E)} \sim \Delta\left(T^{\prime}(x)\right)$
+7.23,1,Lemma,$|F(x)-x|<\epsilon$
+7.23,3,Lemma,$x \cdot(a-F(x))=x \cdot a+x \cdot(x-F(x))-1<|a|+\epsilon-1<0$.
+7.24,9,Theorem,"$m(T(B(0, r)))<\epsilon r^{k} \quad(0<r<\delta)$."
+7.24,15,Theorem,$\int_{\alpha}^{\beta} f(t) d t=\int_{a}^{b} f(\varphi(x)) \varphi^{\prime}(x) d x$
+7.24,8,Theorem,$|T(x)-A x| \leq \eta|x|$.
+7.24,10,Theorem,$\int_{Y} \chi_{A} d m=m(T(E \cap X))=\int_{X}\left(\chi_{A} \circ T\right)\left|J_{T}\right| d m$.
+7.24,3,Theorem,"$\lim _{r \rightarrow 0} \frac{m(F(B(0, r)))}{m(B(0, r))}=1$"
+7.24,2,Theorem,$F(x)=A^{-1} T(x) \quad(x \in V)$.
+7.24,1,Theorem,"$\lim _{r \rightarrow 0} \frac{m(T(B(x, r)))}{m(B(x, r))}=\Delta\left(T^{\prime}(x)\right)$"
+7.24,5,Theorem,$|F(x)-x|<\epsilon|x|$.
+7.24,4,Theorem,$m(T(B))=m(A(F(B)))=\Delta(A) m(F(B))$
+7.24,6,Theorem,"$B(0,(1-\epsilon) r) \subset F(B(0, r)) \subset B(0,(1+\epsilon) r)$"
+7.24,7,Theorem,"$(1-\epsilon)^{k} \leq \frac{m(F(B(0, r)))}{m(B(0, r))} \leq(1+\epsilon)^{k}$"
+7.4,8,Theorem,"$\{T f>2 y\} \subset \bigcap_{n=1}^{\infty} E(y, n)$."
+7.4,1,Theorem,"then
+\[
+m\{M \mu>\lambda\} \leq 3^{k} \lambda^{-1}\|\mu\| .
+\]"
+7.4,3,Theorem,$\lambda \cdot m\{|f|>\lambda\}$
+7.4,2,Theorem,$m\left(\left\{x \in R^{k}:(M \mu)(x)>\lambda\right\}\right)$.
+7.4,6,Theorem,$\{T f>2 y\} \subset\{M h>y\} \cup\{|h|>y\}$.
+7.4,7,Theorem,"$m(E(y, n)) \leq\left(3^{k}+1\right) /(y n)$."
+7.4,5,Theorem,$m\{M f>\lambda\} \leq 3^{k} \lambda^{-1}\|f\|_{1}$.
+7.4,4,Theorem,"$(M f)(x)=\sup _{0<r<\infty} \frac{1}{m\left(B_{r}\right)} \int_{B(x, r)}|f| d m$."
+7.8,2,Theorem,$\epsilon<\frac{m(E \cap I)}{m(I)}<1-\epsilon$
+7.8,2,Theorem,"$f(x)=\lim _{r \rightarrow 0} \frac{1}{m\left(B_{r}\right)} \int_{B(x, r)} f d m=\lim _{r \rightarrow 0} \frac{\mu(B(x, r))}{m(B(x, r))}$."
+7.8,1,Theorem,$\mu(E)=\int_{E}(D \mu) d m$
+8.1,1,Definition,"$A=\bigcup_{i=1}^{\infty} A_{i}, \quad B=\bigcap_{i=1}^{\infty} B_{i}$,"
+8.1,2,Definition,"$E_{x}=\{y:(x, y) \in E\}, \quad E^{y}=\{x:(x, y) \in E\}$"
+8.11,1,Theorem,$\mathscr{B}_{k} \subset \mathfrak{M}_{\boldsymbol{r}} \times \mathfrak{M}_{s} \subset \mathfrak{M}_{\boldsymbol{k}}$
+8.14,6,Theorem,"$\varphi(x, y)=x-y, \quad \psi(x, y)=y$"
+8.14,5,Theorem,"$F(x, y)=f(x-y) g(y)$"
+8.14,4,Theorem,$\|f\|_{1}=\int_{-\infty}^{\infty}|f(x)| d x$.
+8.14,0,Theorem,$\|f\|_{1}=\int_{-\infty}^{\infty}|f(x)| d x$
+8.14,1,Theorem,$\int_{-\infty}^{\infty}|f(x-y) g(y)| d y<\infty$
+8.14,3,Theorem,$\|h\|_{1} \leq\|f\|_{1}\|g\|_{1}$
+8.14,2,Theorem,$h(x)=\int_{-\infty}^{\infty} f(x-y) g(y) d y$.
+8.14,8,Theorem,"since
+\[
+\int_{-\infty}^{\infty}|f(x-y)| d x=\|f\|_{1}
+\]"
+8.15,1,Definition,$\mu\{f>t\}=\mu(\{x \in X: f(x)>t\})$
+8.15,2,Definition,$\int_{X} f d \mu=\int_{0}^{\infty} \mu\{f>t\} d t$
+8.16,4,Theorem,"$\int_{0}^{\infty} \mu\left(E^{t}\right) \varphi^{\prime}(t) d t=\int_{X} d \mu(x) \int_{0}^{\infty} \chi_{E}(x, t) \varphi^{\prime}(t) d t$"
+8.16,5,Theorem,$\int_{0}^{f(x)} \varphi^{\prime}(t) d t=\varphi(f(x))$
+8.16,1,Theorem,$\int_{X}(\varphi \circ f) d \mu=\int_{0}^{\infty} \mu\{f>t\} \varphi^{\prime}(t) d t$.
+8.16,2,Theorem,"$E^{t}=\{x \in X:(x, t) \in E\} \quad(0 \leq t<\infty)$"
+8.16,3,Theorem,"$\mu\left(E^{t}\right)=\int_{X} \chi_{E}(x, t) d \mu(x)$"
+8.18,3,Theorem,$g_{t}(x)=\left\{\begin{array}{ll}f(x) & \text { if } f(x)>c t \\ 0 & \text { if } f(x) \leq c t\end{array}\right.$
+8.18,2,Theorem,$f=g_{t}+h_{t}$
+8.18,5,Theorem,$\left(M g_{t}\right)(x)>(1-c) t$
+8.18,4,Theorem,$M f \leq M g_{t}+M h_{t} \leq M g_{t}+c t$
+8.18,6,Theorem,$\|M f\|_{p} \leq C_{p}\|f\|_{p}$
+8.6,4,Theorem,"$\int_{X} d \mu(x) \int_{Y} \chi_{Q}(x, y) d \lambda(y)=\int_{Y} d \lambda(y) \int_{X} \chi_{Q}(x, y) d \mu(x)$."
+8.6,5,Theorem,$\lambda\left(Q_{x}\right)=\lambda(B) \chi_{A}(x)$ and $\mu\left(Q^{y}\right)=\mu(A) \chi_{B}(y)$
+8.6,7,Theorem,"$Q_{m n}=Q \cap\left(X_{n} \times Y_{m}\right) \quad(m, n=1,2,3, \ldots)$"
+8.6,6,Theorem,"$\varphi_{i}(x) \rightarrow \varphi(x), \quad \psi_{i}(y) \rightarrow \psi(y) \quad(i \rightarrow \infty)$"
+8.6,2,Theorem,"$\int_{X} \varphi d \mu=\int_{Y} \psi d \lambda$,"
+8.6,3,Theorem,"$\lambda\left(Q_{x}\right)=\int_{Y} \chi_{Q}(x, y) d \lambda(y) \quad(x \in X)$"
+8.6,1,Theorem,"$\varphi(x)=\lambda\left(Q_{x}\right), \quad \psi(y)=\mu\left(Q^{y}\right)$"
+8.7,1,Definition,$(\mu \times \lambda)(Q)=\int_{X} \lambda\left(Q_{x}\right) d \mu(x)=\int_{Y} \mu\left(Q^{y}\right) d \lambda(y)$.
+8.8,1,Theorem,"$\varphi(x)=\int_{Y} f_{x} d \lambda, \quad \psi(y)=\int_{X} f^{y} d \mu \quad(x \in X, y \in Y)$"
+8.8,3,Theorem,$\varphi^{*}(x)=\int_{Y}|f|_{x} d \lambda$ and $\int_{X} \varphi^{*} d \mu<\infty$
+8.8,2,Theorem,$\int_{X} \varphi d \mu=\int_{X \times Y} f d(\mu \times \lambda)=\int_{Y} \psi d \lambda$.
+8.8,6,Theorem,"$\int_{X} \varphi_{n} d \mu=\int_{X \times Y} s_{n} d(\mu \times \lambda) \quad(n=1,2,3, \ldots)$."
+8.8,7,Theorem,$f_{x}=\left(f^{+}\right)_{x}-\left(f^{-}\right)_{x}$
+8.8,5,Theorem,"$\int_{X} d \mu(x) \int_{Y}|f(x, y)| d \lambda(y)<\infty$"
+8.8,4,Theorem,"$\int_{X} d \mu(x) \int_{Y} f(x, y) d \lambda(y)=\int_{Y} d \lambda(y) \int_{X} f(x, y) d \mu(x)$."
+8.8,1,Lemma,$\int_{X} \lambda\left(Q_{x}\right) d \mu(x)=0$
+9.1,2,Theorem,$\left(f * h_{\lambda}\right)(x)-f(x)=\int_{-\infty}^{\infty}[f(x-y)-f(x)] h_{\lambda}(y) d m(y)$
+9.1,3,Theorem,$\left|\left(f * h_{\lambda}\right)(x)-f(x)\right|^{p} \leq \int_{-\infty}^{\infty}|f(x-y)-f(x)|^{p} h_{\lambda}(y) d m(y)$.
+9.1,4,Theorem,$\left\|f * h_{\lambda}-f\right\|_{p}^{p} \leq \int_{-\infty}^{\infty}\left\|f_{y}-f\right\|_{p}^{p} h_{\lambda}(y) d m(y)$
+9.1,5,Definition,$\varphi(s+t)=\varphi(s) \varphi(t)$
+9.1,4,Definition,$\hat{f}(t)=\int_{-\infty}^{\infty} f(x) e^{-i x t} d m(x) \quad\left(t \in R^{1}\right)$
+9.1,1,Definition,$\int_{-\infty}^{\infty} f(x) d m(x)=\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} f(x) d x$
+9.1,3,Definition,$(f * g)(x)=\int_{-\infty}^{\infty} f(x-y) g(y) d m(y) \quad\left(x \in R^{1}\right)$
+9.1,2,Definition,$\|f\|_{p}=\left\{\int_{-\infty}^{\infty}|f(x)|^{p} d m(x)\right\}^{1 / p} \quad(1 \leq p<\infty)$
+9.11,2,Theorem,$\left(f * h_{\lambda}\right)(x)=\int_{-\infty}^{\infty} H(\lambda t) \hat{f}(t) e^{i x t} d m(t)$.
+9.11,3,Theorem,$\lim _{n \rightarrow \infty}\left(f * h_{\lambda_{n}}\right)(x)=f(x)$ a.e.
+9.13,9,Theorem,$\left(h_{\lambda} * \bar{w}\right)(\alpha)=\int_{-\infty}^{\infty} h_{\lambda}(\alpha-t) \bar{w}(t) d m(t)=0$
+9.13,8,Theorem,$h_{\lambda}(\alpha-t)=\int_{-\infty}^{\infty} e^{i \alpha x} H(\lambda x) e^{-i x t} d m(x)$
+9.13,6,Theorem,$\lim _{\lambda \rightarrow 0}\left(g * h_{\lambda}\right)=g=\|f\|_{2}^{2}$
+9.13,7,Theorem,$\lim _{\lambda \rightarrow 0} \int_{-\infty}^{\infty} H(\lambda t) \hat{g}(t) d m(t)=\int_{-\infty}^{\infty}|\hat{f}(t)|^{2} d m(t)$
+9.13,5,Theorem,$\left(g * h_{\lambda}\right)=\int_{-\infty}^{\infty} H(\lambda t) \hat{g}(t) d m(t)$
+9.13,4,Theorem,$|g(x)| \leq\left\|f_{-x}\right\|_{2}\|f\|_{2}=\|f\|_{2}^{2}$
+9.13,1,Theorem,$\|\hat{f}\|_{2}=\|f\|_{2} \quad\left(f \in L^{1} \cap L^{2}\right)$
+9.13,12,Theorem,$\left\|\hat{f}-\varphi_{A}\right\|_{2}=\left\|\left(f-k_{A} f\right)^{\hat{}}\right\|_{2} \rightarrow 0$
+9.13,10,Theorem,$\int_{-\infty}^{\infty} f(x) \overline{g(x)} d m(x)=\int_{-\infty}^{\infty} \hat{f}(t) \overline{\hat{g}(t)} d m(t)$
+9.13,3,Theorem,"$g(x)=\left(f_{-x}, f\right)$,"
+9.13,11,Theorem,$\varphi_{A}=\left(k_{A} f\right)^{\hat{\rho}}$
+9.15,9,Remark,$\varphi^{2} \cdot g=\varphi \cdot P g=P^{2} g=P g=\varphi \cdot g$
+9.15,8,Remark,$P f=\varphi \cdot f \quad\left(f \in L^{2}\right)$.
+9.15,6,Remark,$f \cdot P g=g \cdot P f \quad\left(f\right.$ and $\left.g \in L^{2}\right)$
+9.15,5,Remark,$f \cdot P g=(P f) \cdot(P g) \quad\left(f\right.$ and $\left.g \in L^{2}\right)$
+9.15,4,Remark,$(f-P f) \cdot \overline{P g}$
+9.15,1,Remark,$f-P f \perp P g \quad\left(f\right.$ and $\left.g \in L^{2}\right)$
+9.15,3,Remark,"$\int_{-\infty}^{\infty}(f-P f) \cdot \overline{P g} \cdot e_{-\alpha} d m=0 \quad\left(f\right.$ and $\left.g \in L^{2}, \alpha \in R^{1}\right)$"
+9.15,2,Remark,"$f-P f \perp(P g) e_{\alpha} \quad\left(f\right.$ and $\left.g \in L^{2}, \alpha \in R^{1}\right)$."
+9.18,1,Definition,$\|x y\| \leq\|x\|\|y\| \quad(x$ and $y \in A)$
+9.18,3,Definition,$(\alpha x) y=x(\alpha y)=\alpha(x y)$
+9.18,2,Definition,"$x(y+z)=x y+x z, \quad(y+z) x=y x+z x \quad(x, y$, and $z \in A)$,"
+9.2,2,Theorem,$\hat{f}^{\prime}(t)=-i \int_{-\infty}^{\infty} x f(x) e^{-i x t} d m(x)$
+9.2,1,Theorem,"$\frac{\hat{f}(s)-\hat{f}(t)}{s-t}=\int_{-\infty}^{\infty} f(x) e^{-i x t} \varphi(x, s-t) d m(x) \quad(s \neq t)$"
+9.21,11,Theorem,$\beta(x)=e^{-i t x}$.
+9.21,10,Theorem,$\beta(x)=e^{A x}$.
+9.21,8,Theorem,$c \beta(x)=\int_{0}^{\delta} \beta(y) \beta(x) d y=\int_{0}^{\delta} \beta(y+x) d y=\int_{x}^{x+\delta} \beta(y) d y$.
+9.21,9,Theorem,"$\beta^{\prime}(x)=A \beta(x), \quad A=\beta^{\prime}$."
+9.21,4,Theorem,$\varphi(f) \varphi(g)=\varphi(f) \int_{-\infty}^{\infty} g(y) \beta(y) d m(y)$
+9.21,5,Theorem,$\varphi(f) \beta(y)=\varphi\left(f_{y}\right)$
+9.21,7,Theorem,$\int_{0}^{\delta} \beta(y) d y=c \neq 0$.
+9.21,6,Theorem,$\beta(x+y)=\beta(x) \beta(y) \quad\left(x\right.$ and $\left.y \in R^{1}\right)$.
+9.21,2,Theorem,$x+y=x y$.
+9.21,3,Theorem,$=\int_{-\infty}^{\infty} g(y) \varphi\left(f_{y}\right) d m(y)$.
+9.21,1,Theorem,$s_{n}=-x-x^{2}-\cdots-x^{n}$
+9.3,2,Remark,$f(x)=\sum_{-\infty}^{\infty} c_{n} e^{i n x}$
+9.3,4,Remark,$g(x)=\sum_{-\infty}^{\infty} c_{n} e^{i n x}$
+9.3,6,Remark,$f(x)=\int_{-\infty}^{\infty} \hat{f}(t) e^{i t x} d m(t)$
+9.3,7,Remark,$\int_{-\infty}^{\infty} e^{i(t-s) x} d x$
+9.5,1,Theorem,$f_{y}(x)=f(x-y) \quad\left(x \in R^{1}\right)$.
+9.5,2,Theorem,$y \rightarrow f_{y}$
+9.6,2,Theorem,$\left|\hat{f}\left(t_{n}\right)-\hat{f}(t)\right| \leq \int_{-\infty}^{\infty}|f(x)|\left|e^{-i t_{n} x}-e^{-i t x}\right| d m(x)$
+9.6,3,Theorem,$h_{\lambda}(x)=\sqrt{\frac{2}{\pi}} \frac{\lambda}{\lambda^{2}+x^{2}}$
+9.6,4,Theorem,$2 \hat{f}(t)=\int_{-\infty}^{\infty}\left\{f(x)-f\left(x-\frac{\pi}{t}\right)\right\} e^{-i t x} d m(x)$
+9.6,5,Theorem,"$2|\hat{f}(t)| \leq\left\|f-f_{\pi / t}\right\|_{1}$,"
+9.6,1,,$\|\hat{f}\|_{\infty} \leq\|f\|_{1}$.
+9.9,1,Theorem,$\lim _{\lambda \rightarrow 0}\left(g * h_{\lambda}\right)(x)=g(x)$
+10.1,2,Definition,$D^{\prime}(a ; r)=\{z: 0<|z-a|<r\}$
+10.1,3,Theorem,$\varphi(t)=\exp \left\{\int_{\alpha}^{t} \frac{\gamma^{\prime}(s)}{\gamma(s)-z} d s\right\} \quad(\alpha \leq t \leq \beta)$.
+10.1,2,Theorem,$\operatorname{Ind}_{\gamma}(z)=\frac{1}{2 \pi i} \int_{\alpha}^{\beta} \frac{\gamma^{\prime}(s)}{\gamma(s)-z} d s$.
+10.1,3,Definition,$\bar{A} \cap B=\varnothing=A \cap \bar{B}$.
+10.1,1,Definition,$D(a ; r)=\{z:|z-a|<r\}$
+10.1,1,Theorem,$\operatorname{Ind}_{\nu}(z)=\frac{1}{2 \pi i} \int_{\gamma} \frac{d \zeta}{\zeta-z} \quad(z \in \Omega)$
+10.1,4,Definition,"$E \subset V \cup W, \quad E \cap V \neq \varnothing, \quad E \cap W \neq \varnothing, \quad E \cap V \cap W=\varnothing$"
+10.1,5,Theorem,$\varphi(t)=\frac{\gamma(t)-z}{\gamma(\alpha)-z} \quad(\alpha \leq t \leq \beta)$.
+10.1,4,Theorem,$\frac{\varphi^{\prime}(t)}{\varphi(t)}=\frac{\gamma^{\prime}(t)}{\gamma(t)-z}$
+10.11,2,Theorem,$\operatorname{Ind}_{\gamma}(z)=\left\{\begin{array}{ll}1 & \text { if }|z-a|<r \\ 0 & \text { if }|z-a|>r\end{array}\right.$
+10.13,1,Theorem,$\int_{\partial \Delta} f(z) d z=0$.
+10.13,3,Theorem,$J=\sum_{j=1}^{4} \int_{\partial \Delta^{\prime}} f(z) d z$
+10.13,2,Theorem,"$\left\{a, c^{\prime}, b^{\prime}\right\}, \quad\left\{b, a^{\prime}, c^{\prime}\right\}, \quad\left\{c, b^{\prime}, a^{\prime}\right\}, \quad\left\{a^{\prime}, b^{\prime}, c^{\prime}\right\}$"
+10.13,6,Theorem,$\int_{\partial \Delta_{n}} f(z) d z=\int_{\partial \Delta_{n}}\left[f(z)-f\left(z_{0}\right)-f^{\prime}\left(z_{0}\right)\left(z-z_{0}\right)\right] d z$
+10.13,7,Theorem,$\left|\int_{\partial \Delta_{n}} f(z) d z\right| \leq \epsilon\left(2^{-n} L\right)^{2}$
+10.13,5,Theorem,$\left|f(z)-f\left(z_{0}\right)-f^{\prime}\left(z_{0}\right)\left(z-z_{0}\right)\right| \leq \epsilon\left|z-z_{0}\right|$
+10.13,4,Theorem,"$|J| \leq 4^{n}\left|\int_{\partial \Delta_{n}} f(z) d z\right| \quad(n=1,2,3, \ldots)$"
+10.14,6,Theorem,"$\frac{F(z)-F\left(z_{0}\right)}{z-z_{0}}-f\left(z_{0}\right)=\frac{1}{z-z_{0}} \int_{\left[z z_{0}, z\right]}\left[f(\xi)-f\left(z_{0}\right)\right] d \xi$"
+10.14,2,Theorem,"$F(z)=\int_{[a, z]} f(\xi) d \xi \quad(z \in \Omega)$"
+10.14,3,Theorem,"$\frac{F(z)-F\left(z_{0}\right)}{z-z_{0}}-f\left(z_{0}\right)=\frac{1}{z-z_{0}} \int_{\left[z z_{0}, z\right]}\left[f(\xi)-f\left(z_{0}\right)\right] d \xi$"
+10.14,1,Theorem,$\int_{\gamma} f(z) d z=0$
+10.18,4,Tbeorem,$g(z)=\left\{\begin{array}{ll}(z-a)^{-m} f(z) & (z \in \Omega-\{a\}) \\ c_{m} & (z=a) .\end{array}\right.$
+10.18,5,Tbeorem,$g(z)=\sum_{k=0}^{\infty} c_{m+k}(z-a)^{k} \quad(z \in D(a ; r))$
+10.18,3,Tbeorem,$f(z)=\sum_{n=0}^{\infty} c_{n}(z-a)^{n} \quad(z \in D(a ; r))$
+10.2,1,Definition,$\lim _{z \rightarrow z_{0}} \frac{f(z)-f\left(z_{0}\right)}{z-z_{0}}$
+10.2,3,Definition,$g(w)-g\left(w_{0}\right)=\left[g^{\prime}\left(w_{0}\right)+\eta(w)\right]\left(w-w_{0}\right)$
+10.2,2,Definition,"$\left|\frac{f(z)-f\left(z_{0}\right)}{z-z_{0}}-f^{\prime}\left(z_{0}\right)\right|<\epsilon \quad$ for all $z \in D^{\prime}\left(z_{0} ; \delta\right)$.
+$$"
+10.2,4,Definition,$\frac{h(z)-h\left(z_{0}\right)}{z-z_{0}}=\left[g^{\prime}\left(f\left(z_{0}\right)\right)+\eta(f(z))\right]\left[f^{\prime}\left(z_{0}\right)+\epsilon(z)\right]$
+10.2,20,Definition,$h^{\prime}\left(z_{0}\right)=g^{\prime}\left(f\left(z_{0}\right)\right) f^{\prime}\left(z_{0}\right) \quad\left(z_{0} \in \Omega\right)$.
+10.21,4,Theorem,$h(z)=\sum_{n=0}^{\infty} b_{n}(z-a)^{n} \quad(z \in D)$
+10.21,2,Theorem,$g(z)=(z-a)^{m} g_{1}(z) \quad(z \in D)$
+10.21,3,Theorem,$f(z)-w=(z-a)^{-m} h(z) \quad\left(z \in D^{\prime}\right)$.
+10.21,1,Theorem,$g(z)=\frac{1}{f(z)-w} \quad\left(z \in D^{\prime}\right)$
+10.22,4,Theorem,"$c_{n} r^{n}=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f\left(a+r e^{i \theta}\right) e^{-i n \theta} d \theta \quad(n=0,1,2, \ldots)$"
+10.22,1,Theorem,$f(z)=\sum_{n=0}^{\infty} c_{n}(z-a)^{n} \quad(z \in D(a ; R))$
+10.22,2,Theorem,$\sum_{n=0}^{\infty}\left|c_{n}\right|^{2} r^{2 n}=\frac{1}{2 \pi} \int_{-\pi}^{\pi}\left|f\left(a+r e^{i \theta}\right)\right|^{2} d \theta$
+10.22,3,Theorem,$f\left(a+r e^{i \theta}\right)=\sum_{n=0}^{\infty} c_{n} r^{n} e^{i n \theta}$
+10.24,2,Theorem,$|f(a)| \geq \min _{\theta}\left|f\left(a+r e^{i \theta}\right)\right|$
+10.24,1,Theorem,$|f(a)| \leq \max _{\theta}\left|f\left(a+r e^{i \theta}\right)\right|$.
+10.26,1,Theorem,"$\left|f^{(n)}(a)\right| \leq \frac{n ! M}{R^{n}} \quad(n=1,2,3, \ldots)$"
+10.3,22,Theorem,$\left|\varphi\left(z_{1}\right)-\varphi\left(z_{2}\right)\right| \geq \frac{1}{2}\left|\varphi^{\prime}\left(z_{0}\right)\right|\left|z_{1}-z_{2}\right|$
+10.3,3,Theorem,$\left|\varphi\left(a+r e^{i \theta}\right)-\varphi(a)\right|>2 c \quad(-\pi \leq \theta \leq \pi)$
+10.3,2,Theorem,$\varphi^{\prime}(z) \neq 0 \quad(z \in V)$.
+10.3,1,Theorem,$\left|\varphi\left(z_{1}\right)-\varphi\left(z_{2}\right)\right| \geq \frac{1}{2}\left|\varphi^{\prime}\left(z_{0}\right)\right|\left|z_{1}-z_{2}\right|$
+10.3,4,Theorem,$\min _{\theta}\left|\lambda-\varphi\left(a+r e^{i \theta}\right)\right|>c$.
+10.32,1,Theorem,$f(z)-w_{0}=\left(z-z_{0}\right)^{m} g(z) \quad(z \in \Omega)$
+10.33,8,Theorem,$\operatorname{Ind}_{\Gamma}(\alpha)=\sum_{i=1}^{n} \operatorname{Ind}_{\gamma_{i}}(\alpha)$
+10.33,1,Theorem,$\tilde{\gamma}_{i}(f)=\int_{\gamma_{i}} f(z) d z$
+10.33,3,Theorem,$\Gamma=\gamma_{1} \dot{+} \cdots \dot{+} \gamma_{n}$
+10.33,2,Theorem,$\tilde{\Gamma}=\tilde{\gamma}_{1}+\cdots+\tilde{\gamma}_{n}$.
+10.33,6,Theorem,$\Gamma^{*}=\gamma_{1}^{*} \cup \cdots \cup \gamma_{n}^{*}$.
+10.33,10,Theorem,$\int_{\Gamma} f(z) d z=\int_{\Gamma_{1}} f(z) d z+\int_{\Gamma_{2}} f(z) d z$
+10.33,7,Theorem,$\operatorname{Ind}_{\Gamma}(\alpha)=\frac{1}{2 \pi i} \int_{\Gamma} \frac{d z}{z-\alpha}$
+10.33,5,Theorem,$\int_{\Gamma} f(z) d z=\sum_{i=1}^{n} \int_{\gamma_{i}} f(z) d z \quad(f \in C(K))$.
+10.33,4,Theorem,$\int_{\Gamma} f(z) d z=\tilde{\Gamma}(f)$.
+10.35,10,Theorem,$h_{1}(z)=\frac{1}{2 \pi i} \int_{\Gamma} \frac{f(w)}{w-z} d w \quad\left(z \in \Omega_{1}\right)$
+10.35,11,Theorem,$\lim _{|z| \rightarrow \infty} \varphi(z)=\lim _{|z| \rightarrow \infty} h_{1}(z)=0$
+10.35,12,Theorem,$\frac{1}{2 \pi i} \int_{\Gamma} f(z) d z=\frac{1}{2 \pi i} \int_{\Gamma} \frac{F(z)}{z-a} d z=F(a) \cdot \operatorname{Ind}_{\Gamma}(a)=0$
+10.35,8,Theorem,$h(z)=0$.
+10.35,9,Theorem,"$\int_{\partial \Delta} h(z) d z=\frac{1}{2 \pi i} \int_{\Gamma}\left(\int_{\partial \Delta} g(z, w) d z\right) d w$."
+10.35,1,Theorem,$\operatorname{Ind}_{\Gamma}(\alpha)=0 \quad$ for every $\alpha$ not in $\Omega$
+10.35,2,Theorem,$f(z) \cdot \operatorname{Ind}_{\Gamma}(z)=\frac{1}{2 \pi i} \int_{\Gamma} \frac{f(w)}{w-z} d w \quad$ for $z \in \Omega-\Gamma^{*}$
+10.35,3,Theorem,$\int_{\Gamma} f(z) d z=0$
+10.35,7,Theorem,"$h(z)=\frac{1}{2 \pi i} \int_{\Gamma} g(z, w) d w \quad(z \in \Omega)$"
+10.35,6,Theorem,"$g(z, w)=\left\{\begin{array}{ll}\frac{\text { if } w \neq z}{w-z} & \end{array}\right.$"
+10.35,4,Theorem,"$\operatorname{Ind}_{\Gamma_{0}}(\alpha)=\operatorname{Ind}_{\Gamma_{1}}(\alpha) \quad$ for every $\alpha$ not in $\Omega$,"
+10.35,5,Theorem,$\int_{\Gamma_{0}} f(z) d z=\int_{\Gamma_{1}} f(z) d z$
+10.37,2,Theorem,$\operatorname{Ind}_{f}(z)=0 \quad$ if $z \in D_{+}$.
+10.37,1,Theorem,$\operatorname{Ind}_{g}(w)=0 \quad$ if $w \in D_{-}$.
+10.39,1,Lemma,$\left|\gamma_{1}(s)-\gamma_{0}(s)\right|<\left|\alpha-\gamma_{0}(s)\right| \quad(0 \leq s \leq 1)$
+10.39,2,Lemma,$\frac{\gamma^{\prime}}{\gamma}=\frac{\gamma_{1}^{\prime}}{\gamma_{1}-\alpha}-\frac{\gamma_{0}^{\prime}}{\gamma_{0}-\alpha}$
+10.4,1,Theorem,$\operatorname{Ind}_{\Gamma_{1}}(\alpha)=\operatorname{Ind}_{\Gamma_{0}}(\alpha)$
+10.4,3,Theorem,"$|\alpha-H(s, t)|>2 \epsilon \quad$ if $\quad(s, t) \in I^{2}$"
+10.4,2,Theorem,"$H(s, 0)=\Gamma_{0}(s), \quad H(s, 1)=\Gamma_{1}(s), \quad H(0, t)=H(1, t)$"
+10.4,6,Theorem,"$\left|\gamma_{k}(s)-H(s, k / n)\right|<\epsilon \quad(k=0, \ldots, n ; 0 \leq s \leq 1)$"
+10.4,7,Theorem,"$\left|\gamma_{0}(s)-\Gamma_{0}(s)\right|<\epsilon, \quad\left|\gamma_{n}(s)-\Gamma_{1}(s)\right|<\epsilon$."
+10.4,5,Theorem,"$\gamma_{k}(s)=H\left(\frac{i}{n}, \frac{k}{n}\right)(n s+1-i)+H\left(\frac{i-1}{n}, \frac{k}{n}\right)(i-n s)$"
+10.4,4,Theorem,"$\left|H(s, t)-H\left(s^{\prime}, t^{\prime}\right)\right|<\epsilon \quad$ if $\quad\left|s-s^{\prime}\right|+\left|t-t^{\prime}\right| \leq 1 / n$."
+10.4,9,Theorem,"$\left|\gamma_{k-1}(s)-\gamma_{k}(s)\right|<\epsilon \quad(k=1, \ldots, n ; 0 \leq s \leq 1)$"
+10.4,8,Theorem,"$\left|\alpha-\gamma_{k}(s)\right|>\epsilon \quad(k=0, \ldots, n ; 0 \leq s \leq 1)$"
+10.41,1,Definition,$Q(z)=\sum_{k=1}^{m} c_{k}(z-a)^{-k}$
+10.41,2,Definition,$c_{1}=\operatorname{Res}(f ; a)$.
+10.41,3,Definition,$\frac{1}{2 \pi i} \int_{\Gamma} Q(z) d z=c_{1} \operatorname{Ind}_{\Gamma}(a)=\operatorname{Res}(Q ; a) \operatorname{Ind}_{\Gamma}(a)$.
+10.42,2,Theorem,$\frac{1}{2 \pi i} \int_{\Gamma} f(z) d z=\sum_{a \in A} \operatorname{Res}(f ; a) \operatorname{Ind}_{\Gamma}(a)$.
+10.42,3,Theorem,$\int_{\Gamma} g(z) d z=0$
+10.42,1,Theorem,$\operatorname{Ind}_{\Gamma}(\alpha)=0 \quad$ for all $\quad \alpha \notin \Omega$
+10.42,4,Theorem,$\operatorname{Ind}_{\Gamma}(\alpha)=0 \quad$ for all $\quad \alpha \notin \Omega$
+10.43,3,Theorem,$\frac{1}{\pi} \varphi_{A}(s)=\frac{1}{2 \pi} \int_{-\pi}^{0} \exp \left(i s A e^{i \theta}\right) d \theta$
+10.43,2,Theorem,"$|f(z)-g(z)|<|f(z)| \quad$ for all $z \in \gamma^{*}$
+"
+10.43,0,Theorem,$N_{f}=\frac{1}{2 \pi i} \int_{\gamma} \frac{f^{\prime}(z)}{f(z)} d z=\operatorname{Ind}_{\Gamma}$
+10.43,1,Theorem,$N_{f}=\frac{1}{2 \pi i} \int_{\gamma} \frac{f^{\prime}(z)}{f(z)} d z=\operatorname{Ind}_{\Gamma}$
+10.43,5,Theorem,$\left|\exp \left(i s A e^{i \theta}\right)\right|=\exp (-A s \sin \theta)$
+10.43,4,Theorem,$\operatorname{Res}(\varphi ; a)=m(a)$
+10.43,7,Theorem,$\lim _{A \rightarrow \infty} \int_{-A}^{A} \frac{\sin x}{x} e^{i t x} d x=\left\{\begin{array}{ll}\pi & \text { if }-1<t<1 \\ 0 & \text { if }|t|>1 .\end{array}\right.$
+10.6,2,Theorem,$f^{\prime}(z)=\sum_{n=1}^{\infty} n c_{n}(z-a)^{n-1}$
+10.6,7,Theorem,$f^{(k)}(z)=\sum_{n=k}^{\infty} n(n-1) \cdots(n-k+1) c_{n}(z-a)^{n-k}$
+10.6,6,Theorem,$\left|\frac{f(z)-f(w)}{z-w}-g(w)\right| \leq|z-w| \sum_{n=2}^{\infty} n^{2}\left|c_{n}\right| \rho^{n-2}$
+10.6,4,Theorem,$(z-w) \sum_{k=1}^{n-1} k w^{k-1} z^{n-k-1}$
+10.6,5,Theorem,$\frac{n(n-1)}{2} \rho^{n-2}$
+10.6,8,Theorem,"$k ! c_{k}=f^{(k)}(a) \quad(k=0,1,2, \ldots)$"
+10.7,1,Theorem,$f(z)=\int_{X} \frac{d \mu(\zeta)}{\varphi(\zeta)-z} \quad(z \in \Omega)$
+10.7,2,Theorem,$\int_{\gamma_{1}} f(z) d z=\int_{\gamma} f(z) d z$
+10.7,6,Theorem,"$\left|c_{n}\right| \leq \frac{|\mu|(X)}{r^{n+1}} \quad(n=0,1,2, \ldots)$"
+10.7,5,Theorem,"$c_{n}=\int_{X} \frac{d \mu(\zeta)}{(\varphi(\zeta)-a)^{n+1}} \quad(n=0,1,2, \ldots)$"
+10.7,4,Theorem,$f(z)=\sum_{0}^{\infty} c_{n}(z-a)^{n} \quad(z \in D(a ; r))$
+11.1,2,Definition,$f(z)=\frac{\alpha-i \beta}{2} z+\frac{\alpha+i \beta}{2} \bar{z}+\eta(z) z$
+11.1,3,Definition,"$\partial=\frac{1}{2}\left(\frac{\partial}{\partial x}-i \frac{\partial}{\partial y}\right), \quad \bar{\partial}=\frac{1}{2}\left(\frac{\partial}{\partial x}+i \frac{\partial}{\partial y}\right)$"
+11.1,1,Definition,$f(z)=\alpha x+\beta y+\eta(z) z \quad(z=x+i y)$
+11.12,1,Definition,"$u(z)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} u\left(z+r_{n} e^{i t}\right) d t \quad(n=1,2,3, \ldots)$"
+11.14,5,Theorem,$f_{t}(z)=f_{s}(z) \quad\left(z \in D_{t} \cap D_{s}\right)$.
+11.14,4,Theorem,$f_{t}(\bar{z})=\overline{f_{t}(z)} \quad\left(z \in D_{t}\right)$
+11.14,6,Theorem,$F(z)=\left\{\begin{array}{ll}f_{t}(z) & \text { for } z \in D_{t}\end{array}\right.$
+11.14,7,Theorem,$f(\bar{z})=\sum_{n=0}^{\infty} c_{n}(\bar{z}-\bar{a})^{n}$.
+11.14,3,Theorem,$F(\bar{z})=\overline{F(z)} \quad\left(z \in \Omega^{+} \cup L \cup{\Omega^{-}}\right.$.
+11.14,2,Theorem,$\lim _{n \rightarrow \infty} v\left(z_{n}\right)=0$
+11.14,1,Theorem,$\Omega^{-}=\left\{z: \bar{z} \in \Omega^{+}\right\}$.
+11.14,8,Theorem,$F(z)=\sum_{n=0}^{\infty} \bar{c}_{n}(z-a)^{n} \quad(z \in D(a ; r))$.
+11.16,6,Theorem,$\left\|u_{r}-f\right\|_{p} \leq 2 \epsilon+\left\|v_{r}-g\right\|_{p}$
+11.16,5,Theorem,$u_{r}-f=\left(u_{r}-v_{r}\right)+\left(v_{r}-g\right)+(g-f)$.
+11.16,1,Theorem,$\left\|u_{r}\right\|_{p} \leq\|f\|_{p} \quad(0 \leq r<1)$
+11.16,2,Theorem,$\lim _{r \rightarrow 1}\left\|u_{r}-f\right\|_{p}=0$
+11.16,3,Theorem,$(M \mu)\left(e^{i \theta}\right)=\sup \frac{|\mu|(I)}{\sigma(I)}$
+11.2,1,Theorem,$(\bar{\partial} f)(z)=0$
+11.2,6,Theorem,$\mu\left(I_{j}\right) \leq(M \mu) \sigma\left(I_{j}\right)$
+11.2,7,Theorem,$=M \int_{T} K d \sigma \leq M \int_{T} P_{r} d \sigma=M$
+11.2,2,Theorem,$f^{\prime}(z)=(\partial f)(z) \quad(z \in \Omega)$.
+11.2,5,Theorem,$K=\sum_{j=1}^{n}\left(h_{j}-h_{j+1}\right) \chi_{j}$
+11.2,4,Theorem,$\int_{T} P_{r}(t) d \mu\left(e^{i t}\right) \leq(M \mu) \quad(0 \leq r \leq 1)$.
+11.2,3,Theorem,$\Delta f=4 \partial \bar{\partial} f$
+11.2,1,Theorem,$c_{\alpha}\left(N_{\alpha} u\right)\left(e^{i \theta}\right) \leq\left(M_{\mathrm{rad}} u\right)\left(e^{i \theta}\right) \leq(M \mu)\left(e^{i \theta}\right)$
+11.2,6,Theorem,"$P\left(z, e^{i t}\right)=\frac{1-|z|^{2}}{\left|e^{i t}-z\right|^{2}}$"
+11.2,4,Theorem,$P_{r}(t)<P_{r}(\delta) \quad(0<\delta<|t| \leq \pi)$
+11.2,3,Theorem,$c_{\alpha}\left|e^{i t}-r\right|^{2} \leq\left|e^{i t}-z\right|^{2}$
+11.2,2,Theorem,"$c_{\alpha} P\left(z, e^{i t}\right) \leq P\left(|z|, e^{i t}\right)$"
+11.2,5,Theorem,$\lim _{r \rightarrow 1} P_{r}(\delta)=0 \quad(0<\delta \leq \pi)$
+11.22,5,Theorem,$c_{\alpha}\left(N_{\alpha} u_{0}\right)\left(e^{i \theta}\right) \leq\left(M \mu_{0}\right)\left(e^{i \theta}\right) \leq \epsilon$
+11.22,4,Theorem,$\lim _{j \rightarrow \infty} u_{1}\left(z_{j}\right)=0$
+11.22,6,Theorem,$\limsup _{j \rightarrow \infty} u_{0}\left(z_{j}\right) \leq \epsilon / c_{\alpha}$.
+11.22,7,Theorem,$\lim _{j \rightarrow \infty} u\left(z_{j}\right)=0$
+11.22,3,Theorem,"$u_{1}\left(z_{j}\right)=\int_{T-I_{0}} P\left(z_{j}, e^{i t}\right) d \mu\left(e^{i t}\right)$"
+11.22,2,Theorem,$\mu(I)<\epsilon \sigma(I)$
+11.22,1,Theorem,$\lim \mu(I) / \sigma(I)=0$
+11.23,2,Theorem,$\mu(E)=\int_{E}|f| d \sigma$
+11.23,3,Theorem,$|P[f]| \leq P[|f|]=P[d \mu]$.
+11.23,1,Theorem,$\lim \frac{1}{\sigma(I)} \int_{I}|f| d \sigma=0$
+11.29,1,Theorem,$\Lambda x=\lim _{i \rightarrow \infty} \Lambda_{n_{i}} x$
+11.3,1,Theorem,$\sup _{0<r<1}\left\|u_{r}\right\|_{p}=M<\infty$
+11.3,2,Theorem,$\Lambda_{r} g=\int_{T} g u_{r} d \sigma \quad(0 \leq r<1)$
+11.3,3,Theorem,$\lim _{j \rightarrow \infty} \int_{T} g u_{r_{j}} d \sigma=\int_{T} g d \mu$
+11.3,7,Theorem,$\int_{T}\left|u_{r}\right| d \sigma=\int_{T} u_{r} d \sigma=u \quad(0 \leq r<1)$
+11.3,6,Theorem,$\int_{T} f d \mu=0$
+11.3,4,Theorem,"$g\left(e^{i t}\right)=P\left(z, e^{i t}\right)$"
+11.3,5,Theorem,$\int_{T} u_{r} d \mu=\int_{T} v_{r} f d \sigma \quad(0 \leq r<1)$.
+11.8,3,Theorem,$\|H g\|_{\bar{U}}=\|g\|_{T} \quad(g \in C(T))$
+11.8,2,Theorem,"$\left|P[g]\left(r e^{i \theta}\right)\right| \leq\|g\|_{T} \quad(0 \leq r<1)$,"
+11.8,5,Theorem,$(H g)\left(r e^{i \theta}\right)=\sum_{n=-N}^{N} c_{n} r^{|n|} e^{i n \theta}$
+11.8,4,Theorem,$g\left(e^{i \theta}\right)=\sum_{n=-N}^{N} c_{n} e^{i n \theta}$
+11.8,6,Theorem,$\left\|H g_{k}-H f\right\|_{\bar{U}}=\left\|H\left(g_{k}-f\right)\right\|_{\bar{U}} \rightarrow 0$
+11.9,2,Theorem,$g(z)=h(z)+\epsilon|z|^{2} \quad(z \in \bar{U})$.
+11.9,1,Theorem,$f(z)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} \frac{e^{i t}+z}{e^{i t}-z} u\left(e^{i t}\right) d t \quad(z \in U)$
+12.1,1,Definition,$|f(z)| \leq\|f\|_{\partial \Omega}$
+12.1,2,Definition,"$|f(z)| \leq\left\|f^{*}\right\|_{\infty} \quad\left(z \in U, f \in H^{\infty}(U)\right)$."
+12.1,1,Theorem,$\lim _{t \rightarrow 1} g(\Gamma(t))=L$
+12.1,3,Theorem,$h(z)=g(z) \overline{g(\bar{z})} g(2 r-z) \overline{g(2 r-\bar{z})}$.
+12.1,2,Theorem,$|g(\Gamma(t))|<\epsilon \quad$ and $\quad \operatorname{Re} \Gamma(t)>r_{0}>\frac{1}{2}$
+12.1,6,Theorem,$h_{c}(z)=h(z)(1-z)^{c}(2 r-1-z)^{c}$
+12.1,5,Theorem,$|h(z)|<\epsilon \quad$ if $\quad z \in \Omega \cap E$.
+12.1,4,Theorem,$|h(r)|<\epsilon$.
+12.12,69,Theorem,$(\partial \bar{\partial})(f g)=f \cdot(\partial \bar{\partial} g)+(\partial f) \cdot(\bar{\partial} g)+(\bar{\partial} f) \cdot(\partial g)+(\partial \bar{\partial} f) \cdot g$.
+12.12,4,Theorem,"$b_{n}=B_{n}^{1 / p} \beta_{n}, \quad\left|\beta_{n}\right|=1, \quad \sum_{n=1}^{N} B_{n}=1$"
+12.12,5,Theorem,$\sum_{n=1}^{N} b_{n} \hat{f}(n)=\sum_{n=1}^{N} B_{n}^{1 / p} \beta_{n} \int_{X} F^{1 / p} \varphi \bar{\psi}_{n} d \mu$
+12.12,7,Theorem,$c_{n}(y)=\int_{X} F^{1 / 2} F^{i y} \varphi \bar{\psi}_{n} d \mu$.
+12.12,6,Theorem,$\Phi(z)=\sum_{n=1}^{N} B_{n}^{z} \beta_{n} \int_{X} F^{z} \varphi \bar{\psi}_{n} d \mu$
+12.12,10,Theorem,$|\Phi(1+i y)| \leq M \quad(-\infty<y<\infty)$
+12.12,2,Theorem,$\left|\sum_{n=1}^{N} b_{n} \hat{f}(n)\right| \leq M^{(2-p) / p}$
+12.12,3,Theorem,"$f=F^{1 / p} \varphi, \quad|\varphi|=1, \quad \int_{X} F d \mu=1$"
+12.12,11,Theorem,"$|\Phi(x+i y)| \leq M^{2 x-1} \quad\left(\frac{1}{2} \leq x \leq 1,-\infty<y<\infty\right)$."
+12.12,13,Theorem,$\left\{\sum_{n=1}^{N}|\hat{f}(n)|^{q}\right\}^{1 / q} \leq M^{(2-p) / p}\|f\|_{p}$
+12.12,1,Theorem,$\|\hat{f}\|_{q} \leq M^{(2-p) / p}\|f\|_{p}$
+12.12,0,Theorem,$(\partial \bar{\partial})(f g)=f \cdot(\partial \bar{\partial} g)+(\partial f) \cdot(\bar{\partial} g)+(\bar{\partial} f) \cdot(\partial g)+(\partial \bar{\partial} f) \cdot g$.
+12.12,12,Theorem,"$\left\{\sum_{n=1}^{N}|\hat{f}(n)|^{q}\right\}^{1 / q}=\sup \left|\sum_{n=1}^{N} b_{n} \hat{f}(n)\right|$,"
+12.2,2,Theorem,$\left|f^{\prime}\right| \leq 1$
+12.2,1,Theorem,$|f(z)| \leq|z| \quad(z \in U)$
+12.4,2,Theorem,$\varphi_{-\alpha}\left(\varphi_{\alpha}(z)\right)=z$
+12.4,3,Theorem,$\left|\frac{e^{i t}-\alpha}{1-\bar{\alpha} e^{i t}}\right|=\frac{\left|e^{i t}-\alpha\right|}{\left|e^{-i t}-\bar{\alpha}\right|}=1$
+12.4,1,Theorem,"$\varphi_{\alpha}^{\prime}=1-|\alpha|^{2}, \quad \varphi_{\alpha}^{\prime}(\alpha)=\frac{1}{1-|\alpha|^{2}}$"
+12.4,4,Theorem,$f(z)=\varphi_{-\beta}\left(\lambda \varphi_{\alpha}(z)\right) \quad(z \in U)$
+12.6,0,Theorem,$g^{\prime} f^{\prime}(\alpha)=1$.
+12.6,1,Theorem,$f(z)=\lambda \varphi_{\alpha}(z) \quad(z \in U)$
+12.6,3,Theorem,"$\left|f^{\prime}(\alpha)\right| \leq \frac{1}{1-|\alpha|^{2}}, \quad\left|g^{\prime}\right| \leq 1-|\alpha|^{2}$"
+12.6,2,Theorem,$g^{\prime} f^{\prime}(\alpha)=1$.
+12.6,5,Theorem,$|f(z)|<1+|z|^{1 / 2}$
+12.6,4,Theorem,$f\left(x \pm \frac{\pi i}{2}\right)=\exp \left( \pm i e^{x}\right)$
+12.8,9,Theorem,"$|g(a+i y)|=M(a), \quad|g(b+i y)|=M(b)$"
+12.8,8,Theorem,$M^{w}=\exp (w \log M)$
+12.8,6,Theorem,$\left|f(z) h_{\epsilon}(z)\right| \leq \frac{B}{\epsilon|y|} \quad(z=x+i y \in \bar{\Omega})$.
+12.8,7,Theorem,$g(z)=M(a)^{(b-z) /(b-a)} M(b)^{(z-a) /(b-a)}$
+12.8,5,Theorem,$\left|f(z) h_{\epsilon}(z)\right| \leq 1 \quad(z \in \partial \Omega)$.
+12.8,4,Theorem,$h_{\epsilon}(z)=\frac{1}{1+\epsilon(z-a)} \quad(z \in \bar{\Omega})$
+12.8,1,Theorem,"$\Omega=\{x+i y: a<x<b\}, \quad \bar{\Omega}=\{x+i y: a \leq x \leq b\}$"
+12.8,3,Theorem,$M(x)^{b-a} \leq M(a)^{b-x} M(b)^{x-a} \quad(a<x<b)$
+12.9,7,Theorem,$\left|f(z) h_{\epsilon}(z)\right| \leq \exp \left\{A e^{\alpha|x|}-\epsilon \delta\left(e^{\beta x}+e^{-\beta x}\right)\right\} \quad(z \in \bar{\Omega})$
+12.9,6,Theorem,$\left|h_{\epsilon}(z)\right| \leq \exp \left\{-\epsilon \delta\left(e^{\beta x}+e^{-\beta x}\right)\right\}<1 \quad(z \in \bar{\Omega})$.
+12.9,4,Theorem,$h_{\epsilon}(z)=\exp \left\{-\epsilon\left(e^{\beta z}+e^{-\beta z}\right)\right\}$.
+12.9,5,Theorem,$\operatorname{Re}\left[e^{\beta z}+e^{-\beta z}\right]=\left(e^{\beta x}+e^{-\beta x}\right) \cos \beta y \geq \delta\left(e^{\beta x}+e^{-\beta x}\right)$
+12.9,1,Theorem,"$\Omega=\left\{x+i y:|y|<\frac{\pi}{2}\right\}, \quad \bar{\Omega}=\left\{x+i y:|y| \leq \frac{\pi}{2}\right\}$"
+12.9,2,Theorem,$|f(z)|<\exp \{A \exp (\alpha|x|)\} \quad(z=x+i y \in \Omega)$
+12.9,3,Theorem,$\left|f\left(x \pm \frac{\pi i}{2}\right)\right| \leq 1 \quad(-\infty<x<\infty)$.
+13.1,1,Theorem,"$Q_{n}(z)=\sum_{\alpha \in A_{n}} P_{\alpha}(z) \quad(n=1,2,3, \ldots)$"
+13.1,2,Theorem,$\left|R_{n}(z)-Q_{n}(z)\right|<2^{-n} \quad\left(z \in K_{n-1}\right)$.
+13.1,1,Definition,"$\varphi\left(r e^{i \theta}\right)=\left(\frac{2 r \cos \theta}{r^{2}+1}, \frac{2 r \sin \theta}{r^{2}+1}, \frac{r^{2}-1}{r^{2}+1}\right)$"
+13.11,1,Theorem,$F(z)=\int_{\Gamma(z)} f(\zeta) d \zeta \quad(z \in \Omega)$
+13.11,2,Theorem,"$\frac{F(z)-F(a)}{z-a}=\frac{1}{z-a} \int_{[a, z]} f(\zeta) d \zeta$"
+13.5,6,Theorem,$\operatorname{Ind}_{\Gamma}(\alpha)=\left\{\begin{array}{ll}1 & \text { if } \alpha \text { is in the interior of some } Q_{r} \\ 0 & \text { if } \alpha \text { lies in no } Q_{r}\end{array}\right.$
+13.5,5,Theorem,$\operatorname{Ind}_{\Gamma}(\alpha)=\sum_{r=1}^{m} \operatorname{Ind}_{\partial Q_{r}}(\alpha)$
+13.5,1,Theorem,$f(z)=\frac{1}{2 \pi i} \int_{\Gamma} \frac{f(\zeta)}{\zeta-z} d \zeta$
+13.5,2,Theorem,"$\gamma_{r k}=\left[a_{r}+i^{k} b, a_{r}+i^{k+1} b\right]$"
+13.5,3,Theorem,"$\partial Q_{r}=\gamma_{r 1}+\gamma_{r 2} \dot{+} \gamma_{r 3} \dot{+} \gamma_{r 4} \quad(r=1, \ldots, m)$."
+13.6,4,Theorem,$h(z)=\int_{K} \frac{d \mu(\zeta)}{\zeta-z} \quad\left(z \in S^{2}-K\right)$
+13.6,7,Theorem,$h(z)=0 \quad\left(z \in S^{2}-K\right)$
+13.6,6,Theorem,"$\frac{1}{\zeta-z}=-\lim _{N \rightarrow \infty} \sum_{n=0}^{N} z^{-n-1} \zeta^{n} \quad(\zeta \in K,|z|>r)$"
+13.6,2,Theorem,$\int_{K} R d \mu=0$
+13.6,3,Theorem,$\int_{K} f d \mu=0$
+13.6,1,Theorem,$|f(z)-R(z)|<\epsilon$
+13.6,0,Theorem,"By Theorem 10.7 (with $X=K, \varphi(\zeta)=\zeta), h \in H\left(S^{2}-K\right)$."
+13.9,2,Theorem,"$\left|R_{n}(z)-f(z)\right|<\frac{1}{n} \quad(z \in K, n \geq N)$"
+13.9,1,Theorem,$\left|R_{n}(z)-f(z)\right|<\frac{1}{n} \quad\left(z \in K_{n}\right)$.
+14.1,5,Definition,$\varphi(z)=\frac{(b-c)(z-a)}{(b-a)(z-c)}$
+14.1,4,Definition,$\lim _{r \rightarrow 0} e^{-i \theta} A\left[f\left(r e^{i \theta}\right)\right]=\frac{\alpha+\beta e^{-2 i \theta}}{\left|\alpha+\beta e^{-2 i \theta}\right|}$
+14.1,3,Definition,$f(z)=\alpha z+\beta \bar{z}+|z| \eta(z)$
+14.1,2,Definition,$\lim _{r \rightarrow 0} e^{-i \theta} A\left[f\left(z_{0}+r e^{i \theta}\right)-f\left(z_{0}\right)\right] \quad(r>0)$
+14.1,1,Definition,$A[z]=\frac{z}{|z|}$
+14.1,2,Definition,$f(z)=z+\sum_{n=2}^{\infty} a_{n} z^{n} \quad(z \in U)$
+14.1,1,Definition,"$f=0, \quad f^{\prime}=1$"
+14.12,2,Theorem,$g(z)=z h\left(z^{2}\right) \quad(z \in U)$.
+14.12,1,Theorem,$g^{2}(z)=f\left(z^{2}\right) \quad(z \in U)$.
+14.13,9,Theorem,$\sum_{n=1}^{N} n\left|\alpha_{n}\right|^{2}\left(1-r^{2 n}\right) \leq 1+\eta r$
+14.13,8,Theorem,$=\pi\left\{r^{-2}-1+\sum_{1}^{\infty} n\left|\alpha_{n}\right|^{2}\left(1-r^{2 n}\right)\right\}$.
+14.13,3,Theorem,$F(z)=\frac{1}{z}+\alpha_{1} z+\varphi(z) \quad(z \in U)$
+14.13,2,Theorem,$\sum_{n=1}^{\infty} n\left|\alpha_{n}\right|^{2} \leq 1$
+14.13,5,Theorem,$u=A \cos \theta+\operatorname{Re} \varphi \quad$ and $\quad v=-B \sin \theta+\operatorname{Im} \varphi$
+14.13,4,Theorem,"$A=\frac{1}{r}+\alpha_{1} r, \quad B=\frac{1}{r}-\alpha_{1} r$."
+14.13,6,Theorem,$\frac{u^{2}}{A^{2}}+\frac{v^{2}}{B^{2}}<1+\eta r^{3} \quad\left(z=r e^{i \theta}\right)$
+14.13,7,Theorem,$\pi A B\left(1+\eta r^{3}\right)=\pi\left(\frac{1}{r}+\alpha_{1} r\right)\left(\frac{1}{r}-\alpha_{1} r\right)\left(1+\eta r^{3}\right) \leq \frac{\pi}{r^{2}}\left(1+\eta r^{3}\right)$
+14.18,1,Theorem,"$\lim _{r \rightarrow 1} g\left(r e^{i t}\right)=\beta \quad($ a.e. on $J)$,"
+14.18,2,Theorem,"$\lim _{t \rightarrow 1} g\left(\Gamma_{i}(t)\right)=\beta_{i} \quad(i=1,2)$"
+14.19,3,Remark,"$h(-1+i y)=h(1+i y)=h(\tau(-1+i y)) \quad(0<y<\infty)$,"
+14.19,2,Remark,$h(-x+i y)=\overline{h(x+i y)}$
+14.19,5,Remark,"$\lambda(z)=h\left(\varphi^{-1}(z)\right) \quad(z \in \varphi(Q), \varphi \in \Gamma)$"
+14.19,4,Remark,$h\left(-\frac{1}{2}+\frac{1}{2} e^{i \theta}\right)=h\left(\frac{1}{2}+\frac{1}{2} e^{i(\pi-\theta)}\right)=h\left(\sigma\left(-\frac{1}{2}+\frac{1}{2} e^{i \theta}\right)\right) \quad(0<\theta<\pi)$
+14.2,1,Remark,"$A(r, R)=\{z: r<|z|<R\}$"
+14.22,8,Theorem,$f(\theta)=\sum_{k=-n}^{n} a_{k} e^{i k \theta}$
+14.22,4,Theorem,$u(z)=2 \log |f(z)|-2 \alpha \log |z| \quad\left(z \in A_{1}\right)$.
+14.22,5,Theorem,$\partial(2 \log |f|)=\partial(\log (\overline{f f}))=f^{\prime} / f$
+14.22,7,Theorem,$\frac{f^{\prime}(z)}{f(z)}=\frac{\alpha}{z} \quad\left(z \in A_{1}\right)$.
+14.22,6,Theorem,$(\partial u)(z)=\frac{f^{\prime}(z)}{f(z)}-\frac{\alpha}{z} \quad\left(z \in A_{1}\right)$
+14.22,2,Theorem,"$A(1,1+\epsilon) \cap f^{-1}(K)=\varnothing$"
+14.22,3,Theorem,$\alpha=\frac{\log R_{2}}{\log R_{1}}$
+14.22,1,Theorem,"$A_{1}=A\left(1, R_{1}\right), \quad A_{2}=A\left(1, R_{2}\right)$"
+14.22,0,Theorem,$\alpha=\frac{1}{2 \pi i} \int_{y} \frac{f^{\prime}(z)}{f(z)} d z=\operatorname{Ind}_{\Gamma}$.
+14.6,3,Theorem,$\left|f\left(z^{\prime}\right)-f\left(z^{\prime \prime}\right)\right|<\frac{M\left(K_{n+1}\right)}{\delta_{n}}\left|z^{\prime}-z^{\prime \prime}\right|$
+14.6,2,Theorem,$f\left(z^{\prime}\right)-f\left(z^{\prime \prime}\right)=\frac{z^{\prime}-z^{\prime \prime}}{2 \pi i} \int_{\gamma} \frac{f(\zeta)}{\left(\zeta-z^{\prime}\right)\left(\zeta-z^{\prime \prime}\right)} d \zeta$
+14.6,1,Theorem,$D\left(z ; 2 \delta_{n}\right) \subset K_{n+1} \quad\left(z \in K_{n}\right)$.
+15.1,2,Theorem,"$P_{\alpha}(z)=\sum_{j=1}^{1+m(\alpha)} c_{j, \alpha}(z-\alpha)^{-j}$"
+15.1,3,Theorem,"$g(z) P_{\alpha}(z)=w_{0, \alpha}+w_{1, \alpha}(z-\alpha)+\cdots+w_{m(\alpha), \alpha}(z-\alpha)^{m(\alpha)}+\cdots$"
+15.1,1,Theorem,$f(z)=e^{g(z)} \prod_{n=1}^{\infty} E_{p_{n}}\left(\frac{z}{z_{n}}\right)$.
+15.1,4,Theorem,$g(z)=b_{1} z^{m+1}+b_{2} z^{m+2}+\cdots$
+15.1,5,Theorem,"$\left|1-E_{n}\left(\frac{\alpha_{n}-\beta_{n}}{z-\beta_{n}}\right)\right| \leq\left(\frac{1}{2}\right)^{n+1} \quad(z \in K, n \geq N)$"
+15.1,7,Theorem,$g(z) P(z)=w_{0}+w_{1} z+\cdots+w_{m} z^{m}+\cdots$.
+15.1,6,Theorem,$g(z) P(z)=\left(c_{m+1}+c_{m} z+\cdots+c_{1} z^{m}\right) \quad\left(b_{1}+b_{2} z+b_{3} z^{2}+\cdots\right)$.
+15.15,4,Theorem,$1=h g_{n}+f \varphi$
+15.15,1,Theorem,$m(\varphi ; \alpha)=\min \left\{m\left(g_{i} ; \alpha\right): 1 \leq i \leq n-1\right\} \quad(\alpha \in \Omega)$
+15.15,2,Theorem,"$\left[g_{1}, \ldots, g_{n-1}, g_{n}\right]=\left[\varphi, g_{n}\right]$"
+15.15,3,Theorem,$m\left(1-h g_{n} ; \alpha\right) \geq m(\varphi ; \alpha) \quad(\alpha \in \Omega)$
+15.17,2,Lemma,$\Gamma(t)=e^{i t} \quad(\delta \leq t \leq 2 \pi-\delta)$
+15.17,3,Lemma,$\frac{1}{2 \pi} \int_{\delta}^{2 \pi-\delta} \log \left|1-e^{i \theta}\right| d \theta=\operatorname{Re}\left[\frac{1}{2 \pi i} \int_{\Gamma} h(z) \frac{d z}{z}\right]=\operatorname{Re}\left[\frac{1}{2 \pi i} \int_{\gamma} h(z) \frac{d z}{z}\right]$.
+15.17,1,Lemma,"$\operatorname{Re} h(z)=\log |1-z|, \quad|\operatorname{Im} h(z)|<\frac{\pi}{2} \quad(z \in \Omega)$"
+15.18,2,Theorem,$g(z)=f(z) \prod_{n=1}^{m} \frac{r^{2}-\bar{\alpha}_{n} z}{r\left(\alpha_{n}-z\right)} \prod_{n=m+1}^{N} \frac{\alpha_{n}}{\alpha_{n}-z}$
+15.18,3,Theorem,$\log |g|=\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|g\left(r e^{i \theta}\right)\right| d \theta$
+15.18,1,Theorem,$|f| \prod_{n=1}^{N} \frac{r}{\left|\alpha_{n}\right|}=\exp \left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|f\left(r e^{i \theta}\right)\right| d \theta\right\}$
+15.18,0,Theorem,$\log |g|=\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|g\left(r e^{i \theta}\right)\right| d \theta$
+15.18,4,Theorem,$|g|=|f| \prod_{n=1}^{m} \frac{r}{\left|\alpha_{n}\right|}$.
+15.18,5,Theorem,$\log \left|g\left(r e^{i \theta}\right)\right|=\log \left|f\left(r e^{i \theta}\right)\right|-\sum_{n=m+1}^{N} \log \left|1-e^{i\left(\theta-\theta_{n}\right)}\right|$
+15.19,3,Theorem,$\mu_{r}(f) \leq \mu_{s}(f) \quad$ if $\quad 0<r<s<1$
+15.19,2,Theorem,$n(r) \log 2 \leq \log M(2 r)$
+15.19,1,Theorem,$M(r)=\sup _{\theta}\left|f\left(r e^{i \theta}\right)\right| \quad(0<r<\infty)$
+15.19,5,Theorem,"$\mu_{r}(f) \leq \mu^{*}(f) \quad$ if $\quad 0<r<1$.
+"
+15.19,4,Theorem,$\mu_{r}(f) \rightarrow \log |f| \quad$ as $\quad r \rightarrow 0$
+15.19,6,Theorem,$\lim _{r \rightarrow \infty} \frac{\log n(r)}{\log r}=k$
+15.2,1,Definition,$p_{n}=\left(1+u_{1}\right)\left(1+u_{2}\right) \cdots\left(1+u_{n}\right)$
+15.2,2,Definition,$p=\prod_{n=1}^{\infty}\left(1+u_{n}\right)$
+15.21,3,Theorem,$\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|f\left(r e^{i \theta}\right)\right| d \theta$
+15.21,2,Theorem,"$B(z)=z^{k} \prod_{n=1}^{\infty} \frac{\alpha_{n}-z}{1-\bar{\alpha}_{n} z} \frac{\left|\alpha_{n}\right|}{\alpha_{n}} \quad(z \in U)$,"
+15.21,1,Theorem,$\sum_{n=1}^{\infty}\left(1-\left|\alpha_{n}\right|\right)<\infty$
+15.23,4,Theorem,$\prod_{n=1}^{k}\left|\alpha_{n}\right| \geq C^{-1}|f| r^{k}$
+15.23,1,Theorem,$\sum_{n=1}^{\infty}\left(1-\left|\alpha_{n}\right|\right)<\infty$
+15.23,2,Theorem,$|f| \prod_{n=1}^{n(r)} \frac{r}{\left|\alpha_{n}\right|}=\exp \left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|f\left(r e^{i \theta}\right)\right| d \theta\right\}$
+15.23,3,Theorem,$|f| \prod_{n=1}^{k} \frac{r}{\left|\alpha_{n}\right|} \leq \exp \left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log ^{+}\left|f\left(r e^{i \theta}\right)\right| d \theta\right\}$.
+15.24,1,Theorem,$\lim _{r \rightarrow 1} \frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|B\left(r e^{i \theta}\right)\right| d \theta=0$.
+15.24,3,Theorem,$\log \left|B_{N}\right| \leq \lim _{r \rightarrow 1} \frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|B\left(r e^{i \theta}\right)\right| d \theta \leq \frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|B^{*}\left(e^{i \theta}\right)\right| d \theta \leq 0$
+15.24,2,Theorem,$B_{N}(z)=\prod_{n=N}^{\infty} \frac{\alpha_{n}-z}{1-\bar{\alpha}_{n} z} \cdot \frac{\left|\alpha_{n}\right|}{\alpha_{n}}$
+15.26,8,Theorem,$f(z)=\int_{0}^{1} t^{z}\left\{\frac{1}{2 \pi} \int_{-\infty}^{\infty} f(-1+i s) e^{-i s \log t} d s\right\} d t$.
+15.26,2,Theorem,"$\int_{I} t^{k} d \mu(t)=0 \quad(k=1,2,3, \ldots)$"
+15.26,3,Theorem,$f(z)=\int_{I} t^{z} d \mu(t)$
+15.26,1,Theorem,"$\int_{I} t^{\lambda_{n}} d \mu(t)=0 \quad(n=1,2,3, \ldots)$"
+15.26,4,Theorem,$g(z)=f\left(\frac{1+z}{1-z}\right) \quad(z \in U)$.
+15.26,5,Theorem,$f(z)=\frac{z}{(2+z)^{3}} \prod_{n=1}^{\infty} \frac{\lambda_{n}-z}{2+\lambda_{n}+z}$.
+15.26,7,Theorem,$\frac{1}{1+z-i s}=\int_{0}^{1} t^{z-i s} d t \quad(\operatorname{Re} z>-1)$
+15.26,6,Theorem,$f(z)=-\frac{1}{2 \pi} \int_{-\infty}^{\infty} \frac{f(-1+i s)}{-1+i s-z} d s \quad(\operatorname{Re} z>-1)$.
+15.27,2,Remark,$\left|a_{n}\right| \leq\left(\frac{e \lambda}{n}\right)^{n / \lambda}$
+15.3,3,Lemma,$\left|p_{N}-1\right| \leq p_{N}^{*}-1$
+15.3,2,Lemma,$p_{N}^{*} \leq \exp \left(\left|u_{1}\right|+\cdots+\left|u_{N}\right|\right)$
+15.4,8,Theorem,$|f(s)| \geq(1-2 \epsilon)\left|p_{N_{0}}(s)\right| \quad(s \in S)$
+15.4,5,Theorem,$q_{M}-p_{N}=p_{N}\left\{\prod\left(1+u_{n_{k}}\right)-1\right\}$.
+15.4,4,Theorem,"$\{1,2, \ldots, N\} \subset\left\{n_{1}, n_{2}, \ldots, n_{M}\right\}$"
+15.4,6,Theorem,$\left|q_{M}-p_{N}\right| \leq\left|p_{N}\right|\left(e^{\epsilon}-1\right) \leq 2\left|p_{N}\right| \epsilon \leq 2 C \epsilon$
+15.4,7,Theorem,$\left|p_{M}-p_{N_{0}}\right| \leq 2\left|p_{N_{0}}\right| \epsilon \quad\left(M>N_{0}\right)$
+15.4,3,Theorem,$\sum_{n=N_{0}}^{\infty}\left|u_{n}(s)\right|<\epsilon \quad(s \in S)$.
+15.4,2,Theorem,$f(s)=\prod_{k=1}^{\infty}\left(1+u_{n_{k}}(s)\right) \quad(s \in S)$
+15.4,1,Theorem,$f(s)=\prod_{n=1}^{\infty}\left(1+u_{n}(s)\right)$
+15.6,1,Theorem,$\sum_{n=1}^{\infty}\left|1-f_{n}(z)\right|$
+15.6,2,Theorem,$\sum_{n=1}^{\infty}\left|1-f_{n}(z)\right|$
+15.6,3,Theorem,$m(f ; z)=\sum_{n=1}^{\infty} m\left(f_{n} ; z\right) \quad(z \in \Omega)$
+15.9,0,Theorem,$\sum_{n=1}^{\infty}\left(\frac{r}{r_{n}}\right)^{1+p_{n}}<\infty$
+15.9,1,Theorem,"Condition  is always satisfied if $p_{n}=n-1$, for instance."
+15.9,2,Theorem,$P(z)=\prod_{n=1}^{\infty} E_{p_{n}}\left(\frac{z}{z_{n}}\right)$
+16.11,1,Theorem,"$\gamma\left(\left[s_{i}, s_{i+1}\right]\right) \subset A_{i}, \quad \gamma\left(\left[\sigma_{j}, \sigma_{j+1}\right]\right) \subset B_{j} \quad(0 \leq i \leq m, 0 \leq j \leq n)$."
+16.11,2,Theorem,$\gamma\left(s_{i}\right) \in A_{i-1} \cap A_{i} \cap B_{j}$.
+16.12,1,Definition,"$\gamma_{t}(s)=\varphi(s, t) \quad(s \in I, t \in I)$"
+16.13,2,Theorem,"$\left|\gamma_{t}(s)-\gamma_{u}(s)\right|<\epsilon \quad$ if $s \in I, u \in I,|u-t|<\delta$"
+16.13,1,Theorem,"$E_{i}=\gamma_{t}\left(\left[s_{i}, s_{i+1}\right]\right) \subset A_{i} \quad(i=0,1, \ldots, n-1)$"
+16.14,2,Theorem,"$H(s, 0)=\Gamma(s), \quad H(s, 1)=c \in X, \quad H(0, t)=H(2 \pi, t)$"
+16.14,1,Theorem,$\Gamma(s)=\left\{\begin{array}{ll}\Gamma_{0}(s) & (0 \leq s \leq \pi) \\ \Gamma_{1}(2 \pi-s) & (\pi \leq s \leq 2 \pi)\end{array}\right.$
+16.14,8,Theorem,$\gamma_{1}(\theta)=\Phi\left(e^{-i \theta}\right)=\Phi\left(e^{i(2 \pi-\theta)}\right)=\Gamma(2 \pi-\theta)=\Gamma_{1}(\theta) \quad(0 \leq \theta \leq \pi)$
+16.16,3,Remark,$\operatorname{Ind}_{\Gamma}(w)=\frac{1}{2 \pi i} \int_{\Gamma} g^{\prime}(z) d z=0$
+16.16,2,Remark,$g_{\beta}(z)=\int_{\Gamma_{z}}(\zeta-w)^{-1} d \zeta+f(\alpha) \quad\left(z \in D_{\beta}\right)$
+16.16,1,Remark,"$\Gamma_{z}=\gamma \dot{+}[\beta, z] \quad\left(z \in D_{\beta}\right)$"
+16.19,9,Theorem,"$|2 z-4 n+1| \geq 1, \quad|2 z-4 n-1| \geq 1 \quad(n=0, \pm 1, \pm 2, \ldots)$"
+16.19,3,Theorem,$Q \cap \varphi(Q)=\varnothing$
+16.19,2,Theorem,$\operatorname{Im} \varphi(z)=\frac{\operatorname{Im} z}{|c z+d|^{2}}$
+16.19,6,Theorem,$\operatorname{Im} \varphi(w) \leq \operatorname{Im} \varphi_{0}(w) \quad(\varphi \in \Gamma)$
+16.19,7,Theorem,$\operatorname{Im} \varphi(z) \leq \operatorname{Im} z \quad(\varphi \in \Gamma)$
+16.19,4,Theorem,$\operatorname{Im} z=\operatorname{Im} \varphi^{-1}(\varphi(z)) \leq \operatorname{Im} \varphi(z)$
+16.2,1,Theorem,$f(z)=\sum_{n=0}^{\infty} a_{n} z^{n} \quad(z \in U)$
+16.2,2,Theorem,"$h(z)=\left\{\begin{array}{ll}f(z) & (z \in U), \\ g_{i}(z) & \left(z \in D_{i}\right)\end{array}\right.$"
+16.4,2,Remark,$f\left(z^{2}\right)=f(z)-z$
+16.4,1,Remark,$f(z)=\sum_{n=0}^{\infty} z^{2^{n}}=z+z^{2}+z^{4}+z^{8}+\cdots \quad(z \in U)$
+16.5,1,Theorem,"$\lambda q_{k}>(\lambda+1) p_{k} \quad(k=1,2,3, \ldots)$"
+16.5,3,Theorem,$\varphi(w)=\frac{1}{2}\left(w^{\lambda}+w^{\lambda+1}\right)$
+16.5,6,Theorem,$F(w)=\sum_{n=0}^{\infty} a_{n}[\varphi(w)]^{n} \quad(|w|<1)$
+16.5,4,Theorem,$F(w)=\sum_{m=0}^{\infty} b_{m} w^{m}$
+16.6,2,Theorem,$f(z)=\sum_{k=1}^{\infty} c_{k} z^{p_{k}}$
+16.6,3,Theorem,"$f^{(k)}(z)=\sum_{n=k}^{\infty} n(n-1) \cdots(n-k+1) a_{n} \eta_{n} z^{n-k}$,"
+16.6,1,Theorem,"$p_{k+1}>\left(1+\frac{1}{\lambda}\right) p_{k} \quad(k=1,2,3, \ldots)$"
+16.9,2,Definition,"$\gamma\left(\left[s_{i}, s_{i+1}\right]\right) \subset D_{i} \quad(i=0, \ldots, n-1)$"
+16.9,1,Definition,"$\left(f_{0}, D_{0}\right) \sim\left(f_{1}, D_{1}\right)$"
+17.1,2,Theorem,$f=g h$
+17.1,1,Theorem,$f=B \cdot h^{2 / p}$.
+17.11,2,Theorem,"$\left(N_{\alpha} f\right)^{p} \leq\left(N_{\alpha} h\right)^{2}$,"
+17.11,1,Theorem,$f=B h^{2 / p}$
+17.11,4,Theorem,"$f_{r}(z)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} P\left(z, e^{i t}\right) f_{r}\left(e^{i t}\right) d t$."
+17.11,6,Theorem,"and
+\[
+f(z)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} P\left(z, e^{i t}\right) f^{*}\left(e^{i t}\right) d t .
+\]"
+17.13,1,Theorem,$\int_{T} e^{-i n t} d \mu(t)=0$
+17.13,3,Theorem,"$P\left(z, e^{i t}\right)=\sum_{-\infty}^{\infty} r^{|n|} e^{i n \theta} e^{-i n t}$"
+17.13,2,Theorem,$\left\|f_{r}\right\|_{1} \leq\|\mu\| \quad(0 \leq r<1)$.
+17.13,4,Theorem,$f(z)=\sum_{0}^{\infty} \hat{\mu}(n) z^{n} \quad(z \in U)$
+17.14,1,Definition,$Q(z)=c \exp \left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi} \frac{e^{i t}+z}{e^{i t}-z} \log \varphi\left(e^{i t}\right) d t\right\}$
+17.15,1,Theorem,$M(z)=c B(z) \exp \left\{-\int_{-\pi}^{\pi} \frac{e^{i t}+z}{e^{i t}-z} d \mu(t)\right\} \quad(z \in U)$
+17.17,8,Theorem,$P\left[\log ^{-}\left|f^{*}\right|\right] \leq \liminf _{R \rightarrow 1} P\left[\log ^{-}\left|f_{R}\right|\right]=P\left[\log ^{+}\left|f^{*}\right|\right]-\log |f|$
+17.17,5,Theorem,$|f(z)| \leq\left|Q_{f}(z)\right| \quad(z \in U)$
+17.17,7,Theorem,$\log \left|f_{R}(z)\right|=P\left[\log ^{+}\left|f_{R}\right|\right](z)-P\left[\log ^{-}\left|f_{R}\right|\right](z)$
+17.17,6,Theorem,"$\log |f| \leq P\left[\log \left|f^{*}\right|\right]$,"
+17.17,2,Theorem,$f=M_{f} Q_{f}$
+17.17,3,Theorem,$\log |f| \leq \frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|f^{*}\left(e^{i t}\right)\right| d t$.
+17.17,1,Theorem,$Q_{f}(z)=\exp \left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi} \frac{e^{i t}+z}{e^{i t}-z} \log \left|f^{*}\left(e^{i t}\right)\right| d t\right\}$
+17.18,2,Theorem,$F(z)=\prod_{k=1}^{n} f\left(\alpha^{k} z\right) \quad(z \in U)$
+17.18,3,Theorem,$f(z)=c B(z) \exp \left\{\int_{T} \frac{e^{i t}+z}{e^{i t}-z} d \mu(t)\right\}$
+17.18,2,Theorem,$\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|g\left(r e^{i \theta}\right)\right| d \theta=\log |g|$
+17.18,1,Theorem,$|\log | g||=2 \log ^{+}|g|-\log |g|$
+17.18,5,Theorem,$\log |f|=1>0=\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|f^{*}\left(e^{i t}\right)\right| d t$
+17.18,4,Theorem,$f(z)=\exp \left\{\frac{1+z}{1-z}\right\}$
+17.18,6,Theorem,"$(f, g)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f^{*}\left(e^{i \theta}\right) \overline{g^{*}\left(e^{i \theta}\right)} d \theta$"
+17.18,7,Theorem,"$(S f)(z)=z f(z) \quad\left(f \in H^{2}, z \in U\right)$."
+17.21,2,Theorem,$\|f\|_{2}=\left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi}\left|f^{*}\left(e^{i \theta}\right)\right|^{2} d \theta\right\}^{1 / 2}$.
+17.21,1,Theorem,$\varphi H^{2}=\left\{\varphi f: f \in H^{2}\right\}$
+17.21,4,Theorem,"$\frac{1}{2 \pi} \int_{-\pi}^{\pi}\left|\varphi^{*}\left(e^{i \theta}\right)\right|^{2} e^{-i n \theta} d \theta=0 \quad(n=1,2,3, \ldots)$"
+17.21,6,Theorem,"$\frac{1}{2 \pi} \int_{-\pi}^{\pi} h^{*}\left(e^{i \theta}\right) \overline{\varphi^{*}\left(e^{i \theta}\right)} e^{-i n \theta} d \theta=0 \quad(n=-1,-2,-3, \ldots)$"
+17.21,9,Theorem,"$\frac{1}{2 \pi} \int_{-\pi}^{\pi} h^{*}\left(e^{i \theta}\right) \overline{\varphi^{*}\left(e^{i \theta}\right)} e^{-i n \theta} d \theta=0 \quad(n=0,1,2, \ldots)$"
+17.23,1,Theorem,$Y=M_{f} H^{2}$
+17.23,2,Theorem,$M_{f} Q_{f}=\varphi M_{h} Q_{h}$
+17.25,1,Lemma,$1 \leq \beta(\cos \varphi)^{p}-\alpha \cos p \varphi \quad\left(-\frac{\pi}{2} \leq \varphi \leq \frac{\pi}{2}\right)$
+17.26,8,Theorem,$\left\{\int_{T}\left|(\psi h)_{r}\right|^{p} d \sigma\right\}^{1 / p} \leq A_{q}\left\{\int_{T}|h|^{p} d \sigma\right\}^{1 / p} \quad(0 \leq r<1)$.
+17.26,3,Theorem,$\int_{T}\left|f_{r}\right|^{p} d \sigma \leq \beta \int_{T}\left(u_{r}\right)^{p} d \sigma-\alpha \int_{T}\left|f_{r}\right|^{p} \cos \left(p \varphi_{r}\right) d \sigma$
+17.26,2,Theorem,$\int_{T}\left|(\psi h)_{r}\right|^{p} d \sigma \leq A_{p}^{p} \int_{T}|h|^{p} d \sigma \cdot(0 \leq r<1)$
+17.26,1,Theorem,$\|\psi h\|_{p} \leq A_{p}\|h\|_{p}$
+17.26,5,Theorem,$\|\psi h\|_{p} \leq \beta^{1 / p}\|h\|_{p}$
+17.26,4,Theorem,$\int_{T}\left|f_{r}\right|^{p} d \sigma \leq \beta \int_{T} h^{p} d \sigma \quad(0 \leq r<1)$
+17.26,6,Theorem,$\int_{T}(\psi h)_{r} \tilde{w} d \sigma=\int_{T}(\psi w)_{r} \tilde{h} d \sigma \quad(0 \leq r<1)$.
+17.26,7,Theorem,$\left|\int_{T}(\psi h)_{r} \tilde{w} d \sigma\right| \leq A_{q}\|w\|_{q}\|h\|_{p}$.
+17.5,4,Theorem,$\left\|f_{r}\right\|_{0}=\exp \int_{T} \log ^{+}\left|f_{r}\right| d \sigma$
+17.5,3,Theorem,"$\left\|f_{r}\right\|_{\infty}=\sup _{\theta}\left|f\left(r e^{i \theta}\right)\right|$,"
+17.5,2,Theorem,$\left\|f_{r}\right\|_{p}=\left\{\int_{T}\left|f_{r}\right|^{p} d \sigma\right\}^{1 / p} \quad(0<p<\infty)$
+17.5,1,Theorem,$m(r)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} u\left(r e^{i \theta}\right) d \theta \quad(0 \leq r<1)$.
+17.7,1,Definition,$\|f\|_{p}=\sup \left\{\left\|f_{r}\right\|_{p}: 0 \leq r<1\right\}$.
+17.8,3,Remark,$\|f+g\|_{p} \leq\|f\|_{p}+\|g\|_{p}$.
+17.8,2,Remark,$\left\|(f+g)_{r}\right\|_{p}=\left\|f_{r}+g_{r}\right\|_{p} \leq\left\|f_{r}\right\|_{p}+\left\|g_{r}\right\|_{p}$
+17.8,1,Remark,$\|f\|_{p}=\lim _{r \rightarrow 1}\left\|f_{r}\right\|_{p}$.
+17.8,4,Remark,$\left\|\left(f-f_{m}\right)_{r}\right\|_{p}=\lim _{n \rightarrow \infty}\left\|\left(f_{n}-f_{m}\right)_{r}\right\|_{p} \leq \epsilon$.
+18.1,1,Definition,"$x(y z)=(x y) z, \quad(x+y) z=x z+y z, \quad x(y+z)=x y+x z$"
+18.1,2,Definition,$\alpha(x y)=x(\alpha y)=(\alpha x) y$
+18.1,3,Definition,$\|x y\| \leq\|x\|\|y\| \quad(x$ and $y \in A)$
+18.1,7,Definition,$x^{-1} x=x x^{-1}=e$
+18.1,6,Definition,"\[
+\|e\|=1
+\]
+"
+18.1,4,Definition,$x_{n} y_{n}-x y=\left(x_{n}-x\right) y_{n}+x\left(y_{n}-y\right)$.
+18.1,5,Definition,$x e=e x=x \quad(x \in A)$.
+18.13,2,Theorem,"$\varphi(x)+\varphi(y)=\varphi(x+y), \quad \lambda \varphi(x)=\varphi(\lambda x)$"
+18.13,3,Theorem,"$\varphi(x)+\varphi(y)=\varphi\left(x^{\prime}\right)+\varphi\left(y^{\prime}\right), \quad \lambda \varphi(x)=\lambda \varphi\left(x^{\prime}\right)$"
+18.13,1,Theorem,$\varphi(x)=x+J=\{x+y: y \in J\}$.
+18.13,4,Theorem,$x^{\prime} y^{\prime}-x y=\left(x^{\prime}-x\right) y^{\prime}+x\left(y^{\prime}-y\right)$
+18.13,5,Theorem,"$\varphi(x) \varphi(y)=\varphi(x y) \quad(x$ and $y \in A)$.
+"
+18.13,6,Theorem,"$I=\{a x+y: a \in A, y \in J\}$."
+18.18,1,Theorem,$\left|f_{1}(z)\right|+\cdots+\left|f_{n}(z)\right|>0$
+18.18,2,Theorem,$\sum_{i=1}^{n} f_{i}(z) g_{i}(z)=1 \quad(z \in \bar{U})$
+18.2,8,Theorem,$h(f)=f\left(e^{i \alpha}\right) \quad(f \in A)$.
+18.2,7,Theorem,$\hat{g}(-n)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} g\left(e^{i \theta}\right) e^{i n \theta} d \theta=h\left(g f_{0}^{n}\right)=h(g) h\left(f_{0}^{n}\right)=0$
+18.2,6,Theorem,"$\left|\lambda^{n}\right|=\left|h\left(f_{0}^{n}\right)\right| \leq\left\|f_{0}^{n}\right\|=1 \quad(n=0, \pm 1, \pm 2, \ldots)$"
+18.2,4,Theorem,"$h\left(f_{0}^{n}\right)=\left[h\left(f_{0}\right)\right]^{n}=0 \quad(n=1,2,3, \ldots)$"
+18.2,1,Theorem,"$P_{n}\left(e^{i \theta}\right)=\sum_{k=0}^{m(n)} a_{n, k} e^{i k \theta} \quad(n=0, \ldots, N)$"
+18.2,2,Theorem,$\left|f\left(e^{i \theta}\right)-\sum_{n=0}^{N} P_{n}\left(e^{i \theta}\right) g^{n}\left(e^{i \theta}\right)\right|<\epsilon \quad\left(e^{i \theta} \in T\right)$
+18.2,3,Theorem,$\sum_{n=0}^{N} P_{n} g^{n}$
+18.3,5,Theorem,$\left\|\sum_{n=2}^{\infty}(-1)^{n} x^{n}\right\| \leq \sum_{n=2}^{\infty}\left\|x^{n}\right\| \leq \sum_{n=2}^{\infty}\|x\|^{n}=\frac{\|x\|^{2}}{1-\|x\|}$.
+18.3,4,Theorem,$(e+x) s_{N}=e+(-1)^{N} x^{N+1}=s_{N}(e+x)$
+18.3,3,Theorem,$s_{N}=e-x+x^{2}-\cdots+(-1)^{N} x^{N}$
+18.3,2,Theorem,$\left\|(e+x)^{-1}-e+x\right\| \leq \frac{\|x\|^{2}}{1-\|x\|}$
+18.3,1,Theorem,$(e+x)^{-1}=\sum_{n=0}^{\infty}(-1)^{n} x^{n}$
+18.4,2,Theorem,$(x+h)^{-1}=\left(e+x^{-1} h\right)^{-1} x^{-1}$
+18.4,3,Theorem,"$(x+h)^{-1}-x^{-1}+x^{-1} h x^{-1}=\left[\left(e+x^{-1} h\right)^{-1}-e+x^{-1} h\right] x^{-1}$,"
+18.5,3,Theorem,$\frac{(x-\mu e)^{-1}-(x-\lambda e)^{-1}}{\mu-\lambda} \rightarrow(x-\lambda e)^{-2}$
+18.5,2,Theorem,$\left\|(x-\mu e)^{-1}-(x-\lambda e)^{-1}+(\lambda-\mu)(x-\lambda e)^{-2}\right\| \leq C|\mu-\lambda|^{2}$
+18.5,5,Theorem,"$\lambda f(\lambda)=\Phi\left[\lambda(x-\lambda e)^{-1}\right]=\Phi\left[\left(\frac{x}{\lambda}-e\right)^{-1}\right] \rightarrow \Phi(-e)$,"
+18.5,4,Theorem,$\frac{f(\mu)-f(\lambda)}{\mu-\lambda} \rightarrow \Phi\left[(x-\lambda e)^{-2}\right]$.
+18.9,8,Theorem,"$\left\|x^{n}\right\|^{1 / n} \leq|\lambda|[C(\lambda)]^{1 / n} \quad(n=1,2,3, \ldots)$"
+18.9,9,Theorem,$\lim _{n \rightarrow \infty} \sup \left\|x^{n}\right\|^{1 / n} \leq \rho(x)$.
+18.9,7,Theorem,"$\left\|\lambda^{-n} x^{n}\right\| \leq C(\lambda) \quad(n=1,2,3, \ldots)$"
+18.9,6,Theorem,
+18.9,4,Theorem,$(\lambda e-x) \sum_{n=0}^{\infty} \lambda^{-n-1} x^{n}=e$
+18.9,5,Theorem,$f(\lambda)=-\sum_{n=0}^{\infty} \Phi\left(x^{n}\right) \lambda^{-n-1}$
+18.9,1,Theorem,$\lim _{n \rightarrow \infty}\left\|x^{n}\right\|^{1 / n}=\rho(x)$
+18.9,2,Theorem,$\left(x^{n}-\lambda^{n} e\right)=(x-\lambda e)\left(x^{n-1}+\lambda x^{n-2}+\cdots+\lambda^{n-1} e\right)$
+18.9,3,Theorem,$\rho(x) \leq \lim _{n \rightarrow \infty} \inf \left\|x^{n}\right\|^{1 / n}$.
+19.1,1,Definition,$f(z)=\int_{0}^{\infty} F(t) e^{i t z} d t \quad\left(z \in \Pi^{+}\right)$
+19.1,3,Definition,$\frac{1}{2 \pi} \int_{-\infty}^{\infty}|f(x+i y)|^{2} d x=\int_{0}^{\infty}|F(t)|^{2} e^{-2 t y} d t \leq \int_{0}^{\infty}|F(t)|^{2} d t$
+19.1,6,Definition,$|f(z)| \leq C e^{A|z|}$
+19.1,4,Definition,$f(z)=\int_{-A}^{A} F(t) e^{i t z} d t$
+19.1,5,Definition,$|f(z)| \leq \int_{-A}^{A}|F(t)| e^{-t y} d t \leq e^{A|y|} \int_{-A}^{A}|F(t)| d t$.
+19.1,2,Definitino,$f(x+i y)=\int_{0}^{\infty} F(t) e^{-t y} e^{i t x} d t$
+19.11,16,Theorem,$\left|1-\frac{\sin \lambda_{n} z}{\lambda_{n} z}\right| \leq B \lambda_{n}|z| \quad\left(|z| \leq \frac{1}{\lambda_{n}}\right)$
+19.11,15,Theorem,$\left|1-\frac{\sin z}{z}\right| \leq B|z| \quad(|z| \leq 1)$
+19.11,14,Theorem,"$\left|x^{k} f(x)\right| \leq M_{k}\left(\frac{\sin x}{x}\right)^{2} \quad(x$ real, $k=0,1,2, \ldots)$"
+19.11,11,Theorem,"$\lambda_{n}=\frac{M_{n-1}}{M_{n}} \quad(n=1,2,3, \ldots)$"
+19.11,12,Theorem,$\left(a_{n} \lambda_{n}\right)^{n} \leq M_{n} \cdot \lambda_{1} \lambda_{2} \cdots \lambda_{n}=1$.
+19.11,9,Theorem,$\log q(x) \geq \log \frac{x^{n}}{M_{n}} \geq \log e^{n}=n$
+19.11,2,Theorem,$f(z)=\int_{0}^{A} F(t) e^{i t z} d t$
+19.11,3,Theorem,$g(w)=f\left(\frac{i-i w}{1+w}\right)$.
+19.11,1,Theorem,"$\left\|D^{n} F\right\|_{\infty} \leq 2^{-n} M_{n} \quad(n=0,1,2, \ldots)$"
+19.11,4,Theorem,$\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log \left|g\left(e^{i \theta}\right)\right| d \theta>-\infty$.
+19.11,5,Theorem,$\frac{1}{\pi} \int_{-\infty}^{\infty} \log |f(x)| \frac{d x}{1+x^{2}}>-\infty$
+19.11,7,Theorem,"$\left|x^{n} f(x)\right| \leq 2^{-n} A M_{n} \quad(x$ real, $n=0,1,2, \ldots)$"
+19.11,6,Theorem,$f(z)=(i z)^{-n} \int_{0}^{A}\left(D^{n} F\right)(t) e^{i t z} d t \quad(z \neq 0)$
+19.11,23,Theorem,$\left(D^{k} F\right)(t)=\frac{1}{2 \pi} \int_{-\infty}^{\infty}(-i x)^{k} f(x) e^{-i t x} d x$
+19.11,22,Theorem,$F(t)=\frac{1}{2 \pi} \int_{-\infty}^{\infty} f(x) e^{-i t x} d x \quad(t$ real $)$
+19.11,20,Theorem,$\leq\left(\frac{\sin x}{x}\right)^{2}\left(\lambda_{1} \cdots \lambda_{k}\right)^{-1}=M_{k}\left(\frac{\sin x}{x}\right)^{2}$
+19.11,21,Theorem,"$\frac{1}{\pi} \int_{-\infty}^{\infty}\left|x^{k} f(x)\right| d x \leq M_{k} \quad(k=0,1,2, \ldots)$"
+19.11,19,Theorem,"$|f(z)| \leq e^{A|z|}, \quad$ with $A=2+\sum_{n=1}^{\infty} \lambda_{n}$."
+19.11,18,Theorem,$\frac{\sin z}{z}=\frac{1}{2} \int_{-1}^{1} e^{i t z} d t$
+19.2,1,Theorem,$\sup _{0<y<\infty} \frac{1}{2 \pi} \int_{-\infty}^{\infty}|f(x+i y)|^{2} d x=C<\infty$
+19.2,3,Theorem,$\int_{0}^{\infty}|F(t)|^{2} d t=C$.
+19.2,2,Theorem,$f(z)=\int_{0}^{\infty} F(t) e^{i t z} d t \quad\left(z \in \Pi^{+}\right)$
+19.2,6,Theorem,$|\Phi(\beta)|^{2}=\left|\int_{I} f(\beta+i u) e^{-i t(\beta+i u)} d u\right|^{2} \leq \int_{I}|f(\beta+i u)|^{2} d u \int_{I} e^{2 t u} d u$.
+19.2,5,Theorem,$\int_{\Gamma_{\alpha}} f(z) e^{-i t z} d z=0$
+19.2,4,Theorem,$F(t)=e^{t y} \cdot \frac{1}{2 \pi} \int_{-\infty}^{\infty} f(x+i y) e^{-i t x} d x=\frac{1}{2 \pi} \int f(z) e^{-i t z} d z$
+19.2,18,Theorem,$f_{y}(x)=\int_{-\infty}^{\infty} \hat{f}_{y}(t) e^{i t x} d t$
+19.2,19,Theorem,$f(z)=\int_{0}^{\infty} F(t) e^{-y t} e^{i t x} d t=\int_{0}^{\infty} F(t) e^{i t z} d t \quad\left(z \in \Pi^{+}\right)$.
+19.2,17,Theorem,$\int_{0}^{\infty}|F(t)|^{2} d t \leq C$.
+19.2,16,Theorem,$\int_{-\infty}^{\infty} e^{-2 t y}|F(t)|^{2} d t=\int_{-\infty}^{\infty}\left|\hat{f}_{y}(t)\right|^{2} d t=\frac{1}{2 \pi} \int_{-\infty}^{\infty}\left|f_{y}(x)\right|^{2} d x \leq C$.
+19.2,14,Theorem,$F(t)=e^{t} \hat{f}_{1}(t)$
+19.2,15,Theorem,$F(t)=e^{t y} \hat{f}_{y}(t)$
+19.2,11,Theorem,"$g_{j}(y, t)=\frac{1}{2 \pi} \int_{-\alpha_{j}}^{\alpha_{j}} f(x+i y) e^{-i t x} d x$"
+19.2,10,Theorem,"$\Phi\left(\alpha_{j}\right) \rightarrow 0, \quad \Phi\left(-\alpha_{j}\right) \rightarrow 0 \quad$ as $j \rightarrow \infty$"
+19.2,12,Theorem,"$\lim _{j \rightarrow \infty}\left[e^{t y} g_{j}(y, t)-e^{t} g_{j}(1, t)\right]=0 \quad(-\infty<t<\infty)$."
+19.2,13,Theorem,"$\lim _{j \rightarrow \infty} \int_{-\infty}^{\infty}\left|\hat{f}_{y}(t)-g_{j}(y, t)\right|^{2} d t=0$"
+19.2,9,Theorem,$\Lambda\left(\alpha_{j}\right)+\Lambda\left(-\alpha_{j}\right) \rightarrow 0 \quad(j \rightarrow \infty)$
+19.3,1,Theorem,$|f(z)| \leq C e^{A|z|}$
+19.3,2,Theorem,$\int_{-\infty}^{\infty}|f(x)|^{2} d x<\infty$.
+19.3,3,Theorem,$f(z)=\int_{-A}^{A} F(t) e^{i t z} d t$
+19.3,7,Theorem,$\Phi_{\alpha}(w)=\int_{\Gamma_{\alpha}} f(z) e^{-w z} d z=e^{i \alpha} \int_{0}^{\infty} f\left(s e^{i \alpha}\right) \exp \left(-w s e^{i \alpha}\right) d s$
+19.3,6,Theorem,$\Pi_{\alpha}=\left\{w: \operatorname{Re}\left(w e^{i \alpha}\right)>A\right\}$
+19.3,4,Theorem,"$\lim _{\epsilon \rightarrow 0} \int_{-\infty}^{\infty} f_{\epsilon}(x) e^{-i t x} d x=0 \quad(t$ real, $|t|>A)$"
+19.3,5,Theorem,$\Gamma_{\alpha}(s)=s e^{i \alpha} \quad(0 \leq s<\infty)$
+19.3,11,Theorem,"$\gamma=\frac{\alpha+\beta}{2}, \quad \eta=\cos \frac{\beta-\alpha}{2}>0$."
+19.3,8,Theorem,$\Phi_{0}(w)=\int_{0}^{\infty} f(x) e^{-w x} d x \quad(\operatorname{Re} w>0)$
+19.3,9,Theorem,$\Phi_{\pi}(w)=-\int_{-\infty}^{0} f(x) e^{-w x} d x \quad(\operatorname{Re} w<0)$
+19.3,10,Theorem,$\int_{-\infty}^{\infty} f_{\epsilon}(x) e^{-i t x} d x=\Phi_{0}(\epsilon+i t)-\Phi_{\pi}(-\epsilon+i t) \quad(t$ real $)$
+19.3,12,Theorem,$\operatorname{Re}\left(w e^{i \alpha}\right)=\eta|w|=\operatorname{Re}\left(w e^{i \beta}\right)$
+19.3,13,Theorem,$\int_{\Gamma} f(z) e^{-w z} d z$
+19.3,14,Theorem,$\operatorname{Re}(-w z)=-|w| r \cos (t-\gamma) \leq-|w| r \eta$
+19.7,3,Theorem,"$\left\|D^{n}(f g)\right\|_{\infty} \leq \beta_{f} \beta_{g}\left(B_{f}+B_{g}\right)^{n} M_{n} \quad(n=0,1,2, \ldots)$"
+19.7,2,Theorem,$\left|D^{n}(f g)\right| \leq \beta_{f} \beta_{g} \sum_{j=0}^{n}\left(\begin{array}{l}n \\ j\end{array}\right) B_{f}^{j} B_{g}^{n-j} M_{j} M_{n-j}$
+19.7,1,Theorem,$D^{n}(f g)=\sum_{j=0}^{n}\left(\begin{array}{l}n \\ j\end{array}\right)\left(D^{j} f\right) \cdot\left(D^{n-j} g\right)$
+19.9,3,Theorem,$f(x)=\sum_{n=0}^{\infty} \frac{\left(D^{n} f\right)(a)}{n !}(x-a)^{n}$
+19.9,2,Theorem,"$\left\|D^{n} f\right\|_{\infty} \leq \beta B^{n} n ! \quad(n=0,1,2, \ldots)$"
+19.9,1,Theorem,"$\left|\left(D^{n} f\right)(x)\right| \leq \beta \delta^{-n} n ! \quad(n=0,1,2, \ldots)$"
+19.9,5,Theorem,$n \beta B^{n}\left|\int_{a}^{x}(x-t)^{n-1} d t\right|=\beta|B(x-a)|^{n}$.
+20.2,7,Lemma,$|a| \geq \frac{r}{4}$.
+20.2,6,Lemma,$b=\frac{1}{2 \pi i} \int_{\Gamma} z g(z) d z$
+20.2,4,Lemma,$F(w)=\frac{a}{w}+\sum_{n=0}^{\infty} c_{n} w^{n} \quad(w \in U)$
+20.2,5,Lemma,$g(z)=\frac{1}{a} F^{-1}(z) \quad(z \in \Omega)$
+20.2,14,Lemma,"$|\varphi(z)|<8 r^{3}|Q(\zeta, z)|+4 r^{2}<1,000 r^{2}$"
+20.2,10,Lemma,$|Q| \leq \frac{4}{r}+5 r\left(\frac{16}{r^{2}}\right)<\frac{100}{r}$
+20.2,1,Lemma,"$Q(\zeta, z)=g(z)+(\zeta-b) g^{2}(z)$"
+20.2,0,Lemma,$\lambda_{2}(\zeta)=\frac{1}{2 \pi i} \int_{\Gamma_{0}}(z-\zeta) g(z) d z=b-\zeta$
+20.2,13,Lemma,"$\varphi(z)=\left[Q(\zeta, z)-\frac{1}{z-\zeta}\right](z-\zeta)^{3}$"
+20.2,2,Lemma,"$|Q(\zeta, z)|<\frac{100}{r}$"
+20.2,3,Lemma,"$\left|Q(\zeta, z)-\frac{1}{z-\zeta}\right|<\frac{1,000 r^{2}}{|z-\zeta|^{3}}$"
+20.2,12,Lemma,$\lambda_{2}(\zeta)=\frac{1}{2 \pi i} \int_{\Gamma_{0}}(z-\zeta) g(z) d z=b-\zeta$
+20.2,8,Lemma,$|g(z)|<\frac{4}{r} \quad(z \in \Omega)$
+20.2,9,Lemma,"\[
+|b|<4 r \text {. }
+\]
+"
+20.3,3,Lemma,"$(\bar{\partial} f)(\zeta)=\frac{1}{2} e^{i \theta}\left[\frac{\partial}{\partial r}+\frac{i}{r} \frac{\partial}{\partial \theta}\right] \varphi(r, \theta)$."
+20.3,2,Lemma,$f(z)=-\frac{1}{\pi} \iint_{R^{2}} \frac{(\bar{\partial} f)(\zeta)}{\zeta-z} d \xi d \eta \quad(\zeta=\xi+i \eta)$
+20.3,5,Lemma,"$-\frac{1}{2 \pi} \int_{0}^{2 \pi} d \theta \int_{\epsilon}^{\infty} \frac{\partial \varphi}{\partial r} d r=\frac{1}{2 \pi} \int_{0}^{2 \pi} \varphi(\epsilon, \theta) d \theta$"
+20.3,4,Lemma,$-\frac{1}{2 \pi} \int_{\epsilon}^{\infty} \int_{0}^{2 \pi}\left(\frac{\partial \varphi}{\partial r}+\frac{i}{r} \frac{\partial \varphi}{\partial \theta}\right) d \theta d r$
+20.4,4,Theorem,"$\left|f-f_{1}-\cdots-f_{n}\right| \leq\left(\frac{2}{3}\right)^{n}$ on $K, \quad\left|f_{n}\right| \leq \frac{1}{3} \cdot\left(\frac{2}{3}\right)^{n-1}$ on $X$."
+20.4,1,Theorem,"$K^{+}=\left\{x \in K: f(x) \geq \frac{1}{3}\right\}, \quad K^{-}=\left\{x \in K: f(x) \leq-\frac{1}{3}\right\}$"
+20.4,3,Theorem,"$\left|f-f_{1}-f_{2}\right| \leq\left(\frac{2}{3}\right)^{2}$ on $K, \quad\left|f_{2}\right| \leq \frac{1}{3} \cdot \frac{2}{3}$ on $X$."
+20.4,2,Theorem,"$\left|f-f_{1}\right| \leq \frac{2}{3}$ on $K, \quad\left|f_{1}\right| \leq \frac{1}{3}$ on $X$."
+20.5,20,Theorem,"$F(z)=\frac{1}{\pi} \iint(\bar{\partial} \Phi)(\zeta) R(\zeta, z) d \xi d \eta \quad(z \in \Omega)$"
+20.5,21,Theorem,$\left|f\left(z_{2}\right)-f\left(z_{1}\right)\right|$
+20.5,23,Theorem,$2 \pi \int_{0}^{4 \delta}\left(\frac{50}{\delta}+\frac{1}{\rho}\right) \rho d \rho=808 \pi \delta$
+20.5,22,Theorem,"$|F(z)-\Phi(z)|<\frac{2 \omega(\delta)}{\pi \delta} \iint\left|R(\zeta, z)-\frac{1}{z-\zeta}\right| d \xi d \eta \quad(z \in \Omega)$"
+20.5,19,Theorem,"$R(\zeta, z)=Q_{j}(\zeta, z) \quad\left(\zeta \in X_{j}, z \in \Omega\right)$"
+20.5,25,Theorem,"$|F(z)-\Phi(z)|<6,000 \omega(\delta) \quad(z \in \Omega)$."
+20.5,24,Theorem,"$2 \pi \int_{4 \delta}^{\infty} \frac{4,000 \delta^{2}}{\rho^{3}} \rho d \rho=2,000 \pi \delta$"
+20.5,18,Theorem,"$Q_{j}(\zeta, z)=g_{j}(z)+\left(\zeta-b_{j}\right) g_{j}^{2}(z)$"
+20.5,7,Theorem,$A(z)=a(|z|)$
+20.5,6,Theorem,$a(r)=\frac{3}{\pi \delta^{2}}\left(1-\frac{r^{2}}{\delta^{2}}\right)^{2} \quad(0 \leq r \leq \delta)$
+20.5,5,Theorem,(s) $\quad(u !+\xi=\xi) \quad u p \mathfrak{q} p \frac{z-\xi}{(\xi)(\Phi \underline{\varrho})} \iint \frac{u}{\mathrm{I}}-=(z) \Phi$
+20.5,1,Theorem,$\lim _{\delta \rightarrow 0} \omega(\delta)=0$
+20.5,0,Theorem,$(\bar{\partial} \Phi)(z)=\iint(\bar{\partial} A)(z-\zeta) f(\zeta) d \xi d \eta$
+20.5,2,Theorem,"$|f(z)-P(z)|<10,000 \omega(\delta) \quad(z \in K)$"
+20.5,9,Theorem,"$\iint \bar{\partial} A=0$,"
+20.5,15,Theorem,$=2 \pi f(z) \int_{0}^{\delta} a(r) r d r=f(z) \iint A=f(z)$
+20.5,14,Theorem,$\Phi(z)=f(z) \quad(z \in G)$
+20.5,16,Theorem,"$\left|Q_{f}(\zeta, z)\right|<\frac{50}{\delta}$"
+20.5,17,Theorem,"$\left|Q_{j}(\zeta, z)-\frac{1}{z-\zeta}\right|<\frac{4,000 \delta^{2}}{|z-\zeta|^{3}}$"
+20.5,13,Theorem,$=\iint[f(z-\zeta)-f(z)](\bar{\partial} A)(\zeta) d \xi d \eta$
+20.5,12,Theorem,$\Phi(z)-f(z)=\iint[f(z-\zeta)-f(z)] A(\zeta) d \xi d \eta$
+20.5,10,Theorem,$\iint|\bar{\partial} A|=\frac{24}{15 \delta}<\frac{2}{\delta}$.
+20.5,11,Theorem,$\Phi(z)=\iint f(z-\zeta) A(\zeta) d \xi d \eta=\iint A(z-\zeta) f(\zeta) d \xi d \eta$
