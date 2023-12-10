@@ -1,0 +1,1846 @@
+Chapter,Formula#,Path,latex
+1,2,principles/1_2.jpg,"\[
+m^{2}=2 n^{2}
+\]"
+1,3,principles/1_3.jpg,"\[
+q=p-\frac{p^{2}-2}{p+2}=\frac{2 p+2}{p+2}
+\]"
+1,4,principles/1_4.jpg,"\[
+q^{2}-2=\frac{2\left(p^{2}-2\right)}{(p+2)^{2}}
+\]"
+1,5,principles/1_5.jpg,"$$
+\[
+n_{0}+\frac{n_{1}}{10}+\cdots+\frac{n_{k}}{10^{k}} \quad(k=0,1,2, \ldots)
+\]"
+2,1,principles/2_1.jpg,"\[
+S=\bigcup_{\alpha \in A} E_{\alpha} .
+\]"
+2,2,principles/2_2.jpg,"\[
+S=\bigcup_{m=1}^{n} E_{m}
+\]"
+2,3,principles/2_3.jpg,"\[
+S=E_{1} \cup E_{2} \cup \cdots \cup E_{n} .
+\]"
+2,4,principles/2_4.jpg,"\[
+S=\bigcup_{m=1}^{\infty} E_{m} .
+\]"
+2,8,principles/2_8.jpg,$A \cup B=B \cup A ; \quad A \cap B=B \cap A$.
+2,9,principles/2_9.jpg,$\quad(A \cup B) \cup C=A \cup(B \cup C) ; \quad(A \cap B) \cap C=A \cap(B \cap C)$.
+2,10,principles/2_10.jpg,$A \cap(B \cup C)=(A \cap B) \cup(A \cap C)$.
+2,11,principles/2_11.jpg,"\[
+A \subset A \cup B,
+\]"
+2,12,principles/2_12.jpg,"\[
+A \cap B \subset A .
+\]"
+2,13,principles/2_13.jpg,"\[
+A \cup 0=A, \quad A \cap 0=0 .
+\]"
+2,14,principles/2_14.jpg,"\[
+A \cup B=B, \quad A \cap B=A .
+\]"
+2,15,principles/2_15.jpg,"\[
+S=\bigcup_{n=1}^{\infty} E_{n} .
+\]"
+2,17,principles/2_17.jpg,"$x_{11} ; x_{21}, x_{12} ; x_{31}, x_{22}, x_{13} ; x_{41}, x_{32}, x_{23}, x_{14} ; \ldots$"
+2,18,principles/2_18.jpg,"$$
+\[
+(b, a) \quad\left(b \in B_{n-1}, a \in A\right)
+\]"
+2,19,principles/2_19.jpg,"$\quad d(\mathbf{x}, \mathbf{y})=|\mathbf{x}-\mathbf{y}| \quad\left(\mathbf{x}, \mathbf{y} \in R^{k}\right)$."
+2,20,principles/2_20.jpg,"\[
+\left(\bigcup_{\alpha} E_{\alpha}\right)^{c}=\bigcap_{\alpha}\left(E_{\alpha}^{c}\right)
+\]"
+2,21,principles/2_21.jpg,"\[
+\left(\bigcap_{\alpha} F_{\alpha}\right)^{c}=\bigcup_{\alpha}\left(F_{\alpha}^{c}\right),
+\]"
+2,22,principles/2_22.jpg,"\[
+K \subset G_{\alpha_{1}} \cup \cdots \cup G_{\alpha_{n}}
+\]"
+2,24,principles/2_24.jpg,"\[
+\left(\frac{3 k+1}{3^{m}}, \frac{3 k+2}{3^{m}}\right)
+\]"
+3,1,principles/3_1.jpg,"\[
+s_{n} t_{n}-s t=\left(s_{n}-s\right)\left(t_{n}-t\right)+s\left(t_{n}-t\right)+t\left(s_{n}-s\right)
+\]"
+3,3,principles/3_3.jpg,"\[
+\lim _{N \rightarrow \infty} \operatorname{diam} \bar{E}_{N}=0
+\]"
+3,4,principles/3_4.jpg,"\[
+\sum_{n=1}^{\infty} a_{n} .
+\]"
+3,5,principles/3_5.jpg,"\[
+\sum_{n=0}^{\infty} a_{n} .
+\]"
+3,7,principles/3_7.jpg,"\[
+\sum_{k=0}^{\infty} 2^{k} a_{2^{k}}=a_{1}+2 a_{2}+4 a_{4}+8 a_{8}+\cdots
+\]"
+3,8,principles/3_8.jpg,"\[
+s_{n} \leq t_{k} \text {. }
+\]"
+3,9,principles/3_9.jpg,"\[
+2 s_{n} \geq t_{k} \text {. }
+\]"
+3,12,principles/3_12.jpg,"\[
+\sum_{n=3}^{\infty} \frac{1}{n \log n \log \log n}
+\]"
+3,14,principles/3_14.jpg,"\[
+\limsup _{n \rightarrow \infty} t_{n} \leq e
+\]"
+3,15,principles/3_15.jpg,"\[
+e \leq \liminf _{n \rightarrow \infty} t_{n} .
+\]"
+3,16,principles/3_16.jpg,"\[
+0<e-s_{n}<\frac{1}{n ! n}
+\]"
+3,17,principles/3_17.jpg,"\[
+0<q !\left(e-s_{q}\right)<\frac{1}{q}
+\]"
+3,18,principles/3_18.jpg,"\[
+\limsup _{n \rightarrow \infty} \sqrt[n]{c_{n}} \leq \beta
+\]"
+3,19,principles/3_19.jpg,"\[
+\sum_{n=0}^{\infty} c_{n} z^{n}
+\]"
+3,21,principles/3_21.jpg,"\[
+\lim _{n \rightarrow \infty} \gamma_{n}=0
+\]"
+3,22,principles/3_22.jpg,"\[
+1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\frac{1}{5}-\frac{1}{6}+\cdots
+\]"
+3,23,principles/3_23.jpg,"\[
+1+\frac{1}{3}-\frac{1}{2}+\frac{1}{5}+\frac{1}{7}-\frac{1}{4}+\frac{1}{9}+\frac{1}{11}-\frac{1}{6}+\cdots
+\]"
+3,24,principles/3_24.jpg,"$$
+\[
+\liminf _{n \rightarrow \infty} s_{n}^{\prime}=\alpha, \quad \limsup _{n \rightarrow \infty} s_{n}^{\prime}=\beta .
+\]"
+3,25,principles/3_25.jpg,$P_{1}+\cdots+P_{m_{1}}-Q_{1}-\cdots-Q_{k_{1}}+P_{m_{1}+1}+\cdots$
+3,26,principles/3_26.jpg,"\[
+\sum_{i=n}^{m}\left|a_{i}\right| \leq \varepsilon
+\]"
+4,1,principles/4_1.jpg,"\[
+\lim _{x \rightarrow p} f(x)=q
+\]"
+4,2,principles/4_2.jpg,"\[
+d_{Y}(f(x), q)<\varepsilon
+\]"
+4,3,principles/4_3.jpg,"\[
+0<d_{X}(x, p)<\delta
+\]"
+4,4,principles/4_4.jpg,"\[
+\lim _{x \rightarrow p} f(x)=q
+\]"
+4,5,principles/4_5.jpg,"\[
+\lim _{n \rightarrow \infty} f\left(p_{n}\right)=q
+\]"
+4,7,principles/4_7.jpg,"\[
+\mathbf{f}(x)=\left(f_{1}(x), \ldots, f_{k}(x)\right) \quad(x \in X)
+\]"
+4,8,principles/4_8.jpg,"\[
+\phi_{i}(\mathbf{x})=x_{i} \quad\left(\mathbf{x} \in R^{k}\right)
+\]"
+4,9,principles/4_9.jpg,"\[
+x_{1}^{n_{1}} x_{2}^{n_{2}} \ldots x_{k}^{n_{k}}
+\]"
+4,10,principles/4_10.jpg,"$\quad P(\mathbf{x})=\Sigma c_{n_{1}} \cdots n_{k} x_{1}^{n_{1}} \ldots x_{k}^{n_{k}} \quad\left(\mathbf{x} \in R^{k}\right)$,"
+4,11,principles/4_11.jpg,"$$
+\[
+|| \mathbf{x}|-| \mathbf{y}|| \leq|\mathbf{x}-\mathbf{y}| \quad\left(\mathbf{x}, \mathbf{y} \in R^{k}\right)
+\]"
+4,12,principles/4_12.jpg,"$$
+\[
+X \subset f^{-1}\left(V_{\alpha_{1}}\right) \cup \cdots \cup f^{-1}\left(V_{\alpha_{n}}\right) .
+\]"
+4,13,principles/4_13.jpg,"\[
+f(X) \subset V_{\alpha_{1}} \cup \cdots \cup V_{\alpha_{n}} .
+\]"
+4,14,principles/4_14.jpg,"\[
+M=\sup _{p \in X} f(p), \quad m=\inf _{p \in X} f(p)
+\]"
+4,15,principles/4_15.jpg,"\[
+d_{Y}(f(p), f(q))<\varepsilon
+\]"
+4,16,principles/4_16.jpg,"$q \in X, d_{X}(p, q)<\phi(p)$ implies $\quad d_{Y}(f(p), f(q))<\frac{\varepsilon}{2}$"
+4,17,principles/4_17.jpg,"$$
+\[
+d_{X}(p, q)<\frac{1}{2} \phi(p)
+\]"
+4,18,principles/4_18.jpg,"$$
+\[
+X \subset J\left(p_{1}\right) \cup \cdots \cup J\left(p_{n}\right)
+\]"
+4,19,principles/4_19.jpg,"\[
+\delta=\frac{1}{2} \min \left[\phi\left(p_{1}\right), \ldots, \phi\left(p_{n}\right)\right]
+\]"
+4,20,principles/4_20.jpg,"\[
+d_{X}\left(p, p_{m}\right)<\frac{1}{2} \phi\left(p_{m}\right)
+\]"
+4,21,principles/4_21.jpg,"\[
+f(x)=\frac{1}{x-x_{0}} \quad(x \in E)
+\]"
+4,22,principles/4_22.jpg,"$$
+\[
+g(x)=\frac{1}{1+\left(x-x_{0}\right)^{2}} \quad(x \in E)
+\]"
+4,23,principles/4_23.jpg,"$$
+\[
+h(x)=\frac{x^{2}}{1+x^{2}} \quad(x \in E)
+\]"
+4,24,principles/4_24.jpg,"\[
+\mathbf{f}(t)=(\cos t, \sin t) \quad(0 \leq t<2 \pi)
+\]"
+4,25,principles/4_25.jpg,$\sup _{a<t<x} f(t)=f(x-) \leq f(x) \leq f(x+)=\inf _{x<t<b} f(t)$.
+4,26,principles/4_26.jpg,"$$
+\[
+f(x+) \leq f(y-) .
+\]"
+4,27,principles/4_27.jpg,"$$
+\[
+A-\varepsilon<f(x-\delta) \leq A
+\]"
+4,28,principles/4_28.jpg,"$$
+\[
+f(x-\delta) \leq f(t) \leq A \quad(x-\delta<t<x)
+\]"
+4,29,principles/4_29.jpg,"\[
+f(x+)=\inf _{x<t<b} f(t)=\inf _{x<t<y} f(t) .
+\]"
+4,30,principles/4_30.jpg,"\[
+f(y-)=\sup _{a<t<y} f(t)=\sup _{x<t<y} f(t) .
+\]"
+4,31,principles/4_31.jpg,"\[
+f(x)=\sum_{x_{n}<x} c_{n} \quad(a<x<b) .
+\]"
+5,1,principles/5_1.jpg,"\[
+\phi(t)=\frac{f(t)-f(x)}{t-x} \quad(a<t<b, t \neq x)
+\]"
+5,2,principles/5_2.jpg,"\[
+f^{\prime}(x)=\lim _{t \rightarrow x} \phi(t)
+\]"
+5,4,principles/5_4.jpg,"\[
+f(t)-f(x)=(t-x)\left[f^{\prime}(x)+u(t)\right]
+\]"
+5,5,principles/5_5.jpg,"$$
+\[
+g(s)-g(y)=(s-y)\left[g^{\prime}(y)+v(s)\right],
+\]"
+5,8,principles/5_8.jpg,"\[
+f^{\prime}(x)=\sin \frac{1}{x}-\frac{1}{x} \cos \frac{1}{x} \quad(x \neq 0) .
+\]"
+5,10,principles/5_10.jpg,"$$
+\[
+f^{\prime}(x)=2 x \sin \frac{1}{x}-\cos \frac{1}{x} \quad(x \neq 0)
+\]"
+5,11,principles/5_11.jpg,"\[
+f^{\prime}(0)=0 \text {. }
+\]"
+5,12,principles/5_12.jpg,"$$
+\[
+h(a)=f(b) g(a)-f(a) g(b)=h(b)
+\]"
+5,13,principles/5_13.jpg,"\[
+\frac{f^{\prime}(x)}{g^{\prime}(x)} \rightarrow \text { as } x \rightarrow a
+\]"
+5,14,principles/5_14.jpg,"$f(x) \rightarrow 0$ and $g(x) \rightarrow 0$ as $x \rightarrow a$,"
+5,15,principles/5_15.jpg,"\[
+g(x) \rightarrow+\infty \text { as } x \rightarrow a
+\]"
+5,16,principles/5_16.jpg,"\[
+\frac{f(x)}{g(x)} \rightarrow A \text { as } x \rightarrow a
+\]"
+5,17,principles/5_17.jpg,"\[
+\frac{f^{\prime}(x)}{g^{\prime}(x)}<r .
+\]"
+5,19,principles/5_19.jpg,"\[
+\frac{f(y)}{g(y)} \leq r<q \quad(a<y<c) .
+\]"
+5,20,principles/5_20.jpg,"\[
+\frac{f(x)}{g(x)}<r-r \frac{g(y)}{g(x)}+\frac{f(y)}{g(x)} \quad\left(a<x<c_{1}\right)
+\]"
+5,21,principles/5_21.jpg,"$$
+\[
+\frac{f(x)}{g(x)}<q \quad\left(a<x<c_{2}\right)
+\]"
+5,22,principles/5_22.jpg,"$$
+\[
+p<\frac{f(x)}{g(x)} \quad\left(a<x<c_{3}\right)
+\]"
+5,25,principles/5_25.jpg,"$$
+\[
+f(\beta)=P(\beta)+M(\beta-\alpha)^{n}
+\]"
+5,26,principles/5_26.jpg,$g(t)=f(t)-P(t)-M(t-\alpha)^{n} \quad(a \leq t \leq b)$.
+5,27,principles/5_27.jpg,"\[
+g^{(n)}(t)=f^{(n)}(t)-n ! M \quad(a<t<b)
+\]"
+5,28,principles/5_28.jpg,"\[
+g(\alpha)=g^{\prime}(\alpha)=\cdots=g^{(n-1)}(\alpha)=0
+\]"
+5,29,principles/5_29.jpg,"$$
+\[
+f^{\prime}(x)=f_{1}^{\prime}(x)+i f_{2}^{\prime}(x)
+\]"
+5,30,principles/5_30.jpg,"\[
+\lim _{t \rightarrow x}\left|\frac{\mathbf{f}(t)-\mathbf{f}(x)}{t-x}-\mathbf{f}^{\prime}(x)\right|=0
+\]"
+5,31,principles/5_31.jpg,"\[
+\mathbf{f}^{\prime}=\left(f_{1}^{\prime}, \ldots, f_{k}^{\prime}\right)
+\]"
+5,32,principles/5_32.jpg,"\[
+f(x)=e^{i x}=\cos x+i \sin x
+\]"
+5,33,principles/5_33.jpg,"$$
+\[
+f(2 \pi)-f(0)=1-1=0
+\]"
+5,34,principles/5_34.jpg,"\[
+f^{\prime}(x)=i e^{i x}
+\]"
+5,35,principles/5_35.jpg,"\[
+g(x)=x+x^{2} e^{i / x^{2}}
+\]"
+5,36,principles/5_36.jpg,"\[
+\lim _{x \rightarrow 0} \frac{f(x)}{g(x)}=1
+\]"
+5,37,principles/5_37.jpg,"$$
+\[
+g^{\prime}(x)=1+\left\{2 x-\frac{2 i}{x}\right\} e^{i / x^{2}} \quad(0<x<1)
+\]"
+5,38,principles/5_38.jpg,$\quad\left|g^{\prime}(x)\right| \geq\left|2 x-\frac{2 i}{x}\right|-1 \geq \frac{2}{x}-1$.
+5,41,principles/5_41.jpg,"\[
+|f(b)-f(a)| \leq(b-a) \sup _{a<x<b}\left|f^{\prime}(x)\right|
+\]"
+6,4,principles/6_4.jpg,"\[
+\int_{a}^{b} f(x) d x
+\]"
+6,7,principles/6_7.jpg,"\[
+\int_{a}^{b} f d \alpha
+\]"
+6,8,principles/6_8.jpg,"\[
+\int_{a}^{b} f(x) d \alpha(x)
+\]"
+6,9,principles/6_9.jpg,"$$
+\[
+L(P, f, \alpha) \leq L\left(P^{*}, f, \alpha\right)
+\]"
+6,10,principles/6_10.jpg,"$U\left(P^{*}, f, \alpha\right) \leq U(P, f, \alpha)$."
+6,11,principles/6_11.jpg,"$$
+\[
+L\left(P_{1}, f, \alpha\right) \leq U\left(P_{2}, f, \alpha\right)
+\]"
+6,12,principles/6_12.jpg,"\[
+\int_{\underline{1}} f d \alpha \leq U\left(P_{2}, f, \alpha\right) .
+\]"
+6,13,principles/6_13.jpg,"\[
+U(P, f, \alpha)-L(P, f, \alpha)<\varepsilon
+\]"
+6,14,principles/6_14.jpg,"\[
+U\left(P_{2}, f, \alpha\right)-\int f d \alpha<\frac{\varepsilon}{2}
+\]"
+6,15,principles/6_15.jpg,"\[
+\int f d \alpha-L\left(P_{1}, f, \alpha\right)<\frac{\varepsilon}{2}
+\]"
+6,16,principles/6_16.jpg,"\[
+|f(x)-f(t)|<\eta
+\]"
+6,17,principles/6_17.jpg,"\[
+M_{i}-m_{i} \leq \eta \quad(i-1, \ldots, n)
+\]"
+6,19,principles/6_19.jpg,"$$
+\[
+\delta \sum_{i \in B} \Delta \alpha_{i} \leq \sum_{i \in B}\left(M_{i}-m_{i}\right) \Delta \alpha_{i}<\delta^{2}
+\]"
+6,20,principles/6_20.jpg,"$\quad L\left(P, f_{1}, \alpha\right)+L\left(P, f_{2}, \alpha\right) \leq L(P, f, \alpha)$"
+6,21,principles/6_21.jpg,"$$
+\[
+\int f d \alpha \leq \int f_{1} d \alpha+\int f_{2} d \alpha
+\]"
+6,23,principles/6_23.jpg,"\[
+\int_{a}^{b} f d \alpha=\sum_{n=1}^{\infty} c_{n} f\left(s_{n}\right)
+\]"
+6,24,principles/6_24.jpg,"$$
+\[
+\int_{a}^{b} f d \alpha_{1}=\sum_{i=1}^{N} c_{n} f\left(s_{n}\right) .
+\]"
+6,25,principles/6_25.jpg,"$$
+\[
+\left|\int_{a}^{b} f d \alpha_{2}\right| \leq M \varepsilon
+\]"
+6,27,principles/6_27.jpg,"$$
+\[
+\int_{a}^{b} f d \alpha=\int_{a}^{b} f(x) \alpha^{\prime}(x) d x
+\]"
+6,28,principles/6_28.jpg,"\[
+U\left(P, \alpha^{\prime}\right)-L\left(P, \alpha^{\prime}\right)<\varepsilon .
+\]"
+6,29,principles/6_29.jpg,"$$
+\[
+\sum_{i=1}^{n}\left|\alpha^{\prime}\left(s_{i}\right)-\alpha^{\prime}\left(t_{i}\right)\right| \Delta x_{i}<\varepsilon
+\]"
+6,30,principles/6_30.jpg,"$$
+\[
+\left|\sum_{i=1}^{n} f\left(s_{i}\right) \Delta \alpha_{i}-\sum_{i=1}^{n} f\left(s_{i}\right) \alpha^{\prime}\left(s_{i}\right) \Delta x_{i}\right| \leq M \varepsilon
+\]"
+6,31,principles/6_31.jpg,"\[
+\left|U(P, f, \alpha)-U\left(P, f \alpha^{\prime}\right)\right| \leq M \varepsilon
+\]"
+6,32,principles/6_32.jpg,"$$
+\[
+\int_{a}^{b} f d \alpha=\bar{\int}_{a}^{b} f(x) \alpha^{\prime}(x) d x
+\]"
+6,33,principles/6_33.jpg,"\[
+\int_{0}^{1} x^{2} d m
+\]"
+6,34,principles/6_34.jpg,"\[
+\int_{0}^{1} x^{2} \rho(x) d x
+\]"
+6,35,principles/6_35.jpg,"\[
+\sum_{i} x_{i}^{2} m_{i}
+\]"
+6,36,principles/6_36.jpg,"$\quad \beta(y)=\alpha(\varphi(y)), \quad g(y)=f(\varphi(y))$."
+6,37,principles/6_37.jpg,"\[
+\int_{A}^{B} g d \beta=\int_{a}^{b} f d \alpha .
+\]"
+6,38,principles/6_38.jpg,"$\quad U(Q, g, \beta)=U(P, f, \alpha), \quad L(Q, g, \beta)=L(P, f, \alpha)$."
+6,39,principles/6_39.jpg,"\[
+\int_{a}^{b} f(x) d x=\int_{A}^{B} f(\varphi(y)) \varphi^{\prime}(y) d y
+\]"
+6,40,principles/6_40.jpg,"$$
+\[
+\left|\int_{a}^{b} \mathbf{f} d \alpha\right| \leq \int_{a}^{b}|\mathbf{f}| d \alpha
+\]"
+6,42,principles/6_42.jpg,"\[
+\sum y_{j} f_{j}(t) \leq|\mathbf{y}||\mathbf{f}(t)| \quad(a \leq t \leq b)
+\]"
+6,43,principles/6_43.jpg,"\[
+|\mathbf{y}|^{2} \leq|\mathbf{y}| \int|\mathbf{f}| d \alpha
+\]"
+7,1,principles/7_1.jpg,"\[
+f(x)=\lim _{n \rightarrow \infty} f_{n}(x) \quad(x \in E) .
+\]"
+7,2,principles/7_2.jpg,"\[
+f(x)=\sum_{n=1}^{\infty} f_{n}(x) \quad(x \in E)
+\]"
+7,3,principles/7_3.jpg,"$\quad \lim _{t \rightarrow x} \lim _{n \rightarrow \infty} f_{n}(t)=\lim _{n \rightarrow \infty} \lim _{t \rightarrow x} f_{n}(t)$,"
+7,4,principles/7_4.jpg,"\[
+\lim _{n \rightarrow \infty} \lim _{m \rightarrow \infty} s_{m, n}=1
+\]"
+7,8,principles/7_8.jpg,"\[
+\lim _{m \rightarrow \infty} \lim _{n \rightarrow \infty}(\cos m ! \pi x)^{2 n}=\left\{\begin{array}{ll}
+0 & (x \text { irrational }) \\
+1 & (x \text { rational })
+\end{array}\right.
+\]"
+7,9,principles/7_9.jpg,"\[
+f_{n}(x)=\frac{\sin n x}{\sqrt{n}} \quad(x \text { real, } n=1,2,3, \ldots)
+\]"
+7,10,principles/7_10.jpg,"$\quad f_{n}(x)=n^{2} x\left(1-x^{2}\right)^{n} \quad(0 \leq x \leq 1, n=1,2,3, \ldots)$."
+7,11,principles/7_11.jpg,"\[
+\lim _{n \rightarrow \infty} f_{n}(x)=0 \quad(0 \leq x \leq 1)
+\]"
+7,12,principles/7_12.jpg,"\[
+\left|f_{n}(x)-f(x)\right| \leq \varepsilon
+\]"
+7,13,principles/7_13.jpg,"\[
+\left|f_{n}(x)-f_{m}(x)\right| \leq \varepsilon
+\]"
+7,14,principles/7_14.jpg,"\[
+\left|f_{n}(x)-f(x)\right| \leq \varepsilon
+\]"
+7,15,principles/7_15.jpg,"\[
+\lim _{t \rightarrow x} f_{n}(t)=A_{n} \quad(n=1,2,3, \ldots)
+\]"
+7,17,principles/7_17.jpg,"\[
+\lim _{t \rightarrow x} \lim _{n \rightarrow \infty} f_{n}(t)=\lim _{n \rightarrow \infty} \lim _{t \rightarrow x} f_{n}(t) .
+\]"
+7,18,principles/7_18.jpg,"\[
+\left|f_{n}(t)-f_{m}(t)\right| \leq \varepsilon
+\]"
+7,19,principles/7_19.jpg,$\quad|f(t)-A| \leq\left|f(t)-f_{n}(t)\right|+\left|f_{n}(t)-A_{n}\right|+\left|A_{n}-A\right|$.
+7,20,principles/7_20.jpg,"\[
+\left|f(t)-f_{n}(t)\right| \leq \frac{\varepsilon}{3}
+\]"
+7,21,principles/7_21.jpg,"\[
+\left|A_{n}-A\right| \leq \frac{\varepsilon}{3} .
+\]"
+7,22,principles/7_22.jpg,"\[
+\left|f_{n}(t)-A_{n}\right| \leq \frac{\varepsilon}{3}
+\]"
+7,23,principles/7_23.jpg,"\[
+\int_{a}^{b} f d \alpha=\lim _{n \rightarrow \infty} \int_{a}^{b} f_{n} d \alpha .
+\]"
+7,24,principles/7_24.jpg,"\[
+\varepsilon_{n}=\sup \left|f_{n}(x)-f(x)\right|
+\]"
+7,25,principles/7_25.jpg,"$$
+\[
+\int_{a}^{b}\left(f_{n}-\varepsilon_{n}\right) d \alpha \leq \int_{-} f d \alpha \leq \bar{\int} f d \alpha \leq \int_{a}^{b}\left(f_{n}+\varepsilon_{n}\right) d \alpha .
+\]"
+7,26,principles/7_26.jpg,"\[
+\left|\int_{a}^{b} f d \alpha-\int_{a}^{b} f_{n} d \alpha\right| \leq \varepsilon_{n}[\alpha(b)-\alpha(a)]
+\]"
+7,27,principles/7_27.jpg,"\[
+f^{\prime}(x)=\lim _{n \rightarrow \infty} f_{n}^{\prime}(x) \quad(a \leq x \leq b)
+\]"
+7,28,principles/7_28.jpg,"$$
+\[
+\left|f_{n}\left(x_{0}\right)-f_{m}\left(x_{0}\right)\right|<\frac{\varepsilon}{2}
+\]"
+7,29,principles/7_29.jpg,"\[
+\left|f_{n}^{\prime}(t)-f_{m}^{\prime}(t)\right|<\frac{\varepsilon}{2(b-a)} \quad(a \leq t \leq b)
+\]"
+7,30,principles/7_30.jpg,$\quad\left|f_{n}(x)-f_{m}(x)-f_{n}(t)+f_{m}(t)\right| \leq \frac{|x-t| \varepsilon}{2(b-a)} \leq \frac{\varepsilon}{2}$
+7,31,principles/7_31.jpg,"$$
+\[
+\phi_{n}(t)=\frac{f_{n}(t)-f_{n}(x)}{t-x}, \quad \phi(t)=\frac{f(t)-f(x)}{t-x}
+\]"
+7,32,principles/7_32.jpg,"$$
+\[
+\lim _{t \rightarrow x} \phi_{n}(t)=f_{n}^{\prime}(x) \quad(n=1,2,3, \ldots)
+\]"
+7,33,principles/7_33.jpg,"\[
+\lim _{n \rightarrow \infty} \phi_{n}(t)=\phi(t)
+\]"
+7,34,principles/7_34.jpg,"\[
+\varphi(x)=|x| \quad(-1 \leq x \leq 1)
+\]"
+7,35,principles/7_35.jpg,"\[
+\varphi(x+2)=\varphi(x)
+\]"
+7,37,principles/7_37.jpg,"\[
+f(x)=\sum_{n=0}^{\infty}\left(\frac{3}{4}\right)^{n} \varphi\left(4^{n} x\right)
+\]"
+7,38,principles/7_38.jpg,"$$
+\[
+\delta_{m}= \pm \frac{1}{2} \cdot 4^{-m}
+\]"
+7,39,principles/7_39.jpg,"$$
+\[
+\gamma_{n}=\frac{\varphi\left(4^{n}\left(x+\delta_{m}\right)\right)-\varphi\left(4^{n} x\right)}{\delta_{m}}
+\]"
+7,40,principles/7_40.jpg,$\quad \lim _{k \rightarrow \infty}\left(\sin n_{k} x-\sin n_{k+1} x\right)^{2}=0 \quad(0 \leq x \leq 2 \pi)$.
+7,41,principles/7_41.jpg,"$$
+\[
+\lim _{k \rightarrow \infty} \int_{0}^{2 \pi}\left(\sin n_{k} x-\sin n_{k+1} x\right)^{2} d x=0
+\]"
+7,44,principles/7_44.jpg,"\[
+\left|f_{n}(x)-f_{n}(y)\right|<\varepsilon
+\]"
+7,45,principles/7_45.jpg,"$$
+\[
+K \subset V\left(x_{1}, \delta\right) \cup \cdots \cup V\left(x_{m}, \delta\right)
+\]"
+7,46,principles/7_46.jpg,"$$
+\[
+\left|g_{i}\left(x_{s}\right)-g_{j}\left(x_{s}\right)\right|<\varepsilon
+\]"
+7,47,principles/7_47.jpg,"$$
+\[
+Q_{n}(x)=c_{n}\left(1-x^{2}\right)^{n} \quad(n=1,2,3, \ldots)
+\]"
+7,48,principles/7_48.jpg,"$$
+\[
+\int_{-1}^{1} Q_{n}(x) d x=1 \quad(n=1,2,3, \ldots)
+\]"
+7,49,principles/7_49.jpg,"\[
+c_{n}<\sqrt{n}
+\]"
+7,50,principles/7_50.jpg,"\[
+Q_{n}(x) \leq \sqrt{n}\left(1-\delta^{2}\right)^{n} \quad(\delta \leq|x| \leq 1)
+\]"
+7,51,principles/7_51.jpg,"$$
+\[
+P_{n}(x)=\int_{-1}^{1} f(x+t) Q_{n}(t) d t \quad(0 \leq x \leq 1)
+\]"
+7,52,principles/7_52.jpg,"$$
+\[
+a=\sup |f(x)| \quad(x \in K)
+\]"
+7,53,principles/7_53.jpg,"\[
+\left|\sum_{i=1}^{n} c_{i} y^{i}-\right| y||<\varepsilon \quad(-a \leq y \leq a)
+\]"
+7,54,principles/7_54.jpg,"\[
+g_{x}(t)>f(t)-\varepsilon \quad(t \in K) .
+\]"
+7,55,principles/7_55.jpg,"\[
+h_{y}(x)=f(x), \quad h_{y}(y)=f(y)
+\]"
+7,56,principles/7_56.jpg,"$$
+\[
+h_{y}(t)>f(t)-\varepsilon \quad\left(t \in J_{y}\right)
+\]"
+7,57,principles/7_57.jpg,"\[
+K \subset J_{y_{1}} \cup \cdots \cup J_{y_{n}} .
+\]"
+7,58,principles/7_58.jpg,"$$
+\[
+|h(x)-f(x)|<\varepsilon \quad(x \in K)
+\]"
+7,59,principles/7_59.jpg,"$$
+\[
+g_{x}(t)<f(t)+\varepsilon \quad\left(t \in V_{x}\right)
+\]"
+7,60,principles/7_60.jpg,"$$
+\[
+K \subset V_{x_{1}} \cup \cdots \cup V_{x_{m}} .
+\]"
+7,61,principles/7_61.jpg,"$$
+\[
+h(t)>f(t)-\varepsilon \quad(t \in K)
+\]"
+7,62,principles/7_62.jpg,"$$
+\[
+h(t)<f(t)+\varepsilon \quad(t \in K)
+\]"
+8,3,principles/8_3.jpg,"\[
+\sum_{n=0}^{\infty} c_{n} x^{n}
+\]"
+8,7,principles/8_7.jpg,"\[
+f^{(k)}(0)=k ! c_{k} \quad(k=0,1,2, \ldots)
+\]"
+8,8,principles/8_8.jpg,"\[
+\lim _{x \rightarrow 1} f(x)=\sum_{n=0}^{\infty} c_{n} .
+\]"
+8,9,principles/8_9.jpg,"$$
+\[
+f(x)=(1-x) \sum_{n=0}^{\infty} s_{n} x^{n}
+\]"
+8,10,principles/8_10.jpg,$\quad f(x) \cdot g(x)=h(x) \quad(0 \leq x<1)$.
+8,11,principles/8_11.jpg,"\[
+f(x) \rightarrow A, \quad g(x) \rightarrow B, \quad h(x) \rightarrow C
+\]"
+8,12,principles/8_12.jpg,"$$
+\[
+\sum_{j=1}^{\infty}\left|a_{i j}\right|=b_{i} \quad(i=1,2,3, \ldots)
+\]"
+8,13,principles/8_13.jpg,"\[
+\sum_{i=1}^{\infty} \sum_{j=1}^{\infty} a_{i j}=\sum_{j=1}^{\infty} \sum_{i=1}^{\infty} a_{i j} .
+\]"
+8,14,principles/8_14.jpg,"\[
+f_{i}\left(x_{0}\right)=\sum_{j=1}^{\infty} a_{i j} \quad(i=1,2,3, \ldots)
+\]"
+8,15,principles/8_15.jpg,"$$
+\[
+f_{i}\left(x_{n}\right)=\sum_{j=1}^{n} a_{i j} \quad(i, n=1,2,3, \ldots)
+\]"
+8,16,principles/8_16.jpg,"\[
+g(x)=\sum_{i=1}^{\infty} f_{i}(x) \quad(x \in E)
+\]"
+8,17,principles/8_17.jpg,"$$
+\[
+f(x)=\sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n !}(x-a)^{n} \quad(|x-a|<R-|a|) .
+\]"
+8,18,principles/8_18.jpg,$\quad s_{N}(f ; x)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(t) D_{N}(x-t) d t=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(x-t) D_{N}(t) d t$
+8,19,principles/8_19.jpg,"\[
+\sum_{n=0}^{\infty}\left|c_{n}\right| \cdot(|x-a|+|a|)^{n}
+\]"
+8,20,principles/8_20.jpg,"\[
+\sum_{n=0}^{\infty} a_{n} x^{n}=\sum_{n=0}^{\infty} b_{n} x^{n} .
+\]"
+8,21,principles/8_21.jpg,"$$
+\[
+f(x)=\sum_{n=0}^{\infty} c_{n} x^{n} \quad(x \in S)
+\]"
+8,22,principles/8_22.jpg,"\[
+f(x)=\sum_{n=0}^{\infty} d_{n}\left(x-x_{0}\right)^{n} \quad\left(\left|x-x_{0}\right|<R-\left|x_{0}\right|\right)
+\]"
+8,24,principles/8_24.jpg,"$$
+\[
+g(x)=\sum_{m=0}^{\infty} d_{k+m}\left(x-x_{0}\right)^{m}
+\]"
+8,26,principles/8_26.jpg,"$\quad E(z+w)=E(z) E(w) \quad(z, w$ complex $)$"
+8,27,principles/8_27.jpg,$\quad E(z) E(-z)=E(z-z)=E(0)=1 \quad(z$ complex $)$.
+8,28,principles/8_28.jpg,"\[
+\lim _{h=0} \frac{E(z+h)-E(z)}{h}=E(z) \lim _{h=0} \frac{E(h)-1}{h}=E(z)
+\]"
+8,29,principles/8_29.jpg,"\[
+E\left(z_{1}+\cdots+z_{n}\right)=E\left(z_{1}\right) \cdots E\left(z_{n}\right) .
+\]"
+8,30,principles/8_30.jpg,"$\quad E(n)=e^{n} \quad(n=1,2,3, \ldots)$"
+8,31,principles/8_31.jpg,"$$
+\[
+[E(p)]^{m}=E(m p)=E(n)=e^{n}
+\]"
+8,32,principles/8_32.jpg,"$$
+\[
+E(p)=e^{p} \quad(p>0, p \text { rational })
+\]"
+8,33,principles/8_33.jpg,"\[
+x^{y}=\sup x^{p},
+\]"
+8,34,principles/8_34.jpg,"$e^{x}=\sup e^{p} \quad(p<x, p$ rational $)$"
+8,36,principles/8_36.jpg,"\[
+E(L(y))=y \quad(y>0)
+\]"
+8,37,principles/8_37.jpg,"\[
+L(E(x))=x \quad(x \text { real })
+\]"
+8,38,principles/8_38.jpg,"$$
+\[
+L^{\prime}(y)=\frac{1}{y} \quad(y>0)
+\]"
+8,39,principles/8_39.jpg,"\[
+L(y)=\int_{1}^{y} \frac{d x}{x}
+\]"
+8,40,principles/8_40.jpg,"$$
+\[
+L(u v)=L(u)+L(v) \quad(u>0, v>0)
+\]"
+8,41,principles/8_41.jpg,"\[
+x^{n}=E(n L(x))
+\]"
+8,42,principles/8_42.jpg,"$$
+\[
+x^{1 / m}=E\left(\frac{1}{m} L(x)\right)
+\]"
+8,43,principles/8_43.jpg,"$$
+\[
+x^{\alpha}=E(\alpha L(x))=e^{\alpha \log x}
+\]"
+8,44,principles/8_44.jpg,"$$
+\[
+\left(x^{\alpha}\right)^{\prime}=E(\alpha L(x)) \cdot \frac{\alpha}{x}=\alpha x^{\alpha-1}
+\]"
+8,45,principles/8_45.jpg,"\[
+\lim _{x \rightarrow+\infty} x^{-\alpha} \log x=0
+\]"
+8,47,principles/8_47.jpg,"$$
+\[
+E(i x)=C(x)+i S(x)
+\]"
+8,48,principles/8_48.jpg,"$$
+\[
+|E(i x)|=1 \quad(x \text { real })
+\]"
+8,49,principles/8_49.jpg,"$\quad C^{\prime}(x)=-S(x), \quad S^{\prime}(x)=C(x)$."
+8,50,principles/8_50.jpg,$\quad S(x)(y-x)<\int_{x}^{y} S(t) d t=C(x)-C(y) \leq 2$
+8,51,principles/8_51.jpg,"$$
+\[
+\pi=2 x_{0} .
+\]"
+8,52,principles/8_52.jpg,"$$
+\[
+E(\pi i)=-1, \quad E(2 \pi i)=1
+\]"
+8,53,principles/8_53.jpg,"$$
+\[
+E(z+2 \pi i)=E(z) \quad(z \text { complex })
+\]"
+8,54,principles/8_54.jpg,"$$
+\[
+\gamma(t)=E(i t) \quad(0 \leq t \leq 2 \pi)
+\]"
+8,55,principles/8_55.jpg,"$$
+\[
+\mu=\inf |P(z)| \quad(z \text { complex })
+\]"
+8,56,principles/8_56.jpg,$\quad|P(z)| \geq R^{n}\left[1-\left|a_{n-1}\right| R^{-1}-\cdots-\left|a_{0}\right| R^{-n}\right]$.
+8,57,principles/8_57.jpg,"$$
+\[
+Q(z)=1+b_{k} z^{k}+\cdots+b_{n} z^{n}, \quad b_{k} \neq 0
+\]"
+8,58,principles/8_58.jpg,"$$
+\[
+e^{i k \theta} b_{k}=-\left|b_{k}\right|
+\]"
+8,59,principles/8_59.jpg,$\quad f(x)=a_{0}+\sum_{n=1}^{N}\left(a_{n} \cos n x+b_{n} \sin n x\right) \quad(x$ real $)$
+8,61,principles/8_61.jpg,"$$
+\[
+\frac{1}{2 \pi} \int_{-\pi}^{\pi} e^{i n x} d x=\left\{\begin{array}{ll}
+1 & (\text { if } n=0) \\
+0 & (\text { if } n= \pm 1, \pm 2, \ldots)
+\end{array}\right.
+\]"
+8,62,principles/8_62.jpg,"$$
+\[
+c_{m}=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(x) e^{-i m x} d x
+\]"
+8,63,principles/8_63.jpg,"\[
+\sum_{-\infty}^{\infty} c_{n} e^{i n x} \quad(x \text { real })
+\]"
+8,64,principles/8_64.jpg,"$$
+\[
+\int_{a}^{b} \phi_{n}(x) \overline{\phi_{m}(x)} d x=0 \quad(n \neq m)
+\]"
+8,65,principles/8_65.jpg,"\[
+\int_{a}^{b}\left|\phi_{n}(x)\right|^{2} d x=1
+\]"
+8,66,principles/8_66.jpg,"\[
+c_{n}=\int_{a}^{b} f(t) \overline{\phi_{n}(t)} d t \quad(n=1,2,3, \ldots)
+\]"
+8,67,principles/8_67.jpg,"\[
+f(x) \sim \sum_{1}^{\infty} c_{n} \phi_{n}(x)
+\]"
+8,68,principles/8_68.jpg,"$$
+\[
+s_{n}(x)=\sum_{m=1}^{n} c_{m} \phi_{m}(x)
+\]"
+8,69,principles/8_69.jpg,"\[
+t_{n}(x)=\sum_{m=1}^{n} \gamma_{m} \phi_{m}(x)
+\]"
+8,70,principles/8_70.jpg,"\[
+\int_{a}^{b}\left|f-s_{n}\right|^{2} d x \leq \int_{a}^{b}\left|f-t_{n}\right|^{2} d x
+\]"
+8,71,principles/8_71.jpg,"\[
+\gamma_{m}=c_{m} \quad(m=1, \ldots, n)
+\]"
+8,72,principles/8_72.jpg,"\[
+\int_{a}^{b}\left|s_{n}(x)\right|^{2} d x=\sum_{1}^{n}\left|c_{m}\right|^{2} \leq \int_{a}^{b}|f(x)|^{2} d x
+\]"
+8,73,principles/8_73.jpg,"\[
+\sum_{n=1}^{\infty}\left|c_{n}\right|^{2} \leq \int_{a}^{b}|f(x)|^{2} d x
+\]"
+8,74,principles/8_74.jpg,"\[
+\lim _{n \rightarrow \infty} c_{n}=0
+\]"
+8,75,principles/8_75.jpg,"$$
+\[
+s_{N}(x)=s_{N}(f ; x)=\sum_{-N}^{N} c_{n} e^{i n x}
+\]"
+8,79,principles/8_79.jpg,"\[
+|f(x+t)-f(x)| \leq M|t|
+\]"
+8,80,principles/8_80.jpg,"\[
+\lim _{N \rightarrow \infty} s_{N}(f ; x)=f(x)
+\]"
+8,82,principles/8_82.jpg,"\[
+f(x) \sim \sum_{-\infty}^{\infty} c_{n} e^{i n x}, \quad g(x) \sim \sum_{-\infty}^{\infty} \gamma_{n} e^{i n x}
+\]"
+8,88,principles/8_88.jpg,"$$
+\[
+\left\|h-s_{N}(h)\right\|_{2} \leq\|h-P\|_{2}<\varepsilon
+\]"
+8,89,principles/8_89.jpg,"\[
+\left\|s_{N}(h)-s_{N}(f)\right\|_{2}=\left\|s_{N}(h-f)\right\|_{2} \leq\|h-f\|_{2}<\varepsilon .
+\]"
+8,90,principles/8_90.jpg,"\[
+\left\|f-s_{N}(f)\right\|_{2}<3 \varepsilon \quad\left(N \geq N_{0}\right)
+\]"
+8,93,principles/8_93.jpg,"$$
+\[
+\Gamma(x)=\int_{0}^{\infty} t^{x-1} e^{-t} d t
+\]"
+8,94,principles/8_94.jpg,"$$
+\[
+\varphi(x+1)=\varphi(x)+\log x \quad(0<x<\infty)
+\]"
+8,95,principles/8_95.jpg,"\[
+\Gamma(x)=\lim _{n \rightarrow \infty} \frac{n ! n^{x}}{x(x+1) \cdots(x+n)}
+\]"
+8,96,principles/8_96.jpg,"$$
+\[
+\int_{0}^{1} t^{x-1}(1-t)^{y-1} d t=\frac{\Gamma(x) \Gamma(y)}{\Gamma(x+y)}
+\]"
+8,97,principles/8_97.jpg,"$$
+\[
+B(x+1, y)=\frac{x}{x+y} B(x, y)
+\]"
+8,98,principles/8_98.jpg,"$$
+\[
+2 \int_{0}^{\pi / 2}(\sin \theta)^{2 x-1}(\cos \theta)^{2 y-1} d \theta=\frac{\Gamma(x) \Gamma(y)}{\Gamma(x+y)}
+\]"
+8,99,principles/8_99.jpg,"\[
+\Gamma\left(\frac{1}{2}\right)=\sqrt{\pi} .
+\]"
+8,100,principles/8_100.jpg,$\quad \Gamma(x)=2 \int_{0}^{\infty} s^{2 x-1} e^{-s^{2}} d s \quad(0<x<\infty)$.
+8,101,principles/8_101.jpg,"$$
+\[
+\int_{-\infty}^{\infty} e^{-s^{2}} d s=\sqrt{\pi}
+\]"
+8,102,principles/8_102.jpg,"\[
+\Gamma(x)=\frac{2^{x-1}}{\sqrt{\pi}} \Gamma\left(\frac{x}{2}\right) \Gamma\left(\frac{x+1}{2}\right)
+\]"
+8,103,principles/8_103.jpg,$\quad \lim _{x \rightarrow \infty} \frac{\Gamma(x+1)}{(x / e)^{x} \sqrt{2 \pi x}}=1$.
+8,104,principles/8_104.jpg,"$$
+\[
+\Gamma(x+1)=x^{x+1} e^{-x} \int_{-1}^{\infty}\left[(1+u) e^{-u}\right]^{x} d u
+\]"
+8,105,principles/8_105.jpg,$\quad(1+u) e^{-u}=\exp \left[-\frac{u^{2}}{2} h(u)\right]$
+8,106,principles/8_106.jpg,"\[
+h(u)=\frac{2}{u^{2}}[u-\log (1+u)]
+\]"
+8,107,principles/8_107.jpg,"$$
+\[
+\Gamma(x+1)=x^{x} e^{-x} \sqrt{2 x} \int_{-\infty}^{\infty} \psi_{x}(s) d s
+\]"
+9,1,principles/9_1.jpg,"\[
+(\alpha-\beta)|\mathbf{x}| \leq|B \mathbf{x}| \quad\left(\mathbf{x} \in R^{n}\right)
+\]"
+9,2,principles/9_2.jpg,"\[
+(\alpha-\beta)\left|B^{-1} \mathbf{y}\right| \leq\left|B B^{-1} \mathbf{y}\right|=|\mathbf{y}| \quad\left(\mathbf{y} \in R^{n}\right)
+\]"
+9,3,principles/9_3.jpg,"\[
+A \mathbf{x}_{j}=\sum_{i=1}^{m} a_{i j} \mathbf{y}_{i} \quad(1 \leq j \leq n) .
+\]"
+9,4,principles/9_4.jpg,"\[
+A \mathbf{x}=\sum_{i=1}^{m}\left(\sum_{j=1}^{n} a_{i j} c_{j}\right) \mathbf{y}_{i}
+\]"
+9,5,principles/9_5.jpg,"\[
+c_{k j}=\sum_{i} b_{k i} a_{i j} \quad(1 \leq k \leq p, 1 \leq j \leq n) .
+\]"
+9,7,principles/9_7.jpg,"\[
+\lim _{h \rightarrow 0} \frac{f(x+h)-f(x)}{h}
+\]"
+9,8,principles/9_8.jpg,"$$
+\[
+f(x+h)-f(x)=f^{\prime}(x) h+r(h)
+\]"
+9,9,principles/9_9.jpg,"\[
+\lim _{h \rightarrow 0} \frac{r(h)}{h}=0 .
+\]"
+9,10,principles/9_10.jpg,"\[
+\lim _{h \rightarrow 0}\left\{\frac{\mathbf{f}(x+h)-\mathbf{f}(x)}{h}-\mathbf{y}\right\}=0
+\]"
+9,11,principles/9_11.jpg,"$$
+\[
+\mathbf{f}(x+h)-\mathbf{f}(x)=h \mathbf{y}+\mathbf{r}(h)
+\]"
+9,12,principles/9_12.jpg,"\[
+\lim _{h \rightarrow 0} \frac{f(x+h)-\mathbf{f}(x)-\mathbf{f}^{\prime}(x) h}{h}=0
+\]"
+9,13,principles/9_13.jpg,"\[
+\lim _{h \rightarrow 0} \frac{\left|\mathbf{f}(x+h)-\mathbf{f}(x)-\mathbf{f}^{\prime}(x) h\right|}{|h|}=0
+\]"
+9,14,principles/9_14.jpg,"\[
+\lim _{\mathbf{h} \rightarrow 0} \frac{|\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-A \mathbf{h}|}{|\mathbf{h}|}=0
+\]"
+9,15,principles/9_15.jpg,"\[
+\mathbf{f}^{\prime}(\mathbf{x})=A
+\]"
+9,16,principles/9_16.jpg,"\[
+\frac{\mid B(t \mathbf{h})}{|t \mathbf{h}|} \rightarrow 0 \quad \text { as } \quad t \rightarrow 0
+\]"
+9,17,principles/9_17.jpg,"$$
+\[
+\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})=\mathbf{f}^{\prime}(\mathbf{x}) \mathbf{h}+\mathbf{r}(\mathbf{h})
+\]"
+9,19,principles/9_19.jpg,"\[
+A^{\prime}(\mathbf{x})=A .
+\]"
+9,20,principles/9_20.jpg,"$$
+\[
+A(\mathbf{x}+\mathbf{h})-A \mathbf{x}=A \mathbf{h}
+\]"
+9,21,principles/9_21.jpg,"$$
+\[
+F^{\prime}\left(x_{0}\right)=g^{\prime}\left(f\left(x_{0}\right)\right) f^{\prime}\left(x_{0}\right)
+\]"
+9,22,principles/9_22.jpg,"$$
+\[
+|\mathbf{u}(\mathbf{h})|=\varepsilon(\mathbf{h})|\mathbf{h}|, \quad|\mathbf{v}(\mathbf{k})|=\eta(\mathbf{k})|\mathbf{k}|
+\]"
+9,23,principles/9_23.jpg,"$$
+\[
+|\mathbf{k}|=|A \mathbf{h}+\mathbf{u}(\mathbf{h})| \leq[\|A\|+\varepsilon(\mathbf{h})]|\mathbf{h}|,
+\]"
+9,24,principles/9_24.jpg,"\[
+\mathbf{f}(\mathbf{x})=\sum_{i=1}^{m} f_{i}(\mathbf{x}) \mathbf{u}_{i} \quad(\mathbf{x} \in E)
+\]"
+9,26,principles/9_26.jpg,"\[
+\frac{\partial f_{i}}{\partial x_{j}}
+\]"
+9,27,principles/9_27.jpg,$\quad \mathbf{f}^{\prime}(\mathbf{x}) \mathbf{e}_{j}=\sum_{i=1}^{m}\left(D_{j} f_{i}\right)(\mathbf{x}) \mathbf{u}_{i} \quad(1 \leq j \leq n)$.
+9,28,principles/9_28.jpg,"$$
+\[
+\lim _{t \rightarrow 0} \frac{\mathbf{f}\left(\mathbf{x}+t \mathbf{e}_{j}\right)-\mathbf{f}(\mathbf{x})}{t}=\mathbf{f}^{\prime}(\mathbf{x}) \mathbf{e}_{j}
+\]"
+9,29,principles/9_29.jpg,"\[
+\lim _{t \rightarrow 0} \sum_{i=1}^{m} \frac{f_{i}\left(\mathbf{x}+t \mathbf{e}_{j}\right)-f_{i}(\mathbf{x})}{t} \mathbf{u}_{i}=\mathbf{f}^{\prime}(\mathbf{x}) \mathbf{e}_{j}
+\]"
+9,30,principles/9_30.jpg,"\[
+\mathbf{f}^{\prime}(\mathbf{x}) \mathbf{h}=\sum_{i=1}^{m}\left\{\sum_{j=1}^{n}\left(D_{j} f_{i}\right)(\mathbf{x}) h_{j}\right\} \mathbf{u}_{i}
+\]"
+9,32,principles/9_32.jpg,"\[
+g^{\prime}(t)=f^{\prime}(\gamma(t)) \gamma^{\prime}(t) \quad(a<t<b)
+\]"
+9,34,principles/9_34.jpg,"\[
+(\nabla f)(\mathbf{x})=\sum_{i=1}^{n}\left(D_{i} f\right)(\mathbf{x}) \mathbf{e}_{i}
+\]"
+9,35,principles/9_35.jpg,"\[
+\gamma^{\prime}(t)=\sum_{i=1}^{n} \gamma_{i}^{\prime}(t) \mathbf{e}_{i}
+\]"
+9,36,principles/9_36.jpg,"$$
+\[
+g^{\prime}(t)=(\nabla f)(\gamma(t)) \cdot \gamma^{\prime}(t)
+\]"
+9,37,principles/9_37.jpg,"\[
+\gamma(t)=\mathbf{x}+t \mathbf{u} \quad(-\infty<t<\infty)
+\]"
+9,39,principles/9_39.jpg,"\[
+\lim _{t \rightarrow 0} \frac{f(\mathbf{x}+t \mathbf{u})-f(\mathbf{x})}{t}=(\nabla f)(\mathbf{x}) \cdot \mathbf{u}
+\]"
+9,40,principles/9_40.jpg,"$$
+\[
+\left(D_{\mathbf{u}} f\right)(\mathbf{x})=\sum_{i=1}^{n}\left(D_{i} f\right)(\mathbf{x}) u_{i}
+\]"
+9,41,principles/9_41.jpg,"$$
+\[
+\left|\left(D_{j} f\right)(\mathbf{y})-\left(D_{j} f\right)(\mathbf{x})\right|<\frac{\varepsilon}{n} \quad(\mathbf{y} \in S, 1 \leq j \leq n)
+\]"
+9,42,principles/9_42.jpg,"$$
+\[
+f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})=\sum_{j=1}^{n}\left[f\left(\mathbf{x}+\mathbf{v}_{j}\right)-f\left(\mathbf{x}+\mathbf{v}_{j-1}\right)\right]
+\]"
+9,43,principles/9_43.jpg,"\[
+d(\varphi(x), \varphi(y)) \leq c d(x, y)
+\]"
+9,44,principles/9_44.jpg,"\[
+x_{n+1}=\varphi\left(x_{n}\right) \quad(n=0,1,2, \ldots)
+\]"
+9,45,principles/9_45.jpg,"$\quad d\left(x_{n+1}, x_{n}\right) \leq c^{n} d\left(x_{1}, x_{0}\right) \quad(n=0,1,2, \ldots)$."
+9,46,principles/9_46.jpg,"\[
+2 \lambda\left\|A^{-1}\right\|=1 .
+\]"
+9,47,principles/9_47.jpg,"\[
+\left\|\mathbf{f}^{\prime}(\mathbf{x})-A\right\|<\lambda \quad(\mathbf{x} \in U)
+\]"
+9,48,principles/9_48.jpg,"$$
+\[
+\varphi(\mathbf{x})=\mathbf{x}+A^{-1}(\mathbf{y}-\mathbf{f}(\mathbf{x})) \quad(\mathbf{x} \in E)
+\]"
+9,49,principles/9_49.jpg,"$$
+\[
+\left\|\varphi^{\prime}(\mathbf{x})\right\|<\frac{1}{2} \quad(\mathbf{x} \in U) .
+\]"
+9,50,principles/9_50.jpg,"$\quad\left|\varphi\left(\mathbf{x}_{1}\right)-\varphi\left(\mathbf{x}_{2}\right)\right| \leq \frac{1}{2}\left|\mathbf{x}_{1}-\mathbf{x}_{2}\right| \quad\left(\mathbf{x}_{1}, \mathbf{x}_{2} \in U\right)$,"
+9,51,principles/9_51.jpg,"\[
+|\mathbf{h}| \leq 2\left\|A^{-1}\right\||\mathbf{k}|=\lambda^{-1}|\mathbf{k}|
+\]"
+9,52,principles/9_52.jpg,"$$
+\[
+\mathbf{g}^{\prime}(\mathbf{y})=\left\{\mathbf{f}^{\prime}(\mathbf{g}(\mathbf{y}))\right\}^{-1} \quad(\mathbf{y} \in V)
+\]"
+9,53,principles/9_53.jpg,"\[
+A_{x} \mathbf{h}=A(\mathbf{h}, \mathbf{0}), \quad A_{y} \mathbf{k}=A(\mathbf{0}, \mathbf{k})
+\]"
+9,54,principles/9_54.jpg,"$$
+\[
+A(\mathbf{h}, \mathbf{k})=A_{x} \mathbf{h}+A_{y} \mathbf{k}
+\]"
+9,55,principles/9_55.jpg,"\[
+\mathbf{h}=-\left(A_{x}\right)^{-1} A_{y} \mathbf{k}
+\]"
+9,56,principles/9_56.jpg,"$(\mathbf{x}, \mathbf{y}) \in U \quad$ and $\quad \mathbf{f}(\mathbf{x}, \mathbf{y})=0$."
+9,58,principles/9_58.jpg,"$$
+\[
+\mathbf{g}^{\prime}(\mathbf{b})=-\left(A_{x}\right)^{-1} A_{y} .
+\]"
+9,60,principles/9_60.jpg,"$\quad \mathbf{F}(\mathbf{x}, \mathbf{y})=(\mathbf{f}(\mathbf{x}, \mathbf{y}), \mathbf{y}) \quad((\mathbf{x}, \mathbf{y}) \in E)$."
+9,61,principles/9_61.jpg,"$$
+\[
+\mathbf{F}(\mathbf{g}(\mathbf{y}), \mathbf{y})=(\mathbf{0}, \mathbf{y}) \quad(\mathbf{y} \in W)
+\]"
+9,62,principles/9_62.jpg,"$(\mathbf{g}(\mathbf{y}), \mathbf{y})=\mathbf{G}(\mathbf{0}, \mathbf{y}) \quad(\mathbf{y} \in W)$."
+9,63,principles/9_63.jpg,"$\quad \Phi^{\prime}(\mathbf{y}) \mathbf{k}=\left(\mathbf{g}^{\prime}(\mathbf{y}) \mathbf{k}, \mathbf{k}\right) \quad\left(\mathbf{y} \in W, \mathbf{k} \in R^{m}\right)$."
+9,64,principles/9_64.jpg,"\[
+A \Phi^{\prime}(\mathbf{b})=0 .
+\]"
+9,65,principles/9_65.jpg,"$$
+\[
+A_{x} \mathbf{g}^{\prime}(\mathbf{b})+A_{y}=0 .
+\]"
+9,66,principles/9_66.jpg,$\quad \mathbf{F}(\mathbf{H}(\mathbf{x}))=A \mathbf{x}+\varphi(A \mathbf{x}) \quad(\mathbf{x} \in V)$
+9,67,principles/9_67.jpg,"\[
+S\left(c_{1} \mathbf{y}_{1}+\cdots+c_{r} \mathbf{y}_{r}\right)=c_{1} \mathbf{z}_{1}+\cdots+c_{r} \mathbf{z}_{r}
+\]"
+9,68,principles/9_68.jpg,"\[
+A S \mathbf{y}=\mathbf{y} \quad\left(\mathbf{y} \in Y_{1}\right)
+\]"
+9,69,principles/9_69.jpg,$\mathbf{G}(\mathbf{x})=\mathbf{x}+S P[\mathbf{F}(\mathbf{x})-A \mathbf{x}] \quad(\mathbf{x} \in E)$.
+9,70,principles/9_70.jpg,$\quad A \mathbf{G}(\mathbf{x})=P \mathbf{F}(\mathbf{x}) \quad(\mathbf{x} \in E)$
+9,71,principles/9_71.jpg,$\quad P \mathbf{F}(\mathbf{H}(\mathbf{x}))=A \mathbf{x} \quad(\mathbf{x} \in V)$.
+9,72,principles/9_72.jpg,"\[
+\psi(\mathbf{x})=\mathbf{F}(\mathbf{H}(\mathbf{x}))-A \mathbf{x} \quad(\mathbf{x} \in V)
+\]"
+9,73,principles/9_73.jpg,"$$
+\[
+\varphi(A \mathbf{x})=\psi(\mathbf{x}) \quad(\mathbf{x} \in V)
+\]"
+9,74,principles/9_74.jpg,"\[
+\psi\left(\mathbf{x}_{1}\right)=\psi\left(\mathbf{x}_{2}\right)
+\]"
+9,75,principles/9_75.jpg,$\quad \operatorname{rank} \Phi^{\prime}(\mathbf{x})=\operatorname{rank} \mathbf{F}^{\prime}(\mathbf{H}(\mathbf{x})) \mathbf{H}^{\prime}(\mathbf{x})=r \quad(\mathbf{x} \in V)$.
+9,76,principles/9_76.jpg,"\[
+P \Phi^{\prime}(\mathbf{x})=A .
+\]"
+9,77,principles/9_77.jpg,$\quad \mathbf{g}(t)=\psi\left(\mathbf{x}_{1}+t \mathbf{h}\right) \quad(0 \leq t \leq 1)$
+9,78,principles/9_78.jpg,"$$
+\[
+\mathbf{g}^{\prime}(t)=\psi^{\prime}\left(\mathbf{x}_{1}+t \mathbf{h}\right) \mathbf{h}=\mathbf{0} \quad(0 \leq t \leq 1)
+\]"
+9,79,principles/9_79.jpg,"$$
+\[
+\mathbf{x}=\mathbf{x}_{0}+S\left(\mathbf{y}-\mathbf{y}_{0}\right)
+\]"
+9,80,principles/9_80.jpg,$\quad \varphi(\mathbf{y})=\psi\left(\mathbf{x}_{0}-S \mathbf{y}_{0}+S \mathbf{y}\right) \quad(\mathbf{y} \in W)$.
+9,81,principles/9_81.jpg,"$$
+\[
+\mathbf{y}=P \mathbf{y}+\varphi(P \mathbf{y}) \quad(\mathbf{y} \in \mathbf{F}(U))
+\]"
+9,82,principles/9_82.jpg,"\[
+s\left(j_{1}, \ldots, j_{n}\right)=\prod_{p<q} \operatorname{sgn}\left(j_{q}-j_{p}\right)
+\]"
+9,83,principles/9_83.jpg,"$\quad \operatorname{det}[A]=\sum s\left(j_{1}, \ldots, j_{n}\right) a\left(1, j_{1}\right) a\left(2, j_{2}\right) \cdots a\left(n, j_{n}\right)$."
+9,84,principles/9_84.jpg,"$$
+\[
+\mathbf{x}_{j}=\sum_{i=1}^{n} a(i, j) \mathbf{e}_{i} \quad(1 \leq j \leq n)
+\]"
+9,85,principles/9_85.jpg,"\[
+\Delta_{B}\left(\mathbf{x}_{1}, \ldots, \mathbf{x}_{n}\right)=\Delta_{B}[A]=\operatorname{det}([B][A])
+\]"
+9,86,principles/9_86.jpg,"\[
+\Delta_{B}\left(\mathbf{x}_{1}, \ldots, \mathbf{x}_{n}\right)=\operatorname{det}\left(B \mathbf{x}_{1}, \ldots, B \mathbf{x}_{n}\right)
+\]"
+9,87,principles/9_87.jpg,"$\quad \Delta_{B}[A]=\sum a\left(i_{1}, 1\right) a\left(i_{2}, 2\right) \cdots a\left(i_{n}, n\right) \Delta_{B}\left(\mathbf{e}_{i_{1}}, \ldots, \mathbf{e}_{i_{n}}\right)$,"
+9,88,principles/9_88.jpg,"$$
+\[
+\Delta_{B}\left(\mathbf{e}_{i_{1}}, \ldots, \mathbf{e}_{i_{n}}\right)=t\left(i_{1}, \ldots, i_{n}\right) \Delta_{B}\left(\mathbf{e}_{1}, \ldots, \mathbf{e}_{n}\right)
+\]"
+9,89,principles/9_89.jpg,"$$
+\[
+\Delta_{B}\left(\mathbf{e}_{1}, \ldots, \mathbf{e}_{n}\right)=\operatorname{det}[B]
+\]"
+9,90,principles/9_90.jpg,"\[
+\mathbf{x}_{k}+\sum_{j \neq k} c_{j} \mathbf{x}_{j}=0
+\]"
+9,91,principles/9_91.jpg,"$$
+\[
+[B][A]_{U}=[A][B]
+\]"
+9,92,principles/9_92.jpg,"$$
+\[
+\operatorname{det}[A]_{U}=\operatorname{det}[A]
+\]"
+9,93,principles/9_93.jpg,"\[
+J_{\mathbf{f}}(\mathbf{x})=\operatorname{det} \mathbf{f}^{\prime}(\mathbf{x})
+\]"
+9,95,principles/9_95.jpg,"$$
+\[
+\Delta(f, Q)=h k\left(D_{21} f\right)(x, y)
+\]"
+9,96,principles/9_96.jpg,"$$
+\[
+\left(D_{12} f\right)(a, b)=\left(D_{21} f\right)(a, b)
+\]"
+9,98,principles/9_98.jpg,"$$
+\[
+\frac{d}{d t} \int_{a}^{b} \varphi(x, t) d x=\int_{a}^{b} \frac{\partial \varphi}{\partial t}(x, t) d x
+\]"
+9,99,principles/9_99.jpg,"\[
+\varphi^{t}(x)=\varphi(x, t)
+\]"
+9,100,principles/9_100.jpg,"\[
+f(t)=\int_{a}^{b} \varphi(x, t) d \alpha(x) \quad(c \leq t \leq d)
+\]"
+9,101,principles/9_101.jpg,"\[
+f^{\prime}(s)=\int_{a}^{b}\left(D_{2} \varphi\right)(x, s) d \alpha(x)
+\]"
+9,102,principles/9_102.jpg,"$\quad\left|\psi(x, t)-\left(D_{2} \varphi\right)(x, s)\right|<\varepsilon \quad(a \leq x \leq b, \quad 0<|t-s|<\delta)$."
+9,103,principles/9_103.jpg,"\[
+\frac{f(t)-f(s)}{t-s}=\int_{a}^{b} \psi(x, t) d \alpha(x) .
+\]"
+9,105,principles/9_105.jpg,"$$
+\[
+g(t)=-\int_{-\infty}^{\infty} x e^{-x^{2}} \sin (x t) d x
+\]"
+9,106,principles/9_106.jpg,$\quad f^{\prime}(t)=g(t) \quad(-\infty<t<\infty)$.
+9,107,principles/9_107.jpg,$\frac{\cos (\alpha+\beta)-\cos \alpha}{\beta}+\sin \alpha=\frac{1}{\beta} \int_{\alpha}^{\alpha+\beta}(\sin \alpha-\sin t) d t$.
+9,108,principles/9_108.jpg,$\quad\left|\frac{\cos (\alpha+\beta)-\cos \alpha}{\beta}+\sin \alpha\right| \leq|\beta|$
+9,109,principles/9_109.jpg,$\quad f(t)=2 \int_{-\infty}^{\infty} x e^{-x^{2}} \frac{\sin (x t)}{t} d x$
+9,110,principles/9_110.jpg,"\[
+2 f^{\prime}(t)+t f(t)=0
+\]"
+9,111,principles/9_111.jpg,"$$
+\[
+f(t)=\sqrt{\pi} \exp \left(-\frac{t^{2}}{4}\right) .
+\]"
+10,1,principles/10_1.jpg,"\[
+a_{i} \leq x_{i} \leq b_{i} \quad(i=1, \ldots, k)
+\]"
+10,2,principles/10_2.jpg,"\[
+\int_{I^{k}} f(\mathbf{x}) d \mathbf{x} \quad \text { or } \quad \int_{I^{k}} f \text {. }
+\]"
+10,4,principles/10_4.jpg,"\[
+\int_{Q^{k}} f=\int_{I^{k}} f .
+\]"
+10,7,principles/10_7.jpg,"$\quad\left|F_{k-1}(\mathbf{y})-f_{k-1}(\mathbf{y})\right| \leq \delta\|f\| \quad\left(\mathbf{y} \in I^{k-1}\right)$,"
+10,8,principles/10_8.jpg,"$$
+\[
+\left|\int_{I^{k}} F(\mathbf{x}) d \mathbf{x}-\int_{I^{k}} f(\mathbf{x}) d \mathbf{x}\right| \leq \delta\|f\| .
+\]"
+10,9,principles/10_9.jpg,"\[
+\mathbf{G}(\mathbf{x})=\sum_{i \neq m} x_{i} \mathbf{e}_{i}+g(\mathbf{x}) \mathbf{e}_{m} \quad(\mathbf{x} \in E)
+\]"
+10,10,principles/10_10.jpg,"\[
+\mathbf{G}(\mathbf{x})=\mathbf{x}+\left[g(\mathbf{x})-x_{m}\right] \mathbf{e}_{m} .
+\]"
+10,11,principles/10_11.jpg,"\[
+\left(D_{1} g\right)(\mathbf{a}), \ldots,\left(D_{m} g\right)(\mathbf{a}), \ldots,\left(D_{n} g\right)(\mathbf{a})
+\]"
+10,12,principles/10_12.jpg,"\[
+J_{\mathbf{G}}(\mathbf{a})=\operatorname{det}\left[\mathbf{G}^{\prime}(\mathbf{a})\right]=\left(D_{m} g\right)(\mathbf{a})
+\]"
+10,13,principles/10_13.jpg,$\quad B\left(x_{1} \mathbf{e}_{1}+x_{2} \mathbf{e}_{2}+x_{3} \mathbf{e}_{3}+x_{4} \mathbf{e}_{4}\right)=x_{1} \mathbf{e}_{1}+x_{2} \mathbf{e}_{4}+x_{3} \mathbf{e}_{3}+x_{4} \mathbf{e}_{2}$
+10,14,principles/10_14.jpg,$\quad B\left(x_{1} \mathbf{e}_{1}+x_{2} \mathbf{e}_{2}+x_{3} \mathbf{e}_{3}+x_{4} \mathbf{e}_{4}\right)=x_{1} \mathbf{e}_{1}+x_{4} \mathbf{e}_{2}+x_{3} \mathbf{e}_{3}+x_{2} \mathbf{e}_{4}$
+10,15,principles/10_15.jpg,"$$
+\[
+P_{m} \mathbf{x}=x_{1} \mathbf{e}_{1}+\cdots+x_{m} \mathbf{e}_{m}
+\]"
+10,16,principles/10_16.jpg,"\[
+\mathbf{F}(\mathbf{x})=B_{1} \cdots B_{n-1} \mathbf{G}_{n} \circ \cdots \circ \mathbf{G}_{1}(\mathbf{x})
+\]"
+10,17,principles/10_17.jpg,"\[
+P_{m-1} \mathbf{F}_{m}(\mathbf{x})=P_{m-1} \mathbf{x} \quad\left(\mathbf{x} \in V_{m}\right) .
+\]"
+10,18,principles/10_18.jpg,"$$
+\[
+\mathbf{F}_{m}(\mathbf{x})=P_{m-1} \mathbf{x}+\sum_{i=m}^{n} \alpha_{i}(\mathbf{x}) \mathbf{e}_{i}
+\]"
+10,19,principles/10_19.jpg,"\[
+\mathbf{F}_{m}^{\prime}(\mathbf{0}) \mathbf{e}_{m}=\sum_{i=m}^{n}\left(D_{m} \alpha_{l}\right)(\mathbf{0}) \mathbf{e}_{i}
+\]"
+10,20,principles/10_20.jpg,$\mathbf{G}_{m}(\mathbf{x})=\mathbf{x}+\left[\alpha_{k}(\mathbf{x})-x_{m}\right] \mathbf{e}_{m} \quad\left(\mathbf{x} \in V_{m}\right)$.
+10,21,principles/10_21.jpg,"$$
+\[
+\mathbf{F}_{m+1}(\mathbf{y})=B_{m} \mathbf{F}_{m} \circ \mathbf{G}_{m}^{-1}(\mathbf{y}) \quad\left(\mathbf{y} \in V_{m+1}\right)
+\]"
+10,22,principles/10_22.jpg,$\quad P_{m} \mathbf{F}_{m+1}\left(\mathbf{G}_{m}(\mathbf{x})\right)=P_{m} B_{m} \mathbf{F}_{m}(\mathbf{x})$
+10,23,principles/10_23.jpg,$\quad P_{m} \mathbf{F}_{m+1}(\mathbf{y})=P_{m} \mathbf{y} \quad\left(\mathbf{y} \in V_{m+1}\right)$
+10,24,principles/10_24.jpg,$\quad \mathbf{F}_{m}(\mathbf{x})=B_{m} \mathbf{F}_{m+1}\left(\mathbf{G}_{m}(\mathbf{x})\right) \quad\left(\mathbf{x} \in U_{m}\right)$
+10,25,principles/10_25.jpg,"\[
+f=\sum_{i=1}^{s} \psi_{i} f
+\]"
+10,26,principles/10_26.jpg,"\[
+\overline{B(\mathbf{x})} \subset W(\mathbf{x}) \subset \overline{W(\mathbf{x})} \subset V_{\alpha(\mathbf{x})}
+\]"
+10,27,principles/10_27.jpg,"$$
+\[
+K \subset B\left(\mathbf{x}_{1}\right) \cup \cdots \cup B\left(\mathbf{x}_{s}\right)
+\]"
+10,28,principles/10_28.jpg,"\[
+\psi_{i+1}=\left(1-\varphi_{1}\right) \cdots\left(1-\varphi_{i}\right) \varphi_{i+1}
+\]"
+10,29,principles/10_29.jpg,"$$
+\[
+\psi_{1}+\cdots+\psi_{i}=1-\left(1-\varphi_{1}\right) \cdots\left(1-\varphi_{i}\right)
+\]"
+10,31,principles/10_31.jpg,"\[
+\int_{R^{k}} f(\mathbf{y}) d \mathbf{y}=\int_{R^{k}} f(T(\mathbf{x}))\left|J_{T}(\mathbf{x})\right| d \mathbf{x} .
+\]"
+10,32,principles/10_32.jpg,"$$
+\[
+\int_{R^{1}} f(y) d y=\int_{R^{1}} f(T(x)) T^{\prime}(x) d x
+\]"
+10,33,principles/10_33.jpg,"$\quad T(\mathbf{x})=T(\mathbf{a})+B_{1} \cdots B_{k-1} \mathbf{G}_{k} \circ \mathbf{G}_{k-1} \circ \cdots \circ \mathbf{G}_{1}(\mathbf{x}-\mathbf{a})$,"
+10,34,principles/10_34.jpg,"\[
+i_{1}, \ldots, i_{p} ; j_{1}, \ldots, j_{q}
+\]"
+10,36,principles/10_36.jpg,"\[
+\int_{\Phi} d x \wedge d y \wedge d z=\int_{D} J_{\Phi}=\frac{4 \pi}{3}
+\]"
+10,37,principles/10_37.jpg,"\[
+\int_{\Phi} c \omega=c \int_{\Phi} \omega
+\]"
+10,38,principles/10_38.jpg,"\[
+\int_{\Phi} \omega=\int_{\Phi} \omega_{1}+\int_{\Phi} \omega_{2}
+\]"
+10,39,principles/10_39.jpg,"\[
+\int_{\Phi}(-\omega)=-\int_{\Phi} d \omega .
+\]"
+10,42,principles/10_42.jpg,"$$
+\[
+d x_{i} \wedge d x_{j}=-d x_{j} \wedge d x_{i}
+\]"
+10,43,principles/10_43.jpg,"$$
+\[
+d x_{i} \wedge d x_{i}=0 \quad(i=1, \ldots, n)
+\]"
+10,44,principles/10_44.jpg,"\[
+d x_{I}=d x_{i_{1}} \wedge \cdots \wedge d x_{i_{k}}
+\]"
+10,45,principles/10_45.jpg,"\[
+d x_{j_{1}} \wedge \cdots \wedge d x_{j_{k}}=\varepsilon\left(j_{1}, \ldots, j_{k}\right) d x_{J}
+\]"
+10,46,principles/10_46.jpg,"$$
+\[
+\varepsilon\left(j_{1}, \ldots, j_{k}\right)=s\left(j_{1}, \ldots, j_{k}\right)
+\]"
+10,47,principles/10_47.jpg,"\[
+\omega=\sum_{I} b_{I}(\mathbf{x}) d x_{I}
+\]"
+10,48,principles/10_48.jpg,"\[
+\omega=\sum_{I} b_{I}(\mathbf{x}) d x_{I}
+\]"
+10,49,principles/10_49.jpg,"$$
+\[
+\Phi(\mathbf{u})=\mathbf{v}+\sum_{r=1}^{k} u_{r} \mathbf{e}_{j_{r}} \quad(\mathbf{u} \in D)
+\]"
+10,51,principles/10_51.jpg,"\[
+I=\left\{i_{1}, \ldots, i_{p}\right\}, \quad J=\left\{j_{1}, \ldots, j_{q}\right\}
+\]"
+10,52,principles/10_52.jpg,$\quad d x_{I} \wedge d x_{J}=d x_{i_{1}} \wedge \cdots \wedge d x_{i_{p}} \wedge d x_{j_{1}} \wedge \cdots \wedge d x_{j_{q}}$.
+10,53,principles/10_53.jpg,"\[
+d x_{I} \wedge d x_{J}=(-1)^{\alpha} d x_{[I, J]}
+\]"
+10,55,principles/10_55.jpg,$\quad\left(d x_{I} \wedge d x_{J}\right) \wedge d x_{K}=d x_{I} \wedge\left(d x_{J} \wedge d x_{K}\right)$
+10,56,principles/10_56.jpg,"$\quad \omega=\sum_{I} b_{I}(\mathbf{x}) d x_{I}, \quad \lambda=\sum_{J} c_{J}(\mathbf{x}) d x_{J}$"
+10,57,principles/10_57.jpg,"\[
+\omega \wedge \lambda=\sum_{I, J} b_{I}(\mathbf{x}) c_{J}(\mathbf{x}) d x_{I} \wedge d x_{J}
+\]"
+10,58,principles/10_58.jpg,"$$
+\[
+(\omega \wedge \lambda) \wedge \sigma=\omega \wedge(\lambda \wedge \sigma)
+\]"
+10,59,principles/10_59.jpg,"$$
+\[
+d f=\sum_{i=1}^{n}\left(D_{i} f\right)(\mathbf{x}) d x_{i}
+\]"
+10,60,principles/10_60.jpg,"\[
+d \omega=\sum_{I}\left(d b_{I}\right) \wedge d x_{I}
+\]"
+10,61,principles/10_61.jpg,"$$
+\[
+\int_{\gamma} d f=\int_{0}^{1} \sum_{i=1}^{n}\left(D_{i} f\right)(\gamma(t)) \gamma_{i}^{\prime}(t) d t
+\]"
+10,62,principles/10_62.jpg,"$$
+\[
+\int_{\gamma} d f=f(\gamma(1))-f(\gamma(0))
+\]"
+10,63,principles/10_63.jpg,"$$
+\[
+d(\omega \wedge \lambda)=(d \omega) \wedge \lambda+(-1)^{k} \omega \wedge d \lambda
+\]"
+10,64,principles/10_64.jpg,"$$
+\[
+\omega=f d x_{I}, \quad \lambda=g d x_{J}
+\]"
+10,65,principles/10_65.jpg,"\[
+\omega=\sum_{I} b_{I}(\mathbf{y}) d y_{I}
+\]"
+10,66,principles/10_66.jpg,"\[
+d t_{i}=\sum_{j=1}^{n}\left(D_{j} t_{i}\right)(\mathbf{x}) d x_{j} \quad(1 \leq i \leq m)
+\]"
+10,67,principles/10_67.jpg,"\[
+\omega_{T}=\sum_{I} b_{I}(T(\mathbf{x})) d t_{i_{l}} \wedge \cdots \wedge d t_{i_{k}}
+\]"
+10,68,principles/10_68.jpg,$\quad\left(d y_{i_{1}} \wedge \cdots \wedge d y_{i_{r}}\right)_{T}=d t_{i_{1}} \wedge \cdots \wedge d t_{i_{r}}$
+10,69,principles/10_69.jpg,"\[
+d\left(f_{T}\right)=\sum_{j}\left(D_{j} f_{T}\right)(\mathbf{x}) d x_{j}
+\]"
+10,70,principles/10_70.jpg,"\[
+d\left(\left(d y_{I}\right)_{T}\right)=0
+\]"
+10,71,principles/10_71.jpg,"\[
+\left(\omega_{S}\right)_{T}=\omega_{S T}
+\]"
+10,73,principles/10_73.jpg,"\[
+\mathbf{f}(\mathbf{x})=\mathbf{f}(\mathbf{0})+A \mathbf{x}
+\]"
+10,74,principles/10_74.jpg,"\[
+\mathbf{u}=\sum_{i=1}^{k} \alpha_{i} \mathbf{e}_{i}
+\]"
+10,75,principles/10_75.jpg,"\[
+\sigma=\left[\mathbf{p}_{0}, \mathbf{p}_{1}, \ldots, \mathbf{p}_{k}\right]
+\]"
+10,76,principles/10_76.jpg,"\[
+\sigma\left(\alpha_{1} \mathbf{e}_{1}+\cdots+\alpha_{k} \mathbf{e}_{k}\right)=\mathbf{p}_{0}+\sum_{i=1}^{k} \alpha_{i}\left(\mathbf{p}_{i}-\mathbf{p}_{0}\right)
+\]"
+10,77,principles/10_77.jpg,"$\quad \sigma(0)=\mathbf{p}_{0}, \quad \sigma\left(\mathbf{e}_{i}\right)=\mathbf{p}_{i} \quad($ for $1 \leq i \leq k)$,"
+10,78,principles/10_78.jpg,"$$
+\[
+\sigma(\mathbf{u})=\mathbf{p}_{0}+A \mathbf{u} \quad\left(\mathbf{u} \in Q^{k}\right)
+\]"
+10,79,principles/10_79.jpg,"\[
+\bar{\sigma}=\left[p_{i_{0}}, p_{i_{1}}, \ldots, p_{i_{k}}\right]
+\]"
+10,80,principles/10_80.jpg,"$$
+\[
+\bar{\sigma}=s\left(i_{0}, i_{1}, \ldots, i_{k}\right) \sigma
+\]"
+10,81,principles/10_81.jpg,"\[
+\int_{\bar{\sigma}} \omega=\varepsilon \int_{\sigma} \omega
+\]"
+10,82,principles/10_82.jpg,"$$
+\[
+\int_{\Gamma} \omega=\sum_{i=1}^{r} \int_{\sigma_{t}} \omega .
+\]"
+10,83,principles/10_83.jpg,"$$
+\[
+\Gamma=\sigma_{1}+\cdots+\sigma_{r}
+\]"
+10,84,principles/10_84.jpg,"\[
+\Gamma=\sum_{i=1}^{r} \sigma_{i}
+\]"
+10,85,principles/10_85.jpg,"$\quad \partial \sigma=\sum_{j=0}^{k}(-1)^{j}\left[\mathbf{p}_{0}, \ldots, \mathbf{p}_{j-1}, \mathbf{p}_{j+1}, \ldots, \mathbf{p}_{k}\right]$"
+10,86,principles/10_86.jpg,"$$
+\[
+\sigma_{j}(\mathbf{u})=\mathbf{p}_{0}+B \mathbf{u} \quad\left(\mathbf{u} \in Q^{k-1}\right)
+\]"
+10,88,principles/10_88.jpg,"\[
+T\left(\sum \sigma_{i}\right)=\sum T \sigma_{i}
+\]"
+10,89,principles/10_89.jpg,"\[
+\partial \Phi=T(\partial \sigma)
+\]"
+10,90,principles/10_90.jpg,"$$
+\[
+\partial \Psi=\sum \partial \Phi_{i}
+\]"
+10,91,principles/10_91.jpg,"$$
+\[
+\int_{\Psi} d \omega=\int_{\partial \Psi} \omega .
+\]"
+10,92,principles/10_92.jpg,"$$
+\[
+\int_{\Phi} d \omega=\int_{\partial \Phi} \omega
+\]"
+10,93,principles/10_93.jpg,"\[
+\sigma=\left[0, \mathbf{e}_{1}, \ldots, \mathbf{e}_{k}\right]
+\]"
+10,94,principles/10_94.jpg,"\[
+\int_{\sigma} d \lambda=\int_{\partial \sigma} \lambda
+\]"
+10,95,principles/10_95.jpg,"$$
+\[
+\int_{0}^{1} f^{\prime}(u) d u=f(1)-f(0)
+\]"
+10,96,principles/10_96.jpg,"$$
+\[
+\lambda=f(\mathbf{x}) d x_{1} \wedge \cdots \wedge d x_{r-1} \wedge d x_{r+1} \wedge \cdots \wedge d x_{k}
+\]"
+10,97,principles/10_97.jpg,"$$
+\[
+\partial \sigma=(-1)^{r-1} \tau_{0}+\sum_{i=1}^{k}(-1)^{t} \tau_{i}
+\]"
+10,100,principles/10_100.jpg,"$\quad\left(u_{1}, \ldots, u_{k-1}\right) \rightarrow\left(x_{1}, \ldots, x_{r-1}, x_{r+1}, \ldots, x_{k}\right)$"
+10,101,principles/10_101.jpg,"\[
+\int_{\tau_{i}} \lambda=0 \quad(i \neq 0, i \neq r)
+\]"
+10,102,principles/10_102.jpg,"\[
+\int_{\partial \sigma} \lambda=(-1)^{r-1} \int_{\tau_{0}} \lambda+(-1)^{r} \int_{\tau_{r}} \lambda
+\]"
+10,103,principles/10_103.jpg,"\[
+\int_{0} d \lambda=(-1)^{r-1} \int_{Q^{k}}\left(D_{r} f\right)(\mathbf{x}) d \mathbf{x} .
+\]"
+10,104,principles/10_104.jpg,"$$
+\[
+\omega=\sum_{i=1}^{n} f_{i}(\mathbf{x}) d x_{i}
+\]"
+10,105,principles/10_105.jpg,"$$
+\[
+\left(D_{j} f_{i}\right)(\mathbf{x})=\left(D_{i} f_{j}\right)(\mathbf{x})
+\]"
+10,106,principles/10_106.jpg,"$$
+\[
+\left(D_{i} g\right)(\mathbf{x})=f_{i}(\mathbf{x}) \quad(\mathbf{x} \in E, 1 \leq i \leq n)
+\]"
+10,107,principles/10_107.jpg,"\[
+\int_{\Psi} \omega=\int_{\Psi} d \lambda=\int_{\partial \Psi} \lambda
+\]"
+10,108,principles/10_108.jpg,"\[
+\int_{\partial \Psi} \omega=\int_{\Psi} d \omega=0
+\]"
+10,109,principles/10_109.jpg,"$$
+\[
+\int_{\partial \partial \Psi} \lambda=\int_{\partial \Psi} d \lambda=\int_{\Psi} d^{2} \lambda=0 .
+\]"
+10,110,principles/10_110.jpg,"\[
+\eta=\frac{x d y-y d x}{x^{2}+y^{2}}
+\]"
+10,111,principles/10_111.jpg,"$\quad \gamma(t)=(r \cos t, r \sin t) \quad(0 \leq t \leq 2 \pi)$."
+10,112,principles/10_112.jpg,"\[
+\partial \gamma=0
+\]"
+10,114,principles/10_114.jpg,"\[
+\zeta=\frac{x d y \wedge d z+y d z \wedge d x+z d x \wedge d y}{\left(x^{2}+y^{2}+z^{2}\right)^{3 / 2}}
+\]"
+10,115,principles/10_115.jpg,"\[
+\int_{\Sigma} \zeta=\int_{D} \sin u d u d v=4 \pi \neq 0
+\]"
+10,116,principles/10_116.jpg,"\[
+\left(D_{j} f\right)(\mathbf{x})=0 \quad(p<j \leq n, \mathbf{x} \in E) .
+\]"
+10,117,principles/10_117.jpg,"$\quad\left(D_{p} F\right)(\mathbf{x})=f(\mathbf{x}), \quad\left(D_{j} F\right)(\mathbf{x})=0 \quad(p<j \leq n, \mathbf{x} \in E)$"
+10,118,principles/10_118.jpg,"$$
+\[
+\omega=\sum_{I} f_{I}(\mathbf{x}) d x_{I}
+\]"
+10,119,principles/10_119.jpg,"$$
+\[
+\sum_{I} \sum_{j=1}^{n}\left(D_{j} f_{I}\right)(\mathbf{x}) d x_{j} \wedge d x_{I}=d \omega=0
+\]"
+10,120,principles/10_120.jpg,"$$
+\[
+\left(D_{j} f_{I}\right)(\mathbf{x})=0 \quad(\mathbf{x} \in E, p<j \leq n)
+\]"
+10,121,principles/10_121.jpg,"$$
+\[
+\omega=\alpha+\sum_{I_{0}} f_{I}(\mathbf{x}) d x_{I_{0}} \wedge d x_{p}
+\]"
+10,122,principles/10_122.jpg,"$\quad D_{p} F_{I}=f_{I}, \quad D_{J} F_{I}=0 \quad(p<j \leq n)$."
+10,123,principles/10_123.jpg,"\[
+\beta=\sum_{I_{0}} F_{I}(\mathbf{x}) d x_{I_{0}}
+\]"
+10,124,principles/10_124.jpg,"$$
+\[
+\lambda_{\mathrm{F}}=F_{1} d x+F_{2} d y+F_{3} d z
+\]"
+10,125,principles/10_125.jpg,"$$
+\[
+\omega_{\mathbf{F}}=F_{1} d y \wedge d z+F_{2} d z \wedge d x+F_{3} d x \wedge d y
+\]"
+10,126,principles/10_126.jpg,"$$
+\[
+\int_{\Phi} f(\mathbf{x}) d x_{1} \wedge \cdots \wedge d x_{k}=\int_{\Phi} f d V
+\]"
+10,127,principles/10_127.jpg,"\[
+\int_{\partial \Omega}(\alpha d x+\beta d y)=\int_{\Omega}\left(\frac{\partial \beta}{\partial x}-\frac{\partial \alpha}{\partial y}\right) d A
+\]"
+10,128,principles/10_128.jpg,"\[
+\frac{1}{2} \int_{\partial \Omega}(x d y-y d x)=A(\Omega)
+\]"
+10,129,principles/10_129.jpg,"\[
+\mathbf{N}(u, v)=\frac{\partial(y, z)}{\partial(u, v)} \mathbf{e}_{1}+\frac{\partial(z, x)}{\partial(u, v)} \mathbf{e}_{2}+\frac{\partial(x, y)}{\partial(u, v)} \mathbf{e}_{3} .
+\]"
+10,130,principles/10_130.jpg,"$$
+\[
+(x, y, z)=\Phi(u, v)
+\]"
+10,131,principles/10_131.jpg,"\[
+\int_{\Phi} f d A=\int_{D} f(\Phi(u, v))|\mathbf{N}(u, v)| d u d v
+\]"
+10,133,principles/10_133.jpg,"$\quad \alpha_{i}=\left(D_{1} \varphi_{i}\right)\left(\mathbf{p}_{0}\right), \quad \beta_{i}=\left(D_{2} \varphi_{i}\right)\left(\mathbf{p}_{0}\right) \quad(i=1,2,3)$"
+10,134,principles/10_134.jpg,"$$
+\[
+T(u, v)=\sum_{i=1}^{3}\left(\alpha_{i} u+\beta_{i} v\right) \mathbf{e}_{i}
+\]"
+10,136,principles/10_136.jpg,"$\quad T \mathbf{e}_{1}=\sum_{i=1}^{3} \alpha_{i} \mathbf{e}_{i}, \quad T \mathbf{e}_{2}=\sum_{i=1}^{3} \beta_{i} \mathbf{e}_{i}$"
+10,137,principles/10_137.jpg,"$$
+\[
+\mathbf{N} \cdot\left(T \mathbf{e}_{1}\right)=0=\mathbf{N} \cdot\left(T \mathbf{e}_{2}\right)
+\]"
+10,138,principles/10_138.jpg,"$$
+\[
+\left[0, T \mathbf{e}_{1}, T \mathbf{e}_{2}, \mathrm{~N}\right]
+\]"
+10,139,principles/10_139.jpg,"$$
+\[
+0, T \mathrm{e}_{1}, T \mathrm{e}_{2}, T\left(\mathrm{e}_{1}+\mathrm{e}_{2}\right)
+\]"
+10,140,principles/10_140.jpg,"\[
+A(T(E))=|\mathbf{N}| A(E)=\int_{E}\left|\mathbf{N}\left(u_{0}, v_{0}\right)\right| d u d v
+\]"
+10,141,principles/10_141.jpg,"$$
+\[
+y=(b+t \sin u) \cos v
+\]"
+10,143,principles/10_143.jpg,"$$
+\[
+\int_{\gamma} \lambda_{\mathbf{F}}=\int_{\gamma}(\mathbf{F} \cdot \mathbf{t}) d s .
+\]"
+10,144,principles/10_144.jpg,"\[
+\int_{\Phi} \omega_{\mathbf{F}}=\int_{\Phi}(\mathbf{F} \cdot \mathbf{n}) d A .
+\]"
+10,145,principles/10_145.jpg,"\[
+\int_{\Phi}(\nabla \times \mathbf{F}) \cdot \mathbf{n} d A=\int_{\partial \Phi}(\mathbf{F} \cdot \mathbf{t}) d s .
+\]"
+10,146,principles/10_146.jpg,"\[
+\omega_{\mathbf{H}}=d \lambda_{\mathbf{F}} .
+\]"
+10,147,principles/10_147.jpg,"$$
+\[
+\int_{\boldsymbol{\Omega}}(\boldsymbol{\nabla} \cdot \mathbf{F}) d V=\int_{\partial \boldsymbol{\Omega}}(\mathbf{F} \cdot \mathbf{n}) d A .
+\]"
+11,1,principles/11_1.jpg,"\[
+A \cup B \in \mathscr{R}, \quad A-B \in \mathscr{R} \text {. }
+\]"
+11,2,principles/11_2.jpg,"\[
+\bigcup_{n=1}^{\infty} A_{n} \in \mathscr{R}
+\]"
+11,3,principles/11_3.jpg,"\[
+\phi(A \cup B)=\phi(A)+\phi(B)
+\]"
+11,5,principles/11_5.jpg,"\[
+\phi(0)=0
+\]"
+11,7,principles/11_7.jpg,"\[
+\phi\left(A_{1} \cup A_{2}\right)+\phi\left(A_{1} \cap A_{2}\right)=\phi\left(A_{1}\right)+\phi\left(A_{2}\right) .
+\]"
+11,8,principles/11_8.jpg,"\[
+\phi\left(A_{1}\right) \leq \phi\left(A_{2}\right)
+\]"
+11,9,principles/11_9.jpg,"\[
+\phi(A-B)=\phi(A)-\phi(B)
+\]"
+11,10,principles/11_10.jpg,"\[
+a_{i} \leq x_{i} \leq b_{i} \quad(i=1, \ldots, p)
+\]"
+11,11,principles/11_11.jpg,"\[
+m(A)=m\left(I_{1}\right)+\cdots+m\left(I_{n}\right)
+\]"
+11,17,principles/11_17.jpg,"\[
+\mu^{*}(E)=\inf \sum_{n=1}^{\infty} \mu\left(A_{n}\right)
+\]"
+11,18,principles/11_18.jpg,"\[
+\mu^{*}\left(E_{1}\right) \leq \mu^{*}\left(E_{2}\right)
+\]"
+11,20,principles/11_20.jpg,"\[
+\mu^{*}(A) \leq \mu(A)
+\]"
+11,21,principles/11_21.jpg,"$$
+\[
+\sum_{k=1}^{\infty} \mu\left(A_{n k}\right) \leq \mu^{*}\left(E_{n}\right)+2^{-n} \varepsilon
+\]"
+11,22,principles/11_22.jpg,"$$
+\[
+S(A, B)=(A-B) \cup(B-A)
+\]"
+11,23,principles/11_23.jpg,"$$
+\[
+d(A, B)=\mu^{*}(S(A, B))
+\]"
+11,25,principles/11_25.jpg,"$$
+\[
+S(A, B) \subset S(A, C) \cup S(C, B)
+\]"
+11,27,principles/11_27.jpg,"\[
+d(A, B)=d(B, A), \quad d(A, A)=0,
+\]"
+11,28,principles/11_28.jpg,"$$
+\[
+d(A, B) \leq d(A, C)+d(C, B),
+\]"
+11,30,principles/11_30.jpg,"\[
+\left|\mu^{*}(A)-\mu^{*}(B)\right| \leq d(A, B)
+\]"
+11,31,principles/11_31.jpg,"$$
+\[
+A_{n} \cup B_{n} \rightarrow A \cup B
+\]"
+11,32,principles/11_32.jpg,"\[
+A_{n} \cap B_{n} \rightarrow A \cap B,
+\]"
+11,33,principles/11_33.jpg,"\[
+A_{n}-B_{n} \rightarrow A-B \text {, }
+\]"
+11,34,principles/11_34.jpg,"\[
+\mu^{*}\left(A_{n}\right) \rightarrow \mu^{*}(A),
+\]"
+11,35,principles/11_35.jpg,"\[
+A=\bigcup_{n=1}^{\infty} A_{n}
+\]"
+11,38,principles/11_38.jpg,"$$
+\[
+\mu^{*}(A)=\sum_{n=1}^{\infty} \mu^{*}\left(A_{n}\right)
+\]"
+11,39,principles/11_39.jpg,"$$
+\[
+\mu(G-A)<\varepsilon, \quad \mu(A-F)<\varepsilon
+\]"
+11,40,principles/11_40.jpg,"\[
+\mu(G-A)=\mu(A-F)=0 .
+\]"
+11,41,principles/11_41.jpg,"\[
+\{x \mid P\}
+\]"
+11,42,principles/11_42.jpg,"\[
+\{x \mid f(x)>a\}
+\]"
+11,43,principles/11_43.jpg,$\quad\{x \mid f(x)>a\}$ is measurable for every real a.
+11,44,principles/11_44.jpg,$\quad\{x \mid f(x) \geq a\}$ is measurable for every real a.
+11,45,principles/11_45.jpg,$\quad\{x \mid f(x)<a\}$ is measurable for every real a.
+11,47,principles/11_47.jpg,"$$
+\[
+f^{+}=\max (f, 0), \quad f^{-}=-\min (f, 0),
+\]"
+11,48,principles/11_48.jpg,"$$
+\[
+K_{E}(x)=\left\{\begin{array}{ll}
+1 & (x \in E) \\
+0 & (x \notin E)
+\end{array}\right.
+\]"
+11,49,principles/11_49.jpg,"\[
+s=\sum_{n=1}^{n} c_{i} K_{E_{t}}
+\]"
+11,50,principles/11_50.jpg,"$$
+\[
+s_{n}=\sum_{i=1}^{n 2^{n}} \frac{i-1}{2^{n}} K_{E_{n t}}+n K_{F_{n}} .
+\]"
+11,51,principles/11_51.jpg,"\[
+s(x)=\sum_{i=1}^{n} c_{i} K_{E_{i}}(x) \quad\left(x \in X, c_{i}>0\right)
+\]"
+11,52,principles/11_52.jpg,"\[
+I_{E}(s)=\sum_{i=1}^{n} c_{i} \mu\left(E \cap E_{i}\right)
+\]"
+11,53,principles/11_53.jpg,"\[
+\int_{E} f d \mu=\sup I_{E}(s),
+\]"
+11,54,principles/11_54.jpg,"\[
+\int_{E} s d \mu=I_{E}(s)
+\]"
+11,55,principles/11_55.jpg,"$$
+\[
+\int_{E} f^{+} d \mu, \quad \int_{E} f^{-} d \mu
+\]"
+11,56,principles/11_56.jpg,"$$
+\[
+\int_{E} f d \mu=\int_{E} f^{+} d \mu-\int_{E} f^{-} d \mu .
+\]"
+11,59,principles/11_59.jpg,"$$
+\[
+\phi(A) \leq \sum_{n=1}^{\infty} \phi\left(A_{n}\right)
+\]"
+11,60,principles/11_60.jpg,"$\quad \int_{A_{1}} s d \mu \geq \int_{A_{1}} f d \mu-\varepsilon, \quad \int_{A_{2}} s d \mu \geq \int_{A_{2}} f d \mu-\varepsilon$."
+11,61,principles/11_61.jpg,"$$
+\[
+\phi\left(A_{1} \cup \cdots \cup A_{n}\right) \geq \phi\left(A_{1}\right)+\cdots+\phi\left(A_{n}\right)
+\]"
+11,62,principles/11_62.jpg,"\[
+\phi(A) \geq \sum_{n=1}^{\infty} \phi\left(A_{n}\right)
+\]"
+11,63,principles/11_63.jpg,"\[
+\left|\int_{E} f d \mu\right| \leq \int_{E}|f| d \mu .
+\]"
+11,64,principles/11_64.jpg,$\quad 0 \leq f_{1}(x) \leq f_{2}(x) \leq \cdots \quad(x \in E)$.
+11,65,principles/11_65.jpg,"$$
+\[
+f_{n}(x) \rightarrow f(x) \quad(x \in E)
+\]"
+11,66,principles/11_66.jpg,"$$
+\[
+\int_{E} f_{n} d \mu \rightarrow \int_{E} f d \mu \quad(n \rightarrow \infty)
+\]"
+11,67,principles/11_67.jpg,"\[
+\int_{E} f_{n} d \mu \rightarrow \alpha
+\]"
+11,68,principles/11_68.jpg,"\[
+\alpha \leq \int_{E} f d \mu
+\]"
+11,69,principles/11_69.jpg,"\[
+E=\bigcup_{n=1}^{\infty} E_{n} .
+\]"
+11,70,principles/11_70.jpg,"\[
+\int_{E} f_{n} d \mu \geq \int_{E_{n}} f_{n} d \mu \geq c \int_{E_{n}} s d \mu .
+\]"
+11,71,principles/11_71.jpg,"\[
+\alpha \geq c \int_{E} s d \mu
+\]"
+11,72,principles/11_72.jpg,"$$
+\[
+\alpha \geq \int_{E} f d \mu
+\]"
+11,73,principles/11_73.jpg,"$$
+\[
+\int_{E} f d \mu=\int_{E} f_{1} d \mu+\int_{E} f_{2} d \mu .
+\]"
+11,74,principles/11_74.jpg,$\quad \int_{A} f_{1} d \mu=\int_{A} f d \mu+\int_{A}\left(-f_{2}\right) d \mu=\int_{A} f d \mu-\int_{A} f_{2} d \mu$.
+11,75,principles/11_75.jpg,"\[
+\int_{B} f_{1} d \mu=\int_{B} f d \mu-\int_{B} f_{2} d \mu,
+\]"
+11,76,principles/11_76.jpg,"\[
+f(x)=\sum_{n=1}^{\infty} f_{n}(x) \quad(x \in E)
+\]"
+11,77,principles/11_77.jpg,"\[
+\int_{E} f d \mu \leq \liminf _{n \rightarrow \infty} \int_{E} f_{n} d \mu
+\]"
+11,78,principles/11_78.jpg,"$$
+\[
+0 \leq g_{1}(x) \leq g_{2}(x) \leq \cdots,
+\]"
+11,79,principles/11_79.jpg,"\[
+g_{n}(x) \leq f_{n}(x)
+\]"
+11,80,principles/11_80.jpg,"$$
+\[
+g_{n}(x) \rightarrow f(x) \quad(n \rightarrow \infty)
+\]"
+11,81,principles/11_81.jpg,"\[
+\int_{E} g_{n} d \mu \rightarrow \int_{E} f d \mu
+\]"
+11,82,principles/11_82.jpg,"$$
+\[
+f_{n}(x) \rightarrow f(x) \quad(x \in E)
+\]"
+11,83,principles/11_83.jpg,"$\quad\left|f_{n}(x)\right| \leq g(x) \quad(n=1,2,3, \ldots, x \in E)$,"
+11,84,principles/11_84.jpg,"\[
+\lim _{n \rightarrow \infty} \int_{E} f_{n} d \mu=\int_{E} f d \mu .
+\]"
+11,85,principles/11_85.jpg,"\[
+\int_{E} f d \mu \leq \liminf _{n \rightarrow \infty} \int_{E} f_{n} d \mu .
+\]"
+11,86,principles/11_86.jpg,"$$
+\[
+\int_{E} f d \mu \geq \limsup \int_{n \rightarrow \infty} f d \mu
+\]"
+11,87,principles/11_87_a.jpg,"$$
+\[
+\int_{a}^{b} f d x=\mathscr{R} \int_{a}^{b} f d x
+\]"
+11,88,principles/11_88.jpg,"$\quad \lim _{k \rightarrow \infty} L\left(P_{k}, f\right)=\mathscr{R} \int f d x, \quad \lim _{k \rightarrow \infty} U\left(P_{k}, f\right)=\mathscr{R} \bar{\int} f d x$"
+11,89,principles/11_89.jpg,"\[
+L\left(P_{k}, f\right)=\int L_{k} d x, \quad U\left(P_{k}, f\right)=\int U_{k} d x
+\]"
+11,90,principles/11_90.jpg,$\quad L_{1}(x) \leq L_{2}(x) \leq \cdots \leq f(x) \leq \cdots \leq U_{2}(x) \leq U_{1}(x)$
+11,91,principles/11_91.jpg,"\[
+L(x)=\lim _{k \rightarrow \infty} L_{k}(x), \quad U(x)=\lim _{k \rightarrow \infty} U_{k}(x)
+\]"
+11,92,principles/11_92.jpg,"$$
+\[
+L(x) \leq f(x) \leq U(x) \quad(a \leq x \leq b)
+\]"
+11,93,principles/11_93.jpg,"$$
+\[
+\int L d x=\mathscr{R} \int_{-} f d x, \quad \int U d x=\mathscr{R} \int f d x
+\]"
+11,94,principles/11_94.jpg,"\[
+\int L d x=\int U d x
+\]"
+11,95,principles/11_95.jpg,"$$
+\[
+L(x)=f(x)=U(x)
+\]"
+11,96,principles/11_96.jpg,"$$
+\[
+F(x)=\int_{a}^{x} f d t \quad(a \leq x \leq b)
+\]"
+11,98,principles/11_98.jpg,"$$
+\[
+\int_{x}|f g| d \mu \leq\|f\|\|g\| .
+\]"
+11,99,principles/11_99.jpg,"\[
+f(x) \sim \sum_{-\infty}^{\infty} c_{n} e^{i n x}
+\]"
+11,100,principles/11_100.jpg,"$$
+\[
+\lim _{n \rightarrow \infty}\left\|f-s_{n}\right\|=0
+\]"
+11,101,principles/11_101.jpg,"$$
+\[
+\sum_{-\infty}^{\infty}\left|c_{n}\right|^{2}=\frac{1}{2 \pi} \int_{-\pi}^{\pi}|f|^{2} d x
+\]"
+11,103,principles/11_103.jpg,"\[
+|g(x)| \sum_{k=1}^{\infty}\left|f_{n_{k}}(x)-f_{n_{k+1}}(x)\right|<+\infty
+\]"
+11,104,principles/11_104.jpg,"\[
+\sum_{k=1}^{\infty}\left|f_{n_{k+1}}(x)-f_{n_{k}}(x)\right|<+\infty
+\]"
+11,105,principles/11_105.jpg,"$$
+\[
+\left\|f-f_{n}\right\| \leq\left\|f-f_{n_{k}}\right\|+\left\|f_{n_{k}}-f_{n}\right\|
+\]"
+11,106,principles/11_106.jpg,"\[
+f \sim \sum_{n=1}^{\infty} c_{n} \phi_{n}
+\]"
+11,107,principles/11_107.jpg,"$$
+\[
+\int_{X}|f|^{2} d \mu=\sum_{n=1}^{\infty}\left|c_{n}\right|^{2}
+\]"
+11,108,principles/11_108.jpg,"\[
+g \sim \sum_{n=1}^{\infty} c_{n} \phi_{n},
+\]"
+11,109,principles/11_109.jpg,"$$
+\[
+\int_{X}|g|^{2} d \mu=\sum_{n=1}^{\infty}\left|c_{n}\right|^{2}
+\]"

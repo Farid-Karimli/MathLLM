@@ -1,0 +1,111 @@
+Corollary,Statement,Proof
+2.12,"Suppose $A$ is at most countable, and, for every $\alpha \in A, B_{\alpha}$ is at most countable. Put
+
+Then $T$ is at most countable.
+
+$$
+T=\bigcup_{\alpha \in A} B_{\alpha} .
+$$
+
+For $T$ is equivalent to a subset of (15) <$$\[
+S=\bigcup_{n=1}^{\infty} E_{n} .
+\]$$>.","Error, no proof value given."
+2.35,"If $F$ is closed and $K$ is compact, then $F \cap K$ is compact.","Theorems $2.24(b)$ and 2.34 show that $F \cap K$ is closed; since $F \cap K \subset K$, Theorem 2.35 shows that $F \cap K$ is compact."
+2.13,The set of all rational numbers is countable.,"We apply Theorem 2.13, with $n=2$, noting that every rational $r$ is of the form $b / a$, where $a$ and $b$ are integers. The set of pairs $(a, b)$, and therefore the set of fractions $b / a$, is countable."
+2.36,"If $\left\{K_{n}\right\}$ is a sequence of nonempty compact sets such that $K_{n} \supset K_{n+1}$ $(n=1,2,3, \ldots)$, then $\bigcap_{1}^{\infty} K_{n}$ is not empty.","Error, no proof value given."
+3.46,"For series of positive terms, absolute convergence is the same as convergence.","If $\Sigma a_{n}$ converges, but $\Sigma\left|a_{n}\right|$ diverges, we say that $\Sigma a_{n}$ converges nonabsolutely. For instance, the series
+
+$$
+\sum \frac{(-1)^{n}}{n}
+$$
+
+converges nonabsolutely (Theorem 3.43)."
+4.8,A mapping $f$ of a metric space $X$ into a metric space $Y$ is continuous if and only if $f^{-1}(C)$ is closed in $X$ for every closed set $C$ in $Y,"This follows from the theorem, since a set is closed if and only if its complement is open, and since $f^{-1}\left(E^{c}\right)=\left[f^{-1}(E)\right]^{c}$ for every $E \subset Y$."
+5.12,"If $f$ is differentiable on $[a, b]$, then $f^{\prime}$ cannot have any simple discontinuities on $[a, b]$.",nan
+1.21,"If $a$ and $b$ are positive real numbers and $n$ is a positive integer, then
+
+$$
+(a b)^{1 / n}=a^{1 / n} b^{1 / n} .
+$$","Put $\alpha=a^{1 / n}, \beta=b^{1 / n}$. Then
+
+$$
+a b=\alpha^{n} \beta^{n}=(\alpha \beta)^{n},
+$$
+since multiplication is commutative. [Axiom (M2) in Definition 1.12.] The uniqueness assertion of Theorem 1.21 shows therefore that
+
+$$
+(a b)^{1 / n}=\alpha \beta=a^{1 / n} b^{1 / n} .
+$$"
+1.22,"If $x>0$ be real, then the decimal expansion of $x$ is
+
+$$
+n_{0} \cdot n_{1} n_{2} n_{3} \cdots \text {. }
+$$
+
+Conversely, for any infinite decimal (6) the set $E$ of numbers (5) <$$
+\[
+n_{0}+\frac{n_{1}}{10}+\cdots+\frac{n_{k}}{10^{k}} \quad(k=0,1,2, \ldots)
+\]$$> is bounded above, and (6) is the decimal expansion of $\sup E$.","Error, no proof value given."
+2.43,"Every interval $[a, b](a<b)$ is uncountable. In particular, the set of all real numbers is uncountable.",nan
+7.16,"If $f_{n} \in \mathscr{R}(\alpha)$ on $[a, b]$ and if
+
+$$
+f(x)=\sum_{n=1}^{\infty} f_{n}(x) \quad(a \leq x \leq b)
+$$
+
+the series converging uniformly on $[a, b]$, then
+
+$$
+\int_{a}^{b} f d \alpha=\sum_{n=1}^{\infty} \int_{a}^{b} f_{n} d \alpha
+$$
+
+In other words, the series may be integrated term by term.",nan
+11.17 (a),"If $f$ and $g$ are measurable, then $\max (f, g)$ and $\min (f, g)$ are measurable. If
+
+$$
+f^{+}=\max (f, 0), \quad f^{-}=-\min (f, 0)
+$$
+
+it follows, in particular, that $f^{+}$ and $f^{-}$ are measurable.",nan
+11.17 (b),The limit of a convergent sequence of measurable functions is measurable.,nan
+10.8,"If $f \in \mathscr{C}\left(R^{n}\right)$ and the support of $f$ lies in $K$, then
+
+$$
+f=\sum_{i=1}^{s} \psi_{i} f
+$$
+
+Each $\psi_{i} f$ has its support in some $V_{\alpha}$.","The point of (25) <$$\[
+f=\sum_{i=1}^{s} \psi_{i} f
+\]$$> is that it furnishes a representation of $f$ as a sum of continuous functions $\psi_{i} f$ with ""small"" supports."
+11.24,"If $A \in \mathfrak{M}, B \in \mathfrak{M}, B \subset A$, and $\mu(A-B)=0$, then
+
+$$
+\int_{\boldsymbol{A}} f d \mu=\int_{B} f d \mu
+$$","Since $A=B \cup(A-B)$, this follows from Remark 11.23(e)."
+7.27,"For every interval $[-a, a]$ there is a sequence of real polynomials $P_{n}$ such that $P_{n}(0)=0$ and such that
+
+$$
+\lim _{n \rightarrow \infty} P_{n}(x)=|x|
+$$
+
+uniformly on $[-a, a]$","By Theorem 7.26, there exists a sequence $\left\{P_{n}^{*}\right\}$ of real polynomials which converges to $|x|$ uniformly on $[-a, a]$. In particular, $P_{n}^{*}(0) \rightarrow 0$ as $n \rightarrow \infty$. The polynomials
+
+$$
+P_{n}(x)=P_{n}^{*}(x)-P_{n}^{*}(0) \quad(n=1,2,3, \ldots)
+$$
+
+have desired properties."
+11.32,"If $\mu(E)<+\infty,\left\{f_{n}\right\}$ is uniformly bounded on $E$, and $f_{n}(x) \rightarrow f(x)$ on $E$, then (84) <$$\[
+\lim _{n \rightarrow \infty} \int_{E} f_{n} d \mu=\int_{E} f d \mu .
+\]$$> holds.",A uniformly bounded convergent sequence is often said to be boundedly convergent.
+8.14,"If $f(x)=0$ for all $x$ in some segment $J$, then $\lim s_{N}(f ; x)=0$ for every $x \in J$.","Here is another formulation of this corollary:
+
+$$
+\begin{aligned}
+\text { If } f(t)= & g(t) \text { for all } t \text { in some neighborhood of } x \text {, then } \\
+& s_{N}(f ; x)-s_{N}(g ; x)=s_{N}(f-g ; x) \rightarrow 0 \text { as } N \rightarrow \infty .
+\end{aligned}
+$$
+
+This is usually called the localization theorem. It shows that the behavior of the sequence $\left\{s_{N}(f ; x)\right\}$, as far as convergence is concerned, depends only on the values of $f$ in some (arbitrarily small) neighborhood of $x$. Two Fourier series may thus have the same behavior in one interval, but may behave in entirely different ways in some other interval. We have here a very striking contrast between Fourier series and power series (Theorem 8.5)."
+9.2,$\operatorname{dim} R^{n}=n$.,"Since $\left\{\mathbf{e}_{1}, \ldots, \mathbf{e}_{n}\right\}$ spans $R^{n}$, the theorem shows that $\operatorname{dim} R^{n} \leq n$. Since $\left\{\mathbf{e}_{1}, \ldots, \mathbf{e}_{n}\right\}$ is independent, $\operatorname{dim} R^{n} \geq n$."

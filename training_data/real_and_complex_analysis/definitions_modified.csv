@@ -1,0 +1,1042 @@
+Definition,Statement
+2.15,"For a measure $\mu$ defined on the $\sigma$-algebra of all Borel sets in a locally compact Hausdorff space $X$: A measure $\mu$ defined on the $\sigma$-algebra of all Borel sets in a locally compact Hausdorff space $X$ is called a Borel measure on $X. If $\mu$ is positive, a Borel set $E \subset X$ is outer regular or inner regular, respectively, if $E$ has property $(c)$ or $(d)$ of Theorem 2.14 <> . If every Borel set in $X$ is both outer and inner regular, $\mu$ is called regular."
+3.16,"For a locally compact Hausdorff space $X$: A complex function $f$ on $X$ is said to vanish at infinity if to every $\epsilon>0$ there exists a compact set $K \subset X$ such that $|f(x)|<\epsilon$ for all $x$ not in $K$. The class of all continuous $f$ on $X$ which vanish at infinity is called $C_{0}(X)$. It is clear that $C_{c}(X) \subset C_{0}(X)$, and that the two classes coincide if $X$ is compact. In that case we write $C(X)$ for either of them."
+2.16,"A set $E$ in a topological space is called $\sigma$-compact if $E$ is a countable union of compact sets. A set $E$ in a measure space (with measure $\mu$ ) is said to have $\sigma$-finite measure if $E$ is a countable union of sets $E_{i}$ with $\mu\left(E_{i}\right)<\infty$. For example, in the situation described in Theorem 2.14 <> , every $\sigma$ compact set has $\sigma$-finite measure. Also, it is easy to see that if $E \in \mathfrak{M}$ and $E$ has $\sigma$-finite measure, then $E$ is inner regular."
+1.30,"We define $L^{1}(\mu)$ to be the collection of all complex measurable functions $f$ on $X$ for which
+
+$$
+\int_{X}|f| d \mu<\infty
+$$
+
+Note that the measurability of $f$ implies that of $|f|$, as we saw in Proposition $1.9(b)$; hence the above integral is defined.
+
+The members of $L^{1}(\mu)$ are called Lebesgue integrable functions (with respect to $\mu$ ) or summable functions. The significance of the exponent 1 will become clear in Chap. 3."
+3.4,"If $p$ and $q$ are positive real numbers such that $p+q=p q$, or equivalently
+
+$$
+\frac{1}{p}+\frac{1}{q}=1
+$$
+then we call $p$ and $q$ a pair of conjugate exponents. It is clear that (1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$> implies $1<p<\infty$ and $1<q<\infty$. An important special case is $p=q=2$.
+
+As $p \rightarrow 1$, (1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$> forces $q \rightarrow \infty$. Consequently 1 and $\infty$ are also regarded as a pair of conjugate exponents. Many analysts denote the exponent conjugate to $p$ by $p^{\prime}$, often without saying so explicitly."
+4.13 (a),"If $V$ is a vector space, if $x_{1}, \ldots, x_{k} \in V$, and if $c_{1}, \ldots, c_{k}$ are scalars, then $c_{1} x_{1}+\cdots+c_{k} x_{k}$ is called a linear combination of $x_{1}, \ldots, x_{k}$. The set $\left\{x_{1}, \ldots, x_{k}\right\}$ is called independent if $c_{1} x_{1}+\cdots+c_{k} x_{k}=0$ implies that $c_{1}=\cdots=c_{k}=0$. A set $S \subset V$ is independent if every finite subset of $S$ is independent. The set $[S]$ of all linear combinations of all finite subsets of $S$ (also called the set of all finite linear combinations of members of $S$ ) is clearly a vector space; $[S]$ is the smallest subspace of $V$ which contains $S$; $[S]$ is called the span of $S$, or the space spanned by $S$."
+6.7,"{'Let $\\mu$ be a positive measure on a $\\sigma$-algebra $\\mathfrak{M}$, and let $\\lambda$ be an arbitrary measure on $\\mathfrak{M}$; $\\lambda$ may be positive or complex. We say that $\\lambda$ is absolutely continuous with respect to $\\mu$, and write\n\n$$\n\\lambda \\ll \\mu\n$$\n\nif $\\lambda(E)=0$ for every $E \\in \\mathfrak{M}$ for which $\\mu(E)=0$. If there is a set $A \\in \\mathfrak{M}$ such that $\\lambda(E)=\\lambda(A \\cap E)$ for every $E \\in \\mathfrak{M}$, we say that $\\lambda$ is concentrated on $A$. This is equivalent to the hypothesis that $\\lambda(E)=0$ whenever $E \\cap A=\\varnothing$. Suppose $\\lambda_{1}$ and $\\lambda_{2}$ are measures on $\\mathfrak{M}$, and suppose there exists a pair of disjoint sets $A$ and $B$ such that $\\lambda_{1}$ is concentrated on $A$ and $\\lambda_{2}$ is concentrated on $B$. Then we say that $\\lambda_{1}$ and $\\lambda_{2}$ are mutually singular, and write\n\n$$\n\\lambda_{1} \\perp \\lambda_{2} .\n$$ Here are some elementary properties of these concepts.': 'Definition'}"
+1.16,"For a measurable space $X$: A complex function $s$ on a measurable space $X$ whose range consists of only finitely many points will be called a simple function. Among these are the nonnegative simple functions, whose range is a finite subset of $[0, \infty)$. Note that we explicitly exclude $\infty$ from the values of a simple function.
+
+If $\alpha_{1}, \ldots, \alpha_{n}$ are the distinct values of a simple function $s$, and if we set $A_{i}=\left\{x: s(x)=\alpha_{i}\right\}$, then clearly
+
+$$
+s=\sum_{i=1}^{n} \alpha_{i} \chi_{A_{i}}
+$$
+
+where $\chi_{A_{i}}$ is the characteristic function of $A_{i}$, as defined in Sec. 1.9(d).
+
+It is also clear that $s$ is measurable if and only if each of the sets $A_{i}$ is measurable."
+1.31,"If $f=u+i v$, where $u$ and $v$ are real measurable functions on $X$, and if $f \in L^{1}(\mu)$, we define
+
+$$
+\int_{E} f d \mu=\int_{E} u^{+} d \mu-\int_{E} u^{-} d \mu+i \int_{E} v^{+} d \mu-i \int_{E} v^{-} d \mu
+$$
+
+for every measurable set $E$.
+
+Here $u^{+}$and $u^{-}$are the positive and negative parts of $u$, as defined in Sec. $1.15 ; v^{+}$and $v^{-}$are similarly obtained from $v$. These four functions are measurable, real, and nonnegative; hence the four integrals on the right of (1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$> exist, by Definition 1.23 <> . Furthermore, we have $u^{+} \leq|u|<|f|$, etc., so that
+each of these four integrals is finite. Thus (1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$> defines the integral on the left as a complex number.
+
+Occasionally it is desirable to define the integral of a measurable function $f$ with range in $[-\infty, \infty]$ to be
+
+$$
+\int_{E} f d \mu=\int_{E} f^{+} d \mu-\int_{E} f^{-} d \mu
+$$
+
+provided that at least one of the integrals on the right of (2) <$$
+\[
+r=\sum_{n=1}^{\infty} c_{n}(r) 2^{-n}
+\]$$> is finite. The left side of $(2) <$$
+\[
+r=\sum_{n=1}^{\infty} c_{n}(r) 2^{-n}
+\]$$>$ is then a number in $[-\infty, \infty]$."
+8.4,"{'With each function $f$ on $X \\times Y$ and with each $x \\in X$ we associate a function $f_{x}$ defined on $Y$ by $f_{x}(y)=f(x, y)$.\n\nSimilarly, if $y \\in Y, f^{y}$ is the function defined on $X$ by $f^{y}(x)=f(x, y)$.\n\nSince we are now dealing with three $\\sigma$-algebras, $\\mathscr{S}, \\mathscr{T}$, and $\\mathscr{S} \\times \\mathscr{T}$, we shall, for the sake of clarity, indicate in the sequel to which of these three $\\sigma$-algebras the word ""measurable"" refers.': None}"
+3.1,"A real function $\varphi$ defined on a segment $(a, b)$, where $-\infty \leq a<b \leq \infty$, is called convex if the inequality
+
+$$
+\varphi((1-\lambda) x+\lambda y) \leq(1-\lambda) \varphi(x)+\lambda \varphi(y)
+$$
+
+holds whenever $a<x<b, a<y<b$, and $0 \leq \lambda \leq 1$.
+
+Graphically, the condition is that if $x<t<y$, then the point $(t, \varphi(t))$ should lie below or on the line connecting the points $(x, \varphi(x))$ and $(y, \varphi(y))$ in the plane. Also, (1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$> is equivalent to the requirement that
+
+$$
+\frac{\varphi(t)-\varphi(s)}{t-s} \leq \frac{\varphi(u)-\varphi(t)}{u-t}
+$$
+
+whenever $a<s<t<u<b$.
+
+The mean value theorem for differentiation, combined with (2) <$$
+\[
+r=\sum_{n=1}^{\infty} c_{n}(r) 2^{-n}
+\]$$>, shows immediately that a real differentiable function $\varphi$ is convex in $(a, b)$ if and only if $a<s<t<b$ implies $\varphi^{\prime}(s) \leq \varphi^{\prime}(t)$, i.e., if and only if the derivative $\varphi^{\prime}$ is a monotonically increasing function.
+
+For example, the exponential function is convex on $(-\infty, \infty)$. "
+1.13,"For a sequence $\left\{a_{n}\right\}$ in $[-\infty, \infty]$: Let $b_{k}=\sup \left\{a_{k}, a_{k+1}, a_{k+2}, \ldots\right\}$ and $\beta=\inf \left\{b_{1}, b_{2}, b_{3}, \ldots\right\}$. We call $\beta$ the upper limit of $\left\{a_{n}\right\}$, and write
+
+$$
+\beta=\limsup _{n \rightarrow \infty} a_{n}
+$$
+The lower limit is defined analogously: simply interchange sup and inf in (1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$> and (2) <$$
+\[
+r=\sum_{n=1}^{\infty} c_{n}(r) 2^{-n}
+\]$$>. If $\left\{f_{n}\right\}$ is a sequence of extended-real functions on a set $X$, then $\sup f_{n}$ and $\lim \sup f_{n}$ are the functions defined on $X$ by
+
+$$
+\begin{aligned}
+\left(\sup _{n} f_{n}\right)(x) & =\sup _{n}\left(f_{n}(x)\right), \\
+\left(\limsup _{n \rightarrow \infty} f_{n}\right)(x) & =\limsup _{n \rightarrow \infty}\left(f_{n}(x)\right)
+\end{aligned}
+$$
+If
+
+$$
+f(x)=\lim _{n \rightarrow \infty} f_{n}(x),
+$$
+the limit being assumed to exist at every $x \in X$, then we call $f$ the pointwise limit of the sequence $\left\{f_{n}\right\}$."
+3.6,"For $0<p<\infty$ and a complex measurable function $f$ on $X$: Define
+
+$$
+\|f\|_{p}=\left\{\int_{X}|f|^{p} d \mu\right\}^{1 / p}
+$$
+
+and let $L^{p}(\mu)$ consist of all $f$ for which
+
+$$
+\|f\|_{p}<\infty
+$$
+
+We call $\|f\|_{p}$ the $L^{p}$-norm of $f$.
+
+If $\mu$ is Lebesgue measure on $R^{k}$, we write $L^{p}\left(R^{k}\right)$ instead of $L^{p}(\mu)$, as in Sec. 2.21. If $\mu$ is the counting measure on a set $A$, it is customary to denote the corresponding $L^{p}$-space by $\ell^{p}(A)$, or simply by $\ell^{p}$, if $A$ is countable. An element of $\ell^{p}$ may be regarded as a complex sequence $x=\left\{\xi_{n}\right\}$, and
+
+$$
+\|x\|_{p}=\left\{\sum_{n=1}^{\infty}\left|\xi_{n}\right|^{p}\right\}^{1 / p}
+$$"
+3.7,"Suppose $g: X \rightarrow[0, \infty]$ is measurable. Let $S$ be the set of all real $\alpha$ such that
+
+$$
+\mu\left(g^{-1}((\alpha, \infty])\right)=0
+$$
+
+If $S=\varnothing$, put $\beta=\infty$. If $S \neq \varnothing$, put $\beta=\inf S$. Since
+
+$$
+g^{-1}((\beta, \infty])=\bigcup_{n=1}^{\infty} g^{-1}\left((\beta+\frac{1}{n}, \infty\right]\right)
+$$
+
+and since the union of a countable collection of sets of measure 0 has measure 0 , we see that $\beta \in S$. We call $\beta$ the essential supremum of $g$.
+
+If $f$ is a complex measurable function on $X$, we define $\|f\|_{\infty}$ to be the essential supremum of $|f|$, and we let $L^{\infty}(\mu)$ consist of all $f$ for which $\|f\|_{\infty}<\infty$. The members of $L^{\infty}(\mu)$ are sometimes called essentially bounded measurable functions on $X$.
+
+It follows from this definition that the inequality $|f(x)| \leq \lambda$ holds for almost all $x$ if and only if $\lambda \geq\|f\|_{\infty}$.
+
+As in Definition 3.6 <> , $L^{\infty}\left(R^{k}\right)$ denotes the class of all essentially bounded (with respect to Lebesgue measure) functions on $R^{k}$, and $\ell^{\infty}(A)$ is the class of all bounded functions on $A$. (Here bounded means the same as essentially bounded, since every nonempty set has positive measure!)"
+4.4,"It follows from the triangle inequality that
+
+$$
+\|x-z\| \leq\|x-y\|+\|y-z\| \quad(x, y, z \in H) .
+$$
+
+If we define the distance between $x$ and $y$ to be $\|x-y\|$, all the axioms for a metric space are satisfied; here, for the first time, we use part $(e)$ of Definition 4.1 <> .
+
+Thus $H$ is now a metric space. If this metric space is complete, i.e., if every Cauchy sequence converges in $H$, then $H$ is called a Hilbert space.
+
+Throughout the rest of this chapter, the letter $H$ will denote a Hilbert space."
+5.3,"Consider a linear transformation $\Lambda$ from a normed linear space $X$ into a normed linear space $Y$, and define its norm by
+
+$$
+\|\Lambda\|=\sup \{\|\Lambda x\|: x \in X,\|x\| \leq 1\} .
+$$
+
+If $\|\Lambda\|<\infty$, then $\Lambda$ is called a bounded linear transformation.
+
+In (1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$>, $\|x\|$ is the norm of $x$ in $X,\|\Lambda x\|$ is the norm of $\Lambda x$ in $Y$; it will frequently happen that several norms occur together, and the context will make it clear which is which.
+
+Observe that we could restrict ourselves to unit vectors $x$ in (1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$>, i.e., to $x$ with $\|x\|=1$, without changing the supremum, since
+
+$$
+\|\Lambda(\alpha x)\|=\|\alpha \Lambda x\|=|\alpha|\|\Lambda x\| .
+$$
+
+Observe also that $\|\Lambda\|$ is the smallest number such that the inequality
+
+$$
+\|\Lambda x\| \leq\|\Lambda\|\|x\|
+$$
+
+holds for every $x \in X$.
+
+The following geometric picture is helpful: $\Lambda$ maps the closed unit ball in $X$, i.e., the set
+
+$$
+\{x \in X:\|x\| \leq 1\}
+$$
+
+into the closed ball in $Y$ with center at 0 and radius $\|\Lambda\|$.
+
+An important special case is obtained by taking the complex field for $Y$; in that case we talk about bounded linear functionals."
+8.15,"{'Let $\\mu$ be a $\\sigma$-finite positive measure on some $\\sigma$-algebra in some set $X$. Let $f: X \\rightarrow[0, \\infty]$ be measurable. The function that assigns to each $t \\in[0, \\infty)$ the number\n\n$$\n\\mu\\{f>t\\}=\\mu(\\{x \\in X: f(x)>t\\})\n$$\n\nis called the distribution function of $f$. It is clearly a monotonic (nonincreasing) function of $t$ and is therefore Borel measurable.': 'The function that assigns to each $t \\in[0, \\infty)$ the number\n\n$$\n\\mu\\{f>t\\}=\\mu(\\{x \\in X: f(x)>t\\})\n$$\n\nis called the distribution function of $f$. It is clearly a monotonic (nonincreasing) function of $t$ and is therefore Borel measurable.'}"
+2.1,"A complex vector space (or a vector space over the complex field) is a set $V$, whose elements are called vectors and in which two operations, called addition and scalar multiplication, are defined, with the following familiar algebraic properties:
+
+To every pair of vectors $x$ and $y$ there corresponds a vector $x+y$, in such a way that $x+y=y+x$ and $x+(y+z)=(x+y)+z ; V$ contains a unique vector 0 (the zero vector or origin of $V$ ) such that $x+0=x$ for every $x \in V$; and to each $x \in V$ there corresponds a unique vector $-x$ such that $x+(-x)=0$.
+
+To each pair $(\alpha, x)$, where $x \in V$ and $\alpha$ is a scalar (in this context, the word scalar means complex number), there is associated a vector $\alpha x \in V$, in such a way that $1 x=x, \alpha(\beta x)=(\alpha \beta) x$, and such that the two distributive laws
+
+$$
+\alpha(x+y)=\alpha x+\alpha y,(\alpha+\beta) x=\alpha x+\beta x
+$$
+
+hold.
+
+A linear transformation of a vector space $V$ into a vector space $V_{1}$ is a mapping $\Lambda$ of $V$ into $V_{1}$ such that
+
+$$
+\Lambda(\alpha x+\beta y)=\alpha \Lambda x+\beta \Lambda y
+$$
+
+for all $x$ and $y \in V$ and for all scalars $\alpha$ and $\beta$. In the special case in which $V_{1}$ is the field of scalars (this is the simplest example of a vector space, except for the trivial one consisting of 0 alone), $\Lambda$ is called a linear functional. A linear functional is thus a complex function on $V$ which satisfies (2) <$$
+\[
+r=\sum_{n=1}^{\infty} c_{n}(r) 2^{-n}
+\]$$>.
+
+Note that one often writes $\Lambda x$, rather than $\Lambda(x)$, if $\Lambda$ is linear."
+5.2 (a),"For a complex vector space $X$: A complex vector space $X$ is said to be a normed linear space if to each $x \in X$ there is associated a nonnegative real number $\|x\|$, called the norm of $x$, such that $\|x+y\| \leq\|x\|+\|y\|$ for all $x$ and $y \in X$."
+5.2 (b),For a complex vector space $X$ and a scalar $\alpha$: $\|a x\|=|\alpha|\|x\|$ if $x \in X$ and $\alpha$ is a scalar.
+5.2 (c),For a complex vector space $X$: $\|x\|=0$ implies $x=0$.
+1.35,"Let $P$ be a property which a point $x$ may or may not have. For instance, $P$ might be the property "" $f(x)>0$ "" if $f$ is a given function, or it might be "" $\left\{f_{n}(x)\right\}$ converges"" if $\left\{f_{n}\right\}$ is a given sequence of functions.
+
+If $\mu$ is a measure on a $\sigma$-algebra $\mathfrak{M}$ and if $E \in \mathfrak{M}$, the statement "" $P$ holds almost everywhere on $E$ "" (abbreviated to "" $P$ holds a.e. on $E$ "") means that there exists an $N \in \mathfrak{M}$ such that $\mu(N)=0, N \subset E$, and $P$ holds at every point of $E-N$. This concept of a.e. depends of course very strongly on the given measure, and we shall write ""a.e. $[\mu]$ "" whenever clarity requires that the measure be indicated.
+
+For example, if $f$ and $g$ are measurable functions and if
+
+$$
+\mu(\{x: f(x) \neq g(x)\})=0
+$$
+
+we say that $f=g$ a.e. $[\mu]$ on $X$, and we may write $f \sim g$. This is easily seen to be an equivalence relation. The transitivity $(f \sim g$ and $g \sim h$ implies $f \sim h)$ is a consequence of the fact that the union of two sets of measure 0 has measure 0 .
+
+Note that if $f \sim g$, then, for every $E \in \mathfrak{M}$,
+
+$$
+\int_{E} f d \mu=\int_{E} g d \mu
+$$
+
+To see this, let $N$ be the set which appears in (1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$>; then $E$ is the union of the disjoint sets $E-N$ and $E \cap N$; on $E-N, f=g$, and $\mu(E \cap N)=0$.
+
+Thus, generally speaking, sets of measure 0 are negligible in integration. It ought to be true that every subset of a negligible set is negligible. But it may happen that some set $N \in \mathfrak{M}$ with $\mu(N)=0$ has a subset $E$ which is not a member of $\mathfrak{M}$. Of course we can define $\mu(E)=0$ in this case. But will this extension of $\mu$ still be a measure, i.e., will it still be defined on a $\sigma$-algebra? It is a pleasant fact that the answer is affirmative:"
+8.1 (a),"For sets $X$ and $Y$: If $A \subset X$ and $B \subset Y$, it follows that $A \times B \subset X \times Y$. We call any set of the form $A \times B$ a rectangle in $X \times Y$."
+8.1 (b),"For measurable spaces $(X, \mathscr{S})$ and $(Y, \mathscr{T})$: A measurable rectangle is any set of the form $A \times B$, where $A \in \mathscr{S}$ and $B \in \mathscr{T}$."
+8.1 (c),"For a class of elementary sets $\mathscr{E}$: If $Q=R_{1} \cup \cdots \cup R_{n}$, where each $R_{i}$ is a measurable rectangle and $R_{i} \cap R_{j}=\varnothing$ for $i \neq j$, we say that $Q \in \mathscr{E}$, the class of all elementary sets."
+8.1 (d),"For measurable spaces $(X, \mathscr{S})$ and $(Y, \mathscr{T})$: $\mathscr{S} \times \mathscr{T}$ is defined to be the smallest $\sigma$-algebra in $X \times Y$ which contains every measurable rectangle."
+8.1 (e),"For a monotone class $\mathfrak{M}$: A collection of sets with the following properties: If $A_{i} \in \mathfrak{M}, B_{i} \in \mathfrak{M}, A_{i} \subset A_{i+1}, B_{i} \supset B_{i+1}$, for $i=1,2,3, \ldots$, and if
+
+$$
+A=\bigcup_{i=1}^{\infty} A_{i}, \quad B=\bigcap_{i=1}^{\infty} B_{i}
+$$
+
+then $A \in \mathfrak{M}$ and $B \in \mathfrak{M}$."
+8.1 (f),"For a set $E \subset X \times Y, x \in X, y \in Y$: We define
+
+$$
+E_{x}=\{y:(x, y) \in E\}, \quad E^{y}=\{x:(x, y) \in E\}
+$$
+
+We call $E_{x}$ and $E^{y}$ the $x$-section and $y$-section, respectively, of $E$. Note that $E_{x} \subset Y, E^{y} \subset X$."
+10.19,"For a function $f \in H(\Omega-\{a\})$ where $a \in \Omega$: If $f$ can be so defined at $a$ that the extended function is holomorphic in $\Omega$, the singularity is said to be removable. If $f$ has an isolated singularity at the point $a$, it is said to have an isolated singularity at the point $a$."
+2.8,"Let $f$ be a real (or extended-real) function on a topological space. If
+
+$$
+\{x: f(x)>\alpha\}
+$$
+
+is open for every real $\alpha, f$ is said to be lower semicontinuous. If
+
+$$
+\{x: f(x)<\alpha\}
+$$
+
+is open for every real $\alpha, f$ is said to be upper semicontinuous.
+
+A real function is obviously continuous if and only if it is both upper and lower semicontinuous.
+
+The simplest examples of semicontinuity are furnished by characteristic functions:
+(a) Characteristic functions of open sets are lower semicontinuous.
+
+(b) Characteristic functions of closed sets are upper semicontinuous.
+
+The following property is an almost immediate consequence of the definitions:
+
+(c) The supremum of any collection of lower semicontinuous functions is lower semicontinuous. The infimum of any collection of upper semicontinuous functions is upper semicontinuous."
+2.9,"The support of a complex function $f$ on a topological space $X$ is the closure of the set
+
+$$
+\{x: f(x) \neq 0\} .
+$$
+
+The collection of all continuous complex functions on $X$ whose support is compact is denoted by $C_{c}(X)$.
+
+Observe that $C_{c}(X)$ is a vector space. This is due to two facts:
+
+(a) The support of $f+g$ lies in the union of the support of $f$ and the support of $g$, and any finite union of compact sets is compact.
+
+(b) The sum of two continuous complex functions is continuous, as are scalar multiples of continuous functions.
+
+(Statement and proof of Theorem 1.8 <>  hold verbatim if ""measurable function"" is replaced by ""continuous function,"" ""measurable space"" by ""topological space""; take $\Phi(s, t)=s+t$, or $\Phi(s, t)=s t$, to prove that sums and products of continuous functions are continuous.)"
+10.2,"For a complex function $f$ defined in $\Omega$: If $z_{0} \in \Omega$ and if
+
+$$
+\lim _{z \rightarrow z_{0}} \frac{f(z)-f\left(z_{0}\right)}{z-z_{0}}
+$$
+
+exists, we denote this limit by $f^{\prime}\left(z_{0}\right)$ and call it the derivative of $f$ at $z_{0}$. If $f^{\prime}\left(z_{0}\right)$ exists for every $z_{0} \in \Omega$, we say that $f$ is holomorphic (or analytic) in $\Omega$. The class of all holomorphic functions in $\Omega$ will be denoted by $H(\Omega)$."
+9.18,"A Banach space $A$ is said to be a Banach algebra if there is a multiplication defined in $A$ which satisfies the inequality
+
+$$
+\|x y\| \leq\|x\|\|y\| \quad(x \text { and } y \in A)
+$$
+
+the associative law $x(y z)=(x y) z$, the distributive laws
+
+$$
+x(y+z)=x y+x z, \quad(y+z) x=y x+z x \quad(x, y, \text { and } z \in A)
+$$
+
+and the relation
+
+$$
+(\alpha x) y=x(\alpha y)=\alpha(x y)
+$$
+
+where $\alpha$ is any scalar."
+10.27,"A sequence $\left\{f_{j}\right\}$ of functions in $\Omega$ is said to converge to $f$ uniformly on compact subsets of $\Omega$ if to every compact $K \subset \Omega$ and to every $\epsilon>0$ there corresponds an $N=N(K, \epsilon)$ such that $\left|f_{j}(z)-f(z)\right|<\epsilon$ for all $z \in K$ if $j>N$.
+
+For instance, the sequence $\left\{z^{n}\right\}$ converges to 0 uniformly on compact subsets of $D(0 ; 1)$, but the convergence is not uniform in $D(0 ; 1)$.
+
+It is uniform convergence on compact subsets which arises most naturally in connection with limit operations on holomorphic functions. The term ""almost uniform convergence"" is sometimes used for this concept."
+9.1,"['In this chapter we shall depart from the previous notation and use the letter $m$ not for Lebesgue measure on $R^{1}$ but for Lebesgue measure divided by $\\sqrt{2 \\pi}$. This convention simplifies the appearance of results such as the inversion theorem and the Plancherel theorem. Accordingly, we shall use the notation\n\n$$\n\\int_{-\\infty}^{\\infty} f(x) d m(x)=\\frac{1}{\\sqrt{2 \\pi}} \\int_{-\\infty}^{\\infty} f(x) d x\n$$\n\nwhere $d x$ refers to ordinary Lebesgue measure, and we define\n\n$$\n\\begin{aligned}\n& \\|f\\|_{p}=\\left\\{\\int_{-\\infty}^{\\infty}|f(x)|^{p} d m(x)\\right\\}^{1 / p} \\quad(1 \\leq p<\\infty), \\\\\n& (f * g)(x)=\\int_{-\\infty}^{\\infty} f(x-y) g(y) d m(y) \\quad\\left(x \\in R^{1}\\right),\n\\end{aligned}\n$$\n\nand\n\n$$\n\\hat{f}(t)=\\int_{-\\infty}^{\\infty} f(x) e^{-i x t} d m(x) \\quad\\left(t \\in R^{1}\\right)\n$$\n\nThroughout this chapter, we shall write $L^{p}$ in place of $L^{p}\\left(R^{1}\\right)$, and $C_{0}$ will denote the space of all continuous functions on $R^{1}$ which vanish at infinity.\n\nIf $f \\in L^{1}$, the integral (4) <$$ f(x)=\inf \{r: x \in A(r)\} \quad(x \in X)$$> is well defined for every real $t$. The function $\\hat{f}$ is called the Fourier transform of $f$. Note that the term ""Fourier transform"" is also applied to the mapping which takes $f$ to $\\hat{f}$.\n\nThe formal properties which are listed in Theorem 9.2 <>  depend intimately on the translation-invariance of $m$ and on the fact that for each real $\\alpha$ the mapping $x \\rightarrow e^{i \\alpha x}$ is a character of the additive group $R^{1}$. By definition, a function $\\varphi$ is a character of $R^{1}$ if $|\\varphi(t)|=1$ and if\n\n$$\n\\varphi(s+t)=\\varphi(s) \\varphi(t)\n$$\n\nfor all real $s$ and $t$. In other words, $\\varphi$ is to be a homomorphism of the additive group $R^{1}$ into the multiplicative group of the complex numbers of absolute value 1. We shall see later (in the proof of Theorem 9.2 <> 3) that every continuous character of $R^{1}$ is given by an exponential.']"
+7.17,"A complex function $f$, defined on an interval $I=[a, b]$, is said to be absolutely continuous on $I$ (briefly, $f$ is $\mathrm{AC}$ on $I$ ) if there corresponds to every $\epsilon>0$ a $\delta>0$ so that
+
+$$
+\sum_{i=1}^{n}\left|f\left(\beta_{i}\right)-f\left(\alpha_{i}\right)\right|<\epsilon
+$$
+
+for any $n$ and any disjoint collection of segments $\left(\alpha_{1}, \beta_{1}\right), \ldots,\left(\alpha_{n}, \beta_{n}\right)$ in $I$ whose lengths satisfy
+
+$$
+\sum_{i=1}^{n}\left(\beta_{i}-\alpha_{i}\right)<\delta
+$$
+
+Such an $f$ is obviously continuous: simply take $n=1$."
+12.3,"For any $\alpha \in U$, define
+
+$$
+\varphi_{\alpha}(z)=\frac{z-\alpha}{1-\bar{\alpha} z}
+$$"
+10.31,"For $m=1,2,3, \ldots$, the "" $m^{\text {th }}$ power function"" $z \rightarrow z^{m}$ is denoted by $\pi_{m}$. Each $w \neq 0$ is $\pi_{m}(z)$ for precisely $m$ distinct values of $z$ : If $w=r e^{i \theta}, r>0$, then $\pi_{m}(z)=w$ if and only if $z=r^{1 / m} e^{i(\theta+2 k \pi) / m}, k=1, \ldots, m$. Note also that each $\pi_{m}$ is an open mapping: If $V$ is open and does not contain 0 , then $\pi_{m}(V)$ is open by Theorem 10.30 <>  <>  . On the other hand, $\pi_{m}(D(0 ; r))=D\left(0 ; r^{m}\right)$. Compositions of open mappings are clearly open. In particular, $\pi_{m} \circ \varphi$ is open, by Theorem 10.30 <>  <> , if $\varphi^{\prime}$ has no zero. The following theorem (which contains the more detailed version of the open mapping theorem that was mentioned prior to Lemma 10.29 <> ) states a converse: Every nonconstant holomorphic function in a region is locally of the form $\pi_{m} \circ \varphi$, except for an additive constant."
+9.7,"A Pair of Auxiliary Functions In the proof of the inversion theorem it will be convenient to know a positive function $H$ which has a positive Fourier transform whose integral is easily calculated. Among the many possibilities we choose one which is of interest in connection with harmonic functions in a half plane. (See Exercise 25, Chap. 11.)
+
+Put
+
+$$
+H(t)=e^{-|t|}
+$$
+
+and define
+
+$$
+h_{\lambda}(x)=\int_{-\infty}^{\infty} H(\lambda t) e^{i t x} d m(t) \quad(\lambda>0)
+$$
+
+A simple computation gives
+
+$$
+h_{\lambda}(x)=\sqrt{\frac{2}{\pi}} \frac{\lambda}{\lambda^{2}+x^{2}}
+$$
+
+and hence
+
+$$
+\int_{-\infty}^{\infty} h_{\lambda}(x) d m(x)=1
+$$
+
+Note also that $0<H(t) \leq 1$ and that $H(\lambda t) \rightarrow 1$ as $\lambda \rightarrow 0$."
+10.1 (a),"For $r>0$ and $a$ a complex number: $D(a ; r)=\{z:|z-a|<r\}$ is the open circular disc with center at $a$ and radius $r$. $\bar{D}(a ; r)$ is the closure of $D(a ; r)$, and $D^{\prime}(a ; r)=\{z: 0<|z-a|<r\}$ is the punctured disc with center at $a$ and radius $r$."
+10.1 (b),"For a topological space $X$ and a set $E$: A set $E$ in a topological space $X$ is said to be not connected if $E$ is the union of two nonempty sets $A$ and $B$ such that
+
+$$
+\bar{A} \cap B=\varnothing=A \cap \bar{B}
+$$
+
+If $A$ and $B$ are as above, and if $V$ and $W$ are the complements of $\bar{A}$ and $\bar{B}$, respectively, it follows that $A \subset W$ and $B \subset V$. Hence
+
+$$
+E \subset V \cup W, \quad E \cap V \neq \varnothing, \quad E \cap W \neq \varnothing, \quad E \cap V \cap W=\varnothing
+$$
+
+Conversely, if open sets $V$ and $W$ exist such that (4) <$$ f(x)=\inf \{r: x \in A(r)\} \quad(x \in X)$$> holds, it is easy to see that $E$ is not connected, by taking $A=E \cap W, B=E \cap V$.
+
+If $E$ is closed and not connected, then (3) <$$
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]$$> shows that $E$ is the union of two disjoint nonempty closed sets; for if $\bar{A} \subset A \cup B$ and $\bar{A} \cap B=\varnothing$, then $\bar{A}=A$.
+
+If $E$ is open and not connected, then (4) <$$ f(x)=\inf \{r: x \in A(r)\} \quad(x \in X)$$> shows that $E$ is the union of two disjoint nonempty open sets, namely $E \cap V$ and $E \cap W$.
+
+Each set consisting of a single point is obviously connected. If $x \in E$, the family $\Phi_{x}$ of all connected subsets of $E$ that contain $x$ is therefore not empty. The union of all members of $\Phi_{x}$ is easily seen to be connected, and to be a maximal connected subset of $E$. These sets are called the components of $E$. Any two components of $E$ are thus disjoint, and $E$ is the union of its components.
+
+By a region we shall mean a nonempty connected open subset of the complex plane. Since each open set $\Omega$ in the plane is a union of discs, and since all discs are connected, each component of $\Omega$ is open. Every plane open set is thus a union of disjoint regions. The letter $\Omega$ will from now on denote a plane open set."
+11.27,"Let $\mathscr{F}$ be a collection of complex functions on a metric space $X$ with metric $\rho$:
+
+We say that $\mathscr{F}$ is equicontinuous if to every $\epsilon>0$ corresponds a $\delta>0$ such that $|f(x)-f(y)|<\epsilon$ for every $f \in \mathscr{F}$ and for all pairs of points $x, y$ with $\rho(x, y)<\delta$. (In particular, every $f \in \mathscr{F}$ is then uniformly continuous.)
+
+We say that $\mathscr{F}$ is pointwise bounded if to every $x \in X$ corresponds an $M(x)<\infty$ such that $|f(x)| \leq M(x)$ for every $f \in \mathscr{F}$."
+18.8,"For any $x \in A$, the spectral radius $\rho(x)$ of $x$ is the radius of the smallest closed disc with center at the origin which contains $\sigma(x)$ (sometimes this is also called the spectral norm of $x$; see Exercise 14):
+
+$$
+\rho(x)=\sup \{|\lambda|: \lambda \in \sigma(x)\} .
+$$"
+14.5,"For a region $\Omega$ and $\mathscr{F} \subset H(\Omega)$: We call $\mathscr{F}$ a normal family if every sequence of members of $\mathscr{F}$ contains a subsequence which converges uniformly on compact subsets of $\Omega$. The limit function is not required to belong to $\mathscr{F}$.
+
+(Sometimes a wider definition is adopted, by merely requiring that every sequence in $\mathscr{F}$ either converges or tends to $\infty$, uniformly on compact subsets of $\Omega$. This is well adapted for dealing with meromorphic functions.)"
+2.3 (a),"For a topological space $X$: A set $E \subset X$ is closed if its complement $E^{c}$ is open. (Hence $\varnothing$ and $X$ are closed, finite unions of closed sets are closed, and arbitrary intersections of closed sets are closed.)"
+2.3 (b),"For a topological space $X$ and a set $E \subset X$: The closure $\bar{E}$ of a set $E$ is the smallest closed set in $X$ which contains $E$. (The following argument proves the existence of $\bar{E}$ : The collection $\Omega$ of all closed subsets of $X$ which contain $E$ is not empty, since $X \in \Omega$; let $\bar{E}$ be the intersection of all members of $\Omega$.)"
+2.3 (c),"For a topological space $X$ and a set $K \subset X$: A set $K$ is compact if every open cover of $K$ contains a finite subcover. More explicitly, the requirement is that if $\{V_{\alpha}\}$ is a collection of open sets whose union contains $K$, then the union of some finite subcollection of $\{V_{\alpha}\}$ also contains $K$. In particular, if $X$ is itself compact, then $X$ is called a compact space."
+2.3 (d),"For a topological space $X$ and a point $p \in X$: A neighborhood of a point $p$ is any open subset of $X$ which contains $p$. (The use of this term is not quite standardized; some use ""neighborhood of $p$ "" for any set which contains an open set containing p.)"
+2.3 (e),"For a topological space $X$: $X$ is a Hausdorff space if the following is true: If $p \in X, q \in X$, and $p \neq q$, then $p$ has a neighborhood $U$ and $q$ has a neighborhood $V$ such that $U \cap V=\varnothing$."
+2.3 (f),"For a topological space $X$: $X$ is locally compact if every point of $X$ has a neighborhood whose closure is compact. Obviously, every compact space is locally compact. We recall the Heine-Borel theorem: The compact subsets of a euclidean space $R^{n}$ are precisely those that are closed and bounded ([26], $\dagger$ Theorem 2.41 <> ). From this it follows easily that $R^{n}$ is a locally compact Hausdorff space. Also, every metric space is a Hausdorff space."
+14.10,"$
+\mathscr{S}$ is the class of all $f \in H(U)$ which are one-to-one in $U$ and which satisfy
+
+$$
+f(0) <$$nded entire \mathscr{B}(H)-valued function. By Liouville's theorem 3.32, =T, for every \lambda \in \mathscr{C}. Hence  becomes$$>=0, \quad f^{\prime}(0) <$$nded entire \mathscr{B}(H)-valued function. By Liouville's theorem 3.32, =T, for every \lambda \in \mathscr{C}. Hence  becomes$$>=1
+$$
+
+Thus every $f \in \mathscr{S}$ has a power series expansion
+
+$$
+f(z)=z+\sum_{n=2}^{\infty} a_{n} z^{n} \quad(z \in U)
+$$
+
+The class $\mathscr{S}$ is not closed under addition or multiplication, but has many other interesting properties. We shall develop only a few of these in this section. Theorem 14.15 <>  will be used in the proof of Mergelyan's theorem, in Chap. 20."
+15.14,"The ideal $\left[g_{1}, \ldots, g_{n}\right]$ generated by the functions $g_{1}, \ldots, g_{n} \in H(\Omega)$ is the set of all functions of the form $\Sigma f_{i} g_{i}$, where $f_{i} \in H(\Omega)$ for $i=1, \ldots, n$ A principal ideal is one that is generated by a single function. Note that $[1]=H(\Omega)$. If $f \in H(\Omega), \alpha \in \Omega$, and $f$ is not identically 0 in a neighborhood of $\alpha$, the multiplicity of the zero of $f$ at $\alpha$ will be denoted by $m(f ; \alpha)$. If $f(\alpha) \neq 0$, then $m(f ; \alpha)=0$, as in Theorem 15.6 <> ."
+14.1,"Each complex number $z \neq 0$ determines a direction from the origin, defined by the point
+
+$$
+A[z]=\frac{z}{|z|}
+$$
+on the unit circle.
+
+Suppose $f$ is a mapping of a region $\Omega$ into the plane, $z_{0} \in \Omega$, and $z_{0}$ has a deleted neighborhood $D^{\prime}\left(z_{0} ; r\right) \subset \Omega$ in which $f(z) \neq f\left(z_{0}\right)$. We say that $f$ preserves angles at $z_{0}$ if
+
+$$
+\lim _{r \rightarrow 0} e^{-i \theta} A\left[f\left(z_{0}+r e^{i \theta}\right)-f\left(z_{0}\right)\right] \quad(r>0)
+$$
+
+exists and is independent of $\theta$.
+
+In less precise language, the requirement is that for any two rays $L^{\prime}$ and $L^{\prime \prime}$, starting at $z_{0}$, the angle which their images $f\left(L^{\prime}\right)$ and $f\left(L^{\prime \prime}\right)$ make at $f\left(z_{0}\right)$ is the same as that made by $L^{\prime}$ and $L^{\prime \prime}$, in size as well as in orientation.
+
+The property of preserving angles at each point of a region is characteristic of holomorphic functions whose derivative has no zero in that region. This is a corollary of Theorem 14.2 <>  and is the reason for calling holomorphic functions with nonvanishing derivative conformal mappings."
+15.2,"Suppose $\left\{u_{n}\right\}$ is a sequence of complex numbers,
+
+$$
+p_{n}=(1+u_{1})(1+u_{2}) \cdots(1+u_{n})
+$$
+
+and $p=\lim _{n \rightarrow \infty} p_{n}$ exists. Then we write
+
+$$
+p=\prod_{n=1}^{\infty}(1+u_{n})
+$$
+
+The $p_{n}$ are the partial products of the infinite product (2) <$$
+\[
+r=\sum_{n=1}^{\infty} c_{n}(r) 2^{-n}
+\]$$>. We shall say that the infinite product (2) <$$
+\[
+r=\sum_{n=1}^{\infty} c_{n}(r) 2^{-n}
+\]$$> converges if the sequence $\left\{p_{n}\right\}$ converges."
+15.3,"If $u_{1}, \ldots, u_{N}$ are complex numbers, and if
+
+$$
+p_{N}=\prod_{n=1}^{N}(1+u_{n}), \quad p_{N}^{*}=\prod_{n=1}^{N}(1+\left|u_{n}\right|)
+$$
+
+then
+
+$$
+p_{N}^{*} \leq \exp \left(\left|u_{1}\right|+\cdots+\left|u_{N}\right|\right)
+$$
+
+and
+
+$$
+\left|p_{N}-1\right| \leq p_{N}^{*}-1
+$$"
+14.16,"A boundary point $\beta$ of a simply connected plane region $\Omega$ will be called a simple boundary point of $\Omega$ if $\beta$ has the following property: To every sequence $\left\{\alpha_{n}\right\}$ in $\Omega$ such that $\alpha_{n} \rightarrow \beta$ as $n \rightarrow \infty$ there corresponds a curve $\gamma$, with parameter interval $[0,1]$, and a sequence $\left\{t_{n}\right\}, 0<t_{1}<t_{2}<$ $\cdots, t_{n} \rightarrow 1$, such that $\gamma\left(t_{n}\right)=\alpha_{n}(n=1,2,3, \ldots)$ and $\gamma(t) \in \Omega$ for $0 \leq t<1$."
+15.7,"For $p=0,1,2, \ldots$:
+
+$$
+E_{p}(z)=(1-z) \exp \left\{z+\frac{z^{2}}{2}+\cdots+\frac{z^{p}}{p}\right\}
+$$
+
+These functions, introduced by Weierstrass, are sometimes called elementary factors. Their only zero is at $z=1$. Their utility depends on the fact that they are close to 1 if $|z|<1$ and $p$ is large, although $E_{p}(1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$>=0$."
+16.1,"For an open circular disc $D$, a function $f \in H(D)$, and a boundary point $\beta$ of $D$: We call $\beta$ a regular point of $f$ if there exists a disc $D_{1}$ with center at $\beta$ and a function $g \in H\left(D_{1}\right)$ such that $g(z)=f(z)$ for all $z \in D \cap D_{1}$. Any boundary point of $D$ which is not a regular point of $f$ is called a singular point of $f$.
+
+It is clear from the definition that the set of all regular points of $f$ is an open (possibly empty) subset of the boundary of $D."
+16.12,"For a topological space $X$, points $\alpha$ and $\beta$ in $X$, and a continuous mapping $\varphi$ of the unit square $I^{2}=I \times I$ (where $I=[0,1]$ ) into $X$ such that $\varphi(0, t)=\alpha$ and $\varphi(1, t)=\beta$ for all $t \in I$: The curves $\gamma_{t}$ defined by
+
+$$
+\gamma_{t}(s)=\varphi(s, t) \quad(s \in I, t \in I)
+$$
+
+are then said to form a one-parameter family $\left\{\gamma_{t}\right\}$ of curves from $\alpha$ to $\beta$ in $X$."
+1.18 (a),"A positive measure is a function $\mu$, defined on a $\sigma$-algebra $\mathfrak{M}$, whose range is in $[0, \infty]$ and which is countably additive. This means that if $\left\{A_{i}\right\}$ is a disjoint countable collection of members of $\mathfrak{M}$, then
+
+$$
+\mu\left(\bigcup_{i=1}^{\infty} A_{i}\right)=\sum_{i=1}^{\infty} \mu\left(A_{i}\right)
+$$
+
+To avoid trivialities, we shall also assume that $\mu(A)<\infty$ for at least one $A \in \mathfrak{M}$."
+1.18 (b),A measure space is a measurable space which has a positive measure defined on the $\sigma$-algebra of its measurable sets.
+1.18 (c),A complex measure is a complex-valued countably additive function defined on a $\sigma$-algebra.
+17.14,"An inner function is a function $M \in H^{\infty}$ for which $\left|M^{*}\right|=1$ a.e. on $T$. (As usual, $M^{*}$ denotes the radial limits of $M$.)"
+17.14 (outer function),"If $\varphi$ is a positive measurable function on $T$ such that $\log \varphi \in L^{1}(T)$, and if
+
+$$
+Q(z)=c \exp \left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi} \frac{e^{i t}+z}{e^{i t}-z} \log \varphi\left(e^{i t}\right) d t\right\}
+$$
+
+for $z \in U$, then $Q$ is called an outer function. Here $c$ is a constant, $|c|=1$."
+16.3,"If $f \in H(U)$ and if every point of $T$ is a singular point of $f$, then $T$ is said to be the natural boundary of $f$. In this case, $f$ has no holomorphic extension to any region which properly contains $U$."
+1.15,"The above functions $f^{+}$and $f^{-}$are called the positive and negative parts of $f$. We have $|f|=f^{+}+f^{-}$and $f=f^{+}-f^{-}$, a standard representation of $f$ as a difference of two nonnegative functions, with a certain minimality property:"
+19.8,"A class $C\left\{M_{n}\right\}$ is said to be quasi-analytic if the conditions
+
+$$
+f \in C\left\{M_{n}\right\}, \quad\left(D^{n} f\right)(0) <$$nded entire \mathscr{B}(H)-valued function. By Liouville's theorem 3.32, =T, for every \lambda \in \mathscr{C}. Hence  becomes$$>=0 \quad(\text { for } n=0,1,2, \ldots)
+$$
+
+imply that $f(x)=0$ for all $x \in R^{1}$.
+
+The content of the definition is of course unchanged if $\left(D^{n} f\right)(0) <$$nded entire \mathscr{B}(H)-valued function. By Liouville's theorem 3.32, =T, for every \lambda \in \mathscr{C}. Hence  becomes$$>$ is replaced by $\left(D^{n} f\right)\left(x_{0}\right)$, where $x_{0}$ is any given point.
+
+The quasi-analytic classes are thus the ones which have the uniqueness property we mentioned in Sec. 19.6. One of these classes is very intimately related to holomorphic functions:"
+16.9 (a),"A function element is an ordered pair $(f, D)$, where $D$ is an open circular disc and $f \in H(D)$."
+16.9 (b),"Two function elements $\left(f_{0}, D_{0}\right)$ and $\left(f_{1}, D_{1}\right)$ are direct continuations of each other if two conditions hold: $D_{0} \cap D_{1} \neq \varnothing$, and $f_{0}(z)=f_{1}(z)$ for all $z \in D_{0} \cap D_{1}$. In this case we write
+
+$$
+\left(f_{0}, D_{0}\right) \sim\left(f_{1}, D_{1}\right)
+$$"
+16.9 (c),"A chain is a finite sequence $\mathscr{C}$ of discs, say $\mathscr{C}=\left\{D_{0}, D_{1}, \ldots, D_{n}\right\}$, such that $D_{i-1} \cap D_{i} \neq \varnothing$ for $i=1, \ldots, n$. If $\left(f_{0}, D_{0}\right)$ is given and if there exist elements $\left(f_{i}, D_{i}\right)$ such that $\left(f_{i-1}, D_{i-1}\right) \sim\left(f_{i}, D_{i}\right)$ for $i=1, \ldots, n$, then $\left(f_{n}, D_{n}\right)$ is said to be the analytic continuation of $\left(f_{0}, D_{0}\right)$ along $\mathscr{C$.}"
+16.9 (d),"If $\left(f_{n}, D_{n}\right)$ is the continuation of $\left(f_{0}, D_{0}\right)$ along $\mathscr{C}$, and if $D_{n} \cap D_{0} \neq \varnothing$, it need not be true that $\left(f_{0}, D_{0}\right) \sim\left(f_{n}, D_{n}\right)$; in other words, the relation $\sim$ is not transitive. The simplest example of this is furnished by the square-root function: Let $D_{0}, D_{1}$, and $D_{2}$ be discs of radius 1 , with centers $1, \omega$, and $\omega^{2}$, where $\omega^{3}=1$, choose $f_{j} \in H\left(D_{j}\right)$ so that $f_{j}^{2}(z)=z$ and so that $\left(f_{0}, D_{0}\right) \sim$ $\left(f_{1}, D_{1}\right),\left(f_{1}, D_{1}\right) \sim\left(f_{2}, D_{2}\right)$. In $D_{0} \cap D_{2}$ we have $f_{2}=-f_{0} \neq f_{0}$."
+1.23,"If $s: X \rightarrow[0, \infty)$ is a measurable simple function, of the form
+
+$$
+s=\sum_{i=1}^{n} \alpha_{i} \chi_{A_{i}}
+$$
+
+where $\alpha_{1}, \ldots, \alpha_{n}$ are the distinct values of $s$ (compare Definition 1.16 <> ), and if $E \in \mathfrak{M}$, we define
+
+$$
+\int_{E} s d \mu=\sum_{i=1}^{n} \alpha_{i} \mu\left(A_{i} \cap E\right)
+$$
+
+The convention $0 \cdot \infty=0$ is used here; it may happen that $\alpha_{i}=0$ for some $i$ and that $\mu\left(A_{i} \cap E\right)=\infty$.
+
+If $f: X \rightarrow[0, \infty]$ is measurable, and $E \in \mathfrak{M}$, we define
+
+$$
+\int_{E} f d \mu=\sup \int_{E} s d \mu
+$$
+
+the supremum being taken over all simple measurable functions $s$ such that $0 \leq s \leq f$.
+
+The left member of (3) <$$
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]$$> is called the Lebesgue integral of $f$ over $E$, with respect to the measure $\mu$. It is a number in $[0, \infty]$.
+
+Observe that we apparently have two definitions for $\int_{E} f d \mu$ if $f$ is simple, namely, (2) <$$
+\[
+r=\sum_{n=1}^{\infty} c_{n}(r) 2^{-n}
+\]$$> and (3) <$$
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]$$>. However, these assign the same value to the integral, since $f$ is, in this case, the largest of the functions $s$ which occur on the right of (3) <$$
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]$$>."
+4.1,"['A complex vector space $H$ is called an inner product space (or unitary space) if to each ordered pair of vectors $x$ and $y \\in H$ there is associated a complex number $(x, y)$, the so-called ""inner product"" (or ""scalar product"") of $x$ and $y$, such that the following rules hold:\n\n(a) $(y, x)=(\\overline{x, y)}$. (The bar denotes complex conjugation.)\n\n(b) $(x+y, z)=(x, z)+(y, z)$ if $x, y$, and $z \\in H$.\n\n(c) $(\\alpha x, y)=\\alpha(x, y)$ if $x$ and $y \\in H$ and $\\alpha$ is a scalar.\n\n(d) $(x, x) \\geq 0$ for all $x \\in H$.\n\n(e) $(x, x)=0$ only if $x=0$.\n\nLet us list some immediate consequences of these axioms:\n\n(c) implies that $(0, y)=0$ for all $y \\in H$.\n\n(b) and (c) may be combined into the statement: For every $y \\in H$, the mapping $x \\rightarrow(x, y)$ is a linear functional on $H$.\n\n$(a)$ and $(c)$ show that $(x, \\alpha y)=\\bar{\\alpha}(x, y)$.\n\n$(a)$ and $(b)$ imply the second distributive law:\n\n$$\n(z, x+y)=(z, x)+(z, y)\n$$\n\nBy $(d)$, we may define $\\|x\\|$, the norm of the vector $x \\in H$, to be the nonnegative square root of $(x, x)$. Thus\n\n$$\n\\|x\\|^{2}=(x, x) .\n$$']"
+17.1,"['A function $u$ defined in an open set $\\Omega$ in the plane is said to be subharmonic if it has the following four properties.\n\n(a) $-\\infty \\leq u(z)<\\infty$ for all $z \\in \\Omega$.\n\n(b) $u$ is upper semicontinuous in $\\Omega$.\n\n(c) Whenever $\\bar{D}(a ; r) \\subset \\Omega$, then\n\n$$\nu(a) \\leq \\frac{1}{2 \\pi} \\int_{-\\pi}^{\\pi} u\\left(a+r e^{i \\theta}\\right) d \\theta\n$$\n\n(d) None of the integrals in (c) is $-\\infty$.\n\nNote that the integrals in $(c)$ always exist and are not $+\\infty$, since $(a)$ and $(b)$ imply that $u$ is bounded above on every compact $K \\subset \\Omega$. [Proof: If $K_{n}$ is the set of all $z \\in K$ at which $u(z) \\geq n$, then $K \\supset K_{1} \\supset K_{2} \\cdots$, so either $K_{n}=\\varnothing$ for some $n$, or $\\cap K_{n} \\neq \\varnothing$, in which case $u(z)=\\infty$ for some $z \\in K$.] Hence $(d)$ says that the integrands in $(c)$ belong to $L^{1}(T)$.']"
+18.1,"A complex algebra is a vector space $A$ over the complex field in which an associative and distributive multiplication is defined, i.e.,
+
+$$
+x(y z)=(x y) z, \quad(x+y) z=x z+y z, \quad x(y+z)=x y+x z
+$$
+
+for $x, y$, and $z \in A$, and which is related to scalar multiplication so that
+
+$$
+\alpha(x y)=x(\alpha y)=(\alpha x) y
+$$
+
+for $x$ and $y \in A, \alpha$ a scalar.
+
+If there is a norm defined in $A$ which makes $A$ into a normed linear space and which satisfies the multiplicative inequality
+
+$$
+\|x y\| \leq\|x\|\|y\| \quad(x \text { and } y \in A)
+$$
+
+then $\boldsymbol{A}$ is a normed complex algebra. If, in addition, $\boldsymbol{A}$ is a complete metric space relative to this norm, i.e., if $\boldsymbol{A}$ is a Banach space, then we call $\boldsymbol{A}$ a Banach algebra.
+
+The inequality (3) <$$
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]$$> makes multiplication a continuous operation. This means that if $x_{n} \rightarrow x$ and $y_{n} \rightarrow y$, then $x_{n} y_{n} \rightarrow x y$, which follows from (3) <$$
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]$$> and the identity
+
+$$
+x_{n} y_{n}-x y=\left(x_{n}-x\right) y_{n}+x\left(y_{n}-y\right) .
+$$
+
+Note that we have not required that $A$ be commutative, i.e., that $x y=y x$ for all $x$ and $y \in A$, and we shall not do so except when explicitly stated.
+
+However, we shall assume that $A$ has a unit. This is an element $e$ such that
+
+$$
+x e=e x=x \quad(x \in A) .
+$$
+
+It is easily seen that there is at most one such $e\left(e^{\prime}=e^{\prime} e=e\right)$ and that $\|e\| \geq 1$, by (3) <$$
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]$$>. We shall make the additional assumption that
+
+$$
+\|e\|=1
+$$
+
+An element $x \in A$ will be called invertible if $x$ has an inverse in $A$, i.e., if there exists an element $x^{-1} \in A$ such that
+
+$$
+x^{-1} x=x x^{-1}=e
+$$
+
+Again, it is easily seen that no $x \in A$ has more than one inverse.
+
+If $x$ and $y$ are invertible in $A$, so are $x^{-1}$ and $x y$, since $(x y)^{-1}=y^{-1} x^{-1}$. The invertible elements therefore form a group with respect to multiplication.
+
+The spectrum of an element $x \in A$ is the set of all complex numbers $\lambda$ such that $x-\lambda e$ is not invertible. We shall denote the spectrum of $x$ by $\sigma(x)$."
+18.2,"The theory of Banach algebras contains a great deal of interplay between algebraic properties on the one hand and topological ones on the other. We already saw an example of this in Theorem 9.21 <> , and shall see others. There are also close relations between Banach algebras and holomorphic functions: The easiest proof of the fundamental fact that $\sigma(x)$ is never empty depends on Liouville's theorem concerning entire functions, and the spectral radius formula follows naturally from theorems about power series. This is one reason for restricting our attention to complex Banach algebras. The theory of real Banach algebras (we omit the definition, which should be obvious) is not so satisfactory.
+
+## The Invertible Elements
+
+In this section, $A$ will be a complex Banach algebra with unit $e$, and $G$ will be the set of all invertible elements of $A$."
+7.22,"Suppose $V$ is an open set in $R^{k}, T$ maps $V$ into $R^{k}$, and $x \in V$. If there exists a linear operator $A$ on $R^{k}$ (i.e., a linear mapping of $R^{k}$ into $R^{k}$, as in Definition 2.1 <> ) such that
+
+$$
+\lim _{h \rightarrow 0} \frac{|T(x+h)-T(x)-A h|}{|h|}=0
+$$
+
+(where, of course, $h \in R^{k}$ ), then we say that $T$ is differentiable at $x$, and define
+
+$$
+T^{\prime}(x)=A \text {. }
+$$
+
+The linear operator $T^{\prime}(x)$ is called the derivative of $T$ at $x$. (One shows easily that there is at most one linear $\boldsymbol{A}$ that satisfies the preceding requirements; thus it is legitimate to talk about the derivative of $T$.) The term differential is also often used for $T^{\prime}(x)$.
+
+The point of (1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$> is of course that the difference $T(x+h)-T(x)$ is approximated by $T^{\prime}(x) h$, a linear function of $h$.
+
+Since every real number $\alpha$ gives rise to a linear operator on $R^{1}$ (mapping $h$ to $\alpha h$ ), our definition of $T^{\prime}(x)$ coincides with the usual one when $k=1$.
+
+When $A: R^{k} \rightarrow R^{k}$ is linear, Theorem $2.20(e)$ shows that there is a number $\Delta(A)$ such that
+
+$$
+m(A(E))=\Delta(A) m(E)
+$$
+
+for all measurable sets $E \subset R^{k}$. Since
+
+$$
+A^{\prime}(x)=A \quad\left(x \in R^{k}\right)
+$$
+
+and since every differentiable transformation $T$ can be locally approximated by a constant plus a linear transformation, one may conjecture that
+
+$$
+\frac{m(T(E))}{m(E)} \sim \Delta\left(T^{\prime}(x)\right)
+$$
+
+for suitable sets $E$ that are close to $x$. This will be proved in Theorem 7.24 <> , and furnishes the motivation for Theorem 7.26 <> .
+
+Recall that $\Delta(A)=|\operatorname{det} A|$ was proved in Sec. 2.23. When $T$ is differentiable at $x$, the determinant of $T^{\prime}(x)$ is called the Jacobian of $T$ at $x$, and is denoted by $J_{T}(x)$. Thus
+
+$$
+\Delta\left(T^{\prime}(x)\right)=\left|J_{T}(x)\right|
+$$"
+10.41,"A function $f$ is said to be meromorphic in an open set $\Omega$ if there is a set $A \subset \Omega$ such that
+
+(a) $A$ has no limit point in $\Omega$,
+
+(b) $f \in H(\Omega-A)$,
+
+(c) $f$ has a pole at each point of $A$.
+
+Note that the possibility $A=\varnothing$ is not excluded. Thus every $f \in H(\Omega)$ is meromorphic in $\Omega$.
+
+Note also that $(a)$ implies that no compact subset of $\Omega$ contains infinitely many points of $A$, and that $A$ is therefore at most countable.
+
+If $f$ and $A$ are as above, if $a \in A$, and if
+
+$$
+Q(z)=\sum_{k=1}^{m} c_{k}(z-a)^{-k}
+$$
+
+is the principal part of $f$ at $a$, as defined in Theorem 10.21 <>  (i.e., if $f-Q$ has a removable singularity at $a$ ), then the number $c_{1}$ is called the residue of $f$ at $a$ :
+
+$$
+c_{1}=\operatorname{Res}(f ; a) .
+$$
+
+If $\Gamma$ is a cycle and $a \notin \Gamma^{*},(1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$>$ implies
+
+$$
+\frac{1}{2 \pi i} \int_{\Gamma} Q(z) d z=c_{1} \operatorname{Ind}_{\Gamma}(a)=\operatorname{Res}(Q ; a) \operatorname{Ind}_{\Gamma}(a)
+$$"
+4.7,"A subset $M$ of a vector space $V$ is called a subspace of $V$ if $M$ is itself a vector space, relative to the addition and scalar multiplication which are defined in $V$. A necessary and sufficient condition for a set $M \subset V$ to be a subspace is that $x+y \in M$ and $\alpha x \in M$ whenever $x$ and $y \in M$ and $\alpha$ is a scalar.
+
+In the vector space context, the word ""subspace"" will always have this meaning. Sometimes, for emphasis, we may use the term ""linear subspace"" in place of subspace.
+
+A closed subspace of $H$ is a subspace that is a closed set relative to the topology induced by the metric of $H$.
+
+Note that if $M$ is a subspace of $H$, so is its closure $\bar{M}$. To see this, pick $x$ and $y$ in $\bar{M}$ and let $\alpha$ be a scalar. There are sequences $\left\{x_{n}\right\}$ and $\left\{y_{n}\right\}$ in $M$ that converge to $x$ and $y$, respectively. It is then easy to verify that $x_{n}+y_{n}$ and $\alpha x_{n}$ converge to $x+y$ and $\alpha x$, respectively. Thus $x+y \in \bar{M}$ and $\alpha x \in \bar{M}$."
+4.8,"A set $E$ in a vector space $V$ is said to be convex if it has the following geometric property: Whenever $x \in E, y \in E$, and $0<t<1$, the point
+
+$$
+z_{t}=(1-t) x+t y
+$$
+
+also lies in $E$. As $t$ runs from 0 to 1 , one may visualize $z_{t}$ as describing a straight line segment in $V$, from $x$ to $y$. Convexity requires that $E$ contain the segments between any two of its points.
+
+It is clear that every subspace of $V$ is convex.
+
+Also, if $E$ is convex, so is each of its translates
+
+$$
+E+x=\{y+x: y \in E\} .
+$$"
+4.9,"If $(x, y)=0$ for some $x$ and $y \in H$, we say that $x$ is orthogonal to $y$, and sometimes write $x \perp y$. Since $(x, y)=0$ implies $(y, x)=0$, the relation $\perp$ is symmetric.
+
+Let $x^{\perp}$ denote the set of all $y \in H$ which are orthogonal to $x$; and if $M$ is a subspace of $H$, let $M^{\perp}$ be the set of all $y \in H$ which are orthogonal to every $x \in M$.
+
+Note that $x^{\perp}$ is a subspace of $H$, since $x \perp y$ and $x \perp y^{\prime}$ implies $x \perp\left(y+y^{\prime}\right)$ and $x \perp \alpha y$. Also, $x^{\perp}$ is precisely the set of points where the continuous function $y \rightarrow(x, y)$ is 0 . Hence $x^{\perp}$ is a closed subspace of $H$. Since
+
+$$
+M^{\perp}=\bigcap_{x \in M} x^{\perp}
+$$
+
+$M^{\perp}$ is an intersection of closed subspaces, and it follows that $M^{\perp}$ is a closed subspace of $H$."
+4.23,"Let $T$ be the unit circle in the complex plane, i.e., the set of all complex numbers of absolute value 1. If $F$ is any function on $T$ and if $f$ is defined on $R^{1}$ by
+
+$$
+f(t)=F\left(e^{i t}\right)
+$$
+
+then $f$ is a periodic function of period $2 \pi$. This means that $f(t+2 \pi)=f(t)$ for all real $t$. Conversely, if $f$ is a function on $R^{1}$, with period $2 \pi$, then there is a function $F$ on $T$ such that the above holds. Thus we may identify functions on $T$ with $2 \pi$-periodic functions on $R^{1}$; and, for simplicity of notation, we shall sometimes write $f(t)$ rather than $f\left(e^{i t}\right)$, even if we think of $f$ as being defined on $T$.
+
+With these conventions in mind, we define $L^{p}(T)$, for $1 \leq p<\infty$, to be the class of all complex, Lebesgue measurable, $2 \pi$-periodic functions on $R^{1}$ for which the norm
+
+$$
+\|f\|_{p}=\left\{\frac{1}{2 \pi} \int_{-\pi}^{\pi}|f(t)|^{p} d t\right\}^{1 / p}
+$$
+
+is finite.
+
+In other words, we are looking at $L^{p}(\mu)$, where $\mu$ is Lebesgue measure on $[0,2 \pi]$ (or on $T$ ), divided by $2 \pi$. $L^{\infty}(T)$ will be the class of all $2 \pi$-periodic members of $L^{\infty}\left(R^{1}\right)$, with the essential supremum norm, and $C(T)$ consists of all continuous complex functions on $T$ (or, equivalently, of all continuous, complex, $2 \pi$-periodic functions on $R^{1}$ ), with norm
+
+$$
+\|f\|_{\infty}=\sup |f(t)|,
+$$
+
+The factor $1 /(2 \pi)$ in the norm definition simplifies the formalism for $L^{p}(T)$ spaces. A trigonometric polynomial is a finite sum of the form
+
+$$
+f(t)=a_{0}+\sum_{n=1}^{N}\left(a_{n} \cos n t+b_{n} \sin n t\right) \quad\left(t \in R^{1}\right)
+$$
+
+where $a_{0}, a_{1}, \ldots, a_{N}$ and $b_{1}, \ldots, b_{N}$ are complex numbers. On account of the Euler identities, this can also be written in the form
+
+$$
+f(t)=\sum_{n=-N}^{N} c_{n} e^{i n t}
+$$
+
+which is more convenient for most purposes. It is clear that every trigonometric polynomial has period $2 \pi$.
+
+We shall denote the set of all integers (positive, zero, and negative) by $Z$, and put
+
+$$
+u_{n}(t)=e^{i n t} \quad(n \in Z)
+$$
+
+If we define the inner product in $L^{2}(T)$ by
+
+$$
+(f, g)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(t) \overline{g(t)} d t
+$$
+
+[note that this is in agreement with the norm definition], an easy computation shows that
+
+$$
+\left(u_{n}, u_{m}\right)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} e^{i(n-m) t} d t= \begin{cases}1 & \text { if } n=m \\ 0 & \text { if } n \neq m\end{cases}
+$$
+
+Thus $\left\{u_{n}: n \in Z\right\}$ is an orthonormal set in $L^{2}(T)$, usually called the trigonometric system."
+2.19,"Euclidean $k$-dimensional space $R^{k}$ is the set of all points $x=\left(\xi_{1}, \ldots, \xi_{k}\right)$ whose coordinates $\xi_{i}$ are real numbers, with the following algebraic and topological structure:
+
+If $x=\left(\xi_{1}, \ldots, \xi_{k}\right), y=\left(\eta_{1}, \ldots, \eta_{k}\right)$, and $\alpha$ is a real number, $x+y$ and $\alpha x$ are defined by
+
+$$
+x+y=\left(\xi_{1}+\eta_{1}, \ldots, \xi_{k}+\eta_{k}\right), \quad \alpha x=\left(\alpha \xi_{1}, \ldots, \alpha \xi_{k}\right)
+$$
+
+This makes $R^{k}$ into a real vector space. If $x \cdot y=\sum \xi_{i} \eta_{i}$ and $|x|=(x \cdot x)^{1 / 2}$, the Schwarz inequality $|x \cdot y| \leq|x||y|$ leads to the triangle inequality
+
+$$
+|x-y| \leq|x-z|+|z-y|
+$$
+
+hence we obtain a metric by setting $\rho(x, y)=|x-y|$. We assume that these facts are familiar and shall prove them in greater generality in Chap. 4.
+
+If $E \subset R^{k}$ and $x \in R^{k}$, the translate of $E$ by $x$ is the set
+
+$$
+E+x=\{y+x: y \in E\}
+$$
+
+A set of the form
+
+$$
+W=\left\{x: \alpha_{i}<\xi_{i}<\beta_{i}, 1 \leq i \leq k\right\}
+$$
+
+or any set obtained by replacing any or all of the $<$ signs in (4) <$$ f(x)=\inf \{r: x \in A(r)\} \quad(x \in X)$$> by $\leq$, is called a $k$-cell; its volume is defined to be
+
+$$
+\operatorname{vol}(W)=\prod_{i=1}^{k}\left(\beta_{i}-\alpha_{i}\right)
+$$
+
+If $a \in R^{k}$ and $\delta>0$, we shall call the set
+
+$$
+Q(a ; \delta)=\left\{x: \alpha_{i} \leq \xi_{i}<\alpha_{i}+\delta, 1 \leq i \leq k\right\}
+$$
+
+the $\delta$-box with corner at $a$. Here $a=\left(\alpha_{1}, \ldots, \alpha_{k}\right)$.
+
+For $n=1,2,3, \ldots$, we let $P_{n}$ be the set of all $x \in R^{k}$ whose coordinates are integral multiples of $2^{-n}$, and we let $\Omega_{n}$ be the collection of all $2^{-n}$ boxes with corners at points of $P_{n}$. We shall need the following four properties of $\left\{\Omega_{n}\right\}$. The first three are obvious by inspection.
+
+(a) If $n$ is fixed, each $x \in R^{k}$ lies in one and only one member of $\Omega_{n}$.
+
+(b) If $Q^{\prime} \in \Omega_{n}, Q^{\prime \prime} \in \Omega_{r}$, and $r<n$, then either $Q^{\prime} \subset Q^{\prime \prime}$ or $Q^{\prime} \cap Q^{\prime \prime}=\varnothing$.
+
+(c) If $Q \in \Omega_{r}$, then $\operatorname{vol}(Q)=2^{-r k}$; and if $n>r$, the set $P_{n}$ has exactly $2^{(n-r) k}$ points in $Q$.
+
+(d) Every nonempty open set in $R^{k}$ is a countable union of disjoint boxes belonging to $\Omega_{1} \cup \Omega_{2} \cup \Omega_{3} \cup \cdots$.
+
+"
+17.7,"If $f \in H(U)$ and $0 \leq p \leq \infty$, we put
+
+$$
+\|f\|_{p}=\sup \left\{\left\|f_{r}\right\|_{p}: 0 \leq r<1\right\} .
+$$
+
+If $0<p \leq \infty, H^{p}$ is defined to be the class of all $f \in H(U)$ for which $\|f\|_{p}<\infty$. The class $N$ consists of all $f \in H(U)$ for which $\|f\|_{0}<\infty$. It is clear that $H^{\infty} \subset H^{p} \subset H^{s} \subset N$ if $0<s<p<\infty$."
+17.8 (a),"When $p<\infty$, Theorems 17.3 and 17.5 show that $\left\|f_{r}\right\|_{p}$ is a nondecreasing function of $r$, for every $f \in H(U)$; when $p=\infty$, the same follows from the maximum modulus theorem. Hence
+
+$$
+\|f\|_{p}=\lim _{r \rightarrow 1}\left\|f_{r}\right\|_{p}
+$$
+
+"
+17.8 (b),"For $1 \leq p \leq \infty,\|f\|_{p}$ satisfies the triangle inequality, so that $H^{p}$ is a normed linear space. To see this, note that the Minkowski inequality gives
+
+$$
+\left\|(f+g)_{r}\right\|_{p}=\left\|f_{r}+g_{r}\right\|_{p} \leq\left\|f_{r}\right\|_{p}+\left\|g_{r}\right\|_{p}
+$$
+
+if $0<r<1$. As $r \rightarrow 1$, we obtain
+
+$$
+\|f+g\|_{p} \leq\|f\|_{p}+\|g\|_{p}
+$$
+
+"
+17.8 (c),"Actually, $H^{p}$ is a Banach space, if $1 \leq p \leq \infty$ : To prove completeness, suppose $\left\{f_{n}\right\}$ is a Cauchy sequence in $H^{p},|z| \leq r<R<1$, and apply the Cauchy formula to $f_{n}-f_{m}$, integrating around the circle of radius $R$, center 0 . This leads to the inequalities
+
+$$
+(R-r)\left|f_{n}(z)-f_{m}(z)\right| \leq\left\|\left(f_{n}-f_{m}\right)_{R}\right\|_{1} \leq\left\|\left(f_{n}-f_{m}\right)_{R}\right\|_{p} \leq\left\|f_{n}-f_{m}\right\|_{p}
+$$
+
+from which we conclude that $\left\{f_{n}\right\}$ converges uniformly on compact subsets of $U$ to a function $f \in H(U)$. Given $\epsilon>0$, there is an $m$ such that $\left\|f_{n}-f_{m}\right\|_{p}<\epsilon$ for all $n>m$, and then, for every $r<1$,
+
+$$
+\left\|\left(f-f_{m}\right)_{r}\right\|_{p}=\lim _{n \rightarrow \infty}\left\|\left(f_{n}-f_{m}\right)_{r}\right\|_{p} \leq \epsilon
+$$
+
+This gives $\left\|f-f_{m}\right\|_{p} \rightarrow 0$ as $m \rightarrow \infty$."
+17.8 (d),"For $p<1, H^{p}$ is still a vector space, but the triangle inequality is no longer satisfied by $\|f\|_{p}$."
+10.8,"['If $X$ is a topological space, a curve in $X$ is a continuous mapping $\\gamma$ of a compact interval $[\\alpha, \\beta] \\subset R^{1}$ into $X$; here $\\alpha<\\beta$. We call $[\\alpha, \\beta]$ the parameter interval of $\\gamma$ and denote the range of $\\gamma$ by $\\gamma^{*}$. Thus $\\gamma$ is a mapping, and $\\gamma^{*}$ is the set of all points $\\gamma(t)$, for $\\alpha \\leq t \\leq \\beta$.', '']"
+10.8 (closed curve),"['If the initial point $\\gamma(\\alpha)$ of $\\gamma$ coincides with its end point $\\gamma(\\beta)$, we call $\\gamma$ a closed curve.', '']"
+10.8 (path),"['A path is a piecewise continuously differentiable curve in the plane. More explicitly, a path with parameter interval $[\\alpha, \\beta]$ is a continuous complex function $\\gamma$ on $[\\alpha, \\beta]$, such that the following holds: There are finitely many\npoints $s_{j}, \\alpha=s_{0}<s_{1}<\\cdots<s_{n}=\\beta$, and the restriction of $\\gamma$ to each interval $\\left[s_{j-1}, s_{j}\\right]$ has a continuous derivative on $\\left[s_{j-1}, s_{j}\\right]$; however, at the points $s_{1}, \\ldots, s_{n-1}$ the left- and right-hand derivatives of $\\gamma$ may differ.', '']"
+10.8 (closed path),"['A closed path is a closed curve which is also a path.', '']"
+10.8 (integral of function over path),"['Now suppose $\\gamma$ is a path, and $f$ is a continuous function on $\\gamma^{*}$. The integral of $f$ over $\\gamma$ is defined as an integral over the parameter interval $[\\alpha, \\beta]$ of $\\gamma$ :\n\n$$\n\\int_{\\gamma} f(z) d z=\\int_{\\alpha}^{\\beta} f(\\gamma(t)) \\gamma^{\\prime}(t) d t\n$$', '']"
+10.8 (reparametrization),"['Let $\\varphi$ be a continuously differentiable one-to-one mapping of an interval $\\left[\\alpha_{1}, \\beta_{1}\\right]$ onto $[\\alpha, \\beta]$, such that $\\varphi\\left(\\alpha_{1}\\right)=\\alpha, \\varphi\\left(\\beta_{1}\\right)=\\beta$, and put $\\gamma_{1}=\\gamma \\circ \\varphi$. Then $\\gamma_{1}$ is a path with parameter interval $\\left[\\alpha_{1}, \\beta_{1}\\right]$; the integral of $f$ over $\\gamma_{1}$ is\n\n$$\n\\int_{\\alpha_{1}}^{\\beta_{1}} f\\left(\\gamma_{1}(t)\\right) \\gamma_{1}^{\\prime}(t) d t=\\int_{\\alpha_{1}}^{\\beta_{1}} f(\\gamma(\\varphi(t))) \\gamma^{\\prime}(\\varphi(t)) \\varphi^{\\prime}(t) d t=\\int_{\\alpha}^{\\beta} f(\\gamma(s)) \\gamma^{\\prime}(s) d s\n$$\n\nso that our ""reparametrization"" has not changed the integral:\n\n$$\n\\int_{\\gamma_{1}} f(z) d z=\\int_{\\gamma} f(z) d z\n$$', '']"
+10.8 (equivalent paths),"['Whenever (2) <$$
+\[
+r=\sum_{n=1}^{\infty} c_{n}(r) 2^{-n}
+\]$$> holds for a pair of paths $\\gamma$ and $\\gamma_{1}$ (and for all $f$ ), we shall regard $\\gamma$ and $\\gamma_{1}$ as equivalent.', '']"
+10.8 (joining paths),"['It is convenient to be able to replace a path by an equivalent one, i.e., to choose parameter intervals at will. For instance, if the end point of $\\gamma_{1}$ coincides with the initial point of $\\gamma_{2}$, we may locate their parameter intervals so that $\\gamma_{1}$ and $\\gamma_{2}$ join to form one path $\\gamma$, with the property that\n\n$$\n\\int_{\\gamma} f=\\int_{\\gamma_{1}} f+\\int_{\\gamma_{2}} f\n$$\n\nfor every continuous $f$ on $\\gamma^{*}=\\gamma_{1}^{*} \\cup \\gamma_{2}^{*}$.', '']"
+10.8 (path opposite),"['However, suppose that $[0,1]$ is the parameter interval of a path $\\gamma$, and $\\gamma_{1}(t)=\\gamma(1-t), 0 \\leq t \\leq 1$. We call $\\gamma_{1}$ the path opposite to $\\gamma$, for the following reason: For any $f$ continuous on $\\gamma_{1}^{*}=\\gamma^{*}$, we have\n\n$$\n\\int_{0}^{1} f\\left(\\gamma_{1}(t)\\right) \\gamma_{1}^{\\prime}(t) d t=-\\int_{0}^{1} f(\\gamma(1-t)) \\gamma^{\\prime}(1-t) d t=-\\int_{0}^{1} f(\\gamma(s)) \\gamma^{\\prime}(s) d s\n$$\n\nso that\n\n$$\n\\int_{\\gamma_{1}} f=-\\int_{\\gamma} f .\n$$', '']"
+10.8 (inequality),"['From (1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$> we obtain the inequality\n\n$$\n\\left|\\int_{\\gamma} f(z) d z\\right| \\leq\\|f\\|_{\\infty} \\int_{\\alpha}^{\\beta}\\left|\\gamma^{\\prime}(t)\\right| d t\n$$\n\nwhere $\\|f\\|_{\\infty}$ is the maximum of $|f|$ on $\\gamma^{*}$ and the last integral in (5) <$$
+\[
+d(x, y)=f(x-y) \quad(x \in X, y \in X) .
+\]$$> is (by definition) the length of $\\gamma$.', '']"
+10.9 (a),"['If $a$ is a complex number and $r>0$, the path defined by\n\n$$\n\\gamma(t)=a+r e^{i t} \\quad(0 \\leq t \\leq 2 \\pi)\n$$\n\nis called the positively oriented circle with center at $a$ and radius $r$; we have\n\n$$\n\\int_{\\gamma} f(z) d z=i r \\int_{0}^{2 \\pi} f\\left(a+r e^{i \\theta}\\right) e^{i \\theta} d \\theta\n$$\n\nand the length of $\\gamma$ is $2 \\pi r$, as expected.', '']"
+10.9 (b),"['If $a$ and $b$ are complex numbers, the path $\\gamma$ given by\n\n$$\n\\gamma(t)=a+(b-a) t \\quad(0 \\leq t \\leq 1)\n$$\n\nis the oriented interval $[a, b]$; its length is $|b-a|$, and\n\n$$\n\\int_{[a, b]} f(z) d z=(b-a) \\int_{0}^{1} f[a+(b-a) t] d t\n$$\n\nIf\n\n$$\n\\gamma_{1}(t)=\\frac{a(\\beta-t)+b(t-\\alpha)}{\\beta-\\alpha} \\quad(\\alpha \\leq t \\leq \\beta)\n$$\n\nwe obtain an equivalent path, which we still denote by $[a, b]$. The path opposite to $[a, b]$ is $[b, a]$.', '']"
+10.9 (c),"['Let $\\{a, b, c\\}$ be an ordered triple of complex numbers, let\n\n$$\n\\Delta=\\Delta(a, b, c)\n$$\n\nbe the triangle with vertices at $a, b$, and $c$ ( $\\Delta$ is the smallest convex set which contains $a, b$, and $c$ ), and define\n\n$$\n\\int_{\\partial \\Delta} f=\\int_{[a, b]} f+\\int_{[b, c]} f+\\int_{[c, a]} f\n$$\n\nfor any $f$ continuous on the boundary of $\\Delta$. We may regard (6) <$$
+\[
+A(r)+A(s) \subset A(r+s) \quad(r \in D, s \in D) .
+\]$$> as the definition of its left side. Or we may regard $\\partial \\Delta$ as a path obtained by joining $[a, b]$ to $[b, c]$ to $[c, a]$, as outlined in Definition 10.8 <> , in which case (6) <$$
+\[
+A(r)+A(s) \subset A(r+s) \quad(r \in D, s \in D) .
+\]$$> is easily proved to be true.\n\nIf $\\{a, b, c\\}$ is permuted cyclically, we see from (6) <$$
+\[
+A(r)+A(s) \subset A(r+s) \quad(r \in D, s \in D) .
+\]$$> that the left side of (6) <$$
+\[
+A(r)+A(s) \subset A(r+s) \quad(r \in D, s \in D) .
+\]$$> is unaffected. If $\\{a, b, c\\}$ is replaced by $\\{a, c, b\\}$, then the left side of (6) <$$
+\[
+A(r)+A(s) \subset A(r+s) \quad(r \in D, s \in D) .
+\]$$> changes sign.', '']"
+18.12,"A subset $I$ of a commutative complex algebra $A$ is said to be an ideal if $(a) I$ is a subspace of $A$ (in the vector space sense) and $(b) x y \in I$ whenever $x \in A$ and $y \in I$. If $I \neq A, I$ is a proper ideal. Maximal ideals are proper ideals which are not contained in any larger proper ideals. Note that no proper ideal contains an invertible element.
+
+If $B$ is another complex algebra, a mapping $\varphi$ of $A$ into $B$ is called a homomorphism if $\varphi$ is a linear mapping which also preserves multiplication: $\varphi(x) \varphi(y)=\varphi(x y)$ for all $x$ and $y \in A$. The kernel (or null space) of $\varphi$ is the set of all $x \in A$ such that $\varphi(x)=0$. It is trivial to verify that the kernel of a homomorphism is an ideal. For the converse, see Sec. 18.14."
+17.14,Definition 17.14 <>  must be provided as it is necessary to understand the context of Theorem 17.16 <> .
+11.1,"The differential operators $\partial$ and $\bar{\partial}$ are defined as
+
+$$
+\partial=\frac{1}{2}\left(\frac{\partial}{\partial x}-i \frac{\partial}{\partial y}\right), \quad \bar{\partial}=\frac{1}{2}\left(\frac{\partial}{\partial x}+i \frac{\partial}{\partial y}\right)
+$$
+
+for a complex function $f$ defined in a plane open set $\Omega$. The characterization of holomorphic functions is given by the condition that $(\bar{\partial} f)(0) <$$nded entire \mathscr{B}(H)-valued function. By Liouville's theorem 3.32, =T, for every \lambda \in \mathscr{C}. Hence  becomes$$>=0$."
+10.38,"[""Suppose $\\gamma_{0}$ and $\\gamma_{1}$ are closed curves in a topological space $X$, both with parameter interval $I=[0,1]$. We say that $\\gamma_{0}$ and $\\gamma_{1}$ are $X$-homotopic if there is a continuous mapping $H$ of the unit square $I^{2}=I \\times I$ into $X$ such that\n\n$$\nH(s, 0)=\\gamma_{0}(s), \\quad H(s, 1)=\\gamma_{1}(s), \\quad H(0, t)=H(1, t)\n$$\n\nfor all $s \\in I$ and $t \\in I$. Put $\\gamma_{t}(s)=H(s, t)$. Then (1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$> defines a one-parameter family of closed curves $\\gamma_{t}$ in $X$, which connects $\\gamma_{0}$ and $\\gamma_{1}$. Intuitively, this means that $\\gamma_{0}$ can be continuously deformed to $\\gamma_{1}$, within $X$.\n\nIf $\\gamma_{0}$ is $X$-homotopic to a constant mapping $\\gamma_{1}$ (i.e., if $\\gamma_{1}^{*}$ consists of just one point), we say that $\\gamma_{0}$ is null-homotopic in $X$. If $X$ is connected and if every closed curve in $X$ is null-homotopic, $X$ is said to be simply connected.\n\nFor example, every convex region $\\Omega$ is simply connected. To see this, let $\\gamma_{0}$ be a closed curve in $\\Omega$, fix $z_{1} \\in \\Omega$, and define\n\n$$\nH(s, t)=(1-t) \\gamma_{0}(s)+t z_{1} \\quad(0 \\leq s \\leq 1, \\quad 0 \\leq t \\leq 1) .\n$$\n\nTheorem 10.40 <>  will show that condition (4) <$$ f(x)=\inf \{r: x \in A(r)\} \quad(x \in X)$$> of Cauchy's theorem 10.35 holds whenever $\\Gamma_{0}$ and $\\Gamma_{1}$ are $\\Omega$-homotopic closed paths. As a special case of this, note that condition (1) <$$
+\[
+\left(x+V_{x}+V_{x}\right) \cap\left(C+V_{x}\right)=\varnothing
+\]$$> of Theorem 10.35 <<
+\[
+\mu=\max \left\{\left\|S_{1}\right\|, \ldots,\left\|S_{n}\right\|\right\} .
+\]>,<
+\[
+x_{N}=S_{i_{N}} T \cdots S_{i_{1}} T x_{0}=S_{i_{N}} \cdots S_{i_{1}} T^{N} x_{0}
+\]>,<
+\[
+S(\Gamma(y)) \subset \Gamma(y)
+\]>,<
+\[
+S(M) \subset M
+\]>,<
+\[
+\Gamma(y)=\{S y: S \in \Gamma\} .
+\]>,<
+\[
+\Gamma=\{S \in \mathscr{B}(X): S T=T S\}
+\]>,<$$
+\[
+T(S x)=S(T x)=S(\lambda x)=\lambda S x,
+\]>,<
+\[
+M_{\lambda}=\{x \in X: T x=\lambda x\}
+\]>,<
+\[
+\rho(T)=\lim _{N \rightarrow \infty}\left\|T^{N}\right\|^{1 / N} \geq \frac{1}{\mu}>0
+\]>,< $\quad \frac{1}{2}\left\|x_{0}\right\| \leq\left\|x_{N}\right\| \leq \mu^{N}\left\|T^{N}\right\|\left\|x_{0}\right\| \quad(N=1,2,3, \ldots)$,>>  holds for every closed path $\\Gamma$ in $\\Omega$ if $\\Omega$ is simply connected.""]"
+10.34,"['Suppose $\\gamma_{1}, \\ldots, \\gamma_{n}$ are paths in the plane, and put $K=$ $\\gamma_{1}^{*} \\cup \\cdots \\cup \\gamma_{n}^{*}$. Each $\\gamma_{i}$ induces a linear functional $\\tilde{\\gamma}_{i}$ on the vector space $C(K)$, by the formula\n\n$$\n\\tilde{\\gamma}_{i}(f)=\\int_{\\gamma_{i}} f(z) d z\n$$\n\nDefine\n\n$$\n\\tilde{\\Gamma}=\\tilde{\\gamma}_{1}+\\cdots+\\tilde{\\gamma}_{n} .\n$$\n\nExplicitly, $\\tilde{\\Gamma}(f)=\\tilde{\\gamma}_{1}(f)+\\cdots+\\tilde{\\gamma}_{n}(f)$ for all $f \\in C(K)$. The relation (2) <$$
+\[
+r=\sum_{n=1}^{\infty} c_{n}(r) 2^{-n}
+\]$$> suggests that we introduce a ""formal sum""\n\n$$\n\\Gamma=\\gamma_{1} \\dot{+} \\cdots \\dot{+} \\gamma_{n}\n$$\n\nand define\n\n$$\n\\int_{\\Gamma} f(z) d z=\\tilde{\\Gamma}(f)\n$$\n\nThen (3) <$$
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]$$> is merely an abbreviation for the statement\n\n$$\n\\int_{\\Gamma} f(z) d z=\\sum_{i=1}^{n} \\int_{\\gamma_{i}} f(z) d z \\quad(f \\in C(K)) .\n$$\n\nNote that (5) <$$
+\[
+d(x, y)=f(x-y) \quad(x \in X, y \in X) .
+\]$$> serves as the definition of its left side.\n\nThe objects $\\Gamma$ so defined are called chains. If each $\\gamma_{j}$ in (3) <$$
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]$$> is a closed path, then $\\Gamma$ is called a cycle. If each $\\gamma_{j}$ in (3) <$$
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]$$> is a path in some open set $\\Omega$, we say that $\\Gamma$ is a chain in $\\Omega$.\n\nIf (3) <$$
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]$$> holds, we define\n\n$$\n\\Gamma^{*}=\\gamma_{1}^{*} \\cup \\cdots \\cup \\gamma_{n}^{*}\n$$\n\nIf $\\Gamma$ is a cycle and $\\alpha \\notin \\Gamma^{*}$, we define the index of $\\alpha$ with respect to $\\Gamma$ by\n\n$$\n\\operatorname{Ind}_{\\Gamma}(\\alpha)=\\frac{1}{2 \\pi i} \\int_{\\Gamma} \\frac{d z}{z-\\alpha}\n$$\n\njust as in Theorem 10.10 <> . Obviously, (3) <$$
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]$$> implies\n\n$$\n\\operatorname{Ind}_{\\Gamma}(\\alpha)=\\sum_{i=1}^{n} \\operatorname{Ind}_{\\gamma_{i}}(\\alpha)\n$$\n\nIf each $\\gamma_{i}$ in (3) <$$
+\[
+A(r)=c_{1}(r) V_{1}+c_{2}(r) V_{2}+c_{3}(r) V_{3}+\cdots
+\]$$> is replaced by its opposite path (see Sec. 10.8), the resulting chain will be denoted by $-\\Gamma$. Then\n\n$$\n\\int_{-\\Gamma} f(z) d z=-\\int_{\\Gamma} f(z) d z \\quad\\left(f \\in C\\left(\\Gamma^{*}\\right)\\right)\n$$\n\nIn particular, $\\operatorname{Ind}_{-\\Gamma}(\\alpha)=-\\operatorname{Ind}_{\\Gamma}(\\alpha)$ if $\\Gamma$ is a cycle and $\\alpha \\notin \\Gamma^{*}$.\n\nChains can be added and subtracted in the obvious way, by adding or subtracting the corresponding functionals: The statement $\\Gamma=\\Gamma_{1}+\\Gamma_{2}$ means\n\n$$\n\\int_{\\Gamma} f(z) d z=\\int_{\\Gamma_{1}} f(z) d z+\\int_{\\Gamma_{2}} f(z) d z\n$$\n\nfor every $f \\in C\\left(\\Gamma_{1}^{*} \\cup \\Gamma_{2}^{*}\\right)$.\n\nFinally, note that a chain may be represented as a sum of paths in many ways. To say that\n\n$$\n\\gamma_{1} \\dot{+} \\cdots \\dot{+} \\gamma_{n}=\\delta_{1} \\dot{+} \\cdots \\dot{+} \\delta_{k}\n$$\n\nmeans simply that\n\n$$\n\\sum_{i} \\int_{\\gamma_{i}} f(z) d z=\\sum_{j} \\int_{\\delta_{j}} f(z) d z\n$$\n\nfor every $f$ that is continuous on $\\gamma_{1}^{*} \\cup \\cdots \\cup \\gamma_{n}^{*} \\cup \\delta_{1}^{*} \\cup \\cdots \\cup \\delta_{k}^{*}$. In particular, a cycle may very well be represented as a sum of paths that are not closed.']"
